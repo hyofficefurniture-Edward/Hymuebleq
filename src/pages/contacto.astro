@@ -11,6 +11,9 @@ import { brand, contactConsultationImage, showrooms } from "../data/site";
 >
   <section class="section">
     <div class="container form-shell">
+      <div class="form-card">
+        <ContactForm />
+      </div>
       <div class="contact-panel">
         <img src={encodeURI(contactConsultationImage)} alt="Revisión de materiales para proyecto de mobiliario" loading="eager" decoding="async" fetchpriority="high" />
         <div>
@@ -22,9 +25,6 @@ import { brand, contactConsultationImage, showrooms } from "../data/site";
             <a class="btn line" href="/showroom/">Ver showroom primero</a>
           </div>
         </div>
-      </div>
-      <div class="form-card">
-        <ContactForm />
       </div>
     </div>
   </section>
