@@ -1,0 +1,124 @@
+---
+import { faqCategories } from "../data/site";
+---
+
+<section class="faq-tabs" data-faq-tabs>
+  <div class="faq-tab-list" role="tablist" aria-label="Categorías de preguntas frecuentes">
+    {faqCategories.map((category, categoryIndex) => {
+      const tabId = `faq-tab-${categoryIndex}`;
+      const panelId = `faq-panel-${categoryIndex}`;
+      return (
+        <button
+          class="faq-tab"
+          id={tabId}
+          type="button"
+          role="tab"
+          aria-selected={categoryIndex === 0 ? "true" : "false"}
+          aria-controls={panelId}
+          data-faq-tab
+          data-faq-panel-id={panelId}
+        >
+          {category.label}
+        </button>
+      );
+    })}
+  </div>
+
+  <div class="faq-panels">
+    {faqCategories.map((category, categoryIndex) => {
+      const tabId = `faq-tab-${categoryIndex}`;
+      const panelId = `faq-panel-${categoryIndex}`;
+      return (
+        <div
+          class="faq-panel"
+          id={panelId}
+          role="tabpanel"
+          aria-labelledby={tabId}
+          data-faq-panel
+          hidden={categoryIndex !== 0}
+        >
+          {category.questions.map((item, questionIndex) => {
+            const questionId = `faq-question-${categoryIndex}-${questionIndex}`;
+            const answerId = `faq-answer-${categoryIndex}-${questionIndex}`;
+            const isOpen = questionIndex === 0;
+            return (
+              <article class:list={["faq-item", { "is-open": isOpen }]} data-faq-item>
+                <h3>
+                  <button
+                    id={questionId}
+                    class="faq-question"
+                    type="button"
+                    aria-expanded={isOpen ? "true" : "false"}
+                    aria-controls={answerId}
+                    data-faq-question
+                  >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                    <span>{item.question}</span>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id={answerId}
+                  role="region"
+                  aria-labelledby={questionId}
+                  data-faq-answer
+                  hidden={!isOpen}
+                >
+                  <p>{item.answer}</p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+<script>
+  const faqRoots = document.querySelectorAll("[data-faq-tabs]");
+
+  faqRoots.forEach((root) => {
+    const tabs = Array.from(root.querySelectorAll("[data-faq-tab]"));
+    const panels = Array.from(root.querySelectorAll("[data-faq-panel]"));
+
+    tabs.forEach((selectedTab) => {
+      selectedTab.addEventListener("click", () => {
+        tabs.forEach((tab) => {
+          const isSelected = tab === selectedTab;
+          tab.setAttribute("aria-selected", String(isSelected));
+        });
+
+        const selectedPanelId = selectedTab.getAttribute("data-faq-panel-id");
+        panels.forEach((panel) => {
+          if (panel instanceof HTMLElement) {
+            panel.hidden = panel.id !== selectedPanelId;
+          }
+        });
+      });
+    });
+
+    root.querySelectorAll("[data-faq-question]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.closest("[data-faq-item]");
+        const panel = button.closest("[data-faq-panel]");
+        const answer = item?.querySelector("[data-faq-answer]");
+        const willOpen = button.getAttribute("aria-expanded") !== "true";
+
+        panel?.querySelectorAll("[data-faq-item]").forEach((panelItem) => {
+          const panelButton = panelItem.querySelector("[data-faq-question]");
+          const panelAnswer = panelItem.querySelector("[data-faq-answer]");
+          panelItem.classList.remove("is-open");
+          panelButton?.setAttribute("aria-expanded", "false");
+          if (panelAnswer instanceof HTMLElement) panelAnswer.hidden = true;
+        });
+
+        if (item && answer instanceof HTMLElement && willOpen) {
+          item.classList.add("is-open");
+          button.setAttribute("aria-expanded", "true");
+          answer.hidden = false;
+        }
+      });
+    });
+  });
+</script>

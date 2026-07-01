@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import { brand, contactConsultationImage, showrooms } from "../data/site";
+---
+<BaseLayout
+  title="Cotización de mobiliario para proyectos | Hymueble"
+  description="Envía requisitos de proyecto, solicita catálogo o pide cotización de mobiliario B2B con fabricación directa en China y revisión inicial para compra B2B."
+  keywords={["cotización de mobiliario", "mobiliario para proyectos B2B", "solicitar catálogo", "compra B2B", "fabricación directa en China", "proveedor de mobiliario"]}
+  image={contactConsultationImage}
+>
+  <section class="section">
+    <div class="container form-shell">
+      <div class="contact-panel">
+        <img src={encodeURI(contactConsultationImage)} alt="Revisión de materiales para proyecto de mobiliario" loading="eager" decoding="async" fetchpriority="high" />
+        <div>
+          <p class="eyebrow">Contacto B2B</p>
+          <h1>¿Tienes un proyecto de mobiliario?</h1>
+          <p class="contact-note">Completa una consulta rápida. Si falta información técnica, la pedimos después por WhatsApp o correo.</p>
+          <div class="btn-row">
+            <a class="btn dark" href={brand.whatsapp} target="_blank" rel="noreferrer">Hablar por WhatsApp</a>
+            <a class="btn line" href="/showroom/">Ver showroom primero</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Cómo preparar tu consulta</p>
+        <h2>Empieza con lo básico; los detalles pueden venir después</h2>
+        <p class="contact-note spaced">Con sector, ciudad, WhatsApp y una descripción breve podemos orientar el siguiente paso. Planos y listas ayudan, pero no son obligatorios.</p>
+      </div>
+      <img src={encodeURI("/assets/hymueble/fabrica/produccion/real-export-packaging.webp")} alt="Embalaje de exportación para mobiliario de proyecto" loading="lazy" decoding="async" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Referencia visual antes de enviar</p>
+        <h2>Si aún no tienes una lista completa, empieza por el showroom</h2>
+        <p class="contact-note spaced">Revisa recorridos por sector y comparte referencias más claras con compras, diseño o arquitectura.</p>
+        <div class="btn-row contact-actions">
+          <a class="btn primary" href="/showroom/">Ver todos los showrooms</a>
+          <a class="btn line" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Entrar al showroom hotelero</a>
+        </div>
+      </div>
+      <img src={encodeURI(showrooms[0].image)} alt="Showroom virtual para preparar una consulta de mobiliario" loading="lazy" decoding="async" />
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="container split-band">
+      <div class="map-card">
+        <p class="eyebrow">Base de fabricación</p>
+        <h2>Guangdong, China</h2>
+        <p>Coordinamos producción, calidad, embalaje y documentación comercial desde una base industrial para proyectos internacionales.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Después de enviar</p>
+        <h2>Te contactamos por WhatsApp o correo</h2>
+        <p class="contact-note spaced">Confirmamos sector, espacios, país, urgencia y si necesitas catálogo, reunión, revisión de planos o cotización preliminar.</p>
+        <div class="btn-row contact-actions">
+          <a class="btn primary" href={brand.whatsapp} target="_blank" rel="noreferrer">Abrir WhatsApp</a>
+          <a class="btn line" href="/catalogo/">Ver catálogos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

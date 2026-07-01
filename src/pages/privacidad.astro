@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { brand } from "../data/site";
+---
+<BaseLayout
+  title="Política de privacidad | Hymueble"
+  description="Cómo Hymueble usa la información enviada en consultas de proyectos, catálogos, showroom virtual y formularios de mobiliario B2B y seguimiento comercial."
+  keywords={["política de privacidad", "consultas de mobiliario B2B", "formularios de proyecto", "catálogos de mobiliario", "showroom virtual", "seguimiento comercial"]}
+  image="/assets/hymueble/generated/catalog-hub-material-library.webp"
+  canonicalPath="/privacidad/"
+>
+  <section class="section legal-hero">
+    <div class="container legal-hero-grid">
+      <div>
+        <p class="eyebrow">Privacidad</p>
+        <h1>Política de privacidad</h1>
+      </div>
+      <p>
+        Esta página resume cómo usamos la información que nos compartes al solicitar
+        catálogos, cotizaciones, recorridos de showroom o soporte para proyectos de mobiliario B2B.
+      </p>
+    </div>
+  </section>
+
+  <section class="section legal-section">
+    <div class="container legal-content">
+      <article>
+        <span>01</span>
+        <h2>Información recibida en consultas de mobiliario B2B</h2>
+        <p>
+          Podemos recibir tu nombre, empresa, país o ciudad, WhatsApp, correo,
+          tipo de proyecto, descripción del alcance, cantidades aproximadas y archivos
+          que decidas adjuntar, como planos, listas FF&E, imágenes de referencia o documentos de compra.
+        </p>
+      </article>
+
+      <article>
+        <span>02</span>
+        <h2>Para qué usamos la información</h2>
+        <p>
+          Usamos estos datos para entender tu solicitud, preparar una respuesta comercial,
+          sugerir rutas de catálogo o showroom, coordinar una cotización y dar seguimiento
+          a una conversación de proyecto.
+        </p>
+      </article>
+
+      <article>
+        <span>03</span>
+        <h2>Archivos adjuntos</h2>
+        <p>
+          Los archivos adjuntos son opcionales. Si compartes planos, cantidades o documentos
+          técnicos, se usan únicamente para revisar el alcance del proyecto y preparar una
+          respuesta más precisa.
+        </p>
+      </article>
+
+      <article>
+        <span>04</span>
+        <h2>Comunicación comercial</h2>
+        <p>
+          Podemos contactarte por WhatsApp, correo u otro canal que hayas compartido para
+          responder tu consulta, solicitar datos faltantes o dar seguimiento a una cotización.
+        </p>
+      </article>
+
+      <article>
+        <span>05</span>
+        <h2>Uso interno y proveedores de servicio</h2>
+        <p>
+          La información puede ser revisada por el equipo comercial, de diseño, producción
+          o soporte relacionado con la preparación de tu proyecto. Si se usa un servicio externo
+          de formulario, correo, alojamiento o analítica, se empleará solo para operar el sitio
+          y atender la solicitud.
+        </p>
+      </article>
+
+      <article>
+        <span>06</span>
+        <h2>Conservación y actualización</h2>
+        <p>
+          Conservamos la información durante el tiempo razonable para atender la conversación
+          comercial y el seguimiento del proyecto. Puedes solicitar que corrijamos o eliminemos
+          la información de contacto compartida cuando ya no sea necesaria para la consulta.
+        </p>
+      </article>
+
+      <article>
+        <span>07</span>
+        <h2>Contacto sobre privacidad</h2>
+        <p>
+          Para consultas relacionadas con privacidad o datos enviados a Hymueble, puedes escribir
+          a <a href={`mailto:${brand.email}`}>{brand.email}</a>. La dirección podrá
+          actualizarse cuando se confirme el correo comercial definitivo.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

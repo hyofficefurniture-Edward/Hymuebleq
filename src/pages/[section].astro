@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import SectionHead from "../components/SectionHead.astro";
+import CatalogCard from "../components/CatalogCard.astro";
+import ProcessSteps from "../components/ProcessSteps.astro";
+import CTA from "../components/CTA.astro";
+import { sectorCatalogs, sectorPages, showrooms } from "../data/site";
+
+export function getStaticPaths() {
+  return Object.keys(sectorPages).map((section) => ({ params: { section } }));
+}
+
+const section = Astro.params.section ?? "oficinas";
+const data = sectorPages[section as keyof typeof sectorPages];
+const catalogItems = sectorCatalogs[section as keyof typeof sectorCatalogs] ?? [];
+const catalogInterestLabels = {
+  oficinas: "Oficinas",
+  salud: "Salud",
+  educacion: "Educación",
+  residencial: "Residencial",
+};
+const catalogInterestPrefix = `${catalogInterestLabels[section as keyof typeof catalogInterestLabels] ?? data.eyebrow} - `;
+const showroomBySection = {
+  oficinas: showrooms[1],
+  salud: showrooms[2],
+  educacion: showrooms[3],
+};
+const sectorShowroom = showroomBySection[section as keyof typeof showroomBySection];
+---
+<BaseLayout title={`${data.title} | Hymueble`} description={data.seoDescription ?? data.lead} keywords={data.seoKeywords} image={data.image}>
+  <Hero
+    eyebrow={data.eyebrow}
+    title={data.title}
+    lead={data.lead}
+    image={data.image}
+    badgeTitle="Solución por proyecto"
+    badgeText="Catálogo, personalización, producción y exportación desde China."
+    primaryLabel="Solicitar cotización"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver catálogo"
+    secondaryHref={data.catalogHref}
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <div class="proof-grid">
+        {data.proof.map((item) => (
+          <div class="info-card compact">
+            <strong>{item}</strong>
+            <span>Enfoque B2B para compras por lote, remodelaciones, nuevos proyectos y distribución.</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {sectorShowroom && (
+    <section class="section">
+      <div class="container split-band">
+        <div>
+          <p class="eyebrow">Showroom virtual</p>
+          <h2>Explora el showroom de {sectorShowroom.sector.toLowerCase()} antes de cotizar</h2>
+          <p class="section-note">{sectorShowroom.description} Úsalo para alinear referencias antes de definir cantidades, acabados y tiempos.</p>
+          <div class="btn-row section-actions">
+            <a class="btn primary" href={sectorShowroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${sectorShowroom.sector}`}>Ver showroom virtual</a>
+            <a class="btn line" href="/contacto/">Enviar requisitos</a>
+          </div>
+        </div>
+        <img src={encodeURI(sectorShowroom.image)} alt={`Showroom virtual para ${sectorShowroom.sector}`} loading="lazy" decoding="async" />
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="container">
+      <SectionHead
+        eyebrow="Catálogo"
+        title={`Categorías principales para ${data.eyebrow.toLowerCase()}`}
+        text="Cada sector organiza sus categorías principales para facilitar una primera conversación de compra, con espacio para fichas, PDF y filtros cuando el proyecto requiera más detalle."
+      />
+      <div class="card-grid">
+        {catalogItems.map((item) => <CatalogCard item={item} catalogInterestPrefix={catalogInterestPrefix} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Proceso"
+        title="Proceso de suministro para proyectos B2B"
+        text="El mismo marco operativo de la ruta hotelera se aplica a proyectos corporativos, institucionales y residenciales: cotización, diseño, producción, inspección y logística."
+      />
+      <ProcessSteps />
+      <div class="btn-row section-actions">
+        <a class="btn primary" href={data.projectsHref}>Ver proyectos del sector</a>
+        <a class="btn line" href="/fabrica/">Conocer la fábrica</a>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

@@ -1,0 +1,39 @@
+---
+import { brand, navItems } from "../data/site";
+---
+<header class="header">
+  <div class="top-strip">
+    <div class="container">
+      <span>Fabricación directa en China para proyectos B2B en Latinoamérica</span>
+      <span>Respuesta en menos de 24 horas en días hábiles</span>
+    </div>
+  </div>
+  <div class="container nav-shell">
+    <a class="brand" href="/" aria-label="Hymueble inicio">
+      <img class="brand-logo" src={brand.logo} alt="Hymueble" width="92" height="49" loading="eager" decoding="async" fetchpriority="high" />
+      <span class="brand-copy">
+        <strong>{brand.name}</strong>
+        <span>{brand.tagline}</span>
+      </span>
+    </a>
+    <nav class="nav-links" data-nav-links aria-label="Navegación principal">
+      {navItems.map((item) => (
+        <div class="nav-item">
+          <a class="nav-link" href={item.href}>{item.label}</a>
+          {(item.catalog || item.projects || item.children) && (
+            <div class="dropdown">
+              {item.catalog && <a href={item.catalog}>Catálogo</a>}
+              {item.projects && <a href={item.projects}>Proyectos</a>}
+              {item.children?.map((child) => <a href={child.href}>{child.label}</a>)}
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+    <div class="nav-actions">
+      <a class="btn showroom-nav" href={brand.showroom}>Showroom</a>
+      <a class="btn primary quote-nav" href="/contacto/">Cotizar</a>
+      <button class="menu-button" type="button" data-menu-button aria-label="Abrir menú">≡</button>
+    </div>
+  </div>
+</header>

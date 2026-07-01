@@ -1,0 +1,102 @@
+---
+import { cooperationPartnerBrands, trustCertificateSignals, trustQualificationImages } from "../data/site";
+import ScrollRail from "./ScrollRail.astro";
+
+interface Signal {
+  name: string;
+  label: string;
+  context: string;
+}
+
+interface CertificateSignal {
+  name: string;
+  label: string;
+  context: string;
+}
+
+interface PartnerBrand {
+  name: string;
+  tone?: string;
+}
+
+interface QualificationImage {
+  title: string;
+  image: string;
+  alt?: string;
+  tags: string[];
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+  signals?: Signal[];
+  partnerBrands?: PartnerBrand[];
+  certificateSignals?: CertificateSignal[];
+  qualificationImages?: QualificationImage[];
+  compact?: boolean;
+}
+
+const {
+  eyebrow = "Confianza B2B",
+  title,
+  text,
+  partnerBrands = cooperationPartnerBrands,
+  certificateSignals = trustCertificateSignals,
+  qualificationImages = trustQualificationImages,
+  compact = false,
+} = Astro.props;
+---
+<div class:list={["trust-strip-block", { compact }]}>
+  <div class="trust-strip-head">
+    <div>
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <h2>{title}</h2>
+    </div>
+    {text && <p>{text}</p>}
+  </div>
+  <div class="trust-evidence-layout" aria-label="Cooperación, proyectos y certificaciones">
+    <section class="trust-partners-panel" aria-label="Referencias de cooperación hotelera">
+      <div class="trust-partners-copy">
+        <span>Referencias hoteleras</span>
+        <strong>Cooperación visible en proyectos y cadenas internacionales</strong>
+        <p>
+          Señales de experiencia para abrir conversación comercial.
+          Proyecto, alcance y documentación se revisan al avanzar la consulta.
+        </p>
+      </div>
+      <ScrollRail label="Logos de marcas de referencia">
+        <div class="partner-logo-rail" data-scroll-track aria-label="Logos de marcas de referencia">
+          {partnerBrands.map((brand) => (
+            <span class:list={["partner-logo-tile", brand.tone]}>{brand.name}</span>
+          ))}
+        </div>
+      </ScrollRail>
+    </section>
+
+    <section class="trust-qualification-panel" aria-label="Certificaciones y documentación">
+      <ScrollRail label="Certificaciones y documentos visuales">
+        <div class="qualification-image-rail" data-scroll-track>
+          {qualificationImages.map((item) => (
+            <figure class="qualification-proof-card">
+              <img src={item.image} alt={item.alt ?? item.title} loading="lazy" />
+              <figcaption>
+                <strong>{item.title}</strong>
+                <span>{item.tags.join(" / ")}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </ScrollRail>
+      <div class="trust-certificate-panel" aria-label="Certificaciones principales">
+        {certificateSignals.map((item) => (
+          <article class="trust-certificate-signal">
+            <span>{item.label}</span>
+            <strong>{item.name}</strong>
+            <p>{item.context}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</div>

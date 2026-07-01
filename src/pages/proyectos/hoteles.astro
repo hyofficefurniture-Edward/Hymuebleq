@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import CTA from "../../components/CTA.astro";
+import { projects, showrooms } from "../../data/site";
+---
+<BaseLayout
+  title="Proyectos de mobiliario hotelero | Hymueble"
+  description="Referencias de mobiliario hotelero para revisar habitaciones, áreas públicas y alcance de proyecto antes de solicitar una cotización B2B clara por sector."
+  keywords={["proyectos de mobiliario hotelero", "referencias hoteleras", "mobiliario hotelero", "FF&E hotelero", "muebles para hoteles", "cotización B2B"]}
+  image="/assets/hymueble/generated/project-portfolio-review.webp"
+>
+  <Hero
+    eyebrow="Proyectos hoteleros"
+    title="Proyectos reales de mobiliario para hoteles"
+    lead="Referencias para evaluar experiencia, alcance de suministro y capacidad de fabricación antes de cotizar."
+    image="/assets/hymueble/generated/project-portfolio-review.webp"
+    badgeTitle="Casos para evaluar experiencia"
+    badgeText="Hoteles internacionales, FF&E, habitaciones y áreas públicas."
+    primaryLabel="Consultar un proyecto similar"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver catálogo hotelero"
+    secondaryHref="/catalogo/hoteles/"
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Referencias"
+        title="Descubre proyectos de mobiliario para hotelería"
+        text="Cada tarjeta resume sector, región y alcance para una revisión rápida de experiencia."
+      />
+      <div class="card-grid">
+        {projects.filter((project) => project.sector === "Hotel").map((project) => <ProjectCard project={project} imageField="listingImage" />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Antes de cotizar</p>
+        <h2>Revisa el showroom hotelero para alinear referencias visuales</h2>
+        <p class="section-note">Usa el recorrido para conversar sobre habitaciones, lobby, áreas públicas, materiales y acabados.</p>
+        <div class="btn-row section-actions">
+          <a class="btn primary" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Entrar al showroom hotelero</a>
+          <a class="btn line" href="/showroom/">Ver todos los showrooms</a>
+        </div>
+      </div>
+      <img src={encodeURI(showrooms[0].image)} alt="Showroom virtual hotelero Hymueble" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="cta-band">
+        <p class="eyebrow">Cooperación B2B</p>
+        <h2>Fabricación, documentación y soporte para compras internacionales</h2>
+        <p>Revisamos planos, FF&E, muestras, materiales, embalaje y coordinación logística según alcance.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="/contacto/">Enviar requisitos del proyecto</a>
+          <a class="btn ghost" href="/hoteles/">Volver a hoteles</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

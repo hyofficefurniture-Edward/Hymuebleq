@@ -1,0 +1,61 @@
+---
+interface ValuePoint {
+  title: string;
+  label: string;
+  icon: "factory" | "quality" | "custom" | "logistics";
+}
+
+interface Props {
+  items?: ValuePoint[];
+}
+
+const defaultItems: ValuePoint[] = [
+  { title: "Directo de fábrica", label: "Sin intermediarios", icon: "factory" },
+  { title: "Control de calidad", label: "Inspección antes de embarque", icon: "quality" },
+  { title: "A medida", label: "Adaptación por proyecto", icon: "custom" },
+  { title: "Soporte logístico", label: "Preparación para exportación", icon: "logistics" },
+];
+
+const { items = defaultItems } = Astro.props;
+---
+<div class="value-points" aria-label="Ventajas de compra B2B">
+  {items.map((item) => (
+    <div class="value-point">
+      <span class="value-point-icon" aria-hidden="true">
+        {item.icon === "factory" && (
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M6 39V20l10 6v-6l10 6v-9h8l2 22" />
+            <path d="M10 39h30" />
+            <path d="M13 32h5M23 32h5M33 32h4" />
+          </svg>
+        )}
+        {item.icon === "quality" && (
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M24 5l14 6v11c0 9-6 16-14 21C16 38 10 31 10 22V11l14-6z" />
+            <path d="M17 24l5 5 10-12" />
+          </svg>
+        )}
+        {item.icon === "custom" && (
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M9 35l4 4 25-25-4-4L9 35z" />
+            <path d="M30 14l4 4" />
+            <path d="M8 14h13M8 22h9M27 36h13" />
+          </svg>
+        )}
+        {item.icon === "logistics" && (
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M5 31V15h25v16" />
+            <path d="M30 21h7l6 6v4h-7" />
+            <path d="M13 37a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+            <path d="M33 37a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+            <path d="M17 33h12" />
+          </svg>
+        )}
+      </span>
+      <span class="value-point-copy">
+        <strong>{item.title}</strong>
+        <span>{item.label}</span>
+      </span>
+    </div>
+  ))}
+</div>

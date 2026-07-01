@@ -1,0 +1,20 @@
+---
+import { factoryImages } from "../data/site";
+
+const factoryImageAlts = [
+  "embalaje de exportación para mobiliario de proyecto",
+  "taller de lijado para producción de mobiliario",
+  "producción de sillas en fábrica de mobiliario",
+  "diseño técnico para mobiliario a medida",
+];
+---
+<div class="factory-strip">
+  <div class="factory-main">
+    <img class="image-cover" src={encodeURI(factoryImages[0])} alt={factoryImageAlts[0]} loading="lazy" decoding="async" />
+  </div>
+  <div class="factory-thumbs">
+    {factoryImages.slice(1, 4).map((image, index) => (
+      <img src={encodeURI(image)} alt={factoryImageAlts[index + 1]} loading="lazy" decoding="async" />
+    ))}
+  </div>
+</div>

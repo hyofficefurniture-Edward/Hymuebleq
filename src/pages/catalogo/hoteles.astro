@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import CatalogCard from "../../components/CatalogCard.astro";
+import CTA from "../../components/CTA.astro";
+import { hotelCatalog, showrooms } from "../../data/site";
+---
+<BaseLayout
+  title="Catálogo de muebles para hoteles | Hymueble"
+  description="Catálogo de mobiliario hotelero para revisar habitaciones, baños, restaurantes, bares y áreas públicas antes de cotizar una compra B2B clara por proyecto."
+  keywords={["catálogo de mobiliario hotelero", "muebles para hoteles", "habitaciones de hotel", "muebles de baño para hoteles", "mobiliario para restaurantes de hotel", "compra B2B"]}
+  image="/assets/hymueble/hoteles/目录/酒店-目录-Hero-酒店大堂全景.webp"
+>
+  <Hero
+    eyebrow="Catálogo hotelero"
+    title="Catálogo de muebles para hoteles, fabricados a medida para proyectos B2B"
+    lead="Selecciona el espacio del proyecto y combina productos de catálogo con piezas adaptadas a planos, materiales y acabados."
+    image="/assets/hymueble/hoteles/目录/酒店-目录-Hero-酒店大堂全景.webp"
+    badgeTitle="Mobiliario hotelero por espacio"
+    badgeText="Organizado para cotizaciones por volumen, remodelaciones y distribución."
+    primaryLabel="Cotizar mi proyecto ahora"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver proyectos hoteleros"
+    secondaryHref="/proyectos/hoteles/"
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Espacios"
+        title="Catálogo de muebles para hotelería"
+        text="Categorías organizadas por espacio para preparar cotizaciones por volumen, remodelación o distribución."
+      />
+      <div class="card-grid">
+        {hotelCatalog.map((item) => <CatalogCard item={item} imageField="catalogImage" catalogInterestPrefix="Hotelería - " />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Showroom hotelero</p>
+        <h2>Revisa soluciones reales antes de solicitar cotización</h2>
+        <p class="section-note">Alinea referencias visuales con compras, diseño y operación antes de definir materiales y alcance.</p>
+        <div class="btn-row section-actions">
+          <a class="btn primary" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Ver showroom virtual</a>
+          <button class="btn line" type="button" data-download-catalog data-catalog-interest="Catálogo hotelero">Solicitar catálogo PDF</button>
+        </div>
+      </div>
+      <img src={encodeURI("/assets/hymueble/fabrica/produccion/real-mockup-room.webp")} alt="Revisión de materiales para mobiliario hotelero" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <CTA title="Recibe el catálogo adecuado para tu proyecto" text="Comparte sector, ciudad y alcance. Te enviamos el material más útil para evaluar la compra." />
+</BaseLayout>

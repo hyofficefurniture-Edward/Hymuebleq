@@ -1,0 +1,24 @@
+---
+import { categories } from "../data/site";
+
+const categoryOrder = ["Oficinas", "Hoteles", "Salud", "Educación", "Residencial"];
+const visualCategories = categoryOrder
+  .map((title) => categories.find((category) => category.title === title))
+  .filter((category): category is (typeof categories)[number] => Boolean(category));
+---
+<div class="category-grid">
+  {visualCategories.map((category, index) => (
+    <article class:list={["category-card", index < 2 ? "primary" : "secondary"]}>
+      <img class="image-cover" src={encodeURI(category.image)} alt={category.alt} loading="lazy" decoding="async" />
+      <div class="category-content">
+        <h3>{category.title}</h3>
+        <p>{category.description}</p>
+        <div class="link-pair">
+          <a href={category.href}>Ver sector</a>
+          <a href={category.catalog}>Catálogo</a>
+          <a href={category.projects}>Proyectos</a>
+        </div>
+      </div>
+    </article>
+  ))}
+</div>

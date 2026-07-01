@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/Hero.astro";
+import SectionHead from "../../../components/SectionHead.astro";
+import ProcessSteps from "../../../components/ProcessSteps.astro";
+import CTA from "../../../components/CTA.astro";
+import { hotelCatalog } from "../../../data/site";
+
+export function getStaticPaths() {
+  const categoryDetails = {
+    "habitaciones": {
+      seoTitle: "Habitaciones para proyectos hoteleros",
+      subtitle: "Habitaciones para proyectos hoteleros con camas, cabeceras, escritorios y armarios a medida, pensadas para compra B2B por volumen y cotización clara B2B.",
+      keywords: ["habitaciones de hotel", "mobiliario hotelero", "muebles para hoteles", "camas para hotel", "cabeceras de hotel", "compra B2B"],
+      bullets: ["Mobiliario fijo y suelto", "Medidas y acabados según planos", "Paquetes por habitación piloto o compra por volumen"],
+      supportImage: "/assets/hymueble/hoteles/目录/酒店-目录-卡片-客房.webp",
+      supportAlt: "mobiliario para habitaciones de hotel",
+    },
+    "muebles-de-bano": {
+      seoTitle: "Muebles de baño para hoteles",
+      subtitle: "Muebles de baño para hoteles, con tocadores, almacenamiento y acabados coordinados para revisar antes de cotizar un proyecto hotelero B2B con claridad.",
+      keywords: ["muebles de baño para hoteles", "tocadores de baño", "mobiliario hotelero", "muebles para hoteles", "compra B2B", "cotización por proyecto"],
+      bullets: ["Materiales resistentes a humedad", "Diseño coordinado con habitación", "Producción por lote para remodelaciones"],
+      supportImage: "/assets/hymueble/hoteles/目录/酒店-目录-卡片-浴室.webp",
+      supportAlt: "muebles de baño para habitaciones de hotel",
+    },
+    "muebles-exteriores": {
+      seoTitle: "Mobiliario exterior para hoteles",
+      subtitle: "Mobiliario exterior para hoteles, terrazas y áreas comerciales, con referencias para comparar materiales, compra B2B y cotización por proyecto clara B2B.",
+      keywords: ["mobiliario exterior para hoteles", "muebles exteriores", "terrazas de hotel", "mobiliario hotelero", "compra B2B", "cotización por proyecto"],
+      bullets: ["Opciones para uso exterior", "Mobiliario para amenidades", "Coordinación de materiales y tapicería"],
+      supportImage: "/assets/hymueble/hoteles/目录/酒店-目录-卡片-户外.webp",
+      supportAlt: "mobiliario exterior para hoteles y terrazas",
+    },
+    "muebles-para-bar": {
+      seoTitle: "Mobiliario para bar hotelero",
+      subtitle: "Mobiliario para bar hotelero, con barras, bancos y áreas de servicio para revisar referencias visuales antes de cotizar una compra B2B con criterios claros.",
+      keywords: ["mobiliario para bar hotelero", "barras de hotel", "bancos para bar", "mobiliario hotelero", "muebles para hoteles", "compra B2B"],
+      bullets: ["Alturas y ergonomía por operación", "Acabados resistentes a uso intensivo", "Soluciones para hoteles, resorts y restaurantes"],
+      supportImage: "/assets/hymueble/casos/kempinski-dining-bar-case.webp",
+      supportAlt: "mobiliario para bar hotelero",
+    },
+    "muebles-para-restaurante": {
+      seoTitle: "Mobiliario para restaurantes de hotel",
+      subtitle: "Mobiliario para restaurantes de hotel, con mesas, sillas y bancas para comparar distribución y preparar cotización B2B con referencias por proyecto claras.",
+      keywords: ["mobiliario para restaurantes de hotel", "muebles para restaurantes", "mesas para hotel", "sillas para hotel", "mobiliario hotelero", "compra B2B"],
+      bullets: ["Mobiliario para alto tráfico", "Coordinación con concepto interior", "Producción para aperturas o renovación"],
+      supportImage: "/assets/hymueble/hoteles/目录/酒店-目录-卡片-餐厅.webp",
+      supportAlt: "mobiliario para restaurantes de hotel",
+    },
+    "mobiliario-para-conferencias": {
+      seoTitle: "Mobiliario para conferencias hoteleras",
+      subtitle: "Mobiliario para conferencias hoteleras, con mesas, sillas y salas flexibles para compras B2B, eventos y cotización por proyecto con referencias claras.",
+      keywords: ["mobiliario para conferencias", "conferencias hoteleras", "salas de reunión", "mobiliario hotelero", "muebles para hoteles", "compra B2B"],
+      bullets: ["Configuraciones flexibles", "Apilado y movilidad cuando aplica", "Soporte para hoteles de negocios y salones"],
+      supportImage: "/assets/hymueble/hoteles/目录/酒店-目录-卡片-会议室.webp",
+      supportAlt: "mobiliario para conferencias hoteleras",
+    },
+  };
+
+  return hotelCatalog.map((item) => {
+    const category = item.href.split("/").filter(Boolean).at(-1) ?? "habitaciones";
+    return { params: { category }, props: { item, detail: categoryDetails[category as keyof typeof categoryDetails] } };
+  });
+}
+
+const { item, detail } = Astro.props;
+---
+<BaseLayout
+  title={`${detail.seoTitle} | Hymueble`}
+  description={detail.subtitle}
+  keywords={detail.keywords}
+  image={item.image}
+>
+  <Hero
+    eyebrow="Catálogo hotelero"
+    title={detail.seoTitle}
+    lead={detail.subtitle}
+    image={item.image}
+    badgeTitle={detail.seoTitle}
+    badgeText="Fabricación directa, personalización y cotización por proyecto."
+    primaryLabel="Cotizar esta categoría"
+    primaryHref="/contacto/"
+    secondaryLabel="Volver al catálogo"
+    secondaryHref="/catalogo/hoteles/"
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Alcance"
+        title="Qué puede incluir esta categoría"
+        text="Esta ficha orienta compras por espacio y ayuda a preparar una conversación clara sobre medidas, acabados, cantidades y requisitos técnicos."
+      />
+      <div class="proof-grid">
+        {detail.bullets.map((bullet) => (
+          <div class="info-card compact">
+            <strong>{bullet}</strong>
+            <span>Se revisa junto con cantidades, planos, materiales, acabados y plazo esperado.</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Cotización por proyecto</p>
+        <h2>Envía tus requisitos antes de cerrar especificaciones</h2>
+        <p class="section-note">Trabajamos desde referencias, planos, lista FF&E o cantidades iniciales para traducir tu necesidad a materiales, medidas y producción.</p>
+        <div class="btn-row section-actions">
+          <a class="btn primary" href="/contacto/">Enviar requisitos</a>
+          <button class="btn line" type="button" data-download-catalog data-catalog-interest={`Hotelería - ${item.title}`}>Solicitar catálogo PDF</button>
+        </div>
+      </div>
+      <img src={encodeURI(detail.supportImage)} alt={detail.supportAlt} loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Proceso"
+        title="Cómo avanzamos desde categoría hasta producción"
+        text="El flujo se mantiene claro para equipos de diseño, compras, construcción y operación hotelera."
+      />
+      <ProcessSteps />
+    </div>
+  </section>
+
+  <CTA title={`¿Necesitas ${item.title.toLowerCase()} para tu hotel?`} text="Comparte ciudad, tipo de hotel, cantidades y referencias. Te responderemos con próximos pasos de cotización." />
+</BaseLayout>

@@ -1,0 +1,185 @@
+{
+  "sourceRoot": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册",
+  "deliveryPolicy": "lead-capture-first",
+  "notes": [
+    "Do not expose these large PDFs publicly before the form receiver is selected.",
+    "Use catalog_interest from the form to decide which PDF or PDF group should be sent.",
+    "Several catalog files are large and should be compressed or sent through a controlled workflow before launch."
+  ],
+  "catalogs": [
+    {
+      "id": "hotel-overall-solution",
+      "sector": "hoteleria",
+      "titleEs": "Catálogo hotelero integral",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/酒店家具/HY图册-酒店家具-整体方案类.pdf",
+      "fileName": "HY图册-酒店家具-整体方案类.pdf",
+      "leadInterests": ["Catálogo para hotelería", "Catálogo hotelero", "Hotelería - Habitaciones", "Hotelería - Muebles de baño", "Hotelería - Exteriores", "Hotelería - Muebles para bar", "Hotelería - Muebles para restaurante", "Hotelería - Mobiliario para conferencias"]
+    },
+    {
+      "id": "hotel-sofa",
+      "sector": "hoteleria",
+      "titleEs": "Catálogo hotelero de sofás",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/酒店家具/HY图册-酒店家具-沙发类.pdf",
+      "fileName": "HY图册-酒店家具-沙发类.pdf",
+      "leadInterests": ["Hotelería - Habitaciones", "Hotelería - Exteriores", "Hotelería - Muebles para bar", "Hotelería - Muebles para restaurante"]
+    },
+    {
+      "id": "office-jiangnan",
+      "sector": "oficinas",
+      "titleEs": "Catálogo de oficinas: serie Jiangnan",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/办公家具/HY图册-办公家具-江南系列-办公桌椅柜.pdf",
+      "fileName": "HY图册-办公家具-江南系列-办公桌椅柜.pdf",
+      "leadInterests": ["Catálogo de oficinas", "Catálogo de Oficinas", "Oficinas - Puestos de trabajo", "Oficinas - Oficinas ejecutivas"]
+    },
+    {
+      "id": "office-reception",
+      "sector": "oficinas",
+      "titleEs": "Catálogo de oficinas: recepción",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/办公家具/HY图册-办公家具-前台.pdf",
+      "fileName": "HY图册-办公家具-前台.pdf",
+      "leadInterests": ["Oficinas - Recepción y espera"]
+    },
+    {
+      "id": "office-chairs",
+      "sector": "oficinas",
+      "titleEs": "Catálogo de sillas de oficina",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/办公家具/HY图册-办公家具-办公椅.pdf",
+      "fileName": "HY图册-办公家具-办公椅.pdf",
+      "leadInterests": ["Oficinas - Sillas ergonómicas", "Oficinas - Mesas de reunión", "Oficinas - Lounge corporativo"]
+    },
+    {
+      "id": "office-acoustic-booth",
+      "sector": "oficinas",
+      "titleEs": "Catálogo de cabinas acústicas",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/办公家具/HY图册-办公家具-静音仓.pdf",
+      "fileName": "HY图册-办公家具-静音仓.pdf",
+      "leadInterests": ["Oficinas - Puestos de trabajo", "Oficinas - Lounge corporativo"]
+    },
+    {
+      "id": "office-juedu",
+      "sector": "oficinas",
+      "titleEs": "Catálogo de oficinas: serie Juedu",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/办公家具/HY图册-办公家具-觉度系列-办公桌椅柜.pdf",
+      "fileName": "HY图册-办公家具-觉度系列-办公桌椅柜.pdf",
+      "leadInterests": ["Oficinas - Puestos de trabajo", "Oficinas - Oficinas ejecutivas"]
+    },
+    {
+      "id": "office-polyester-fiber",
+      "sector": "oficinas",
+      "titleEs": "Catálogo de soluciones en fibra de poliéster",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/办公家具/HY图册-办公家具-聚酯纤维.pdf",
+      "fileName": "HY图册-办公家具-聚酯纤维.pdf",
+      "leadInterests": ["Oficinas - Puestos de trabajo", "Oficinas - Lounge corporativo"]
+    },
+    {
+      "id": "healthcare-beds",
+      "sector": "salud",
+      "titleEs": "Catálogo de salud: camas, mesas y sillas",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/医养家具/HY图册-医养家具-医疗床桌凳椅.pdf",
+      "fileName": "HY图册-医养家具-医疗床桌凳椅.pdf",
+      "leadInterests": ["Salud - Habitaciones hospitalarias", "Salud - Consultorios", "Salud - Residencias de cuidado"]
+    },
+    {
+      "id": "healthcare-overall-1",
+      "sector": "salud",
+      "titleEs": "Catálogo integral de salud 1",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/医养家具/HY图册-医养家具-综合图册1.pdf",
+      "fileName": "HY图册-医养家具-综合图册1.pdf",
+      "leadInterests": ["Catálogo de salud", "Catálogo de Salud", "Salud - Habitaciones hospitalarias", "Salud - Consultorios", "Salud - Salas de espera", "Salud - Laboratorios", "Salud - Residencias de cuidado", "Salud - Áreas de personal"]
+    },
+    {
+      "id": "healthcare-overall-2",
+      "sector": "salud",
+      "titleEs": "Catálogo integral de salud 2",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/医养家具/HY图册-医养家具-综合图册2.pdf",
+      "fileName": "HY图册-医养家具-综合图册2.pdf",
+      "leadInterests": ["Catálogo de salud", "Catálogo de Salud", "Salud - Habitaciones hospitalarias", "Salud - Consultorios", "Salud - Salas de espera", "Salud - Laboratorios", "Salud - Residencias de cuidado", "Salud - Áreas de personal"]
+    },
+    {
+      "id": "education-plastic-cabinets",
+      "sector": "educacion",
+      "titleEs": "Catálogo escolar: lockers y almacenamiento",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/学校家具/HY图册-学校家具-塑胶柜书包.pdf",
+      "fileName": "HY图册-学校家具-塑胶柜书包.pdf",
+      "leadInterests": ["Educación - Aulas", "Educación - Bibliotecas", "Educación - Espacios infantiles", "Educación - Administración escolar"]
+    },
+    {
+      "id": "education-tables-chairs-stools",
+      "sector": "educacion",
+      "titleEs": "Catálogo escolar: mesas, sillas y bancos",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/学校家具/HY图册-学校家具-桌椅凳.pdf",
+      "fileName": "HY图册-学校家具-桌椅凳.pdf",
+      "leadInterests": ["Catálogo de educación", "Catálogo de Educación", "Educación - Aulas", "Educación - Bibliotecas", "Educación - Laboratorios", "Educación - Comedores", "Educación - Espacios infantiles", "Educación - Administración escolar"]
+    },
+    {
+      "id": "education-classroom-desks",
+      "sector": "educacion",
+      "titleEs": "Catálogo escolar: pupitres",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/学校家具/HY图册-学校家具-课桌椅.pdf",
+      "fileName": "HY图册-学校家具-课桌椅.pdf",
+      "leadInterests": ["Educación - Aulas", "Educación - Espacios infantiles"]
+    },
+    {
+      "id": "apartment-nordic",
+      "sector": "residencial",
+      "titleEs": "Catálogo residencial: apartamento estilo nórdico",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/住宅家具-公寓/HY图册-住宅家具-公寓北欧风.pdf",
+      "fileName": "HY图册-住宅家具-公寓北欧风.pdf",
+      "leadInterests": ["Catálogo de residencial", "Catálogo de Residencial", "Residencial - Sala de villa", "Residencial - Comedor residencial", "Residencial - Dormitorio principal", "Residencial - Vestidores", "Residencial - Terrazas", "Residencial - Sofás y descanso"]
+    },
+    {
+      "id": "apartment-model-room",
+      "sector": "residencial",
+      "titleEs": "Catálogo residencial: apartamento modelo",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/住宅家具-公寓/HY图册-住宅家具-公寓样板间家具.pdf",
+      "fileName": "HY图册-住宅家具-公寓样板间家具.pdf",
+      "leadInterests": ["Residencial - Sala de villa", "Residencial - Comedor residencial", "Residencial - Dormitorio principal", "Residencial - Vestidores", "Residencial - Sofás y descanso"]
+    },
+    {
+      "id": "villa-luxury-1",
+      "sector": "residencial",
+      "titleEs": "Catálogo residencial: mansión 1",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/住宅家具-别墅豪宅/HY图册-住宅家具-豪宅家具1.pdf",
+      "fileName": "HY图册-住宅家具-豪宅家具1.pdf",
+      "leadInterests": ["Residencial - Sala de villa", "Residencial - Comedor residencial", "Residencial - Dormitorio principal", "Residencial - Vestidores"]
+    },
+    {
+      "id": "villa-luxury-2",
+      "sector": "residencial",
+      "titleEs": "Catálogo residencial: mansión 2",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/住宅家具-别墅豪宅/HY图册-住宅家具-豪宅家具2.pdf",
+      "fileName": "HY图册-住宅家具-豪宅家具2.pdf",
+      "leadInterests": ["Residencial - Sala de villa", "Residencial - Comedor residencial", "Residencial - Dormitorio principal"]
+    },
+    {
+      "id": "villa-luxury-3",
+      "sector": "residencial",
+      "titleEs": "Catálogo residencial: mansión 3",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/住宅家具-别墅豪宅/HY图册-住宅家具-豪宅家具3.pdf",
+      "fileName": "HY图册-住宅家具-豪宅家具3.pdf",
+      "leadInterests": ["Residencial - Sala de villa", "Residencial - Comedor residencial", "Residencial - Dormitorio principal"]
+    },
+    {
+      "id": "villa-luxury-4",
+      "sector": "residencial",
+      "titleEs": "Catálogo residencial: mansión 4",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/住宅家具-别墅豪宅/HY图册-住宅家具-豪宅家具4.pdf",
+      "fileName": "HY图册-住宅家具-豪宅家具4.pdf",
+      "leadInterests": ["Residencial - Sala de villa", "Residencial - Comedor residencial", "Residencial - Dormitorio principal"]
+    },
+    {
+      "id": "villa-luxury-5",
+      "sector": "residencial",
+      "titleEs": "Catálogo residencial: mansión 5",
+      "sourcePath": "/Users/yoyo/Documents/工作台/50_运营系统/网站/hymueble独立站资料/hymueble图册/住宅家具-别墅豪宅/HY图册-住宅家具-豪宅家具5.pdf",
+      "fileName": "HY图册-住宅家具-豪宅家具5.pdf",
+      "leadInterests": ["Residencial - Sala de villa", "Residencial - Comedor residencial", "Residencial - Dormitorio principal", "Residencial - Terrazas", "Residencial - Sofás y descanso"]
+    }
+  ],
+  "manualInterests": [
+    {
+      "value": "Capacidades de fábrica y mobiliario B2B",
+      "recommendedAction": "Send factory capability materials first, then choose sector catalog after buyer replies."
+    }
+  ]
+}

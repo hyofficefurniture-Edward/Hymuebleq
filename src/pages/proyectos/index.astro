@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import CTA from "../../components/CTA.astro";
+import { categories, projectSolutions, projects } from "../../data/site";
+---
+<BaseLayout
+  title="Proyectos de mobiliario B2B | Hymueble"
+  description="Proyectos de mobiliario B2B para comparar sectores, espacios y referencias antes de enviar requisitos, revisar alcance o solicitar cotización por proyecto."
+  keywords={["proyectos de mobiliario B2B", "referencias de proyectos", "mobiliario hotelero", "mobiliario de oficina", "mobiliario para salud", "mobiliario educativo", "cotización B2B"]}
+  image="/assets/hymueble/generated/project-portfolio-review.webp"
+>
+  <Hero
+    eyebrow="Proyectos por sector"
+    title="Mobiliario para proyectos B2B: hoteles, oficinas, salud, educación y residencial"
+    lead="Descubre cómo Hymueble apoya proyectos B2B con muebles de alta calidad, fabricación directa, personalización y soporte para compras internacionales."
+    image="/assets/hymueble/generated/project-portfolio-review.webp"
+    badgeTitle="Casos y rutas de prueba"
+    badgeText="Página interna para organizar referencias por sector antes de cotizar."
+    primaryLabel="Consultar proyecto similar"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver catálogos"
+    secondaryHref="/catalogo/"
+  />
+
+  <section class="section solution-section">
+    <div class="container solution-shell">
+      <div class="solution-intro">
+        <div>
+          <p class="eyebrow">Soluciones por proyecto</p>
+          <h2>El punto de partida no es un SKU, es el alcance del proyecto</h2>
+        </div>
+        <p>Antes de cotizar, un equipo de compras necesita entender espacios, cantidades, acabados, producción y logística. Estas rutas ordenan la primera conversación.</p>
+      </div>
+      <div class="solution-summary-grid">
+        {projectSolutions.map((solution, index) => (
+          <article class:list={["solution-summary-card", { featured: index === 0 }]}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <p class="eyebrow">{solution.kicker}</p>
+            <h3>{solution.title}</h3>
+            <p>{solution.response}</p>
+            <ul>
+              {solution.proof.slice(0, 2).map((item) => <li>{item}</li>)}
+            </ul>
+            <a href={solution.href}>Ver ruta</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Entradas rápidas"
+        title="Ir directo al sector que quieres revisar"
+        text="Después de entender la lógica de proyecto, usa estos accesos para entrar al sector, catálogo o ruta de casos que corresponde a tu operación."
+      />
+      <div class="project-sector-links">
+        {categories.map((category) => (
+          <article class="project-sector-link">
+            <span>{category.title}</span>
+            <p>{category.description}</p>
+            <div>
+              <a href={category.projects}>Proyectos</a>
+              <a href={category.catalog}>Catálogo</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHead
+        eyebrow="Referencias visibles"
+        title="Casos destacados para evaluar experiencia"
+        text="Tarjetas con sector, región y alcance para una revisión rápida antes de enviar una solicitud de cotización."
+      />
+      <div class="card-grid">
+        {projects.map((project) => <ProjectCard project={project} imageField="hubImage" />)}
+      </div>
+    </div>
+  </section>
+
+  <CTA title="¿Quieres comparar tu proyecto con una referencia existente?" text="Envíanos tipo de espacio, ciudad, cantidades y plazo. Te orientamos sobre un caso comparable y próximos pasos." />
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+import { factoryEquipmentHighlights, factoryEvidenceCards } from "../data/site";
+import ScrollRail from "./ScrollRail.astro";
+
+const mainCard = factoryEvidenceCards[1];
+const sideCards = [factoryEvidenceCards[0], ...factoryEvidenceCards.slice(2)];
+---
+<div class="factory-evidence">
+  <article class="factory-evidence-main">
+    <img src={encodeURI(mainCard.image)} alt={mainCard.alt} loading="lazy" decoding="async" />
+    <div class="factory-evidence-caption">
+      <span>{mainCard.label}</span>
+      <h3>{mainCard.title}</h3>
+      <p>{mainCard.text}</p>
+    </div>
+  </article>
+
+  <ScrollRail label="Evidencia de equipos de fábrica">
+    <div class="factory-evidence-side" data-scroll-track aria-label="Evidencia de equipos de fábrica">
+      {sideCards.map((card, index) => (
+        <article class="factory-evidence-card">
+          <img src={encodeURI(card.image)} alt={card.alt} loading="lazy" decoding="async" />
+          <div>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </ScrollRail>
+</div>
+
+<div class="equipment-proof-strip" aria-label="Capacidades de producción destacadas">
+  {factoryEquipmentHighlights.map((item) => (
+    <div>
+      <span>{item.title}</span>
+      <strong>{item.label}</strong>
+    </div>
+  ))}
+</div>

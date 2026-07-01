@@ -1,0 +1,17 @@
+---
+import ContactForm from "./ContactForm.astro";
+---
+<div class="modal" data-catalog-modal aria-hidden="true">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Descargar catálogo">
+    <div class="modal-head">
+      <div>
+        <h3 data-catalog-modal-title>Descarga el catálogo de mobiliario</h3>
+        <p data-catalog-modal-text>Déjanos tus datos de proyecto y te enviaremos el catálogo adecuado para tu sector.</p>
+      </div>
+      <button class="modal-close" type="button" data-modal-close aria-label="Cerrar">×</button>
+    </div>
+    <div class="form-card">
+      <ContactForm compact idPrefix="catalog" submitLabel="Solicitar catálogo" catalogLead />
+    </div>
+  </div>
+</div>

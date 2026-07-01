@@ -1,0 +1,52 @@
+---
+import ValuePoints from "./ValuePoints.astro";
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  image: string;
+  imageAlt?: string;
+  badgeTitle?: string;
+  badgeText?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  lead,
+  image,
+  imageAlt,
+  badgeTitle = "Proyecto B2B",
+  badgeText = "Mobiliario personalizado con control de calidad.",
+  primaryLabel = "Cotizar mi proyecto",
+  primaryHref = "/contacto/",
+  secondaryLabel = "Ver catálogo",
+  secondaryHref = "/catalogo/hoteles/",
+} = Astro.props;
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="lead">{lead}</p>
+      <ValuePoints />
+      <div class="btn-row">
+        <a class="btn primary" href={primaryHref}>{primaryLabel}</a>
+        <a class="btn ghost" href={secondaryHref}>{secondaryLabel}</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img class="image-cover" src={encodeURI(image)} alt={imageAlt ?? title} loading="eager" decoding="async" fetchpriority="high" />
+      <div class="media-badge">
+        <strong>{badgeTitle}</strong>
+        <span>{badgeText}</span>
+      </div>
+    </div>
+  </div>
+</section>

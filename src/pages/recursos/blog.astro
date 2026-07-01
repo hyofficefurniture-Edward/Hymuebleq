@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import CTA from "../../components/CTA.astro";
+
+const blogHeroImage = "/assets/hymueble/recursos/博客/资源-博客-Hero-工厂CNC.webp";
+const guideCards = [
+  {
+    label: "Guía de compra",
+    title: "Cómo preparar una solicitud de mobiliario B2B",
+    text: "Define tipo de proyecto, espacios, cantidades, medidas de referencia, ciudad de entrega y fecha objetivo antes de pedir precio.",
+    points: ["Alcance", "Cantidades", "Plazo"],
+  },
+  {
+    label: "Proveedor de fábrica",
+    title: "Señales para evaluar si un proveedor puede manejar proyectos",
+    text: "Revisa capacidad de producción, control documental, casos, showroom, muestras, embalaje y soporte para exportación.",
+    points: ["Fábrica", "Casos", "Exportación"],
+  },
+  {
+    label: "Calidad",
+    title: "Qué revisar antes de aprobar producción por volumen",
+    text: "Materiales, acabados, herrajes, muestras, tolerancias, inspección en proceso y evidencia previa al embalaje.",
+    points: ["Muestras", "Acabados", "Inspección"],
+  },
+  {
+    label: "Importación",
+    title: "Información que ayuda a cotizar con menos rondas",
+    text: "Planos, listas FF&E, referencias visuales, cantidades aproximadas y restricciones de obra reducen ida y vuelta comercial.",
+    points: ["Planos", "FF&E", "Referencias"],
+  },
+];
+
+const decisionBlocks = [
+  {
+    title: "Si ya tienes planos",
+    text: "Envía layout, medidas, lista de espacios y prioridad por área. Podemos revisar alcance antes de preparar una cotización.",
+  },
+  {
+    title: "Si solo tienes referencias",
+    text: "Comparte imágenes, moodboard o enlaces de estilo. El equipo puede orientar materiales, categorías y ruta de muestras.",
+  },
+  {
+    title: "Si estás comparando proveedores",
+    text: "Usa showroom, casos, capacidad de fábrica y control de calidad para validar si el proveedor puede acompañar el proyecto.",
+  },
+];
+---
+<BaseLayout
+  title="Blog para compradores B2B | Hymueble"
+  description="Guías prácticas para compradores B2B de mobiliario comercial: selección de proveedor, calidad, importación y preparación de cotizaciones por proyecto."
+  keywords={["blog de mobiliario B2B", "compradores B2B", "mobiliario comercial", "selección de proveedor", "calidad de mobiliario", "cotización por proyecto"]}
+  image={blogHeroImage}
+>
+  <section class="section resource-hero">
+    <div class="container resource-hero-grid">
+      <div class="resource-hero-copy">
+        <p class="eyebrow">Blog B2B</p>
+        <h1>Guías para comprar mobiliario comercial directo de fábrica</h1>
+        <p>
+          Contenido pensado para equipos de compra, diseño, construcción e importación que necesitan reducir riesgo antes de cotizar.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="/contacto/">Enviar requerimientos</a>
+          <a class="btn line" href="/showroom/">Ver showroom virtual</a>
+        </div>
+      </div>
+      <figure class="resource-hero-media">
+        <img src={encodeURI(blogHeroImage)} alt="Centro CNC y producción de mobiliario" loading="eager" decoding="async" fetchpriority="high" />
+        <figcaption>Capacidad de fábrica, procesos y criterios de compra para proyectos B2B.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Temas principales"
+        title="Lecturas cortas para preparar una compra con más claridad"
+        text="Cada recurso responde a dudas reales de compradores: proveedor, personalización, calidad, documentación y preparación de una solicitud."
+      />
+      <div class="resource-card-grid">
+        {guideCards.map((card) => (
+          <article class="resource-guide-card">
+            <span>{card.label}</span>
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+            <ul>
+              {card.points.map((point) => <li>{point}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container resource-split">
+      <div>
+        <p class="eyebrow">Cómo usar estos recursos</p>
+        <h2>El blog no reemplaza la cotización: ayuda a llegar mejor preparado</h2>
+        <p>
+          En proyectos B2B, el precio depende de alcance, medidas, acabados, volumen, empaque y ruta. Por eso priorizamos decisiones prácticas.
+        </p>
+      </div>
+      <div class="resource-decision-list">
+        {decisionBlocks.map((item) => (
+          <article>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="¿Quieres que revisemos tu caso antes de cotizar?"
+    text="Comparte tipo de proyecto, ciudad, espacios y planos o lista si los tienes. Una descripción inicial también sirve."
+  />
+</BaseLayout>

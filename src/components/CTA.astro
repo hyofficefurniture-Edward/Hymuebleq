@@ -1,0 +1,25 @@
+---
+import { brand } from "../data/site";
+
+interface Props {
+  title?: string;
+  text?: string;
+}
+
+const {
+  title = "¿Tienes un proyecto de mobiliario?",
+  text = "Comparte alcance, ciudad, cantidades y plazo. Revisamos tu solicitud y respondemos en horario laboral.",
+} = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <h2>{title}</h2>
+      <p>{text}</p>
+      <div class="btn-row">
+        <a class="btn primary" href="/contacto/">Solicitar cotización gratuita</a>
+        <a class="btn ghost" href={brand.whatsapp} target="_blank" rel="noreferrer">Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>

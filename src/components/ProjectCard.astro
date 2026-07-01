@@ -1,0 +1,43 @@
+---
+interface Project {
+  name: string;
+  sector: string;
+  region: string;
+  scope: string;
+  image: string;
+  homeImage?: string;
+  hotelImage?: string;
+  hubImage?: string;
+  listingImage?: string;
+  detailImage?: string;
+  alt?: string;
+  facts?: string[];
+  href: string;
+}
+interface Props {
+  project: Project;
+  imageField?: "image" | "homeImage" | "hotelImage" | "hubImage" | "listingImage" | "detailImage";
+}
+const { project, imageField = "image" } = Astro.props;
+const image = project[imageField] ?? project.image;
+---
+<article class="project-card">
+  <img src={encodeURI(image)} alt={project.alt ?? project.name} loading="lazy" decoding="async" />
+  <div class="card-body">
+    <div class="meta">
+      <span>{project.sector}</span>
+      <span>{project.region}</span>
+    </div>
+    <h3>{project.name}</h3>
+    <p>{project.scope}</p>
+    {project.facts && (
+      <ul class="project-facts">
+        {project.facts.map((fact) => <li>{fact}</li>)}
+      </ul>
+    )}
+    <div class="btn-row">
+      <a class="btn line" href={project.href}>Ver detalles</a>
+      <a class="btn dark" href="/contacto/">Consultar similar</a>
+    </div>
+  </div>
+</article>

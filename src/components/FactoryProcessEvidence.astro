@@ -1,0 +1,18 @@
+---
+import { factoryProcessEvidence } from "../data/site";
+import ScrollRail from "./ScrollRail.astro";
+---
+<ScrollRail label="Proceso de fábrica documentado">
+  <div class="factory-process-evidence" data-scroll-track aria-label="Proceso de fábrica documentado">
+    {factoryProcessEvidence.map((item) => (
+      <article class="factory-process-card">
+        <img src={encodeURI(item.image)} alt={item.alt} loading="lazy" decoding="async" />
+        <div>
+          <span>{item.step}</span>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</ScrollRail>

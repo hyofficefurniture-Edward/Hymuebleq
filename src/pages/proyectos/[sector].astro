@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import ProcessSteps from "../../components/ProcessSteps.astro";
+import CTA from "../../components/CTA.astro";
+import { categories, projects } from "../../data/site";
+
+export function getStaticPaths() {
+  return [
+    { params: { sector: "oficinas" } },
+    { params: { sector: "salud" } },
+    { params: { sector: "educacion" } },
+    { params: { sector: "residencial" } },
+  ];
+}
+
+const sector = Astro.params.sector ?? "oficinas";
+const category = categories.find((item) => item.projects.endsWith(`/${sector}/`)) ?? categories[1];
+const sectorProjects = projects.filter((project) => {
+  const normalized = project.sector.toLowerCase();
+  return normalized === category.title.toLowerCase() || normalized === sector;
+});
+const hasSectorProjects = sectorProjects.length > 0;
+---
+<BaseLayout
+  title={`${category.projectsSeoTitle ?? `Proyectos de ${category.title}`} | Hymueble`}
+  description={category.projectsSeoDescription}
+  keywords={category.projectsSeoKeywords}
+  image={category.projectImage}
+>
+  <Hero
+    eyebrow="Proyectos B2B"
+    title={`Proyectos de mobiliario para ${category.title.toLowerCase()}`}
+    lead={`Referencias para evaluar cómo Hymueble puede apoyar proyectos de ${category.title.toLowerCase()} con fabricación directa, personalización y soporte de exportación.`}
+    image={category.projectImage}
+    badgeTitle={category.projectsSeoTitle ?? `Casos de ${category.title}`}
+    badgeText="La primera fase profundiza en hotelería y deja listas las rutas de los demás sectores."
+    primaryLabel="Consultar proyecto similar"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver catálogo"
+    secondaryHref={category.catalog}
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Referencias"
+        title={hasSectorProjects ? "Casos y referencias para compradores de proyecto" : "Ruta de proyecto lista para recibir requisitos"}
+        text={hasSectorProjects ? "Cada referencia visible ayuda a revisar sector, región y alcance antes de enviar una solicitud de cotización." : "Este sector todavía no tiene una base pública completa de casos dentro del preview. En vez de repetir imágenes de hotelería, dejamos una ruta comercial clara para levantar requisitos y preparar referencias comparables."}
+      />
+      {hasSectorProjects ? (
+        <div class="card-grid">
+          {sectorProjects.map((project) => <ProjectCard project={project} imageField="listingImage" />)}
+        </div>
+      ) : (
+        <div class="proof-grid">
+          <div class="info-card compact">
+            <strong>Requisitos del espacio</strong>
+            <span>Tipo de edificio, áreas a equipar, cantidades aproximadas y nivel de personalización.</span>
+          </div>
+          <div class="info-card compact">
+            <strong>Referencias visuales</strong>
+            <span>Planos, fotos, renders, acabados esperados o catálogo base para alinear la propuesta.</span>
+          </div>
+          <div class="info-card compact">
+            <strong>Próximo paso</strong>
+            <span>Enviar la consulta para preparar una comparación real sin reutilizar casos que no pertenecen al sector.</span>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHead
+        eyebrow="Evaluación"
+        title="Qué información necesitamos para preparar una referencia comparable"
+        text="Sector, ciudad, tipo de edificio, cantidad aproximada, materiales esperados, plazos y si el proyecto ya cuenta con planos o lista de mobiliario."
+      />
+      <ProcessSteps />
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

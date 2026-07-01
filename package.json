@@ -1,0 +1,23 @@
+{
+  "name": "hymueble-b2b-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro check && astro build",
+    "qa:static": "node scripts/qa-static.mjs",
+    "qa:catalogs": "node scripts/qa-catalog-sources.mjs",
+    "qa:launch": "node scripts/qa-launch-config.mjs",
+    "qa:browser": "node scripts/qa-browser-routes.mjs",
+    "preview": "astro preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.13.3",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}

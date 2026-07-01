@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import CTA from "../../components/CTA.astro";
+import { resourceCards } from "../../data/site";
+---
+<BaseLayout
+  title="Recursos para compradores B2B | Hymueble"
+  description="Recursos para compradores B2B de mobiliario comercial: guías, videos y materiales para preparar selección, proveedor y cotización con criterios claros."
+  keywords={["recursos para compradores B2B", "mobiliario comercial", "guías de compra", "videos de fábrica", "proveedor de mobiliario", "cotización por proyecto"]}
+  image="/assets/hymueble/recursos/主页/资源-主页-Hero-工厂CNC.webp"
+>
+  <Hero
+    eyebrow="Recursos"
+    title="Recursos para compradores B2B de mobiliario"
+    lead="Materiales para evaluar proveedores, entender procesos de fábrica, preparar una cotización y revisar videos de producción, showroom y proyectos."
+    image="/assets/hymueble/recursos/主页/资源-主页-Hero-工厂CNC.webp"
+    badgeTitle="Material de apoyo comercial"
+    badgeText="Blog, videos, guías, FAQ y materiales de apoyo para equipos de compra."
+    primaryLabel="Consultar proyecto"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver videos"
+    secondaryHref="/recursos/videos/"
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Biblioteca"
+        title="Contenido para tomar mejores decisiones de compra"
+        text="Rutas principales para artículos, videos, guías y materiales descargables que ayudan a preparar una compra B2B."
+      />
+      <div class="card-grid two">
+        {resourceCards.map((item) => (
+          <article class="catalog-card">
+            <img src={encodeURI(item.image)} alt={item.alt ?? item.title} loading="lazy" decoding="async" />
+            <div class="card-body">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <div class="btn-row">
+                <a class="btn line" href={item.href}>Ver {item.title.toLowerCase()}</a>
+                <a class="btn primary" href="/contacto/">Solicitar información</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA title="¿Buscas un material específico para presentar internamente?" text="Indica sector, tipo de proyecto y uso del material. Te ayudamos a ubicar catálogo, video o referencia adecuada." />
+</BaseLayout>

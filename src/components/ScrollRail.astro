@@ -1,0 +1,23 @@
+---
+interface Props {
+  label: string;
+  class?: string;
+}
+
+const { label, class: className } = Astro.props;
+---
+<div class:list={["scroll-rail-shell", className]} data-scroll-rail aria-label={label}>
+  <slot />
+  <div class="scroll-rail-controls" aria-hidden="false">
+    <button class="scroll-rail-button" type="button" data-scroll-prev aria-label="Ver contenido anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m15 18-6-6 6-6" />
+      </svg>
+    </button>
+    <button class="scroll-rail-button" type="button" data-scroll-next aria-label="Ver contenido siguiente">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m9 6 6 6-6 6" />
+      </svg>
+    </button>
+  </div>
+</div>

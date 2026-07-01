@@ -1,0 +1,31 @@
+---
+interface Item {
+  title: string;
+  href: string;
+  image: string;
+  catalogImage?: string;
+  alt?: string;
+  catalogAlt?: string;
+  description: string;
+}
+interface Props {
+  item: Item;
+  imageField?: "image" | "catalogImage";
+  catalogInterestPrefix?: string;
+}
+const { item, imageField = "image", catalogInterestPrefix = "" } = Astro.props;
+const image = item[imageField] ?? item.image;
+const alt = imageField === "catalogImage" ? item.catalogAlt ?? item.alt ?? item.title : item.alt ?? item.title;
+const catalogInterest = `${catalogInterestPrefix}${item.title}`;
+---
+<article class="catalog-card">
+  <img src={encodeURI(image)} alt={alt} loading="lazy" decoding="async" />
+  <div class="card-body">
+    <h3>{item.title}</h3>
+    <p>{item.description}</p>
+    <div class="btn-row">
+      <a class="btn line" href={item.href}>Ver más</a>
+      <button class="btn primary" type="button" data-download-catalog data-catalog-interest={catalogInterest}>Descargar catálogo</button>
+    </div>
+  </div>
+</article>

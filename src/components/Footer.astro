@@ -1,0 +1,84 @@
+---
+import { brand, categories, socialLinks } from "../data/site";
+
+const footerImage = "/assets/hymueble/generated/catalog-hub-material-library.webp";
+
+const procurementLinks = [
+  { label: "Showroom virtual", href: brand.showroom },
+  { label: "Catálogos", href: "/catalogo/" },
+  { label: "Proyectos", href: "/proyectos/" },
+  { label: "Fábrica", href: "/fabrica/" },
+  { label: "Recursos", href: "/recursos/" },
+  { label: "Contacto", href: "/contacto/" },
+];
+
+const capabilities = [
+  "Cotización por proyecto",
+  "Mobiliario a medida",
+  "Producción por volumen",
+  "Control de calidad",
+  "Embalaje de exportación",
+  "Soporte logístico",
+];
+
+const socialIcon = (platform: string) => {
+  const icons: Record<string, string> = {
+    Facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 8.2h2.1V4.7c-.4-.1-1.7-.2-3.2-.2-3.1 0-5.2 1.9-5.2 5.4v3H4.5v3.9h3.4v7h4.1v-7h3.2l.5-3.9H12V10.3c0-1.1.3-2.1 2.2-2.1Z"/></svg>',
+    Instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 2.8h9.2c2.6 0 4.6 2 4.6 4.6v9.2c0 2.6-2 4.6-4.6 4.6H7.4c-2.6 0-4.6-2-4.6-4.6V7.4c0-2.6 2-4.6 4.6-4.6Zm0 2A2.6 2.6 0 0 0 4.8 7.4v9.2a2.6 2.6 0 0 0 2.6 2.6h9.2a2.6 2.6 0 0 0 2.6-2.6V7.4a2.6 2.6 0 0 0-2.6-2.6H7.4Zm4.6 3.5a3.7 3.7 0 1 1 0 7.4 3.7 3.7 0 0 1 0-7.4Zm0 2a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4Zm4.2-2.5a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/></svg>',
+    LinkedIn: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 8.8h3.8v11.8H5.4V8.8Zm1.9-5.6a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4Zm4.3 5.6h3.6v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.8 0 4.5 2.5 4.5 5.7v6.4h-3.8v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.8h-3.8V8.8Z"/></svg>',
+    YouTube: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7.3a3 3 0 0 0-2.1-2.1C18.1 4.7 12 4.7 12 4.7s-6.1 0-7.9.5A3 3 0 0 0 2 7.3 31 31 0 0 0 1.5 12c0 1.6.1 3.2.5 4.7a3 3 0 0 0 2.1 2.1c1.8.5 7.9.5 7.9.5s6.1 0 7.9-.5a3 3 0 0 0 2.1-2.1c.4-1.5.5-3.1.5-4.7s-.1-3.2-.5-4.7ZM9.9 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>',
+    TikTok: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 2.4c.3 2.2 1.5 3.7 3.7 3.9v3.5c-1.3.1-2.5-.3-3.7-1v6.4c0 4-2.8 6.4-6.1 6.4-3 0-5.5-2.2-5.5-5.4 0-3.5 2.8-5.5 6.2-5.4.3 0 .6 0 .9.1v3.7a3.6 3.6 0 0 0-.9-.1c-1.5 0-2.5.8-2.5 2.1 0 1.2.9 2 2.1 2 1.4 0 2.3-.8 2.3-2.7V2.4h3.5Z"/></svg>',
+  };
+
+  return icons[platform] ?? `<span>${platform.slice(0, 2)}</span>`;
+};
+---
+<footer class="footer" style={`--footer-bg: url('${footerImage}')`}>
+  <div class="container footer-shell">
+    <section class="footer-nav-panel">
+      <div class="footer-signature" aria-labelledby="footer-brand-title">
+        <a class="footer-logo" href="/" aria-label="Hymueble inicio">
+          <img src={brand.logo} alt="Hymueble" loading="lazy" decoding="async" />
+          <span>
+            <strong id="footer-brand-title">{brand.name}</strong>
+            <small>{brand.tagline}</small>
+          </span>
+        </a>
+        <p>
+          Mobiliario B2B directo de fábrica para proyectos comerciales,
+          hoteleros e institucionales.
+        </p>
+        <div class="social-links" aria-label="Redes sociales">
+          {socialLinks.map((item) => (
+            <a href={item.href} target="_blank" rel="noreferrer" aria-label={item.platform} title={item.platform} set:html={socialIcon(item.platform)} />
+          ))}
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Sectores">
+        <h3>Soluciones</h3>
+        {categories.map((category) => <a href={category.href}>{category.title}</a>)}
+      </nav>
+
+      <nav class="footer-col" aria-label="Compra B2B">
+        <h3>Compra B2B</h3>
+        {procurementLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      </nav>
+
+      <div class="footer-contact-block">
+        <h3>Contacto</h3>
+        <a href={brand.whatsapp} target="_blank" rel="noreferrer"><span>WA</span> WhatsApp para proyectos</a>
+        <a href={`mailto:${brand.email}`}><span>@</span> {brand.email}</a>
+        <a href="/contacto/"><span>24h</span> Formulario de proyecto</a>
+      </div>
+    </section>
+
+    <div class="footer-bottom">
+      <span>© 2026 Hymueble. Mobiliario B2B directo de fábrica para proyectos.</span>
+      <div>
+        {capabilities.slice(0, 4).map((item) => <span>{item}</span>)}
+        <a href="/privacidad/">Privacidad</a>
+      </div>
+    </div>
+  </div>
+</footer>

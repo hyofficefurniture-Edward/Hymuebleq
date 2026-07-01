@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import CTA from "../../components/CTA.astro";
+import { categories } from "../../data/site";
+
+const catalogCards = categories.map((category) => ({
+  ...category,
+  title: category.title === "Hoteles" ? "Catálogo para hotelería" : `Catálogo de ${category.title.toLowerCase()}`,
+  href: category.catalog,
+  image: category.catalogImage,
+}));
+---
+<BaseLayout
+  title="Catálogos de mobiliario B2B | Hymueble"
+  description="Catálogos de mobiliario B2B para hotelería, oficinas, salud, educación y residencial, pensados para selección, comparación y cotización por proyecto B2B."
+  keywords={["catálogos de mobiliario B2B", "mobiliario hotelero", "mobiliario de oficina", "mobiliario para salud", "mobiliario educativo", "mobiliario residencial", "cotización por proyecto"]}
+  image="/assets/hymueble/generated/catalog-hub-material-library.webp"
+>
+  <Hero
+    eyebrow="Catálogos por categoría"
+    title="Mobiliario para hotelería, oficinas, salud, educación y proyectos residenciales, con fabricación directa desde China"
+    lead="Selecciona la categoría relacionada con tu proyecto. Cada ruta reúne imágenes, líneas de mobiliario, opciones de personalización y acceso a solicitud de catálogo."
+    image="/assets/hymueble/generated/catalog-hub-material-library.webp"
+    badgeTitle="Hub de catálogos"
+    badgeText="Página interna para SEO, navegación y rutas de consulta B2B."
+    primaryLabel="Solicitar catálogo"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver proyectos"
+    secondaryHref="/proyectos/"
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Catálogos"
+        title="Catálogos por categoría"
+        text="Elige el sector más cercano a tu compra. Si tu proyecto combina varios espacios, envía una sola consulta y revisamos el alcance completo."
+      />
+      <div class="card-grid">
+        {catalogCards.map((item) => (
+          <article class="catalog-card">
+            <img src={encodeURI(item.image)} alt={item.catalogAlt ?? item.alt ?? item.title} loading="lazy" decoding="async" />
+            <div class="card-body">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <div class="btn-row">
+                <a class="btn line" href={item.href}>Ver catálogo</a>
+                <button class="btn primary" type="button" data-download-catalog data-catalog-interest={item.title}>Solicitar PDF</button>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA title="¿Necesitas varios catálogos para comparar?" text="Cuéntanos sector, ciudad, proyecto y cantidades. Te orientamos hacia el material más útil." />
+</BaseLayout>

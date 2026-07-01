@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import CTA from "../../components/CTA.astro";
+import { showrooms } from "../../data/site";
+
+const videoHeroImage = "/assets/hymueble/recursos/视频/资源-视频-Hero-装配线场景.webp";
+const videoTopics = [
+  {
+    title: "Fábrica y producción",
+    text: "Revisa escala, líneas de trabajo y proceso antes de enviar planos o cantidades.",
+  },
+  {
+    title: "Showrooms virtuales",
+    text: "Explora espacios por sector para alinear referencias con compras, diseño y operación.",
+  },
+  {
+    title: "Proyectos y evidencia",
+    text: "Usa videos, fotos y recorridos como apoyo visual para evaluar proveedor y alcance.",
+  },
+];
+---
+<BaseLayout
+  title="Videos de fábrica y showroom | Hymueble"
+  description="Videos y recorridos virtuales para revisar fábrica, procesos, showroom y referencias de proyectos antes de solicitar cotización B2B con criterios claros."
+  keywords={["videos de fábrica", "showroom virtual", "mobiliario comercial", "mobiliario para proyectos B2B", "referencias de proyectos", "cotización B2B"]}
+  image={videoHeroImage}
+>
+  <section class="section resource-video-hero">
+    <div class="container resource-video-grid">
+      <div class="resource-video-copy">
+        <p class="eyebrow">Videos</p>
+        <h1>Revisa fábrica, procesos y showroom antes de cotizar</h1>
+        <p>
+          Material visual para compradores B2B que necesitan validar capacidad, escala y referencias sin viajar a China en la primera etapa.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="/contacto/">Enviar requerimientos</a>
+          <a class="btn line" href="/showroom/">Ver showrooms</a>
+        </div>
+      </div>
+      <div class="video-frame video-embed resource-main-video">
+        <iframe
+          src="https://www.youtube.com/embed/a1ECkth6WnQ?rel=0&modestbranding=1"
+          title="Video corporativo de fábrica Hymueble"
+          loading="eager"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Biblioteca visual"
+        title="Qué puede revisar tu equipo antes de una llamada"
+        text="El objetivo de los videos no es decorar la página: ayudan a validar proveedor, comparar referencias y preparar preguntas concretas para cotización."
+      />
+      <div class="resource-topic-grid">
+        {videoTopics.map((topic) => (
+          <article class="resource-topic-card">
+            <h3>{topic.title}</h3>
+            <p>{topic.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section showroom-section resource-showroom-band">
+    <div class="container">
+      <SectionHead
+        eyebrow="Experiencia remota"
+        title="Cuatro recorridos virtuales para revisar soluciones por sector"
+        text="Usa los recorridos como referencia inicial para habitaciones, oficinas, salud y educación antes de enviar tus requisitos."
+      />
+      <div class="resource-showroom-grid">
+        {showrooms.map((showroom) => (
+          <a class="resource-showroom-card" href={showroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${showroom.sector}`}>
+            <img src={encodeURI(showroom.image)} alt={`Showroom virtual de ${showroom.sector}`} loading="lazy" decoding="async" />
+            <span>360°</span>
+            <div>
+              <h3>{showroom.sector}</h3>
+              <p>{showroom.description}</p>
+              <strong>Entrar al showroom virtual</strong>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="¿Necesitas un video o referencia para tu presentación interna?"
+    text="Indica sector, espacio y etapa del proyecto. Te ayudamos a elegir el material visual más útil para tu equipo."
+  />
+</BaseLayout>

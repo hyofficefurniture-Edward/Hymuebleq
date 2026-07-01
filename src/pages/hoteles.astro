@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import SectionHead from "../components/SectionHead.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ProcessSteps from "../components/ProcessSteps.astro";
+import TrustStrip from "../components/TrustStrip.astro";
+import CTA from "../components/CTA.astro";
+import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../data/site";
+---
+<BaseLayout
+  title="Mobiliario hotelero para proyectos B2B | Hymueble"
+  description="Mobiliario hotelero para proyectos B2B: habitaciones, lobby y áreas públicas, con referencias de catálogo para preparar cotizaciones claras por sector."
+  keywords={["mobiliario hotelero", "muebles para hoteles", "FF&E hotelero", "mobiliario para proyectos hoteleros", "habitaciones de hotel", "directo de fábrica"]}
+  image="/assets/hymueble/hoteles/主页/酒店-主页-Hero-酒店大堂全景.webp"
+>
+  <Hero
+    eyebrow="Hotelería B2B"
+    title="Mobiliario para hoteles, directo desde fábrica en China"
+    lead="Mobiliario hotelero para habitaciones, lobby y áreas públicas, con fabricación directa, control de calidad y preparación de exportación."
+    image="/assets/hymueble/hoteles/主页/酒店-主页-Hero-酒店大堂全景.webp"
+    badgeTitle="Soluciones hoteleras por espacio"
+    badgeText="Habitaciones, lobby, bar, restaurante, baño, exteriores y conferencias."
+    primaryLabel="Contactar ahora"
+    primaryHref="/contacto/"
+    secondaryLabel="Ver catálogo hotelero"
+    secondaryHref="/catalogo/hoteles/"
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Catálogo hotelero"
+        title="Catálogo de muebles para hotelería"
+        text="Elige el espacio a equipar y revisa familias de muebles adaptables a materiales, acabados y medidas del proyecto."
+      />
+      <div class="hotel-catalog-tiles">
+        {hotelCatalog.map((item) => (
+          <a class="hotel-catalog-tile" href={item.href}>
+            <img src={encodeURI(item.image)} alt={item.alt ?? item.title} loading="lazy" decoding="async" />
+            <span>{item.title}</span>
+            <small>{item.description}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Showroom virtual</p>
+        <h2>Más de 10.000 m² de mobiliario hotelero para inspirar tu proyecto</h2>
+        <p class="section-note">Revisa espacios, acabados y referencias visuales antes de definir alcance o solicitar cotización.</p>
+        <div class="btn-row section-actions">
+          <a class="btn primary" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Ver showroom virtual</a>
+          <a class="btn line" href="/contacto/">Agendar visita</a>
+        </div>
+      </div>
+      <img src={encodeURI("/assets/hymueble/hoteles/目录/酒店-目录-卡片-前台大堂区.webp")} alt="Showroom de mobiliario hotelero" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Casos hoteleros"
+        title="Proyectos de mobiliario hotelero"
+        text="Referencias para evaluar experiencia en habitaciones, lobby, restaurante y áreas públicas antes de consultar."
+      />
+      <div class="card-grid">
+        {projects.filter((project) => project.sector === "Hotel").map((project) => <ProjectCard project={project} imageField="hotelImage" />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <TrustStrip
+        eyebrow="Cooperación y respaldo"
+        title="Experiencia para cadenas, hoteles boutique y contratistas"
+        text="Fabricación directa, coordinación de materiales, documentación de proyecto y capacidad por espacios hoteleros."
+        signals={hotelCooperationSignals}
+        compact
+      />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Servicio integral"
+        title="De la consulta a la entrega: solución integral para tu proyecto hotelero"
+        text="Un proceso claro para compras, diseño y operación: cotización, acabados, producción, embalaje y soporte."
+      />
+      <ProcessSteps />
+    </div>
+  </section>
+
+  <CTA title="¿Necesitas cotizar mobiliario hotelero?" text="Envíanos tipo de hotel, espacios, cantidades y ciudad. Revisamos viabilidad y próximos pasos." />
+</BaseLayout>

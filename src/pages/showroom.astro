@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHead from "../components/SectionHead.astro";
+import CTA from "../components/CTA.astro";
+import { showrooms } from "../data/site";
+---
+<BaseLayout
+  title="Showroom virtual de mobiliario comercial | Hymueble"
+  description="Showroom virtual para revisar mobiliario comercial por sector, alinear referencias visuales y preparar compras B2B antes de solicitar cotización clara."
+  keywords={["showroom virtual", "mobiliario comercial", "mobiliario para proyectos B2B", "referencias visuales", "compra B2B", "cotización por proyecto"]}
+  image="/assets/hymueble/showroom/matterport-showroom-hero.webp"
+>
+  <section class="showroom-page-hero">
+    <img class="showroom-page-bg" src="/assets/hymueble/showroom/matterport-showroom-hero.webp" alt="Showroom virtual Hymueble" loading="eager" decoding="async" fetchpriority="high" />
+    <div class="showroom-page-overlay"></div>
+    <div class="container showroom-page-content">
+      <p class="eyebrow">Showroom virtual</p>
+      <h1>Explora soluciones de mobiliario por sector antes de cotizar</h1>
+      <p class="lead">Recorridos virtuales para alinear referencias visuales, espacios, acabados y prioridades con equipos de compras, diseño, arquitectura y operación.</p>
+      <div class="btn-row">
+        <a class="btn primary" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Entrar a showroom hotelero</a>
+        <a class="btn ghost light" href="/contacto/">Enviar requerimientos</a>
+      </div>
+    </div>
+    <div class="container showroom-page-proof">
+      <span>Hoteles</span>
+      <span>Oficinas</span>
+      <span>Salud</span>
+      <span>Educación</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHead
+        eyebrow="Recorridos 360"
+        title="Showrooms disponibles para revisión remota"
+        text="Cada acceso abre el recorrido Matterport correspondiente. Úsalo para preparar una cotización con referencias más claras antes de enviar planos, cantidades o requisitos técnicos."
+      />
+      <div class="showroom-hub-grid">
+        {showrooms.map((showroom) => (
+          <a class="showroom-card" href={showroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${showroom.sector}`}>
+            <img src={encodeURI(showroom.image)} alt={`Showroom virtual para ${showroom.sector}`} loading="lazy" decoding="async" />
+            <div class="showroom-card-content">
+              <span>Recorrido 360</span>
+              <h2>{showroom.sector}</h2>
+              <p>{showroom.description}</p>
+              <strong>Entrar al showroom</strong>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA title="¿Ya revisaste el showroom?" text="Envíanos sector, país, ciudad, cantidades y referencias. Preparamos el siguiente paso de cotización." />
+</BaseLayout>

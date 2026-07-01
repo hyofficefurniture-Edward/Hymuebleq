@@ -1,0 +1,116 @@
+---
+import { formConfig } from "../data/site";
+
+interface Props {
+  compact?: boolean;
+  idPrefix?: string;
+  submitLabel?: string;
+  catalogLead?: boolean;
+}
+
+const { compact = false, idPrefix = "project", submitLabel = "Enviar mi consulta de proyecto", catalogLead = false } = Astro.props;
+const id = (name: string) => `${idPrefix}-${name}`;
+const isDemoForm = !formConfig.action;
+---
+<form
+  class="project-form"
+  method="post"
+  action={formConfig.action || undefined}
+  enctype="multipart/form-data"
+  data-demo-form={isDemoForm ? "" : undefined}
+  data-form-purpose="project-inquiry"
+>
+  {catalogLead && <input type="hidden" name="catalog_interest" value="Catálogo general" data-catalog-interest-input />}
+  <div class="form-intro full">
+    <span>Consulta rápida</span>
+    <strong>Solo necesitamos 5 datos para iniciar.</strong>
+    <p>Los detalles técnicos pueden enviarse después. Si ya tienes planos o una lista, puedes adjuntarlos abajo.</p>
+  </div>
+  <div class:list={["field", { full: compact }]}>
+    <label for={id("company")}>Nombre o empresa *</label>
+    <input id={id("company")} name="company" required placeholder="Tu nombre o empresa" />
+  </div>
+  <div class:list={["field", { full: compact }]}>
+    <label for={id("whatsapp")}>WhatsApp *</label>
+    <input id={id("whatsapp")} name="whatsapp" required placeholder="+52 55 0000 0000" />
+  </div>
+  <div class:list={["field", { full: compact }]}>
+    <label for={id("location")}>País o ciudad del proyecto *</label>
+    <input id={id("location")} name="location" required placeholder="Ej. Ciudad de México, Bogotá" />
+  </div>
+  <div class:list={["field", { full: compact }]}>
+    <label for={id("sector")}>Tipo de proyecto *</label>
+    <select id={id("sector")} name="sector" required>
+      <option value="">Selecciona un sector</option>
+      <option>Hoteles</option>
+      <option>Oficinas</option>
+      <option>Salud</option>
+      <option>Educación</option>
+      <option>Residencial</option>
+      <option>Otro</option>
+    </select>
+  </div>
+  <div class="field full">
+    <label for={id("message")}>¿Qué necesitas cotizar? *</label>
+    <textarea id={id("message")} name="message" required placeholder="Ej. habitaciones y lobby para hotel, 80 habitaciones aproximadas, apertura en 3 meses..."></textarea>
+  </div>
+  <div class="field file-upload full">
+    <label for={id("attachments")}>Adjuntar planos o lista de proyecto <span>Opcional</span></label>
+    <input
+      id={id("attachments")}
+      class="file-input"
+      type="file"
+      name="attachments"
+      multiple
+      accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.webp,.zip,.rar,.dwg,.dxf"
+      aria-describedby={id("attachments-help")}
+      data-file-input
+    />
+    <div class="file-upload-control" aria-hidden="true">
+      <label class="file-upload-button" for={id("attachments")}>Seleccionar archivos</label>
+      <span class="file-upload-name" data-file-name data-empty="Ningún archivo seleccionado">Ningún archivo seleccionado</span>
+    </div>
+    <p id={id("attachments-help")}>Planos, lista FF&E, cantidades, fotos de referencia o archivos comprimidos ayudan a preparar una cotización más precisa.</p>
+  </div>
+  <details class="form-optional full">
+    <summary>Agregar detalles opcionales</summary>
+    <div class="form-section-grid">
+      <div class:list={["field", { full: compact }]}>
+        <label for={id("email")}>Correo</label>
+        <input id={id("email")} type="email" name="email" placeholder="tucorreo@empresa.com" />
+      </div>
+      <div class:list={["field", { full: compact }]}>
+        <label for={id("spaces")}>Espacios a equipar</label>
+        <input id={id("spaces")} name="spaces" placeholder="Habitaciones, lobby, restaurante..." />
+      </div>
+      <div class:list={["field", { full: compact }]}>
+        <label for={id("quantity")}>Cantidad aproximada</label>
+        <input id={id("quantity")} name="quantity" placeholder="Ej. 80 habitaciones, 120 puestos" />
+      </div>
+      <div class:list={["field", { full: compact }]}>
+        <label for={id("stage")}>Estado del proyecto</label>
+        <select id={id("stage")} name="stage">
+          <option value="">Selecciona una etapa</option>
+          <option>Idea inicial</option>
+          <option>Con planos o lista FF&E</option>
+          <option>En cotización</option>
+          <option>En construcción o remodelación</option>
+          <option>Compra urgente</option>
+        </select>
+      </div>
+      <div class:list={["field", { full: compact }]}>
+        <label for={id("timeline")}>Tiempo estimado</label>
+        <input id={id("timeline")} name="timeline" placeholder="Ej. apertura en 3 meses" />
+      </div>
+      <div class:list={["field", { full: compact }]}>
+        <label for={id("budget")}>Presupuesto o rango objetivo</label>
+        <input id={id("budget")} name="budget" placeholder="Opcional: rango estimado" />
+      </div>
+    </div>
+  </details>
+  <p class="privacy">Tu información se usa para atender tu consulta. Consulta nuestra <a href="/privacidad/">política de privacidad</a>.</p>
+  <div class="form-success" role="status" aria-live="polite" tabindex="-1">¡Muchas gracias! Recibimos tu consulta y te contactaremos en menos de 24 horas por WhatsApp o correo.</div>
+  <div class="field full">
+    <button class="btn primary" type="submit">{submitLabel}</button>
+  </div>
+</form>
