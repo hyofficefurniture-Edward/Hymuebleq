@@ -2,10 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import SectionHead from "../components/SectionHead.astro";
-import CatalogCard from "../components/CatalogCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import ProcessSteps from "../components/ProcessSteps.astro";
+import TrustStrip from "../components/TrustStrip.astro";
 import CTA from "../components/CTA.astro";
-import { sectorCatalogs, sectorPages, showrooms } from "../data/site";
+import { categories, projects, sectorCatalogs, sectorPages, showrooms } from "../data/site";
 
 export function getStaticPaths() {
   return Object.keys(sectorPages).map((section) => ({ params: { section } }));
@@ -13,20 +14,97 @@ export function getStaticPaths() {
 
 const section = Astro.params.section ?? "oficinas";
 const data = sectorPages[section as keyof typeof sectorPages];
+const category = categories.find((item) => item.href.endsWith(`/${section}/`)) ?? categories[1];
 const catalogItems = sectorCatalogs[section as keyof typeof sectorCatalogs] ?? [];
-const catalogInterestLabels = {
-  oficinas: "Oficinas",
-  salud: "Salud",
-  educacion: "Educación",
-  residencial: "Residencial",
-};
-const catalogInterestPrefix = `${catalogInterestLabels[section as keyof typeof catalogInterestLabels] ?? data.eyebrow} - `;
 const showroomBySection = {
   oficinas: showrooms[1],
   salud: showrooms[2],
   educacion: showrooms[3],
 };
 const sectorShowroom = showroomBySection[section as keyof typeof showroomBySection];
+const sectorProjects = projects.filter((project) => {
+  const normalized = project.sector.toLowerCase();
+  return normalized === category.title.toLowerCase() || normalized === section;
+});
+const hasSectorProjects = sectorProjects.length > 0;
+const showcaseImage = sectorShowroom?.image ?? category.projectImage;
+const catalogAudienceLabels = {
+  oficinas: "oficinas",
+  salud: "salud",
+  educacion: "educación",
+  residencial: "proyectos residenciales",
+};
+const projectContextLabels = {
+  oficinas: "de oficina",
+  salud: "de salud",
+  educacion: "educativo",
+  residencial: "residencial",
+};
+const trustCopy = {
+  oficinas: {
+    title: "Experiencia para oficinas corporativas, campus y compras institucionales",
+    text: "Fabricación directa, documentación de proyecto, control de materiales y capacidad para espacios de trabajo.",
+    partnerEyebrow: "Referencias de oficina",
+    partnerTitle: "Proyectos visibles para sedes, parques industriales y equipos corporativos",
+    partnerText: "Casos y referencias útiles para abrir conversación comercial. Alcance, cantidades y documentación se revisan al avanzar la consulta.",
+    partnerBrands: [
+      { name: "Macwell", tone: "wide" },
+      { name: "Walmart Costa Rica", tone: "condensed" },
+      { name: "BYD", tone: "wide" },
+      { name: "Alibaba Group", tone: "serif" },
+      { name: "Kuwait Oil Company", tone: "condensed" },
+      { name: "Trinidad y Tobago", tone: "soft" },
+    ],
+  },
+  salud: {
+    title: "Experiencia para hospitales, clínicas y espacios médicos",
+    text: "Soporte de mobiliario para zonas de espera, habitaciones, nurse stations, áreas clínicas y espacios de operación.",
+    partnerEyebrow: "Referencias de salud",
+    partnerTitle: "Proyectos visibles para hospitales públicos, privados e internacionales",
+    partnerText: "Las referencias ayudan a revisar escala, áreas visibles y tipo de soporte antes de preparar una cotización médica.",
+    partnerBrands: [
+      { name: "Woodlands Health", tone: "serif" },
+      { name: "Saudi German", tone: "wide" },
+      { name: "Heshan Hospital", tone: "condensed" },
+      { name: "Ganjiang Hospital", tone: "soft" },
+      { name: "Yueda Ruikang", tone: "wide" },
+      { name: "Maternal & Child", tone: "serif" },
+    ],
+  },
+  educacion: {
+    title: "Experiencia para escuelas, universidades y campus educativos",
+    text: "Coordinación de mobiliario para aulas, auditorios, bibliotecas, comedor, dormitories y espacios de aprendizaje.",
+    partnerEyebrow: "Referencias educativas",
+    partnerTitle: "Proyectos visibles para colegios, universidades y academias",
+    partnerText: "La referencia educativa se usa para comparar espacios, instalación, durabilidad y soporte por lote antes de cotizar.",
+    partnerBrands: [
+      { name: "Huntington Lagos", tone: "serif" },
+      { name: "SIT Singapore", tone: "wide" },
+      { name: "Charterhouse Lagos", tone: "condensed" },
+      { name: "Rwanda Academy", tone: "soft" },
+      { name: "BBK School", tone: "wide" },
+      { name: "AUB Baghdad", tone: "serif" },
+    ],
+  },
+  residencial: {
+    title: "Experiencia para apartamentos, residencias y compras por proyecto",
+    text: "Mobiliario a medida para apartamentos, lobby, salas, dormitorios, almacenaje y soluciones residenciales por lote.",
+    partnerEyebrow: "Referencias residenciales",
+    partnerTitle: "Proyectos visibles y escenarios para apartamentos y espacios residenciales",
+    partnerText: "Los casos documentados y escenarios ayudan a revisar estilo, almacenamiento, materiales y alcance antes de cotizar.",
+    partnerBrands: [
+      { name: "Lingkong Talent", tone: "wide" },
+      { name: "Wutong Village", tone: "serif" },
+      { name: "Jiafu Talent", tone: "condensed" },
+      { name: "Apartamentos", tone: "soft" },
+      { name: "Vestidores", tone: "wide" },
+      { name: "Salas lounge", tone: "serif" },
+    ],
+  },
+};
+const catalogAudienceLabel = catalogAudienceLabels[section as keyof typeof catalogAudienceLabels] ?? category.title.toLowerCase();
+const projectContextLabel = projectContextLabels[section as keyof typeof projectContextLabels] ?? `de ${category.title.toLowerCase()}`;
+const trust = trustCopy[section as keyof typeof trustCopy];
 ---
 <BaseLayout title={`${data.title} | Hymueble`} description={data.seoDescription ?? data.lead} keywords={data.seoKeywords} image={data.image}>
   <Hero
@@ -44,44 +122,78 @@ const sectorShowroom = showroomBySection[section as keyof typeof showroomBySecti
 
   <section class="section alt">
     <div class="container">
-      <div class="proof-grid">
-        {data.proof.map((item) => (
-          <div class="info-card compact">
-            <strong>{item}</strong>
-            <span>Enfoque B2B para compras por lote, remodelaciones, nuevos proyectos y distribución.</span>
-          </div>
+      <SectionHead
+        eyebrow="Catálogo"
+        title={`Catálogo de muebles para ${catalogAudienceLabel}`}
+        text="Elige el espacio a equipar y revisa familias de muebles adaptables a materiales, acabados y medidas del proyecto."
+      />
+      <div class="hotel-catalog-tiles">
+        {catalogItems.map((item) => (
+          <a class="hotel-catalog-tile" href={item.href}>
+            <img src={encodeURI(item.image)} alt={item.alt ?? item.title} loading="lazy" decoding="async" />
+            <span>{item.title}</span>
+            <small>{item.description}</small>
+          </a>
         ))}
       </div>
     </div>
   </section>
 
-  {sectorShowroom && (
-    <section class="section">
-      <div class="container split-band">
-        <div>
-          <p class="eyebrow">Showroom virtual</p>
-          <h2>Explora el showroom de {sectorShowroom.sector.toLowerCase()} antes de cotizar</h2>
-          <p class="section-note">{sectorShowroom.description} Úsalo para alinear referencias antes de definir cantidades, acabados y tiempos.</p>
-          <div class="btn-row section-actions">
+  <section class="section">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Showroom virtual</p>
+        <h2>{sectorShowroom ? `Explora el showroom de ${sectorShowroom.sector.toLowerCase()} antes de cotizar` : `Comparte referencias visuales para tu proyecto ${projectContextLabel}`}</h2>
+        <p class="section-note">{sectorShowroom ? `${sectorShowroom.description} Úsalo para alinear referencias antes de definir cantidades, acabados y tiempos.` : "Usa imágenes, planos o moodboards para alinear estilo, cantidades, acabados y próximos pasos antes de cotizar."}</p>
+        <div class="btn-row section-actions">
+          {sectorShowroom ? (
             <a class="btn primary" href={sectorShowroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${sectorShowroom.sector}`}>Ver showroom virtual</a>
-            <a class="btn line" href="/contacto/">Enviar requisitos</a>
-          </div>
+          ) : (
+            <a class="btn primary" href="/contacto/">Enviar referencias</a>
+          )}
+          <a class="btn line" href="/contacto/">Enviar requisitos</a>
         </div>
-        <img src={encodeURI(sectorShowroom.image)} alt={`Showroom virtual para ${sectorShowroom.sector}`} loading="lazy" decoding="async" />
       </div>
-    </section>
-  )}
+      <img src={encodeURI(showcaseImage)} alt={sectorShowroom ? `Showroom virtual para ${sectorShowroom.sector}` : category.projectAlt} loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Proyectos"
+        title={`Proyectos y referencias para ${catalogAudienceLabel}`}
+        text={hasSectorProjects ? "Referencias para evaluar experiencia, alcance de suministro y capacidad antes de consultar." : "Ruta comercial lista para levantar requisitos y preparar referencias comparables sin reutilizar casos de otro sector."}
+      />
+      {hasSectorProjects ? (
+        <div class="card-grid">
+          {sectorProjects.map((project) => <ProjectCard project={project} imageField="listingImage" />)}
+        </div>
+      ) : (
+        <div class="proof-grid">
+          {data.proof.map((item) => (
+            <div class="info-card compact">
+              <strong>{item}</strong>
+              <span>Enfoque B2B para compras por lote, remodelaciones, nuevos proyectos y distribución.</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
 
   <section class="section">
     <div class="container">
-      <SectionHead
-        eyebrow="Catálogo"
-        title={`Categorías principales para ${data.eyebrow.toLowerCase()}`}
-        text="Cada sector organiza sus categorías principales para facilitar una primera conversación de compra, con espacio para fichas, PDF y filtros cuando el proyecto requiera más detalle."
+      <TrustStrip
+        eyebrow="Cooperación y respaldo"
+        title={trust.title}
+        text={trust.text}
+        partnerBrands={trust.partnerBrands}
+        partnerEyebrow={trust.partnerEyebrow}
+        partnerTitle={trust.partnerTitle}
+        partnerText={trust.partnerText}
+        compact
       />
-      <div class="card-grid">
-        {catalogItems.map((item) => <CatalogCard item={item} catalogInterestPrefix={catalogInterestPrefix} />)}
-      </div>
     </div>
   </section>
 
@@ -93,10 +205,6 @@ const sectorShowroom = showroomBySection[section as keyof typeof showroomBySecti
         text="El mismo marco operativo de la ruta hotelera se aplica a proyectos corporativos, institucionales y residenciales: cotización, diseño, producción, inspección y logística."
       />
       <ProcessSteps />
-      <div class="btn-row section-actions">
-        <a class="btn primary" href={data.projectsHref}>Ver proyectos del sector</a>
-        <a class="btn line" href="/fabrica/">Conocer la fábrica</a>
-      </div>
     </div>
   </section>
 

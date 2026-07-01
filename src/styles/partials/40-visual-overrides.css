@@ -1,0 +1,512 @@
+/* Global visual refinements for sections, buttons, navigation, hero blocks, cards, resources, footer, and first responsive pass.
+   Keep imported order stable; these files continue the original late-cascade override chain. */
+
+body {
+  background:
+    linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #fff 100%);
+}
+
+.section {
+  position: relative;
+  padding: clamp(96px, 8vw, 136px) 0;
+}
+
+.section.alt {
+  background: #fff;
+}
+
+.section::before {
+  content: attr(data-section-word);
+  position: absolute;
+  top: 26px;
+  right: max(32px, calc((100vw - var(--container)) / 2));
+  z-index: 0;
+  color: rgba(18, 26, 34, .035);
+  font-size: clamp(72px, 11vw, 156px);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.section > .container,
+.hero-grid,
+.home-hero-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.section-head p {
+  color: #737b83;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #d9b77e, var(--cta));
+  box-shadow: 0 18px 38px rgba(194, 163, 120, .26);
+}
+
+.btn.dark,
+.btn.showroom-nav {
+  background: #111a22;
+}
+
+.btn.ghost,
+.btn.line {
+  background: rgba(255, 255, 255, .86);
+}
+
+.top-strip {
+  background: var(--ink-deep);
+}
+
+.nav-shell {
+  min-height: 84px;
+}
+
+.brand-logo {
+  width: 106px;
+  height: 56px;
+}
+
+.brand-copy strong {
+  font-size: 28px;
+}
+
+.nav-link {
+  padding: 0 12px;
+  color: #273440;
+  font-size: 15px;
+}
+
+.nav-actions .btn {
+  min-width: 124px;
+}
+
+.home-hero {
+  min-height: calc(100vh - 120px);
+  align-items: center;
+  padding: clamp(76px, 7vw, 118px) 0 clamp(34px, 4vw, 56px);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(194, 163, 120, .18), transparent 34%),
+    linear-gradient(180deg, #fff 0%, #f6f3ed 100%);
+  color: var(--text);
+}
+
+.home-hero::before {
+  content: "HYMUEBLE";
+  position: absolute;
+  left: max(18px, calc((100vw - var(--container)) / 2));
+  bottom: 5%;
+  z-index: 0;
+  color: rgba(18, 26, 34, .045);
+  font-size: clamp(70px, 13vw, 186px);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.home-hero-bg {
+  border-radius: 8px;
+  box-shadow: 0 34px 90px rgba(18, 26, 34, .18);
+  animation: none;
+}
+
+.home-hero-bg::after {
+  content: none;
+}
+
+.home-hero-grid {
+  grid-template-columns: minmax(0, .86fr) minmax(430px, .72fr);
+  min-height: 560px;
+  align-items: center;
+}
+
+.home-hero-copy {
+  max-width: 760px;
+}
+
+.home-hero .eyebrow,
+.showroom-section .eyebrow,
+.quality-section .eyebrow {
+  color: var(--cta-dark);
+}
+
+.home-hero h1 {
+  color: var(--title);
+}
+
+.home-hero .lead {
+  max-width: 650px;
+  color: #5f6871;
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.home-hero .btn-row {
+  margin-top: 34px;
+}
+
+.hero {
+  min-height: calc(86vh - 86px);
+  padding: clamp(70px, 7vw, 112px) 0;
+  background:
+    radial-gradient(circle at 76% 16%, rgba(194, 163, 120, .14), transparent 30%),
+    linear-gradient(180deg, #fff, var(--bg));
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, .82fr) minmax(430px, .78fr);
+  gap: clamp(44px, 5vw, 82px);
+}
+
+.hero-copy {
+  max-width: 780px;
+}
+
+.hero-copy .lead {
+  max-width: 660px;
+  color: #68727c;
+  font-size: 18px;
+}
+
+.hero-media {
+  min-height: 590px;
+  border-radius: 8px;
+  box-shadow: 0 34px 90px rgba(18, 26, 34, .17);
+}
+
+.media-badge {
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  background: rgba(17, 26, 34, .84);
+}
+
+.value-points {
+  margin-top: 34px;
+  gap: 26px 34px;
+}
+
+.category-card,
+.category-card.featured {
+  grid-column: auto;
+  min-height: 420px;
+  border-radius: 8px;
+  box-shadow: 0 18px 56px rgba(18, 26, 34, .1);
+}
+
+.category-card.featured {
+  min-height: 470px;
+}
+
+.category-card img {
+  opacity: .92;
+}
+
+.category-content {
+  min-height: 48%;
+  gap: 12px;
+  padding: 28px;
+  background:
+    linear-gradient(180deg, rgba(18, 26, 34, 0), rgba(18, 26, 34, .96)),
+    linear-gradient(90deg, rgba(18, 26, 34, .56), transparent);
+}
+
+.category-content h3 {
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.category-content p {
+  max-width: 420px;
+  color: rgba(255, 255, 255, .78);
+}
+
+.link-pair a {
+  border-bottom-color: rgba(240, 212, 168, .72);
+  color: #f0d4a8;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.card-grid {
+  gap: 24px;
+}
+
+.project-card,
+.catalog-card {
+  border-color: rgba(18, 29, 41, .09);
+  background: #fff;
+  box-shadow: 0 18px 58px rgba(18, 26, 34, .07);
+}
+
+.catalog-card img,
+.project-card img {
+  aspect-ratio: 3 / 2;
+}
+
+.card-body {
+  padding: 26px;
+  gap: 14px;
+}
+
+.card-body h3 {
+  max-width: 440px;
+}
+
+.card-body p {
+  max-width: 580px;
+  color: #68727c;
+}
+
+.metric-grid {
+  border: 0;
+  background: #fff;
+  box-shadow: 0 16px 46px rgba(18, 26, 34, .055);
+}
+
+.showroom-section {
+  background:
+    linear-gradient(180deg, rgba(9, 17, 24, .94), rgba(9, 17, 24, .98)),
+    url("/assets/hymueble/showroom/matterport-showroom-hero.webp") center / cover;
+}
+
+.showroom-section::before {
+  content: "SHOWROOM";
+  color: rgba(255, 255, 255, .045);
+}
+
+.showroom-options {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.showroom-option-card {
+  min-height: 330px;
+  border-color: rgba(255, 255, 255, .16);
+}
+
+.showroom-option-card.featured {
+  min-height: 380px;
+}
+
+.solution-section::after,
+.quality-section::after {
+  content: "PROJECT";
+  position: absolute;
+  right: max(28px, calc((100vw - var(--container)) / 2));
+  top: 34px;
+  color: rgba(255, 255, 255, .045);
+  font-size: clamp(76px, 12vw, 170px);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.process {
+  gap: 14px;
+}
+
+.process-item {
+  min-height: 204px;
+  border-color: rgba(18, 29, 41, .08);
+  box-shadow: 0 16px 46px rgba(18, 26, 34, .06);
+}
+
+.split-band {
+  gap: clamp(42px, 5vw, 78px);
+}
+
+.split-band img {
+  aspect-ratio: 3 / 2;
+  box-shadow: 0 26px 76px rgba(18, 26, 34, .14);
+}
+
+.video-panel {
+  grid-template-columns: minmax(0, .74fr) minmax(520px, 1fr);
+  gap: clamp(40px, 5vw, 76px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.video-panel h2 {
+  max-width: 640px;
+}
+
+.video-frame {
+  box-shadow: 0 26px 76px rgba(18, 26, 34, .14);
+}
+
+.resource-hero-grid,
+.resource-video-grid,
+.resource-split {
+  grid-template-columns: minmax(0, .78fr) minmax(520px, 1fr);
+  gap: clamp(44px, 5vw, 82px);
+}
+
+.resource-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.resource-guide-card,
+.resource-topic-card,
+.resource-decision-list article {
+  box-shadow: 0 18px 52px rgba(18, 26, 34, .06);
+}
+
+.resource-showroom-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.footer-shell {
+  padding: 84px 0 30px;
+}
+
+.footer-nav-panel {
+  grid-template-columns: minmax(320px, 1.15fr) minmax(150px, .55fr) minmax(150px, .55fr) minmax(260px, .78fr);
+  gap: clamp(34px, 5vw, 70px);
+}
+
+.footer-signature p {
+  max-width: 420px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.footer-contact-block a {
+  max-width: 310px;
+  font-size: 16px;
+}
+
+.footer-col a {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(42px, 5vw, 68px);
+  background:
+    linear-gradient(135deg, rgba(17, 26, 34, .94), rgba(17, 26, 34, .86)),
+    url("/assets/hymueble/fabrica/produccion/factory-production-hero.webp") center / cover;
+}
+
+.cta-band::before {
+  content: "QUOTE";
+  position: absolute;
+  right: 26px;
+  bottom: -22px;
+  color: rgba(255, 255, 255, .055);
+  font-size: clamp(72px, 12vw, 160px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.cta-band > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1080px) {
+  .section {
+    padding: 88px 0;
+  }
+
+  .home-hero-grid,
+  .hero-grid,
+  .resource-hero-grid,
+  .resource-video-grid,
+  .resource-split,
+  .video-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-grid {
+    min-height: auto;
+  }
+
+  .category-grid,
+  .showroom-options,
+  .resource-showroom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-nav-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 68px 0;
+  }
+
+  .section::before,
+  .home-hero::before,
+  .solution-section::after,
+  .quality-section::after,
+  .cta-band::before {
+    display: none;
+  }
+
+  .home-hero {
+    padding: 54px 0 34px;
+  }
+
+  .home-hero-bg {
+    order: 2;
+  }
+
+  .home-hero-copy {
+    max-width: none;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 18px;
+  }
+
+  .nav-actions .btn,
+  .nav-actions .primary {
+    width: auto;
+  }
+
+  .hero-media {
+    min-height: 350px;
+  }
+
+  .value-points,
+  .category-grid,
+  .showroom-options,
+  .resource-showroom-grid,
+  .footer-nav-panel,
+  .resource-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card,
+  .category-card.featured {
+    min-height: 320px;
+  }
+
+  .showroom-options {
+    overflow: visible;
+  }
+
+  .showroom-option-card {
+    min-height: 260px;
+  }
+
+  .video-panel {
+    gap: 28px;
+  }
+
+  .footer-shell {
+    padding: 56px 0 24px;
+  }
+}

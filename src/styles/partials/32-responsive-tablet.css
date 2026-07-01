@@ -1,0 +1,182 @@
+/* Tablet and mid-size responsive rules for layout, navigation, cards, and page sections.
+   Keep imported order stable; these files continue the original cascade. */
+
+@media (max-width: 1080px) {
+  body {
+    padding-top: 121px;
+  }
+
+  .header {
+    position: fixed;
+    inset: 0 0 auto;
+  }
+
+  .nav-links,
+  .showroom-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links.is-open {
+    position: fixed;
+    inset: 121px 0 auto;
+    display: grid;
+    gap: 2px;
+    max-height: calc(100dvh - 121px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 10px 20px 18px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links.is-open .nav-item {
+    border-bottom: 1px solid rgba(18, 29, 41, .07);
+  }
+
+  .nav-links.is-open .nav-link {
+    justify-content: space-between;
+    width: 100%;
+    min-height: 38px;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .nav-links.is-open .dropdown {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    min-width: 0;
+    box-shadow: none;
+    border: 0;
+    padding: 0 0 8px 14px;
+  }
+
+  .nav-links.is-open .dropdown a {
+    padding: 7px 10px;
+    font-size: 14px;
+  }
+
+  .hero-grid,
+  .home-hero-grid,
+  .showroom-grid,
+  .split-band,
+  .form-shell,
+  .resource-hero-grid,
+  .resource-video-grid,
+  .resource-split,
+  .video-panel,
+  .route-bridge,
+  .solution-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    min-height: 460px;
+  }
+
+  .section-head {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-head > * {
+    min-width: 0;
+  }
+
+  .section-head p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .metric-grid,
+  .process,
+  .card-grid,
+  .card-grid.two,
+  .resource-card-grid,
+  .resource-topic-grid,
+  .resource-showroom-grid,
+  .proof-grid,
+  .qualification-showcase,
+  .quality-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-hero {
+    min-height: auto;
+    padding: 74px 0 34px;
+  }
+
+  .home-hero h1 {
+    font-size: 50px;
+  }
+
+  .home-hero .lead {
+    font-size: 18px;
+  }
+
+  .showroom-copy {
+    display: block;
+  }
+
+  .showroom-copy .btn-row {
+    margin-top: 24px;
+    justify-content: flex-start;
+  }
+
+  .showroom-page-hero {
+    min-height: auto;
+    padding: 88px 0 34px;
+  }
+
+  .showroom-page-content h1 {
+    font-size: 50px;
+  }
+
+  .showroom-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showroom-card {
+    min-height: 400px;
+  }
+
+  .quality-steps article {
+    min-height: 360px;
+    grid-template-rows: 180px 1fr;
+  }
+
+  .quality-checkpoints {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .quality-checkpoint:nth-child(3n) {
+    border-right: 0;
+  }
+
+  .quality-checkpoint:nth-child(n + 4) {
+    border-top: 1px solid rgba(255, 255, 255, .12);
+  }
+
+  .trust-strip-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .route-bridge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .route-bridge-card {
+    min-height: 0;
+  }
+}

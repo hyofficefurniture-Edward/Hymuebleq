@@ -1,0 +1,233 @@
+/* Mobile responsive rules for menu, typography, hero, cards, forms, footer, and content sections.
+   Keep imported order stable; these files continue the original cascade. */
+
+@media (max-width: 720px) {
+  body {
+    padding-top: 73px;
+  }
+
+  .container {
+    width: min(100% - 32px, var(--container));
+  }
+
+  .top-strip {
+    display: none;
+  }
+
+  .nav-shell {
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .brand-copy span {
+    display: none;
+  }
+
+  .nav-links.is-open {
+    inset: 73px 0 auto;
+    max-height: calc(100dvh - 73px);
+    padding: 6px 18px 12px;
+  }
+
+  .nav-links.is-open .nav-link {
+    min-height: 32px;
+    font-size: 14px;
+  }
+
+  .nav-links.is-open .dropdown {
+    padding: 0 0 4px 14px;
+  }
+
+  .nav-links.is-open .dropdown a {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .nav-actions .primary {
+    font-size: 13px;
+  }
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 1.12;
+  }
+
+  .home-hero h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .home-hero .lead {
+    font-size: 16px;
+  }
+
+  .showroom-page-content h1 {
+    font-size: 37px;
+  }
+
+  .showroom-page-content .lead {
+    font-size: 16px;
+  }
+
+  .showroom-page-proof,
+  .route-bridge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .route-bridge {
+    padding: 20px;
+  }
+
+  .route-bridge-card {
+    padding: 16px;
+  }
+
+  .showroom-card {
+    min-height: 330px;
+  }
+
+  .showroom-card-content {
+    padding: 22px;
+  }
+
+  .showroom-card-content h2 {
+    font-size: 26px;
+  }
+
+  .showroom-options {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .showroom-option-card {
+    flex: 0 0 min(78vw, 300px);
+    scroll-snap-align: start;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 42px 0;
+  }
+
+  .hero-grid {
+    gap: 32px;
+  }
+
+  .value-points,
+  .metric-grid,
+	  .category-grid,
+	  .card-grid,
+	  .card-grid.two,
+	  .resource-card-grid,
+	  .resource-topic-grid,
+  .resource-showroom-grid,
+  .proof-grid,
+  .qualification-showcase,
+  .quality-steps,
+  .project-form,
+  .form-section-grid,
+  .showroom-page-proof {
+	    grid-template-columns: 1fr;
+  }
+
+  .resource-hero-copy,
+  .resource-video-copy {
+    gap: 18px;
+  }
+
+  .resource-hero-copy p:not(.eyebrow),
+  .resource-video-copy p:not(.eyebrow),
+  .resource-split > div:first-child p {
+    font-size: 16px;
+  }
+
+  .resource-guide-card,
+  .resource-topic-card,
+  .resource-decision-list article {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .resource-showroom-card {
+    min-height: 320px;
+  }
+
+  .process-item {
+    min-height: 168px;
+    padding: 16px 14px;
+    scroll-snap-align: start;
+  }
+
+  .process-item h3 {
+    font-size: 16px;
+  }
+
+  .process-item p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .solution-intro h2 {
+    font-size: 34px;
+  }
+
+  .quality-checkpoint:first-child {
+    border-top: 0;
+  }
+
+  .quality-steps article {
+    min-height: 0;
+  }
+
+  .video-panel {
+    padding: 18px;
+  }
+
+  .category-card,
+  .category-card.featured {
+    grid-column: auto;
+  }
+
+  .metric:last-child {
+    border-bottom: 0;
+  }
+
+  .cta-band {
+    padding: 28px;
+  }
+
+  .footer-nav-panel {
+    gap: 26px;
+    padding-bottom: 28px;
+  }
+
+  .footer-logo img {
+    width: 86px;
+    height: 46px;
+  }
+
+  .footer-logo strong {
+    font-size: 25px;
+  }
+
+  .footer-bottom {
+    display: grid;
+    gap: 14px;
+  }
+}

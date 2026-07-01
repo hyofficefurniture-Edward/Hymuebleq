@@ -1,0 +1,28 @@
+/* Small-phone responsive refinements for header and navigation.
+   Keep imported order stable; these files continue the original cascade. */
+
+@media (max-width: 370px) {
+  .brand {
+    gap: 0;
+  }
+
+  .brand-copy {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .nav-actions .primary {
+    min-width: 86px;
+    min-height: 42px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .menu-button {
+    width: 42px;
+    height: 42px;
+  }
+}

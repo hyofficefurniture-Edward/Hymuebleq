@@ -3,9 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/Hero.astro";
 import SectionHead from "../../components/SectionHead.astro";
 import CatalogCard from "../../components/CatalogCard.astro";
-import ProcessSteps from "../../components/ProcessSteps.astro";
 import CTA from "../../components/CTA.astro";
-import { categories, sectorCatalogs } from "../../data/site";
+import { categories, sectorCatalogs, showrooms } from "../../data/site";
 
 export function getStaticPaths() {
   return [
@@ -20,6 +19,34 @@ const sector = Astro.params.sector ?? "oficinas";
 const category = categories.find((item) => item.catalog.endsWith(`/${sector}/`)) ?? categories[1];
 const catalogItems = sectorCatalogs[sector as keyof typeof sectorCatalogs] ?? [];
 const catalogInterestPrefix = `${category.title} - `;
+const showroomBySector = {
+  oficinas: showrooms[1],
+  salud: showrooms[2],
+  educacion: showrooms[3],
+};
+const sectorShowroom = showroomBySector[sector as keyof typeof showroomBySector];
+const showcaseImage = sectorShowroom?.image ?? category.projectImage;
+const catalogTitleLabels = {
+  oficinas: "oficinas",
+  salud: "mobiliario para salud",
+  educacion: "mobiliario educativo",
+  residencial: "mobiliario residencial",
+};
+const catalogAudienceLabels = {
+  oficinas: "oficinas",
+  salud: "salud",
+  educacion: "educación",
+  residencial: "proyectos residenciales",
+};
+const supportLabels = {
+  oficinas: "oficinas",
+  salud: "salud",
+  educacion: "educación",
+  residencial: "mobiliario residencial",
+};
+const catalogTitleLabel = catalogTitleLabels[sector as keyof typeof catalogTitleLabels] ?? category.title.toLowerCase();
+const catalogAudienceLabel = catalogAudienceLabels[sector as keyof typeof catalogAudienceLabels] ?? category.title.toLowerCase();
+const supportLabel = supportLabels[sector as keyof typeof supportLabels] ?? category.title.toLowerCase();
 ---
 <BaseLayout
   title={`${category.catalogSeoTitle ?? `Catálogo de ${category.title}`} | Hymueble`}
@@ -28,45 +55,49 @@ const catalogInterestPrefix = `${category.title} - `;
   image={category.catalogImage}
 >
   <Hero
-    eyebrow="Catálogo B2B"
-    title={`Catálogo de ${category.title} para proyectos B2B`}
-    lead={`Explora las líneas principales de mobiliario para ${category.title.toLowerCase()}. Esta ruta queda lista para integrar PDF, fichas técnicas y selección por volumen.`}
+    eyebrow={`Catálogo ${category.title}`}
+    title={`Catálogo de ${catalogTitleLabel}, fabricado a medida para proyectos B2B`}
+    lead="Selecciona el espacio del proyecto y combina productos de catálogo con piezas adaptadas a planos, materiales y acabados."
     image={category.catalogImage}
     badgeTitle={category.catalogSeoTitle ?? `Catálogo de ${category.title}`}
-    badgeText="Productos por espacio, personalización y solicitud de cotización."
-    primaryLabel="Solicitar catálogo"
+    badgeText="Organizado para cotizaciones por volumen, remodelaciones y distribución."
+    primaryLabel="Cotizar mi proyecto ahora"
     primaryHref="/contacto/"
-    secondaryLabel="Ver sector"
-    secondaryHref={category.href}
+    secondaryLabel="Ver proyectos"
+    secondaryHref={category.projects}
   />
 
   <section class="section alt">
     <div class="container">
       <SectionHead
-        eyebrow="Categorías"
-        title="Selecciona la categoría relacionada con tu proyecto"
-        text="Cada bloque funciona como punto de partida para una consulta de compras, distribución, remodelación o equipamiento por proyecto."
+        eyebrow="Espacios"
+        title={`Catálogo de muebles para ${catalogAudienceLabel}`}
+        text="Categorías organizadas por espacio para preparar cotizaciones por volumen, remodelación o distribución."
       />
       <div class="card-grid">
-        {catalogItems.map((item) => <CatalogCard item={item} catalogInterestPrefix={catalogInterestPrefix} />)}
+        {catalogItems.map((item) => <CatalogCard item={item} imageField="catalogImage" catalogInterestPrefix={catalogInterestPrefix} />)}
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <SectionHead
-        eyebrow="Cotización"
-        title="Cómo usamos el catálogo en una compra B2B"
-        text="El catálogo no es una lista cerrada: sirve para alinear referencias, materiales, cantidades y nivel de personalización antes de preparar una propuesta."
-      />
-      <ProcessSteps />
-      <div class="btn-row section-actions">
-        <button class="btn primary" type="button" data-download-catalog data-catalog-interest={`Catálogo de ${category.title}`}>Descargar catálogo PDF</button>
-        <a class="btn line" href="/contacto/">Enviar requisitos del proyecto</a>
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">{sectorShowroom ? `Showroom de ${category.title.toLowerCase()}` : "Referencias visuales"}</p>
+        <h2>{sectorShowroom ? "Revisa soluciones reales antes de solicitar cotización" : `Alinea referencias de ${supportLabel} antes de solicitar cotización`}</h2>
+        <p class="section-note">{sectorShowroom ? "Alinea referencias visuales con compras, diseño y operación antes de definir materiales y alcance." : "Comparte imágenes, planos o selección base para preparar el material más útil antes de cotizar."}</p>
+        <div class="btn-row section-actions">
+          {sectorShowroom ? (
+            <a class="btn primary" href={sectorShowroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${sectorShowroom.sector}`}>Ver showroom virtual</a>
+          ) : (
+            <a class="btn primary" href="/contacto/">Enviar referencias</a>
+          )}
+          <button class="btn line" type="button" data-download-catalog data-catalog-interest={`Catálogo de ${category.title}`}>Solicitar catálogo PDF</button>
+        </div>
       </div>
+      <img src={encodeURI(showcaseImage)} alt={sectorShowroom ? `Showroom virtual para ${sectorShowroom.sector}` : category.projectAlt} loading="lazy" decoding="async" />
     </div>
   </section>
 
-  <CTA />
+  <CTA title={`Recibe el catálogo adecuado para tu proyecto de ${supportLabel}`} text="Comparte sector, ciudad y alcance. Te enviamos el material más útil para evaluar la compra." />
 </BaseLayout>

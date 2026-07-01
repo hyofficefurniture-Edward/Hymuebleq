@@ -9,3 +9,4 @@ output/
 !.env.example
 .env.local
 .env.*.local
+tmp/

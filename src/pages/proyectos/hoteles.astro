@@ -14,11 +14,11 @@ import { projects, showrooms } from "../../data/site";
 >
   <Hero
     eyebrow="Proyectos hoteleros"
-    title="Proyectos reales de mobiliario para hoteles"
-    lead="Referencias para evaluar experiencia, alcance de suministro y capacidad de fabricación antes de cotizar."
+    title="Casos y referencias de mobiliario para hoteles"
+    lead="Casos documentados y referencias publicadas para evaluar alcance, FF&E y capacidad de fabricación antes de cotizar."
     image="/assets/hymueble/generated/project-portfolio-review.webp"
     badgeTitle="Casos para evaluar experiencia"
-    badgeText="Hoteles internacionales, FF&E, habitaciones y áreas públicas."
+    badgeText="Hoteles internacionales, FF&E, habitaciones, áreas públicas y nivel de evidencia visible."
     primaryLabel="Consultar un proyecto similar"
     primaryHref="/contacto/"
     secondaryLabel="Ver catálogo hotelero"
@@ -30,7 +30,7 @@ import { projects, showrooms } from "../../data/site";
       <SectionHead
         eyebrow="Referencias"
         title="Descubre proyectos de mobiliario para hotelería"
-        text="Cada tarjeta resume sector, región y alcance para una revisión rápida de experiencia."
+        text="Cada tarjeta resume sector, región, alcance y nivel de evidencia para una revisión rápida de experiencia."
       />
       <div class="card-grid">
         {projects.filter((project) => project.sector === "Hotel").map((project) => <ProjectCard project={project} imageField="listingImage" />)}
@@ -50,20 +50,6 @@ import { projects, showrooms } from "../../data/site";
         </div>
       </div>
       <img src={encodeURI(showrooms[0].image)} alt="Showroom virtual hotelero Hymueble" loading="lazy" decoding="async" />
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="container">
-      <div class="cta-band">
-        <p class="eyebrow">Cooperación B2B</p>
-        <h2>Fabricación, documentación y soporte para compras internacionales</h2>
-        <p>Revisamos planos, FF&E, muestras, materiales, embalaje y coordinación logística según alcance.</p>
-        <div class="btn-row">
-          <a class="btn primary" href="/contacto/">Enviar requisitos del proyecto</a>
-          <a class="btn ghost" href="/hoteles/">Volver a hoteles</a>
-        </div>
-      </div>
     </div>
   </section>
 

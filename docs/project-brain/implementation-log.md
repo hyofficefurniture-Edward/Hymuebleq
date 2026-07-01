@@ -3038,3 +3038,69 @@
 ### Remaining Notes
 
 - The route is ready for local boss-demo review, but production launch still needs the real WhatsApp number, final form backend/CRM endpoint, confirmed social account URLs and richer case evidence fields.
+
+## 2026-07-02 / v0.95 Project Evidence, Case Images and Detail Narratives
+
+### Done
+
+- Upgraded the project evidence model for the five sector families: hotels, offices, healthcare, education and residential.
+- Replaced weak hotel cards with stronger documented cases: Grand Kempinski, Hilton DoubleTree, Pianzaihuang Hot Spring Hotel, Leezy Hotel Yongkang, Hilton Tashkent and Radisson Collection Lingang Shanghai.
+- Replaced the weak office product-render card with `Macwell Electronic Technology Industrial Park`.
+- Added new WebP case assets under `public/assets/hymueble/casos/` after visual review of source contact sheets and selected assets.
+- Added or expanded SEO title, SEO description, keywords, source URL, evidence label, facts, overview, visible spaces and procurement value for the new case set.
+- Updated the project detail template so every project detail page renders a narrative `Lectura del proyecto` section instead of relying only on summary cards.
+- Synchronized the current case evidence SOP and evidence library docs.
+
+### Modified Files
+
+- `src/data/site.ts`
+- `src/pages/proyectos/[sector]/[project].astro`
+- `docs/project-brain/04-素材/02-案例证据库.md`
+- `docs/project-brain/04-素材/07-项目案例证据分级与SEO流程.md`
+- `docs/project-brain/05-开发/08-项目案例添加流程.md`
+- `public/assets/hymueble/casos/*.webp`
+
+### Verification
+
+- `pnpm qa`: passed.
+- `git diff --check`: passed.
+- `pnpm qa:browser`: passed.
+- Browser screenshots reviewed:
+  - `output/playwright/oficinas-project-cards-wait.png`
+  - `output/playwright/hoteles-project-cards-wait.png`
+  - `output/playwright/macwell-narrative-spanish.png`
+  - `output/playwright/pianzaihuang-narrative-wait.png`
+
+### Remaining Notes
+
+- Historical redirect pages such as `/proyectos/hoteleria/raffles-hotel/` still exist for backward compatibility, but current hotel project cards now use the six stronger documented hotel cases.
+- Production deployment, real form receiving and real WhatsApp configuration were not changed in this pass.
+
+## 2026-07-02 / v0.96 Sector Homepage Trust Module Alignment
+
+### Done
+
+- Confirmed the user feedback: office, healthcare, education and residential homepages were showing a large CTA band in the same content position where the hotel page shows the trust/cooperation module.
+- Made `TrustStrip` configurable so the hotel page can keep hotel-specific copy while other sectors can use their own reference labels and partner tiles.
+- Replaced the misplaced CTA band on `/oficinas/`, `/salud/`, `/educacion/` and `/residencial/` with sector-specific `Cooperación y respaldo` modules.
+- Kept the bottom CTA in place; only the misplaced mid-page module was changed.
+
+### Modified Files
+
+- `src/components/TrustStrip.astro`
+- `src/pages/[section].astro`
+
+### Verification
+
+- `pnpm qa`: passed with 0 errors, 0 warnings and 0 hints.
+- `git diff --check`: passed.
+- `pnpm qa:browser`: passed.
+- Browser screenshots reviewed:
+  - `output/playwright/oficinas-trust-strip.png`
+  - `output/playwright/salud-trust-strip.png`
+  - `output/playwright/educacion-trust-strip.png`
+  - `output/playwright/residencial-trust-strip.png`
+
+### Remaining Notes
+
+- The trust evidence images remain the shared certificate/factory proof set. Future passes can add sector-specific proof images if higher-quality evidence is available.

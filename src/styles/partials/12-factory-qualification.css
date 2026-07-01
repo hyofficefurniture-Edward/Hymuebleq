@@ -1,0 +1,341 @@
+/* Factory evidence, production proof, equipment grid, compact proof cards, qualification cards, and certification strip.
+   Keep imported order stable; these files continue the original cascade. */
+
+.factory-evidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, .95fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.factory-evidence-main {
+  position: relative;
+  min-height: 540px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--title);
+  box-shadow: var(--shadow);
+}
+
+.factory-evidence-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 26, 34, 0) 42%, rgba(18, 26, 34, .86) 100%);
+}
+
+.factory-evidence-main img,
+.factory-evidence-card img,
+.factory-process-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.factory-evidence-main img {
+  height: 100%;
+  min-height: inherit;
+}
+
+.factory-evidence-caption {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1;
+  max-width: 520px;
+  color: #fff;
+}
+
+.factory-evidence-caption span,
+.factory-evidence-card span,
+.factory-process-card span,
+.factory-proof-grid span,
+.factory-equipment-grid span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.factory-evidence-caption h3 {
+  margin-top: 8px;
+  color: #fff;
+  font-size: clamp(26px, 2.2vw, 34px);
+}
+
+.factory-evidence-caption p {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, .78);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.factory-evidence-side {
+  display: grid;
+  gap: 16px;
+}
+
+.factory-evidence-card {
+  display: grid;
+  grid-template-columns: minmax(160px, .86fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  min-height: 164px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.factory-evidence-card img {
+  height: 136px;
+  border-radius: 6px;
+}
+
+.factory-evidence-card h3 {
+  margin-top: 6px;
+  font-size: 19px;
+  line-height: 1.16;
+}
+
+.factory-evidence-card p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.equipment-proof-strip {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.equipment-proof-strip div {
+  display: grid;
+  gap: 7px;
+  padding: 18px 20px;
+  border-right: 1px solid var(--line);
+}
+
+.equipment-proof-strip div:last-child {
+  border-right: 0;
+}
+
+.equipment-proof-strip strong {
+  color: var(--title);
+  font-size: 15px;
+  line-height: 1.24;
+}
+
+.factory-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.factory-proof-grid article {
+  padding-top: 22px;
+  border-top: 1px solid rgba(194, 163, 120, .58);
+}
+
+.factory-proof-grid h3 {
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+.factory-proof-grid p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.58;
+}
+
+.factory-process-evidence {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.factory-process-card {
+  display: grid;
+  align-content: start;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.factory-process-card img {
+  aspect-ratio: 16 / 9;
+}
+
+.factory-process-card div {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.factory-process-card h3 {
+  font-size: 20px;
+}
+
+.factory-process-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.52;
+}
+
+.factory-equipment-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.factory-equipment-grid article {
+  display: grid;
+  gap: 8px;
+  padding: 22px 20px;
+  border-right: 1px solid var(--line);
+}
+
+.factory-equipment-grid article:last-child {
+  border-right: 0;
+}
+
+.factory-equipment-grid h3 {
+  font-size: 18px;
+}
+
+.factory-equipment-grid p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.factory-mini-list {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.factory-mini-list span {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(18, 29, 41, .06);
+  color: #51606d;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.info-card.compact {
+  padding: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.info-card.compact strong {
+  color: var(--title);
+  font-size: 18px;
+}
+
+.info-card.compact span {
+  color: var(--muted);
+}
+
+.qualification-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.qualification-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(18, 26, 34, .06), transparent 42%),
+    linear-gradient(90deg, transparent 0, rgba(194, 163, 120, .12) 48%, transparent 100%);
+  pointer-events: none;
+}
+
+.qualification-section .container {
+  position: relative;
+}
+
+.qualification-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.qualification-card {
+  display: grid;
+  grid-template-rows: 270px 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(18, 29, 41, .1);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 22px 70px rgba(18, 29, 41, .08);
+}
+
+.qualification-card img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  object-fit: contain;
+  background: linear-gradient(140deg, #ebe7dd, var(--bg));
+  border-bottom: 1px solid var(--line);
+}
+
+.qualification-card div {
+  padding: 24px;
+}
+
+.qualification-card span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.qualification-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.qualification-card p {
+  color: var(--muted);
+}
+
+.certification-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.certification-strip span {
+  padding: 10px 14px;
+  border: 1px solid rgba(18, 29, 41, .14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .78);
+  color: var(--title);
+  font-size: 13px;
+  font-weight: 800;
+}
