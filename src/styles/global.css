@@ -966,31 +966,6 @@ p {
   line-height: 1.55;
 }
 
-.factory-strip {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.factory-main {
-  min-height: 460px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.factory-thumbs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.factory-thumbs img {
-  height: 222px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
 .factory-evidence {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(380px, .95fr);
@@ -2900,7 +2875,6 @@ p {
   .resource-card-grid,
   .resource-topic-grid,
   .resource-showroom-grid,
-  .factory-strip,
   .proof-grid,
   .qualification-showcase,
   .quality-steps {
@@ -3119,11 +3093,9 @@ p {
 	  .resource-card-grid,
 	  .resource-topic-grid,
   .resource-showroom-grid,
-  .factory-strip,
   .proof-grid,
   .qualification-showcase,
   .quality-steps,
-  .factory-thumbs,
   .project-form,
   .form-section-grid,
   .showroom-page-proof {
@@ -5061,19 +5033,6 @@ body.modal-open {
   .factory-process-card p {
     font-size: 13px;
     line-height: 1.45;
-  }
-
-  .factory-main {
-    min-height: 240px;
-  }
-
-  .factory-thumbs {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .factory-thumbs img {
-    height: 108px;
   }
 
   .qualification-showcase {
