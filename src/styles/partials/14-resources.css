@@ -1,0 +1,223 @@
+/* Resources, blog/video resource layouts, decision cards, topic cards, and resource showroom cards.
+   Keep imported order stable; these files continue the original cascade. */
+
+.resource-hero,
+.resource-video-hero {
+  background: linear-gradient(180deg, #fff, var(--bg));
+}
+
+.resource-hero-grid,
+.resource-video-grid,
+.resource-split {
+  display: grid;
+  align-items: center;
+}
+
+.resource-hero-copy,
+.resource-video-copy {
+  display: grid;
+  gap: 22px;
+}
+
+.resource-hero-copy p:not(.eyebrow),
+.resource-video-copy p:not(.eyebrow),
+.resource-split > div:first-child p {
+  max-width: var(--text-max);
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.resource-hero-media {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 8px;
+  background: var(--title);
+  box-shadow: var(--shadow);
+}
+
+.resource-hero-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.resource-hero-media figcaption {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 8px;
+  background: rgba(18, 26, 34, .78);
+  color: rgba(255, 255, 255, .86);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.resource-card-grid {
+  display: grid;
+}
+
+.resource-guide-card,
+.resource-topic-card,
+.resource-decision-list article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.resource-guide-card {
+  display: grid;
+  gap: 14px;
+  min-height: 300px;
+  padding: 24px;
+}
+
+.resource-guide-card > span {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.resource-guide-card p,
+.resource-topic-card p,
+.resource-decision-list p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.58;
+}
+
+.resource-guide-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-self: end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resource-guide-card li {
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #f2eee6;
+  color: var(--cta-dark);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.resource-split {
+  align-items: start;
+}
+
+.resource-split > div:first-child {
+  display: grid;
+  gap: 18px;
+}
+
+.resource-decision-list {
+  display: grid;
+  gap: 14px;
+}
+
+.resource-decision-list article {
+  padding: 22px;
+}
+
+.resource-decision-list h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.resource-main-video {
+  min-height: 0;
+}
+
+.resource-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.resource-topic-card {
+  min-height: 180px;
+  padding: 24px;
+}
+
+.resource-topic-card h3 {
+  margin-bottom: 12px;
+}
+
+.resource-showroom-band .section-head h2,
+.resource-showroom-band .section-head p {
+  color: #fff;
+}
+
+.resource-showroom-grid {
+  display: grid;
+}
+
+.resource-showroom-card {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 8px;
+  background: #18222c;
+}
+
+.resource-showroom-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .62;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.resource-showroom-card:hover img {
+  transform: scale(1.04);
+  opacity: .5;
+}
+
+.resource-showroom-card > span {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 1;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(194, 163, 120, .94);
+  color: #17140f;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.resource-showroom-card div {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(18, 26, 34, 0), rgba(18, 26, 34, .94));
+}
+
+.resource-showroom-card h3 {
+  color: #fff;
+}
+
+.resource-showroom-card p {
+  color: rgba(255, 255, 255, .76);
+  font-size: 14px;
+}
+
+.resource-showroom-card strong {
+  color: #f0d3a7;
+  font-size: 14px;
+}

@@ -1,4 +1,6 @@
 ---
+import { getProjectEvidenceLabel } from "../data/projectEvidence";
+
 interface Project {
   name: string;
   sector: string;
@@ -13,6 +15,11 @@ interface Project {
   alt?: string;
   facts?: string[];
   href: string;
+  evidenceLabel?: string;
+  sourceUrl?: string;
+  details?: {
+    year?: string;
+  };
 }
 interface Props {
   project: Project;
@@ -20,6 +27,7 @@ interface Props {
 }
 const { project, imageField = "image" } = Astro.props;
 const image = project[imageField] ?? project.image;
+const evidenceLabel = getProjectEvidenceLabel(project);
 ---
 <article class="project-card">
   <img src={encodeURI(image)} alt={project.alt ?? project.name} loading="lazy" decoding="async" />
@@ -27,6 +35,7 @@ const image = project[imageField] ?? project.image;
     <div class="meta">
       <span>{project.sector}</span>
       <span>{project.region}</span>
+      <span class="evidence-badge">{evidenceLabel}</span>
     </div>
     <h3>{project.name}</h3>
     <p>{project.scope}</p>

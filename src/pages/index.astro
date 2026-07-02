@@ -10,6 +10,8 @@ import FAQTabs from "../components/FAQTabs.astro";
 import CTA from "../components/CTA.astro";
 import ScrollRail from "../components/ScrollRail.astro";
 import { brand, metrics, projects, qualityCheckpoints, qualityProofs, showrooms } from "../data/site";
+
+const featuredProjects = projects.filter((project) => project.featuredHome);
 ---
 <BaseLayout
   title="Hymueble | Muebles para proyectos B2B en Latinoamérica"
@@ -151,12 +153,12 @@ import { brand, metrics, projects, qualityCheckpoints, qualityProofs, showrooms 
     <div class="container">
       <SectionHead
         eyebrow="Prueba comercial"
-        title="Proyectos reales de mobiliario B2B"
-        text="Hoteles, oficinas y espacios comerciales en Latinoamérica y el mundo. Cada referencia ayuda a evaluar experiencia antes de hacer una consulta."
+        title="Casos y referencias de mobiliario B2B"
+        text="Hoteles, oficinas y espacios comerciales en Latinoamérica y el mundo. Cada tarjeta muestra su nivel de evidencia antes de hacer una consulta."
       />
       <ScrollRail label="Proyectos destacados">
         <div class="card-grid home-project-rail" data-scroll-track>
-          {projects.map((project) => <ProjectCard project={project} imageField="homeImage" />)}
+          {featuredProjects.map((project) => <ProjectCard project={project} imageField="homeImage" />)}
         </div>
       </ScrollRail>
     </div>

@@ -1,0 +1,69 @@
+/* Trust strip foundation and reusable video panel/frame styles.
+   Keep imported order stable; these files continue the original cascade. */
+
+.trust-strip-block {
+  display: grid;
+  border: 1px solid rgba(18, 29, 41, .1);
+  border-radius: 8px;
+}
+
+.trust-strip-head {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(300px, .7fr);
+  gap: 28px;
+  border-bottom: 1px solid rgba(18, 29, 41, .1);
+}
+
+.trust-strip-head h2 {
+  max-width: 720px;
+}
+
+.trust-strip-head > p {
+  color: var(--muted);
+}
+
+.video-panel {
+  display: grid;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.video-panel p:not(.eyebrow) {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.video-panel .btn-row {
+  margin-top: 24px;
+}
+
+.video-frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--title);
+  aspect-ratio: 16 / 9;
+}
+
+.video-embed {
+  isolation: isolate;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}

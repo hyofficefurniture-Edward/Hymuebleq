@@ -1,0 +1,259 @@
+/* Homepage visual refinements, category-card layout, proof-strip spacing, and type scale adjustments.
+   Keep imported order stable; these files continue the original late-cascade override chain. */
+
+.home-hero-bg {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.home-hero-visual {
+  position: relative;
+  min-height: min(62vh, 660px);
+  align-self: stretch;
+}
+
+.home-hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: -18px -18px auto auto;
+  z-index: -1;
+  width: 64%;
+  height: 52%;
+  border: 1px solid rgba(194, 163, 120, .32);
+  border-radius: 8px;
+}
+
+.home-hero .btn.ghost.light {
+  color: var(--title);
+  border-color: rgba(18, 26, 34, .14);
+  background: rgba(255, 255, 255, .86);
+  backdrop-filter: none;
+}
+
+@media (max-width: 1080px) {
+  .home-hero-visual {
+    min-height: 500px;
+  }
+
+}
+
+@media (max-width: 720px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .scroll-rail-shell {
+    --scroll-control-size: 44px;
+    --scroll-control-inset: 4px;
+  }
+
+  .scroll-rail-button svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .home-hero-visual {
+    min-height: 390px;
+    margin-top: 30px;
+  }
+
+  .home-hero-bg {
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .home-hero-visual::before {
+    display: none;
+  }
+
+  .brand-logo {
+    width: 76px;
+    height: 42px;
+  }
+
+  .brand-copy strong {
+    font-size: 20px;
+  }
+
+  .nav-shell {
+    min-height: 72px;
+  }
+
+  .nav-actions .primary {
+    min-width: 104px;
+    min-height: 42px;
+    padding: 10px 16px;
+  }
+
+  .process {
+    width: 100%;
+    max-width: 100%;
+    contain: layout paint;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+}
+
+.category-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.category-card.primary {
+  grid-column: span 3;
+  min-height: 460px;
+}
+
+.category-card.secondary {
+  grid-column: span 2;
+  min-height: 360px;
+}
+
+@media (max-width: 1080px) {
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .category-card.primary,
+  .category-card.secondary {
+    grid-column: auto;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 720px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+}
+
+.home-hero-proof span {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  color: rgba(18, 29, 41, .58);
+  font-size: 14px;
+  font-weight: 780;
+  text-align: left;
+}
+
+.home-hero-proof span + span::before {
+  content: "";
+  position: absolute;
+  left: calc(clamp(14px, 3vw, 34px) * -0.5);
+  top: 50%;
+  width: 1px;
+  height: 18px;
+  background: rgba(18, 29, 41, .12);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 720px) {
+  .home-hero-proof {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 30px;
+  }
+
+  .home-hero-proof span {
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .home-hero-proof span + span::before {
+    display: none;
+  }
+}
+
+h1 {
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.14;
+}
+
+h3 {
+  font-size: clamp(19px, 1.7vw, 23px);
+  line-height: 1.22;
+}
+
+.section-head p {
+  max-width: 700px;
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.home-hero .lead,
+.hero-copy .lead {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.showroom-copy h2 {
+  max-width: 820px;
+  font-size: clamp(36px, 4.2vw, 58px);
+  line-height: 1.1;
+}
+
+.solution-intro h2 {
+  line-height: 1.12;
+}
+
+.category-card.primary .category-content h3 {
+  font-size: clamp(30px, 3vw, 40px);
+}
+
+.category-card.secondary .category-content h3 {
+  font-size: clamp(25px, 2.4vw, 32px);
+}
+
+.category-content p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.card-body h3 {
+  font-size: clamp(20px, 1.7vw, 23px);
+}
+
+.card-body p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 720px) {
+  h1,
+  .home-hero h1 {
+    font-size: clamp(32px, 9vw, 38px);
+    line-height: 1.12;
+  }
+
+  h2,
+  .showroom-copy h2 {
+    font-size: clamp(25px, 7.2vw, 31px);
+    line-height: 1.18;
+  }
+
+  .home-hero .lead,
+  .hero-copy .lead,
+  .section-head p {
+    font-size: 15.5px;
+    line-height: 1.72;
+  }
+
+  .category-card.primary .category-content h3,
+  .category-card.secondary .category-content h3 {
+    font-size: 27px;
+  }
+}

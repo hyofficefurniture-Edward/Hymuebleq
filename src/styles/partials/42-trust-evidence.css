@@ -1,0 +1,329 @@
+/* Trust-strip, partner-logo rail, qualification evidence, certificate chips, and mobile process scrolling.
+   Keep imported order stable; these files continue the original late-cascade override chain. */
+
+.trust-strip-block {
+  gap: clamp(28px, 3vw, 40px);
+  padding: clamp(28px, 4vw, 52px);
+  border-color: rgba(18, 29, 41, .08);
+  background: #fff;
+  box-shadow: 0 28px 90px rgba(18, 26, 34, .07);
+}
+
+.trust-strip-head {
+  align-items: start;
+  padding-bottom: clamp(24px, 3vw, 36px);
+}
+
+.trust-strip-head > p {
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.trust-evidence-layout {
+  display: grid;
+}
+
+.trust-partners-panel {
+  display: grid;
+  grid-template-columns: minmax(260px, .55fr) minmax(0, 1fr);
+  min-width: 0;
+  gap: clamp(28px, 4vw, 58px);
+  align-items: start;
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.trust-partners-panel > * {
+  min-width: 0;
+}
+
+.trust-partners-copy {
+  display: grid;
+}
+
+.trust-partners-copy span,
+.trust-certificate-signal span {
+  color: var(--cta-dark);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.trust-partners-copy strong {
+  max-width: 420px;
+  color: var(--title);
+  line-height: 1.12;
+}
+
+.trust-partners-copy p {
+  max-width: 440px;
+  color: var(--muted);
+}
+
+.partner-logo-rail,
+.qualification-image-rail {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  grid-auto-flow: column;
+  gap: 12px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(18, 29, 41, .2) transparent;
+  padding-bottom: 8px;
+}
+
+.partner-logo-rail {
+  grid-template-rows: repeat(2, minmax(72px, auto));
+  grid-auto-columns: minmax(168px, 188px);
+  align-items: stretch;
+}
+
+.partner-logo-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 14px 18px;
+  border: 1px solid rgba(18, 29, 41, .09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .78);
+  color: rgba(18, 29, 41, .72);
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 12px 32px rgba(18, 26, 34, .04);
+}
+
+.partner-logo-tile.serif {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.partner-logo-tile.wide {
+  font-size: 15px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.partner-logo-tile.condensed {
+  font-size: 16px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.partner-logo-tile.soft {
+  color: rgba(28, 97, 89, .78);
+}
+
+.partner-logo-tile.script {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.trust-qualification-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.qualification-image-rail {
+  grid-auto-columns: minmax(280px, 1fr);
+}
+
+.qualification-proof-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(18, 29, 41, .09);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 44px rgba(18, 26, 34, .06);
+}
+
+.qualification-proof-card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  background: var(--bg);
+}
+
+.qualification-proof-card figcaption {
+  display: grid;
+  gap: 6px;
+}
+
+.qualification-proof-card strong {
+  color: var(--title);
+  line-height: 1.25;
+}
+
+.qualification-proof-card span {
+  color: var(--muted);
+  font-weight: 760;
+  line-height: 1.45;
+}
+
+.trust-certificate-panel {
+  border-top: 1px solid rgba(18, 29, 41, .08);
+}
+
+.process-scroll {
+  max-width: 100%;
+}
+
+@media (max-width: 1080px) {
+  .trust-partners-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .trust-strip-block {
+    padding: 22px;
+  }
+
+  .partner-logo-rail {
+    grid-template-rows: repeat(2, minmax(58px, auto));
+    grid-auto-columns: minmax(132px, 42vw);
+  }
+
+  .partner-logo-tile {
+    min-height: 58px;
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .partner-logo-tile.wide,
+  .partner-logo-tile.condensed {
+    font-size: 13px;
+  }
+
+  .qualification-image-rail {
+    grid-auto-columns: minmax(250px, 78vw);
+  }
+
+  .process-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    contain: layout paint;
+  }
+
+  .process-scroll .process {
+    width: max-content;
+    max-width: none;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(144px, 42vw);
+    gap: 10px;
+    margin: 0;
+    padding: 0 0 10px;
+    overflow: visible;
+    scroll-snap-type: x proximity;
+  }
+
+  .process-scroll .process-item {
+    min-height: 164px;
+    scroll-snap-align: start;
+  }
+}
+
+.trust-partners-panel {
+  padding: clamp(22px, 2.4vw, 32px);
+}
+
+.trust-partners-copy {
+  gap: 10px;
+}
+
+.trust-partners-copy strong {
+  font-size: clamp(22px, 2vw, 28px);
+}
+
+.trust-partners-copy p {
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.qualification-proof-card figcaption {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 12px 14px 14px;
+}
+
+.qualification-proof-card strong {
+  font-size: 15px;
+}
+
+.qualification-proof-card span {
+  font-size: 11px;
+}
+
+@media (max-width: 720px) {
+  .trust-partners-copy strong {
+    font-size: 22px;
+  }
+
+  .trust-partners-copy p {
+    font-size: 13.5px;
+  }
+
+}
+
+.qualification-proof-card img {
+  height: clamp(176px, 16vw, 220px);
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 720px) {
+  .qualification-proof-card img {
+    height: 168px;
+  }
+}
+
+.trust-evidence-layout {
+  gap: clamp(20px, 2.4vw, 28px);
+}
+
+.trust-certificate-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.trust-certificate-signal {
+  display: inline-flex;
+  min-height: 0;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 11px;
+  border: 1px solid rgba(18, 29, 41, .08);
+  border-radius: 999px;
+  background: rgba(248, 247, 244, .7);
+}
+
+.trust-certificate-signal span {
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+
+.trust-certificate-signal strong {
+  color: var(--title);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.trust-certificate-signal p {
+  display: none;
+}

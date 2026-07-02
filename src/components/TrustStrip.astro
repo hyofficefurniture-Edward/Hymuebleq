@@ -32,6 +32,9 @@ interface Props {
   text?: string;
   signals?: Signal[];
   partnerBrands?: PartnerBrand[];
+  partnerEyebrow?: string;
+  partnerTitle?: string;
+  partnerText?: string;
   certificateSignals?: CertificateSignal[];
   qualificationImages?: QualificationImage[];
   compact?: boolean;
@@ -42,6 +45,9 @@ const {
   title,
   text,
   partnerBrands = cooperationPartnerBrands,
+  partnerEyebrow = "Referencias hoteleras",
+  partnerTitle = "Cooperación visible en proyectos y cadenas internacionales",
+  partnerText = "Señales de experiencia para abrir conversación comercial. Proyecto, alcance y documentación se revisan al avanzar la consulta.",
   certificateSignals = trustCertificateSignals,
   qualificationImages = trustQualificationImages,
   compact = false,
@@ -56,14 +62,11 @@ const {
     {text && <p>{text}</p>}
   </div>
   <div class="trust-evidence-layout" aria-label="Cooperación, proyectos y certificaciones">
-    <section class="trust-partners-panel" aria-label="Referencias de cooperación hotelera">
+    <section class="trust-partners-panel" aria-label={partnerEyebrow}>
       <div class="trust-partners-copy">
-        <span>Referencias hoteleras</span>
-        <strong>Cooperación visible en proyectos y cadenas internacionales</strong>
-        <p>
-          Señales de experiencia para abrir conversación comercial.
-          Proyecto, alcance y documentación se revisan al avanzar la consulta.
-        </p>
+        <span>{partnerEyebrow}</span>
+        <strong>{partnerTitle}</strong>
+        <p>{partnerText}</p>
       </div>
       <ScrollRail label="Logos de marcas de referencia">
         <div class="partner-logo-rail" data-scroll-track aria-label="Logos de marcas de referencia">

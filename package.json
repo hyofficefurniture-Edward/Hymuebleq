@@ -6,8 +6,12 @@
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro check && astro build",
+    "qa": "pnpm qa:css && pnpm build && pnpm qa:static && pnpm qa:catalogs",
+    "qa:css": "node scripts/qa-css-structure.mjs",
+    "qa:css:audit": "node scripts/qa-css-audit.mjs",
     "qa:static": "node scripts/qa-static.mjs",
     "qa:catalogs": "node scripts/qa-catalog-sources.mjs",
+    "qa:prelaunch": "pnpm qa && pnpm qa:launch",
     "qa:launch": "node scripts/qa-launch-config.mjs",
     "qa:browser": "node scripts/qa-browser-routes.mjs",
     "preview": "astro preview --host 127.0.0.1"

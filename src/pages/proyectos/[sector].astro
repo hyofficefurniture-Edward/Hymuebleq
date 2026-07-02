@@ -3,9 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/Hero.astro";
 import SectionHead from "../../components/SectionHead.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
-import ProcessSteps from "../../components/ProcessSteps.astro";
 import CTA from "../../components/CTA.astro";
-import { categories, projects } from "../../data/site";
+import { categories, projects, showrooms } from "../../data/site";
 
 export function getStaticPaths() {
   return [
@@ -23,6 +22,34 @@ const sectorProjects = projects.filter((project) => {
   return normalized === category.title.toLowerCase() || normalized === sector;
 });
 const hasSectorProjects = sectorProjects.length > 0;
+const showroomBySector = {
+  oficinas: showrooms[1],
+  salud: showrooms[2],
+  educacion: showrooms[3],
+};
+const sectorShowroom = showroomBySector[sector as keyof typeof showroomBySector];
+const showcaseImage = sectorShowroom?.image ?? category.projectImage;
+const projectTitleLabels = {
+  oficinas: "oficinas",
+  salud: "salud",
+  educacion: "educación",
+  residencial: "desarrollos residenciales",
+};
+const projectContextLabels = {
+  oficinas: "de oficina",
+  salud: "de salud",
+  educacion: "educativo",
+  residencial: "residencial",
+};
+const supportLabels = {
+  oficinas: "oficinas",
+  salud: "salud",
+  educacion: "educación",
+  residencial: "mobiliario residencial",
+};
+const projectTitleLabel = projectTitleLabels[sector as keyof typeof projectTitleLabels] ?? category.title.toLowerCase();
+const projectContextLabel = projectContextLabels[sector as keyof typeof projectContextLabels] ?? `de ${category.title.toLowerCase()}`;
+const supportLabel = supportLabels[sector as keyof typeof supportLabels] ?? category.title.toLowerCase();
 ---
 <BaseLayout
   title={`${category.projectsSeoTitle ?? `Proyectos de ${category.title}`} | Hymueble`}
@@ -31,12 +58,12 @@ const hasSectorProjects = sectorProjects.length > 0;
   image={category.projectImage}
 >
   <Hero
-    eyebrow="Proyectos B2B"
-    title={`Proyectos de mobiliario para ${category.title.toLowerCase()}`}
-    lead={`Referencias para evaluar cómo Hymueble puede apoyar proyectos de ${category.title.toLowerCase()} con fabricación directa, personalización y soporte de exportación.`}
+    eyebrow={`Proyectos ${category.title}`}
+    title={`Casos y referencias de mobiliario para ${projectTitleLabel}`}
+    lead="Casos documentados, referencias publicadas y escenarios de solución para evaluar alcance antes de cotizar."
     image={category.projectImage}
     badgeTitle={category.projectsSeoTitle ?? `Casos de ${category.title}`}
-    badgeText="La primera fase profundiza en hotelería y deja listas las rutas de los demás sectores."
+    badgeText={hasSectorProjects ? "Referencias visibles por sector, región, alcance y nivel de evidencia." : "Ruta lista para levantar requisitos y preparar referencias comparables."}
     primaryLabel="Consultar proyecto similar"
     primaryHref="/contacto/"
     secondaryLabel="Ver catálogo"
@@ -47,8 +74,8 @@ const hasSectorProjects = sectorProjects.length > 0;
     <div class="container">
       <SectionHead
         eyebrow="Referencias"
-        title={hasSectorProjects ? "Casos y referencias para compradores de proyecto" : "Ruta de proyecto lista para recibir requisitos"}
-        text={hasSectorProjects ? "Cada referencia visible ayuda a revisar sector, región y alcance antes de enviar una solicitud de cotización." : "Este sector todavía no tiene una base pública completa de casos dentro del preview. En vez de repetir imágenes de hotelería, dejamos una ruta comercial clara para levantar requisitos y preparar referencias comparables."}
+        title={`Descubre proyectos de mobiliario para ${projectTitleLabel}`}
+        text={hasSectorProjects ? "Cada tarjeta resume sector, región, alcance y nivel de evidencia para una revisión rápida de experiencia." : "Este sector todavía no tiene una base pública completa de casos dentro del preview. En vez de repetir imágenes de hotelería, dejamos una ruta comercial clara para levantar requisitos y preparar referencias comparables."}
       />
       {hasSectorProjects ? (
         <div class="card-grid">
@@ -74,15 +101,23 @@ const hasSectorProjects = sectorProjects.length > 0;
   </section>
 
   <section class="section">
-    <div class="container">
-      <SectionHead
-        eyebrow="Evaluación"
-        title="Qué información necesitamos para preparar una referencia comparable"
-        text="Sector, ciudad, tipo de edificio, cantidad aproximada, materiales esperados, plazos y si el proyecto ya cuenta con planos o lista de mobiliario."
-      />
-      <ProcessSteps />
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Antes de cotizar</p>
+        <h2>{sectorShowroom ? `Revisa el showroom de ${sectorShowroom.sector.toLowerCase()} para alinear referencias visuales` : `Prepara referencias visuales para tu proyecto ${projectContextLabel}`}</h2>
+        <p class="section-note">{sectorShowroom ? "Usa el recorrido para conversar sobre espacios, materiales, acabados y alcance." : "Comparte planos, fotos, renders o lista de mobiliario para preparar una referencia comparable sin mezclar casos de otro sector."}</p>
+        <div class="btn-row section-actions">
+          {sectorShowroom ? (
+            <a class="btn primary" href={sectorShowroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${sectorShowroom.sector}`}>Entrar al showroom</a>
+          ) : (
+            <a class="btn primary" href="/contacto/">Enviar requisitos</a>
+          )}
+          <a class="btn line" href="/showroom/">Ver todos los showrooms</a>
+        </div>
+      </div>
+      <img src={encodeURI(showcaseImage)} alt={sectorShowroom ? `Showroom virtual para ${sectorShowroom.sector}` : category.projectAlt} loading="lazy" decoding="async" />
     </div>
   </section>
 
-  <CTA />
+  <CTA title={`¿Necesitas cotizar un proyecto de ${supportLabel}?`} text="Envíanos tipo de proyecto, espacios, cantidades y ciudad. Revisamos viabilidad y próximos pasos." />
 </BaseLayout>

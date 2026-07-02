@@ -5,58 +5,31 @@ import SectionHead from "../../../components/SectionHead.astro";
 import ProcessSteps from "../../../components/ProcessSteps.astro";
 import CTA from "../../../components/CTA.astro";
 import { projects } from "../../../data/site";
+import { getProjectEvidenceLabel } from "../../../data/projectEvidence";
 
 export function getStaticPaths() {
-  const projectNotes = {
-    "grand-kempinski-hotel": {
-      type: "Hotel internacional",
-      year: "Referencia documentada con material interno de proyecto",
-      rooms: "Habitaciones, restaurante, entretenimiento, bar y áreas públicas",
-      finishes: "Mobiliario a medida, acabados coordinados, FF&E y soporte documental.",
-      evidence: ["PDF de caso interno", "Habitaciones documentadas", "Restaurante y bar", "Entretenimiento y áreas públicas"],
-      supportImage: "/assets/hymueble/casos/kempinski-dining-bar-case.webp",
-    },
-    "hilton-doubletree-hotel": {
-      type: "Hotel de cadena",
-      year: "Referencia documentada con material interno de proyecto",
-      rooms: "Habitaciones, lobby, restaurante, reuniones, fitness y piscina",
-      finishes: "Mobiliario hotelero, FF&E, entrega y soporte documental.",
-      evidence: ["PDF de caso interno", "Video interno", "Habitaciones documentadas", "Banquete y reuniones", "Fitness y piscina"],
-      supportImage: "/assets/hymueble/casos/hilton-project-installation-case.webp",
-    },
-    "raffles-hotel": {
-      type: "Proyecto hotelero",
-      year: "Referencia documentada con material interno de proyecto",
-      rooms: "Mobiliario hotelero, FF&E y soporte de embalaje",
-      finishes: "Soluciones a medida para ambientes hoteleros de alto estándar y documentación de entrega.",
-      evidence: ["PDF de caso interno", "Soporte FF&E", "Evidencia de embalaje", "Proyecto hotelero"],
-      supportImage: "/assets/hymueble/casos/raffles-packaging-proof-case.webp",
-    },
-    "huntington-school-of-lagos": {
-      type: "Proyecto educativo",
-      year: "Referencia de instalación con fotos y videos",
-      rooms: "Aulas, recepción, auditorio y espacios escolares",
-      finishes: "Mobiliario escolar, instalación y soporte de proyecto.",
-      evidence: ["Fotos de instalación", "Proyecto educativo", "Mobiliario escolar", "Soporte en sitio"],
-      supportImage: "/assets/hymueble/casos/huntington-auditorium-installation.webp",
-    },
-  };
-
   return projects.map((item) => {
     const parts = item.href.split("/").filter(Boolean);
     const sector = parts[1] ?? "hoteles";
     const project = parts[2] ?? item.name.toLowerCase().replaceAll(" ", "-");
-    return { params: { sector, project }, props: { item, notes: projectNotes[project as keyof typeof projectNotes] } };
+    return { params: { sector, project }, props: { item, notes: item.details } };
   });
 }
 
 const { item, notes } = Astro.props;
-const projectKeywordHeading =
-  item.sector === "Hotel"
-    ? "Referencia de mobiliario hotelero para proyectos"
-    : item.sector === "Educación"
-      ? "Referencia de mobiliario educativo para proyectos"
-      : "Referencia de mobiliario para proyectos B2B";
+const evidenceLabel = getProjectEvidenceLabel(item);
+const summaryEyebrow = evidenceLabel === "Escenario de solución" ? "Resumen del escenario" : "Resumen de la referencia";
+const projectKeywordHeadings = {
+  Hotel: "Referencia de mobiliario hotelero para proyectos",
+  Oficinas: "Referencia de mobiliario de oficina para proyectos",
+  Salud: "Referencia de mobiliario para salud y espacios médicos",
+  Educación: "Referencia de mobiliario educativo para proyectos",
+  Residencial: "Referencia de mobiliario residencial para proyectos",
+};
+const projectKeywordHeading = projectKeywordHeadings[item.sector as keyof typeof projectKeywordHeadings] ?? "Referencia de mobiliario para proyectos B2B";
+const projectNarrative =
+  notes?.overview ??
+  `${item.name} es una referencia de ${item.sector.toLowerCase()} en ${item.region}. El alcance visible incluye ${notes?.rooms ?? item.scope}. Esta página resume qué espacios se pueden comparar, qué evidencia se revisó y cómo usar la referencia antes de solicitar una cotización B2B.`;
 ---
 <BaseLayout
   title={`${item.seoTitle ?? `${item.name} | Proyecto`} | Hymueble`}
@@ -65,12 +38,12 @@ const projectKeywordHeading =
   image={item.detailImage ?? item.image}
 >
   <Hero
-    eyebrow="Proyecto de referencia"
+    eyebrow={evidenceLabel}
     title={item.name}
     lead={item.scope}
     image={item.detailImage ?? item.image}
     badgeTitle={item.region}
-    badgeText={`${item.sector} · ${notes?.type ?? "Proyecto B2B"}`}
+    badgeText={`${item.sector} · ${notes?.type ?? "Proyecto B2B"} · ${evidenceLabel}`}
     primaryLabel="Consultar un proyecto similar"
     primaryHref="/contacto/"
     secondaryLabel="Volver a proyectos"
@@ -80,7 +53,7 @@ const projectKeywordHeading =
   <section class="section alt">
     <div class="container">
       <SectionHead
-        eyebrow="Resumen del caso"
+        eyebrow={summaryEyebrow}
         title={projectKeywordHeading}
         text="Este resumen presenta la estructura comercial del caso: sector, región, alcance, tipo de proyecto, acabados y forma de usar la referencia para una nueva cotización."
       />
@@ -115,6 +88,30 @@ const projectKeywordHeading =
           {notes.evidence.map((item) => <span>{item}</span>)}
         </div>
       )}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHead
+        eyebrow="Lectura del proyecto"
+        title="Contexto del proyecto y uso de la referencia"
+        text={projectNarrative}
+      />
+      <div class="proof-grid">
+        <div class="info-card compact">
+          <strong>Espacios visibles</strong>
+          <span>{notes?.spaces?.join(", ") ?? notes?.rooms ?? item.scope}</span>
+        </div>
+        <div class="info-card compact">
+          <strong>Valor para compras</strong>
+          <span>{notes?.procurementValue ?? "Referencia útil para comparar alcance, espacios y próximos pasos de cotización."}</span>
+        </div>
+        <div class="info-card compact">
+          <strong>Fuente revisada</strong>
+          <span>{item.sourceUrl ? "PDF interno y referencia publicada del grupo." : "Referencia documental interna."}</span>
+        </div>
+      </div>
     </div>
   </section>
 
