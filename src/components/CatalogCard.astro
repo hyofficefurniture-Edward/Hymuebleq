@@ -6,6 +6,7 @@ interface Item {
   catalogImage?: string;
   alt?: string;
   catalogAlt?: string;
+  catalogInterest?: string;
   description: string;
 }
 interface Props {
@@ -16,7 +17,7 @@ interface Props {
 const { item, imageField = "image", catalogInterestPrefix = "" } = Astro.props;
 const image = item[imageField] ?? item.image;
 const alt = imageField === "catalogImage" ? item.catalogAlt ?? item.alt ?? item.title : item.alt ?? item.title;
-const catalogInterest = `${catalogInterestPrefix}${item.title}`;
+const catalogInterest = item.catalogInterest ?? `${catalogInterestPrefix}${item.title}`;
 ---
 <article class="catalog-card">
   <img src={encodeURI(image)} alt={alt} loading="lazy" decoding="async" />

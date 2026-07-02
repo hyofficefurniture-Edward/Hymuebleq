@@ -1,0 +1,212 @@
+[
+  {
+    "file": "hospital-hero-premium-patient-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p29.jpg",
+    "crop": [
+      0.06,
+      0.16,
+      0.45,
+      0.75
+    ]
+  },
+  {
+    "file": "hospital-ganjiang-patient-room.webp",
+    "source": "public/assets/hymueble/casos/ganjiang-patient-room.webp",
+    "crop": null
+  },
+  {
+    "file": "hospital-heshan-patient-ward.webp",
+    "source": "public/assets/hymueble/casos/heshan-patient-ward.webp",
+    "crop": null
+  },
+  {
+    "file": "hospital-woodlands-patient-room.webp",
+    "source": "public/assets/hymueble/casos/woodlands-patient-room.webp",
+    "crop": null
+  },
+  {
+    "file": "consultorio-hero-medical-consult.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p17.jpg",
+    "crop": [
+      0.18,
+      0.14,
+      0.78,
+      0.78
+    ]
+  },
+  {
+    "file": "consultorio-checkup-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p18.jpg",
+    "crop": [
+      0.07,
+      0.15,
+      0.78,
+      0.78
+    ]
+  },
+  {
+    "file": "consultorio-gynecology-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p19.jpg",
+    "crop": [
+      0.17,
+      0.15,
+      0.58,
+      0.8
+    ]
+  },
+  {
+    "file": "consultorio-saudi-meeting-room.webp",
+    "source": "public/assets/hymueble/casos/saudi-german-meeting-room.webp",
+    "crop": null
+  },
+  {
+    "file": "waiting-hero-hospital-hall.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p14.jpg",
+    "crop": [
+      0.04,
+      0.12,
+      0.94,
+      0.67
+    ]
+  },
+  {
+    "file": "waiting-auditorium-seating.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p13.jpg",
+    "crop": [
+      0.08,
+      0.17,
+      0.82,
+      0.76
+    ]
+  },
+  {
+    "file": "waiting-hospital-service-hall.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p27.jpg",
+    "crop": [
+      0.07,
+      0.18,
+      0.78,
+      0.78
+    ]
+  },
+  {
+    "file": "waiting-health-lounge.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p49.jpg",
+    "crop": [
+      0.07,
+      0.18,
+      0.5,
+      0.51
+    ]
+  },
+  {
+    "file": "nurse-hero-premium-station.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p26.jpg",
+    "crop": [
+      0.06,
+      0.13,
+      0.78,
+      0.78
+    ]
+  },
+  {
+    "file": "nurse-station-corridor.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p25.jpg",
+    "crop": [
+      0.06,
+      0.18,
+      0.8,
+      0.72
+    ]
+  },
+  {
+    "file": "nurse-medical-office.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p40.jpg",
+    "crop": [
+      0.38,
+      0.18,
+      0.9,
+      0.7
+    ]
+  },
+  {
+    "file": "nurse-locker-support.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p32.jpg",
+    "crop": [
+      0.07,
+      0.17,
+      0.79,
+      0.76
+    ]
+  },
+  {
+    "file": "lab-hero-clinical-lab.webp",
+    "source": "public/assets/hymueble/salud/目录/医疗-目录-卡片-医疗实验室.webp",
+    "crop": null
+  },
+  {
+    "file": "lab-dental-clinic.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p21.jpg",
+    "crop": [
+      0.07,
+      0.14,
+      0.78,
+      0.8
+    ]
+  },
+  {
+    "file": "lab-saudi-icu-area.webp",
+    "source": "public/assets/hymueble/casos/saudi-german-icu-area.webp",
+    "crop": null
+  },
+  {
+    "file": "lab-smart-treatment-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p16.jpg",
+    "crop": [
+      0.06,
+      0.15,
+      0.75,
+      0.84
+    ]
+  },
+  {
+    "file": "care-hero-elderly-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p52.jpg",
+    "crop": [
+      0.06,
+      0.16,
+      0.86,
+      0.68
+    ]
+  },
+  {
+    "file": "care-elderly-model-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p54.jpg",
+    "crop": [
+      0.06,
+      0.13,
+      0.62,
+      0.72
+    ]
+  },
+  {
+    "file": "care-premium-suite-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p56.jpg",
+    "crop": [
+      0.06,
+      0.14,
+      0.61,
+      0.72
+    ]
+  },
+  {
+    "file": "care-nursing-home-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/health/p69.jpg",
+    "crop": [
+      0.06,
+      0.18,
+      0.68,
+      0.72
+    ]
+  }
+]

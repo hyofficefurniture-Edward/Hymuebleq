@@ -1,0 +1,242 @@
+[
+  {
+    "file": "workstations-hero-open-office.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p41.jpg",
+    "crop": [
+      0.05,
+      0.08,
+      0.95,
+      0.8
+    ]
+  },
+  {
+    "file": "workstations-pink-studio-open.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p23.jpg",
+    "crop": [
+      0.08,
+      0.12,
+      0.93,
+      0.82
+    ]
+  },
+  {
+    "file": "workstations-window-team.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p24.jpg",
+    "crop": [
+      0.08,
+      0.12,
+      0.93,
+      0.82
+    ]
+  },
+  {
+    "file": "workstations-linear-benches.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p40.jpg",
+    "crop": [
+      0.06,
+      0.12,
+      0.94,
+      0.82
+    ]
+  },
+  {
+    "file": "chairs-hero-mesh-chair.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p58.jpg",
+    "crop": [
+      0.02,
+      0.18,
+      0.42,
+      0.95
+    ]
+  },
+  {
+    "file": "chairs-recliner-executive.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p59.jpg",
+    "crop": [
+      0.1,
+      0.08,
+      0.5,
+      0.58
+    ]
+  },
+  {
+    "file": "chairs-training-color.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p60.jpg",
+    "crop": [
+      0.45,
+      0.08,
+      0.95,
+      0.62
+    ]
+  },
+  {
+    "file": "chairs-executive-desk-scene.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p47.jpg",
+    "crop": [
+      0.18,
+      0.12,
+      0.9,
+      0.8
+    ]
+  },
+  {
+    "file": "meeting-hero-boardroom.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p30.jpg",
+    "crop": [
+      0.06,
+      0.16,
+      0.94,
+      0.82
+    ]
+  },
+  {
+    "file": "meeting-long-conference.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p09.jpg",
+    "crop": [
+      0.06,
+      0.14,
+      0.94,
+      0.82
+    ]
+  },
+  {
+    "file": "meeting-executive-junta.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p16.jpg",
+    "crop": [
+      0.07,
+      0.16,
+      0.93,
+      0.82
+    ]
+  },
+  {
+    "file": "meeting-collaboration-table.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p26.jpg",
+    "crop": [
+      0.08,
+      0.12,
+      0.8,
+      0.82
+    ]
+  },
+  {
+    "file": "reception-hero-dark-frontdesk.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p20.jpg",
+    "crop": [
+      0.07,
+      0.14,
+      0.93,
+      0.82
+    ]
+  },
+  {
+    "file": "reception-angular-desk.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p06.jpg",
+    "crop": [
+      0.08,
+      0.12,
+      0.92,
+      0.82
+    ]
+  },
+  {
+    "file": "reception-chevron-desk.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p19.jpg",
+    "crop": [
+      0.08,
+      0.14,
+      0.93,
+      0.82
+    ]
+  },
+  {
+    "file": "reception-premium-counter.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p15.jpg",
+    "crop": [
+      0.52,
+      0.1,
+      0.93,
+      0.48
+    ]
+  },
+  {
+    "file": "executive-hero-long-credenza.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p35.jpg",
+    "crop": [
+      0.07,
+      0.14,
+      0.93,
+      0.82
+    ]
+  },
+  {
+    "file": "executive-floating-desk.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p12.jpg",
+    "crop": [
+      0.18,
+      0.12,
+      0.93,
+      0.82
+    ]
+  },
+  {
+    "file": "executive-compact-desk.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p39.jpg",
+    "crop": [
+      0.05,
+      0.12,
+      0.48,
+      0.82
+    ]
+  },
+  {
+    "file": "executive-modern-office.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p42.jpg",
+    "crop": [
+      0.06,
+      0.12,
+      0.94,
+      0.82
+    ]
+  },
+  {
+    "file": "collaboration-hero-roundtable.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p27.jpg",
+    "crop": [
+      0.06,
+      0.12,
+      0.48,
+      0.82
+    ]
+  },
+  {
+    "file": "collaboration-soft-lounge-01.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p51.jpg",
+    "crop": [
+      0.04,
+      0.12,
+      0.48,
+      0.7
+    ]
+  },
+  {
+    "file": "collaboration-soft-lounge-02.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p55.jpg",
+    "crop": [
+      0.52,
+      0.12,
+      0.93,
+      0.48
+    ]
+  },
+  {
+    "file": "collaboration-sofa-gallery.webp",
+    "source": "output/catalog-image-audit/office-user-pdf-selected-pages/p56.jpg",
+    "crop": [
+      0.55,
+      0.14,
+      0.95,
+      0.8
+    ]
+  }
+]

@@ -1,0 +1,176 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/Hero.astro";
+import SectionHead from "../../../components/SectionHead.astro";
+import ProcessSteps from "../../../components/ProcessSteps.astro";
+import CTA from "../../../components/CTA.astro";
+import { categories } from "../../../data/site";
+import { catalogCategoryDetails, getCatalogDetail, getCatalogReferenceFilters } from "../../../data/catalogReferences";
+
+export function getStaticPaths() {
+  return catalogCategoryDetails.map((detail) => ({
+    params: { sector: detail.sector, category: detail.slug },
+    props: { detail },
+  }));
+}
+
+const { detail } = Astro.props;
+const sector = Astro.params.sector ?? detail.sector;
+const categorySlug = Astro.params.category ?? detail.slug;
+const currentDetail = getCatalogDetail(sector, categorySlug) ?? detail;
+const sectorCategory = categories.find((item) => item.catalog.endsWith(`/${currentDetail.sector}/`)) ?? categories[1];
+const referenceFilters = getCatalogReferenceFilters(currentDetail.references);
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${currentDetail.seoTitle} - referencias para cotizar`,
+  itemListElement: currentDetail.references.map((reference, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "CreativeWork",
+      name: reference.title,
+      description: reference.summary,
+      about: `${currentDetail.title} - ${reference.filter}`,
+      associatedMedia: {
+        "@type": "ImageObject",
+        contentUrl: new URL(reference.image, Astro.site ?? new URL("https://hymueble.com")).toString(),
+      },
+    },
+  })),
+};
+---
+<BaseLayout
+  title={`${currentDetail.seoTitle} | Hymueble`}
+  description={currentDetail.subtitle}
+  keywords={currentDetail.keywords}
+  image={currentDetail.supportImage}
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(itemListJsonLd)}></script>
+
+  <Hero
+    eyebrow={`Catálogo ${sectorCategory.title}`}
+    title={currentDetail.seoTitle}
+    lead={currentDetail.subtitle}
+    image={currentDetail.supportImage}
+    badgeTitle={currentDetail.title}
+    badgeText="Referencias visuales, fabricación a medida y cotización por proyecto."
+    primaryLabel="Cotizar esta categoría"
+    primaryHref="/contacto/"
+    secondaryLabel="Volver al catálogo"
+    secondaryHref={sectorCategory.catalog}
+  />
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Alcance"
+        title="Qué puede incluir esta categoría"
+        text="Esta ficha orienta compras por espacio y ayuda a preparar una conversación clara sobre medidas, acabados, cantidades y requisitos técnicos."
+      />
+      <div class="proof-grid">
+        {currentDetail.bullets.map((bullet) => (
+          <div class="info-card compact">
+            <strong>{bullet}</strong>
+            <span>Se revisa junto con cantidades, planos, materiales, acabados y plazo esperado.</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionHead
+        eyebrow="Referencias"
+        title="Referencias para cotizar"
+        text="Usa estas imágenes como punto de partida para revisar espacios, combinaciones de mobiliario, cantidades y acabados antes de solicitar una propuesta."
+      />
+      <div class="reference-filter-row" data-reference-filters aria-label="Filtrar referencias por uso">
+        <button class="reference-filter is-active" type="button" data-reference-filter="all" aria-pressed="true">Todos</button>
+        {referenceFilters.map((filter) => (
+          <button class="reference-filter" type="button" data-reference-filter={filter} aria-pressed="false">{filter}</button>
+        ))}
+      </div>
+      <div class="card-grid reference-grid" data-reference-grid>
+        {currentDetail.references.map((reference) => (
+          <article class="catalog-card reference-card" data-reference-card data-reference-filter={reference.filter}>
+            <img src={encodeURI(reference.image)} alt={reference.alt} loading="lazy" decoding="async" />
+            <div class="card-body">
+              <div class="reference-card-head">
+                <span class="eyebrow">{reference.filter}</span>
+                <h3>{reference.title}</h3>
+              </div>
+              <p>{reference.summary}</p>
+              <div class="reference-chip-list" aria-label="Aplicaciones">
+                {reference.applications.map((application) => <span>{application}</span>)}
+                <span>{reference.customization}</span>
+              </div>
+              <div class="btn-row">
+                <button class="btn primary" type="button" data-download-catalog data-catalog-interest={currentDetail.catalogInterest}>Consultar esta referencia</button>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-band">
+      <div>
+        <p class="eyebrow">Cotización por proyecto</p>
+        <h2>Envía tus requisitos antes de cerrar especificaciones</h2>
+        <p class="section-note">Trabajamos desde referencias, planos, moodboards o cantidades iniciales para traducir tu necesidad a materiales, medidas y producción.</p>
+        <div class="btn-row section-actions">
+          <a class="btn primary" href="/contacto/">Enviar requisitos</a>
+          <button class="btn line" type="button" data-download-catalog data-catalog-interest={currentDetail.catalogInterest}>Solicitar catálogo PDF</button>
+        </div>
+      </div>
+      <img src={encodeURI(currentDetail.supportImage)} alt={currentDetail.supportAlt} loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <SectionHead
+        eyebrow="Proceso"
+        title="Cómo avanzamos desde referencias hasta producción"
+        text="El flujo se mantiene claro para equipos de diseño, compras, operación y dirección de proyecto."
+      />
+      <ProcessSteps />
+    </div>
+  </section>
+
+  <CTA title={`¿Necesitas ${currentDetail.title.toLowerCase()} para tu proyecto?`} text="Comparte ciudad, tipo de proyecto, cantidades y referencias. Te responderemos con próximos pasos de cotización." />
+
+  <script>
+    const setupReferenceFilters = () => {
+      document.querySelectorAll<HTMLElement>("[data-reference-filters]").forEach((filterRow) => {
+        const buttons = [...filterRow.querySelectorAll<HTMLButtonElement>("[data-reference-filter]")];
+        const grid = filterRow.nextElementSibling;
+        const cards = [...(grid?.querySelectorAll<HTMLElement>("[data-reference-card]") ?? [])];
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const selected = button.dataset.referenceFilter ?? "all";
+            buttons.forEach((item) => {
+              const isActive = item === button;
+              item.classList.toggle("is-active", isActive);
+              item.setAttribute("aria-pressed", String(isActive));
+            });
+            cards.forEach((card) => {
+              card.hidden = selected !== "all" && card.dataset.referenceFilter !== selected;
+            });
+          });
+        });
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupReferenceFilters, { once: true });
+    } else {
+      setupReferenceFilters();
+    }
+  </script>
+</BaseLayout>

@@ -1,3 +1,5 @@
+import { getCatalogDetailsBySector, type CatalogSector } from "./catalogReferences";
+
 const img = (path: string) => `/assets/hymueble/${path}`;
 const defaultWhatsapp = "https://wa.me/000000000000?text=Hola%20Hymueble%2C%20quiero%20cotizar%20un%20proyecto%20de%20mobiliario.";
 const defaultEmail = "proyectos@hymueble.com";
@@ -176,25 +178,25 @@ export const categories = [
   },
   {
     title: "Residencial",
-    seoTitle: "Mobiliario residencial para proyectos",
-    seoDescription: "Mobiliario residencial para proyectos B2B, con opciones para desarrollos, villas, apartamentos modelo, compras por volumen y cotización por proyecto B2B.",
-    seoKeywords: ["mobiliario residencial", "muebles residenciales", "desarrollos residenciales", "apartamentos modelo", "villas", "compra por volumen"],
-    catalogSeoTitle: "Catálogo de mobiliario residencial",
-    catalogSeoDescription: "Catálogo de mobiliario residencial para desarrollos, villas y apartamentos modelo, con referencias B2B para compra por proyecto y selección visual clara.",
-    catalogSeoKeywords: ["catálogo de mobiliario residencial", "muebles residenciales", "desarrollos residenciales", "apartamentos modelo", "villas", "compra B2B"],
-    projectsSeoTitle: "Proyectos de mobiliario residencial",
-    projectsSeoDescription: "Referencias de mobiliario residencial para evaluar estilos, espacios y compras B2B en desarrollos o apartamentos modelo antes de cotizar con criterios claros.",
-    projectsSeoKeywords: ["proyectos de mobiliario residencial", "muebles residenciales", "desarrollos residenciales", "apartamentos modelo", "compra B2B", "cotización por proyecto"],
+    seoTitle: "Mobiliario residencial de lujo para villas y mansiones",
+    seoDescription: "Mobiliario residencial de lujo para proyectos B2B: villas, mansiones, penthouses y apartamentos modelo, con cotización por proyecto y fabricación a medida.",
+    seoKeywords: ["mobiliario residencial de lujo", "muebles de lujo", "villas de lujo", "mansiones", "penthouses", "apartamentos de lujo"],
+    catalogSeoTitle: "Catálogo de mobiliario residencial de lujo",
+    catalogSeoDescription: "Catálogo de mobiliario residencial de lujo para villas, mansiones, penthouses y apartamentos modelo, con referencias B2B para compra por proyecto.",
+    catalogSeoKeywords: ["catálogo de mobiliario residencial de lujo", "muebles de lujo", "villas de lujo", "mansiones", "penthouses", "apartamentos de lujo"],
+    projectsSeoTitle: "Proyectos de mobiliario residencial de lujo",
+    projectsSeoDescription: "Referencias de mobiliario residencial de lujo para villas, mansiones, penthouses y apartamentos modelo antes de cotizar con criterios claros.",
+    projectsSeoKeywords: ["proyectos de mobiliario residencial de lujo", "muebles de lujo", "villas de lujo", "mansiones", "penthouses", "cotización B2B"],
     href: "/residencial/",
     catalog: "/catalogo/residencial/",
     projects: "/proyectos/residencial/",
     image: img("residencial/主页/住宅-主页-Hero-豪华别墅客厅.webp"),
     catalogImage: img("residencial/目录/住宅-目录-Hero-豪华别墅客厅.webp"),
     projectImage: img("residencial/目录/住宅-目录-卡片-高档沙发.webp"),
-    alt: "mobiliario residencial para villas y apartamentos modelo",
-    catalogAlt: "catálogo de mobiliario residencial para desarrollos",
-    projectAlt: "referencias de proyectos de mobiliario residencial",
-    description: "Mobiliario para desarrollos residenciales, villas, apartamentos y showrooms.",
+    alt: "mobiliario residencial de lujo para villas y mansiones",
+    catalogAlt: "catálogo de mobiliario residencial de lujo para villas y mansiones",
+    projectAlt: "referencias de proyectos de mobiliario residencial de lujo",
+    description: "Villas, mansiones, salas, dormitorios, vestidores, terrazas y apartamentos de lujo.",
   },
 ];
 
@@ -219,7 +221,7 @@ export const projectSolutions = [
   },
   {
     kicker: "Residencial e inmobiliario",
-    title: "Paquetes de mobiliario para desarrollos, villas y apartamentos modelo",
+    title: "Paquetes de mobiliario para villas, mansiones y apartamentos de lujo",
     href: "/residencial/",
     image: categories[4].projectImage,
     problem: "Convertir renders, planos o moodboards en piezas fabricables para varias unidades sin romper presupuesto, estilo o plazo.",
@@ -294,184 +296,24 @@ export const hotelCatalog = [
   },
 ];
 
+const toSectorCatalog = (sector: CatalogSector) =>
+  getCatalogDetailsBySector(sector).map((detail) => ({
+    title: detail.title,
+    href: `/catalogo/${sector}/${detail.slug}/`,
+    image: detail.supportImage,
+    catalogImage: detail.supportImage,
+    alt: detail.supportAlt,
+    catalogAlt: detail.supportAlt,
+    catalogInterest: detail.catalogInterest,
+    description: detail.subtitle,
+  }));
+
 export const sectorCatalogs = {
   hoteles: hotelCatalog,
-  oficinas: [
-    {
-      title: "Puestos de trabajo",
-      href: "/catalogo/oficinas/",
-      image: img("oficinas/主页/办公-主页-卡片-书桌工作站.webp"),
-      alt: "puestos de trabajo para proyectos de oficina",
-      description: "Estaciones operativas, escritorios modulares y soluciones para equipos en crecimiento.",
-    },
-    {
-      title: "Sillas ergonómicas",
-      href: "/catalogo/oficinas/",
-      image: img("oficinas/主页/办公-主页-卡片-人体工学椅.webp"),
-      alt: "sillas ergonómicas para mobiliario de oficina",
-      description: "Sillas para uso diario, salas de reunión y espacios corporativos de alto tráfico.",
-    },
-    {
-      title: "Mesas de reunión",
-      href: "/catalogo/oficinas/",
-      image: img("oficinas/主页/办公-主页-卡片-会议桌.webp"),
-      alt: "mesas de reunión para oficinas corporativas",
-      description: "Mesas para salas de juntas, capacitación, coworking y dirección.",
-    },
-    {
-      title: "Recepción y espera",
-      href: "/catalogo/oficinas/",
-      image: img("oficinas/主页/办公-主页-卡片-前台等候区.webp"),
-      alt: "mobiliario para recepción y espera en oficinas",
-      description: "Mostradores, bancas, mesas auxiliares y mobiliario para primera impresión.",
-    },
-    {
-      title: "Oficinas ejecutivas",
-      href: "/catalogo/oficinas/",
-      image: img("oficinas/主页/办公-主页-卡片-高管办公区.webp"),
-      alt: "mobiliario para oficinas ejecutivas",
-      description: "Mobiliario para dirección, salas privadas y oficinas de representación.",
-    },
-    {
-      title: "Lounge corporativo",
-      href: "/catalogo/oficinas/",
-      image: img("oficinas/主页/办公-主页-卡片-联合办公休息区.webp"),
-      alt: "mobiliario para lounge corporativo",
-      description: "Sofás, mesas y áreas informales para colaboración y descanso.",
-    },
-  ],
-  salud: [
-    {
-      title: "Habitaciones hospitalarias",
-      href: "/catalogo/salud/",
-      image: img("salud/主页/医疗-主页-卡片-医院病房.webp"),
-      alt: "mobiliario para habitaciones hospitalarias",
-      description: "Mobiliario para pacientes, acompañantes y operación diaria en habitaciones.",
-    },
-    {
-      title: "Consultorios",
-      href: "/catalogo/salud/",
-      image: img("salud/主页/医疗-主页-卡片-医疗诊室.webp"),
-      alt: "mobiliario para consultorios y clínicas",
-      description: "Soluciones para clínicas, consultorios privados y atención ambulatoria.",
-    },
-    {
-      title: "Salas de espera",
-      href: "/catalogo/salud/",
-      image: img("salud/主页/医疗-主页-卡片-候诊接待区.webp"),
-      alt: "mobiliario para salas de espera en salud",
-      description: "Asientos, recepción y mobiliario resistente para flujo constante de usuarios.",
-    },
-    {
-      title: "Laboratorios",
-      href: "/catalogo/salud/",
-      image: img("salud/主页/医疗-主页-卡片-医疗实验室.webp"),
-      alt: "mobiliario para laboratorios médicos",
-      description: "Mesas, almacenamiento y superficies para áreas técnicas.",
-    },
-    {
-      title: "Residencias de cuidado",
-      href: "/catalogo/salud/",
-      image: img("salud/主页/医疗-主页-卡片-养老护理房.webp"),
-      alt: "mobiliario para residencias de cuidado",
-      description: "Mobiliario cómodo, resistente y fácil de mantener para cuidado prolongado.",
-    },
-    {
-      title: "Áreas de personal",
-      href: "/catalogo/salud/",
-      image: img("salud/主页/医疗-主页-卡片-医护休息区.webp"),
-      alt: "mobiliario para áreas de personal médico",
-      description: "Soluciones para descanso, guardia, almacenamiento y soporte interno.",
-    },
-  ],
-  educacion: [
-    {
-      title: "Aulas",
-      href: "/catalogo/educacion/",
-      image: img("educacion/主页/教育-主页-卡片-学校教室.webp"),
-      alt: "mobiliario para aulas en proyectos educativos",
-      description: "Mesas, sillas y almacenamiento para escuelas, colegios y universidades.",
-    },
-    {
-      title: "Bibliotecas",
-      href: "/catalogo/educacion/",
-      image: img("educacion/主页/教育-主页-卡片-学校图书馆.webp"),
-      alt: "mobiliario para bibliotecas educativas",
-      description: "Estanterías, mesas de lectura, zonas colaborativas y mobiliario de estudio.",
-    },
-    {
-      title: "Laboratorios",
-      href: "/catalogo/educacion/",
-      image: img("educacion/主页/教育-主页-卡片-学校实验室.webp"),
-      alt: "mobiliario para laboratorios educativos",
-      description: "Mesas técnicas, almacenamiento y soluciones para aprendizaje práctico.",
-    },
-    {
-      title: "Comedores",
-      href: "/catalogo/educacion/",
-      image: img("educacion/主页/教育-主页-卡片-学校食堂.webp"),
-      alt: "mobiliario para comedores escolares",
-      description: "Mesas, bancas y mobiliario para operación escolar de alto uso.",
-    },
-    {
-      title: "Espacios infantiles",
-      href: "/catalogo/educacion/",
-      image: img("educacion/主页/教育-主页-卡片-幼儿园教室.webp"),
-      alt: "mobiliario para espacios infantiles educativos",
-      description: "Muebles para preescolar, lectura, juego y aprendizaje temprano.",
-    },
-    {
-      title: "Administración escolar",
-      href: "/catalogo/educacion/",
-      image: img("educacion/主页/教育-主页-卡片-学校行政办公.webp"),
-      alt: "mobiliario para administración escolar",
-      description: "Oficinas, recepción y salas internas para gestión educativa.",
-    },
-  ],
-  residencial: [
-    {
-      title: "Sala de villa",
-      href: "/catalogo/residencial/",
-      image: img("residencial/主页/住宅-主页-卡片-别墅客厅.webp"),
-      alt: "mobiliario para sala de villa residencial",
-      description: "Mobiliario para villas, casas modelo y áreas sociales de desarrollos residenciales.",
-    },
-    {
-      title: "Comedor residencial",
-      href: "/catalogo/residencial/",
-      image: img("residencial/主页/住宅-主页-卡片-高档餐厅.webp"),
-      alt: "mobiliario para comedor residencial",
-      description: "Mesas, sillas y soluciones integradas para espacios de comedor.",
-    },
-    {
-      title: "Dormitorio principal",
-      href: "/catalogo/residencial/",
-      image: img("residencial/主页/住宅-主页-卡片-主卧套房.webp"),
-      alt: "mobiliario para dormitorio principal residencial",
-      description: "Camas, mesas de noche, cabeceras y piezas a medida para habitaciones.",
-    },
-    {
-      title: "Vestidores",
-      href: "/catalogo/residencial/",
-      image: img("residencial/主页/住宅-主页-卡片-衣帽间.webp"),
-      alt: "mobiliario para vestidores en proyectos residenciales",
-      description: "Armarios, closets, almacenamiento y soluciones personalizadas.",
-    },
-    {
-      title: "Terrazas",
-      href: "/catalogo/residencial/",
-      image: img("residencial/主页/住宅-主页-卡片-户外露台.webp"),
-      alt: "mobiliario para terrazas residenciales",
-      description: "Mobiliario exterior para terrazas, balcones y amenidades.",
-    },
-    {
-      title: "Sofás y descanso",
-      href: "/catalogo/residencial/",
-      image: img("residencial/主页/住宅-主页-卡片-高档沙发.webp"),
-      alt: "sofás y mobiliario de descanso residencial",
-      description: "Sofás, butacas y piezas de confort para proyectos residenciales.",
-    },
-  ],
+  oficinas: toSectorCatalog("oficinas"),
+  salud: toSectorCatalog("salud"),
+  educacion: toSectorCatalog("educacion"),
+  residencial: toSectorCatalog("residencial"),
 };
 
 export const sectorPages = {
@@ -510,14 +352,14 @@ export const sectorPages = {
   },
   residencial: {
     eyebrow: "Residencial",
-    title: "Mobiliario residencial para proyectos",
-    lead: "Mobiliario residencial para desarrollos, villas y apartamentos modelo, con opciones de compra por volumen y fabricación a medida.",
-    seoDescription: "Mobiliario residencial para proyectos B2B, con opciones para desarrollos, villas, apartamentos modelo, compras por volumen y cotización por proyecto B2B.",
-    seoKeywords: ["mobiliario residencial", "muebles residenciales", "desarrollos residenciales", "apartamentos modelo", "compra por volumen", "cotización B2B"],
+    title: "Mobiliario residencial de lujo para proyectos",
+    lead: "Mobiliario para villas, mansiones, penthouses y apartamentos de lujo, con compra por proyecto y fabricación a medida.",
+    seoDescription: "Mobiliario residencial de lujo para proyectos B2B, con opciones para villas, mansiones, penthouses, apartamentos modelo y cotización por proyecto.",
+    seoKeywords: ["mobiliario residencial de lujo", "muebles de lujo", "villas de lujo", "mansiones", "penthouses", "cotización B2B"],
     image: categories[4].image,
     catalogHref: "/catalogo/residencial/",
     projectsHref: "/proyectos/residencial/",
-    proof: ["Salas, dormitorios, vestidores y terrazas", "Paquetes de mobiliario por unidad", "Personalización para estilos de proyecto"],
+    proof: ["Villas, mansiones y penthouses", "Salas, dormitorios, vestidores y terrazas", "Apartamentos modelo como cobertura secundaria"],
   },
 };
 

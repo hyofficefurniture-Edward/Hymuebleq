@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+import { catalogCategoryDetails } from "../data/catalogReferences";
 import { categories, hotelCatalog, projects } from "../data/site";
 
 const staticPaths = [
@@ -31,6 +32,7 @@ export const GET: APIRoute = ({ site }) => {
     ...staticPaths,
     ...categories.flatMap((category) => [category.href, category.catalog, category.projects]),
     ...hotelCatalog.map((item) => item.href),
+    ...catalogCategoryDetails.map((item) => `/catalogo/${item.sector}/${item.slug}/`),
     ...projects.map((project) => project.href),
   ];
   const urls = [...new Set(paths)].sort();

@@ -1,0 +1,177 @@
+[
+  {
+    "file": "classroom-hero-school-classroom.webp",
+    "source": "public/assets/hymueble/educacion/目录/教育-目录-卡片-学校教室.webp",
+    "crop": null
+  },
+  {
+    "file": "classroom-training-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p25.jpg",
+    "crop": [
+      0.08,
+      0.13,
+      0.9,
+      0.82
+    ]
+  },
+  {
+    "file": "classroom-flexible-learning.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p27.jpg",
+    "crop": [
+      0.08,
+      0.12,
+      0.9,
+      0.82
+    ]
+  },
+  {
+    "file": "classroom-rwanda-lecture.webp",
+    "source": "public/assets/hymueble/casos/rwanda-lecture-hall.webp",
+    "crop": null
+  },
+  {
+    "file": "preschool-hero-kindergarten.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p10.jpg",
+    "crop": [
+      0.16,
+      0.1,
+      0.92,
+      0.82
+    ]
+  },
+  {
+    "file": "preschool-reading-classroom.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p11.jpg",
+    "crop": [
+      0.07,
+      0.1,
+      0.75,
+      0.82
+    ]
+  },
+  {
+    "file": "preschool-soft-learning-room.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p14.jpg",
+    "crop": [
+      0.08,
+      0.11,
+      0.9,
+      0.82
+    ]
+  },
+  {
+    "file": "preschool-library-playroom.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p23.jpg",
+    "crop": [
+      0.15,
+      0.1,
+      0.9,
+      0.82
+    ]
+  },
+  {
+    "file": "library-hero-school-library.webp",
+    "source": "public/assets/hymueble/educacion/目录/教育-目录-Hero-大学图书馆.webp",
+    "crop": null
+  },
+  {
+    "file": "library-open-reading-area.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p30.jpg",
+    "crop": [
+      0.08,
+      0.1,
+      0.92,
+      0.82
+    ]
+  },
+  {
+    "file": "library-soft-study-lounge.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p32.jpg",
+    "crop": [
+      0.08,
+      0.1,
+      0.92,
+      0.82
+    ]
+  },
+  {
+    "file": "library-charterhouse-hallway.webp",
+    "source": "public/assets/hymueble/casos/charterhouse-public-hallway.webp",
+    "crop": [
+      0.0,
+      0.0,
+      1.0,
+      0.66
+    ]
+  },
+  {
+    "file": "lab-hero-school-lab.webp",
+    "source": "public/assets/hymueble/educacion/目录/教育-目录-卡片-学校实验室.webp",
+    "crop": null
+  },
+  {
+    "file": "lab-technology-classroom.webp",
+    "source": "output/catalog-image-audit/user-pdf-selected-pages/education/p21.jpg",
+    "crop": [
+      0.08,
+      0.12,
+      0.9,
+      0.82
+    ]
+  },
+  {
+    "file": "lab-huntington-classroom.webp",
+    "source": "public/assets/hymueble/casos/huntington-classroom-lab.webp",
+    "crop": null
+  },
+  {
+    "file": "lab-huntington-project-model.webp",
+    "source": "public/assets/hymueble/casos/huntington-project-model.webp",
+    "crop": null
+  },
+  {
+    "file": "dining-hero-school-canteen.webp",
+    "source": "public/assets/hymueble/educacion/目录/教育-目录-卡片-学校食堂.webp",
+    "crop": null
+  },
+  {
+    "file": "dining-bbk-canteen.webp",
+    "source": "public/assets/hymueble/casos/bbk-canteen.webp",
+    "crop": null
+  },
+  {
+    "file": "dining-rwanda-canteen.webp",
+    "source": "public/assets/hymueble/casos/rwanda-canteen.webp",
+    "crop": null
+  },
+  {
+    "file": "dining-macwell-institutional.webp",
+    "source": "public/assets/hymueble/casos/macwell-staff-canteen-dining.webp",
+    "crop": null
+  },
+  {
+    "file": "admin-hero-school-office.webp",
+    "source": "public/assets/hymueble/educacion/目录/教育-目录-卡片-学校行政办公.webp",
+    "crop": null
+  },
+  {
+    "file": "admin-auib-reception.webp",
+    "source": "public/assets/hymueble/casos/auib-reception-desk.webp",
+    "crop": null
+  },
+  {
+    "file": "admin-rwanda-meeting.webp",
+    "source": "output/pdf/education-cases/clean-rwanda-meeting-room.jpg",
+    "crop": [
+      0.42,
+      0.06,
+      0.95,
+      0.62
+    ]
+  },
+  {
+    "file": "admin-huntington-reception.webp",
+    "source": "public/assets/hymueble/casos/huntington-reception-installation.webp",
+    "crop": null
+  }
+]

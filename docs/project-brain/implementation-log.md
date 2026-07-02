@@ -1,5 +1,58 @@
 # Implementation Log
 
+## 2026-07-02 / Catalog Image Phase Closure
+
+### Done
+
+- Closed the current catalog image replacement phase for office, healthcare and education.
+- Kept the closure scope narrow:
+  - no new page/template changes
+  - only acceptance, evidence organization and stage-record writeback
+- Confirmed the latest office chair refresh is part of the closed set.
+- Added a dedicated desktop catalog acceptance pass for the replaced-image routes.
+- Added a lightweight mobile spot check focused on image cropping risk rather than a full mobile rerun.
+- Wrote the phase-close results back into the project status and acceptance register.
+
+### Modified Files
+
+- `docs/project-brain/00-总控/01-当前状态.md`
+- `docs/project-brain/06-验收/00-验收总表.md`
+- `docs/project-brain/implementation-log.md`
+
+### Verification
+
+- `pnpm build`: passed.
+- `pnpm qa:static`: passed; 0 failures / 0 warnings.
+- `pnpm qa:catalogs`: passed; 21 catalog PDFs, 98 mapped lead interests; 0 failures / 0 warnings.
+- Desktop catalog acceptance:
+  - report: `output/playwright/v093-catalog-image-acceptance/report.json`
+  - scope: 24 routes across office, healthcare and education sector landings, catalog landings and catalog subcategory pages
+  - result: 0 failures / 0 warnings
+- Mobile catalog spot check:
+  - report: `output/playwright/v094-catalog-mobile-spotcheck/report.json`
+  - scope: 6 representative catalog pages at 390 x 844
+  - result: 0 failures / 0 warnings
+- `git diff --check`: passed.
+
+### Evidence
+
+- Desktop:
+  - `output/playwright/v093-catalog-image-acceptance/catalogo-oficinas.png`
+  - `output/playwright/v093-catalog-image-acceptance/catalogo-oficinas-sillas-de-oficina.png`
+  - `output/playwright/v093-catalog-image-acceptance/catalogo-salud.png`
+  - `output/playwright/v093-catalog-image-acceptance/catalogo-salud-hospitalizacion-y-habitaciones.png`
+  - `output/playwright/v093-catalog-image-acceptance/catalogo-educacion.png`
+  - `output/playwright/v093-catalog-image-acceptance/catalogo-educacion-aulas-escolares.png`
+- Mobile:
+  - `output/playwright/v094-catalog-mobile-spotcheck/catalogo-oficinas.png`
+  - `output/playwright/v094-catalog-mobile-spotcheck/catalogo-salud.png`
+  - `output/playwright/v094-catalog-mobile-spotcheck/catalogo-educacion.png`
+
+### Remaining Notes
+
+- This closure does not claim a fresh full mobile rerun of every catalog route. The mobile check is intentionally limited to representative pages to confirm that the new image crops do not fail on phone screens.
+- Residential was treated as already accepted in the prior phase and was not re-run in this closure pass.
+
 ## 2026-06-30 / v0.94 Launch QA Social Guard
 
 ### Done
