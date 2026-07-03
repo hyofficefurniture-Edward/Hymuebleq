@@ -86,6 +86,11 @@ for (const file of htmlFiles) {
 
   if (isRedirectPage) {
     redirectRoutes.add(displayRoute);
+    const refreshTarget = html.match(/<meta\b[^>]*http-equiv=(["'])refresh\1[^>]*content=(["'])\s*\d+\s*;\s*url=([^"']+)\2/i)?.[3];
+    const internalRedirect = normalizeInternalPath(refreshTarget);
+    if (internalRedirect && !fileExists(routeToDistPath(internalRedirect))) {
+      failures.push(`${displayRoute}: redirect target is missing ${internalRedirect}.`);
+    }
     continue;
   }
 

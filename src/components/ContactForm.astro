@@ -11,6 +11,9 @@ interface Props {
 const { compact = false, idPrefix = "project", submitLabel = "Enviar mi consulta de proyecto", catalogLead = false } = Astro.props;
 const id = (name: string) => `${idPrefix}-${name}`;
 const isDemoForm = !formConfig.action;
+const statusMessage = isDemoForm
+  ? "Modo de vista previa: este formulario no se envió. Para cotizar ahora, usa WhatsApp o correo."
+  : "¡Muchas gracias! Recibimos tu consulta y te contactaremos en menos de 24 horas por WhatsApp o correo.";
 ---
 <form
   class="project-form"
@@ -20,6 +23,7 @@ const isDemoForm = !formConfig.action;
   data-demo-form={isDemoForm ? "" : undefined}
   data-form-purpose="project-inquiry"
 >
+  <input type="hidden" name="source_path" value={Astro.url.pathname} />
   {catalogLead && <input type="hidden" name="catalog_interest" value="Catálogo general" data-catalog-interest-input />}
   <div class="form-intro full">
     <span>Consulta rápida</span>
@@ -109,7 +113,7 @@ const isDemoForm = !formConfig.action;
     </div>
   </details>
   <p class="privacy">Tu información se usa para atender tu consulta. Consulta nuestra <a href="/privacidad/">política de privacidad</a>.</p>
-  <div class="form-success" role="status" aria-live="polite" tabindex="-1">¡Muchas gracias! Recibimos tu consulta y te contactaremos en menos de 24 horas por WhatsApp o correo.</div>
+  <div class="form-success" role="status" aria-live="polite" tabindex="-1">{statusMessage}</div>
   <div class="field full">
     <button class="btn primary" type="submit">{submitLabel}</button>
   </div>

@@ -46,7 +46,7 @@ export default defineConfig({
     },
     "/proyectos/hoteleria/raffles-hotel/": {
       status: 301,
-      destination: "/proyectos/hoteles/raffles-hotel/",
+      destination: "/proyectos/hoteles/",
     },
   },
 });

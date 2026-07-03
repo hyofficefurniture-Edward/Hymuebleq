@@ -12,15 +12,18 @@ const requiredEnv = {
   PUBLIC_HYMUEBLE_FORM_ACTION: process.env.PUBLIC_HYMUEBLE_FORM_ACTION,
 };
 
-if (!requiredEnv.PUBLIC_HYMUEBLE_WHATSAPP_URL || requiredEnv.PUBLIC_HYMUEBLE_WHATSAPP_URL.includes("000000000000") || requiredEnv.PUBLIC_HYMUEBLE_WHATSAPP_URL.includes("YOUR_WHATSAPP_NUMBER")) {
-  failures.push("PUBLIC_HYMUEBLE_WHATSAPP_URL must be set to the real public WhatsApp URL before launch.");
+const confirmedWhatsappPath = "wa.me/8615019774832";
+const confirmedEmail = "ao@hysdfurniture.com";
+
+if (requiredEnv.PUBLIC_HYMUEBLE_WHATSAPP_URL && !requiredEnv.PUBLIC_HYMUEBLE_WHATSAPP_URL.includes(confirmedWhatsappPath)) {
+  failures.push("PUBLIC_HYMUEBLE_WHATSAPP_URL must point to the confirmed public WhatsApp number before launch.");
 }
 
-if (!requiredEnv.PUBLIC_HYMUEBLE_EMAIL || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(requiredEnv.PUBLIC_HYMUEBLE_EMAIL) || requiredEnv.PUBLIC_HYMUEBLE_EMAIL.includes("example.com")) {
-  failures.push("PUBLIC_HYMUEBLE_EMAIL must be set to the confirmed business email before launch.");
+if (requiredEnv.PUBLIC_HYMUEBLE_EMAIL && requiredEnv.PUBLIC_HYMUEBLE_EMAIL !== confirmedEmail) {
+  failures.push("PUBLIC_HYMUEBLE_EMAIL must match the confirmed business email before launch.");
 }
 
-if (!requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION || !/^https?:\/\//i.test(requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION) || requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION.includes("example.com")) {
+if (!requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION || !/^https?:\/\//i.test(requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION) || requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION.includes("example.com") || requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION.includes("YOUR_")) {
   failures.push("PUBLIC_HYMUEBLE_FORM_ACTION must be set to the real form receiver endpoint before launch.");
 }
 
@@ -40,6 +43,11 @@ const collectHtmlFiles = (dir) => {
 let htmlFiles = 0;
 let demoForms = 0;
 let placeholderWhatsappLinks = 0;
+let confirmedWhatsappLinks = 0;
+let oldEmailLinks = 0;
+let confirmedEmailLinks = 0;
+let multipartForms = 0;
+let attachmentInputs = 0;
 let tikTokLinks = 0;
 let removedSocialLinks = 0;
 
@@ -49,6 +57,11 @@ if (fs.existsSync(distDir)) {
     const html = fs.readFileSync(file, "utf8");
     demoForms += (html.match(/<form\b[^>]*data-demo-form/gi) ?? []).length;
     placeholderWhatsappLinks += (html.match(/wa\.me\/000000000000/g) ?? []).length;
+    confirmedWhatsappLinks += (html.match(/wa\.me\/8615019774832/g) ?? []).length;
+    oldEmailLinks += (html.match(/proyectos@hymueble\.com/g) ?? []).length;
+    confirmedEmailLinks += (html.match(/ao@hysdfurniture\.com/g) ?? []).length;
+    multipartForms += (html.match(/<form\b[^>]*enctype=(["'])multipart\/form-data\1/gi) ?? []).length;
+    attachmentInputs += (html.match(/<input\b[^>]*name=(["'])attachments\1/gi) ?? []).length;
     tikTokLinks += (html.match(/https:\/\/www\.tiktok\.com\//g) ?? []).length;
     removedSocialLinks += (html.match(/https:\/\/(?:www\.)?(?:pinterest\.com|x\.com)\//g) ?? []).length;
   }
@@ -60,8 +73,24 @@ if (demoForms > 0) {
   failures.push(`Generated HTML still contains ${demoForms} demo form marker(s). Configure PUBLIC_HYMUEBLE_FORM_ACTION and rebuild before launch.`);
 }
 
+if (htmlFiles > 0 && (multipartForms === 0 || attachmentInputs === 0 || multipartForms !== attachmentInputs)) {
+  failures.push("Generated forms must preserve multipart/form-data and the attachments file input before launch.");
+}
+
 if (placeholderWhatsappLinks > 0) {
   failures.push(`Generated HTML still contains ${placeholderWhatsappLinks} placeholder WhatsApp link(s). Configure PUBLIC_HYMUEBLE_WHATSAPP_URL and rebuild before launch.`);
+}
+
+if (confirmedWhatsappLinks === 0) {
+  failures.push("Generated HTML does not contain the confirmed WhatsApp number.");
+}
+
+if (oldEmailLinks > 0) {
+  failures.push(`Generated HTML still contains ${oldEmailLinks} old default email occurrence(s).`);
+}
+
+if (confirmedEmailLinks === 0) {
+  failures.push("Generated HTML does not contain the confirmed business email.");
 }
 
 if (removedSocialLinks > 0) {
@@ -76,6 +105,11 @@ const report = {
   htmlFiles,
   demoForms,
   placeholderWhatsappLinks,
+  confirmedWhatsappLinks,
+  oldEmailLinks,
+  confirmedEmailLinks,
+  multipartForms,
+  attachmentInputs,
   tikTokLinks,
   removedSocialLinks,
   checkedEnvKeys: Object.keys(requiredEnv),

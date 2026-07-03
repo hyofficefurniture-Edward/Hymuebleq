@@ -1,8 +1,8 @@
 import { getCatalogDetailsBySector, type CatalogSector } from "./catalogReferences";
 
 const img = (path: string) => `/assets/hymueble/${path}`;
-const defaultWhatsapp = "https://wa.me/000000000000?text=Hola%20Hymueble%2C%20quiero%20cotizar%20un%20proyecto%20de%20mobiliario.";
-const defaultEmail = "proyectos@hymueble.com";
+const defaultWhatsapp = "https://wa.me/8615019774832?text=Hola%20Antonio%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20un%20proyecto%20de%20mobiliario%20comercial.%20%C2%BFPodr%C3%ADas%20ayudarme%3F";
+const defaultEmail = "ao@hysdfurniture.com";
 const configuredWhatsapp = import.meta.env.PUBLIC_HYMUEBLE_WHATSAPP_URL?.trim();
 const configuredEmail = import.meta.env.PUBLIC_HYMUEBLE_EMAIL?.trim();
 
