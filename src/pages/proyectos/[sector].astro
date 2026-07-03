@@ -31,8 +31,8 @@ const sectorShowroom = showroomBySector[sector as keyof typeof showroomBySector]
 const showcaseImage = sectorShowroom?.image ?? category.projectImage;
 const projectTitleLabels = {
   oficinas: "oficinas",
-  salud: "salud",
-  educacion: "educación",
+  salud: "hospitales y clínicas",
+  educacion: "escuelas y campus educativos",
   residencial: "desarrollos residenciales",
 };
 const projectContextLabels = {
@@ -75,7 +75,7 @@ const supportLabel = supportLabels[sector as keyof typeof supportLabels] ?? cate
       <SectionHead
         eyebrow="Referencias"
         title={`Descubre proyectos de mobiliario para ${projectTitleLabel}`}
-        text={hasSectorProjects ? "Cada tarjeta resume sector, región, alcance y nivel de evidencia para una revisión rápida de experiencia." : "Este sector todavía no tiene una base pública completa de casos dentro del preview. En vez de repetir imágenes de hotelería, dejamos una ruta comercial clara para levantar requisitos y preparar referencias comparables."}
+        text={hasSectorProjects ? "Cada tarjeta resume sector, región, alcance y nivel de evidencia para una revisión rápida de experiencia." : "Este sector todavía no tiene una base pública completa de casos dentro del preview. En vez de reutilizar imágenes de otro sector, dejamos una ruta comercial clara para levantar requisitos y preparar referencias comparables."}
       />
       {hasSectorProjects ? (
         <div class="card-grid">

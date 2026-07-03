@@ -28,21 +28,21 @@ const sectorShowroom = showroomBySector[sector as keyof typeof showroomBySector]
 const showcaseImage = sectorShowroom?.image ?? category.projectImage;
 const catalogTitleLabels = {
   oficinas: "oficinas",
-  salud: "mobiliario para salud",
-  educacion: "mobiliario educativo",
-  residencial: "mobiliario residencial de lujo",
+  salud: "mobiliario hospitalario",
+  educacion: "mobiliario escolar",
+  residencial: "muebles para desarrollos residenciales",
 };
 const catalogAudienceLabels = {
   oficinas: "oficinas",
-  salud: "salud",
-  educacion: "educación",
-  residencial: "villas, mansiones y apartamentos de lujo",
+  salud: "hospitales y clínicas",
+  educacion: "escuelas y campus educativos",
+  residencial: "desarrollos residenciales",
 };
 const supportLabels = {
   oficinas: "oficinas",
-  salud: "salud",
-  educacion: "educación",
-  residencial: "mobiliario residencial de lujo",
+  salud: "hospitales y clínicas",
+  educacion: "escuelas y campus educativos",
+  residencial: "desarrollos residenciales",
 };
 const catalogTitleLabel = catalogTitleLabels[sector as keyof typeof catalogTitleLabels] ?? category.title.toLowerCase();
 const catalogAudienceLabel = catalogAudienceLabels[sector as keyof typeof catalogAudienceLabels] ?? category.title.toLowerCase();
@@ -56,7 +56,7 @@ const supportLabel = supportLabels[sector as keyof typeof supportLabels] ?? cate
 >
   <Hero
     eyebrow={`Catálogo ${category.title}`}
-    title={`Catálogo de ${catalogTitleLabel}, fabricado a medida para proyectos B2B`}
+    title={`Catálogo de ${catalogTitleLabel}, fabricado a medida para proyectos`}
     lead="Selecciona el espacio del proyecto y combina productos de catálogo con piezas adaptadas a planos, materiales y acabados."
     image={category.catalogImage}
     badgeTitle={category.catalogSeoTitle ?? `Catálogo de ${category.title}`}

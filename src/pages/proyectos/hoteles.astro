@@ -29,8 +29,8 @@ import { projects, showrooms } from "../../data/site";
     <div class="container">
       <SectionHead
         eyebrow="Referencias"
-        title="Descubre proyectos de mobiliario para hotelería"
-        text="Cada tarjeta resume sector, región, alcance y nivel de evidencia para una revisión rápida de experiencia."
+        title="Descubre proyectos de mobiliario hotelero"
+        text="Cada tarjeta resume hotel, región, alcance y nivel de evidencia para una revisión rápida de experiencia."
       />
       <div class="card-grid">
         {projects.filter((project) => project.sector === "Hotel").map((project) => <ProjectCard project={project} imageField="listingImage" />)}

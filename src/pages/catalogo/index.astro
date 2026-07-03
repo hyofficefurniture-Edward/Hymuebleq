@@ -7,24 +7,24 @@ import { categories } from "../../data/site";
 
 const catalogCards = categories.map((category) => ({
   ...category,
-  title: category.title === "Hoteles" ? "Catálogo para hotelería" : `Catálogo de ${category.title.toLowerCase()}`,
+  title: category.title === "Hoteles" ? "Catálogo de muebles para hoteles" : `Catálogo de ${category.title.toLowerCase()}`,
   href: category.catalog,
   image: category.catalogImage,
 }));
 ---
 <BaseLayout
-  title="Catálogos de mobiliario B2B | Hymueble"
-  description="Catálogos de mobiliario B2B para hotelería, oficinas, salud, educación y residencial, pensados para selección, comparación y cotización por proyecto B2B."
-  keywords={["catálogos de mobiliario B2B", "mobiliario hotelero", "mobiliario de oficina", "mobiliario para salud", "mobiliario educativo", "mobiliario residencial", "cotización por proyecto"]}
+  title="Catálogos de mobiliario para proyectos | Hymueble"
+  description="Catálogos de mobiliario para hoteles, oficinas, salud, educación y desarrollos residenciales, pensados para selección, comparación y cotización por proyecto."
+  keywords={["catálogos de mobiliario para proyectos", "mobiliario hotelero", "mobiliario de oficina", "mobiliario hospitalario", "mobiliario escolar", "mobiliario para desarrollos residenciales", "cotización por proyecto"]}
   image="/assets/hymueble/generated/catalog-hub-material-library.webp"
 >
   <Hero
     eyebrow="Catálogos por categoría"
-    title="Mobiliario para hotelería, oficinas, salud, educación y proyectos residenciales, con fabricación directa desde China"
+    title="Mobiliario para hoteles, oficinas, salud, educación y proyectos residenciales, con fabricación directa desde China"
     lead="Selecciona la categoría relacionada con tu proyecto. Cada ruta reúne imágenes, líneas de mobiliario, opciones de personalización y acceso a solicitud de catálogo."
     image="/assets/hymueble/generated/catalog-hub-material-library.webp"
     badgeTitle="Hub de catálogos"
-    badgeText="Página interna para SEO, navegación y rutas de consulta B2B."
+    badgeText="Página interna para SEO, navegación y rutas de consulta por proyecto."
     primaryLabel="Solicitar catálogo"
     primaryHref="/contacto/"
     secondaryLabel="Ver proyectos"

@@ -16,12 +16,19 @@
       "leadInterests": [
         "Catálogo para hotelería",
         "Catálogo hotelero",
+        "Catálogo de muebles para hoteles",
         "Hotelería - Habitaciones",
         "Hotelería - Muebles de baño",
         "Hotelería - Exteriores",
         "Hotelería - Muebles para bar",
         "Hotelería - Muebles para restaurante",
         "Hotelería - Mobiliario para conferencias",
+        "Muebles para hoteles - Habitaciones",
+        "Muebles para hoteles - Muebles de baño",
+        "Muebles para hoteles - Exteriores",
+        "Muebles para hoteles - Muebles para bar",
+        "Muebles para hoteles - Muebles para restaurante",
+        "Muebles para hoteles - Mobiliario para conferencias",
         "Hotelería - referencia: Habitación con cama y cabecera integrada",
         "Hotelería - referencia: Muro de cabecera para habitación piloto",
         "Hotelería - referencia: Zona lounge para suite hotelera",
@@ -57,7 +64,43 @@
         "Hotelería - referencia: Sala de reunión ejecutiva",
         "Hotelería - referencia: Sala de capacitación con mesas modulares",
         "Hotelería - referencia: Montaje de banquete y evento social",
-        "Hotelería - referencia: Paquete para salón de conferencias"
+        "Hotelería - referencia: Paquete para salón de conferencias",
+        "Muebles para hoteles - referencia: Habitación con cama y cabecera integrada",
+        "Muebles para hoteles - referencia: Muro de cabecera para habitación piloto",
+        "Muebles para hoteles - referencia: Zona lounge para suite hotelera",
+        "Muebles para hoteles - referencia: Armario y escritorio coordinados",
+        "Muebles para hoteles - referencia: Escritorio compacto para huésped ejecutivo",
+        "Muebles para hoteles - referencia: Panel de TV con apoyo y almacenamiento",
+        "Muebles para hoteles - referencia: Vanity suspendido para baño hotelero",
+        "Muebles para hoteles - referencia: Baño premium con lavabo y almacenamiento",
+        "Muebles para hoteles - referencia: Conjunto de lavabo, espejo y repisas",
+        "Muebles para hoteles - referencia: Vanity compacto con apoyo de amenidades",
+        "Muebles para hoteles - referencia: Baño de suite con mobiliario de apoyo",
+        "Muebles para hoteles - referencia: Solución de baño para habitación piloto",
+        "Muebles para hoteles - referencia: Lounge exterior para terraza de hotel",
+        "Muebles para hoteles - referencia: Área de piscina con asientos de exterior",
+        "Muebles para hoteles - referencia: Day lounge para resort y terraza premium",
+        "Muebles para hoteles - referencia: Comedor exterior para restaurante de hotel",
+        "Muebles para hoteles - referencia: Patio interior con mobiliario de conversación",
+        "Muebles para hoteles - referencia: Paquete exterior para amenidades de resort",
+        "Muebles para hoteles - referencia: Barra hotelera con seating de lounge",
+        "Muebles para hoteles - referencia: Barra con bancos altos tapizados",
+        "Muebles para hoteles - referencia: Lounge social para bar de hotel",
+        "Muebles para hoteles - referencia: Lounge de bar con asientos bajos",
+        "Muebles para hoteles - referencia: Estación de servicio para bar y coffee corner",
+        "Muebles para hoteles - referencia: Set completo para bar de hotel",
+        "Muebles para hoteles - referencia: Banca curva para restaurante hotelero",
+        "Muebles para hoteles - referencia: Restaurante con mesas y seating coordinado",
+        "Muebles para hoteles - referencia: Comedor lounge con bancas tapizadas",
+        "Muebles para hoteles - referencia: Salón comedor para operación hotelera",
+        "Muebles para hoteles - referencia: Zona bar-restaurante con seating mixto",
+        "Muebles para hoteles - referencia: Paquete de restaurante para cotización por proyecto",
+        "Muebles para hoteles - referencia: Salón flexible con sillas para evento",
+        "Muebles para hoteles - referencia: Montaje tipo auditorio para hotel",
+        "Muebles para hoteles - referencia: Sala de reunión ejecutiva",
+        "Muebles para hoteles - referencia: Sala de capacitación con mesas modulares",
+        "Muebles para hoteles - referencia: Montaje de banquete y evento social",
+        "Muebles para hoteles - referencia: Paquete para salón de conferencias"
       ]
     },
     {
@@ -224,6 +267,10 @@
   "manualInterests": [
     {
       "value": "Capacidades de fábrica y mobiliario B2B",
+      "recommendedAction": "Send factory capability materials first, then choose sector catalog after buyer replies."
+    },
+    {
+      "value": "Capacidades de fábrica y mobiliario para proyectos",
       "recommendedAction": "Send factory capability materials first, then choose sector catalog after buyer replies."
     }
   ]

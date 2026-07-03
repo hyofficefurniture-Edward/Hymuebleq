@@ -30,7 +30,7 @@ const r = (
   summary,
   applications,
   customization,
-  ctaInterest: `Hotelería - referencia: ${title}`,
+  ctaInterest: `Muebles para hoteles - referencia: ${title}`,
 });
 
 export const hotelReferences: HotelReference[] = [

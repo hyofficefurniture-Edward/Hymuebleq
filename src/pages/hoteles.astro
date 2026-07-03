@@ -9,15 +9,15 @@ import CTA from "../components/CTA.astro";
 import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../data/site";
 ---
 <BaseLayout
-  title="Mobiliario hotelero para proyectos B2B | Hymueble"
-  description="Mobiliario hotelero para proyectos B2B: habitaciones, lobby y áreas públicas, con referencias de catálogo para preparar cotizaciones claras por sector."
+  title="Mobiliario hotelero para proyectos | Hymueble"
+  description="Mobiliario hotelero para hoteles, habitaciones, lobby y áreas públicas, con referencias de catálogo para preparar una cotización por proyecto."
   keywords={["mobiliario hotelero", "muebles para hoteles", "FF&E hotelero", "mobiliario para proyectos hoteleros", "habitaciones de hotel", "directo de fábrica"]}
   image="/assets/hymueble/hoteles/主页/酒店-主页-Hero-酒店大堂全景.webp"
 >
   <Hero
-    eyebrow="Hotelería B2B"
+    eyebrow="Hoteles"
     title="Mobiliario para hoteles, directo desde fábrica en China"
-    lead="Mobiliario hotelero para habitaciones, lobby y áreas públicas, con fabricación directa, control de calidad y preparación de exportación."
+    lead="Muebles para hoteles, habitaciones, lobby y áreas públicas, con fabricación directa, control de calidad y preparación para exportación."
     image="/assets/hymueble/hoteles/主页/酒店-主页-Hero-酒店大堂全景.webp"
     badgeTitle="Soluciones hoteleras por espacio"
     badgeText="Habitaciones, lobby, bar, restaurante, baño, exteriores y conferencias."
@@ -31,8 +31,8 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
     <div class="container">
       <SectionHead
         eyebrow="Catálogo hotelero"
-        title="Catálogo de muebles para hotelería"
-        text="Elige el espacio a equipar y revisa familias de muebles adaptables a materiales, acabados y medidas del proyecto."
+        title="Catálogo de muebles para hoteles"
+        text="Elige el espacio del hotel que necesitas equipar y revisa familias de muebles adaptables a materiales, acabados y medidas del proyecto."
       />
       <div class="hotel-catalog-tiles">
         {hotelCatalog.map((item) => (
@@ -90,7 +90,7 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
     <div class="container">
       <SectionHead
         eyebrow="Servicio integral"
-        title="De la consulta a la entrega: solución integral para tu proyecto hotelero"
+        title="De la consulta a la entrega: proceso claro para tu proyecto hotelero"
         text="Un proceso claro para compras, diseño y operación: cotización, acabados, producción, embalaje y soporte."
       />
       <ProcessSteps />

@@ -29,11 +29,11 @@ import { hotelCatalog, showrooms } from "../../data/site";
     <div class="container">
       <SectionHead
         eyebrow="Espacios"
-        title="Catálogo de muebles para hotelería"
-        text="Categorías organizadas por espacio para preparar cotizaciones por volumen, remodelación o distribución."
+        title="Catálogo de muebles para hoteles"
+        text="Categorías organizadas por espacio para preparar cotizaciones por volumen, remodelación o distribución hotelera."
       />
       <div class="card-grid">
-        {hotelCatalog.map((item) => <CatalogCard item={item} imageField="catalogImage" catalogInterestPrefix="Hotelería - " />)}
+        {hotelCatalog.map((item) => <CatalogCard item={item} imageField="catalogImage" catalogInterestPrefix="Muebles para hoteles - " />)}
       </div>
     </div>
   </section>

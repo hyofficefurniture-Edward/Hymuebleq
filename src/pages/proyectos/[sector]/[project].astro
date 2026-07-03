@@ -26,14 +26,14 @@ const projectKeywordHeadings = {
   Educación: "Referencia de mobiliario educativo para proyectos",
   Residencial: "Referencia de mobiliario residencial para proyectos",
 };
-const projectKeywordHeading = projectKeywordHeadings[item.sector as keyof typeof projectKeywordHeadings] ?? "Referencia de mobiliario para proyectos B2B";
+const projectKeywordHeading = projectKeywordHeadings[item.sector as keyof typeof projectKeywordHeadings] ?? "Referencia de mobiliario para proyectos";
 const projectNarrative =
   notes?.overview ??
-  `${item.name} es una referencia de ${item.sector.toLowerCase()} en ${item.region}. El alcance visible incluye ${notes?.rooms ?? item.scope}. Esta página resume qué espacios se pueden comparar, qué evidencia se revisó y cómo usar la referencia antes de solicitar una cotización B2B.`;
+  `${item.name} es una referencia de ${item.sector.toLowerCase()} en ${item.region}. El alcance visible incluye ${notes?.rooms ?? item.scope}. Esta página resume qué espacios se pueden comparar, qué evidencia se revisó y cómo usar la referencia antes de solicitar una cotización por proyecto.`;
 ---
 <BaseLayout
   title={`${item.seoTitle ?? `${item.name} | Proyecto`} | Hymueble`}
-  description={item.seoDescription ?? `${item.name}: referencia de mobiliario B2B para ${item.sector}.`}
+  description={item.seoDescription ?? `${item.name}: referencia de mobiliario para ${item.sector}.`}
   keywords={item.seoKeywords}
   image={item.detailImage ?? item.image}
 >
@@ -43,7 +43,7 @@ const projectNarrative =
     lead={item.scope}
     image={item.detailImage ?? item.image}
     badgeTitle={item.region}
-    badgeText={`${item.sector} · ${notes?.type ?? "Proyecto B2B"} · ${evidenceLabel}`}
+    badgeText={`${item.sector} · ${notes?.type ?? "Proyecto de mobiliario"} · ${evidenceLabel}`}
     primaryLabel="Consultar un proyecto similar"
     primaryHref="/contacto/"
     secondaryLabel="Volver a proyectos"
@@ -68,7 +68,7 @@ const projectNarrative =
         </div>
         <div class="info-card compact">
           <strong>Tipo de proyecto</strong>
-          <span>{notes?.type ?? "Proyecto B2B"}</span>
+          <span>{notes?.type ?? "Proyecto de mobiliario"}</span>
         </div>
         <div class="info-card compact">
           <strong>Alcance</strong>
