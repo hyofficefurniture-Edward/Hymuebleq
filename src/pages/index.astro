@@ -14,20 +14,20 @@ import { brand, metrics, projects, qualityCheckpoints, qualityProofs, showrooms 
 const featuredProjects = projects.filter((project) => project.featuredHome);
 ---
 <BaseLayout
-  title="Hymueble | Mobiliario comercial para proyectos en Latinoamérica"
-  description="Proveedor de mobiliario para proyectos comerciales en Latinoamérica, con fabricación directa en China para hoteles, oficinas, salud, educación y desarrollos residenciales."
+  title="Muebles para proyectos comerciales en Latinoamérica | Hymueble"
+  description="Muebles para proyectos comerciales en Latinoamérica, con fabricación directa en China para hoteles, oficinas, salud, educación y residencias."
   keywords={["mobiliario comercial para proyectos", "proveedor de mobiliario para proyectos", "fabricante de muebles en China", "muebles para proyectos comerciales", "mobiliario hotelero", "mobiliario de oficina"]}
   image="/assets/hymueble/generated/home-virtual-showroom-atrium.webp"
 >
   <section class="home-hero">
     <div class="container home-hero-grid">
       <div class="home-hero-copy">
-        <p class="eyebrow">Proveedor de mobiliario para proyectos</p>
-        <h1>Mobiliario comercial para proyectos en Latinoamérica, directo de fábrica en China</h1>
-        <p class="lead">Muebles para proyectos comerciales, hoteles y oficinas con fabricación directa en China, control de calidad y soporte de exportación.</p>
+        <p class="eyebrow">Proveedor de muebles para proyectos B2B</p>
+        <h1>Muebles para proyectos comerciales en Latinoamérica, con fabricación directa en China</h1>
+        <p class="lead">Muebles para hoteles, oficinas, salud, educación y desarrollos residenciales, con control de calidad, embalaje de exportación y apoyo para preparar tu cotización.</p>
         <div class="btn-row">
-          <a class="btn primary" href="/contacto/">Solicitar cotización</a>
-          <a class="btn ghost light" href={brand.showroom}>Explorar showroom virtual</a>
+          <a class="btn primary" href="/contacto/">Solicitar cotización de proyecto</a>
+          <a class="btn ghost light" href={brand.showroom}>Revisar showroom virtual</a>
         </div>
       </div>
       <div class="home-hero-visual">
@@ -35,10 +35,10 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
       </div>
     </div>
     <div class="container home-hero-proof">
-      <span>Sin intermediarios</span>
-      <span>5 sectores comerciales</span>
+      <span>Fabricación directa</span>
+      <span>5 sectores de proyecto</span>
       <span>Control de calidad</span>
-      <span>Exportación y embalaje</span>
+      <span>Embalaje de exportación</span>
     </div>
   </section>
 
@@ -60,7 +60,7 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
       <div class="showroom-copy">
         <p class="eyebrow">Experiencia remota</p>
         <h2>Showrooms virtuales para revisar antes de cotizar</h2>
-        <p>Explora espacios reales por sector y comparte referencias más claras antes de pedir una propuesta.</p>
+        <p>Puedes revisar espacios por sector y usar esas referencias antes de pedir una cotización.</p>
         <ScrollRail label="Showrooms virtuales por sector">
           <div class="showroom-options" data-scroll-track>
             {showrooms.map((showroom, index) => (
@@ -81,7 +81,7 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
         </ScrollRail>
         <div class="btn-row">
           <a class="btn primary" href="/showroom/">Ver todos los showrooms</a>
-          <a class="btn line light" href="/contacto/">Enviar requerimientos</a>
+          <a class="btn line light" href="/contacto/">Enviar datos iniciales</a>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
         <h2>Conoce la fábrica antes de iniciar una cotización</h2>
         <p>Una primera revisión visual ayuda a compradores, contratistas y diseñadores a entender escala, proceso y capacidad antes de enviar planos o cantidades.</p>
         <div class="btn-row">
-          <a class="btn primary" href="/contacto/">Consultar ahora</a>
+          <a class="btn primary" href="/contacto/">Solicitar cotización</a>
           <a class="btn line" href={brand.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
       </div>
@@ -126,8 +126,8 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
     <div class="container route-bridge">
       <div class="route-bridge-copy">
         <p class="eyebrow">Cómo avanzar</p>
-        <h2>Elige la ruta según tu etapa de compra</h2>
-        <p>Catálogo para explorar familias, proyectos para revisar alcance y contacto para enviar planos, cantidades o una lista inicial.</p>
+        <h2>Avanza según la etapa de tu compra</h2>
+        <p>Puedes revisar el catálogo, ver proyectos de referencia o enviar datos iniciales para una cotización.</p>
       </div>
       <div class="route-bridge-grid" aria-label="Rutas principales para compradores B2B">
         <a class="route-bridge-card" href="/catalogo/">
@@ -137,13 +137,13 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
         </a>
         <a class="route-bridge-card" href="/proyectos/">
           <span>02</span>
-          <strong>Ver rutas de proyecto</strong>
-            <p>Evalúa alcance, proceso y referencias de proyecto.</p>
+          <strong>Ver proyectos</strong>
+            <p>Revisa referencias y tipos de alcance antes de cotizar.</p>
         </a>
         <a class="route-bridge-card strong" href="/contacto/">
           <span>03</span>
-          <strong>Enviar requerimientos</strong>
-            <p>Comparte ciudad, espacios, cantidades y plazo estimado.</p>
+          <strong>Enviar datos iniciales</strong>
+            <p>Comparte ciudad, espacios, cantidades aproximadas y plazo estimado.</p>
         </a>
       </div>
     </div>
@@ -152,9 +152,9 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
   <section class="section alt">
     <div class="container">
       <SectionHead
-        eyebrow="Prueba comercial"
+        eyebrow="Referencias de proyecto"
         title="Casos y referencias de mobiliario B2B"
-        text="Hoteles, oficinas y espacios comerciales en Latinoamérica y el mundo. Cada tarjeta muestra su nivel de evidencia antes de solicitar una cotización."
+        text="Hoteles, oficinas y espacios comerciales en Latinoamérica y el mundo. Usa estas referencias para comparar alcances y preparar tu cotización."
       />
       <ScrollRail label="Proyectos destacados">
         <div class="card-grid home-project-rail" data-scroll-track>
@@ -180,7 +180,7 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
       <SectionHead
         eyebrow="Control de calidad"
         title="Puntos de control para reducir riesgo antes del embarque"
-        text="Reducimos incertidumbre en materiales, muestras, producción, empaque, inspección final y salida desde China."
+        text="Revisamos materiales, muestras, producción, empaque, inspección final y salida desde China para reducir riesgos antes del embarque."
       />
       <div class="quality-steps">
         {qualityProofs.map((item) => (
@@ -210,8 +210,8 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
     <div class="container">
       <SectionHead
         eyebrow="Fábrica directa"
-        title="Equipos reales para producir, controlar y exportar"
-        text="Mostramos la capacidad de fábrica con equipos y procesos visibles: canteado, CNC, acabado, control y preparación para proyectos internacionales."
+        title="Capacidad de fábrica para producir, controlar y exportar"
+        text="La capacidad de fábrica se muestra con equipos y procesos visibles: canteado, CNC, acabado, control y preparación para proyectos internacionales."
       />
       <FactoryEvidence />
     </div>
@@ -222,7 +222,7 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
       <TrustStrip
         eyebrow="Certificaciones y cooperación"
         title="Base de confianza para compradores internacionales"
-        text="Organizamos las señales clave para una compra internacional: fábrica, calidad, proyectos, documentación y soporte comercial."
+        text="Revisa puntos importantes para una compra internacional: fábrica, calidad, proyectos, documentación y soporte comercial."
       />
     </div>
   </section>
@@ -238,5 +238,8 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
     </div>
   </section>
 
-  <CTA />
+  <CTA
+    title="Cotización de muebles para tu proyecto"
+    text="Puedes compartir sector, ciudad, espacios, cantidades aproximadas y plazo. Si todavía no tienes planos o lista FF&E, los revisamos después por WhatsApp o correo."
+  />
 </BaseLayout>

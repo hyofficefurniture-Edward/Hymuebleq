@@ -60,10 +60,10 @@ const supportLabel = supportLabels[sector as keyof typeof supportLabels] ?? cate
   <Hero
     eyebrow={`Proyectos ${category.title}`}
     title={`Casos y referencias de mobiliario para ${projectTitleLabel}`}
-    lead="Casos documentados, referencias publicadas y escenarios de solución para evaluar alcance antes de cotizar."
+    lead="Proyectos de mobiliario con casos documentados y referencias por sector para evaluar alcance antes de cotizar."
     image={category.projectImage}
     badgeTitle={category.projectsSeoTitle ?? `Casos de ${category.title}`}
-    badgeText={hasSectorProjects ? "Referencias visibles por sector, región, alcance y nivel de evidencia." : "Ruta lista para levantar requisitos y preparar referencias comparables."}
+    badgeText={hasSectorProjects ? "Referencias por sector, región y alcance para preparar una cotización." : "Ruta lista para revisar datos iniciales y preparar referencias comparables."}
     primaryLabel="Consultar proyecto similar"
     primaryHref="/contacto/"
     secondaryLabel="Ver catálogo"
@@ -75,7 +75,7 @@ const supportLabel = supportLabels[sector as keyof typeof supportLabels] ?? cate
       <SectionHead
         eyebrow="Referencias"
         title={`Descubre proyectos de mobiliario para ${projectTitleLabel}`}
-        text={hasSectorProjects ? "Cada tarjeta resume sector, región, alcance y nivel de evidencia para una revisión rápida de experiencia." : "Este sector todavía no tiene una base pública completa de casos dentro del preview. En vez de reutilizar imágenes de otro sector, dejamos una ruta comercial clara para levantar requisitos y preparar referencias comparables."}
+        text={hasSectorProjects ? "Cada tarjeta resume sector, región y alcance para revisar experiencia antes de solicitar cotización." : "Este sector todavía no tiene una base pública completa de casos. En vez de reutilizar imágenes de otro sector, dejamos una ruta clara para revisar datos iniciales y preparar referencias comparables."}
       />
       {hasSectorProjects ? (
         <div class="card-grid">
@@ -110,7 +110,7 @@ const supportLabel = supportLabels[sector as keyof typeof supportLabels] ?? cate
           {sectorShowroom ? (
             <a class="btn primary" href={sectorShowroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${sectorShowroom.sector}`}>Entrar al showroom</a>
           ) : (
-            <a class="btn primary" href="/contacto/">Enviar requisitos</a>
+            <a class="btn primary" href="/contacto/">Enviar datos iniciales</a>
           )}
           <a class="btn line" href="/showroom/">Ver todos los showrooms</a>
         </div>

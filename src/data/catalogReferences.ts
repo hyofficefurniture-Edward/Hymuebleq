@@ -53,15 +53,15 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     seoTitle: "Puestos de trabajo para proyectos de oficina",
     subtitle: "Puestos de trabajo, estaciones bench y escritorios modulares para oficinas corporativas, coworking y compras B2B por proyecto.",
     keywords: ["puestos de trabajo", "estaciones de trabajo", "mobiliario de oficina", "escritorios modulares", "oficinas corporativas", "compra B2B"],
-    bullets: ["Estaciones individuales o bench", "Cableado, paneles y almacenamiento según layout", "Producción por lote para sedes corporativas"],
+    bullets: ["Estaciones individuales o bench", "Cableado, paneles y almacenamiento según plano", "Producción por lote para sedes corporativas"],
     supportImage: asset("oficinas/catalogo-lujo/workstations-hero-open-office.webp"),
     supportAlt: "puestos de trabajo en oficina abierta corporativa",
     catalogInterest: "Oficinas - Puestos de trabajo",
     sourceBasis: "Validado contra menús en español que usan puestos de trabajo, estaciones de trabajo y zonas operativas.",
     references: [
-      ref("Open office", "Área abierta con estaciones frente a ventanal", "oficinas/catalogo-lujo/workstations-pink-studio-open.webp", "área abierta con estaciones de trabajo frente a ventanal", "Escena para revisar densidad de puestos, relación con pasillos y lectura visual en oficinas abiertas de mayor nivel.", ["Open office", "Equipos de operación"], "Módulos, colores, divisiones y accesorios ajustables."),
-      ref("Equipo", "Puestos compartidos con vista y circulación amplia", "oficinas/catalogo-lujo/workstations-window-team.webp", "puestos compartidos de oficina con vista y circulación amplia", "Referencia útil cuando una oficina necesita trabajo en equipo sin perder orden, luz natural ni sensación premium.", ["Equipos de operación", "Área abierta"], "Medidas, paneles bajos, almacenamiento y cableado según plano."),
-      ref("Bench", "Estaciones lineales para crecimiento por fases", "oficinas/catalogo-lujo/workstations-linear-benches.webp", "estaciones lineales bench para oficina corporativa", "Imagen útil para planificar compras por etapas, con filas de trabajo repetibles y circulación limpia.", ["Sede corporativa", "Remodelación"], "Módulos, acabados, paneles y canalización según layout."),
+      ref("Oficina abierta", "Área abierta con estaciones frente a ventanal", "oficinas/catalogo-lujo/workstations-pink-studio-open.webp", "área abierta con estaciones de trabajo frente a ventanal", "Escena para revisar densidad de puestos, relación con pasillos y lectura visual en oficinas abiertas de mayor nivel.", ["Oficina abierta", "Equipos de operación"], "Módulos, colores, divisiones y accesorios ajustables."),
+      ref("Equipo", "Puestos compartidos con vista y circulación amplia", "oficinas/catalogo-lujo/workstations-window-team.webp", "puestos compartidos de oficina con vista y circulación amplia", "Referencia útil cuando una oficina necesita trabajo en equipo sin perder orden, luz natural ni una imagen cuidada.", ["Equipos de operación", "Área abierta"], "Medidas, paneles bajos, almacenamiento y cableado según plano."),
+      ref("Bench", "Estaciones lineales para crecimiento por fases", "oficinas/catalogo-lujo/workstations-linear-benches.webp", "estaciones lineales bench para oficina corporativa", "Imagen útil para planificar compras por etapas, con filas de trabajo repetibles y circulación limpia.", ["Sede corporativa", "Remodelación"], "Módulos, acabados, paneles y canalización según plano."),
     ],
   },
   {
@@ -78,7 +78,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     sourceBasis: "Validado contra menús que separan sillas ergonómicas, ejecutivas, operativas e interlocutoras.",
     references: [
       ref("Ejecutiva", "Silla ejecutiva y reclinable para dirección", "oficinas/catalogo-lujo/chairs-recliner-executive.webp", "silla ejecutiva y reclinable para dirección", "Referencia para revisar respaldo alto, presencia visual y comodidad en puestos gerenciales o privados.", ["Dirección", "Gerencia"], "Mecanismo, brazos, base y tapicería según uso."),
-      ref("Capacitación", "Sillas para capacitación y reunión flexible", "oficinas/catalogo-lujo/chairs-training-color.webp", "sillas para capacitación y reunión flexible", "Escena útil para seleccionar sillas de apoyo, visita o formación sin convertir la página en un SKU line-up.", ["Capacitación", "Sala flexible"], "Color, base, apilado y resistencia según tráfico."),
+      ref("Capacitación", "Sillas para capacitación y reunión flexible", "oficinas/catalogo-lujo/chairs-training-color.webp", "sillas para capacitación y reunión flexible", "Escena útil para seleccionar sillas de apoyo, visita o formación sin tratar la página como catálogo retail.", ["Capacitación", "Sala flexible"], "Color, base, apilado y resistencia según tráfico."),
       ref("Puesto privado", "Silla operativa dentro de oficina privada", "oficinas/catalogo-lujo/chairs-executive-desk-scene.webp", "silla operativa dentro de oficina privada", "Referencia para revisar cómo se integra la silla con escritorio, mueble bajo y lectura general de una oficina privada.", ["Oficina privada", "Puesto ejecutivo"], "Altura de respaldo, color, ruedas y materiales coordinados."),
     ],
   },
@@ -97,7 +97,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     references: [
       ref("Sala de juntas", "Mesa principal para junta corporativa", "oficinas/catalogo-lujo/meeting-long-conference.webp", "mesa principal para sala de juntas corporativa", "Referencia para coordinar mesa, sillas, credenza y presencia visual en una sala formal.", ["Sala de juntas", "Dirección"], "Largo, cableado, bases, acabado y sillas asociadas."),
       ref("Dirección", "Sala ejecutiva para decisiones privadas", "oficinas/catalogo-lujo/meeting-executive-junta.webp", "sala ejecutiva para decisiones privadas", "Escena para oficinas que necesitan reuniones frecuentes sin perder sobriedad ni lectura directiva.", ["Reunión ejecutiva", "Equipo directivo"], "Formato rectangular, materiales y sillas según sala."),
-      ref("Colaboración", "Mesa colaborativa para reunión informal", "oficinas/catalogo-lujo/meeting-collaboration-table.webp", "mesa colaborativa para reunión informal de oficina", "Referencia para proyectos donde la reunión corta, el brainstorming y la discusión de proyecto conviven en el mismo espacio.", ["Proyecto", "Discusión"], "Mesas, luminarias, sillas y apoyo visual según uso."),
+      ref("Colaboración", "Mesa colaborativa para reunión informal", "oficinas/catalogo-lujo/meeting-collaboration-table.webp", "mesa colaborativa para reunión informal de oficina", "Referencia para proyectos donde la reunión corta, la lluvia de ideas y la discusión de proyecto conviven en el mismo espacio.", ["Proyecto", "Discusión"], "Mesas, luminarias, sillas y apoyo visual según uso."),
     ],
   },
   {
@@ -114,8 +114,8 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     sourceBasis: "Validado contra menús que usan recepción y salas de espera como categoría propia.",
     references: [
       ref("Mostrador", "Recepción corporativa con frente angular", "oficinas/catalogo-lujo/reception-angular-desk.webp", "recepción corporativa con frente angular", "Referencia para discutir frente de atención, almacenamiento y primera impresión de marca.", ["Recepción", "Lobby corporativo"], "Medidas, frente, cubierta, iluminación y logotipo por proyecto."),
-      ref("Lobby", "Recepción con frente escultórico", "oficinas/catalogo-lujo/reception-chevron-desk.webp", "recepción con mostrador escultórico y lectura premium", "Escena para oficinas donde la recepción debe verse más premium y convertirse en señal de marca.", ["Lobby", "Atención a visitantes"], "Mostrador, panel posterior, materiales y escala visual."),
-      ref("Frente de atención", "Mostrador premium para atención inicial", "oficinas/catalogo-lujo/reception-premium-counter.webp", "mostrador premium para atención inicial corporativa", "Referencia para proyectos donde la zona de atención debe verse clara, ordenada y fácil de identificar.", ["Recepción", "Atención inicial"], "Frente, cubierta, panel posterior y señalización por proyecto."),
+      ref("Lobby", "Recepción con frente escultórico", "oficinas/catalogo-lujo/reception-chevron-desk.webp", "recepción con mostrador escultórico", "Escena para oficinas donde la recepción debe verse más cuidada y funcionar como señal de marca.", ["Lobby", "Atención a visitantes"], "Mostrador, panel posterior, materiales y escala visual."),
+      ref("Frente de atención", "Mostrador para atención inicial", "oficinas/catalogo-lujo/reception-premium-counter.webp", "mostrador para atención inicial corporativa", "Referencia para proyectos donde la zona de atención debe verse clara, ordenada y fácil de identificar.", ["Recepción", "Atención inicial"], "Frente, cubierta, panel posterior y señalización por proyecto."),
     ],
   },
   {
@@ -139,9 +139,9 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
   {
     sector: "oficinas",
     slug: "colaboracion-y-brainstorming",
-    title: "Colaboración y brainstorming",
-    seoTitle: "Mobiliario para colaboración y brainstorming en oficinas",
-    subtitle: "Mobiliario para zonas colaborativas, lounge corporativo, brainstorming, descanso y trabajo informal en proyectos de oficina.",
+    title: "Colaboración y lluvia de ideas",
+    seoTitle: "Mobiliario para colaboración y lluvia de ideas en oficinas",
+    subtitle: "Mobiliario para zonas colaborativas, lounge corporativo, lluvia de ideas, descanso y trabajo informal en proyectos de oficina.",
     keywords: ["zonas de colaboración", "brainstorming", "lounge corporativo", "mobiliario colaborativo", "coworking", "oficina moderna"],
     bullets: ["Sofás, puffs, mesas y asientos informales", "Espacios para colaboración y descanso", "Configuración flexible según cultura de trabajo"],
     supportImage: asset("oficinas/catalogo-lujo/collaboration-hero-roundtable.webp"),
@@ -150,7 +150,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     sourceBasis: "Validado contra menús que usan colaboración, brainstorming, cafeterías y zonas de descanso.",
     references: [
       ref("Lounge", "Lounge de colaboración para conversaciones informales", "oficinas/catalogo-lujo/collaboration-soft-lounge-01.webp", "lounge de colaboración para conversaciones informales", "Escena para combinar descanso, conversación y reuniones rápidas en una misma área.", ["Colaboración", "Espera interna"], "Tapicería, módulos, mesas auxiliares y distribución."),
-      ref("Social", "Zona social con sofá y mesa baja", "oficinas/catalogo-lujo/collaboration-soft-lounge-02.webp", "zona social con sofá y mesa baja para oficina", "Referencia para crear una zona menos rígida donde el equipo pueda recibir visitas o conversar sin pasar a una sala formal.", ["Zona social", "Recepción interna"], "Sofás, mesas bajas, acabados y combinaciones por layout."),
+      ref("Social", "Zona social con sofá y mesa baja", "oficinas/catalogo-lujo/collaboration-soft-lounge-02.webp", "zona social con sofá y mesa baja para oficina", "Referencia para crear una zona menos rígida donde el equipo pueda recibir visitas o conversar sin pasar a una sala formal.", ["Zona social", "Recepción interna"], "Sofás, mesas bajas, acabados y combinaciones por distribución."),
       ref("Recepción interna", "Lounge corporativo de espera y conversación", "oficinas/catalogo-lujo/collaboration-sofa-gallery.webp", "lounge corporativo de espera y conversación", "Referencia para oficinas donde descanso, espera interna y colaboración ligera se conectan en un mismo ambiente.", ["Lounge", "Espera interna"], "Sofás, butacas, mesas y resistencia al uso diario."),
     ],
   },
@@ -205,7 +205,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     references: [
       ref("Espera", "Sala de espera con asientos por fila", "salud/catalogo-lujo/waiting-auditorium-seating.webp", "sala de espera médica con asientos por fila", "Referencia para revisar capacidad, distancia de paso y resistencia de asientos en zonas ambulatorias.", ["Consulta externa", "Hospital"], "Cantidad, estructura, tapicería y mantenimiento según tráfico."),
       ref("Recepción", "Hall de atención con mostradores integrados", "salud/catalogo-lujo/waiting-hospital-service-hall.webp", "hall médico con recepción y sala de espera integrada", "Escena para coordinar primera atención, orientación, espera y circulación de pacientes.", ["Recepción", "Atención inicial"], "Mostrador, bancas, mesas y acabados por flujo."),
-      ref("Lounge", "Zona de espera con lectura más premium", "salud/catalogo-lujo/waiting-health-lounge.webp", "lounge de espera médica con sofás y mesas auxiliares", "Referencia para clínicas privadas o áreas VIP donde la espera debe sentirse más cálida y cuidada.", ["Clínica privada", "Lounge médico"], "Sofás, butacas, mesas y textiles de uso intensivo."),
+      ref("Lounge", "Zona de espera con ambiente más cuidado", "salud/catalogo-lujo/waiting-health-lounge.webp", "lounge de espera médica con sofás y mesas auxiliares", "Referencia para clínicas privadas o áreas VIP donde la espera debe sentirse más cálida y cuidada.", ["Clínica privada", "Lounge médico"], "Sofás, butacas, mesas y textiles de uso intensivo."),
     ],
   },
   {
@@ -222,7 +222,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     sourceBasis: "Validado contra términos de central/estación de enfermería en infraestructura y mobiliario clínico.",
     references: [
       ref("Control", "Estación lineal para control clínico", "salud/catalogo-lujo/nurse-station-corridor.webp", "estación de enfermería lineal junto a circulación clínica", "Referencia para revisar mostrador, visibilidad, superficie de trabajo y relación con pasillos.", ["Hospitalización", "Control clínico"], "Forma, altura, cubierta y almacenamiento según plano."),
-      ref("Operación", "Área operativa para equipo de salud", "salud/catalogo-lujo/nurse-medical-office.webp", "área operativa con puestos de trabajo para equipo médico", "Escena para zonas donde enfermería, coordinación y administración clínica comparten soporte de trabajo.", ["Coordinación", "Back office clínico"], "Puestos, cableado, sillas y archivo por equipo."),
+      ref("Operación", "Área operativa para equipo de salud", "salud/catalogo-lujo/nurse-medical-office.webp", "área operativa con puestos de trabajo para equipo médico", "Escena para zonas donde enfermería, coordinación y administración clínica comparten soporte de trabajo.", ["Coordinación", "Área interna clínica"], "Puestos, cableado, sillas y archivo por equipo."),
       ref("Soporte", "Lockers y apoyo para personal médico", "salud/catalogo-lujo/nurse-locker-support.webp", "lockers y banco para personal médico", "Referencia para áreas internas de guardia, cambio o apoyo al personal dentro de proyectos de salud.", ["Personal médico", "Área interna"], "Lockers, bancas, materiales y medidas por turno."),
     ],
   },
@@ -251,15 +251,15 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     seoTitle: "Mobiliario para cuidados, recuperación y residencias de salud",
     subtitle: "Mobiliario para recuperación, cuidado prolongado, residencias asistidas y espacios de descanso vinculados a proyectos de salud.",
     keywords: ["mobiliario para cuidados", "recuperación", "residencias de cuidado", "nursing home", "muebles para salud", "cuidado prolongado"],
-    bullets: ["Asientos y mobiliario cómodo", "Superficies durables y fáciles de mantener", "Soluciones para pacientes, acompañantes y personal"],
+    bullets: ["Asientos y mobiliario cómodo", "Superficies durables y fáciles de mantener", "Mobiliario para pacientes, acompañantes y personal"],
     supportImage: asset("salud/catalogo-lujo/care-hero-elderly-room.webp"),
     supportAlt: "mobiliario para cuidados y recuperación",
     catalogInterest: "Salud - Cuidados y recuperación",
     sourceBasis: "Validado contra documentos clínicos que separan recuperación, cuidados intensivos y cuidado prolongado.",
     references: [
       ref("Modelo", "Habitación de cuidado con ambiente cálido", "salud/catalogo-lujo/care-elderly-model-room.webp", "habitación de cuidado prolongado con cama, silla y mobiliario de apoyo", "Referencia para proyectos donde el confort debe convivir con limpieza, mantenimiento y operación diaria.", ["Cuidado prolongado", "Residencia asistida"], "Cama, silla, mesa, gabinete y acabados por habitación."),
-      ref("Suite", "Habitación premium para recuperación", "salud/catalogo-lujo/care-premium-suite-room.webp", "habitación premium para recuperación con escritorio y mobiliario de apoyo", "Escena para áreas de recuperación, residencias de salud o habitaciones privadas con lectura más alta.", ["Recuperación", "Habitación privada"], "Mobiliario fijo, suelto, textiles y tonos según concepto."),
-      ref("Nursing home", "Sala de cuidado con cama y zona de estar", "salud/catalogo-lujo/care-nursing-home-room.webp", "sala de cuidado con cama y zona de estar para residencia de salud", "Referencia para discutir paquetes de habitación completa en proyectos de cuidado asistido.", ["Residencia de salud", "Cuidado asistido"], "Paquete por habitación, cantidades y variación de acabados."),
+      ref("Suite", "Habitación privada para recuperación", "salud/catalogo-lujo/care-premium-suite-room.webp", "habitación privada para recuperación con escritorio y mobiliario de apoyo", "Escena para áreas de recuperación, residencias de salud o habitaciones privadas con ambiente más cuidado.", ["Recuperación", "Habitación privada"], "Mobiliario fijo, suelto, textiles y tonos según concepto."),
+      ref("Cuidado asistido", "Sala de cuidado con cama y zona de estar", "salud/catalogo-lujo/care-nursing-home-room.webp", "sala de cuidado con cama y zona de estar para residencia de salud", "Referencia para revisar paquetes de habitación completa en proyectos de cuidado asistido.", ["Residencia de salud", "Cuidado asistido"], "Paquete por habitación, cantidades y variación de acabados."),
     ],
   },
   {
@@ -330,7 +330,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     sourceBasis: "Validado contra compras públicas y proveedores que separan laboratorio de ciencias, laboratorio integrado y mesones de laboratorio.",
     references: [
       ref("Tecnología", "Aula tecnológica con mesas modulares", "educacion/catalogo-lujo/lab-technology-classroom.webp", "aula tecnológica con mesas redondas, pantalla y asientos móviles", "Referencia para aulas STEAM donde se combinan explicación, trabajo en grupo y soporte digital.", ["STEAM", "Tecnología"], "Mesas, sillas, pufs y conectividad según actividad."),
-      ref("Aula práctica", "Classroom lab para aprendizaje aplicado", "educacion/catalogo-lujo/lab-huntington-classroom.webp", "classroom lab con mesas y sillas para aprendizaje aplicado", "Escena para espacios donde teoría, demostración y práctica comparten el mismo ambiente.", ["Universidad", "Aula práctica"], "Mesas, sillas, almacenamiento y tomas según uso."),
+      ref("Aula práctica", "Aula laboratorio para aprendizaje aplicado", "educacion/catalogo-lujo/lab-huntington-classroom.webp", "aula laboratorio con mesas y sillas para aprendizaje aplicado", "Escena para espacios donde teoría, demostración y práctica comparten el mismo ambiente.", ["Universidad", "Aula práctica"], "Mesas, sillas, almacenamiento y tomas según uso."),
       ref("Proyecto", "Mesa para maqueta y trabajo de proyecto", "educacion/catalogo-lujo/lab-huntington-project-model.webp", "mesa de proyecto con maqueta para aprendizaje técnico", "Referencia para centros que necesitan áreas de proyecto, exhibición o revisión de prototipos.", ["Proyecto", "Formación técnica"], "Mesas especiales, bases, protección y circulación."),
     ],
   },
@@ -349,7 +349,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     references: [
       ref("Campus", "Cafetería de campus con mobiliario resistente", "educacion/catalogo-lujo/dining-bbk-canteen.webp", "cafetería de campus con mesas y sillas resistentes", "Escena para proyectos educativos donde el comedor funciona varias veces al día.", ["Campus", "Alimentación"], "Distribución, limpieza y recambio por lote."),
       ref("Universidad", "Comedor universitario con mesas grupales", "educacion/catalogo-lujo/dining-rwanda-canteen.webp", "comedor universitario con mesas grupales", "Referencia para revisar comedores de mayor escala y uso intensivo.", ["Universidad", "Comedor"], "Capacidad, medidas y materiales según tráfico."),
-      ref("Institucional", "Comedor de personal o estudiantes", "educacion/catalogo-lujo/dining-macwell-institutional.webp", "comedor institucional con mesas y sillas por lote", "Referencia de comedor institucional útil para escuelas, campus o residencias.", ["Institución", "Comedor"], "Mesas, bancas, sillas y layout por flujo."),
+      ref("Institucional", "Comedor de personal o estudiantes", "educacion/catalogo-lujo/dining-macwell-institutional.webp", "comedor institucional con mesas y sillas por lote", "Referencia de comedor institucional útil para escuelas, campus o residencias.", ["Institución", "Comedor"], "Mesas, bancas, sillas y distribución por flujo."),
     ],
   },
   {
@@ -402,7 +402,7 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     sourceBasis: "Validado contra categorías editoriales de lujo como decoración, muebles, cocina, dormitorio y áreas sociales.",
     references: [
       ref("Sala", "Sala premium con ventanal y zona de conversación", "residencial/catalogo-lujo/luxury-living-panorama.webp", "sala premium con ventanal y zona de conversación", "Referencia para revisar sofá, mesas, escala del espacio y lectura general del área social.", ["Sala", "Villa"], "Módulos, tapicería, mármol, madera y metales."),
-      ref("Chimenea", "Lounge residencial con chimenea y butaca", "residencial/catalogo-lujo/luxury-living-fireplace.webp", "lounge residencial con chimenea y butaca", "Escena para residencias donde el confort, la luz natural y el mobiliario deben sentirse integrados.", ["Área social", "Residencia premium"], "Sofás, butacas, mesas y alfombras por layout."),
+      ref("Chimenea", "Lounge residencial con chimenea y butaca", "residencial/catalogo-lujo/luxury-living-fireplace.webp", "lounge residencial con chimenea y butaca", "Escena para residencias donde el confort, la luz natural y el mobiliario deben sentirse integrados.", ["Área social", "Residencia premium"], "Sofás, butacas, mesas y alfombras por distribución."),
       ref("Comedor", "Comedor de lujo con vista abierta", "residencial/catalogo-lujo/luxury-dining-view.webp", "comedor de lujo con vista abierta", "Referencia para coordinar mesa, sillas, luminarias y transición hacia sala o terraza.", ["Comedor", "Penthouse"], "Medidas, forma de mesa, sillas y acabados."),
       ref("Materialidad", "Detalle de mesa de mármol para comedor premium", "residencial/catalogo-lujo/luxury-dining-marble-detail.webp", "detalle de mesa de mármol para comedor premium", "Imagen útil para discutir materiales, canto, sillas y sensación de lujo antes de cerrar especificación.", ["Comedor", "Muestra visual"], "Mármol, tapicería, metal y acabado de superficie."),
     ],
@@ -457,8 +457,8 @@ export const catalogCategoryDetails: CatalogCategoryDetail[] = [
     sourceBasis: "Validado contra mercados de lujo donde casa y apartamento aparecen como tipos principales, y contra Fenmi Casa villas + apartments.",
     references: [
       ref("Sky lounge", "Lounge junto a ventanal para penthouse", "residencial/catalogo-lujo/penthouse-sky-lounge.webp", "lounge junto a ventanal para penthouse", "Escena para revisar mobiliario de descanso cuando la vista y la luz natural son parte del valor del proyecto.", ["Penthouse", "Vista panorámica"], "Butacas, chaise, mesas y textiles."),
-      ref("Sala social", "Apartamento de lujo con lounge coordinado", "residencial/catalogo-lujo/penthouse-living-dining.webp", "apartamento de lujo con lounge coordinado", "Referencia para desarrolladores que necesitan una unidad modelo con sensación premium y lista clara de mobiliario.", ["Apartamento modelo", "Desarrollo residencial"], "Sala, comedor, dormitorio y acabados."),
-      ref("Ventanal", "Lounge residencial con ventanal y terraza", "residencial/catalogo-lujo/penthouse-window-lounge.webp", "lounge residencial con ventanal y terraza", "Referencia para paquetes de penthouse o apartamento premium con relación interior-exterior.", ["Penthouse", "Terraza"], "Mobiliario por zona y variaciones de layout."),
+      ref("Sala social", "Apartamento de lujo con lounge coordinado", "residencial/catalogo-lujo/penthouse-living-dining.webp", "apartamento de lujo con lounge coordinado", "Referencia para desarrolladores que necesitan una unidad modelo con imagen cuidada y lista clara de mobiliario.", ["Apartamento modelo", "Desarrollo residencial"], "Sala, comedor, dormitorio y acabados."),
+      ref("Ventanal", "Lounge residencial con ventanal y terraza", "residencial/catalogo-lujo/penthouse-window-lounge.webp", "lounge residencial con ventanal y terraza", "Referencia para paquetes de penthouse o apartamento premium con relación interior-exterior.", ["Penthouse", "Terraza"], "Mobiliario por zona y variaciones de distribución."),
     ],
   },
   {

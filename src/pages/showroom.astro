@@ -15,11 +15,11 @@ import { showrooms } from "../data/site";
     <div class="showroom-page-overlay"></div>
     <div class="container showroom-page-content">
       <p class="eyebrow">Showroom virtual</p>
-      <h1>Explora soluciones de mobiliario por sector antes de cotizar</h1>
-      <p class="lead">Recorridos virtuales para alinear referencias visuales, espacios, acabados y prioridades con equipos de compras, diseño, arquitectura y operación.</p>
+      <h1>Revisa mobiliario por sector antes de cotizar</h1>
+      <p class="lead">Recorridos virtuales para comparar referencias visuales, espacios, acabados y prioridades con equipos de compras, diseño, arquitectura y operación.</p>
       <div class="btn-row">
         <a class="btn primary" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Entrar a showroom hotelero</a>
-        <a class="btn ghost light" href="/contacto/">Enviar requerimientos</a>
+        <a class="btn ghost light" href="/contacto/">Enviar datos iniciales</a>
       </div>
     </div>
     <div class="container showroom-page-proof">
@@ -35,7 +35,7 @@ import { showrooms } from "../data/site";
       <SectionHead
         eyebrow="Recorridos 360"
         title="Showrooms disponibles para revisión remota"
-        text="Cada acceso abre el recorrido Matterport correspondiente. Úsalo para preparar una cotización con referencias más claras antes de enviar planos, cantidades o requisitos técnicos."
+        text="Cada acceso abre el recorrido Matterport correspondiente. Puedes usarlo para preparar una cotización con referencias más claras antes de enviar planos o cantidades finales."
       />
       <div class="showroom-hub-grid">
         {showrooms.map((showroom) => (

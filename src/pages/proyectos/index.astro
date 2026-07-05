@@ -8,17 +8,17 @@ import { categories, projectSolutions, projects } from "../../data/site";
 ---
 <BaseLayout
   title="Proyectos de mobiliario para sectores comerciales | Hymueble"
-  description="Proyectos de mobiliario para comparar sectores, espacios y referencias antes de enviar requisitos, revisar alcance o solicitar cotización por proyecto."
+  description="Proyectos de mobiliario para comparar sectores, espacios y referencias antes de enviar datos iniciales y solicitar cotización por proyecto."
   keywords={["proyectos de mobiliario", "referencias de proyectos", "mobiliario hotelero", "mobiliario de oficina", "mobiliario hospitalario", "mobiliario escolar", "cotización por proyecto"]}
   image="/assets/hymueble/generated/project-portfolio-review.webp"
 >
   <Hero
     eyebrow="Proyectos por sector"
     title="Mobiliario para proyectos: hoteles, oficinas, salud, educación y residencial"
-    lead="Descubre cómo Hymueble apoya proyectos comerciales con fabricación directa, personalización y soporte para compras internacionales."
+    lead="Mobiliario para proyectos comerciales con fabricación directa, personalización y apoyo para compras internacionales."
     image="/assets/hymueble/generated/project-portfolio-review.webp"
-    badgeTitle="Casos y rutas de prueba"
-    badgeText="Página interna para organizar referencias por sector antes de cotizar."
+    badgeTitle="Casos por sector"
+    badgeText="Referencias organizadas para revisar alcance antes de cotizar."
     primaryLabel="Consultar proyecto similar"
     primaryHref="/contacto/"
     secondaryLabel="Ver catálogos"
@@ -30,9 +30,9 @@ import { categories, projectSolutions, projects } from "../../data/site";
       <div class="solution-intro">
         <div>
           <p class="eyebrow">Soluciones por proyecto</p>
-          <h2>El punto de partida es el alcance completo del proyecto</h2>
+          <h2>El punto de partida es entender el alcance del proyecto</h2>
         </div>
-        <p>Antes de cotizar, un equipo de compras necesita entender espacios, cantidades, acabados, producción y logística. Estas rutas ordenan la primera conversación.</p>
+        <p>Antes de cotizar, el equipo de compras suele revisar espacios, cantidades, acabados, producción y logística. Estas referencias ayudan a ordenar la primera conversación.</p>
       </div>
       <div class="solution-summary-grid">
         {projectSolutions.map((solution, index) => (
@@ -56,7 +56,7 @@ import { categories, projectSolutions, projects } from "../../data/site";
       <SectionHead
         eyebrow="Entradas rápidas"
         title="Ir directo al sector que quieres revisar"
-        text="Después de entender la lógica de proyecto, usa estos accesos para entrar al sector, catálogo o ruta de casos que corresponde a tu operación."
+        text="Elige el sector que más se acerca a tu proyecto para revisar casos, catálogo o referencias de mobiliario antes de pedir cotización."
       />
       <div class="project-sector-links">
         {categories.map((category) => (
@@ -76,9 +76,9 @@ import { categories, projectSolutions, projects } from "../../data/site";
   <section class="section">
     <div class="container">
       <SectionHead
-        eyebrow="Referencias visibles"
+        eyebrow="Referencias de proyecto"
         title="Casos destacados para evaluar experiencia"
-        text="Tarjetas con sector, región y alcance para una revisión rápida antes de enviar una solicitud de cotización."
+        text="Tarjetas con sector, región y alcance para una revisión rápida antes de enviar datos iniciales de cotización."
       />
       <div class="card-grid">
         {projects.map((project) => <ProjectCard project={project} imageField="hubImage" />)}

@@ -21,7 +21,7 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
     image="/assets/hymueble/hoteles/主页/酒店-主页-Hero-酒店大堂全景.webp"
     badgeTitle="Soluciones hoteleras por espacio"
     badgeText="Habitaciones, lobby, bar, restaurante, baño, exteriores y conferencias."
-    primaryLabel="Contactar ahora"
+    primaryLabel="Solicitar cotización"
     primaryHref="/contacto/"
     secondaryLabel="Ver catálogo hotelero"
     secondaryHref="/catalogo/hoteles/"
@@ -50,11 +50,11 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
     <div class="container split-band">
       <div>
         <p class="eyebrow">Showroom virtual</p>
-        <h2>Más de 10.000 m² de mobiliario hotelero para inspirar tu proyecto</h2>
-        <p class="section-note">Revisa espacios, acabados y referencias visuales antes de definir alcance o solicitar cotización.</p>
+        <h2>Más de 10.000 m² de mobiliario hotelero para revisar referencias</h2>
+        <p class="section-note">Puedes revisar espacios, acabados y referencias visuales antes de definir alcance o solicitar cotización.</p>
         <div class="btn-row section-actions">
           <a class="btn primary" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Ver showroom virtual</a>
-          <a class="btn line" href="/contacto/">Agendar visita</a>
+          <a class="btn line" href="/contacto/">Enviar datos iniciales</a>
         </div>
       </div>
       <img src={encodeURI("/assets/hymueble/hoteles/目录/酒店-目录-卡片-前台大堂区.webp")} alt="Showroom de mobiliario hotelero" loading="lazy" decoding="async" />
@@ -66,7 +66,7 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
       <SectionHead
         eyebrow="Casos hoteleros"
         title="Proyectos de mobiliario hotelero"
-        text="Referencias para evaluar experiencia en habitaciones, lobby, restaurante y áreas públicas antes de consultar."
+        text="Referencias para comparar habitaciones, lobby, restaurante y áreas públicas antes de preparar una cotización."
       />
       <div class="card-grid">
         {projects.filter((project) => project.sector === "Hotel").map((project) => <ProjectCard project={project} imageField="hotelImage" />)}
@@ -89,7 +89,7 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
   <section class="section alt">
     <div class="container">
       <SectionHead
-        eyebrow="Servicio integral"
+        eyebrow="Proceso"
         title="De la consulta a la entrega: proceso claro para tu proyecto hotelero"
         text="Un proceso claro para compras, diseño y operación: cotización, acabados, producción, embalaje y soporte."
       />
@@ -97,5 +97,5 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
     </div>
   </section>
 
-  <CTA title="¿Necesitas cotizar mobiliario hotelero?" text="Envíanos tipo de hotel, espacios, cantidades y ciudad. Revisamos viabilidad y próximos pasos." />
+  <CTA title="Cotización de muebles para hotel" text="Puedes enviar tipo de hotel, espacios, cantidades aproximadas y ciudad. Si todavía no tienes planos o lista FF&E, los revisamos después." />
 </BaseLayout>

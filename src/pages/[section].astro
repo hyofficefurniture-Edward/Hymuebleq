@@ -45,7 +45,7 @@ const trustCopy = {
     title: "Experiencia para oficinas corporativas, campus y compras institucionales",
     text: "Fabricación directa, documentación de proyecto, control de materiales y capacidad para espacios de trabajo.",
     partnerEyebrow: "Referencias de oficina",
-    partnerTitle: "Proyectos visibles para sedes, parques industriales y equipos corporativos",
+    partnerTitle: "Referencias para sedes, parques industriales y equipos corporativos",
     partnerText: "Casos y referencias útiles para abrir conversación comercial. Alcance, cantidades y documentación se revisan al avanzar la consulta.",
     partnerBrands: [
       { name: "Macwell", tone: "wide" },
@@ -57,11 +57,11 @@ const trustCopy = {
     ],
   },
   salud: {
-    title: "Experiencia para hospitales, clínicas y espacios médicos",
-    text: "Soporte de mobiliario para zonas de espera, habitaciones, nurse stations, áreas clínicas y espacios de operación.",
+    title: "Mobiliario para hospitales, clínicas y espacios médicos",
+    text: "Muebles para salas de espera, habitaciones, estaciones de enfermería, áreas clínicas y espacios de atención.",
     partnerEyebrow: "Referencias de salud",
-    partnerTitle: "Proyectos visibles para hospitales públicos, privados e internacionales",
-    partnerText: "Las referencias ayudan a revisar escala, áreas visibles y tipo de soporte antes de preparar una cotización médica.",
+    partnerTitle: "Referencias para hospitales públicos, privados e internacionales",
+    partnerText: "Puedes revisar escala, áreas visibles y tipo de mobiliario antes de preparar una cotización médica.",
     partnerBrands: [
       { name: "Woodlands Health", tone: "serif" },
       { name: "Saudi German", tone: "wide" },
@@ -73,10 +73,10 @@ const trustCopy = {
   },
   educacion: {
     title: "Experiencia para escuelas, universidades y campus educativos",
-    text: "Coordinación de mobiliario para aulas, auditorios, bibliotecas, comedor, dormitories y espacios de aprendizaje.",
+    text: "Muebles para aulas, auditorios, bibliotecas, comedor, dormitorios y espacios de aprendizaje.",
     partnerEyebrow: "Referencias educativas",
-    partnerTitle: "Proyectos visibles para colegios, universidades y academias",
-    partnerText: "La referencia educativa se usa para comparar espacios, instalación, durabilidad y soporte por lote antes de cotizar.",
+    partnerTitle: "Referencias para colegios, universidades y academias",
+    partnerText: "Puedes comparar espacios, instalación, durabilidad y soporte por lote antes de cotizar.",
     partnerBrands: [
       { name: "Huntington Lagos", tone: "serif" },
       { name: "SIT Singapore", tone: "wide" },
@@ -88,10 +88,10 @@ const trustCopy = {
   },
   residencial: {
     title: "Experiencia para apartamentos, residencias y compras por proyecto",
-    text: "Mobiliario a medida para apartamentos, lobby, salas, dormitorios, almacenaje y soluciones residenciales por lote.",
+    text: "Muebles a medida para apartamentos, lobby, salas, dormitorios, almacenaje y compras residenciales por lote.",
     partnerEyebrow: "Referencias residenciales",
-    partnerTitle: "Proyectos visibles y escenarios para apartamentos y espacios residenciales",
-    partnerText: "Los casos documentados y escenarios ayudan a revisar estilo, almacenamiento, materiales y alcance antes de cotizar.",
+    partnerTitle: "Referencias para apartamentos y espacios residenciales",
+    partnerText: "Los casos documentados ayudan a revisar estilo, almacenamiento, materiales y alcance antes de cotizar.",
     partnerBrands: [
       { name: "Lingkong Talent", tone: "wide" },
       { name: "Wutong Village", tone: "serif" },
@@ -105,6 +105,19 @@ const trustCopy = {
 const catalogAudienceLabel = catalogAudienceLabels[section as keyof typeof catalogAudienceLabels] ?? category.title.toLowerCase();
 const projectContextLabel = projectContextLabels[section as keyof typeof projectContextLabels] ?? `de ${category.title.toLowerCase()}`;
 const trust = trustCopy[section as keyof typeof trustCopy];
+const showroomHeading =
+  sectorShowroom
+    ? `Revisa el showroom de ${sectorShowroom.sector.toLowerCase()} antes de cotizar`
+    : `Comparte referencias visuales para tu proyecto ${projectContextLabel}`;
+const showroomNote =
+  sectorShowroom
+    ? `${sectorShowroom.description} Puedes usarlo para revisar referencias antes de definir cantidades, acabados y tiempos.`
+    : "Puedes enviar imágenes, planos o referencias para revisar estilo, cantidades, acabados y próximos pasos antes de cotizar.";
+const contactLabel = "Enviar datos iniciales";
+const projectReferenceText =
+  hasSectorProjects
+    ? "Referencias para comparar espacios, alcance y capacidad antes de cotizar."
+    : "Puedes enviar datos iniciales para preparar referencias comparables sin usar casos de otro sector.";
 ---
 <BaseLayout title={`${data.title} | Hymueble`} description={data.seoDescription ?? data.lead} keywords={data.seoKeywords} image={data.image}>
   <Hero
@@ -143,15 +156,15 @@ const trust = trustCopy[section as keyof typeof trustCopy];
     <div class="container split-band">
       <div>
         <p class="eyebrow">Showroom virtual</p>
-        <h2>{sectorShowroom ? `Explora el showroom de ${sectorShowroom.sector.toLowerCase()} antes de cotizar` : `Comparte referencias visuales para tu proyecto ${projectContextLabel}`}</h2>
-        <p class="section-note">{sectorShowroom ? `${sectorShowroom.description} Úsalo para alinear referencias antes de definir cantidades, acabados y tiempos.` : "Usa imágenes, planos o moodboards para alinear estilo, cantidades, acabados y próximos pasos antes de cotizar."}</p>
+        <h2>{showroomHeading}</h2>
+        <p class="section-note">{showroomNote}</p>
         <div class="btn-row section-actions">
           {sectorShowroom ? (
             <a class="btn primary" href={sectorShowroom.href} data-showroom-modal data-showroom-title={`Showroom virtual de ${sectorShowroom.sector}`}>Ver showroom virtual</a>
           ) : (
             <a class="btn primary" href="/contacto/">Enviar referencias</a>
           )}
-          <a class="btn line" href="/contacto/">Enviar requisitos</a>
+          <a class="btn line" href="/contacto/">{contactLabel}</a>
         </div>
       </div>
       <img src={encodeURI(showcaseImage)} alt={sectorShowroom ? `Showroom virtual para ${sectorShowroom.sector}` : category.projectAlt} loading="lazy" decoding="async" />
@@ -163,7 +176,7 @@ const trust = trustCopy[section as keyof typeof trustCopy];
       <SectionHead
         eyebrow="Proyectos"
         title={`Proyectos y referencias para ${catalogAudienceLabel}`}
-        text={hasSectorProjects ? "Referencias para evaluar experiencia, alcance de suministro y capacidad antes de consultar." : "Ruta comercial lista para levantar requisitos y preparar referencias comparables sin reutilizar casos de otro sector."}
+        text={projectReferenceText}
       />
       {hasSectorProjects ? (
         <div class="card-grid">
@@ -202,7 +215,7 @@ const trust = trustCopy[section as keyof typeof trustCopy];
       <SectionHead
         eyebrow="Proceso"
         title="Proceso de suministro para proyectos"
-        text="El mismo marco operativo se aplica a proyectos corporativos, institucionales y residenciales: cotización, diseño, producción, inspección y logística."
+        text="El proceso conserva los pasos principales para compras por proyecto: cotización, diseño, producción, inspección y logística."
       />
       <ProcessSteps />
     </div>

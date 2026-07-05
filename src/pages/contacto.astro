@@ -5,7 +5,7 @@ import { brand, contactConsultationImage, showrooms } from "../data/site";
 ---
 <BaseLayout
   title="Solicitar cotización de muebles para proyectos | Hymueble"
-  description="Solicita cotización de muebles para hoteles, oficinas y proyectos comerciales. Envía sector, ciudad, cantidades, planos o referencias para una revisión inicial."
+  description="Solicita cotización de muebles para hoteles, oficinas y proyectos comerciales. Comparte sector, ciudad, cantidades, planos o referencias para una revisión inicial."
   keywords={["solicitar cotización de muebles", "cotizar proyecto de mobiliario", "cotización de mobiliario", "proveedor de mobiliario", "fabricación directa en China", "WhatsApp"]}
   image={contactConsultationImage}
 >
@@ -19,7 +19,7 @@ import { brand, contactConsultationImage, showrooms } from "../data/site";
         <div>
           <p class="eyebrow">Cotización por proyecto</p>
           <h1>Solicita cotización de muebles para tu proyecto</h1>
-          <p class="contact-note">Completa una consulta rápida con sector, ciudad y alcance. Si falta información técnica, la pedimos después por WhatsApp o correo.</p>
+          <p class="contact-note">Para cotizar muebles para tu proyecto, comparte sector, ciudad, espacios y una idea inicial del alcance. Si todavía no tienes planos, lista FF&E o medidas, podemos revisarlos después por WhatsApp o correo.</p>
           <div class="btn-row">
             <a class="btn dark" href={brand.whatsapp} target="_blank" rel="noreferrer">Hablar por WhatsApp</a>
             <a class="btn line" href="/showroom/">Ver showroom primero</a>
@@ -32,8 +32,8 @@ import { brand, contactConsultationImage, showrooms } from "../data/site";
     <div class="container split-band">
       <div>
         <p class="eyebrow">Cómo preparar tu consulta</p>
-        <h2>Empieza con lo básico; los detalles pueden venir después</h2>
-        <p class="contact-note spaced">Con sector, ciudad, WhatsApp, cantidades aproximadas y una descripción breve podemos orientar el siguiente paso. Planos y listas ayudan, pero no son obligatorios.</p>
+        <h2>Empieza con lo básico; afinamos los detalles después</h2>
+        <p class="contact-note spaced">Para preparar la cotización, puedes enviar sector, ciudad, WhatsApp, cantidades aproximadas y una breve descripción. Los planos, listas FF&E o fotos de referencia ayudan, pero no son obligatorios para iniciar.</p>
       </div>
       <img src={encodeURI("/assets/hymueble/fabrica/produccion/real-export-packaging.webp")} alt="Embalaje de exportación para mobiliario de proyecto" loading="lazy" decoding="async" />
     </div>
@@ -42,8 +42,8 @@ import { brand, contactConsultationImage, showrooms } from "../data/site";
     <div class="container split-band">
       <div>
         <p class="eyebrow">Referencia visual antes de enviar</p>
-        <h2>Si aún no tienes una lista completa, empieza por el showroom</h2>
-        <p class="contact-note spaced">Revisa recorridos por sector y comparte referencias más claras con compras, diseño o arquitectura.</p>
+        <h2>Si aún no tienes una lista completa, usa el showroom como referencia</h2>
+        <p class="contact-note spaced">Para pedir una cotización con referencias claras, puedes revisar recorridos por sector y compartirlos con compras, diseño o arquitectura.</p>
         <div class="btn-row contact-actions">
           <a class="btn primary" href="/showroom/">Ver todos los showrooms</a>
           <a class="btn line" href={showrooms[0].href} data-showroom-modal data-showroom-title="Showroom virtual de hoteles">Entrar al showroom hotelero</a>
@@ -62,7 +62,7 @@ import { brand, contactConsultationImage, showrooms } from "../data/site";
       <div>
         <p class="eyebrow">Después de enviar</p>
         <h2>Te contactamos por WhatsApp o correo</h2>
-        <p class="contact-note spaced">Confirmamos sector, espacios, país, urgencia y si necesitas catálogo, reunión, revisión de planos o cotización preliminar.</p>
+        <p class="contact-note spaced">Para avanzar con tu cotización, revisamos sector, espacios, país, urgencia y material disponible. Si necesitas catálogo, reunión o revisión de planos, te indicamos el siguiente paso.</p>
         <div class="btn-row contact-actions">
           <a class="btn primary" href={brand.whatsapp} target="_blank" rel="noreferrer">Abrir WhatsApp</a>
           <a class="btn line" href="/catalogo/">Ver catálogos</a>

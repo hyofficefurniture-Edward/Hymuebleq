@@ -18,7 +18,7 @@ import { projects, showrooms } from "../../data/site";
     lead="Casos documentados y referencias publicadas para evaluar alcance, FF&E y capacidad de fabricación antes de cotizar."
     image="/assets/hymueble/generated/project-portfolio-review.webp"
     badgeTitle="Casos para evaluar experiencia"
-    badgeText="Hoteles internacionales, FF&E, habitaciones, áreas públicas y nivel de evidencia visible."
+    badgeText="Hoteles internacionales, FF&E, habitaciones, áreas públicas y alcance documentado."
     primaryLabel="Consultar un proyecto similar"
     primaryHref="/contacto/"
     secondaryLabel="Ver catálogo hotelero"
@@ -30,7 +30,7 @@ import { projects, showrooms } from "../../data/site";
       <SectionHead
         eyebrow="Referencias"
         title="Descubre proyectos de mobiliario hotelero"
-        text="Cada tarjeta resume hotel, región, alcance y nivel de evidencia para una revisión rápida de experiencia."
+        text="Cada tarjeta resume hotel, región y alcance para revisar experiencia antes de solicitar cotización."
       />
       <div class="card-grid">
         {projects.filter((project) => project.sector === "Hotel").map((project) => <ProjectCard project={project} imageField="listingImage" />)}

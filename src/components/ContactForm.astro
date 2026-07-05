@@ -27,8 +27,8 @@ const statusMessage = isDemoForm
   {catalogLead && <input type="hidden" name="catalog_interest" value="Catálogo general" data-catalog-interest-input />}
   <div class="form-intro full">
     <span>Consulta rápida</span>
-    <strong>Solo necesitamos 5 datos para iniciar.</strong>
-    <p>Los detalles técnicos pueden enviarse después. Si ya tienes planos o una lista, puedes adjuntarlos abajo.</p>
+    <strong>Cotización de proyecto con 5 datos iniciales.</strong>
+    <p>Para cotizar con más precisión, puedes enviar los detalles técnicos después. Si ya tienes planos, lista FF&E, cantidades o fotos de referencia, adjúntalos abajo.</p>
   </div>
   <div class:list={["field", { full: compact }]}>
     <label for={id("company")}>Nombre o empresa *</label>
@@ -55,11 +55,11 @@ const statusMessage = isDemoForm
     </select>
   </div>
   <div class="field full">
-    <label for={id("message")}>¿Qué necesitas cotizar? *</label>
+    <label for={id("message")}>¿Qué proyecto de muebles necesitas cotizar? *</label>
     <textarea id={id("message")} name="message" required placeholder="Ej. habitaciones y lobby para hotel, 80 habitaciones aproximadas, apertura en 3 meses..."></textarea>
   </div>
   <div class="field file-upload full">
-    <label for={id("attachments")}>Adjuntar planos o lista de proyecto <span>Opcional</span></label>
+    <label for={id("attachments")}>Adjuntar planos o lista FF&E del proyecto <span>Opcional</span></label>
     <input
       id={id("attachments")}
       class="file-input"
