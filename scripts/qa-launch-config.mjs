@@ -9,7 +9,6 @@ const warnings = [];
 const requiredEnv = {
   PUBLIC_HYMUEBLE_WHATSAPP_URL: process.env.PUBLIC_HYMUEBLE_WHATSAPP_URL,
   PUBLIC_HYMUEBLE_EMAIL: process.env.PUBLIC_HYMUEBLE_EMAIL,
-  PUBLIC_HYMUEBLE_FORM_ACTION: process.env.PUBLIC_HYMUEBLE_FORM_ACTION,
 };
 
 const confirmedWhatsappPath = "wa.me/8615019774832";
@@ -21,10 +20,6 @@ if (requiredEnv.PUBLIC_HYMUEBLE_WHATSAPP_URL && !requiredEnv.PUBLIC_HYMUEBLE_WHA
 
 if (requiredEnv.PUBLIC_HYMUEBLE_EMAIL && requiredEnv.PUBLIC_HYMUEBLE_EMAIL !== confirmedEmail) {
   failures.push("PUBLIC_HYMUEBLE_EMAIL must match the confirmed business email before launch.");
-}
-
-if (!requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION || !/^https?:\/\//i.test(requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION) || requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION.includes("example.com") || requiredEnv.PUBLIC_HYMUEBLE_FORM_ACTION.includes("YOUR_")) {
-  failures.push("PUBLIC_HYMUEBLE_FORM_ACTION must be set to the real form receiver endpoint before launch.");
 }
 
 const collectHtmlFiles = (dir) => {
@@ -46,6 +41,8 @@ let placeholderWhatsappLinks = 0;
 let confirmedWhatsappLinks = 0;
 let oldEmailLinks = 0;
 let confirmedEmailLinks = 0;
+let web3FormsActions = 0;
+let accessKeyInputs = 0;
 let tikTokLinks = 0;
 let removedSocialLinks = 0;
 
@@ -58,6 +55,8 @@ if (fs.existsSync(distDir)) {
     confirmedWhatsappLinks += (html.match(/wa\.me\/8615019774832/g) ?? []).length;
     oldEmailLinks += (html.match(/proyectos@hymueble\.com/g) ?? []).length;
     confirmedEmailLinks += (html.match(/ao@hysdfurniture\.com/g) ?? []).length;
+    web3FormsActions += (html.match(/<form\b[^>]*action=(["'])https:\/\/api\.web3forms\.com\/submit\1/gi) ?? []).length;
+    accessKeyInputs += (html.match(/<input\b[^>]*name=(["'])access_key\1/gi) ?? []).length;
     tikTokLinks += (html.match(/https:\/\/www\.tiktok\.com\//g) ?? []).length;
     removedSocialLinks += (html.match(/https:\/\/(?:www\.)?(?:pinterest\.com|x\.com)\//g) ?? []).length;
   }
@@ -67,6 +66,10 @@ if (fs.existsSync(distDir)) {
 
 if (demoForms > 0) {
   failures.push(`Generated HTML still contains ${demoForms} demo form marker(s). Configure PUBLIC_HYMUEBLE_FORM_ACTION and rebuild before launch.`);
+}
+
+if (htmlFiles > 0 && (web3FormsActions === 0 || accessKeyInputs === 0 || web3FormsActions !== accessKeyInputs)) {
+  failures.push("Generated forms must point to Web3Forms and include matching access_key inputs before launch.");
 }
 
 if (placeholderWhatsappLinks > 0) {
@@ -100,6 +103,8 @@ const report = {
   confirmedWhatsappLinks,
   oldEmailLinks,
   confirmedEmailLinks,
+  web3FormsActions,
+  accessKeyInputs,
   tikTokLinks,
   removedSocialLinks,
   checkedEnvKeys: Object.keys(requiredEnv),

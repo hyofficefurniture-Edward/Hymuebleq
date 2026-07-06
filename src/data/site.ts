@@ -16,7 +16,10 @@ export const brand = {
 };
 
 export const formConfig = {
-  action: import.meta.env.PUBLIC_HYMUEBLE_FORM_ACTION?.trim() || "",
+  action: "https://api.web3forms.com/submit",
+  accessKey: "f71ebe3b-7f57-41ee-9f77-3be3929141af",
+  subject: "Nueva consulta de proyecto | Hymueble",
+  fromName: "Hymueble",
 };
 
 export const socialLinks = [

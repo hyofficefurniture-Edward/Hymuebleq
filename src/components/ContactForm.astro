@@ -22,12 +22,16 @@ const statusMessage = isDemoForm
   data-demo-form={isDemoForm ? "" : undefined}
   data-form-purpose="project-inquiry"
 >
+  <input type="hidden" name="access_key" value={formConfig.accessKey} />
+  <input type="hidden" name="subject" value={formConfig.subject} />
+  <input type="hidden" name="from_name" value={formConfig.fromName} />
+  <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" aria-hidden="true" />
   <input type="hidden" name="source_path" value={Astro.url.pathname} />
   {catalogLead && <input type="hidden" name="catalog_interest" value="Catálogo general" data-catalog-interest-input />}
   <div class="form-intro full">
     <span>Consulta rápida</span>
-    <strong>Cotización de proyecto con 5 datos iniciales.</strong>
-    <p>Al enviar, un consultor te contactará en menos de 24 horas por WhatsApp o correo.</p>
+    <strong>Cuéntanos lo básico del proyecto.</strong>
+    <p>Al enviar, te contactaremos en menos de 24 horas por WhatsApp o correo.</p>
     <p>Si ya tienes planos, lista FF&E, cantidades o fotos de referencia, también puedes compartirlos más abajo.</p>
   </div>
   <div class:list={["field", { full: compact }]}>
@@ -59,8 +63,8 @@ const statusMessage = isDemoForm
     </select>
   </div>
   <div class="field full">
-    <label for={id("message")}>¿Qué proyecto de muebles necesitas cotizar? *</label>
-    <textarea id={id("message")} name="message" required placeholder="Ej. habitaciones y lobby para hotel, 80 habitaciones aproximadas, apertura en 3 meses..."></textarea>
+    <label for={id("message")}>Cuéntanos lo básico de tu proyecto</label>
+    <textarea id={id("message")} name="message" placeholder="Ej. 80 habitaciones, lobby, restaurante, cantidades aproximadas y fecha de apertura..."></textarea>
   </div>
   <details class="form-optional full">
     <summary>Agregar detalles opcionales</summary>
@@ -95,7 +99,7 @@ const statusMessage = isDemoForm
     </div>
   </details>
   <p class="privacy">Tu información se usa para atender tu consulta. Consulta nuestra <a href="/privacidad/">política de privacidad</a>.</p>
-  <p class="form-followup">Cuando envíes el formulario, un consultor te contactará en menos de 24 horas por WhatsApp o correo.</p>
+  <p class="form-followup">Si prefieres, también puedes escribirnos directamente por WhatsApp.</p>
   <div class="form-success" role="status" aria-live="polite" tabindex="-1">{statusMessage}</div>
   <div class="field full">
     <button class="btn primary" type="submit">{submitLabel}</button>

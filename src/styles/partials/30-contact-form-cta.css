@@ -183,6 +183,12 @@
   display: block;
 }
 
+.project-form.is-error .form-success {
+  display: block;
+  background: #fdecec;
+  color: #8c2a2a;
+}
+
 .cta-band {
   border-radius: 8px;
   color: #fff;
