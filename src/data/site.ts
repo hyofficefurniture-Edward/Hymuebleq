@@ -10,6 +10,7 @@ export const brand = {
   name: "Hymueble",
   tagline: "Mobiliario B2B directo de fábrica",
   logo: img("brand/hongye-shengda-logo.webp"),
+  logoNav: img("brand/hongye-shengda-logo-nav.webp"),
   whatsapp: configuredWhatsapp || defaultWhatsapp,
   email: configuredEmail || defaultEmail,
   showroom: "/showroom/",
