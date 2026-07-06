@@ -25,15 +25,15 @@
 - 表单说明：`Para cotizar con más precisión, puedes enviar los detalles técnicos después. Si ya tienes planos, lista FF&E, cantidades o fotos de referencia, adjúntalos abajo.`
 - 提交按钮：`Enviar mi consulta de proyecto`
 
-当前成功、失败、隐私和 demo 状态：
+当前成功、失败、隐私和提交状态：
 
 - 配置真实 action 时的成功提示文案：`¡Muchas gracias! Recibimos tu consulta y te contactaremos en menos de 24 horas por WhatsApp o correo.`
-- 未配置 action 时的 demo 提示文案：`Modo de vista previa: este formulario no se envió. Para cotizar ahora, usa WhatsApp o correo.`
 - 当前失败提示：代码中未配置，Tally 内需要单独设置；当前状态标记为 `需要人工确认`。
 - 隐私提示：`Tu información se usa para atender tu consulta. Consulta nuestra política de privacidad.`
 - 隐私链接：`/privacidad/`
-- 当前是否依赖 `PUBLIC_HYMUEBLE_FORM_ACTION`：是。`src/data/site.ts` 读取 `import.meta.env.PUBLIC_HYMUEBLE_FORM_ACTION?.trim()`。
-- 当前是否存在 demo form 标记：是。当 `PUBLIC_HYMUEBLE_FORM_ACTION` 为空时，表单生成 `data-demo-form`，全站脚本拦截提交并显示 demo 提示；配置真实 action 后不再生成 `data-demo-form`。
+- 当前是否依赖 `PUBLIC_HYMUEBLE_FORM_ACTION`：否。当前源码固定使用 Web3Forms `https://api.web3forms.com/submit`。
+- 当前是否存在 demo form 标记：否。当前构建目标是不输出 `data-demo-form`。
+- 当前 `access_key` 性质：公开提交标识，不是服务器密钥；安全依赖必须配置在 Web3Forms 后台。
 
 ## 2. 当前表单字段清单
 
@@ -189,9 +189,9 @@ Tally 嵌入建议：
 
 1. 不要删除当前原生表单，除非已经确认 Tally 表单能稳定接收文本、附件和通知。
 2. 当前 `/contacto/` 的右侧图片、WhatsApp CTA、showroom CTA 和后续说明区建议保留；Tally 只替代表单区域。
-3. 当前原生表单依赖 `PUBLIC_HYMUEBLE_FORM_ACTION` 控制真实 action 与 `data-demo-form`。如果完全改为 Tally iframe，需同步更新或绕开 `qa:launch` 对 demo form 的检查逻辑，避免残留原生 demo form 造成上线检查失败。
+3. 当前原生表单默认提交到 Web3Forms。如果完全改为 Tally iframe，需同步更新 `qa:launch` 对表单 action 的检查逻辑，避免构建仍把旧的 Web3Forms 约束当作上线门槛。
 4. Tally 接收端必须确认附件能力；当前原生表单设计目标是 `multipart/form-data` + `attachments`。
-5. 不要把私密 token、账号密钥或 webhook secret 放入前端公开环境变量。`PUBLIC_` 环境变量会进入静态 HTML，只能放公开 URL 或公开联系信息。
+5. 不要把私密 token、账号密钥或 webhook secret 放入前端公开环境变量。当前 Web3Forms `access_key` 只应被视为公开提交标识，真正的安全约束必须依赖后台域名限制、验证码、频率限制和告警。
 6. 嵌入后需要做一次真实测试询盘，确认 Tally 后台收到：必填字段、可选字段、附件、来源路径、通知邮件/CRM 推送。
 7. 成功页或成功消息应继续承诺 `menos de 24 horas por WhatsApp o correo`，除非业务侧修改响应 SLA。
 8. 如果 Tally 无法保留字段 `name`，至少要在 Tally 字段标题或内部字段映射中保留本文件的 name 对照，方便后续 CRM、表格导出和自动化处理。

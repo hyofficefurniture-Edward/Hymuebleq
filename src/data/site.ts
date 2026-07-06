@@ -17,6 +17,8 @@ export const brand = {
 
 export const formConfig = {
   action: "https://api.web3forms.com/submit",
+  // Web3Forms access_key is a public submission identifier in this client-side setup.
+  // Treat it as public and enforce protection in the Web3Forms dashboard.
   accessKey: "f71ebe3b-7f57-41ee-9f77-3be3929141af",
   subject: "Nueva consulta de proyecto | Hymueble",
   fromName: "Hymueble",
