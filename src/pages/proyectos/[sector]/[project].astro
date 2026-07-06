@@ -27,20 +27,22 @@ const projectKeywordHeadings = {
   Residencial: "Referencia de mobiliario residencial para proyectos",
 };
 const projectKeywordHeading = projectKeywordHeadings[item.sector as keyof typeof projectKeywordHeadings] ?? "Referencia de mobiliario para proyectos";
+const projectPageTitle = `${projectKeywordHeading} | ${item.name} | Hymueble`;
+const projectLead = `${item.name}. ${item.scope}`;
 const projectNarrative =
   notes?.overview ??
   `${item.name} es una referencia de ${item.sector.toLowerCase()} en ${item.region}. El alcance visible incluye ${notes?.rooms ?? item.scope}. Esta página resume qué espacios se pueden comparar, qué evidencia se revisó y cómo usar la referencia antes de solicitar una cotización por proyecto.`;
 ---
 <BaseLayout
-  title={`${item.seoTitle ?? `${item.name} | Proyecto`} | Hymueble`}
-  description={item.seoDescription ?? `${item.name}: referencia de mobiliario para ${item.sector}.`}
+  title={projectPageTitle}
+  description={item.seoDescription ?? `${projectKeywordHeading}. ${item.name} como referencia documentada para revisar alcance antes de cotizar.`}
   keywords={item.seoKeywords}
   image={item.detailImage ?? item.image}
 >
   <Hero
     eyebrow={evidenceLabel}
-    title={item.name}
-    lead={item.scope}
+    title={projectKeywordHeading}
+    lead={projectLead}
     image={item.detailImage ?? item.image}
     badgeTitle={item.region}
     badgeText={`${item.sector} · ${notes?.type ?? "Proyecto de mobiliario"} · ${evidenceLabel}`}

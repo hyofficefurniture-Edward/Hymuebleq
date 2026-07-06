@@ -1,0 +1,89 @@
+keyword,target_url,priority,keyword_type,length_type,reason
+mobiliario hotelero,/hoteles/,P0,行业词,短尾,酒店主入口核心词
+muebles para hoteles,/hoteles/,P0,行业词,中尾,酒店采购高意图词
+mobiliario para hoteles,/hoteles/,P0,行业词,中尾,与当前页面 SEO 字段一致
+proveedor de mobiliario hotelero,/hoteles/,P0,供应商词,长尾,供应商采购意图强
+fabricante de muebles para hoteles,/hoteles/,P0,供应商词,长尾,制造商采购意图强
+FF&E hotelero,/hoteles/,P1,行业词,中尾,酒店项目采购专业词
+mobiliario hotelero a medida,/hoteles/,P1,产品细分类词,长尾,承接定制项目需求
+muebles para hotel directo de fábrica,/hoteles/,P1,工厂词,长尾,匹配工厂直供定位
+catálogo de muebles para hoteles,/catalogo/hoteles/,P0,产品目录词,长尾,酒店目录页主词
+catálogo de mobiliario hotelero,/catalogo/hoteles/,P0,产品目录词,长尾,目录型搜索意图明确
+descargar catálogo hotelero,/catalogo/hoteles/,P1,产品目录词,长尾,现有目录下载 CTA 可承接
+muebles para habitaciones de hotel,/catalogo/hoteles/habitaciones/,P0,产品细分类词,长尾,酒店小类页核心词
+mobiliario para habitaciones de hotel,/catalogo/hoteles/habitaciones/,P0,产品细分类词,长尾,空间型长尾精准
+muebles de baño para hoteles,/catalogo/hoteles/muebles-de-bano/,P1,产品细分类词,长尾,酒店浴室小类词
+mobiliario exterior para hoteles,/catalogo/hoteles/muebles-exteriores/,P1,产品细分类词,长尾,酒店户外/露台小类词
+muebles para bar de hotel,/catalogo/hoteles/muebles-para-bar/,P1,产品细分类词,长尾,酒店酒吧小类词
+mobiliario para bar hotelero,/catalogo/hoteles/muebles-para-bar/,P1,产品细分类词,长尾,酒店酒吧小类词
+muebles para restaurante de hotel,/catalogo/hoteles/muebles-para-restaurante/,P1,产品细分类词,长尾,酒店餐厅小类词
+mobiliario para restaurantes de hotel,/catalogo/hoteles/muebles-para-restaurante/,P1,产品细分类词,长尾,酒店餐厅小类词
+mobiliario para conferencias hoteleras,/catalogo/hoteles/mobiliario-para-conferencias/,P1,产品细分类词,长尾,会议宴会空间词
+muebles para salas de conferencias de hotel,/catalogo/hoteles/mobiliario-para-conferencias/,P1,产品细分类词,长尾,更自然的会议空间替代词
+proyectos de mobiliario hotelero,/proyectos/hoteles/,P1,案例词,长尾,项目案例页语义
+mobiliario de oficina,/oficinas/,P0,行业词,短尾,办公主入口核心词
+muebles para oficina,/oficinas/,P0,行业词,中尾,办公采购大词
+muebles para oficinas,/oficinas/,P0,行业词,中尾,办公采购常见复数表达
+mobiliario corporativo,/oficinas/,P0,行业词,中尾,B2B 办公项目词
+proveedor de muebles de oficina,/oficinas/,P0,供应商词,长尾,供应商采购意图
+fabricante de muebles de oficina,/oficinas/,P0,供应商词,长尾,工厂采购意图
+muebles de oficina por volumen,/oficinas/,P1,转化词,长尾,批量采购意图
+catálogo de muebles de oficina,/catalogo/oficinas/,P0,产品目录词,长尾,办公目录页主词
+catálogo de muebles para oficinas,/catalogo/oficinas/,P0,产品目录词,长尾,办公目录页替代表达
+puestos de trabajo para oficina,/catalogo/oficinas/puestos-de-trabajo/,P0,产品细分类词,长尾,办公小类高相关
+estaciones de trabajo para oficina,/catalogo/oficinas/puestos-de-trabajo/,P0,产品细分类词,长尾,需与 puestos 对比拉美语境
+sillas de oficina para empresas,/catalogo/oficinas/sillas-de-oficina/,P1,产品细分类词,长尾,企业采购语义
+sillas de oficina para proyectos,/catalogo/oficinas/sillas-de-oficina/,P1,产品细分类词,长尾,降低零售意图
+mobiliario para salas de reunión,/catalogo/oficinas/salas-de-reunion/,P1,产品细分类词,长尾,会议室小类词
+muebles para salas de juntas,/catalogo/oficinas/salas-de-reunion/,P1,产品细分类词,长尾,拉美办公会议室替代表达
+mobiliario para recepción de oficina,/catalogo/oficinas/recepcion-y-salas-de-espera/,P1,产品细分类词,长尾,前台接待空间词
+mobiliario para oficinas ejecutivas,/catalogo/oficinas/oficinas-ejecutivas/,P1,产品细分类词,长尾,高管办公室小类词
+mobiliario para zonas colaborativas,/catalogo/oficinas/colaboracion-y-brainstorming/,P2,产品细分类词,中尾,brainstorming 需验证搜索意图
+muebles para espacios colaborativos,/catalogo/oficinas/colaboracion-y-brainstorming/,P2,产品细分类词,长尾,更采购化替代表达
+mobiliario colaborativo,/catalogo/oficinas/colaboracion-y-brainstorming/,P2,产品细分类词,中尾,高风险替代表达
+brainstorming,/catalogo/oficinas/colaboracion-y-brainstorming/,Reject,信息词,短尾,可能偏方法论不适合作商业页主词
+fábrica de muebles en China,/fabrica/,P0,工厂词,长尾,工厂页核心词
+fabricante de muebles en China,/fabrica/,P0,工厂词,长尾,当前首页与工厂页需拆分的工厂词
+fabricante de muebles a medida,/fabrica/,P0,工厂词,长尾,定制制造意图
+fabricante de mobiliario para proyectos,/fabrica/,P0,工厂词,长尾,项目型制造商定位
+proveedor de mobiliario comercial,/fabrica/,P0,供应商词,长尾,跨行业供应商词
+muebles directo de fábrica China,/fabrica/,P1,工厂词,长尾,工厂直供采购词
+control de calidad de muebles,/fabrica/,P2,信息词,长尾,可作辅助内容词
+embalaje para exportación de muebles,/fabrica/,P2,信息词,长尾,出口交付证明词
+fabricación de muebles para exportación,/fabrica/,P1,工厂词,长尾,出口型工厂意图
+solicitar cotización de muebles,/contacto/,P0,转化词,长尾,联系页主转化词
+cotizar proyecto de mobiliario,/contacto/,P0,转化词,长尾,项目询价意图强
+cotización de mobiliario,/contacto/,P0,转化词,中尾,通用转化词
+cotización de muebles para hotel,/contacto/,P0,转化词,长尾,酒店询价高优先
+cotización de muebles de oficina,/contacto/,P1,转化词,长尾,办公询价高相关
+proveedor de mobiliario para proyectos,/contacto/,P0,供应商词,长尾,联系页可承接供应商询盘
+enviar proyecto de mobiliario por WhatsApp,/contacto/,P2,转化词,长尾,低摩擦 WhatsApp 转化词
+catálogos de mobiliario para proyectos,/catalogo/,P0,产品目录词,长尾,目录聚合页主词
+catálogo de mobiliario comercial,/catalogo/,P1,产品目录词,长尾,跨行业目录词
+catálogo de muebles para proyectos,/catalogo/,P1,产品目录词,长尾,项目采购目录词
+catálogos de muebles para empresas,/catalogo/,P1,产品目录词,长尾,企业采购目录词
+proyectos de mobiliario,/proyectos/,P1,案例词,中尾,项目聚合页基础词
+proyectos de mobiliario de oficina,/proyectos/oficinas/,P1,案例词,长尾,办公案例页主方向
+proyectos de mobiliario hospitalario,/proyectos/salud/,P1,案例词,长尾,医疗案例页主方向
+proyectos de mobiliario escolar,/proyectos/educacion/,P1,案例词,长尾,教育案例页主方向
+mobiliario hospitalario,/salud/,P1,行业词,短尾,医疗行业页核心词
+muebles hospitalarios,/salud/,P1,行业词,短尾,医疗采购大词
+mobiliario para consultorios médicos,/catalogo/salud/consultorios-medicos/,P1,产品细分类词,长尾,医疗小类精准
+estaciones de enfermería,/catalogo/salud/estaciones-de-enfermeria/,P1,产品细分类词,中尾,医疗小类精准
+mobiliario para laboratorios clínicos,/catalogo/salud/laboratorios-y-areas-clinicas/,P2,产品细分类词,长尾,临床/实验室意图需验证
+mobiliario para cuidados y recuperación,/catalogo/salud/cuidados-y-recuperacion/,P2,产品细分类词,长尾,语义偏宽需验证
+muebles para habitaciones hospitalarias,/catalogo/salud/hospitalizacion-y-habitaciones/,P1,产品细分类词,长尾,医疗病房采购词
+mobiliario escolar,/educacion/,P1,行业词,短尾,教育行业页核心词
+muebles escolares,/educacion/,P1,行业词,短尾,教育采购大词
+muebles para escuelas,/educacion/,P1,行业词,中尾,学校采购词
+mobiliario para aulas escolares,/catalogo/educacion/aulas-escolares/,P1,产品细分类词,长尾,教育小类精准
+mobiliario para bibliotecas escolares,/catalogo/educacion/bibliotecas/,P1,产品细分类词,长尾,教育小类精准
+mobiliario para laboratorios educativos,/catalogo/educacion/laboratorios-y-steam/,P1,产品细分类词,长尾,实验室采购词
+mobiliario para aulas STEAM,/catalogo/educacion/laboratorios-y-steam/,P2,产品细分类词,长尾,STEAM 词需验证地区表达
+mobiliario para comedores escolares,/catalogo/educacion/comedores-escolares/,P1,产品细分类词,长尾,教育小类精准
+mobiliario para desarrollos residenciales,/residencial/,P1,行业词,长尾,住宅开发项目词
+muebles para proyectos residenciales,/residencial/,P1,行业词,长尾,住宅项目词
+muebles para unidades modelo,/residencial/,P1,产品细分类词,长尾,开发商样板间需求
+mobiliario para apartamentos de lujo,/catalogo/residencial/penthouses-y-apartamentos-de-lujo/,P2,产品细分类词,长尾,可能偏零售需验证
+muebles para apartamentos de lujo,/catalogo/residencial/penthouses-y-apartamentos-de-lujo/,P2,产品细分类词,长尾,高风险分类替代词
+muebles para villas de lujo,/catalogo/residencial/villas-y-mansiones/,P2,产品细分类词,长尾,高端住宅词需防零售化
