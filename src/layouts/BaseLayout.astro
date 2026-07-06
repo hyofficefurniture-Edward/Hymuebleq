@@ -192,22 +192,6 @@ const organizationJsonLd = {
           });
         });
 
-        document.querySelectorAll<HTMLInputElement>("[data-file-input]").forEach((input) => {
-          input.addEventListener("change", () => {
-            const output = input.closest(".file-upload")?.querySelector<HTMLElement>("[data-file-name]");
-            if (!output) return;
-
-            const fileCount = input.files?.length ?? 0;
-            if (fileCount === 0) {
-              output.textContent = output.dataset.empty ?? "Ningún archivo seleccionado";
-            } else if (fileCount === 1) {
-              output.textContent = input.files?.[0]?.name ?? "1 archivo seleccionado";
-            } else {
-              output.textContent = `${fileCount} archivos seleccionados`;
-            }
-          });
-        });
-
         document.querySelectorAll<HTMLElement>("[data-scroll-rail]").forEach((shell) => {
           const track = shell.querySelector<HTMLElement>("[data-scroll-track]");
           const prevButton = shell.querySelector<HTMLButtonElement>("[data-scroll-prev]");

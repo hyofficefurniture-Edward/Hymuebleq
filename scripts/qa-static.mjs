@@ -205,9 +205,6 @@ for (const file of htmlFiles) {
     if (!/method=(["'])post\1/i.test(tag)) {
       failures.push(`${displayRoute}: demo form missing method="post".`);
     }
-    if (!/enctype=(["'])multipart\/form-data\1/i.test(tag)) {
-      failures.push(`${displayRoute}: demo form missing multipart enctype.`);
-    }
     if (!/data-form-purpose=(["'])project-inquiry\1/i.test(tag)) {
       failures.push(`${displayRoute}: demo form missing data-form-purpose.`);
     }

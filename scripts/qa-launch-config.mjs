@@ -46,8 +46,6 @@ let placeholderWhatsappLinks = 0;
 let confirmedWhatsappLinks = 0;
 let oldEmailLinks = 0;
 let confirmedEmailLinks = 0;
-let multipartForms = 0;
-let attachmentInputs = 0;
 let tikTokLinks = 0;
 let removedSocialLinks = 0;
 
@@ -60,8 +58,6 @@ if (fs.existsSync(distDir)) {
     confirmedWhatsappLinks += (html.match(/wa\.me\/8615019774832/g) ?? []).length;
     oldEmailLinks += (html.match(/proyectos@hymueble\.com/g) ?? []).length;
     confirmedEmailLinks += (html.match(/ao@hysdfurniture\.com/g) ?? []).length;
-    multipartForms += (html.match(/<form\b[^>]*enctype=(["'])multipart\/form-data\1/gi) ?? []).length;
-    attachmentInputs += (html.match(/<input\b[^>]*name=(["'])attachments\1/gi) ?? []).length;
     tikTokLinks += (html.match(/https:\/\/www\.tiktok\.com\//g) ?? []).length;
     removedSocialLinks += (html.match(/https:\/\/(?:www\.)?(?:pinterest\.com|x\.com)\//g) ?? []).length;
   }
@@ -71,10 +67,6 @@ if (fs.existsSync(distDir)) {
 
 if (demoForms > 0) {
   failures.push(`Generated HTML still contains ${demoForms} demo form marker(s). Configure PUBLIC_HYMUEBLE_FORM_ACTION and rebuild before launch.`);
-}
-
-if (htmlFiles > 0 && (multipartForms === 0 || attachmentInputs === 0 || multipartForms !== attachmentInputs)) {
-  failures.push("Generated forms must preserve multipart/form-data and the attachments file input before launch.");
 }
 
 if (placeholderWhatsappLinks > 0) {
@@ -108,8 +100,6 @@ const report = {
   confirmedWhatsappLinks,
   oldEmailLinks,
   confirmedEmailLinks,
-  multipartForms,
-  attachmentInputs,
   tikTokLinks,
   removedSocialLinks,
   checkedEnvKeys: Object.keys(requiredEnv),

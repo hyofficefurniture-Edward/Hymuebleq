@@ -12,14 +12,13 @@ const { compact = false, idPrefix = "project", submitLabel = "Enviar mi consulta
 const id = (name: string) => `${idPrefix}-${name}`;
 const isDemoForm = !formConfig.action;
 const statusMessage = isDemoForm
-  ? "Modo de vista previa: este formulario no se envió. Para cotizar ahora, usa WhatsApp o correo."
-  : "¡Muchas gracias! Recibimos tu consulta y te contactaremos en menos de 24 horas por WhatsApp o correo.";
+  ? "Modo de vista previa: al enviar, un consultor te contactará en menos de 24 horas por WhatsApp o correo."
+  : "¡Muchas gracias! Recibimos tu consulta. En menos de 24 horas un consultor te contactará por WhatsApp o correo.";
 ---
 <form
   class="project-form"
   method="post"
   action={formConfig.action || undefined}
-  enctype="multipart/form-data"
   data-demo-form={isDemoForm ? "" : undefined}
   data-form-purpose="project-inquiry"
 >
@@ -28,7 +27,8 @@ const statusMessage = isDemoForm
   <div class="form-intro full">
     <span>Consulta rápida</span>
     <strong>Cotización de proyecto con 5 datos iniciales.</strong>
-    <p>Para cotizar con más precisión, puedes enviar los detalles técnicos después. Si ya tienes planos, lista FF&E, cantidades o fotos de referencia, adjúntalos abajo.</p>
+    <p>Al enviar, un consultor te contactará en menos de 24 horas por WhatsApp o correo.</p>
+    <p>Si ya tienes planos, lista FF&E, cantidades o fotos de referencia, también puedes compartirlos más abajo.</p>
   </div>
   <div class:list={["field", { full: compact }]}>
     <label for={id("company")}>Nombre o empresa *</label>
@@ -37,6 +37,10 @@ const statusMessage = isDemoForm
   <div class:list={["field", { full: compact }]}>
     <label for={id("whatsapp")}>WhatsApp *</label>
     <input id={id("whatsapp")} name="whatsapp" required placeholder="+52 55 0000 0000" />
+  </div>
+  <div class:list={["field", { full: compact }]}>
+    <label for={id("email")}>Correo electrónico (opcional)</label>
+    <input id={id("email")} type="email" name="email" placeholder="tucorreo@empresa.com" />
   </div>
   <div class:list={["field", { full: compact }]}>
     <label for={id("location")}>País o ciudad del proyecto *</label>
@@ -58,31 +62,9 @@ const statusMessage = isDemoForm
     <label for={id("message")}>¿Qué proyecto de muebles necesitas cotizar? *</label>
     <textarea id={id("message")} name="message" required placeholder="Ej. habitaciones y lobby para hotel, 80 habitaciones aproximadas, apertura en 3 meses..."></textarea>
   </div>
-  <div class="field file-upload full">
-    <label for={id("attachments")}>Adjuntar planos o lista FF&E del proyecto <span>Opcional</span></label>
-    <input
-      id={id("attachments")}
-      class="file-input"
-      type="file"
-      name="attachments"
-      multiple
-      accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.webp,.zip,.rar,.dwg,.dxf"
-      aria-describedby={id("attachments-help")}
-      data-file-input
-    />
-    <div class="file-upload-control" aria-hidden="true">
-      <label class="file-upload-button" for={id("attachments")}>Seleccionar archivos</label>
-      <span class="file-upload-name" data-file-name data-empty="Ningún archivo seleccionado">Ningún archivo seleccionado</span>
-    </div>
-    <p id={id("attachments-help")}>Planos, lista FF&E, cantidades, fotos de referencia o archivos comprimidos ayudan a preparar una cotización más precisa.</p>
-  </div>
   <details class="form-optional full">
     <summary>Agregar detalles opcionales</summary>
     <div class="form-section-grid">
-      <div class:list={["field", { full: compact }]}>
-        <label for={id("email")}>Correo</label>
-        <input id={id("email")} type="email" name="email" placeholder="tucorreo@empresa.com" />
-      </div>
       <div class:list={["field", { full: compact }]}>
         <label for={id("spaces")}>Espacios a equipar</label>
         <input id={id("spaces")} name="spaces" placeholder="Habitaciones, lobby, restaurante..." />
@@ -113,6 +95,7 @@ const statusMessage = isDemoForm
     </div>
   </details>
   <p class="privacy">Tu información se usa para atender tu consulta. Consulta nuestra <a href="/privacidad/">política de privacidad</a>.</p>
+  <p class="form-followup">Cuando envíes el formulario, un consultor te contactará en menos de 24 horas por WhatsApp o correo.</p>
   <div class="form-success" role="status" aria-live="polite" tabindex="-1">{statusMessage}</div>
   <div class="field full">
     <button class="btn primary" type="submit">{submitLabel}</button>
