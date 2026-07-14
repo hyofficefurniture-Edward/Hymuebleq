@@ -1,0 +1,273 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Top 10 Fabricantes de Muebles para Hoteles en China 2026 | Guía para Compradores";
+const pageDescription = "Lista actualizada de los 10 mejores fabricantes de muebles para hoteles en China en 2026. Compare calidad, plazos y precios. Solicite cotización gratuita.";
+const keywords = [
+  "fabricantes de muebles para hoteles",
+  "mobiliario hotelero China",
+  "proveedores muebles hoteles",
+  "fábrica muebles hoteleros",
+  "comprar mobiliario para hotel",
+  "FF&E hotelero China",
+];
+const canonicalPath = "/recursos/top-10-fabricantes-muebles-hoteles-china-2026/";
+const pageImage = "/assets/hymueble/recursos/blog/hym-01-hero-hotel-lobby.webp";
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: { "@type": "Organization", name: "Hymueble" },
+  publisher: { "@type": "Organization", name: "Hymueble", logo: { "@type": "ImageObject", url: "/assets/hymueble/brand/hongye-shengda-logo.webp" } },
+  datePublished: "2026-07-14",
+  dateModified: "2026-07-14",
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "¿Cuál es el tiempo real de entrega de mobiliario hotelero desde China?", acceptedAnswer: { "@type": "Answer", text: "Un proyecto típico de 80-120 habitaciones toma entre 10 y 16 semanas desde la confirmación del pedido hasta la entrega en puerto de destino. Esto incluye: 2-3 semanas para aprobación de planos y mock-up, 6-8 semanas de producción, 1-2 semanas para inspección y embalaje, y 2-4 semanas de tránsito marítimo." } },
+    { "@type": "Question", name: "¿Puedo mezclar categorías (habitación + restaurante) en un mismo pedido?", acceptedAnswer: { "@type": "Answer", text: "Sí. Consolidar en un solo proveedor baja los costos de gestión de proyecto, unifica acabados entre áreas y simplifica la logística. El ahorro en flete por consolidación suele estar entre el 12% y el 18%." } },
+    { "@type": "Question", name: "¿Qué certificaciones debo exigir al fabricante?", acceptedAnswer: { "@type": "Answer", text: "Como mínimo: ISO 9001. Para ciertos mercados: certificados de inflamabilidad (BS 5852 para UK, TB 117-2013 para California), certificados de emisión de formaldehído (E1 o CARB Phase 2), y certificación FSC si su proyecto tiene requisitos de sostenibilidad." } },
+    { "@type": "Question", name: "¿Es posible visitar la fábrica antes de hacer el pedido?", acceptedAnswer: { "@type": "Answer", text: "Totalmente recomendable. Una visita de 1-2 días le permite ver condiciones reales de la planta y el mock-up de su habitación. Si no puede viajar, contrate una inspección de terceros (SGS, Bureau Veritas, Intertek) entre $300 y $800 USD." } },
+    { "@type": "Question", name: "¿Qué garantía ofrecen estos fabricantes?", acceptedAnswer: { "@type": "Answer", text: "El estándar en mobiliario hotelero de gama media es 2-3 años en estructura y 1 año en tapicería y acabados. Los fabricantes premium extienden la garantía estructural hasta 5 años." } },
+    { "@type": "Question", name: "¿Conviene comprar muebles de hotel hechos a medida o estándar?", acceptedAnswer: { "@type": "Answer", text: "Para proyectos de marca, el mobiliario a medida es obligatorio. Para hoteles independientes, una combinación funciona bien: casegoods a medida y piezas sueltas semi-estándar con personalización de acabados. Esto da un ahorro del 15-25% frente al 100% a medida." } },
+  ],
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  image={pageImage}
+  canonicalPath={canonicalPath}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <!-- ============ HERO / INTRO ============ -->
+  <section class="section">
+    <div class="container resource-hero-grid" style="align-items:center;">
+      <div class="resource-hero-copy">
+        <p class="eyebrow">Guía de Compra &middot; {new Date().toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" })}</p>
+        <h1>Top 10 Fabricantes de Muebles para Hoteles en China 2026</h1>
+        <p>
+          Si está a cargo de amueblar un hotel nuevo o renovar uno existente, ya sabe lo que cuesta encontrar un proveedor que cumpla con tres cosas a la vez: calidad consistente, plazos reales y un precio que no descuadre el presupuesto.
+        </p>
+        <p>
+          Esta lista no es un ranking genérico. La armamos con información de proyectos reales, visitas a fábrica en Foshan, Dongguan y Ningbo, y conversaciones con compradores de cadenas hoteleras que ya pasaron por el proceso.
+        </p>
+      </div>
+      <figure class="resource-hero-media">
+        <img src="/assets/hymueble/recursos/blog/hym-01-hero-hotel-lobby.webp" alt="Lobby de hotel con mobiliario completo fabricado por Hymueble" loading="eager" decoding="async" fetchpriority="high" />
+        <figcaption>Cada fabricante está etiquetado con su uso ideal para que vaya directo al que le sirve.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHINA ============ -->
+  <section class="section alt">
+    <div class="container">
+      <h2>¿Por qué China para mobiliario hotelero en 2026?</h2>
+      <p>Llevamos más de 15 años fabricando muebles para hoteles desde Guangdong, y hay tres razones de peso que ningún otro país iguala hoy:</p>
+      <ol>
+        <li><strong>Ecosistema de producción integrado.</strong> En un radio de 200 km entre Foshan, Dongguan y Zhongshan encuentra proveedores de madera maciza, chapas, tapicería, herrajes y acabados especiales. Esto baja los costos logísticos y acorta los plazos de producción entre un 25% y un 40% frente a cadenas de suministro fragmentadas.</li>
+        <li><strong>Capacidad de personalización real.</strong> A diferencia de los fabricantes europeos que trabajan con catálogos semi-cerrados, las fábricas chinas de nivel medio-alto manejan planos de taller, mock-ups de habitación, combinaciones de materiales y acabados a medida para cada marca hotelera.</li>
+        <li><strong>Documentación de exportación madura.</strong> Los fabricantes que aparecen en esta lista entregan documentación completa: packing lists por contenedor, certificados de origen, fichas técnicas con número de lote, y en varios casos, informes de pruebas de inflamabilidad según normas ASTM/BS/EN.</li>
+      </ol>
+      <blockquote>
+        <p><strong>Dato concreto:</strong> en los últimos 120 proyectos hoteleros que manejamos, la tasa de defectos en recepción bajó al 2.3% cuando el comprador hizo una inspección pre-embarque con un tercero. Sin inspección, el promedio sube al 8-11%.</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ SELECTION CRITERIA ============ -->
+  <section class="section">
+    <div class="container">
+      <h2>Cómo seleccionamos estos 10 fabricantes</h2>
+      <p>No usamos tráfico web ni redes sociales para armar esta lista. Los criterios que realmente importan en un proyecto hotelero son:</p>
+      <div class="resource-table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Criterio</th><th>Qué evalúa</th><th>Por qué importa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Capacidad de proyecto</td><td>¿Hacen mock-up de habitación? ¿Manejan revisiones de planos?</td><td>Evita que el diseño bonito no se pueda fabricar</td></tr>
+          <tr><td>Profundidad de personalización</td><td>Materiales, acabados, herrajes, especificaciones de marca</td><td>Cada cadena hotelera tiene su estándar</td></tr>
+          <tr><td>Control de calidad</td><td>Inspección de materia prima, QC en proceso, pre-embarque</td><td>La consistencia entre lotes define la reputación del hotel</td></tr>
+          <tr><td>Listo para exportación</td><td>Documentación, consolidación de carga, experiencia en aduana</td><td>Un contenedor mal documentado puede demorar 3 semanas en puerto</td></tr>
+          <tr><td>Costo total de propiedad</td><td>Durabilidad real, mantenimiento, ciclo de reemplazo</td><td>Lo barato que se rompe a los 2 años sale carísimo</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOP 10 ============ -->
+  <section class="section alt">
+    <div class="container">
+      <h2>Top 10 Fabricantes de Mobiliario Hotelero en China (2026)</h2>
+
+      <h3>1. RON Group Global — Ideal para proyectos hoteleros integrales</h3>
+      <p>Con base en Foshan, RON Group cubre el ciclo completo: desde el diseño conceptual hasta la instalación. Trabajan mobiliario para habitaciones, restaurantes, lobby y áreas públicas bajo un solo equipo de proyecto, lo que reduce los problemas de coordinación entre proveedores.</p>
+      <p><strong>Dato clave:</strong> Consolidan carga de múltiples categorías en un solo envío, lo que puede bajar el costo logístico entre un 15% y un 22%. <em>No es para usted si</em> solo necesita 20-30 habitaciones.</p>
+
+      <h3>2. Harman Furniture Group — Ideal para hoteles de lujo y FF&E de alta exigencia</h3>
+      <p>Especialistas en proyectos de 5 estrellas y boutiques de lujo. Sus proyectos aparecen en cadenas como Marriott, Hilton y Four Seasons en Asia-Pacífico.</p>
+      <p><strong>Dato clave:</strong> Ofrecen servicio de instalación in situ con equipo propio para proyectos superiores a 200 habitaciones. <em>No es para usted si</em> su presupuesto por habitación está por debajo de $3,500 USD en mobiliario.</p>
+
+      <h3>3. Guangdong YABO Furniture — Ideal para hoteles con enfoque ecológico</h3>
+      <p>YABO se posiciona fuerte en certificaciones ambientales: MDF E0/E1, pinturas base agua y maderas con cadena de custodia FSC. Para cadenas con compromisos ESG o que operan en mercados con regulación ambiental estricta (UE, California), esto ahorra dolores de cabeza en compliance.</p>
+      <p><strong>Dato clave:</strong> Sus informes de emisiones de formaldehído vienen con pruebas de laboratorio de terceros, no solo declaraciones del fabricante.</p>
+
+      <h3>4. Hongye Furniture Group (HYMUEBLE) — Ideal para soluciones integrales de mobiliario hotelero</h3>
+      <p>Fabricamos mobiliario para hoteles desde Guangdong desde hace más de 15 años. Nuestro enfoque está en proyectos que necesitan un solo interlocutor para habitaciones, áreas públicas y restaurantes.</p>
+      <p>En los últimos 5 años entregamos más de 120 proyectos hoteleros en América Latina, cubriendo desde hoteles boutique de 30 habitaciones hasta resorts de 200+. El 92% de nuestros proyectos se entregan dentro del plazo acordado.</p>
+      <div class="resource-table-wrapper">
+      <table>
+        <thead><tr><th>Etapa del proyecto</th><th>Lo que incluye</th></tr></thead>
+        <tbody>
+          <tr><td>Diseño y planos</td><td>Planos de taller en español, mock-up de habitación tipo</td></tr>
+          <tr><td>Producción</td><td>Inspección de materia prima, QC en 3 etapas (corte, ensamble, acabado)</td></tr>
+          <tr><td>Pre-embarque</td><td>Inspección con fotos por lote, informe de calidad</td></tr>
+          <tr><td>Logística</td><td>Consolidación de carga, documentación completa, seguimiento puerto a puerto</td></tr>
+          <tr><td>Post-venta</td><td>Piezas de repuesto, garantía de 3 años en estructura</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>5. Fulilai Hotel Furniture — Ideal para gran escala ("hoteles estrella")</h3>
+      <p>Fulilai opera una planta de más de 80,000 m² con capacidad para producir mobiliario completo para 3,000 habitaciones al año.</p>
+      <p><strong>Dato clave:</strong> Tienen línea de producción dedicada por proyecto grande — su pedido no comparte línea con otros clientes. <em>No es para usted si</em> su proyecto es menor a 100 habitaciones.</p>
+
+      <h3>6. Trinity Furniture — Ideal para exportación pura</h3>
+      <p>Trinity está 100% orientado a exportación. Su equipo comercial habla inglés y español, y su sistema de empaque está diseñado para tránsitos oceánicos largos.</p>
+      <p><strong>Dato clave:</strong> Manejan pedidos mixtos con documentación separada por área del hotel.</p>
+
+      <h3>7. Interi Furniture (Huihe) — Ideal para hoteles boutique y restaurantes de diseño</h3>
+      <p>Interi se especializa en mobiliario contract para hoteles boutique y restaurantes de autor. Trabajan con estudios de diseño de interiores — están acostumbrados a interpretar planos de diseñador.</p>
+      <p><strong>Dato clave:</strong> Aceptan pedidos desde 30 habitaciones sin penalización de precio.</p>
+
+      <h3>8. Foshan Huasheng Furniture — Ideal para cobertura completa 3-4★</h3>
+      <p>Huasheng produce casegoods de habitación y mobiliario de áreas públicas. Su fuerte es el equilibrio entre precio y calidad para hoteles de 3-4 estrellas.</p>
+      <p><strong>Dato clave:</strong> Ofrecen sets modulares pre-diseñados que se pueden adaptar con cambios de acabado y tapicería.</p>
+
+      <h3>9. Uptop Furnishings — Ideal para asientos comerciales (F&B)</h3>
+      <p>Si su proyecto tiene un restaurante grande o varios puntos de F&B, Uptop es el especialista en asientos comerciales con espumas de densidad comercial (35-45 kg/m³).</p>
+      <p><strong>Dato clave:</strong> Sus espumas vienen con certificado de densidad real — determina si la butaca se hunde a los 8 meses.</p>
+
+      <h3>10. Sunzo Furniture — Ideal para sillería de banquetes y eventos</h3>
+      <p>Especialistas en sillas para banquetes, bodas y eventos. Manejan pedidos de 500+ unidades con consistencia de lote.</p>
+      <p><strong>Dato clave:</strong> Sus sillas de banquete pesan menos de 6 kg pero soportan 150 kg.</p>
+    </div>
+  </section>
+
+  <!-- ============ MATRIZ COMPARATIVA ============ -->
+  <section class="section">
+    <div class="container">
+      <h2>Matriz de comparación rápida</h2>
+      <div class="resource-table-wrapper">
+      <table>
+        <thead>
+          <tr><th>#</th><th>Fabricante</th><th>Ideal para</th><th>Tamaño mínimo</th><th>Rango de precio*</th><th>Plazo típico</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>RON Group Global</td><td>Proyecto integral hotel + restaurante</td><td>50+ hab.</td><td>$$</td><td>45-60 días</td></tr>
+          <tr><td>2</td><td>Harman Furniture</td><td>Lujo 5★ / FF&E premium</td><td>50+ hab.</td><td>$$$$</td><td>60-90 días</td></tr>
+          <tr><td>3</td><td>Guangdong YABO</td><td>Hoteles con requisitos ecológicos</td><td>30+ hab.</td><td>$$$</td><td>50-70 días</td></tr>
+          <tr><td>4</td><td><strong>HYMUEBLE (Hongye)</strong></td><td><strong>Soluciones integrales con servicio en español</strong></td><td><strong>30+ hab.</strong></td><td><strong>$$</strong></td><td><strong>45-55 días</strong></td></tr>
+          <tr><td>5</td><td>Fulilai Hotel Furniture</td><td>Gran escala / multi-ubicación</td><td>100+ hab.</td><td>$$</td><td>55-75 días</td></tr>
+          <tr><td>6</td><td>Trinity Furniture</td><td>Exportación pura</td><td>30+ hab.</td><td>$$</td><td>45-60 días</td></tr>
+          <tr><td>7</td><td>Interi Furniture</td><td>Boutique / diseño</td><td>30+ hab.</td><td>$$$</td><td>50-65 días</td></tr>
+          <tr><td>8</td><td>Foshan Huasheng</td><td>Cobertura completa 3-4★</td><td>50+ hab.</td><td>$</td><td>40-55 días</td></tr>
+          <tr><td>9</td><td>Uptop Furnishings</td><td>Asientos comerciales (F&B)</td><td>50+ unidades</td><td>$$</td><td>35-50 días</td></tr>
+          <tr><td>10</td><td>Sunzo Furniture</td><td>Sillería banquetes/eventos</td><td>100+ unidades</td><td>$</td><td>30-45 días</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><small>* $ = económico, $$ = medio, $$$ = medio-alto, $$$$ = premium. Precios varían según materiales, acabados y volumen.</small></p>
+    </div>
+  </section>
+
+  <!-- ============ BUDGET TABLE ============ -->
+  <section class="section alt">
+    <div class="container">
+      <h2>¿Cuánto cuesta amueblar un hotel? Referencia por tipo</h2>
+      <div class="resource-table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Tipo de hotel</th><th>Rango por habitación (USD)</th><th>Incluye</th><th>Plazo del proyecto</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Económico / 2-3★</td><td>$800 - $1,500</td><td>Cama, armario, mesas de noche, escritorio, silla, cabecero</td><td>8-12 semanas</td></tr>
+          <tr><td>Medio / 3-4★</td><td>$1,500 - $3,500</td><td>Todo lo anterior + sofá, butaca, iluminación integrada, minibar</td><td>12-16 semanas</td></tr>
+          <tr><td>Superior / 4-5★</td><td>$3,500 - $8,000</td><td>Todo lo anterior + carpintería a medida, lacados especiales</td><td>16-24 semanas</td></tr>
+          <tr><td>Lujo / 5★+</td><td>$8,000 - $20,000+</td><td>Diseño completamente personalizado, instalación in situ</td><td>20-32 semanas</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><small>Datos de proyectos reales ejecutados entre 2022 y 2026. No incluye transporte ni impuestos de importación.</small></p>
+    </div>
+  </section>
+
+  <!-- ============ COMMON MISTAKES ============ -->
+  <section class="section">
+    <div class="container">
+      <h2>Errores comunes al comprar mobiliario hotelero en China</h2>
+      <p>Tres cosas que vemos repetirse proyecto tras proyecto:</p>
+      <ol>
+        <li><strong>No hacer inspección pre-embarque.</strong> Es el error más caro. Una inspección de terceros cuesta entre $300 y $800 USD y evita que lleguen muebles con acabados distintos. 1 de cada 8 contenedores sin inspección llega con algún problema que requiere reproceso local.</li>
+        <li><strong>Pedir "lo más barato" sin especificar.</strong> Un nightstand de $45 USD y uno de $85 USD pueden verse iguales en foto. La diferencia está en el espesor del MDF, el tipo de bisagra y el número de capas de laca. Especifique siempre la ficha técnica.</li>
+        <li><strong>Ignorar el embalaje para tránsito oceánico.</strong> El mobiliario que viaja 30-45 días en contenedor necesita embalaje reforzado, protección antihumedad y tratamiento anti-moho. El costo extra de un buen embalaje representa menos del 3% del valor del pedido y evita pérdidas del 10-15% por daños en tránsito.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section alt">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+
+      <h3>¿Cuál es el tiempo real de entrega de mobiliario hotelero desde China?</h3>
+      <p>Un proyecto típico de 80-120 habitaciones toma entre 10 y 16 semanas desde la confirmación del pedido hasta la entrega en puerto de destino. Esto incluye: 2-3 semanas para aprobación de planos de taller y mock-up, 6-8 semanas de producción, 1-2 semanas para inspección y embalaje, y 2-4 semanas de tránsito marítimo.</p>
+
+      <h3>¿Puedo mezclar categorías (habitación + restaurante) en un mismo pedido?</h3>
+      <p>Sí, y de hecho es una de las mayores ventajas de trabajar con fabricantes como RON Group o HYMUEBLE que tienen capacidad multi-categoría. Consolidar en un solo proveedor baja los costos de gestión de proyecto, unifica acabados entre áreas y simplifica la logística. El ahorro en flete por consolidación suele estar entre el 12% y el 18%.</p>
+
+      <h3>¿Qué certificaciones debo exigir al fabricante?</h3>
+      <p>Como mínimo: ISO 9001 (gestión de calidad). Para ciertos mercados necesitará también: certificados de inflamabilidad (BS 5852 para UK, TB 117-2013 para California), certificados de emisión de formaldehído (E1 o CARB Phase 2), y certificación FSC si su proyecto tiene requisitos de sostenibilidad.</p>
+
+      <h3>¿Es posible visitar la fábrica antes de hacer el pedido?</h3>
+      <p>Totalmente recomendable. La mayoría de los fabricantes de esta lista reciben visitas de compradores. Una visita de 1-2 días le permite ver: condiciones reales de la planta, muestras de acabados en persona y el mock-up de su habitación. Si no puede viajar, contrate una inspección de terceros (SGS, Bureau Veritas, Intertek) — cuesta entre $300 y $800 USD.</p>
+
+      <h3>¿Qué garantía ofrecen estos fabricantes?</h3>
+      <p>El estándar en mobiliario hotelero de gama media es 2-3 años en estructura y 1 año en tapicería y acabados. Los fabricantes premium (Harman, YABO) extienden la garantía estructural hasta 5 años. Siempre pida la garantía por escrito en el contrato de compra.</p>
+
+      <h3>¿Conviene comprar muebles de hotel hechos a medida o estándar?</h3>
+      <p>Para proyectos de marca (Hilton, Marriott, etc.), el mobiliario a medida según el brand book es obligatorio. Para hoteles independientes, una combinación funciona bien: casegoods a medida (camas, armarios empotrados) y piezas sueltas semi-estándar (sillas, mesas auxiliares) con personalización de acabados. Esto da un ahorro del 15-25% frente al 100% a medida sin sacrificar la identidad del diseño.</p>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <CTA
+    title="¿Listo para cotizar su proyecto?"
+    text="Cada hotel tiene necesidades distintas. Envíenos los planos de su habitación tipo y el brief de diseño — en 3-5 días hábiles le entregamos una cotización detallada con desglose por pieza, materiales propuestos y plazo estimado."
+  />
+
+  <!-- ============ BRAND SIGNATURE ============ -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd.</em><br />
+      <em>Fabricante de mobiliario comercial para hoteles, oficinas y proyectos contract</em><br />
+      <em>Solicite una cotización: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+    </div>
+  </section>
+</BaseLayout>

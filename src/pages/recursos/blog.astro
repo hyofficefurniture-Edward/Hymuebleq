@@ -31,6 +31,15 @@ const guideCards = [
   },
 ];
 
+const blogArticles = [
+  {
+    label: "Guía de proveedores",
+    title: "Top 10 Fabricantes de Muebles para Hoteles en China 2026",
+    text: "Compare los 10 fabricantes más fiables de mobiliario hotelero por capacidad, precio y plazo de entrega. Incluye matriz de comparación y tabla de presupuesto por tipo de hotel.",
+    href: "/recursos/top-10-fabricantes-muebles-hoteles-china-2026/",
+  },
+];
+
 const decisionBlocks = [
   {
     title: "Si ya tienes planos",
@@ -69,6 +78,23 @@ const decisionBlocks = [
         <img src={encodeURI(blogHeroImage)} alt="Centro CNC y producción de mobiliario" loading="eager" decoding="async" fetchpriority="high" />
         <figcaption>Capacidad de fábrica, procesos y criterios de compra para proyectos B2B.</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Artículos</p>
+      <h2>Lecturas recomendadas para compradores B2B</h2>
+      <div class="resource-card-grid">
+        {blogArticles.map((article) => (
+          <article class="resource-guide-card">
+            <span>{article.label}</span>
+            <h3><a href={article.href}>{article.title}</a></h3>
+            <p>{article.text}</p>
+            <a href={article.href} class="btn line" style="margin-top:1rem;">Leer artículo →</a>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
