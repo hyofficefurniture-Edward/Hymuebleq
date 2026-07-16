@@ -143,10 +143,11 @@ Run:
 
 ```bash
 node /tmp/hymueble-article-fingerprint.mjs /tmp/hymueble-top10-before.html /tmp/hymueble-top10-before.json
-node -e 'const f=require("/tmp/hymueble-top10-before.json"); if(f.title!=="Top 10 fabricantes de muebles para hoteles en China (2026)"||f.headings.filter(x=>x.tag==="H1").length!==1||f.tables.length!==4||f.images.length!==7||f.jsonLd.length!==2) process.exit(1); console.log("article baseline: ok")'
+node -e 'const f=require("/tmp/hymueble-top10-before.json"); const types=f.jsonLd.map(x=>x["@type"]); if(f.title!=="Top 10 fabricantes de muebles para hoteles en China (2026)"||f.headings.filter(x=>x.tag==="H1").length!==1||f.tables.length!==4||f.images.length!==7||types.join(",")!=="Organization,Article,FAQPage") process.exit(1); console.log("article baseline: ok")'
 ```
 
-Expected: `article baseline: ok`.
+Expected: `article baseline: ok`. The three generated JSON-LD blocks are the
+global Organization schema plus this page's Article and FAQPage schemas.
 
 ---
 
@@ -507,4 +508,6 @@ Open:
 https://hymueble.com/recursos/top-10-fabricantes-muebles-hoteles-china-2026/
 ```
 
-Verify the A layout at desktop and mobile widths and recheck Title, canonical, H1, publication date, and the two JSON-LD blocks on the live response.
+Verify the A layout at desktop and mobile widths and recheck Title, canonical,
+H1, publication date, and all three JSON-LD blocks (Organization, Article,
+FAQPage) on the live response.
