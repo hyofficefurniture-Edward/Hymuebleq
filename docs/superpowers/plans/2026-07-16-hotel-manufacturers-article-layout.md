@@ -394,9 +394,9 @@ Expected: all four commands pass.
 - Read: `dist/recursos/top-10-fabricantes-muebles-hoteles-china-2026/index.html`
 - Read: `/tmp/hymueble-top10-before.json`
 - Generate outside Git: `/tmp/hymueble-top10-after.json`
-- Generate outside Git: `/tmp/hymueble-top10-desktop.png`
-- Generate outside Git: `/tmp/hymueble-top10-tablet.png`
-- Generate outside Git: `/tmp/hymueble-top10-mobile.png`
+- Generate outside Git: `output/playwright/hymueble-top10-desktop.png`
+- Generate outside Git: `output/playwright/hymueble-top10-tablet.png`
+- Generate outside Git: `output/playwright/hymueble-top10-mobile.png`
 
 **Interfaces:**
 - Consumes: Task 1 baseline and Task 3 built page.
@@ -435,9 +435,9 @@ Use Playwright against
 `http://127.0.0.1:4321/recursos/top-10-fabricantes-muebles-hoteles-china-2026/`
 at:
 
-- 1440×900 → `/tmp/hymueble-top10-desktop.png`
-- 1024×768 → `/tmp/hymueble-top10-tablet.png`
-- 390×844 → `/tmp/hymueble-top10-mobile.png`
+- 1440×900 → `output/playwright/hymueble-top10-desktop.png`
+- 1024×768 → `output/playwright/hymueble-top10-tablet.png`
+- 390×844 → `output/playwright/hymueble-top10-mobile.png`
 
 Capture full-page screenshots after `document.fonts.ready` and all seven article images report `complete && naturalWidth > 0`.
 
@@ -454,17 +454,20 @@ Confirm:
 - Mistakes, FAQ, CTA, brand signature, and WhatsApp do not overlap.
 - `document.documentElement.scrollWidth === document.documentElement.clientWidth` at all three viewports.
 
-- [ ] **Step 5: Commit only the article implementation**
+- [ ] **Step 5: Verify the existing implementation commits and clean tree**
 
 Run:
 
 ```bash
-git add -- src/pages/recursos/top-10-fabricantes-muebles-hoteles-china-2026.astro
-git commit -m "style: refine hotel manufacturers article layout"
+git log --oneline main..HEAD
+git diff --name-only main...HEAD
 git status --short
 ```
 
-Expected: the commit contains only the article file; status still shows only `.agents/` and `AGENTS.md`.
+Expected: the branch contains the approved design/plan commits plus the
+structure and scoped-style commits; the production diff contains only the
+target article, while documentation diffs stay under `docs/superpowers/`.
+Status still shows only `.agents/` and `AGENTS.md`.
 
 ---
 
