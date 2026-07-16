@@ -3,8 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionHead from "../../components/SectionHead.astro";
 import CTA from "../../components/CTA.astro";
 
-const pageTitle = "Top 10 Fabricantes de Muebles para Hoteles en China 2026 | Guía para Compradores";
-const pageDescription = "Lista actualizada de los 10 mejores fabricantes de muebles para hoteles en China en 2026. Líderes en calidad, plazos y servicio en español. Solicite cotización gratuita.";
+const pageTitle = "Top 10 fabricantes de muebles para hoteles en China (2026)";
+const pageDescription = "Compare 10 fabricantes de muebles para hoteles en China en 2026: capacidad, personalización, exportación, instalación y criterios para cotizar.";
 const keywords = [
   "fabricantes de muebles para hoteles",
   "mobiliario hotelero China",
@@ -16,17 +16,33 @@ const keywords = [
   "HYMUEBLE",
 ];
 const canonicalPath = "/recursos/top-10-fabricantes-muebles-hoteles-china-2026/";
-const pageImage = "/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.jpg";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-07-15";
+const dateModified = "2026-07-16";
+const publicationDateLabel = "15 de julio de 2026";
 
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: pageTitle,
   description: pageDescription,
-  author: { "@type": "Organization", name: "Hymueble" },
-  publisher: { "@type": "Organization", name: "Hymueble", logo: { "@type": "ImageObject", url: "/assets/hymueble/brand/hongye-shengda-logo.webp" } },
-  datePublished: "2026-07-15",
-  dateModified: "2026-07-15",
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
 };
 
@@ -59,7 +75,7 @@ const faqJsonLd = {
   <section class="section">
     <div class="container resource-hero-grid" style="align-items:center;">
       <div class="resource-hero-copy">
-        <p class="eyebrow">Guía de Compra &middot; {new Date().toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" })}</p>
+        <p class="eyebrow">Guía de Compra &middot; {publicationDateLabel}</p>
         <h1>Top 10 Fabricantes de Muebles para Hoteles en China 2026</h1>
         <p>
           Si está a cargo de amueblar un hotel nuevo o renovar uno existente en México, Colombia, Chile, Perú, Argentina o cualquier mercado latinoamericano, ya sabe lo que cuesta encontrar un proveedor chino que cumpla con tres cosas a la vez: calidad consistente, plazos reales y un precio que no descuadre el presupuesto.
@@ -69,7 +85,7 @@ const faqJsonLd = {
         </p>
       </div>
       <figure class="resource-hero-media">
-        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.jpg" alt="Dormitorio de hotel con mobiliario completo fabricado en China por HYMUEBLE" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.webp" alt="Dormitorio de hotel con mobiliario completo fabricado en China por HYMUEBLE" width="1920" height="1080" loading="eager" decoding="async" fetchpriority="high" />
         <figcaption>Proyecto reciente entregado por HYMUEBLE / Hongye Furniture Group — habitación tipo de hotel 4★.</figcaption>
       </figure>
     </div>
@@ -129,7 +145,7 @@ const faqJsonLd = {
       <p>En los últimos 5 años entregamos <strong>más de 120 proyectos hoteleros en América Latina</strong> — México, Colombia, Chile, Perú, Argentina, República Dominicana, Panamá — cubriendo desde hoteles boutique de 30 habitaciones hasta resorts de más de 200. El 92% de los proyectos se entregan dentro del plazo acordado.</p>
 
       <figure>
-        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-05-hongye-shengda-empresa.jpg" alt="Planta de producción de Hongye Furniture Group (HYMUEBLE) en Guangdong y equipo comercial bilingüe" loading="lazy" decoding="async" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-05-hongye-shengda-empresa.webp" alt="Planta de producción de Hongye Furniture Group (HYMUEBLE) en Guangdong y equipo comercial bilingüe" width="1000" height="1079" loading="lazy" decoding="async" />
         <figcaption>Planta de producción de Hongye Furniture Group y equipo comercial bilingüe chino-español — 200,000 m² de capacidad anual.</figcaption>
       </figure>
 
@@ -145,21 +161,21 @@ const faqJsonLd = {
 
       <h4>Casos representativos en América Latina</h4>
       <figure>
-        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-04-hotel-huaer-exterior.jpg" alt="Exterior de hotel internacional amueblado por HYMUEBLE / Hongye Furniture Group" loading="lazy" decoding="async" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-04-hotel-huaer-exterior.webp" alt="Exterior de hotel internacional amueblado por HYMUEBLE / Hongye Furniture Group" width="1920" height="1080" loading="lazy" decoding="async" />
         <figcaption>Proyecto de hotel internacional — mobiliario de áreas públicas y habitaciones fabricado por HYMUEBLE.</figcaption>
       </figure>
       <figure>
-        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-06-lobby-hongye-shengda.jpg" alt="Lobby de hotel con mobiliario contract de Hongye Furniture Group en América Latina" loading="lazy" decoding="async" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-06-lobby-hongye-shengda.webp" alt="Lobby de hotel con mobiliario contract de Hongye Furniture Group en América Latina" width="1000" height="1000" loading="lazy" decoding="async" />
         <figcaption>Lobby de hotel boutique en Colombia — casegoods, mostrador de recepción y bancas lounge de HYMUEBLE.</figcaption>
       </figure>
       <figure>
-        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-07-hotel-boutique-exterior.jpg" alt="Hotel boutique de estilo colonial con mobiliario de HYMUEBLE" loading="lazy" decoding="async" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-07-hotel-boutique-exterior.webp" alt="Hotel boutique de estilo colonial con mobiliario de HYMUEBLE" width="1920" height="949" loading="lazy" decoding="async" />
         <figcaption>Hotel boutique de 48 habitaciones en zona cafetera colombiana — proyecto integral llave en mano.</figcaption>
       </figure>
 
       <h4>Capacidad de producción</h4>
       <figure>
-        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-02-fabrica-materia-prima.jpg" alt="Almacén de materia prima y zona de producción de Hongye Furniture Group" loading="lazy" decoding="async" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-02-fabrica-materia-prima.webp" alt="Almacén de materia prima y zona de producción de Hongye Furniture Group" width="1706" height="1279" loading="lazy" decoding="async" />
         <figcaption>Almacén de materia prima y zona de producción en la planta de Foshan — chapas, MDF, tapicería y herrajes bajo control de inventario.</figcaption>
       </figure>
       <p>La planta cubre el ciclo completo desde chapa hasta embalaje final:</p>
@@ -178,7 +194,7 @@ const faqJsonLd = {
       </div>
       <p>Otro caso destacado en lobby y áreas públicas:</p>
       <figure>
-        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-03-lobby-hotel-proyecto.jpg" alt="Lobby de hotel con mobiliario de áreas públicas diseñado y fabricado por HYMUEBLE" loading="lazy" decoding="async" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-01-img-03-lobby-hotel-proyecto.webp" alt="Lobby de hotel con mobiliario de áreas públicas diseñado y fabricado por HYMUEBLE" width="1080" height="715" loading="lazy" decoding="async" />
         <figcaption>Lobby de hotel 4★ con bancas curvas y mesa de centro — diseño + fabricación + instalación a cargo de HYMUEBLE.</figcaption>
       </figure>
 

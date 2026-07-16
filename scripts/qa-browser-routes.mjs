@@ -36,6 +36,7 @@ const routes = [
   "/showroom/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/top-10-fabricantes-muebles-hoteles-china-2026/",
   "/recursos/videos/",
   "/contacto/",
 ];
