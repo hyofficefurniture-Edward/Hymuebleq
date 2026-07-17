@@ -83,6 +83,7 @@
 /proyectos/salud/yueda-ruikang-hospital/
 /recursos/
 /recursos/blog/
+/recursos/top-10-fabricantes-muebles-hoteles-china-2026/
 /recursos/videos/
 /residencial/
 /salud/
