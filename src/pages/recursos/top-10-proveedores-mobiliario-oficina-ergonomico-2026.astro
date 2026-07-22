@@ -64,8 +64,9 @@ const faqJsonLd = {
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
 
+  <div class="office-guide">
   <!-- ============ HERO / INTRO ============ -->
-  <section class="section">
+  <section class="section article-hero">
     <div class="container resource-hero-grid" style="align-items:center;">
       <div class="resource-hero-copy">
         <p class="eyebrow">Guía de Compra &middot; {publicationDateLabel}</p>
@@ -85,68 +86,71 @@ const faqJsonLd = {
   </section>
 
   <!-- ============ WHY ERGONOMIC ============ -->
-  <section class="section alt">
-    <div class="container">
+  <section class="section alt article-section article-context">
+    <div class="container article-prose">
       <h2>¿Por qué el mobiliario ergonómico define el ROI de una oficina?</h2>
       <p>Antes de comparar proveedores, conviene tener claro qué hay en juego. Tres datos de proyectos reales que medimos en 2025:</p>
-      <ol>
+      <ol class="editorial-list">
         <li><strong>Productividad.</strong> En un piloto con 180 empleados en un call center de Bogotá, el cambio de sillas convencionales a sillas con soporte lumbar ajustable y reposabrazos 4D redujo las ausencias por dolor lumbar en un 34%. El retorno sobre la inversión en mobiliario fue de 11 meses.</li>
         <li><strong>Rotación de personal.</strong> En el mismo proyecto, la rotación voluntaria bajó del 22% al 14% anual. No es casualidad: el mobiliario es la herramienta de trabajo que el empleado toca 8 horas al día.</li>
         <li><strong>Costo de reemplazo.</strong> Una silla de oficina genérica de $120 USD dura 14-20 meses en uso intensivo. Una silla con estructura BIFMA y garantía de 5 años cuesta $350-$500 USD y dura 6-8 años. El costo anual real pasa de $7.5 a $62 por año.</li>
       </ol>
-      <blockquote>
+      <blockquote class="data-callout">
         <p><strong>Dato de campo:</strong> el 68% de las empresas que cambiamos a mobiliario ergonómico certificó reducción de quejas laborales en el primer año. El otro 32% no tenía protocolo de ajuste de silla por empleado, lo que anula parte del beneficio.</p>
       </blockquote>
     </div>
   </section>
 
   <!-- ============ HOW WE BUILT THIS LIST ============ -->
-  <section class="section">
-    <div class="container">
+  <section class="section article-section article-methodology">
+    <div class="container article-prose article-prose--wide">
       <h2>Cómo construimos este ranking</h2>
       <p>Los criterios que usamos son los que un director de operaciones o un responsable de compras evalúa en la práctica, no los que aparecen en una página de marketing:</p>
-      <div class="resource-table-wrapper">
+      <div class="resource-table-wrapper methodology-table">
       <table>
         <thead>
           <tr><th>Criterio</th><th>Qué evalúa</th><th>Por qué importa</th></tr>
         </thead>
         <tbody>
-          <tr><td>Certificación BIFMA</td><td>¿Las sillas pasan pruebas de resistencia y durabilidad?</td><td>Una silla sin BIFMA puede fallar en 12 meses bajo uso intensivo</td></tr>
-          <tr><td>Capacidad de personalización</td><td>Colores corporativos, logos, medidas adaptadas al plan de espacios</td><td>Cada empresa tiene identidad visual y estándares de marca</td></tr>
-          <tr><td>Escala de producción</td><td>¿Puede entregar 500+ puestos en un solo embarque?</td><td>Proyectos corporativos grandes requieren capacidad real, no subcontratación</td></tr>
-          <tr><td>Soporte en español</td><td>¿El equipo comercial habla español nativo?</td><td>Comunicación fluida reduce errores de especificación en un 40%</td></tr>
-          <tr><td>Garantía estructural</td><td>Años de cobertura en estructura y mecanismos</td><td>Define el costo total de propiedad del mobiliario</td></tr>
-          <tr><td>Experiencia en LATAM</td><td>Proyectos previos entregados en América Latina</td><td>Conoce requisitos documentales y logísticos de la región</td></tr>
+          <tr><td>Certificación BIFMA</td><td data-label="Evalúa">¿Las sillas pasan pruebas de resistencia y durabilidad?</td><td data-label="Importa">Una silla sin BIFMA puede fallar en 12 meses bajo uso intensivo</td></tr>
+          <tr><td>Capacidad de personalización</td><td data-label="Evalúa">Colores corporativos, logos, medidas adaptadas al plan de espacios</td><td data-label="Importa">Cada empresa tiene identidad visual y estándares de marca</td></tr>
+          <tr><td>Escala de producción</td><td data-label="Evalúa">¿Puede entregar 500+ puestos en un solo embarque?</td><td data-label="Importa">Proyectos corporativos grandes requieren capacidad real, no subcontratación</td></tr>
+          <tr><td>Soporte en español</td><td data-label="Evalúa">¿El equipo comercial habla español nativo?</td><td data-label="Importa">Comunicación fluida reduce errores de especificación en un 40%</td></tr>
+          <tr><td>Garantía estructural</td><td data-label="Evalúa">Años de cobertura en estructura y mecanismos</td><td data-label="Importa">Define el costo total de propiedad del mobiliario</td></tr>
+          <tr><td>Experiencia en LATAM</td><td data-label="Evalúa">Proyectos previos entregados en América Latina</td><td data-label="Importa">Conoce requisitos documentales y logísticos de la región</td></tr>
         </tbody>
       </table>
       </div>
 
-      <figure style="margin:2.5rem auto; text-align:center; max-width:900px;">
-        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-06.webp" alt="Vista general de oficina corporativa amueblada con puestos de trabajo en cubículos, sillas ergonómicas y plano de planta de referencia" loading="lazy" decoding="async" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
-        <figcaption style="font-size:0.9rem; color:#64748b; margin-top:0.6rem; font-style:italic;">Vista general de proyecto de oficina corporativa con plano de planta de referencia — entregado por HYMUEBLE en América Latina.</figcaption>
+      <figure>
+        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-06.webp" alt="Vista general de oficina corporativa amueblada con puestos de trabajo en cubículos, sillas ergonómicas y plano de planta de referencia" loading="lazy" decoding="async" />
+        <figcaption>Vista general de proyecto de oficina corporativa con plano de planta de referencia — entregado por HYMUEBLE en América Latina.</figcaption>
       </figure>
     </div>
   </section>
 
   <!-- ============ TOP 10 ============ -->
-  <section class="section alt">
-    <div class="container">
+  <section class="section alt article-section article-ranking">
+    <div class="container article-prose">
       <h2>Top 10 proveedores de mobiliario de oficina ergonómico (2026)</h2>
 
+      <article class="supplier-entry">
       <h3>1. Sunon Group — Ideal para proyectos corporativos de gran escala</h3>
       <p>Sunon es el fabricante de muebles de oficina más grande de China por facturación, con planta de 330,000 m² en Hangzhou y presencia en más de 110 países. Sus clientes incluyen gobiernos, Fortune 500 y cadenas hoteleras con oficinas corporativas.</p>
       <p>Su punto fuerte: capacidad de producción masiva con línea dedicada por cliente grande. Si necesita amueblar 1,000+ puestos con especificaciones uniformes, Sunon lo resuelve sin subcontratar. <em>No es para usted si</em> su pedido es menor a 100 puestos o si necesita comunicación en español nativo; su equipo comercial trabaja principalmente en inglés y chino.</p>
 
+      </article>
+      <article class="supplier-entry supplier-entry--featured">
       <h3>2. HYMUEBLE / Hongye Furniture Group — Ideal para proyectos integrales con servicio en español y soporte en América Latina</h3>
       <p>Fabricante con sede en Foshan (Guangdong), 15 años produciendo mobiliario corporativo y educativo para exportación. Nuestra ventaja en este ranking no es el volumen de producción: es la <strong>atención en español desde el primer contacto hasta el montaje en obra</strong>.</p>
       <p>En los últimos 5 años entregamos <strong>más de 80 proyectos de mobiliario de oficina en América Latina</strong>, desde call centers de 60 puestos hasta sedes corporativas de 300+ puestos en México, Colombia, Chile, Perú y Argentina. El 92% de los proyectos se entregaron dentro del plazo acordado.</p>
 
-      <figure style="margin:2.5rem auto; text-align:center; max-width:900px;">
-        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-01.webp" alt="Silla ergonómica de malla de diseño contemporáneo exhibida en NeoCon Chicago 2026 por Hongye Furniture Group - HYMUEBLE" loading="lazy" decoding="async" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
-        <figcaption style="font-size:0.9rem; color:#64748b; margin-top:0.6rem; font-style:italic;">Hongye Furniture Group (HYMUEBLE) en NeoCon Chicago 2026 — Booth 7-1114, The Mart.</figcaption>
+      <figure>
+        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-01.webp" alt="Silla ergonómica de malla de diseño contemporáneo exhibida en NeoCon Chicago 2026 por Hongye Furniture Group - HYMUEBLE" loading="lazy" decoding="async" />
+        <figcaption>Hongye Furniture Group (HYMUEBLE) en NeoCon Chicago 2026 — Booth 7-1114, The Mart.</figcaption>
       </figure>
       <h4>Qué fabricamos</h4>
-      <div class="resource-table-wrapper">
+      <div class="resource-table-wrapper capability-table">
       <table>
         <thead><tr><th>Categoría</th><th>Productos</th><th>MOQ</th></tr></thead>
         <tbody>
@@ -158,9 +162,9 @@ const faqJsonLd = {
       </table>
       </div>
 
-      <figure style="margin:2.5rem auto; text-align:center; max-width:900px;">
-        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-04.webp" alt="Estación de trabajo modular con cuatro puestos, divisiones de melamina y sillas ergonómicas de malla para oficina corporativa" loading="lazy" decoding="async" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
-        <figcaption style="font-size:0.9rem; color:#64748b; margin-top:0.6rem; font-style:italic;">Estación modular de cuatro puestos con divisiones y sillas ergonómicas — configuración típica de proyectos HYMUEBLE en LATAM.</figcaption>
+      <figure>
+        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-04.webp" alt="Estación de trabajo modular con cuatro puestos, divisiones de melamina y sillas ergonómicas de malla para oficina corporativa" loading="lazy" decoding="async" />
+        <figcaption>Estación modular de cuatro puestos con divisiones y sillas ergonómicas — configuración típica de proyectos HYMUEBLE en LATAM.</figcaption>
       </figure>
       <h4>Servicio de instalación en América Latina</h4>
       <p>Para proyectos superiores a 80 puestos, <strong>enviamos equipo de instalación al país del proyecto</strong>. El equipo trabaja con el contratista local y se encarga de:</p>
@@ -172,55 +176,72 @@ const faqJsonLd = {
       </ul>
       <p><em>No es para usted si</em> su proyecto es menor a 30 puestos; en ese rango, la instalación remota con videoasistencia es más eficiente.</p>
 
+      </article>
+      <article class="supplier-entry">
       <h3>3. Quama Group — Ideal para mobiliario ejecutivo de gama alta</h3>
       <p>Quama se especializa en mobiliario de dirección y salas de juntas premium. Sus líneas ejecutivas trabajan con madera maciza, chapas nobles y tapicería en cuero genuino.</p>
       <p><strong>Dato clave:</strong> Tienen showroom propio en Guangzhou con más de 50 setups completos de oficina. Útil si puede visitar antes de comprar. <em>No es para usted si</em> busca mobiliario operativo de gran volumen a precio competitivo; su línea ejecutiva no compite en precio con fabricantes de sillas operativas.</p>
 
-      <figure style="margin:2.5rem auto; text-align:center; max-width:900px;">
-        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-02.webp" alt="Oficina ejecutiva clásica con escritorio de madera maciza, sillón de cuero azul y librero de pared — mobiliario de dirección de gama alta" loading="lazy" decoding="async" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
-        <figcaption style="font-size:0.9rem; color:#64748b; margin-top:0.6rem; font-style:italic;">Oficina ejecutiva clásica de Quama Group — mobiliario de dirección con madera maciza y tapicería de cuero.</figcaption>
+      <figure>
+        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-02.webp" alt="Oficina ejecutiva clásica con escritorio de madera maciza, sillón de cuero azul y librero de pared — mobiliario de dirección de gama alta" loading="lazy" decoding="async" />
+        <figcaption>Oficina ejecutiva clásica de Quama Group — mobiliario de dirección con madera maciza y tapicería de cuero.</figcaption>
       </figure>
 
+      </article>
+      <article class="supplier-entry">
       <h3>4. UE Furniture (Ergomax) — Ideal para sillas ergonómicas especializadas</h3>
       <p>UE Furniture cotiza en bolsa y es uno de los mayores fabricantes de sillas ergonómicas de China. Su marca Ergomax vende directamente en mercado asiático y exporta a marcas privadas en todo el mundo.</p>
       <p><strong>Dato clave:</strong> Su línea de sillas con soporte cervical dinámico pasa pruebas BIFMA X5.1 con margen amplio. Son una buena opción si su proyecto prioriza la ergonomía de silla sobre escritorios y storage. <em>No es para usted si</em> necesita un proveedor que cubra todo el mobiliario de oficina; su catálogo de escritorios es limitado.</p>
 
-      <figure style="margin:2.5rem auto; text-align:center; max-width:900px;">
-        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-03.webp" alt="Silla ergonómica de malla morada con respaldo lumbar ajustable y base de cinco ruedas — modelo especializado BIFMA X5.1" loading="lazy" decoding="async" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
-        <figcaption style="font-size:0.9rem; color:#64748b; margin-top:0.6rem; font-style:italic;">Silla ergonómica de malla con soporte lumbar ajustable — modelo estrella de UE Furniture (Ergomax).</figcaption>
+      <figure>
+        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-03.webp" alt="Silla ergonómica de malla morada con respaldo lumbar ajustable y base de cinco ruedas — modelo especializado BIFMA X5.1" loading="lazy" decoding="async" />
+        <figcaption>Silla ergonómica de malla con soporte lumbar ajustable — modelo estrella de UE Furniture (Ergomax).</figcaption>
       </figure>
 
+      </article>
+      <article class="supplier-entry">
       <h3>5. Henglin Chair Industry — Ideal para volumen alto de sillas operativas</h3>
       <p>Henglin cotiza en la Bolsa de Shanghái y produce más de 5 millones de sillas al año. Su fuerte es la silla operativa de precio medio: entre $80 y $180 USD por unidad en volumen B2B.</p>
       <p><strong>Dato clave:</strong> Línea de producción automatizada con soldadura robótica, lo que garantiza consistencia estructural entre lotes. <em>No es para usted si</em> necesita personalización de tapicería o colores corporativos; su modelo de negocio privilegia estandarización.</p>
 
+      </article>
+      <article class="supplier-entry">
       <h3>6. Bossin Furniture — Ideal para proyectos con presupuesto controlado</h3>
       <p>Bossin produce mobiliario de oficina de gama media-baja con precios agresivos. Su catálogo cubre escritorios, sillas, archivadores y particiones de oficina.</p>
       <p><strong>Dato clave:</strong> Ofrecen kits de oficina completos (escritorio + silla + archivador) desde $220 USD por puesto. Útil para proyectos de startup o oficinas temporales. <em>No es para usted si</em> necesita certificación BIFMA o garantía extendida; sus productos no pasan pruebas de durabilidad de nivel comercial.</p>
 
+      </article>
+      <article class="supplier-entry">
       <h3>7. Okaa Furniture — Ideal para mobiliario de oficina moderno y diseño minimalista</h3>
       <p>Okaa se enfoca en líneas de diseño contemporáneo: escritorios flotantes, mesas de reuniones con faldones en acero negro, sillas con malla transpirable en colores vibrantes.</p>
       <p><strong>Dato clave:</strong> Aceptan pedidos desde 20 unidades con personalización de color. <em>No es para usted si</em> necesita mobiliario ejecutivo tradicional en madera maciza.</p>
 
+      </article>
+      <article class="supplier-entry">
       <h3>8. Foshan Linmin Furniture — Ideal para escritorios ajustables en altura</h3>
       <p>Linmin se especializa en escritorios de pie (sit-stand desks) con mecanismos eléctricos de doble motor. Produce para marcas privadas en EE.UU., Australia y Europa.</p>
       <p><strong>Dato clave:</strong> Sus motores eléctricos tienen certificación CE y FCC, con 20,000 ciclos de garantía. <em>No es para usted si</em> necesita sillas ergonómicas; su catálogo se limita a escritorios y accesorios.</p>
 
+      </article>
+      <article class="supplier-entry">
       <h3>9. Guangzhou Paka Furniture — Ideal para proyectos mixtos de oficina y recepción</h3>
       <p>Paka cubre dos categorías que pocos fabricantes chinos combinan bien: mobiliario operativo (escritorios, sillas) y mobiliario de recepción (sofás, mostradores, mesas de centro). Útil si quiere unificar proveedor.</p>
       <p><strong>Dato clave:</strong> Su línea de recepción incluye muebles a medida con logos corporativos integrados. <em>No es para usted si</em> necesita certificación BIFMA para sillas; sus productos operativos no la tienen.</p>
 
+      </article>
+      <article class="supplier-entry">
       <h3>10. Zhejiang Anji Huilong Furniture — Ideal para sillas de trabajo a precio competitivo</h3>
       <p>Anji es el clúster mundial de sillas de oficina, y Huilong es uno de sus fabricantes más eficientes en costo. Produce sillas operativas desde $45 USD en volumen.</p>
       <p><strong>Dato clave:</strong> Capacidad de 10,000 sillas mensuales, ideal para proyectos de call center o centros de datos. <em>No es para usted si</em> necesita sillas premium con ajuste lumbar dinámico; su catálogo se centra en modelos básicos.</p>
+      </article>
     </div>
   </section>
 
   <!-- ============ MATRIZ COMPARATIVA ============ -->
-  <section class="section">
-    <div class="container">
+  <section class="section article-section article-comparison">
+    <div class="container article-wide">
       <h2>Matriz de comparación rápida</h2>
-      <div class="resource-table-wrapper">
+      <div class="resource-table-wrapper comparison-table">
       <table>
         <thead>
           <tr><th>#</th><th>Proveedor</th><th>Ideal para</th><th>MOQ</th><th>Rango de precio*</th><th>BIFMA</th><th>Servicio en español</th><th>Instalación LATAM</th></tr>
@@ -241,18 +262,18 @@ const faqJsonLd = {
       </div>
       <p><small>* $ = económico ($45-$120/puesto), $$ = medio ($200-$500/puesto), $$$ = medio-alto ($600-$1,500/puesto). Precios varían según materiales, acabados y volumen.</small></p>
 
-      <figure style="margin:2.5rem auto; text-align:center; max-width:900px;">
-        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-05.webp" alt="Sala de oficina moderna con tres puestos de trabajo, sillas ergonómicas de malla morada y escritorios blancos con lámparas colgantes" loading="lazy" decoding="async" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
-        <figcaption style="font-size:0.9rem; color:#64748b; margin-top:0.6rem; font-style:italic;">Sala de oficina moderna con tres puestos y sillas ergonómicas de malla — referencia visual para selección de mobiliario operativo.</figcaption>
+      <figure>
+        <img src="/assets/hymueble/recursos/blog/images/hym-02-img-05.webp" alt="Sala de oficina moderna con tres puestos de trabajo, sillas ergonómicas de malla morada y escritorios blancos con lámparas colgantes" loading="lazy" decoding="async" />
+        <figcaption>Sala de oficina moderna con tres puestos y sillas ergonómicas de malla — referencia visual para selección de mobiliario operativo.</figcaption>
       </figure>
     </div>
   </section>
 
   <!-- ============ BUDGET TABLE ============ -->
-  <section class="section alt">
-    <div class="container">
+  <section class="section alt article-section article-budget">
+    <div class="container article-wide">
       <h2>¿Cuánto cuesta amueblar una oficina? Referencia por tipo</h2>
-      <div class="resource-table-wrapper">
+      <div class="resource-table-wrapper budget-table">
       <table>
         <thead>
           <tr><th>Tipo de oficina</th><th>Costo por puesto (USD)</th><th>Incluye</th><th>Plazo del proyecto</th></tr>
@@ -270,11 +291,11 @@ const faqJsonLd = {
   </section>
 
   <!-- ============ COST COMPARISON: CHINA vs LOCAL ============ -->
-  <section class="section">
-    <div class="container">
+  <section class="section article-section article-cost">
+    <div class="container article-wide">
       <h2>Comprar en China vs proveedor local: comparativa de costo total</h2>
       <p>La pregunta que todo comprador se hace. Aquí está la respuesta con números reales de un proyecto de 150 puestos entregado en México en 2025:</p>
-      <div class="resource-table-wrapper">
+      <div class="resource-table-wrapper cost-table">
       <table>
         <thead>
           <tr><th>Concepto</th><th>Proveedor local (MX)</th><th>Proveedor China (HYMUEBLE)</th><th>Diferencia</th></tr>
@@ -295,11 +316,11 @@ const faqJsonLd = {
   </section>
 
   <!-- ============ COMMON MISTAKES ============ -->
-  <section class="section alt">
-    <div class="container">
+  <section class="section alt article-section article-mistakes">
+    <div class="container article-prose">
       <h2>Errores comunes al comprar mobiliario de oficina en China</h2>
       <p>Tres errores que vemos en casi todos los proyectos nuevos:</p>
-      <ol>
+      <ol class="compact-list">
         <li><strong>No especificar el rango de altura del escritorio.</strong> Un escritorio "ajustable" puede tener un rango de 70-120 cm (sirve para personas de 1.55m a 1.90m) o de 65-110 cm. Si su equipo tiene estaturas fuera del promedio, pida la ficha técnica con el rango exacto antes de comprar.</li>
         <li><strong>Comprar sillas sin certificación BIFMA para uso intensivo.</strong> Una silla de $80 USD sin BIFMA aguanta 2-3 años en uso de 4 horas diarias. En uso de 8 horas (call center, soporte técnico), falla en 14 meses. La silla con BIFMA a $350 USD dura 6-8 años. El costo anual es $61 vs $57.</li>
         <li><strong>No coordinar instalación con el equipo de TI.</strong> El mobiliario de oficina moderno lleva canalización de cables, pozos de datos y paneles eléctricos. Si el equipo de TI no está alineado con la instalación del mobiliario, el proyecto se retrasa 2-3 semanas mientras se adapta la infraestructura. Inclúyalos desde la fase de planos.</li>
@@ -308,27 +329,39 @@ const faqJsonLd = {
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section class="section alt">
-    <div class="container">
+  <section class="section alt article-section article-faq">
+    <div class="container article-prose">
       <h2>Preguntas frecuentes</h2>
 
+      <article class="faq-item">
       <h3>¿Cuánto cuesta amueblar una oficina de 50 puestos con mobiliario ergonómico?</h3>
       <p>El rango típico está entre $25,000 y $70,000 USD según el nivel de ergonomía. Un puesto básico (escritorio ajustable + silla media) cuesta $500-$900 USD. Un puesto premium (escritorio eléctrico dual + silla certificada BIFMA) sube a $1,200-$2,200 USD. La consolidación con un solo proveedor chino ahorra entre 15% y 30% frente a comprar locales por separado.</p>
 
+      </article>
+      <article class="faq-item">
       <h3>¿Qué certificaciones debe tener el mobiliario de oficina ergonómico?</h3>
       <p>Las mínimas son ISO 9001 (gestión de calidad) y BIFMA (resistencia y durabilidad de muebles de oficina). Para sillas ergonómicas, busque certificación BIFMA X5.1. Si su mercado exige sostenibilidad, añada SCS Indoor Advantage Gold (emisiones bajas) o GREENGUARD Gold. Para exportación a la UE, la marca CE es obligatoria en componentes mecánicos como elevadores neumáticos.</p>
 
+      </article>
+      <article class="faq-item">
       <h3>¿Conviene comprar escritorios y sillas del mismo proveedor?</h3>
       <p>Sí. Consolidar escritorios y sillas en un solo proveedor tiene tres ventajas: unifica la garantía, reduce costos de flete por consolidación de contenedor (15-25% de ahorro), y garantiza que la altura del escritorio y el rango de ajuste de la silla sean compatibles. En proyectos donde silla y escritorio vienen de fabricantes distintos, el 30% de los casos requiere ajustes posteriores de altura.</p>
 
+      </article>
+      <article class="faq-item">
       <h3>¿Cuál es el plazo de entrega de mobiliario de oficina desde China?</h3>
       <p>Para un pedido de 50-200 puestos, el plazo total es de 8 a 14 semanas: 1-2 semanas para aprobación de muestras y fichas técnicas, 4-6 semanas de producción, 1 semana de inspección y embalaje, y 2-4 semanas de tránsito marítimo a puertos de México, Colombia, Chile, Perú o Argentina.</p>
 
+      </article>
+      <article class="faq-item">
       <h3>¿El proveedor puede fabricar con especificaciones de nuestra marca corporativa?</h3>
       <p>Los fabricantes chinos de nivel medio-alto manejan personalización completa: colores corporativos en tapicería y melamina, logos grabados o serigrafiados, herrajes en acabados específicos, y medidas adaptadas a su plan maestro de espacios. El MOQ (cantidad mínima) para personalización suele ser de 30-50 unidades por referencia.</p>
 
+      </article>
+      <article class="faq-item">
       <h3>¿Qué pasa si llega mobiliario con defectos?</h3>
       <p>El protocolo estándar es: reportar con fotos dentro de los primeros 15 días de recepción, el fabricante evalúa y, si el defecto es de producción, envía piezas de reemplazo sin costo en el siguiente embarque o reembolsa el porcentaje defectuoso. La tasa de defectos con inspección pre-embarque es del 2-3%. Sin inspección, sube al 8-12%.</p>
+      </article>
     </div>
   </section>
 
@@ -339,7 +372,7 @@ const faqJsonLd = {
   />
 
   <!-- ============ BRAND SIGNATURE ============ -->
-  <section class="section">
+  <section class="section brand-signature">
     <div class="container" style="text-align:center;">
       <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
       <em>Fabricante de mobiliario corporativo: sillas ergonómicas, escritorios ajustables y proyectos contract</em><br />
@@ -347,4 +380,5 @@ const faqJsonLd = {
       <em>Solicite una cotización: <a href="/contacto/">hymueble.com/contacto</a></em></p>
     </div>
   </section>
+  </div>
 </BaseLayout>
