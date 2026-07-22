@@ -3,8 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionHead from "../../components/SectionHead.astro";
 import CTA from "../../components/CTA.astro";
 
-const pageTitle = "Top 10 Proveedores de Mobiliario de Oficina Ergonómico 2026 | Guía B2B";
-const pageDescription = "Ranking actualizado de los 10 mejores proveedores de mobiliario de oficina ergonómico en China. Comparativa de capacidad, certificaciones y precios para compradores B2B.";
+const pageTitle = "Top 10 proveedores de mobiliario de oficina ergonómico (2026)";
+const pageDescription = "Compare 10 proveedores de mobiliario de oficina ergonómico en China en 2026: capacidad, certificaciones, MOQ, precios y soporte para proyectos B2B.";
+const publicationDateLabel = "21 de julio de 2026";
 const keywords = [
   "proveedores mobiliario de oficina",
   "mobiliario oficina ergonómico China",
@@ -24,9 +25,17 @@ const articleJsonLd = {
   headline: pageTitle,
   description: pageDescription,
   author: { "@type": "Organization", name: "Hymueble" },
-  publisher: { "@type": "Organization", name: "Hymueble", logo: { "@type": "ImageObject", url: "/assets/hymueble/brand/hymueble-logo.webp" } },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hymueble-logo.webp",
+    },
+  },
   datePublished: "2026-07-17",
-  dateModified: "2026-07-17",
+  dateModified: "2026-07-21",
+  image: "https://hymueble.com" + pageImage,
   mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
 };
 
@@ -59,17 +68,17 @@ const faqJsonLd = {
   <section class="section">
     <div class="container resource-hero-grid" style="align-items:center;">
       <div class="resource-hero-copy">
-        <p class="eyebrow">Guía de Compra &middot; {new Date().toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" })}</p>
+        <p class="eyebrow">Guía de Compra &middot; {publicationDateLabel}</p>
         <h1>Top 10 Proveedores de Mobiliario de Oficina Ergonómico 2026</h1>
         <p>
           Si su empresa va a amueblar 50, 200 o 500 puestos de trabajo, la decisión no es qué silla comprar. Es con qué proveedor trabajar durante los próximos 3 a 5 años. Una silla ergonómica mala cuesta $180 USD y le dura 18 meses. Una buena cuesta $380 USD y le dura 7 años. La diferencia no está en el precio inicial; está en quién la fabrica.
         </p>
         <p>
-          Este ranking lo armamos desde la trinchera: 15 años fabricando y exportando mobiliario de oficina desde Guangdong, con proyectos entregados en México, Colombia, Chile, Perú y Argentina. No es un listado de catálogo. Cada proveedor está evaluado con criterios que importan cuando el contenedor llega a puerto y hay que instalar 200 puestos en 10 días.
+          Este ranking lo armamos desde la trinchera: 15 años fabricando y exportando <a href="/oficinas/">mobiliario de oficina</a> desde Guangdong, con proyectos entregados en México, Colombia, Chile, Perú y Argentina. No es un listado de catálogo. Cada proveedor está evaluado con criterios que importan cuando el contenedor llega a puerto y hay que instalar 200 puestos en 10 días.
         </p>
       </div>
       <figure class="resource-hero-media">
-        <img src="/assets/hymueble/recursos/blog/images/hym-02-oficina-ergonomica.jpg" alt="Oficina corporativa con mobiliario ergonómico: escritorios ajustables y sillas certificadas BIFMA" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="/assets/hymueble/recursos/blog/images/hym-02-oficina-ergonomica.jpg" alt="Oficina corporativa con mobiliario ergonómico: escritorios ajustables y sillas certificadas BIFMA" loading="eager" decoding="async" fetchpriority="high" width="550" height="309" />
         <figcaption>Proyecto de oficina corporativa entregado por HYMUEBLE / Hongye Furniture Group en Ciudad de México.</figcaption>
       </figure>
     </div>
@@ -141,7 +150,7 @@ const faqJsonLd = {
       <table>
         <thead><tr><th>Categoría</th><th>Productos</th><th>MOQ</th></tr></thead>
         <tbody>
-          <tr><td>Sillas ergonómicas</td><td>Silla ejecutiva malla, silla operativa con soporte lumbar, silla de tarea con reposabrazos ajustables</td><td>30 unidades</td></tr>
+          <tr><td><a href="/catalogo/oficinas/sillas-de-oficina/">Sillas ergonómicas</a></td><td>Silla ejecutiva malla, silla operativa con soporte lumbar, silla de tarea con reposabrazos ajustables</td><td>30 unidades</td></tr>
           <tr><td>Escritorios</td><td>Escritorio ajustable en altura (eléctrico), escritorio fijo con panel lateral, mesa de reuniones</td><td>20 unidades</td></tr>
           <tr><td>Storage</td><td>Archivadores móviles, lockers corporativos, estantería modular</td><td>30 unidades</td></tr>
           <tr><td>Áreas comunes</td><td>Sofás de recepción, mesas de café, cabinas telefónicas</td><td>15 unidades</td></tr>
