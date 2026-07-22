@@ -15,6 +15,7 @@ const staticPaths = [
   "/recursos/",
   "/recursos/blog/",
   "/recursos/top-10-fabricantes-muebles-hoteles-china-2026/",
+  "/recursos/top-10-proveedores-mobiliario-oficina-ergonomico-2026/",
   "/recursos/videos/",
 ];
 
