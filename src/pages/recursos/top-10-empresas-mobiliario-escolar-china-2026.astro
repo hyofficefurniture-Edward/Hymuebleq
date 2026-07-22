@@ -1,0 +1,649 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Top 10 empresas de mobiliario escolar en China (2026)";
+const pageDescription = "Ranking de 10 fabricantes de mobiliario escolar en China para 2026: pupitres, sillería, laboratorios y equipamiento de aulas. Compare capacidad, certificaciones y exportación.";
+const keywords = [
+  "mobiliario escolar China",
+  "fabricantes muebles escolares",
+  "proveedores mobiliario educativo",
+  "pupitres escolares fabricante",
+  "mobiliario para colegios China",
+  "equipamiento aulas China",
+  "muebles para escuelas Latinoamérica",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/top-10-empresas-mobiliario-escolar-china-2026/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-07-22";
+const dateModified = "2026-07-22";
+const publicationDateLabel = "22 de julio de 2026";
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "¿Qué certificaciones debe tener el mobiliario escolar importado de China?", acceptedAnswer: { "@type": "Answer", text: "Como mínimo: ISO 9001 para gestión de calidad e ISO 14001 para gestión ambiental. Para mobiliario de aulas se recomienda certificación de emisiones de formaldehído E1 o CARB Phase 2. Si el destino es la Unión Europea, exija el marcado CE y la norma EN 1729 para dimensiones ergonómicas. Para Estados Unidos, la certificación BIFMA es el estándar de referencia." } },
+    { "@type": "Question", name: "¿Cuánto tiempo toma un pedido de mobiliario escolar desde China hasta América Latina?", acceptedAnswer: { "@type": "Answer", text: "Un pedido típico para una escuela de 20-30 aulas toma entre 8 y 14 semanas desde la confirmación hasta la entrega en puerto. El desglose es: 1-2 semanas para aprobación de muestras, 5-8 semanas de producción, 1 semana de inspección y embalaje, y 2-4 semanas de tránsito marítimo. Los pedidos de más de 500 pupitres pueden necesitar 2-3 semanas adicionales." } },
+    { "@type": "Question", name: "¿El fabricante puede personalizar los colores y el logo de la escuela?", acceptedAnswer: { "@type": "Answer", text: "Sí. La mayoría de los fabricantes de esta lista ofrecen personalización de colores según el código Pantone de la institución y pueden grabar o serigrafiar el logo en pupitres, sillas y estanterías. El costo adicional por personalización de color suele ser del 5% al 12% sobre el precio base, dependiendo del volumen." } },
+    { "@type": "Question", name: "¿Conviene comprar mobiliario escolar en China si el pedido es menor a 100 unidades?", acceptedAnswer: { "@type": "Answer", text: "Para pedidos menores a 100 unidades, el costo del flete marítimo puede diluir el ahorro. En ese rango conviene consolidar con otros compradores (LCL) o evaluar si el fabricante tiene stock en bodega cercana a su país. Varios fabricantes de este ranking manejan pedidos desde 50 pupitres para colegios privados pequeños, aunque el precio por unidad sube entre un 15% y un 25%." } },
+  ],
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  image={pageImage}
+  canonicalPath={canonicalPath}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="school-guide">
+  <!-- ============ HERO / INTRO ============ -->
+  <section class="section article-hero">
+    <div class="container resource-hero-grid" style="align-items:center;">
+      <div class="resource-hero-copy">
+        <p class="eyebrow">Guía de Compra &middot; {publicationDateLabel}</p>
+        <h1>Top 10 Empresas de Mobiliario Escolar en China 2026</h1>
+        <p>
+          Si representa a un colegio, una red de instituciones educativas o una distribuidora de equipamiento escolar en América Latina y está evaluando importar mobiliario desde China, esta guía le va a ahorrar semanas de búsqueda y el riesgo de elegir un fabricante que no cumple.
+        </p>
+        <p>
+          Armamos este ranking con datos de proyectos reales en colegios de México, Colombia, Chile y Perú. Visitamos plantas, revisamos certificaciones y hablamos con directores de compras que ya importaron pupitres, sillas, mesas de laboratorio y estanterías desde Guangdong y Zhejiang. El resultado: <strong>10 fabricantes que entregan calidad consistente, documentación de exportación impecable y precios que funcionan para presupuestos educativos</strong>.
+        </p>
+      </div>
+      <figure class="resource-hero-media">
+        <img src="/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp" alt="Aula escolar con pupitres y mobiliario educativo fabricado en China por HYMUEBLE" width="1920" height="1080" loading="eager" decoding="async" fetchpriority="high" />
+        <figcaption>Aula de colegio equipada con mobiliario escolar de HYMUEBLE / Hongye Furniture Group — pupitres, sillas y estanterías.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHINA ============ -->
+  <section class="section alt article-section article-context">
+    <div class="container article-prose">
+      <h2>¿Por qué comprar mobiliario escolar en China en 2026?</h2>
+      <p>Después de 15 años fabricando y exportando mobiliario para colegios desde Guangdong, identificamos tres razones que ningún comprador institucional debería ignorar:</p>
+      <ol class="editorial-list">
+        <li><strong>Certificaciones internacionales al alcance del presupuesto.</strong> Los fabricantes chinos de nivel exportador trabajan con MDF E1, pinturas base agua, cantos redondeados y herrajes con certificación de durabilidad. Un pupitre que cumple norma EN 1729 (ergonomía escolar europea) cuesta entre un 30% y un 50% menos fabricado en China que en Europa o Norteamérica.</li>
+        <li><strong>Personalización institucional sin costo prohibitivo.</strong> ¿Necesita los pupitres en el color Pantone de su colegio? ¿El logo grabado en cada mesa? ¿Sillas apilables con el nombre de la institución? Las fábricas chinas manejan estos pedidos con flexibilidad y sin los recargos del 40-60% que aplican los fabricantes locales en muchos países latinoamericanos.</li>
+        <li><strong>Cadena de suministro integrada.</strong> En un radio de 150 km alrededor de Foshan y Dongguan encuentra proveedores de tubo de acero, inyección de plástico, tableros melamínicos y empaque de exportación. Esto reduce los tiempos de producción entre un 20% y un 35% frente a cadenas de suministro fragmentadas, y el ahorro se refleja en el precio final.</li>
+      </ol>
+      <blockquote class="data-callout">
+        <p><strong>Dato concreto:</strong> en nuestra planta de Foshan, un pedido de 800 pupitres para un colegio en Bogotá se produjo en 6 semanas y llegó a puerto en Cartagena sin un solo reclamo por calidad. El director de compras nos dijo: "la diferencia de precio con el proveedor local pagó el flete y sobró para comprar las sillas de la biblioteca".</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ HOW WE BUILT THIS LIST ============ -->
+  <section class="section article-section article-methodology">
+    <div class="container article-prose article-prose--wide">
+      <h2>Cómo evaluamos a los fabricantes de mobiliario escolar</h2>
+      <p>No nos basamos en el tamaño del catálogo ni en la antigüedad de la empresa. Los criterios que realmente importan cuando un colegio o una red educativa compra mobiliario desde China son:</p>
+      <div class="resource-table-wrapper methodology-table">
+      <table>
+        <thead>
+          <tr><th>Criterio</th><th>Qué evalúa</th><th>Por qué importa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Certificaciones de seguridad</td><td data-label="Evalúa">¿Tiene ISO 9001, ISO 14001? ¿Sus materiales cumplen E1 o CARB Phase 2?</td><td data-label="Importa">Un pupitre con formaldehído fuera de norma es un riesgo legal y de salud</td></tr>
+          <tr><td>Ergonomía y normas dimensionales</td><td data-label="Evalúa">¿Cumple EN 1729, GB/T 3976 o BIFMA según el destino?</td><td data-label="Importa">La postura del estudiante afecta concentración y salud</td></tr>
+          <tr><td>Durabilidad estructural</td><td data-label="Evalúa">Ciclos de uso, resistencia de soldaduras, estabilidad de pintura electrostática</td><td data-label="Importa">Un pupitre escolar recibe 1,200 horas de uso al año</td></tr>
+          <tr><td>Capacidad de personalización</td><td data-label="Evalúa">Colores institucionales, grabado de logo, dimensiones por nivel educativo</td><td data-label="Importa">Cada colegio tiene su identidad visual y su población estudiantil</td></tr>
+          <tr><td>Documentación de exportación</td><td data-label="Evalúa">Certificados de origen, fichas técnicas por lote, packing list por aula</td><td data-label="Importa">Una escuela no puede esperar 3 semanas en aduana por papeles incompletos</td></tr>
+          <tr><td>Soporte post-venta</td><td data-label="Evalúa">Repuestos, garantía, manuales en español, atención a reclamos</td><td data-label="Importa">Los niños rompen cosas; el fabricante debe responder</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><em>El último criterio separa a los fabricantes serios de los que solo quieren despachar el contenedor.</em></p>
+    </div>
+  </section>
+
+  <!-- ============ TOP 10 ============ -->
+  <section class="section alt article-section article-ranking">
+    <div class="container article-prose">
+      <h2>Los 10 fabricantes de mobiliario escolar más confiables en China (2026)</h2>
+
+      <article class="manufacturer-entry">
+      <h3>1. Jiansheng Furniture Group: líder en pupitres y sillas escolares para grandes pedidos institucionales</h3>
+      <p>Jiansheng es el fabricante de mobiliario escolar más grande de China por volumen de exportación a gobiernos y redes educativas. Su planta en Xiamen produce más de 500,000 pupitres al año y maneja contratos con ministerios de educación en África, Medio Oriente y el Sudeste Asiático.</p>
+      <p>Su punto fuerte es la producción a escala con consistencia de lote: cuando pide 2,000 pupitres, los 2,000 son iguales, algo que en fábricas más pequeñas se convierte en un dolor de cabeza. Trabajan con tubo de acero de 1.2 mm de espesor mínimo, pintura electrostática horneada y tableros MDF E1. <em>No es para usted si</em> necesita servicio en español o si su pedido es menor a 300 unidades (su sistema de producción está optimizado para grandes volúmenes y los pedidos chicos pagan un recargo importante).</p>
+      </article>
+
+      <article class="manufacturer-entry manufacturer-entry--featured">
+      <h3>2. HYMUEBLE / Hongye Furniture Group: servicio en español y experiencia en colegios de América Latina</h3>
+      <p>Fabricante con sede en Foshan, Guangdong, con más de 15 años produciendo mobiliario para el sector educativo. Hemos equipado aulas, laboratorios y bibliotecas en colegios de México, Colombia, Chile, Perú y Panamá. Nuestro diferencial no está solo en el producto: está en <strong>hablar español desde el primer correo hasta la entrega final</strong>.</p>
+
+      <p>Manejamos toda la línea escolar: pupitres individuales y bipersonales, sillas apilables, mesas de laboratorio con superficie fenólica, estanterías para biblioteca, lockers metálicos y mobiliario para salas de profesores. Cada producto se fabrica bajo las normas que aplican al país de destino: EN 1729 para Europa, NTC para Colombia, NOM para México, o las especificaciones particulares que nos envíe su departamento de infraestructura.</p>
+
+      <h4>Casos recientes en el sector educativo</h4>
+      <p>En 2025 entregamos 1,200 pupitres y 80 mesas de laboratorio para un colegio en Medellín, Colombia. El proyecto incluyó personalización de color institucional (azul corporativo Pantone 2945C) y grabado del escudo del colegio en cada pupitre. El pedido completo se produjo en 7 semanas y llegó a puerto con menos del 1% de incidencias.</p>
+
+      <p>Otro caso: una red de 3 colegios en Lima, Perú, nos pidió mobiliario diferenciado por nivel: pupitres de 4 tamaños para primaria (6-12 años), mesas de trabajo grupal para secundaria y sillería ergonómica para la sala de profesores. Consolidamos las tres categorías en un solo envío y el ahorro en flete fue del 18% frente a tres pedidos separados.</p>
+
+      <figure>
+        <img src="/assets/hymueble/recursos/blog/images/hym-03-img-02-planta-produccion.webp" alt="Planta de producción de Hongye Furniture Group en Foshan: línea de mobiliario escolar" width="1000" height="1079" loading="lazy" decoding="async" />
+        <figcaption>Planta de producción de Hongye Furniture Group: 200,000 m² con línea dedicada a mobiliario educativo.</figcaption>
+      </figure>
+
+      <h4>Servicio de instalación y post-venta</h4>
+      <p>Para pedidos superiores a 500 piezas, ofrecemos dos modalidades de instalación: (a) envío de un técnico supervisor al colegio, que trabaja con el equipo de mantenimiento local durante 3-5 días, o (b) supervisión remota por videollamada con manuales de montaje en español ilustrados paso a paso.</p>
+
+      <p>La garantía estándar es de 3 años en estructura metálica y 1 año en superficies y herrajes. Mantenemos stock de repuestos para los modelos activos y respondemos solicitudes de garantía en un plazo máximo de 72 horas. <em>No es para usted si</em> su pedido es menor a 50 pupitres; en ese rango, el costo del flete individual puede superar el ahorro en producto.</p>
+
+      <h4>Capacidad de producción: mobiliario escolar</h4>
+      <div class="resource-table-wrapper capability-table">
+      <table>
+        <thead><tr><th>Etapa</th><th>Lo que cubre</th></tr></thead>
+        <tbody>
+          <tr><td>Diseño y muestras</td><td>Planos en español, muestra física con los colores y grabados de su institución</td></tr>
+          <tr><td>Producción</td><td>Control de calidad en 3 puntos: corte de tubo y soldadura, pintura electrostática, ensamble final</td></tr>
+          <tr><td>Pre-embarque</td><td>Inspección con fotos por lote, prueba de carga en 5% de las unidades al azar</td></tr>
+          <tr><td>Logística</td><td>Documentación completa, consolidación de carga multi-categoría, seguimiento puerto a puerto</td></tr>
+          <tr><td>Instalación</td><td>Técnico en destino o supervisión remota con manuales en español</td></tr>
+          <tr><td>Post-venta</td><td>Repuestos, garantía de 3 años en estructura, respuesta en 72 horas</td></tr>
+        </tbody>
+      </table>
+      </div>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>3. Lanlin Teaching Equipment: especialista en equipamiento completo de aulas</h3>
+      <p>Lanlin no solo fabrica pupitres: produce el aula completa. Su catálogo abarca desde pizarras interactivas y proyectores hasta mesas de laboratorio, armarios para material didáctico y sillería para auditorios. Para colegios que están armando aulas desde cero, manejar un solo proveedor que entregue todo reduce drásticamente los problemas de coordinación.</p>
+      <p><strong>Dato clave:</strong> Son uno de los pocos fabricantes chinos con certificación específica para mobiliario de laboratorio escolar (resistencia química de superficies). <em>No es para usted si</em> solo necesita pupitres; su valor está en el paquete integral.</p>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>4. Guangdong Winsun Furniture: pupitres y sillas con la mejor relación precio-volumen</h3>
+      <p>Winsun se enfoca en mobiliario escolar funcional para colegios públicos y privados de presupuesto medio. Su ventaja es que fabrican el 90% de los componentes in house (tubo, tablero, herrajes y empaque), lo que elimina los márgenes de subcontratistas.</p>
+      <p><strong>Dato clave:</strong> Un pupitre unipersonal estándar (tubo de acero 1.2 mm + MDF E1 18 mm) sale de su fábrica por menos de $35 USD FOB en pedidos de 500+ unidades. Si su prioridad es maximizar la cantidad de pupitres por dólar sin sacrificar lo básico de seguridad, Winsun es su opción.</p>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>5. Kecheng Education Equipment: referencia en mobiliario para laboratorios escolares</h3>
+      <p>Kecheng fabrica mesas de laboratorio con superficie fenólica de 12.7 mm y estructura de acero con pintura epóxica anticorrosiva. Sus mesas soportan ácidos diluidos, alcoholes y solventes comunes en laboratorios de química de secundaria.</p>
+      <p><strong>Dato clave:</strong> Incluyen fregadero integrado y conexiones para gas y agua, lo que elimina la necesidad de contratar un instalador de plomería por separado. <em>No es para usted si</em> necesita pupitres de aula convencional: Kecheng es especialista de laboratorio, no cubre el aula estándar.</p>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>6. Yongkang Jinying Stationery: sillas escolares apilables de alta durabilidad</h3>
+      <p>Jinying fabrica sillas escolares desde hace 20 años y su especialidad son los modelos apilables. Una silla Jinying estándar soporta 120 kg de carga estática y resiste más de 50,000 ciclos de uso según pruebas internas.</p>
+      <p><strong>Dato clave:</strong> Sus sillas se apilan de a 12 unidades, ocupando menos de 1 m² de almacenamiento. Para colegios con espacio limitado fuera del horario escolar, esto cambia la logística diaria. Ofrecen 8 colores estándar sin costo adicional.</p>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>7. Zhejiang Huayu Furniture: mobiliario para preescolar y educación infantil</h3>
+      <p>Huayu se especializa en mobiliario para niños de 2 a 6 años. Sus mesas y sillas de preescolar usan plástico rotomoldeado de grado alimenticio, sin bordes filosos, sin tornillos expuestos y con colores que no se decoloran con la limpieza diaria.</p>
+      <p><strong>Dato clave:</strong> Cumplen con la norma EN 71-3 sobre migración de metales pesados en juguetes, que es más estricta que la norma de mobiliario general. Ideal para colegios que operan bajo estándares europeos de seguridad infantil.</p>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>8. Foshan Mingzhu Furniture: estanterías, lockers y mobiliario de almacenamiento escolar</h3>
+      <p>Mingzhu produce lockers metálicos, estanterías para biblioteca y armarios para material didáctico. Su planta tiene una línea dedicada de corte y doblado de lámina de acero de 0.8 mm con pintura electrostática.</p>
+      <p><strong>Dato clave:</strong> Fabrican lockers con cerradura de combinación o llave, ventilación trasera y patas regulables en altura. Un módulo de 4 lockers sale por menos de $180 USD FOB. Combinan bien con los fabricantes de pupitres de este ranking para consolidar envíos.</p>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>9. Shandong Taishan Sports Equipment: mobiliario para aulas deportivas y gimnasios escolares</h3>
+      <p>Taishan es conocido por su equipamiento deportivo, pero su división de mobiliario para gimnasios escolares es sólida: gradas telescópicas, bancas de vestuario, armarios para implementos deportivos y mesas para árbitros.</p>
+      <p><strong>Dato clave:</strong> Sus gradas telescópicas tienen certificación de carga de 500 kg/m² y se pliegan contra la pared cuando no se usan. Si su colegio tiene un gimnasio multiuso, Taishan resuelve la parte de mobiliario que ningún fabricante de pupitres cubre.</p>
+      </article>
+
+      <article class="manufacturer-entry">
+      <h3>10. Fujian Quanzhou Shengyuan: mobiliario para comedores y cafeterías escolares</h3>
+      <p>Shengyuan fabrica mesas y bancas para comedores escolares con estructura de acero reforzado y superficie laminada de alta presión (HPL). Sus mesas de comedor de 6 plazas soportan uso intensivo diario durante años sin aflojarse.</p>
+      <p><strong>Dato clave:</strong> Ofrecen mesas plegables para comedores que también funcionan como salón de actos. Las patas se pliegan y la mesa se guarda contra la pared. Para colegios con espacios multiuso, esta dualidad ahorra metros cuadrados valiosos.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ MATRIZ COMPARATIVA (Table 2) ============ -->
+  <section class="section article-section article-comparison">
+    <div class="container article-wide">
+      <h2>Matriz de comparación rápida de fabricantes de mobiliario escolar</h2>
+      <div class="resource-table-wrapper comparison-table">
+      <table>
+        <thead>
+          <tr><th>#</th><th>Fabricante</th><th>Especialidad</th><th>Pedido mínimo</th><th>Rango de precio*</th><th>Servicio en español</th><th>Soporte post-venta LATAM</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Jiansheng Furniture</td><td>Pupitres a gran escala</td><td>300+ unidades</td><td>$</td><td>Inglés</td><td>Limitado</td></tr>
+          <tr><td>2</td><td><strong>HYMUEBLE (Hongye Furniture Group)</strong></td><td><strong>Mobiliario escolar integral: pupitres, laboratorios, bibliotecas, lockers</strong></td><td><strong>50+ pupitres</strong></td><td><strong>$$</strong></td><td><strong>Nativo</strong></td><td><strong>Sí, técnico en destino o supervisión remota</strong></td></tr>
+          <tr><td>3</td><td>Lanlin Teaching Equipment</td><td>Aula completa (pupitres + tecnología + laboratorio)</td><td>100+ unidades</td><td>$$$</td><td>Inglés</td><td>Limitado</td></tr>
+          <tr><td>4</td><td>Guangdong Winsun</td><td>Pupitres económicos</td><td>500+ unidades</td><td>$</td><td>Inglés</td><td>No</td></tr>
+          <tr><td>5</td><td>Kecheng Education</td><td>Mesas de laboratorio</td><td>20+ mesas</td><td>$$$</td><td>Inglés</td><td>No</td></tr>
+          <tr><td>6</td><td>Yongkang Jinying</td><td>Sillas apilables</td><td>100+ unidades</td><td>$</td><td>Inglés</td><td>No</td></tr>
+          <tr><td>7</td><td>Zhejiang Huayu</td><td>Mobiliario preescolar</td><td>50+ unidades</td><td>$$</td><td>Inglés</td><td>No</td></tr>
+          <tr><td>8</td><td>Foshan Mingzhu</td><td>Lockers y estanterías</td><td>20+ módulos</td><td>$</td><td>Inglés</td><td>No</td></tr>
+          <tr><td>9</td><td>Shandong Taishan</td><td>Aulas deportivas y gimnasios</td><td>Proyecto completo</td><td>$$$</td><td>Inglés</td><td>No</td></tr>
+          <tr><td>10</td><td>Fujian Quanzhou Shengyuan</td><td>Comedores escolares</td><td>50+ plazas</td><td>$</td><td>Inglés</td><td>No</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><small>* $ = económico, $$ = medio, $$$ = especializado. Precios varían según materiales, volumen y personalización institucional.</small></p>
+    </div>
+  </section>
+
+  <!-- ============ BUDGET TABLE (Table 3) ============ -->
+  <section class="section alt article-section article-budget">
+    <div class="container article-wide">
+      <h2>¿Cuánto cuesta equipar un colegio con mobiliario escolar importado de China?</h2>
+      <p>Estos rangos reflejan pedidos reales de colegios en América Latina durante 2024-2026. No incluyen flete marítimo ni impuestos de importación, que varían según el país de destino.</p>
+      <div class="resource-table-wrapper budget-table">
+      <table>
+        <thead>
+          <tr><th>Tipo de colegio</th><th>Inversión estimada (USD)</th><th>Incluye</th><th>Plazo del proyecto</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Colegio pequeño (6-10 aulas)</td><td>$12,000 - $28,000</td><td>Pupitres, sillas, pizarras, escritorios de profesor, lockers básicos</td><td>8-10 semanas</td></tr>
+          <tr><td>Colegio mediano (15-25 aulas)</td><td>$30,000 - $65,000</td><td>Todo lo anterior + mesas de laboratorio, estanterías de biblioteca, comedor básico</td><td>10-14 semanas</td></tr>
+          <tr><td>Colegio grande (+30 aulas)</td><td>$70,000 - $180,000</td><td>Paquete completo: aulas, laboratorios, biblioteca, comedor, administración, sala de profesores</td><td>14-20 semanas</td></tr>
+          <tr><td>Red educativa (3+ sedes)</td><td>$200,000 - $500,000+</td><td>Todo lo anterior multiplicado por sede, con personalización unificada y consolidación logística</td><td>18-26 semanas</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><small>Datos de proyectos ejecutados por HYMUEBLE / Hongye Furniture Group entre 2024 y 2026. Los precios varían según especificaciones de materiales, certificaciones requeridas y volumen total del pedido.</small></p>
+    </div>
+  </section>
+
+  <!-- ============ COMMON MISTAKES ============ -->
+  <section class="section article-section article-mistakes">
+    <div class="container article-prose">
+      <h2>Tres errores que vemos repetirse al comprar mobiliario escolar en China</h2>
+      <ol class="compact-list">
+        <li><strong>No verificar las normas dimensionales del país de destino.</strong> Un pupitre que cumple la norma china GB/T 3976 puede quedar 4 cm más alto que lo que exige la norma colombiana NTC 4734. El resultado: niños de 8 años con los pies colgando durante 5 horas al día. Antes de cotizar, pida a su departamento de infraestructura la norma dimensional que aplica y compártala con el fabricante.</li>
+        <li><strong>Elegir solo por precio sin ver el grosor del tubo.</strong> Recibimos cotizaciones de colegios que comparan un pupitre de $28 USD (tubo 0.8 mm) con uno de $42 USD (tubo 1.2 mm) como si fueran el mismo producto. No lo son. El de 0.8 mm se empieza a aflojar al segundo año; el de 1.2 mm aguanta 10. Pida siempre la ficha técnica con el espesor de cada componente.</li>
+        <li><strong>Ignorar el costo de instalación y armado.</strong> Un contenedor de 400 pupitres desarmados necesita 3-4 personas durante 5-6 días para armarse. Si su colegio no tiene personal de mantenimiento disponible, sume este costo al presupuesto o negocie con el fabricante que envíe las piezas con mayor grado de pre-armado. HYMUEBLE, por ejemplo, envía los pupitres con el 70% del ensamble hecho en fábrica para que en destino solo se atornillen 6 puntos por unidad.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section alt article-section article-faq">
+    <div class="container article-prose">
+      <h2>Preguntas frecuentes sobre mobiliario escolar importado de China</h2>
+
+      <article class="faq-item">
+      <h3>¿Qué certificaciones debe tener el mobiliario escolar importado de China?</h3>
+      <p>Como mínimo: ISO 9001 para gestión de calidad e ISO 14001 para gestión ambiental. Para mobiliario de aulas se recomienda certificación de emisiones de formaldehído E1 o CARB Phase 2. Si el destino es la Unión Europea, exija el marcado CE y la norma EN 1729 para dimensiones ergonómicas. Para Estados Unidos, la certificación BIFMA es el estándar de referencia. Pida siempre los certificados originales, no copias escaneadas sin código de verificación.</p>
+      </article>
+
+      <article class="faq-item">
+      <h3>¿Cuánto tiempo toma un pedido de mobiliario escolar desde China hasta América Latina?</h3>
+      <p>Un pedido típico para una escuela de 20-30 aulas toma entre 8 y 14 semanas desde la confirmación hasta la entrega en puerto. El desglose es: 1-2 semanas para aprobación de muestras y colores institucionales, 5-8 semanas de producción, 1 semana de inspección y embalaje, y 2-4 semanas de tránsito marítimo. Los pedidos de más de 500 pupitres pueden necesitar 2-3 semanas adicionales de producción. Programe su compra con al menos 4 meses de anticipación al inicio del año escolar.</p>
+      </article>
+
+      <article class="faq-item">
+      <h3>¿El fabricante puede personalizar los colores y el logo de la escuela?</h3>
+      <p>Sí. La mayoría de los fabricantes de esta lista ofrecen personalización de colores según el código Pantone de la institución y pueden grabar o serigrafiar el logo en pupitres, sillas y estanterías. El costo adicional por personalización de color suele ser del 5% al 12% sobre el precio base, dependiendo del volumen. El grabado de logo tiene un costo único de molde o plantilla (entre $200 y $600 USD) más un pequeño recargo por unidad.</p>
+      </article>
+
+      <article class="faq-item">
+      <h3>¿Conviene comprar mobiliario escolar en China si el pedido es menor a 100 unidades?</h3>
+      <p>Para pedidos menores a 100 unidades, el costo del flete marítimo puede diluir el ahorro frente a un proveedor local. En ese rango conviene consolidar con otros compradores (carga LCL) o evaluar si el fabricante tiene stock en bodega cercana a su país. Varios fabricantes de este ranking, como HYMUEBLE, manejan pedidos desde 50 pupitres para colegios privados pequeños, aunque el precio por unidad sube entre un 15% y un 25% respecto al precio de volumen. Pida ambas cotizaciones y compare con su proveedor local antes de decidir.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <CTA
+    title="¿Necesita una cotización de mobiliario escolar para su colegio?"
+    text="Envíenos la lista de aulas que necesita equipar, la cantidad de alumnos por nivel y los colores institucionales de su colegio. En 3-5 días hábiles le entregamos una cotización detallada con desglose por pieza, materiales propuestos, plazo estimado y las normas dimensionales que aplican a su país. Todo en español, sin intermediarios."
+  />
+
+  <!-- ============ BRAND SIGNATURE ============ -->
+  <section class="section brand-signature">
+    <div class="container" style="text-align:center;">
+      <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+      <em>Fabricante de mobiliario comercial para hoteles, oficinas, colegios y proyectos contract</em><br />
+      <em>Servicio en español nativo &middot; Cotización en 3-5 días hábiles &middot; Soporte post-venta en América Latina</em><br />
+      <em>Solicite una cotización: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+    </div>
+  </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .school-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .school-guide img {
+    height: auto;
+  }
+
+  .school-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .school-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .school-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .school-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .school-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .school-guide .article-wide {
+    width: min(1240px, calc(100% - 48px));
+  }
+
+  .school-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .school-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .school-guide .article-section h4 {
+    margin: 30px 0 10px;
+  }
+
+  .school-guide .article-hero h1,
+  .school-guide .article-section h2,
+  .school-guide .article-section h3,
+  .school-guide .article-section h4 {
+    overflow-wrap: anywhere;
+  }
+
+  .school-guide .article-section p,
+  .school-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .school-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .school-guide .article-section ol:not(.compact-list),
+  .school-guide .article-section ul {
+    margin: 20px 0 24px;
+    padding-left: 24px;
+  }
+
+  .school-guide .article-section li + li {
+    margin-top: 9px;
+  }
+
+  .school-guide .article-prose figure {
+    margin: 30px 0 34px;
+  }
+
+  .school-guide .article-prose figcaption {
+    margin-top: 10px;
+    color: var(--article-muted);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .school-guide .data-callout {
+    margin: 24px 0 0;
+    padding: 20px 22px;
+    border-left: 3px solid var(--article-gold);
+    border-radius: 0 8px 8px 0;
+    background: var(--article-warm);
+  }
+
+  .school-guide .data-callout p:last-child {
+    margin: 0;
+  }
+
+  .school-guide .resource-table-wrapper {
+    max-width: 100%;
+    margin: 26px 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    border: 1px solid var(--article-line);
+    border-radius: 8px;
+    background: #fff;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .school-guide .resource-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--article-muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .school-guide .resource-table-wrapper th,
+  .school-guide .resource-table-wrapper td {
+    padding: 14px 16px;
+    border-top: 1px solid var(--article-line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .school-guide .resource-table-wrapper th {
+    border-top: 0;
+    background: #101820;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .school-guide .resource-table-wrapper tbody tr:nth-child(even) {
+    background: #fbfaf8;
+  }
+
+  .school-guide .methodology-table table {
+    min-width: 0;
+  }
+
+  .school-guide .comparison-table table {
+    min-width: 980px;
+  }
+
+  .school-guide .budget-table table {
+    min-width: 760px;
+  }
+
+  .school-guide .capability-table table {
+    min-width: 0;
+  }
+
+  .school-guide .comparison-table tbody tr:nth-child(2) {
+    background: #efe6d9;
+    color: var(--article-ink);
+  }
+
+  .school-guide .manufacturer-entry {
+    padding: 32px 0;
+    border-top: 1px solid var(--article-line);
+  }
+
+  .school-guide .manufacturer-entry > h3 {
+    margin-top: 0;
+  }
+
+  .school-guide .manufacturer-entry--featured {
+    height: auto;
+    margin: 10px 0;
+    padding: 32px;
+    border: 1px solid rgba(152, 120, 72, .38);
+    border-radius: 8px;
+    background: var(--article-warm);
+  }
+
+  .school-guide .compact-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .school-guide .compact-list li {
+    margin: 0;
+    padding: 20px;
+    border: 1px solid var(--article-line);
+    border-radius: 8px;
+    background: var(--article-warm);
+  }
+
+  .school-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .school-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .school-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .school-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .school-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .school-guide .compact-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .school-guide .article-hero,
+    .school-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .school-guide .article-hero .resource-hero-grid,
+    .school-guide .article-prose,
+    .school-guide .article-prose--wide,
+    .school-guide .article-wide,
+    .school-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .school-guide .article-hero p:not(.eyebrow),
+    .school-guide .article-section p,
+    .school-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .school-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .school-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .school-guide .methodology-table table,
+    .school-guide .methodology-table tbody,
+    .school-guide .methodology-table tr,
+    .school-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .school-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .school-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .school-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .school-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .school-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .school-guide .manufacturer-entry--featured {
+      margin-inline: 0;
+      padding: 22px 18px;
+    }
+
+    .school-guide .brand-signature {
+      padding-block: 34px;
+    }
+  }
+</style>
