@@ -429,7 +429,7 @@ Append this exact block after `</BaseLayout>`; do not split selectors into share
   .office-guide {
     --article-ink: #121a22;
     --article-muted: #596672;
-    --article-gold: #987848;
+    --article-gold: #7f6036;
     --article-line: #e7e2d9;
     --article-warm: #f8f7f4;
     overflow: clip;
@@ -509,21 +509,24 @@ Append this exact block after `</BaseLayout>`; do not split selectors into share
     margin-top: 9px;
   }
 
-  .office-guide .article-prose figure {
+  .office-guide .article-prose figure,
+  .office-guide .article-wide figure {
     display: grid;
     justify-items: center;
     margin: 30px 0 34px;
     text-align: center;
   }
 
-  .office-guide .article-prose figure img {
+  .office-guide .article-prose figure img,
+  .office-guide .article-wide figure img {
     width: auto;
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(18, 26, 34, .08);
   }
 
-  .office-guide .article-prose figcaption {
+  .office-guide .article-prose figcaption,
+  .office-guide .article-wide figcaption {
     max-width: 740px;
     margin-top: 10px;
     color: var(--article-muted);
@@ -545,7 +548,8 @@ Append this exact block after `</BaseLayout>`; do not split selectors into share
 
   .office-guide .resource-hero-copy a,
   .office-guide .article-prose a,
-  .office-guide .resource-table-wrapper a {
+  .office-guide .resource-table-wrapper a,
+  .office-guide .brand-signature a {
     color: var(--article-gold);
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -626,7 +630,7 @@ Append this exact block after `</BaseLayout>`; do not split selectors into share
     height: auto;
     margin: 10px 0;
     padding: 32px;
-    border: 1px solid rgba(152, 120, 72, .38);
+    border: 1px solid rgba(127, 96, 54, .38);
     border-radius: 8px;
     background: var(--article-warm);
   }
@@ -665,6 +669,11 @@ Append this exact block after `</BaseLayout>`; do not split selectors into share
   .office-guide .brand-signature {
     padding-block: clamp(34px, 4vw, 50px);
     border-top: 1px solid var(--article-line);
+  }
+
+  .office-guide .brand-signature p {
+    color: var(--article-muted);
+    line-height: 1.7;
   }
 
   @media (max-width: 900px) {
