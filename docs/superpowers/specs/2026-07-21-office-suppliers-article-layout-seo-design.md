@@ -1,5 +1,9 @@
 # 办公家具供应商文章排版与 SEO 设计
 
+## 2026-07-21 质量门禁更正
+
+实施时发现仓库的 `pnpm qa:static` 对所有 `/assets/hymueble/` 页面图片强制使用 WebP，并要求新生成路由进入 `sitemap.xml`。因此最终实施使用 WebP 版 Hero 与 6 张正文图，同步博客列表卡片图片地址，并只向站点地图补入本文路由。画面、alt、正文、排名、数据、FAQ 与 CTA 保持不变；本更正优先于下文原先的 JPG 路径说明。
+
 ## 目标
 
 在不改变文章核心内容、排名立场和转化路径的前提下，将
@@ -30,10 +34,12 @@
 允许修改：
 
 - `src/pages/recursos/top-10-proveedores-mobiliario-oficina-ergonomico-2026.astro`
+- `src/pages/recursos/blog.astro`，仅将本文卡片图片切换为同图 WebP。
+- `src/pages/sitemap.xml.ts`，仅补入本文路由。
 
 允许新增：
 
-- `public/assets/hymueble/recursos/blog/images/hym-02-oficina-ergonomica.jpg`
+- Hero 与 6 张正文图的 `hym-02-*.webp` 网页版；原始 JPG/PNG 保留。
 - 本设计文档。
 - 对应实施计划。
 
@@ -42,8 +48,7 @@
 - `src/layouts/BaseLayout.astro`
 - `src/components/CTA.astro`
 - `src/styles/` 下的共享样式
-- `src/pages/recursos/blog.astro`
-- Sitemap、导航、目录数据、项目数据、联系表单或其他路由
+- 导航、目录数据、项目数据、联系表单或其他路由
 - 当前未跟踪的 `.agents/` 和 `AGENTS.md`
 
 ## SEO 页面角色审计

@@ -1,21 +1,30 @@
 # Office Suppliers Article Layout and SEO Implementation Plan
 
+> **Quality-gate correction (discovered in Task 2):** the repository static QA
+> requires referenced Hymueble images to be WebP and generated routes to be in
+> the sitemap. Final implementation therefore uses WebP counterparts for all
+> seven `hym-02` images, updates the article and blog-card image references,
+> uses the WebP Hero in Article schema, and adds only the office-article route
+> to `src/pages/sitemap.xml.ts`. All visible copy, alt text, ranking, tables,
+> FAQ and CTA remain unchanged. This correction supersedes every conflicting
+> JPG-only, page-only, blog-exclusion, and sitemap-exclusion constraint below.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Apply the approved A editorial layout and the approved narrow SEO corrections to the office-suppliers article, while preserving its H1, body copy, ranking, tables, FAQ, CTA, and conversion position.
 
-**Architecture:** Keep production behavior inside the existing Astro page plus one restored image asset. Add one `.office-guide` scope, semantic grouping wrappers around existing nodes, and a page-scoped `<style>` block; do not modify shared components or global CSS. Prove safety with generated-HTML fingerprints, image status checks, existing project QA, targeted Playwright geometry, and desktop/tablet/mobile screenshots.
+**Architecture:** Keep layout behavior inside the existing Astro page, with seven WebP article assets plus one narrow blog-card image update and one sitemap route addition required by static QA. Add one `.office-guide` scope, semantic grouping wrappers around existing nodes, and a page-scoped `<style>` block; do not modify shared components or global CSS. Prove safety with generated-HTML fingerprints, image status checks, existing project QA, targeted Playwright geometry, and desktop/tablet/mobile screenshots.
 
 **Tech Stack:** Astro 5, semantic HTML, page-scoped CSS, Playwright 1.61, ffmpeg image crop, pnpm QA scripts, GitHub Pages.
 
 ## Global Constraints
 
-- Modify production behavior only in `src/pages/recursos/top-10-proveedores-mobiliario-oficina-ergonomico-2026.astro`.
-- Add only `public/assets/hymueble/recursos/blog/images/hym-02-oficina-ergonomica.jpg` as the restored production asset.
-- Do not modify `BaseLayout.astro`, `CTA.astro`, shared CSS, `blog.astro`, Sitemap code, navigation, data files, forms, or other routes.
+- Modify layout behavior only in `src/pages/recursos/top-10-proveedores-mobiliario-oficina-ergonomico-2026.astro`; outside it, only switch this article's blog-card image to WebP and add this route to the sitemap.
+- Add only the seven `hym-02-*.webp` article assets required by static QA; keep the original JPG/PNG source files unchanged.
+- Do not modify `BaseLayout.astro`, `CTA.astro`, shared CSS, other blog content, other Sitemap entries, navigation, data files, forms, or other routes.
 - Keep the URL, `canonicalPath`, keywords array, H1, all H2–H4 text/order, body copy, ranking, lists, table cells, FAQ answers, CTA copy, and brand signature unchanged.
-- Keep all existing valid image sources, alt text, captions, order, lazy-loading attributes, and file contents unchanged.
-- Change only the approved SEO fields: Title, Meta Description, Article `dateModified`, absolute Article image/logo URLs, the fixed current visible date source, the restored Hero dimensions, and two internal-link targets.
+- Keep every image's visual content, alt text, caption, order, lazy-loading behavior, and pixel dimensions unchanged; only the approved Hero crop and WebP extension changes are allowed.
+- Change only the approved SEO fields: Title, Meta Description, Article `dateModified`, absolute Article image/logo URLs, the fixed current visible date source, the restored Hero dimensions, two internal-link targets, and the article's sitemap inclusion.
 - Keep the visible date exactly `Guía de Compra · 21 de julio de 2026`.
 - Keep all ten suppliers and feature only HYMUEBLE / Hongye Furniture Group.
 - Keep `.agents/` and `AGENTS.md` untracked and out of every commit.
