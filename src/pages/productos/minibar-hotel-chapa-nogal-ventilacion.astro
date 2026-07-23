@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Minibar Hotel Chapa Nogal Ventilación | Fabricante Mobiliario Hotelero";
 const pageDescription = "Minibar de hotel con chapa de nogal y sistema de ventilación térmica integrada. Reduce temperatura interna 4.5°C, prolonga vida del electrodoméstico. Fabricación a medida.";
-const canonicalUrl = `https://hymueble.com/productos/minibar-hotel-chapa-nogal-ventilacion/`;
+const canonicalUrl = "/productos/minibar-hotel-chapa-nogal-ventilacion/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -559,8 +559,8 @@ const canonicalUrl = `https://hymueble.com/productos/minibar-hotel-chapa-nogal-v
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

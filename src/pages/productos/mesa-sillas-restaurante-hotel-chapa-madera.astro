@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Mesa Sillas Restaurante Hotel Chapa Madera | Mobiliario Hostelería";
 const pageDescription = "Conjunto de mesa y sillas para restaurante de hotel con chapa de madera. Diseño apilable, resistente a uso intensivo. Fabricación a medida para cadenas hoteleras.";
-const canonicalUrl = `https://hymueble.com/productos/mesa-sillas-restaurante-hotel-chapa-madera/`;
+const canonicalUrl = "/productos/mesa-sillas-restaurante-hotel-chapa-madera/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -555,8 +555,8 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-sillas-restaurante-hot
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

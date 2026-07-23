@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Sofá Moderno Dos Plazas Hotel | Mobiliario Habitación Hotelera";
 const pageDescription = "Sofá moderno de dos plazas con tapizado técnico para hoteles. Diseño compacto para habitaciones y suites, estructura de madera maciza, tapizado 120K Martindale.";
-const canonicalUrl = `https://hymueble.com/productos/sofa-moderno-dos-plazas-tapizado-hotel/`;
+const canonicalUrl = "/productos/sofa-moderno-dos-plazas-tapizado-hotel/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -559,8 +559,8 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-moderno-dos-plazas-tap
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

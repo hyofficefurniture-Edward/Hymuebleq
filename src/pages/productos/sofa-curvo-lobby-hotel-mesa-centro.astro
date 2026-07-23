@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Sofá Curvo Lobby Hotel con Mesa Centro | Fabricante Mobiliario Hotelero";
 const pageDescription = "Sofá curvo para lobby de hotel con mesa de centro a juego. Estructura de roble macizo, tapizado 200K Martindale, personalizable en forma y dimensiones. Pedido mínimo 30 uds.";
-const canonicalUrl = `https://hymueble.com/productos/sofa-curvo-lobby-hotel-mesa-centro/`;
+const canonicalUrl = "/productos/sofa-curvo-lobby-hotel-mesa-centro/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -565,8 +565,8 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-curvo-lobby-hotel-mesa
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

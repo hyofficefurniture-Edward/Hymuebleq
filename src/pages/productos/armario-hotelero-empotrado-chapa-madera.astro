@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Armario Hotelero Empotrado Chapa Madera | Fabricante Muebles Hotel";
 const pageDescription = "Armario empotrado hotelero con chapa de madera natural. Fabricación a medida para proyectos hoteleros 3-5 estrellas. Acabados personalizables, herrajes suaves, pedido mínimo 30 unidades.";
-const canonicalUrl = `https://hymueble.com/productos/armario-hotelero-empotrado-chapa-madera/`;
+const canonicalUrl = "/productos/armario-hotelero-empotrado-chapa-madera/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -146,7 +146,7 @@ const canonicalUrl = `https://hymueble.com/productos/armario-hotelero-empotrado-
                         </tr>
                         <tr>
                             <td class="spec-label">Iluminación</td>
-                            <td class="spec-value">LED 4000K interior con sensor de puerta, 12V, consumo <5W</td>
+                            <td class="spec-value">LED 4000K interior con sensor de puerta, 12V, consumo &lt;5W</td>
                         </tr>
                         <tr>
                             <td class="spec-label">Acabados</td>
@@ -569,8 +569,8 @@ const canonicalUrl = `https://hymueble.com/productos/armario-hotelero-empotrado-
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

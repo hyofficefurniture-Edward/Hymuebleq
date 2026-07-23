@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Armario Suite Hotelera Chapa Madera LED | Fabricante Mobiliario 5 Estrellas";
 const pageDescription = "Armario de suite hotelera con chapa de madera, cajonera integrada e iluminación LED interior. Diseño para hoteles 4-5 estrellas, acabados personalizables, pedido mínimo 30 uds.";
-const canonicalUrl = `https://hymueble.com/productos/armario-suite-hotelera-chapa-madera-led/`;
+const canonicalUrl = "/productos/armario-suite-hotelera-chapa-madera-led/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -563,8 +563,8 @@ const canonicalUrl = `https://hymueble.com/productos/armario-suite-hotelera-chap
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

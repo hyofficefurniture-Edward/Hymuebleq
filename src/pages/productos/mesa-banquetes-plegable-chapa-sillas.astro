@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Mesa Banquetes Plegable Chapa Madera | Equipamiento Hotelero Salones";
 const pageDescription = "Mesa de banquetes plegable con tablero de chapa de madera y sillas apilables. Sistema plegado rápido, almacenaje compacto. Fabricación para hoteles y salones de eventos.";
-const canonicalUrl = `https://hymueble.com/productos/mesa-banquetes-plegable-chapa-sillas/`;
+const canonicalUrl = "/productos/mesa-banquetes-plegable-chapa-sillas/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -555,8 +555,8 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-banquetes-plegable-cha
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

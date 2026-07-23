@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Paneles Pared Chapa Madera Hotel | Revestimiento Hotelero | Fabricante";
 const pageDescription = "Paneles de pared con chapa de madera natural para hoteles. Sistema click de instalación rápida, acabados acústicos opcionales. Fabricación a medida, certificación FSC.";
-const canonicalUrl = `https://hymueble.com/productos/paneles-pared-chapa-madera-hotel/`;
+const canonicalUrl = "/productos/paneles-pared-chapa-madera-hotel/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -555,8 +555,8 @@ const canonicalUrl = `https://hymueble.com/productos/paneles-pared-chapa-madera-
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

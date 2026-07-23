@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Mesa Conferencias Ejecutiva Chapa Nogal | Mobiliario Hotelero Corporativo";
 const pageDescription = "Mesa de conferencias ejecutiva con chapa de nogal FSC y sillas ergonómicas. Sistema modular tool-free, integración AV oculta, certificación BIFMA. Para hoteles y espacios corporativos.";
-const canonicalUrl = `https://hymueble.com/productos/mesa-conferencias-ejecutiva-nogal-sillas/`;
+const canonicalUrl = "/productos/mesa-conferencias-ejecutiva-nogal-sillas/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -569,8 +569,8 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-conferencias-ejecutiva
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

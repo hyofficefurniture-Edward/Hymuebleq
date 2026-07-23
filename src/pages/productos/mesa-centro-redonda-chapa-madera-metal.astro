@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Mesa Centro Redonda Chapa Madera Patas Metal | Mobiliario Hotel";
 const pageDescription = "Mesa de centro redonda para hoteles con sobre de chapa de madera y patas metálicas. Diseño ligero y resistente, configurable en diámetro y altura. Acabados personalizables.";
-const canonicalUrl = `https://hymueble.com/productos/mesa-centro-redonda-chapa-madera-metal/`;
+const canonicalUrl = "/productos/mesa-centro-redonda-chapa-madera-metal/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -555,8 +555,8 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-centro-redonda-chapa-m
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Sofá Modular Recto Tela Otomana Hotel | Mobiliario Contract Hotelero";
 const pageDescription = "Sofá modular recto de tela con otomana para hoteles. Estructura de pino macizo, tapizado 150K Martindale, módulos configurables. Fabricación a medida, pedido mínimo 30 uds.";
-const canonicalUrl = `https://hymueble.com/productos/sofa-modular-recto-tela-otomana-hotel/`;
+const canonicalUrl = "/productos/sofa-modular-recto-tela-otomana-hotel/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -563,8 +563,8 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-modular-recto-tela-oto
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>

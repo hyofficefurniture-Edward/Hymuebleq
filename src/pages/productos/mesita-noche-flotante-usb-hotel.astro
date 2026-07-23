@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Mesita Noche Flotante USB Hotel | Mobiliario Habitación Hotelera | Fabricante";
 const pageDescription = "Mesita de noche flotante con puerto USB-A/C y enchufe integrado para hoteles. Instalación en pared con sistema antivotco, acabados personalizables. Pedido mínimo 30 uds.";
-const canonicalUrl = `https://hymueble.com/productos/mesita-noche-flotante-usb-hotel/`;
+const canonicalUrl = "/productos/mesita-noche-flotante-usb-hotel/";
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  canonicalURL={canonicalUrl}
+  canonicalPath={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -567,8 +567,8 @@ const canonicalUrl = `https://hymueble.com/productos/mesita-noche-flotante-usb-h
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.faq-item').classList.toggle('open');
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item')?.classList.toggle('open');
     });
   });
 </script>
