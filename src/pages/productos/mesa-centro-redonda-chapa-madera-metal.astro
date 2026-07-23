@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-centro-redonda-chapa-m
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Mesa de Centro Redonda con Chapa de Madera y Patas Metálicas",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-centro-redonda-chapa-m
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-centro-redonda-chapa-m
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Mesa de Centro Redonda con Chapa de Madera y Patas Metálicas"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Se puede pedir con tapa de mármol o piedra sinterizada?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, como alternativa a la chapa de madera ofrecemos sobre de mármol Calacatta, Nero Marquina o piedra sinterizada Neolith de 6 mm. El precio varía según el material seleccionado."}}, {"@type": "Question", "name": "¿Las patas metálicas rayan el suelo?", "acceptedAnswer": {"@type": "Answer", "text": "No. Todas las patas incluyen tacos de polietileno de alta densidad que no dejan marca. Para suelos especialmente delicados como parqué barnizado, ofrecemos tacos de fieltro autoadhesivos de recambio."}}, {"@type": "Question", "name": "¿Cuál es el plazo de entrega para un pedido de 50 mesas?", "acceptedAnswer": {"@type": "Answer", "text": "El plazo estándar de fabricación es de 25-30 días laborables desde la confirmación del pedido. Para volúmenes superiores a 100 unidades, el plazo se ajusta según calendario de producción y se comunica en la oferta."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

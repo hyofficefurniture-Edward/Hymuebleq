@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/armario-suite-hotelera-chap
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Armario de Suite Hotelera con Chapa de Madera, Cajonera e Iluminación LED",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/armario-suite-hotelera-chap
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/armario-suite-hotelera-chap
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Armario de Suite Hotelera con Chapa de Madera, Cajonera e Iluminación LED"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿El sistema LED se puede conectar al sistema de gestión de habitación?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El driver LED admite conexión a sistemas de control centralizado mediante contacto seco. El armario puede integrarse en las escenas de iluminación de la habitación (bienvenida, descanso, limpieza) sin modificaciones adicionales."}}, {"@type": "Question", "name": "¿Se puede añadir caja fuerte empotrada?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, uno de los módulos de cajonera puede sustituirse por un hueco preparado para caja fuerte estándar de hotel (modelos Elsafe o similar). Solo hay que indicarlo en el pedido y prever la toma de corriente en la pared trasera."}}, {"@type": "Question", "name": "¿Cuánto tiempo lleva instalar un armario en la habitación?", "acceptedAnswer": {"@type": "Answer", "text": "El armario llega en módulos premontados. Dos instaladores montan un armario estándar de 240 cm en aproximadamente 90 minutos, incluyendo la fijación a pared, la conexión LED y los ajustes finales de puertas y cajones."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/minibar-hotel-chapa-nogal-v
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Minibar de Hotel con Chapa de Nogal y Sistema de Ventilación Integrado",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/minibar-hotel-chapa-nogal-v
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/minibar-hotel-chapa-nogal-v
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Minibar de Hotel con Chapa de Nogal y Sistema de Ventilación Integrado"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿El mueble viene con el frigorífico incluido?", "acceptedAnswer": {"@type": "Answer", "text": "No, el mueble se fabrica para alojar el frigorífico que el hotel seleccione. Solicitamos la ficha técnica del modelo para ajustar el hueco interior con la holgura de ventilación correcta. Si lo prefiere, podemos gestionar la compra del electrodoméstico como servicio adicional."}}, {"@type": "Question", "name": "¿Se puede instalar en habitaciones ya construidas sin hacer obra?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La instalación eléctrica se resuelve con un cable de 2 metros con clavija estándar que se conecta a la toma de pared más cercana. El mueble apoya directamente sobre el suelo con patas niveladoras y no requiere fijación a pared."}}, {"@type": "Question", "name": "¿Qué ocurre si el frigorífico gotea o derrama líquido?", "acceptedAnswer": {"@type": "Answer", "text": "La base del hueco del frigorífico tiene un pequeño rebaje perimetral que actúa como bandeja de retención. La chapa interior está sellada con barniz impermeable para que la humedad ocasional no dañe el mueble."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

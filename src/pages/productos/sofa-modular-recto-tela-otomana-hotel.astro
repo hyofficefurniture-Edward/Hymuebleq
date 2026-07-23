@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-modular-recto-tela-oto
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Sofá Modular Recto de Tela con Otomana para Hoteles",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-modular-recto-tela-oto
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-modular-recto-tela-oto
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Sofá Modular Recto de Tela con Otomana para Hoteles"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Se pueden añadir módulos más adelante?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, el sistema modular permite añadir módulos adicionales en cualquier momento, incluso años después del pedido inicial. Mantenemos el mismo tejido y tonalidad de madera en stock para garantizar la uniformidad."}}, {"@type": "Question", "name": "¿Las fundas son lavables?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, todas las fundas (asiento, respaldo y otomana) son desenfundables y lavables a máquina a 30°C. Esto reduce el coste de mantenimiento y permite una limpieza profunda sin necesidad de productos especiales."}}, {"@type": "Question", "name": "¿Ofrecen muestras de tejido para validar colores?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, enviamos un muestrario completo con los 25 colores disponibles en 48 horas. Para pedidos superiores a 50 módulos, podemos teñir un color corporativo personalizado con un plazo adicional de 15 días."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

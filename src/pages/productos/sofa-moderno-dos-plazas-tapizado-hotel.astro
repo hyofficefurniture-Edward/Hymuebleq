@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-moderno-dos-plazas-tap
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Sofá Moderno de Dos Plazas con Tapizado Técnico para Hoteles",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-moderno-dos-plazas-tap
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-moderno-dos-plazas-tap
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Sofá Moderno de Dos Plazas con Tapizado Técnico para Hoteles"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Se puede pedir con funda desenfundable?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, bajo pedido fabricamos el sofá con todas las fundas desenfundables y lavables a 30°C. Es una opción muy demandada por hoteles vacacionales y resorts donde las manchas de protector solar son frecuentes."}}, {"@type": "Question", "name": "¿Cabe en un ascensor de hotel estándar?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Con 140 cm de ancho y 80 cm de fondo, el sofá cabe en cualquier ascensor de servicio de medidas estándar (mínimo 100×150 cm). Se entrega en una sola pieza, completamente montado."}}, {"@type": "Question", "name": "¿Hay versión con patas de madera en lugar de metálicas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, ofrecemos patas de haya torneada en acabado natural, nogal o lacado negro como alternativa a las patas metálicas. El cambio no afecta al precio ni al plazo de entrega."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

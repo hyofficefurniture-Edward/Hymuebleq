@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-banquetes-plegable-cha
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Mesa de Banquetes Plegable con Tablero de Chapa y Sillas Apilables",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-banquetes-plegable-cha
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-banquetes-plegable-cha
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Mesa de Banquetes Plegable con Tablero de Chapa y Sillas Apilables"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Se pueden pedir manteles a medida?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, ofrecemos servicio de mantelería a medida como complemento. Solo necesitamos las dimensiones exactas de la mesa y la caída deseada. Se confeccionan en tejido poliéster ignífugo lavable a 60°C."}}, {"@type": "Question", "name": "¿Cuántas mesas caben en un contenedor de 20 pies?", "acceptedAnswer": {"@type": "Answer", "text": "Aproximadamente 110-130 mesas plegadas, en función del tamaño exacto del modelo. El equipo de logística calcula la cubicación óptima para cada pedido y presenta el plan de carga antes de confirmar el envío."}}, {"@type": "Question", "name": "¿El tablero se marca si se apoya una bandeja caliente directamente?", "acceptedAnswer": {"@type": "Answer", "text": "No. El barniz de poliuretano de grado contract soporta temperatura superficial de hasta 85°C durante un máximo de 15 minutos sin alterarse. Para mayor seguridad, recomendamos el uso de salvamanteles, que también podemos suministrar."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

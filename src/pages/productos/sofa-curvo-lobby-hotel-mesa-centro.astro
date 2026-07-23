@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-curvo-lobby-hotel-mesa
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Sofá Curvo para Lobby de Hotel con Mesa de Centro a Juego",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-curvo-lobby-hotel-mesa
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/sofa-curvo-lobby-hotel-mesa
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Sofá Curvo para Lobby de Hotel con Mesa de Centro a Juego"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Se puede fabricar en forma semicircular o en U?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El sistema modular permite configuraciones curvas, rectas, en L o en U. Solo necesitamos el plano de planta con las cotas del espacio disponible para diseñar la solución exacta."}}, {"@type": "Question", "name": "¿Cómo se limpia el tapizado en caso de derrames?", "acceptedAnswer": {"@type": "Answer", "text": "La microfibra lleva tratamiento nano-repelente. Los derrames se limpian con un paño húmedo. Para manchas persistentes, las fundas son desenfundables y lavables a máquina a 30°C."}}, {"@type": "Question", "name": "¿Incluye los puertos USB el precio estándar?", "acceptedAnswer": {"@type": "Answer", "text": "Los módulos de conectividad (USB-A/C y enchufe) son opcionales y se presupuestan aparte según el número de puntos requeridos. El cableado queda oculto dentro de la estructura y sale por la parte trasera inferior."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

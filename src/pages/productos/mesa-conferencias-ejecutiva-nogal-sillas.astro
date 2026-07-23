@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-conferencias-ejecutiva
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Mesa de Conferencias Ejecutiva con Chapa de Nogal y Sillas Ergonómicas",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-conferencias-ejecutiva
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/mesa-conferencias-ejecutiva
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Mesa de Conferencias Ejecutiva con Chapa de Nogal y Sillas Ergonómicas"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Es factible personalizar el color de la chapa para que combine con la decoración existente?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, trabajamos con carta RAL completa para lacados y disponemos de 12 especies de chapa de madera natural. El muestrario se envía en 48 horas para que el equipo de interiorismo pueda validar la combinación in situ."}}, {"@type": "Question", "name": "¿Cómo se gestiona el cableado en configuraciones modulares grandes?", "acceptedAnswer": {"@type": "Answer", "text": "Cada módulo incorpora una regleta oculta con 4 tomas. Los módulos se conectan entre sí mediante latiguillos bajo el tablero, y todas las mesas convergen en una caja de suelo única. El plano de instalación se entrega con el pedido."}}, {"@type": "Question", "name": "¿Qué mantenimiento requiere la superficie de chapa de madera?", "acceptedAnswer": {"@type": "Answer", "text": "Mínimo. Recomendamos limpieza con paño de microfibra seco o ligeramente humedecido. La superficie lleva barniz de poliuretano mate de grado comercial que resiste manchas de café, bolígrafo y huellas dactilares."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

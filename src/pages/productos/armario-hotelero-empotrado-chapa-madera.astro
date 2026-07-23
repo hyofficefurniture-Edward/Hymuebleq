@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/armario-hotelero-empotrado-
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Armario Hotelero Empotrado con Chapa de Madera Natural",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/armario-hotelero-empotrado-
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/armario-hotelero-empotrado-
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Armario Hotelero Empotrado con Chapa de Madera Natural"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Se puede adaptar el armario a huecos con medidas no estándar?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Fabricamos cada armario a medida según los planos de obra. Solo necesitamos las dimensiones exactas del hueco (ancho, alto, fondo) y el equipo técnico diseña la solución óptima, incluyendo recortes para vigas, conductos o instalaciones existentes."}}, {"@type": "Question", "name": "¿Qué mantenimiento requiere la chapa de madera en entorno hotelero?", "acceptedAnswer": {"@type": "Answer", "text": "Mínimo. La chapa lleva un barniz mate de poliuretano que repele el polvo y resiste rayaduras leves. Recomendamos limpieza semanal con paño de microfibra ligeramente humedecido. El acabado mantiene su aspecto original durante 8-10 años con uso normal."}}, {"@type": "Question", "name": "¿Incluyen el montaje en obra?", "acceptedAnswer": {"@type": "Answer", "text": "Ofrecemos dos modalidades: envío de kits premontados con manual de instalación (recomendado para proyectos de menos de 50 unidades) o servicio completo de montaje con equipo técnico desplazado. El montaje profesional toma 45-60 minutos por unidad."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">

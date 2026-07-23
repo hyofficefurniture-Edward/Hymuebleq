@@ -11,7 +11,7 @@ const canonicalUrl = `https://hymueble.com/productos/paneles-pared-chapa-madera-
   canonicalURL={canonicalUrl}
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Paneles de Pared con Chapa de Madera Natural para Hoteles",
@@ -34,10 +34,10 @@ const canonicalUrl = `https://hymueble.com/productos/paneles-pared-chapa-madera-
         "priceCurrency": "USD"
       }
     }
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -45,14 +45,14 @@ const canonicalUrl = `https://hymueble.com/productos/paneles-pared-chapa-madera-
       {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://hymueble.com/productos/"},
       {"@type": "ListItem", "position": 3, "name": "Paneles de Pared con Chapa de Madera Natural para Hoteles"}
     ]
-  }}>
+  })}>
   </script>
 
-  <script type="application/ld+json" set:html={{
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{"@type": "Question", "name": "¿Se pueden instalar sobre una pared ya construida sin hacer obra?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El sistema de rastreles de aluminio se fija a la pared existente con tacos cada 60 cm. No requiere enfoscar, enlucir ni pintar: los paneles cubren la pared original por completo y las instalaciones eléctricas discurren por el espacio hueco entre panel y pared (25 mm)."}}, {"@type": "Question", "name": "¿Cómo se limpian los paneles?", "acceptedAnswer": {"@type": "Answer", "text": "Con un paño de microfibra seco o ligeramente humedecido. El barniz de poliuretano repele el polvo y las huellas. No requieren ceras ni aceites. En zonas de alto contacto, recomendamos una limpieza semanal."}}, {"@type": "Question", "name": "¿Se pueden pedir con formas curvas para paredes no rectas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, fabricamos paneles curvos por termoformado con un radio mínimo de 600 mm. Hay que facilitar la plantilla o los planos de la curva exacta. El sobrecoste respecto al panel recto es de aproximadamente un 30% y el plazo se amplía 10 días laborables."}}]
-  }}>
+  })}>
   </script>
 
   <article class="producto-page">
