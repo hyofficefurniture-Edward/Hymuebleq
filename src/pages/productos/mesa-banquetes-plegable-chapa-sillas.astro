@@ -71,13 +71,13 @@ const canonicalUrl = "/productos/mesa-banquetes-plegable-chapa-sillas/";
     <div class="producto-hero">
       <div class="producto-gallery">
         <div class="gallery-main">
-          <div class="gallery-main-content">
-            <h4>Mesa de Banquetes Plegable con Tablero de Chapa y Sillas Apilables</h4>
+          <img class="gallery-main-img" src="/images/productos/prd-07/prd-07-01.jpg" alt="Producto principal" loading="eager" width="600" height="600">
+          <div class="gallery-main-content" style="display:none"><h4>Mesa de Banquetes Plegable con Tablero de Chapa y Sillas Apilables</h4>
             <p>Imagen principal del producto — 4 vistas disponibles</p>
           </div>
         </div>
         <div class="gallery-thumbs">
-          <div class="gallery-thumb"></div><div class="gallery-thumb"></div><div class="gallery-thumb"></div><div class="gallery-thumb"></div>
+          <div class="gallery-thumb active"><img src="/images/productos/prd-07/prd-07-01.jpg" alt="Vista 1" loading="lazy" width="120" height="120" onclick="document.querySelector('.gallery-main-img').src='/images/productos/prd-07/prd-07-01.jpg'"></div><div class="gallery-thumb"><img src="/images/productos/prd-07/prd-07-02.jpg" alt="Vista 2" loading="lazy" width="120" height="120" onclick="document.querySelector('.gallery-main-img').src='/images/productos/prd-07/prd-07-02.jpg'"></div><div class="gallery-thumb"><img src="/images/productos/prd-07/prd-07-03.jpg" alt="Vista 3" loading="lazy" width="120" height="120" onclick="document.querySelector('.gallery-main-img').src='/images/productos/prd-07/prd-07-03.jpg'"></div><div class="gallery-thumb"><img src="/images/productos/prd-07/prd-07-04.jpg" alt="Vista 4" loading="lazy" width="120" height="120" onclick="document.querySelector('.gallery-main-img').src='/images/productos/prd-07/prd-07-04.jpg'"></div>
         </div>
       </div>
 
@@ -551,7 +551,22 @@ const canonicalUrl = "/productos/mesa-banquetes-plegable-chapa-sillas/";
       font-size: 24px;
     }
   }
-</style>
+
+    .gallery-main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  </style>
 
 <script>
   document.querySelectorAll('.faq-question').forEach(btn => {
