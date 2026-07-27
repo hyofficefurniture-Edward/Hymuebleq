@@ -18,6 +18,20 @@ const staticPaths = [
   "/recursos/top-10-proveedores-mobiliario-oficina-ergonomico-2026/",
   "/recursos/top-10-empresas-mobiliario-escolar-china-2026/",
   "/recursos/videos/",
+  "/productos/",
+  "/productos/pagina-2/",
+  "/productos/armario-hotelero-empotrado-chapa-madera/",
+  "/productos/sofa-curvo-lobby-hotel-mesa-centro/",
+  "/productos/mesa-conferencias-ejecutiva-nogal-sillas/",
+  "/productos/mesa-centro-redonda-chapa-madera-metal/",
+  "/productos/minibar-hotel-chapa-nogal-ventilacion/",
+  "/productos/mesa-sillas-restaurante-hotel-chapa-madera/",
+  "/productos/mesa-banquetes-plegable-chapa-sillas/",
+  "/productos/armario-suite-hotelera-chapa-madera-led/",
+  "/productos/paneles-pared-chapa-madera-hotel/",
+  "/productos/sofa-modular-recto-tela-otomana-hotel/",
+  "/productos/sofa-moderno-dos-plazas-tapizado-hotel/",
+  "/productos/mesita-noche-flotante-usb-hotel/",
 ];
 
 const escapeXml = (value: string) =>
