@@ -33,6 +33,20 @@ const staticPaths = [
   "/productos/sofa-modular-recto-tela-otomana-hotel/",
   "/productos/sofa-moderno-dos-plazas-tapizado-hotel/",
   "/productos/mesita-noche-flotante-usb-hotel/",
+  "/productos-oficina/",
+  "/productos-oficina/pagina-2/",
+  "/productos-oficina/escritorio-ejecutivo-gerente-chapa-madera/",
+  "/productos-oficina/estacion-trabajo-modular-oficina-abierta/",
+  "/productos-oficina/mesa-reuniones-modular-corporativa/",
+  "/productos-oficina/silla-ergonomica-oficina-soporte-lumbar/",
+  "/productos-oficina/silla-diseno-respaldo-geometrico/",
+  "/productos-oficina/sofa-modular-lounge-oficina/",
+  "/productos-oficina/mobiliario-modular-breakout-oficina/",
+  "/productos-oficina/mostrador-recepcion-corporativa-medida/",
+  "/productos-oficina/workstation-diseno-premium-paneles-acusticos/",
+  "/productos-oficina/cabina-acustica-oficina/",
+  "/productos-oficina/libreria-oficina-ejecutiva-chapa-madera/",
+  "/productos-oficina/mesa-centro-oficina-estructura-acero/",
 ];
 
 const escapeXml = (value: string) =>

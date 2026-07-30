@@ -76,6 +76,10 @@ export const navItems = [
   { label: "Educación", href: "/educacion/", catalog: "/catalogo/educacion/", projects: "/proyectos/educacion/" },
   { label: "Residencial", href: "/residencial/", catalog: "/catalogo/residencial/", projects: "/proyectos/residencial/" },
   { label: "Fábrica", href: "/fabrica/" },
+  { label: "Productos", href: "/productos/", children: [
+    { label: "Mobiliario Hotelero", href: "/productos/" },
+    { label: "Mobiliario de Oficina", href: "/productos-oficina/" },
+  ] },
   { label: "Recursos", href: "/recursos/", children: [
     { label: "Blog", href: "/recursos/blog/" },
     { label: "Videos", href: "/recursos/videos/" },
