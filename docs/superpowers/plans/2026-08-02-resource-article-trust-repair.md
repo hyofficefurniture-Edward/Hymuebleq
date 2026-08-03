@@ -73,6 +73,6 @@
 - Modify: `src/pages/sitemap.xml.ts`
 - Modify: `docs/url-list.md`
 
-- [ ] Remove the generated build date from every sitemap entry because no reliable per-route modification-date source exists.
-- [ ] Add both repaired article routes to the internal URL inventory in the same resource-page grouping.
-- [ ] Verify that the generated sitemap contains 114 unique URLs, contains both article routes once, contains no `lastmod` elements, and passes build and static QA.
+- [x] Remove the generated build date from every sitemap entry because no reliable per-route modification-date source exists.
+- [x] Add both repaired article routes to the internal URL inventory in the same resource-page grouping.
+- [x] Verify that the generated sitemap contains 114 unique URLs, contains both article routes once, contains no `lastmod` elements, and passes build and static QA.
