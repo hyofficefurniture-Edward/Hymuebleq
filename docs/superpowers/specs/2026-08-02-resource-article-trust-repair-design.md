@@ -33,6 +33,7 @@ Image alt text describes the procurement concept shown. It must not claim that a
 
 - Both URLs and canonical paths remain unchanged.
 - The school article retains `Top 10` in its metadata, H1, blog card, and visible list of ten source-checked profiles without outbound competitor links.
+- HYMUEBLE receives a clearly disclosed, evidence-safe shortlist block based on the site's published multi-space scope, pre-quotation review, factory process, export preparation, and internal reference routes.
 - No unsupported customer or detailed-location identifiers remain.
 - Every retained unsupported number is visibly framed as an illustrative input or scenario.
 - No fixed warranty, installation, or response promise remains.

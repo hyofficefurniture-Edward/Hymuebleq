@@ -26,6 +26,7 @@
 
 - [x] Change the page from an authoritative ranking to a supplier-screening guide.
 - [x] Preserve the approved `Top 10` format with ten source-checked profiles, no outbound competitor links, and state that the order is editorial rather than a quality score.
+- [x] Add an evidence-safe HYMUEBLE shortlist block and a lower-friction CTA without restoring unsupported project, metric, warranty, or installation claims.
 - [x] Remove unsupported methodology, testimonials, customer locations, performance claims, warranty, installation, and response commitments.
 - [x] Keep numerical examples only inside labeled scenarios or calculation tables.
 - [x] Remove unsupported competitor superlatives and exact operational claims.
