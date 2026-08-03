@@ -9,6 +9,8 @@ Repair these two existing resource articles without changing their URLs, canonic
 
 The blog listing entries for these two routes may be updated only where their titles, summaries, images, or image alt text must stay consistent with the repaired articles.
 
+Release-readiness maintenance may update `src/pages/sitemap.xml.ts` and `docs/url-list.md` only to keep discovery data accurate for these two routes. The sitemap must omit `lastmod` when no reliable per-route modification date exists rather than assigning the build date to every URL.
+
 ## Evidence boundary
 
 - Remove customer, school, hotel, project, city, port, and detailed-location identifiers that are not backed by approved primary evidence.
@@ -41,4 +43,6 @@ Image alt text describes the procurement concept shown. It must not claim that a
 - No image is presented as documentary evidence.
 - Visible FAQ content and FAQ structured data agree.
 - Article metadata, blog cards, images, and `dateModified` agree.
+- Both article routes appear once in the generated sitemap and in the internal URL inventory.
+- The sitemap does not publish a synthetic build date as the modification date of every route.
 - Build, static QA, and browser QA pass.

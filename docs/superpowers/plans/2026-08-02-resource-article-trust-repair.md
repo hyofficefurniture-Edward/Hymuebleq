@@ -66,3 +66,13 @@
 - [x] Run `pnpm qa:static`.
 - [x] Run `pnpm qa:browser`. The full-site script reached an existing strict-selector failure on the homepage `.home-project-rail`; no target-article failure was reported before that point.
 - [x] Review both target routes and their blog cards at desktop and mobile widths, including tables, images, CTA links, metadata, and structured data.
+
+### Task 5: Align sitemap metadata and the URL inventory
+
+**Files:**
+- Modify: `src/pages/sitemap.xml.ts`
+- Modify: `docs/url-list.md`
+
+- [ ] Remove the generated build date from every sitemap entry because no reliable per-route modification-date source exists.
+- [ ] Add both repaired article routes to the internal URL inventory in the same resource-page grouping.
+- [ ] Verify that the generated sitemap contains 114 unique URLs, contains both article routes once, contains no `lastmod` elements, and passes build and static QA.
