@@ -1,24 +1,51 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
 
-const pageTitle = "Fabricante vs. Distribuidor de Muebles para Proyectos Comerciales: Comparativa 2026";
-const pageDescription = "Comprenda las diferencias reales entre comprar muebles directo de fábrica o vía distribuidor: costos, plazos, personalización, riesgos y cuándo conviene cada modelo para proyectos B2B.";
+const pageTitle = "Fabricante vs. distribuidor de muebles: guía B2B 2026";
+const pageDescription = "Compare compra directa y distribución local por costos, plazos, control de calidad y gestión. Incluye un escenario orientativo para proyectos B2B.";
 const keywords = [
   "fabricante vs distribuidor muebles",
-  "comprar muebles directo de fabrica",
-  "proveedor mobiliario comercial",
-  "importar muebles China",
-  "distribuidor muebles B2B",
-  "fabricante muebles comerciales",
-  "mobiliario contract China",
+  "comprar muebles directo de fábrica",
+  "distribuidor de muebles B2B",
+  "comparar proveedores de mobiliario",
+  "importar muebles de China",
+  "costo entregado de muebles",
   "HYMUEBLE",
 ];
 const canonicalPath = "/recursos/fabricante-vs-distribuidor-muebles-comerciales-2026/";
-const pageImage = "/assets/hymueble/recursos/blog/images/hym-04-img-01-linea-produccion-fabrica.png";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-04-img-01-linea-produccion-fabrica.webp";
 const pageImageUrl = `https://hymueble.com${pageImage}`;
 const datePublished = "2026-07-20";
-const dateModified = "2026-07-20";
-const publicationDateLabel = "20 de julio de 2026";
+const dateModified = "2026-08-02";
+const publicationDateLabel = "Actualizada el 2 de agosto de 2026";
+
+const faqItems = [
+  {
+    question: "¿Comprar directamente al fabricante siempre cuesta menos?",
+    answer: "No. El precio de fábrica puede ser menor, pero la comparación debe incluir inspección, agente si se utiliza, flete, seguro, aduana, transporte interno, montaje y tiempo del equipo comprador. El resultado depende del volumen, la personalización y la capacidad de gestionar la importación.",
+  },
+  {
+    question: "¿Qué pedido mínimo exige un fabricante?",
+    answer: "No existe un mínimo universal. Para preparar el presupuesto puede modelar un escenario de medio contenedor o entre 8,000 y 12,000 USD, pero el mínimo real debe confirmarse por producto, mezcla de referencias y calendario de producción.",
+  },
+  {
+    question: "¿Un distribuidor puede ofrecer muebles personalizados?",
+    answer: "Depende del modelo. Un representante o intermediario que trabaja contra pedido puede coordinar personalización; un distribuidor local que vende inventario suele limitarse a su catálogo disponible. La oferta debe identificar quién aprueba planos, muestras y cambios.",
+  },
+  {
+    question: "¿Quién responde si aparecen defectos?",
+    answer: "La responsabilidad depende del contrato. En compra directa se reclama a la entidad que fabrica y factura; con un intermediario o distribuidor, la reclamación sigue la cadena contractual acordada. Defina antes del pedido los criterios de aceptación, la inspección, la garantía, las exclusiones y el método de compensación.",
+  },
+  {
+    question: "¿Necesito un agente de compras en China?",
+    answer: "No es obligatorio. Un escenario de cálculo puede reservar entre 3% y 7% para ese servicio, pero la decisión depende de la experiencia del comprador, el número de fábricas, la complejidad técnica y el nivel de supervisión requerido. Solicite alcance y tarifa por escrito.",
+  },
+  {
+    question: "¿Qué documentos debo pedir antes del embarque?",
+    answer: "Como base, revise factura proforma, lista de empaque, fichas técnicas, planos aprobados, informe de inspección y documentos de origen o conformidad que correspondan al producto y al destino. ISO 9001 es un sistema de gestión; CARB o BS 5852 solo se solicitan cuando el material, producto y mercado los hacen aplicables.",
+  },
+];
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -47,14 +74,11 @@ const articleJsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "¿Cuánto se ahorra comprando directo al fabricante en lugar de un distribuidor?", acceptedAnswer: { "@type": "Answer", text: "El ahorro promedio al comprar directo de fábrica en China oscila entre 15% y 30% sobre el precio FOB del distribuidor. En proyectos de más de 80 habitaciones o 200 puestos de trabajo, el ahorro absoluto puede superar los $40,000 USD. Sin embargo, hay que restar costos de gestión de proyecto, inspección y logística que el distribuidor normalmente asume." } },
-    { "@type": "Question", name: "¿Qué pedido mínimo exige un fabricante de muebles en China?", acceptedAnswer: { "@type": "Answer", text: "La mayoría de fabricantes de mobiliario commercial en Guangdong trabajan con un pedido mínimo equivalente a medio contenedor de 20 pies (aproximadamente $8,000-$12,000 USD). Para proyectos más pequeños, un distribuidor o trading company que consolida cargas es más práctico." } },
-    { "@type": "Question", name: "¿Puedo personalizar los muebles si compro vía distribuidor?", acceptedAnswer: { "@type": "Answer", text: "Depende del distribuidor. Los distribuidores que operan como representantes comerciales del fabricante sí pueden ofrecer personalización. Los distribuidores que compran stock terminado tienen limitaciones severas. Si su proyecto requiere dimensiones específicas, acabados personalizados o carpintería a medida, conviene ir directo al fabricante." } },
-    { "@type": "Question", name: "¿Quién asume la responsabilidad si hay defectos de fabricación?", acceptedAnswer: { "@type": "Answer", text: "Comprando directo, el fabricante responde por defectos de producción y suele ofrecer reposición o descuento en futuros pedidos. Comprando vía distribuidor, la reclamación pasa por el distribuidor, que negocia con la fábrica. Esto puede añadir 2-4 semanas al proceso de resolución. En ambos casos, exija una inspección de calidad previa al embarque." } },
-    { "@type": "Question", name: "¿Necesito un agente de compras en China si trabajo directo con el fabricante?", acceptedAnswer: { "@type": "Answer", text: "No es obligatorio, pero es recomendable para proyectos de más de $30,000 USD. Un agente o sourcing company cobra entre 3% y 7% del valor del pedido y se encarga de supervisar producción, inspección pre-embarque, documentación y coordinación logística. Para pedidos menores, el propio fabricante puede gestionar todo si tiene experiencia exportando a América Latina." } },
-    { "@type": "Question", name: "¿Qué documentos debo exigir al comprar muebles directo de fábrica?", acceptedAnswer: { "@type": "Answer", text: "Como mínimo: factura comercial proforma, packing list detallado por contenedor, certificado de origen (para aranceles preferenciales), fichas técnicas de materiales y acabados, y certificados de cumplimiento (ISO 9001, CARB Phase 2 para formaldehído, BS 5852 para inflamabilidad si aplica). Solicite también fotos de inspección pre-embarque." } },
-  ],
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
 };
 ---
 <BaseLayout
@@ -69,394 +93,183 @@ const faqJsonLd = {
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
 
   <div class="comparison-guide">
-  <!-- ============ HERO / INTRO ============ -->
-  <section class="section article-hero">
-    <div class="container resource-hero-grid" style="align-items:center;">
-      <div class="resource-hero-copy">
-        <p class="eyebrow">Comparativa B2B &middot; {publicationDateLabel}</p>
-        <h1>Fabricante vs. Distribuidor de Muebles para Proyectos Comerciales</h1>
-        <p>
-          Si está planificando el amueblado de un hotel, oficina, colegio o centro médico en América Latina, tarde o temprano se enfrenta a una decisión que puede cambiar el presupuesto del proyecto entero: ¿comprar los muebles directo al fabricante en China o trabajar a través de un distribuidor local?
-        </p>
-        <p>
-          No hay una respuesta única. Después de 15 años fabricando y exportando mobiliario contract desde Guangdong, hemos visto proyectos donde el modelo directo ahorra un 28% del presupuesto, y otros donde un buen distribuidor habría evitado pérdidas por $15,000 USD en defectos no detectados. Esta comparativa desglosa los dos modelos con números reales, para que pueda decidir con datos y no con supuestos.
-        </p>
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Comparativa B2B &middot; {publicationDateLabel}</p>
+          <h1>Fabricante vs. distribuidor: cómo elegir para un proyecto de mobiliario</h1>
+          <p>La decisión no es simplemente “precio bajo contra servicio”. Cada ruta cambia quién define el producto, controla la calidad, coordina la importación y responde contractualmente cuando algo no coincide.</p>
+          <p>Esta guía separa los modelos y conserva un escenario numérico para mostrar cómo calcular el costo entregado. <strong>Las cifras son supuestos de planificación, no un proyecto real, una cotización ni una promesa de ahorro.</strong></p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-01-linea-produccion-fabrica.webp" alt="Ilustración conceptual de compra directa a fábrica y compra mediante distribución local" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa una fábrica, un distribuidor ni un proyecto específico de HYMUEBLE.</figcaption>
+        </figure>
       </div>
-      <figure class="resource-hero-media">
-        <img src="/assets/hymueble/recursos/blog/images/hym-04-img-01-linea-produccion-fabrica.png" alt="Línea de producción de muebles comerciales en fábrica de Hongye Furniture Group en Guangdong, China" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
-        <figcaption>Línea de producción de mobiliario hotelero en la fábrica de HYMUEBLE / Hongye Furniture Group, Guangdong.</figcaption>
-      </figure>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ ¿QUÉ SIGNIFICA CADA MODELO? ============ -->
-  <section class="section alt article-section">
-    <div class="container article-prose">
-      <h2>¿Qué significa cada modelo?</h2>
-      <p>Antes de comparar, conviene definir los dos caminos con precisión, porque en la práctica hay variaciones que confunden a muchos compradores.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose">
+        <h2>Tres rutas que suelen confundirse</h2>
+        <h3>1. Compra directa al fabricante</h3>
+        <p>La fábrica cotiza y factura el producto. El comprador aprueba especificaciones y muestras, define la inspección y coordina la importación con su propio equipo o proveedores logísticos. Esta ruta da acceso directo a decisiones técnicas, pero exige más gestión.</p>
 
-      <h3>Comprar directo del fabricante</h3>
-      <p>Usted contacta a la fábrica, negocia precio y especificaciones, aprueba muestras, supervisa (o delega) la producción y coordina la logística de exportación. El fabricante factura FOB o CIF desde China, y usted gestiona la importación en su país. No hay intermediario comercial entre la fábrica y su empresa.</p>
-      <p>Este modelo funciona mejor cuando el volumen justifica un contenedor completo, cuando el proyecto requiere personalización técnica, o cuando el comprador tiene experiencia previa importando desde Asia.</p>
+        <h3>2. Intermediario o empresa comercial en China</h3>
+        <p>La empresa comercial coordina una o varias fábricas, consolida categorías o presta apoyo de compras. Puede facturar el pedido o cobrar una tarifa separada. El contrato debe aclarar quién fabrica, quién inspecciona y quién responde por cada producto.</p>
 
-      <h3>Comprar vía distribuidor</h3>
-      <p>Un distribuidor compra muebles al fabricante, los almacena (o gestiona el envío directo), y se los vende al cliente final con un margen. El distribuidor puede estar en China (trading company) o en el país de destino (importador local). En algunos casos, el distribuidor ofrece catálogo cerrado; en otros, actúa como representante del fabricante con capacidad de personalizar.</p>
-      <p>Este modelo conviene cuando el volumen es bajo, cuando se necesita entrega rápida desde stock, o cuando el comprador prefiere delegar toda la gestión logística y aduanera.</p>
-    </div>
-  </section>
-
-  <!-- ============ TABLA 1: COMPARACIÓN DIRECTA ============ -->
-  <section class="section article-section">
-    <div class="container article-prose--wide">
-      <h2>Comparación directa: 10 criterios que importan</h2>
-      <p>Esta tabla resume las diferencias prácticas entre los dos modelos, basada en proyectos reales de hoteles, oficinas y colegios en México, Colombia, Chile y Perú entre 2023 y 2026.</p>
-
-      <div class="methodology-table">
-        <table>
-          <thead>
-            <tr>
-              <th>Criterio</th>
-              <th>Fabricante directo</th>
-              <th>Distribuidor</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Criterio">Precio base del mueble</td>
-              <td data-label="Fabricante directo">15-30% menor (sin markup intermediario)</td>
-              <td data-label="Distribuidor">Markup de 15-35% sobre precio de fábrica</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Pedido mínimo</td>
-              <td data-label="Fabricante directo">$8,000-$12,000 USD (medio contenedor)</td>
-              <td data-label="Distribuidor">Desde $1,000-$3,000 USD (stock disponible)</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Personalización de medidas y acabados</td>
-              <td data-label="Fabricante directo">Total: planos de taller, mock-up, materiales a medida</td>
-              <td data-label="Distribuidor">Limitada a catálogo, salvo representante autorizado</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Plazo de entrega</td>
-              <td data-label="Fabricante directo">8-14 semanas (producción + tránsito)</td>
-              <td data-label="Distribuidor">2-6 semanas si hay stock nacional; 8-12 si pide a China</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Control de calidad en fábrica</td>
-              <td data-label="Fabricante directo">Acceso directo: inspección en proceso y pre-embarque</td>
-              <td data-label="Distribuidor">El distribuidor gestiona; usted ve el producto al llegar</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Gestión de reclamaciones</td>
-              <td data-label="Fabricante directo">Directo con la fábrica: reposición o descuento en próximo pedido</td>
-              <td data-label="Distribuidor">A través del distribuidor: añade 2-4 semanas de resolución</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Documentación de exportación</td>
-              <td data-label="Fabricante directo">Usted o su agente coordinan: factura, packing list, certificados</td>
-              <td data-label="Distribuidor">El distribuidor gestiona todo el papeleo</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Soporte posventa e instalación</td>
-              <td data-label="Fabricante directo">Manual de montaje + soporte remoto; técnicos en sitio si es &gt;80 hab.</td>
-              <td data-label="Distribuidor">Instalación local incluida en muchos casos</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Riesgo de defectos no detectados</td>
-              <td data-label="Fabricante directo">Medio-alto si no contrata inspección independiente</td>
-              <td data-label="Distribuidor">Bajo-medio: el distribuidor filtra antes de entregar</td>
-            </tr>
-            <tr>
-              <td data-label="Criterio">Ahorro total estimado</td>
-              <td data-label="Fabricante directo">15-30% vs. distribuidor (después de costos de gestión)</td>
-              <td data-label="Distribuidor">0% de ahorro, pero menos riesgo operativo</td>
-            </tr>
-          </tbody>
-        </table>
+        <h3>3. Importador o distribuidor local</h3>
+        <p>El proveedor vende en el país de destino, desde inventario o contra pedido. Puede simplificar aduana, entrega y atención local, pero su capacidad de personalización depende de la relación que tenga con la fábrica y del momento en que se incorpore al proyecto.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ DESGLOSE DE COSTOS ============ -->
-  <section class="section alt article-section">
-    <div class="container article-prose--wide">
-      <h2>Desglose de costos: lo que no se ve en el precio</h2>
-      <p>
-        El precio del mueble es solo la primera línea del presupuesto. Muchos compradores comparan el precio FOB del fabricante contra el precio entregado del distribuidor y concluyen que el fabricante es siempre más barato. Es un error frecuente. Hay costos ocultos en el modelo directo que, si no se gestionan bien, pueden comerse el ahorro.
-      </p>
-
-      <div class="methodology-table">
-        <table>
-          <thead>
-            <tr>
-              <th>Concepto de costo</th>
-              <th>Fabricante directo</th>
-              <th>Distribuidor</th>
-              <th>Diferencia</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Concepto">Precio del mueble (FOB China)</td>
-              <td data-label="Fabricante directo">$85,000</td>
-              <td data-label="Distribuidor">$110,500 (incluye markup 30%)</td>
-              <td data-label="Diferencia">Fabricante ahorra $25,500</td>
-            </tr>
-            <tr>
-              <td data-label="Concepto">Inspección de calidad (SGS/BV)</td>
-              <td data-label="Fabricante directo">$1,200</td>
-              <td data-label="Distribuidor">$0 (incluido en markup)</td>
-              <td data-label="Diferencia">Fabricador paga $1,200</td>
-            </tr>
-            <tr>
-              <td data-label="Concepto">Agente de compras (5%)</td>
-              <td data-label="Fabricante directo">$4,250</td>
-              <td data-label="Distribuidor">$0</td>
-              <td data-label="Diferencia">Fabricador paga $4,250</td>
-            </tr>
-            <tr>
-              <td data-label="Concepto">Flete marítimo + seguro</td>
-              <td data-label="Fabricante directo">$4,800</td>
-              <td data-label="Distribuidor">$4,800 (mismo flete)</td>
-              <td data-label="Diferencia">Igual</td>
-            </tr>
-            <tr>
-              <td data-label="Concepto">Aduana e impuestos (país destino)</td>
-              <td data-label="Fabricante directo">$12,750 (15% arancel)</td>
-              <td data-label="Distribuidor">$12,750 (mismo arancel)</td>
-              <td data-label="Diferencia">Igual</td>
-            </tr>
-            <tr>
-              <td data-label="Concepto">Transporte interno a obra</td>
-              <td data-label="Fabricante directo">$1,500</td>
-              <td data-label="Distribuidor">$1,200 (mejor red logística local)</td>
-              <td data-label="Diferencia">Distribuidor ahorra $300</td>
-            </tr>
-            <tr>
-              <td data-label="Concepto">Gestión de proyecto (tiempo interno)</td>
-              <td data-label="Fabricante directo">$3,000 (60-80 horas extra)</td>
-              <td data-label="Distribuidor">$800 (proceso simplificado)</td>
-              <td data-label="Diferencia">Fabricador paga $2,200</td>
-            </tr>
-            <tr>
-              <td data-label="Concepto">Costo total entregado</td>
-              <td data-label="Fabricante directo">$112,500</td>
-              <td data-label="Distribuidor">$130,050</td>
-              <td data-label="Diferencia"><strong>Fabricante ahorra $17,550 (13.5%)</strong></td>
-            </tr>
-          </tbody>
-        </table>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Comparación práctica: qué cambia en cada ruta</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Fabricante directo</th><th>Intermediario en China</th><th>Distribuidor local</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio">Entidad que factura</td><td data-label="Fabricante">La fábrica</td><td data-label="Intermediario">El intermediario o cada fábrica</td><td data-label="Distribuidor">La empresa local</td></tr>
+              <tr><td data-label="Criterio">Personalización</td><td data-label="Fabricante">Se define directamente con producción</td><td data-label="Intermediario">Depende de su control sobre la fábrica</td><td data-label="Distribuidor">Puede limitarse al catálogo o stock</td></tr>
+              <tr><td data-label="Criterio">Pedido mínimo</td><td data-label="Fabricante">Se confirma por línea y mezcla</td><td data-label="Intermediario">Puede consolidar varias categorías</td><td data-label="Distribuidor">Puede vender cantidades menores desde stock</td></tr>
+              <tr><td data-label="Criterio">Plazo</td><td data-label="Fabricante">Producción más tránsito</td><td data-label="Intermediario">Producción, consolidación y tránsito</td><td data-label="Distribuidor">Rápido con stock; variable contra pedido</td></tr>
+              <tr><td data-label="Criterio">Control de calidad</td><td data-label="Fabricante">El comprador define acceso e inspección</td><td data-label="Intermediario">Puede coordinar inspección de varias fábricas</td><td data-label="Distribuidor">Debe explicar su control antes de entregar</td></tr>
+              <tr><td data-label="Criterio">Importación</td><td data-label="Fabricante">A cargo del comprador salvo alcance acordado</td><td data-label="Intermediario">Puede coordinar documentos y embarque</td><td data-label="Distribuidor">Normalmente integrada en su oferta local</td></tr>
+              <tr><td data-label="Criterio">Montaje y garantía</td><td data-label="Fabricante">Se cotizan y contratan por proyecto</td><td data-label="Intermediario">Debe identificar al responsable</td><td data-label="Distribuidor">Puede ofrecer recursos locales; debe constar en contrato</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+    </section>
 
-      <p>
-        En este ejemplo real de un hotel de 90 habitaciones en Guadalajara, el ahorro neto del modelo directo fue del 13.5%, no del 30% que sugería el precio FOB. La diferencia la marcan los costos de inspección, agente y gestión interna. En proyectos de mayor volumen, el ahorro porcentual crece porque los costos fijos se diluyen.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ IMAGEN 2: CONTROL DE CALIDAD ============ -->
-  <section class="section article-section">
-    <div class="container article-prose--wide">
-      <figure class="article-figure">
-        <img src="/assets/hymueble/recursos/blog/images/hym-04-img-02-control-calidad-muebles.png" alt="Inspección de calidad de muebles hoteleros en línea de producción de Hongye Furniture Group con verificación de acabados y medidas" width="1536" height="1024" loading="lazy" decoding="async" />
-        <figcaption>Inspección de control de calidad en línea de producción: el punto donde el modelo directo y el distribuido se separan. Comprando directo, usted controla este paso; vía distribuidor, depende del filtro del intermediario.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ============ ¿CUÁNDO CONVIENE CADA MODELO? ============ -->
-  <section class="section alt article-section">
-    <div class="container article-prose--wide">
-      <h2>¿Cuándo conviene cada modelo?</h2>
-      <p>
-        La decisión no depende solo del precio. Depende del tipo de proyecto, del volumen, del plazo disponible y de la capacidad del equipo del comprador para gestionar importaciones. Esta matriz le ayuda a identificar qué modelo encaja con su situación.
-      </p>
-
-      <div class="methodology-table">
-        <table>
-          <thead>
-            <tr>
-              <th>Tipo de proyecto</th>
-              <th>Recomendación</th>
-              <th>Razón principal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Tipo">Hotel nuevo 80+ habitaciones, FF&E completo</td>
-              <td data-label="Recomendación"><strong>Fabricante directo</strong></td>
-              <td data-label="Razón">Volumen justifica contenedor completo; personalización de acabados es crítica; ahorro neto 15-25%</td>
-            </tr>
-            <tr>
-              <td data-label="Tipo">Renovación parcial de oficinas (20-40 puestos)</td>
-              <td data-label="Recomendación"><strong>Distribuidor</strong></td>
-              <td data-label="Razón">Volumen bajo no justifica gestión directa; necesita entrega rápida; stock disponible es ventaja</td>
-            </tr>
-            <tr>
-              <td data-label="Tipo">Colegio con 300+ pupitres y mobiliario de laboratorio</td>
-              <td data-label="Recomendación"><strong>Fabricante directo</strong></td>
-              <td data-label="Razón">Estandarización de medidas; especificaciones técnicas (resistencia, anti-vandalismo); ahorro escala importante</td>
-            </tr>
-            <tr>
-              <td data-label="Tipo">Clínica o centro médico (mobiliario especializado)</td>
-              <td data-label="Recomendación"><strong>Distribuidor especializado</strong></td>
-              <td data-label="Razón">Requisitos sanitarios locales; certificaciones específicas; soporte técnico posventa en país</td>
-            </tr>
-            <tr>
-              <td data-label="Tipo">Hotel boutique 30-50 habitaciones con diseño a medida</td>
-              <td data-label="Recomendación"><strong>Fabricante directo con agente</strong></td>
-              <td data-label="Razón">Personalización máxima requerida; volumen medio que justifica directo si se gestiona bien</td>
-            </tr>
-            <tr>
-              <td data-label="Tipo">Reequipamiento urgente (plazo &lt;6 semanas)</td>
-              <td data-label="Recomendación"><strong>Distribuidor con stock</strong></td>
-              <td data-label="Razón">El modelo directo toma 10-14 semanas mínimo; no hay margen para producción desde cero</td>
-            </tr>
-            <tr>
-              <td data-label="Tipo">Cadena hotelera multi-propiedad (PIP program)</td>
-              <td data-label="Recomendación"><strong>Fabricante directo</strong></td>
-              <td data-label="Razón">Estandarización entre propiedades; control de calidad consistente; ahorro acumulado en volumen anual</td>
-            </tr>
-          </tbody>
-        </table>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Escenario orientativo de costo entregado</h2>
+        <p>El siguiente cálculo conserva un proyecto tipo de 90 habitaciones en América Latina. Compara compra directa con una empresa comercial en China que aplica un 30% sobre el valor del producto. Para mantener una base coherente, el ejemplo calcula el arancel supuesto del 15% sobre el valor facturado en cada ruta.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Concepto</th><th>Fabricante directo</th><th>Intermediario en China</th><th>Supuesto utilizado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Concepto">Producto FOB</td><td data-label="Fabricante">$85,000</td><td data-label="Intermediario">$110,500</td><td data-label="Supuesto">30% sobre el producto</td></tr>
+              <tr><td data-label="Concepto">Inspección</td><td data-label="Fabricante">$1,200</td><td data-label="Intermediario">$0 separado</td><td data-label="Supuesto">Incluida en la tarifa del intermediario</td></tr>
+              <tr><td data-label="Concepto">Agente de compras</td><td data-label="Fabricante">$4,250</td><td data-label="Intermediario">$0 separado</td><td data-label="Supuesto">5% en la ruta directa</td></tr>
+              <tr><td data-label="Concepto">Flete marítimo y seguro</td><td data-label="Fabricante">$4,800</td><td data-label="Intermediario">$4,800</td><td data-label="Supuesto">Misma ruta y volumen</td></tr>
+              <tr><td data-label="Concepto">Arancel de ejemplo</td><td data-label="Fabricante">$12,750</td><td data-label="Intermediario">$16,575</td><td data-label="Supuesto">15% del valor FOB facturado</td></tr>
+              <tr><td data-label="Concepto">Transporte interno</td><td data-label="Fabricante">$1,500</td><td data-label="Intermediario">$1,200</td><td data-label="Supuesto">Cotización logística de referencia</td></tr>
+              <tr><td data-label="Concepto">Tiempo interno del comprador</td><td data-label="Fabricante">$3,000</td><td data-label="Intermediario">$800</td><td data-label="Supuesto">Valor interno asignado a la gestión</td></tr>
+              <tr><td data-label="Concepto">Total del escenario</td><td data-label="Fabricante"><strong>$112,500</strong></td><td data-label="Intermediario"><strong>$133,875</strong></td><td data-label="Supuesto"><strong>Diferencia: $21,375, aproximadamente 16.0%</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><small>Este ejercicio no incluye todas las variables posibles y no constituye una cotización. El arancel, la base aduanera, el flete, el tipo de cambio, la inspección y la tarifa del agente deben sustituirse por datos vigentes del proyecto.</small></p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ RIESGOS Y MITIGACIÓN ============ -->
-  <section class="section article-section">
-    <div class="container article-prose--wide">
-      <h2>Riesgos de cada modelo y cómo mitigarlos</h2>
-      <p>
-        Ningún modelo está libre de riesgo. Lo que cambia es el tipo de riesgo y quién lo asume. Conocer los puntos ciegos de cada camino le permite anticipar problemas antes de que se conviertan en pérdidas.
-      </p>
-
-      <div class="methodology-table">
-        <table>
-          <thead>
-            <tr>
-              <th>Riesgo</th>
-              <th>Modelo</th>
-              <th>Mitigación práctica</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Riesgo">Defectos de producción no detectados antes del embarque</td>
-              <td data-label="Modelo">Fabricante directo</td>
-              <td data-label="Mitigación">Contratar inspección pre-embarque (SGS/BV, $300-$800 USD). Exigir fotos de inspección con número de lote antes de aprobar embarque.</td>
-            </tr>
-            <tr>
-              <td data-label="Riesgo">Retraso de producción por encima del plazo acordado</td>
-              <td data-label="Modelo">Fabricante directo</td>
-              <td data-label="Mitigación">Incluir cláusula de penalización por retraso en el contrato (0.5%-1% semanal). Solicitar reportes de producción semanales con fotos.</td>
-            </tr>
-            <tr>
-              <td data-label="Riesgo">Distribuidor desaparece tras recibir anticipo</td>
-              <td data-label="Modelo">Distribuidor</td>
-              <td data-label="Mitigación">Verificar registro mercantil, referencias de clientes anteriores y tiempo en el mercado. Nunca pagar más del 30% de anticipo sin contrato firmado.</td>
-            </tr>
-            <tr>
-              <td data-label="Riesgo">Especificaciones malinterpretadas por barrera idiomática</td>
-              <td data-label="Modelo">Fabricante directo</td>
-              <td data-label="Mitigación">Usar planos técnicos con medidas en milímetros, no descripciones textuales. Aprobar mock-up físico antes de producción en serie.</td>
-            </tr>
-            <tr>
-              <td data-label="Riesgo">Problemas aduaneros por documentación incompleta</td>
-              <td data-label="Modelo">Ambos</td>
-              <td data-label="Mitigación">Trabajar con un despachante aduanero con experiencia en importación de muebles desde China. Verificar requisitos de certificados antes de embarcar.</td>
-            </tr>
-            <tr>
-              <td data-label="Riesgo">Distribuidor sube precio por inflación de flete o tipo de cambio</td>
-              <td data-label="Modelo">Distribuidor</td>
-              <td data-label="Mitigación">Negociar precio cerrado con cláusula de revisión solo si el flete varía más del 15%. Fijar tipo de cambio en el contrato.</td>
-            </tr>
-            <tr>
-              <td data-label="Riesgo">Diferencia entre muestra aprobada y producción en serie</td>
-              <td data-label="Modelo">Ambos</td>
-              <td data-label="Mitigación">Aprobar muestra con sello y firma. Exigir que la primera pieza de producción se compare contra la muestra antes de continuar.</td>
-            </tr>
-          </tbody>
-        </table>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <figure class="article-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-02-control-calidad-muebles.webp" alt="Ilustración conceptual de inspección dimensional y revisión de acabados de un mueble" width="1536" height="1024" loading="lazy" decoding="async" />
+          <figcaption>Ilustración conceptual generada con IA para explicar una inspección; no documenta un control de calidad realizado por HYMUEBLE.</figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ IMAGEN 3: CONTENEDOR DE EXPORTACIÓN ============ -->
-  <section class="section alt article-section">
-    <div class="container article-prose--wide">
-      <figure class="article-figure">
-        <img src="/assets/hymueble/recursos/blog/images/hym-04-img-03-contenedor-exportacion.png" alt="Contenedor marítimo cargado con muebles comerciales listos para exportación desde fábrica de Hongye Furniture Group en China hacia América Latina" width="1536" height="1024" loading="lazy" decoding="async" />
-        <figcaption>Carga de contenedor para exportación: el paso final donde ambos modelos convergen. La diferencia es quién coordina el proceso y quién asume el riesgo logístico.</figcaption>
-      </figure>
-    </div>
-  </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Escenarios que ayudan a elegir</h2>
+        <p>Los umbrales siguientes sirven para organizar la conversación, no para decidir automáticamente.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Escenario de referencia</th><th>Ruta que conviene evaluar primero</th><th>Qué debe confirmarse</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Escenario">Hotel de 80 o más habitaciones con acabados personalizados</td><td data-label="Ruta">Fabricante directo o intermediario técnico</td><td data-label="Confirmar">Capacidad, mock-up, uniformidad y costo entregado</td></tr>
+              <tr><td data-label="Escenario">Renovación de 20-40 puestos con plazo corto</td><td data-label="Ruta">Distribuidor local con stock</td><td data-label="Confirmar">Inventario, compatibilidad, entrega y montaje</td></tr>
+              <tr><td data-label="Escenario">300 o más pupitres y mobiliario de laboratorio</td><td data-label="Ruta">Fabricante o integrador especializado</td><td data-label="Confirmar">Normas, medidas, materiales e inspección por categoría</td></tr>
+              <tr><td data-label="Escenario">Clínica con mobiliario sujeto a requisitos locales</td><td data-label="Ruta">Distribuidor o especialista con soporte local</td><td data-label="Confirmar">Documentación aplicable y responsabilidad posventa</td></tr>
+              <tr><td data-label="Escenario">Hotel boutique de 30-50 habitaciones a medida</td><td data-label="Ruta">Fabricante directo con gestión técnica</td><td data-label="Confirmar">Si el volumen y la complejidad justifican la ruta</td></tr>
+              <tr><td data-label="Escenario">Entrega requerida en menos de 6 semanas</td><td data-label="Ruta">Distribuidor con inventario confirmado</td><td data-label="Confirmar">Existencia real y fecha de entrega contractual</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============ CHECKLIST DE DECISIÓN ============ -->
-  <section class="section article-section">
-    <div class="container article-prose">
-      <h2>Checklist rápido: 6 preguntas antes de decidir</h2>
-      <p>
-        Si todavía no tiene claro qué modelo le conviene, responda estas seis preguntas. Si cuatro o más respuestas apuntan al fabricante directo, el modelo directo probablemente sea el correcto para su proyecto.
-      </p>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Riesgos que deben quedar asignados por escrito</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Riesgo</th><th>Pregunta contractual</th><th>Control recomendado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Riesgo">Diferencia entre muestra y lote</td><td data-label="Pregunta">¿Qué documento define la muestra aprobada?</td><td data-label="Control">Muestra identificada, planos y criterios de aceptación</td></tr>
+              <tr><td data-label="Riesgo">Defecto detectado después del embarque</td><td data-label="Pregunta">¿Quién recibe la reclamación y qué pruebas exige?</td><td data-label="Control">Inspección, fotos por lote y procedimiento de reclamación</td></tr>
+              <tr><td data-label="Riesgo">Retraso de producción</td><td data-label="Pregunta">¿Cuándo empieza a contar el plazo?</td><td data-label="Control">Hitos de muestra, anticipo, materiales y embarque</td></tr>
+              <tr><td data-label="Riesgo">Documentación aduanera incompleta</td><td data-label="Pregunta">¿Quién prepara y quién revisa cada documento?</td><td data-label="Control">Lista acordada con el agente aduanal antes de producir</td></tr>
+              <tr><td data-label="Riesgo">Montaje no incluido</td><td data-label="Pregunta">¿Qué llega armado y quién instala?</td><td data-label="Control">Alcance, manuales, herramientas, personal y costo separados</td></tr>
+              <tr><td data-label="Riesgo">Garantía ambigua</td><td data-label="Pregunta">¿Qué cubre, por cuánto tiempo y con qué exclusiones?</td><td data-label="Control">Anexo de garantía firmado, sin depender de mensajes comerciales</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-      <ol class="editorial-list">
-        <li><strong>¿El volumen del pedido supera los $15,000 USD?</strong> Si sí, el ahorro del modelo directo justifica la gestión extra. Si no, el distribuidor simplifica todo.</li>
-        <li><strong>¿Necesita medidas, materiales o acabados personalizados?</strong> Si la respuesta es sí, el fabricante directo es casi obligatorio. Los distribuidores rara vez personalizan más allá del catálogo.</li>
-        <li><strong>¿Tiene plazo de obra de más de 12 semanas?</strong> El modelo directo necesita 10-14 semanas. Si tiene menos, vaya por distribuidor con stock.</li>
-        <li><strong>¿Su equipo tiene experiencia en importación desde China?</strong> Si no, necesita un agente de compras o un distribuidor que asuma esa gestión.</li>
-        <li><strong>¿El proyecto requiere acabados uniformes entre áreas?</strong> Si sí (hotel con habitación + lobby + restaurante), el fabricante directo garantiza consistencia que un distribuidor no puede igualar.</li>
-        <li><strong>¿Puede asumir el riesgo de un lote defectuoso?</strong> Si el presupuesto no tiene margen para reposiciones, el distribuidor filtra el riesgo antes de que llegue a su obra.</li>
-      </ol>
-    </div>
-  </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <figure class="article-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-03-contenedor-exportacion.webp" alt="Ilustración conceptual de muebles protegidos y preparados para carga marítima" width="1536" height="1024" loading="lazy" decoding="async" />
+          <figcaption>Ilustración conceptual generada con IA para explicar embalaje y logística; no muestra un embarque real de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <!-- ============ FAQ ============ -->
-  <section class="section alt article-section article-faq">
-    <div class="container article-prose">
-      <h2>Preguntas frecuentes</h2>
+    <section class="section article-section">
+      <div class="container article-prose">
+        <h2>Seis preguntas antes de decidir</h2>
+        <ol class="editorial-list">
+          <li><strong>¿Quién fabrica y quién factura?</strong> Pida la razón social de ambas partes cuando no coincidan.</li>
+          <li><strong>¿Qué nivel de personalización necesita?</strong> Distinga cambios de color de un desarrollo realmente a medida.</li>
+          <li><strong>¿Qué plazo admite la obra?</strong> Separe producción, consolidación, tránsito, aduana, entrega y montaje.</li>
+          <li><strong>¿Quién puede gestionar la importación?</strong> Identifique la experiencia y tiempo disponibles en su equipo.</li>
+          <li><strong>¿Cómo se verificará la calidad?</strong> Defina muestra, inspección y criterios antes del lote.</li>
+          <li><strong>¿Quién responde en destino?</strong> Garantía, repuestos, montaje y reclamaciones deben aparecer en la oferta.</li>
+        </ol>
+        <p>Para entender cómo HYMUEBLE plantea fabricación, muestras y control, consulte la página de <a href="/fabrica/">fabricante de muebles a medida</a>. La disponibilidad y el alcance se confirman únicamente después de revisar cada proyecto.</p>
+      </div>
+    </section>
 
-      <article class="faq-item">
-      <h3>¿Cuánto se ahorra comprando directo al fabricante en lugar de un distribuidor?</h3>
-      <p>El ahorro promedio al comprar directo de fábrica en China oscila entre 15% y 30% sobre el precio del distribuidor. En proyectos de más de 80 habitaciones o 200 puestos de trabajo, el ahorro absoluto puede superar los $40,000 USD. Sin embargo, hay que restar costos de gestión de proyecto, inspección y logística que el distribuidor normalmente asume.</p>
-      </article>
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
 
-      <article class="faq-item">
-      <h3>¿Qué pedido mínimo exige un fabricante de muebles en China?</h3>
-      <p>La mayoría de fabricantes de mobiliario commercial en Guangdong trabajan con un pedido mínimo equivalente a medio contenedor de 20 pies (aproximadamente $8,000-$12,000 USD). Para proyectos más pequeños, un distribuidor o trading company que consolida cargas es más práctico.</p>
-      </article>
+    <CTA
+      title="¿Quiere comparar una propuesta directa con una oferta de distribuidor?"
+      text="Comparta cantidades, categorías, destino, plazo y nivel de personalización. Podemos ayudarle a ordenar los supuestos y a identificar qué costos o responsabilidades faltan antes de cotizar."
+    />
 
-      <article class="faq-item">
-      <h3>¿Puedo personalizar los muebles si compro vía distribuidor?</h3>
-      <p>Depende del distribuidor. Los distribuidores que operan como representantes comerciales del fabricante sí pueden ofrecer personalización. Los distribuidores que compran stock terminado tienen limitaciones severas. Si su proyecto requiere dimensiones específicas, acabados personalizados o carpintería a medida, conviene ir directo al fabricante.</p>
-      </article>
-
-      <article class="faq-item">
-      <h3>¿Quién asume la responsabilidad si hay defectos de fabricación?</h3>
-      <p>Comprando directo, el fabricante responde por defectos de producción y suele ofrecer reposición o descuento en futuros pedidos. Comprando vía distribuidor, la reclamación pasa por el distribuidor, que negocia con la fábrica. Esto puede añadir 2-4 semanas al proceso de resolución. En ambos casos, exija una inspección de calidad previa al embarque.</p>
-      </article>
-
-      <article class="faq-item">
-      <h3>¿Necesito un agente de compras en China si trabajo directo con el fabricante?</h3>
-      <p>No es obligatorio, pero es recomendable para proyectos de más de $30,000 USD. Un agente o sourcing company cobra entre 3% y 7% del valor del pedido y se encarga de supervisar producción, inspección pre-embarque, documentación y coordinación logística. Para pedidos menores, el propio fabricante puede gestionar todo si tiene experiencia exportando a América Latina.</p>
-      </article>
-
-      <article class="faq-item">
-      <h3>¿Qué documentos debo exigir al comprar muebles directo de fábrica?</h3>
-      <p>Como mínimo: factura comercial proforma, packing list detallado por contenedor, certificado de origen (para aranceles preferenciales), fichas técnicas de materiales y acabados, y certificados de cumplimiento (ISO 9001, CARB Phase 2 para formaldehído, BS 5852 para inflamabilidad si aplica). Solicite también fotos de inspección pre-embarque.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ============ BRAND SIGNATURE ============ -->
-  <section class="section brand-signature">
-    <div class="container" style="text-align:center;">
-      <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
-      <em>Fabricante de mobiliario comercial para hoteles, oficinas y proyectos contract</em><br />
-      <em>Servicio en español nativo &middot; Envío de equipo de instalación a América Latina</em><br />
-      <em>Solicite una cotización: <a href="/contacto/">hymueble.com/contacto</a></em></p>
-    </div>
-  </section>
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial para proyectos</em><br />
+        <em>Plazos, garantía, instalación, importación y soporte se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
   </div>
 </BaseLayout>
 
