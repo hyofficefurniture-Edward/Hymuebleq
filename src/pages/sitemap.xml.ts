@@ -59,7 +59,6 @@ const escapeXml = (value: string) =>
 
 export const GET: APIRoute = ({ site }) => {
   const siteUrl = site ?? new URL("https://hymueble.com");
-  const lastmod = new Date().toISOString().slice(0, 10);
   const paths = [
     ...staticPaths,
     ...categories.flatMap((category) => [category.href, category.catalog, category.projects]),
@@ -73,7 +72,6 @@ export const GET: APIRoute = ({ site }) => {
       const loc = new URL(route, siteUrl).toString();
       return `  <url>
     <loc>${escapeXml(loc)}</loc>
-    <lastmod>${lastmod}</lastmod>
   </url>`;
     })
     .join("\n");
