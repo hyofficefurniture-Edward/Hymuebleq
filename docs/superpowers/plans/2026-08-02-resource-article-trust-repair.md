@@ -25,7 +25,7 @@
 - Modify: `src/pages/recursos/top-10-empresas-mobiliario-escolar-china-2026.astro`
 
 - [x] Change the page from an authoritative ranking to a supplier-screening guide.
-- [x] Preserve the approved `Top 10` format with ten source-linked profiles and state that the order is editorial, not a quality score.
+- [x] Preserve the approved `Top 10` format with ten source-checked profiles, no outbound competitor links, and state that the order is editorial rather than a quality score.
 - [x] Remove unsupported methodology, testimonials, customer locations, performance claims, warranty, installation, and response commitments.
 - [x] Keep numerical examples only inside labeled scenarios or calculation tables.
 - [x] Remove unsupported competitor superlatives and exact operational claims.

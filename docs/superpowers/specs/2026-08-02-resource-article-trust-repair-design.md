@@ -19,7 +19,7 @@ The blog listing entries for these two routes may be updated only where their ti
 
 ## Article roles
 
-The school article preserves the approved `Top 10` editorial format while becoming an informational supplier-screening guide, not an independent or authoritative ranking. Its numbered order is organizational rather than a quality score, and all ten supplier identities must link to a public corporate source. The commercial-purchasing article becomes a decision guide that distinguishes direct factory purchasing, a China-based intermediary, and a local importer/distributor.
+The school article preserves the approved `Top 10` editorial format while becoming an informational supplier-screening guide, not an independent or authoritative ranking. Its numbered order is organizational rather than a quality score. Supplier identities and categories must be checked against public corporate sources during editing, but the published article must not link to competitor websites. The commercial-purchasing article becomes a decision guide that distinguishes direct factory purchasing, a China-based intermediary, and a local importer/distributor.
 
 The education industry page continues to own the broad `mobiliario escolar` intent. The resource pages support procurement research and link readers to the relevant industry, catalog, factory, project-reference, and contact routes.
 
@@ -32,7 +32,7 @@ Image alt text describes the procurement concept shown. It must not claim that a
 ## Acceptance
 
 - Both URLs and canonical paths remain unchanged.
-- The school article retains `Top 10` in its metadata, H1, blog card, and visible list of ten source-linked profiles.
+- The school article retains `Top 10` in its metadata, H1, blog card, and visible list of ten source-checked profiles without outbound competitor links.
 - No unsupported customer or detailed-location identifiers remain.
 - Every retained unsupported number is visibly framed as an illustrative input or scenario.
 - No fixed warranty, installation, or response promise remains.
