@@ -620,6 +620,72 @@ const testShowroomModal = async (page) => {
   interactionResults.push({ name: "showroom modal", beforeUrl, afterOpenUrl: page.url(), opened: state, closed });
 };
 
+const testProjectCardLinks = async (page) => {
+  for (const viewport of [
+    { name: "desktop", width: 1440, height: 900 },
+    { name: "mobile", width: 390, height: 844 },
+  ]) {
+    await page.setViewportSize({ width: viewport.width, height: viewport.height });
+
+    const openHomeCard = async () => {
+      await page.goto(new URL("/", baseUrl).toString(), { waitUntil: "networkidle" });
+      const card = page.locator(".project-card").first();
+      await card.scrollIntoViewIfNeeded();
+      return card;
+    };
+
+    let card = await openHomeCard();
+    const detailHref = await card.getByRole("link", { name: "Ver detalles" }).getAttribute("href");
+    const expectedDetailPath = new URL(detailHref, baseUrl).pathname;
+    const imageBox = await card.locator("img").boundingBox();
+    if (!imageBox) {
+      failures.push(`${viewport.name} project card: image click target is missing.`);
+      continue;
+    }
+    await page.mouse.click(imageBox.x + imageBox.width / 2, imageBox.y + imageBox.height / 2);
+    await page.waitForTimeout(200);
+    const cardClickPath = new URL(page.url()).pathname;
+    if (cardClickPath !== expectedDetailPath) {
+      failures.push(`${viewport.name} project card: card body opened ${cardClickPath} instead of ${expectedDetailPath}.`);
+    }
+
+    card = await openHomeCard();
+    await card.getByRole("link", { name: "Consultar similar" }).click();
+    await page.waitForTimeout(200);
+    const contactClickPath = new URL(page.url()).pathname;
+    if (contactClickPath !== "/contacto/") {
+      failures.push(`${viewport.name} project card: contact CTA opened ${contactClickPath} instead of /contacto/.`);
+    }
+
+    card = await openHomeCard();
+    await card.getByRole("link", { name: "Ver detalles" }).focus();
+    await page.keyboard.press("Enter");
+    await page.waitForTimeout(200);
+    const keyboardDetailPath = new URL(page.url()).pathname;
+    if (keyboardDetailPath !== expectedDetailPath) {
+      failures.push(`${viewport.name} project card: keyboard details link opened ${keyboardDetailPath} instead of ${expectedDetailPath}.`);
+    }
+
+    card = await openHomeCard();
+    await card.getByRole("link", { name: "Consultar similar" }).focus();
+    await page.keyboard.press("Enter");
+    await page.waitForTimeout(200);
+    const keyboardContactPath = new URL(page.url()).pathname;
+    if (keyboardContactPath !== "/contacto/") {
+      failures.push(`${viewport.name} project card: keyboard contact link opened ${keyboardContactPath} instead of /contacto/.`);
+    }
+
+    interactionResults.push({
+      name: `${viewport.name} project card links`,
+      expectedDetailPath,
+      cardClickPath,
+      contactClickPath,
+      keyboardDetailPath,
+      keyboardContactPath,
+    });
+  }
+};
+
 const testCatalogModal = async (page) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(new URL("/catalogo/hoteles/", baseUrl).toString(), { waitUntil: "networkidle" });
@@ -680,6 +746,7 @@ try {
   await testProcessIcons(interactionPage);
   await testFAQTabs(interactionPage);
   await testScrollRailControls(interactionPage);
+  await testProjectCardLinks(interactionPage);
   await testShowroomModal(interactionPage);
   await testCatalogModal(interactionPage);
   await testContactForm(interactionPage);
