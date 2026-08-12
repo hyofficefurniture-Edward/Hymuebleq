@@ -61,6 +61,20 @@ const staticPaths = [
   "/productos-medicos/mesita-noche-hospitalera-cajones-antimicrobiana/",
   "/productos-medicos/mesa-cama-hospitalaria-regulable-ruedas/",
   "/productos-medicos/biombo-medico-privacidad-hospitalaria-acero/",
+  "/productos-escolares/",
+  "/productos-escolares/pagina-2/",
+  "/productos-escolares/mobiliario-educacion-infantil-seguro-cantos-redondeados/",
+  "/productos-escolares/mobiliario-modular-aprendizaje-colaborativo-aulas/",
+  "/productos-escolares/asientos-colaborativos-modulares-espacios-sociales-campus/",
+  "/productos-escolares/estanterias-libreria-escolar-modulares-madera-e1/",
+  "/productos-escolares/pupitres-escolares-flexibles-k12-aulas-modernas/",
+  "/productos-escolares/mobiliario-escolar-modular-reconfigurable-ruedas/",
+  "/productos-escolares/mobiliario-jardin-infancia-madera-abedul/",
+  "/productos-escolares/estanterias-moviles-bibliotecas-escolares-ruedas/",
+  "/productos-escolares/mobiliario-montessori-madera-aulas-diseno/",
+  "/productos-escolares/pupitres-sillas-escolares-estructura-acero/",
+  "/productos-escolares/mobiliario-laboratorio-steam-robotica-proyectos/",
+  "/productos-escolares/atril-podio-docente/",
 ];
 
 const escapeXml = (value: string) =>

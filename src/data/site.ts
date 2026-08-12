@@ -80,6 +80,7 @@ export const navItems = [
     { label: "Mobiliario Hotelero", href: "/productos/" },
     { label: "Mobiliario de Oficina", href: "/productos-oficina/" },
     { label: "Mobiliario Médico", href: "/productos-medicos/" },
+    { label: "Mobiliario Escolar", href: "/productos-escolares/" },
   ] },
   { label: "Recursos", href: "/recursos/", children: [
     { label: "Blog", href: "/recursos/blog/" },
