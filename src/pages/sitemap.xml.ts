@@ -47,6 +47,20 @@ const staticPaths = [
   "/productos-oficina/cabina-acustica-insonorizada-oficina/",
   "/productos-oficina/libreria-oficina-ejecutiva-chapa-madera/",
   "/productos-oficina/solucion-integral-seating-corporativos/",
+  "/productos-medicos/",
+  "/productos-medicos/pagina-2/",
+  "/productos-medicos/mobiliario-sala-consulta-medica-antibacteriano/",
+  "/productos-medicos/mobiliario-sala-exploracion-clinica-modular/",
+  "/productos-medicos/equipamiento-habitacion-hospitalaria-curacion/",
+  "/productos-medicos/mostrador-recepcion-hospitalaria-antimicrobiano/",
+  "/productos-medicos/cama-hospitalaria-electrica-cinco-posiciones/",
+  "/productos-medicos/sistema-almacenamiento-medico-estanteria-antimicrobiana/",
+  "/productos-medicos/carro-medico-movil-cajones-seguridad/",
+  "/productos-medicos/conjunto-mesa-silla-comedor-residencia-geriatrica/",
+  "/productos-medicos/sillones-espera-modulares-area-hospitalaria/",
+  "/productos-medicos/mesita-noche-hospitalera-cajones-antimicrobiana/",
+  "/productos-medicos/mesa-cama-hospitalaria-regulable-ruedas/",
+  "/productos-medicos/biombo-medico-privacidad-hospitalaria-acero/",
 ];
 
 const escapeXml = (value: string) =>
