@@ -75,6 +75,20 @@ const staticPaths = [
   "/productos-escolares/pupitres-sillas-escolares-estructura-acero/",
   "/productos-escolares/mobiliario-laboratorio-steam-robotica-proyectos/",
   "/productos-escolares/atril-podio-docente/",
+  "/productos-residenciales/",
+  "/productos-residenciales/pagina-2/",
+  "/productos-residenciales/suite-completa-mobiliario-apartamento-madera-natural/",
+  "/productos-residenciales/mobiliario-penthouse-lujo-medida-ffe-integral/",
+  "/productos-residenciales/isla-cocina-medida-residencias-lujo-piedra-natural/",
+  "/productos-residenciales/mobiliario-salon-dormitorio-moderno-madera-certificada/",
+  "/productos-residenciales/mobiliario-vivienda-multifamiliar-entrega-llave-mano/",
+  "/productos-residenciales/mobiliario-residencial-premium-proyectos-lujo-volumen/",
+  "/productos-residenciales/mobiliario-ahorra-espacio-viviendas-compactas-estudios/",
+  "/productos-residenciales/equipamiento-llave-mano-apartamentos-fabrica-propia/",
+  "/productos-residenciales/mobiliario-modular-apartamentos-servicio-alto-standing/",
+  "/productos-residenciales/mobiliario-bano-medida-villas-exclusivas-piedra-natural/",
+  "/productos-residenciales/mobiliario-salon-premium-villas-lujo-espacios-amplos/",
+  "/productos-residenciales/conjuntos-residenciales-integrales-dormitorio-salon-comedor/",
 ];
 
 const escapeXml = (value: string) =>
