@@ -1,0 +1,423 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "¿Qué es la espuma envuelta en plumón? La construcción de cojín que el comprador de lujo debe entender";
+const pageDescription = "Anatomía, mezclas de relleno, comparativa de costos y mantenimiento de los cojines de espuma HR envuelta en plumón: el estándar de confort del asiento de lujo en 2026.";
+const keywords = [
+  "espuma envuelta en plumón",
+  "cojines de lujo construcción",
+  "densidad espuma sofá",
+  "relleno plumón cojines",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/espuma-envuelta-plumon-cojines-lujo/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-06-img-01-cojin-plumon.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-08-28";
+const dateModified = "2026-08-28";
+const publicationDateLabel = "Publicada el 28 de agosto de 2026";
+
+const faqItems = [
+  {
+    question: "¿Los cojines envueltos en plumón provocan alergias?",
+    answer: "La envoltura va dentro de fundas antiplumas, por lo que la exposición es muy inferior a la de almohadas sueltas. Bien terminado, el escape de polvo es mínimo; los compradores con alergia severa al plumón pueden especificar envolturas de fibra hueca, que imitan la construcción a un 60% del costo.",
+  },
+  {
+    question: "¿Cuánto duran los cojines de espuma envuelta en plumón?",
+    answer: "El núcleo gobierna la vida útil: con núcleos HR de 2.4+ lb/ft³, espere 10-15 años. La envoltura necesita refresco anual pero dura mientras la funda permanezca intacta. Un núcleo barato bajo una buena envoltura sigue muriendo al año 6-8.",
+  },
+  {
+    question: "¿Por qué mi cojín nuevo se siente más firme que el del showroom?",
+    answer: "Las envolturas nuevas necesitan 40-60 horas de uso para asentarse, y las unidades de showroom llevan meses siendo usadas. Revise también la humedad ambiente: el aire seco compacta los racimos de plumón de forma medible.",
+  },
+  {
+    question: "¿Puedo pedir envoltura solo en los asientos y espuma normal en el resto?",
+    answer: "Sí, y es la división inteligente: envolver asientos y bordes superiores del respaldo, dejando espuma HR en la base del respaldo. En diseños de asiento profundo el respaldo es decorativo; el ahorro ronda $200-400 por sofá.",
+  },
+  {
+    question: "¿El cosido en cámaras vale el coste adicional?",
+    answer: "En los registros de re-tapizado, las envolturas sin canales muestran quejas por migración de relleno a 4 veces la tasa de las canalizadas dentro de los primeros 18 meses. Si el sofá se usará a diario, sí vale la pena.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía de materiales &middot; {publicationDateLabel}</p>
+          <h1>Espuma envuelta en plumón: el cojín que une lo blando y lo firme</h1>
+          <p>Siéntese en un cojín de puro plumón y, tras diez minutos, estará sentado sobre la tela tensada del bastidor. Siéntese en espuma de alta densidad pura y la segunda hora se sentirá como la primera: cómoda, pero nunca blanda. <strong>La espuma envuelta en plumón existe para resolver ambos problemas a la vez</strong>, y en 2026 es la especificación por defecto del asiento de lujo.</p>
+          <p>Esta guía explica la construcción, los materiales, las comparativas y qué compra realmente el sobreprecio de <strong>$500-900</strong> por sofá.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-06-img-01-cojin-plumon.webp" alt="Corte de un cojín de lujo con núcleo de espuma HR envuelto en capa de plumón dentro de cámaras cosidas" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar la construcción por capas; no documenta un producto específico de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose">
+        <h2>La anatomía: tres capas, cada una con un trabajo</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Capa</th><th>Material</th><th>Función</th><th>Especificación típica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Capa">Núcleo</td><td data-label="Material">Espuma HR</td><td data-label="Función">Soporte de carga, retención de forma</td><td data-label="Especificación">2.2-2.8 lb/ft³</td></tr>
+              <tr><td data-label="Capa">Envoltura</td><td data-label="Material">Cámara de plumón y pluma</td><td data-label="Función">Suavidad inicial, confort térmico</td><td data-label="Especificación">Mezcla 50/50 a 70/30</td></tr>
+              <tr><td data-label="Capa">Fundas</td><td data-label="Material">Cambre de algodón antiplumas</td><td data-label="Función">Contención del relleno</td><td data-label="Especificación">230+ hilos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El núcleo se corta ligeramente más pequeño que la funda del cojín; la envoltura ocupa el hueco. Al sentarse, los primeros 2-3 cm de recorrido comprimen solo el plumón —ese es el momento mullido— antes de que el peso alcance la espuma, que resiste de forma progresiva. <strong>El cosido en cámaras separadas es lo que distingue un cojín bueno de uno barato:</strong> las envolturas sin canales cosidas se ven idénticas en el showroom y forman bultos en meses.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>La mezcla de relleno: la proporción que predice su segundo invierno</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Mezcla (plumón/pluma)</th><th>Recuperación de lof</th><th>Índice de costo</th><th>Carácter</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Mezcla">70/30</td><td data-label="Lof">Excelente</td><td data-label="Costo">3x</td><td data-label="Carácter">Profundo, tipo nube</td></tr>
+              <tr><td data-label="Mezcla">60/40</td><td data-label="Lof">Muy bueno</td><td data-label="Costo">2.2x</td><td data-label="Carácter">Mullido, estándar de lujo</td></tr>
+              <tr><td data-label="Mezcla">50/50</td><td data-label="Lof">Bueno</td><td data-label="Costo">1.6x</td><td data-label="Carácter">Equilibrado</td></tr>
+              <tr><td data-label="Mezcla">5/95</td><td data-label="Lof">Regular</td><td data-label="Costo">1x</td><td data-label="Carácter">Firme; las plumas pueden pinchar</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para cojines de asiento, el estándar razonable es <strong>50/50 a 60/40</strong>. Las proporciones altas de plumón pertenecen a cojines de respaldo, donde el lof importa más que la carga. Una mezcla 5/95 envolviendo un buen núcleo sigue funcionando, pero los cañones trabajan a través de fundas baratas —la queja de "pincha" se rastrea hasta esta única línea de especificación.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Comparativa directa contra las alternativas</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Atributo</th><th>Espuma HR envuelta</th><th>Espuma HR pura</th><th>Plumón completo</th><th>Fibra envuelta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Atributo">Suavidad inicial</td><td data-label="Envuelta">Excelente</td><td data-label="HR">Firme</td><td data-label="Plumón">Excelente</td><td data-label="Fibra">Buena</td></tr>
+              <tr><td data-label="Atributo">Soporte tras 1 hora</td><td data-label="Envuelta">Excelente</td><td data-label="HR">Excelente</td><td data-label="Plumón">Pobre</td><td data-label="Fibra">Buena</td></tr>
+              <tr><td data-label="Atributo">Retención de perfil a 5 años</td><td data-label="Envuelta">90-95%</td><td data-label="HR">90-95%</td><td data-label="Plumón">50-70%</td><td data-label="Fibra">75-85%</td></tr>
+              <tr><td data-label="Atributo">Mantenimiento</td><td data-label="Envuelta">Semanal</td><td data-label="HR">Ninguno</td><td data-label="Plumón">Diario</td><td data-label="Fibra">Ocasional</td></tr>
+              <tr><td data-label="Atributo">Sobreprecio por 3 plazas</td><td data-label="Envuelta">+$500-900</td><td data-label="HR">Base</td><td data-label="Plumón">+$900-1,400</td><td data-label="Fibra">+$250-400</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El patrón a notar: <strong>la espuma envuelta hereda la durabilidad de su núcleo y el confort de su envoltura</strong>, evitando el colapso del plumón puro y la firmeza inicial de la espuma desnuda. Por esa combinación desplazó al plumón completo en el mercado del lujo durante la última década.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Mantenimiento: la parte que el vendedor suaviza</h2>
+        <ol class="editorial-list">
+          <li><strong>Semanal:</strong> golpear y amasar los cojines para deshacer el relleno compactado.</li>
+          <li><strong>Mensual:</strong> rotar 180° e intercambiar posiciones en sofás de varios asientos.</li>
+          <li><strong>Trimestral:</strong> abrir y redistribuir las cámaras donde el diseño lo permita.</li>
+          <li><strong>Anual:</strong> refresco profesional con vapor para recuperar el lof en climas secos; $80-150 por sofá.</li>
+        </ol>
+        <p>Si se omite, la envoltura se compacta de forma desigual; el núcleo no se ve afectado, razón por la que un cojín "aplanado" casi siempre revive con un buen amasado en lugar de necesitar reemplazo. Para proyectos de volumen, la <a href="/fabrica/">página de fabricación</a> describe cómo se documentan mezclas y cámaras por lote.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere especificar la construcción completa de sus cojines?"
+      text="Comparta el uso previsto y el nivel de confort deseado. Podemos preparar una propuesta con núcleo, mezcla, cámaras y fundas nombradas línea por línea."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

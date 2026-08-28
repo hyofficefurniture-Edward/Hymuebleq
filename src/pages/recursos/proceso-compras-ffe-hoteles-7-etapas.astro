@@ -1,0 +1,432 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "¿Qué es la compra de FF&E? Las 7 etapas del proceso que el propietario de hotel debe conocer";
+const pageDescription = "El proceso de compra de FF&E en siete etapas —programa, BOQ, calificación de proveedores, muestras, producción, logística e instalación— con presupuestos por tipo de propiedad y plazos reales.";
+const keywords = [
+  "proceso compras ff&e",
+  "ff&e hotel sourcing",
+  "boq mobiliario hotel",
+  "presupuesto ff&e por habitación",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/proceso-compras-ffe-hoteles-7-etapas/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-07-img-01-habitacion-hotel-ffe.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-08-28";
+const dateModified = "2026-08-28";
+const publicationDateLabel = "Publicada el 28 de agosto de 2026";
+
+const faqItems = [
+  {
+    question: "¿Cuánto tarda la compra de FF&E de un hotel full-service?",
+    answer: "Del congelamiento del diseño a la entrega, planifique 16-40 semanas: 4-8 de especificación y calificación, 3-5 de muestreo, 8-14 de producción y 2-4 de embarque e instalación. Los programas de lujo a medida se alargan porque las rondas de muestra se multiplican.",
+  },
+  {
+    question: "¿Cuál es la diferencia entre FF&E y OS&E?",
+    answer: "FF&E (muebles, herrajes y equipamiento) es específico del diseño y normalmente se fabrica a medida: casegoods de habitación, asientos, fijos. OS&E (suministros y equipamiento operativos) es compra de catálogo: blanquería, vajilla, pequeños aparatos. El FF&E exige especificación de nivel de ingeniería; el OS&E, disciplina logística.",
+  },
+  {
+    question: "¿Debe la compra de FF&E manejarla el propietario, el diseñador o una firma externa?",
+    answer: "Los propietarios con equipos experimentados pueden dirigirla y ahorrarse la comisión del 3-6%. El propietario primerizo casi siempre se beneficia de un comprador externo: la comisión se recupera solo en evitar errores de especificación, que en los datos de proyectos corren el 2-5% del valor FF&E cuando no se gestionan.",
+  },
+  {
+    question: "¿Qué es una reserva de FF&E y por qué la exigen los prestamistas?",
+    answer: "Un fondo de amortización, típicamente del 3-5% del valor FF&E o un monto anual por habitación ($500-800), reservado para reposición y renovación. Los prestamistas la exigen porque el desgaste del FF&E provoca fallas de inspección de marca, y estas, riesgo de baja de la franquicia.",
+  },
+  {
+    question: "¿Se pueden consolidar varios proveedores en un solo contrato FF&E?",
+    answer: "Sí: casegoods, mueble suelto y asientos se consolidan con frecuencia en un fabricante con varias líneas. Se acorta la coordinación (un ciclo de muestreo, un régimen de QC, un programa de embarque) y se ahorra típicamente 5-12% frente a tres contratos paralelos, siempre que el fabricante domine de verdad las tres categorías.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía de compras &middot; {publicationDateLabel}</p>
+          <h1>Compra de FF&E: las 7 etapas que separan un proyecto fluido de una crisis de apertura</h1>
+          <p><strong>La compra de FF&E es el abastecimiento, la especificación, la compra, la entrega y la instalación de muebles, herrajes y equipamiento de un hotel.</strong> Un inmueble de 150 habitaciones suele manejar un presupuesto de <strong>$2.5-6 millones</strong> y una ventana de <strong>16-40 semanas</strong> entre el congelamiento del diseño y la apertura.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-07-img-01-habitacion-hotel-ffe.webp" alt="Habitación de hotel superior amueblada con escritorio de casegoods, sillón tapizado y cabecero" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa una instalación real de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Las siete etapas de una sola mirada</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Etapa</th><th>Entregable clave</th><th>Duración típica</th><th>Riesgo si se salta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Etapa">1. Programa y presupuesto</td><td data-label="Entregable">Costo FF&E por habitación</td><td data-label="Duración">2-4 semanas</td><td data-label="Riesgo">Decisiones sin cifra de control</td></tr>
+              <tr><td data-label="Etapa">2. Especificación y BOQ</td><td data-label="Entregable">BOQ línea por línea + planos</td><td data-label="Duración">3-5 semanas</td><td data-label="Riesgo">Disputas de especificación</td></tr>
+              <tr><td data-label="Etapa">3. Calificación de proveedores</td><td data-label="Entregable">Capacidad, referencias, certificados</td><td data-label="Duración">2-4 semanas</td><td data-label="Riesgo">Fábrica sin capacidad real</td></tr>
+              <tr><td data-label="Etapa">4. Muestras y aprobación</td><td data-label="Entregable">Muestra dorada firmada</td><td data-label="Duración">5-9 semanas</td><td data-label="Riesgo">Sin estándar contractual</td></tr>
+              <tr><td data-label="Etapa">5. Producción y QC</td><td data-label="Entregable">Informes de inspección</td><td data-label="Duración">8-14 semanas</td><td data-label="Riesgo">Defectos ocultos bajo acabado</td></tr>
+              <tr><td data-label="Etapa">6. Logística e instalación</td><td data-label="Entregable">Entrega escalonada en obra</td><td data-label="Duración">3-6 semanas</td><td data-label="Riesgo">Contenedores sin sitio listo</td></tr>
+              <tr><td data-label="Etapa">7. Snagging y entrega</td><td data-label="Entregable">Acta de cierre y garantía</td><td data-label="Duración">1-3 semanas</td><td data-label="Riesgo">Retención sin liberar mal usada</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Etapa 1: programa y presupuesto por tipo de propiedad</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Clase de propiedad</th><th>Presupuesto FF&E por habitación</th><th>Alcance típico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Clase">Select-service</td><td data-label="Presupuesto">$6,000-9,000</td><td data-label="Alcance">Casegoods, asientos, mínima área pública</td></tr>
+              <tr><td data-label="Clase">Full-service upscale</td><td data-label="Presupuesto">$12,000-18,000</td><td data-label="Alcance">Casegoods completo + suelto + FF&E público</td></tr>
+              <tr><td data-label="Clase">Lujo / boutique</td><td data-label="Presupuesto">$25,000-40,000+</td><td data-label="Alcance">Programa a medida, piezas de autor</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El FF&E representa típicamente el <strong>30-45% del presupuesto de acondicionamiento</strong> de un hotel nuevo: el mayor bloque de costo controlable después de la construcción. Esta cifra disciplina cada decisión posterior; cuando un sillón empuja el presupuesto un 8%, la conversación ocurre con datos, no tras la producción.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Etapa 2: el BOQ es la columna vertebral del contrato</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Calidad de la línea de BOQ</th><th>Ejemplo</th><th>Probabilidad de disputa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Calidad">Específica</td><td data-label="Ejemplo">"Escritorio 1200×600, tapa HPL, estructura acero, pintura RAL 7016"</td><td data-label="Disputa">Baja</td></tr>
+              <tr><td data-label="Calidad">Parcial</td><td data-label="Ejemplo">"Escritorio, acabado madera, 120 cm"</td><td data-label="Disputa">Media</td></tr>
+              <tr><td data-label="Calidad">Vaga</td><td data-label="Ejemplo">"Escritorio según intención del diseñador"</td><td data-label="Disputa">Alta</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>El 60-70% de las disputas de compra se originan en líneas de BOQ vagas, no en fallos de calidad.</strong> El mejor predictor de un proyecto fluido es un BOQ donde un desconocido podría comprar el artículo correcto usando solo el documento.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Etapas 3-5: calificar, muestrear, producir</h2>
+        <p><strong>Calificación</strong> — tres filtros en orden estricto: capacidad de fábrica (¿opera el equipo que su especificación exige?), referencias (tres proyectos de escala y clase similar con propietarios contactables) y certificaciones (ISO 9001 como sistema; cumplimiento de producto aplicable a su mercado). Los certificados confirman que una fábrica <em>puede</em> operar sistemas; no prueban que lo hizo para usted.</p>
+        <p><strong>Muestreo</strong> — tres rondas: prototipo (forma y función, 3-5 semanas), muestra de preproducción (materiales y acabado exactos, 2-4 semanas) y <strong>muestra dorada</strong> firmada por ambas partes: la referencia contractual que zanja todo desacuerdo futuro sobre "el acabado acordado". La fotografía de muestras no la sustituye: la reproducción de color nunca es suficientemente fiable como referencia contractual.</p>
+        <p><strong>Producción</strong> — durante la ventana de 8-14 semanas, tres puntos de control: inspección en línea al 30-40% (bastidores y uniones antes de que el tapizado los oculte), muestreo aleatorio contra la muestra dorada e inspección previa al embarque con agencia tercera (base estadística AQL). Saltarse la inspección en línea es la economía más cara del FF&E: una vez laminado el casegood, el defecto del bastidor es invisible hasta la falla estructural en servicio.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Etapas 6-7: la coreografía final</h2>
+        <ol class="editorial-list">
+          <li><strong>Carga con embalaje de exportación</strong> — decisiones de plano versus armado por artículo.</li>
+          <li><strong>Embarques escalonados</strong> sincronizados con la obra: primero casegoods; suelto y arte al final.</li>
+          <li><strong>Recepción en obra</strong> con inspección de daños y evidencia fotográfica.</li>
+          <li><strong>Instalación habitación por habitación</strong> con lista de pendientes (punch list) desde la primera habitación.</li>
+          <li><strong>Snagging</strong> — barrido sistemático de defectos (3-8 por cada 100 artículos en un proyecto disciplinado), stock de repuestos del 2-5%, manuales y garantía documentada. Solo tras el acta se libera la retención: la palanca que mueve las etapas seis y siete.</li>
+        </ol>
+        <p>Para entender cómo se documenta capacidad, muestras y control por proyecto, consulte la página de <a href="/fabrica/">fabricante de mobiliario a medida</a>.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere estructurar su programa FF&E en siete etapas?"
+      text="Comparta número de habitaciones, clase de propiedad y calendario objetivo. Podemos mapear el programa completo, del presupuesto por habitación al acta de entrega."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

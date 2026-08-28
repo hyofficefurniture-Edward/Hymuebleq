@@ -1,0 +1,435 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "¿Por qué crujen las sillas del hotel al segundo año? Ingeniería del bastidor explicada";
+const pageDescription = "El crujido de una silla comercial casi nunca es la tela: es la unión entre montante y larguero. Uniones, humedad de la madera, física del tornillo y coste total de propiedad comparados.";
+const keywords = [
+  "silla de hotel cruje",
+  "construcción bastidor silla",
+  "espiga vs tornillo muebles",
+  "durabilidad sillas comerciales",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/por-que-crujen-sillas-hotel-bastidor/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-08-img-01-union-bastidor-silla.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-08-28";
+const dateModified = "2026-08-28";
+const publicationDateLabel = "Publicada el 28 de agosto de 2026";
+
+const faqItems = [
+  {
+    question: "Mis sillas ya crujen. ¿Tengo que reemplazarlas?",
+    answer: "Normalmente no. Si los bastidores están sanos (sin largueros fisurados), un programa de re-encolado —desarmar, encolar, clavar, prensar— restaura las sillas por $18-35 por unidad, un 30-45% del coste de reemplazo. Repare primero dos o tres sillas de muestra y sométalas a estrés antes de comprometer la flota.",
+  },
+  {
+    question: "¿El crujido lo causa el suelo o la silla?",
+    answer: "Compruébelo: levante la silla y flexione el respaldo en el aire. Si cruje suspendida, la causa es el bastidor. Si solo cruje en el suelo, probablemente son deslizadores sueltos o niveladores gastados: 30 minutos por unidad.",
+  },
+  {
+    question: "¿Las sillas de estructura metálica también crujen?",
+    answer: "Sí, pero distinto: las uniones metálicas crujen por herrajes sueltos o soldaduras gastadas, con inicio más temprano (fatiga de herrajes) y arreglo a menudo más simple (torque y fijador de roscas). Las sillas metálicas de banquete de calidad usan remaches o soldadura precisamente para evitar esa fatiga.",
+  },
+  {
+    question: "¿Puedo exigir 'sin crujidos' en el contrato de compra?",
+    answer: "Puede y debe, pero escríbalo como ingeniería: método de construcción de uniones, límites de humedad y requisito de prueba de carga cíclica según BIFMA X5.4 o equivalente con informes de laboratorio. 'Sin crujidos' es inexigible; una cláusula de tipo de unión, no.",
+  },
+  {
+    question: "¿La humedad costera acelera los crujidos?",
+    answer: "Sí. Los inmuebles costeros ciclan la humedad de la madera por temporada: el movimiento de uniones es mayor y el inicio más temprano. Para proyectos costeros, ajuste la especificación de humedad a 8-10%, selle los extremos del bastidor y acorte los intervalos de inspección a 12 meses.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Ingeniería &middot; {publicationDateLabel}</p>
+          <h1>El crujido no es la tela: es una especificación de unión que nació mal</h1>
+          <p>Empieza en una esquina del restaurante: un invitado se recuesta y la silla responde. En una temporada, el gerente de F&B agenda el "día de las sillas". La explicación técnica es directa: <strong>alrededor del 90% de los ruidos nacen en la unión entre el montante del respaldo y el larguero del asiento</strong>, donde la torsión cíclica se concentra en cada reclinada.</p>
+          <p>Una silla que cruje es diagnosticable desde el sonido, reparable en campo y, sobre todo, evitable en la especificación.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-08-img-01-union-bastidor-silla.webp" alt="Primer plano de una unión de espiga y mortaja en el bastidor de una silla encolada y prensada en fábrica" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar la unión; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Mapa de cargas: dónde vive el ruido</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Unión</th><th>Tipo de carga</th><th>Nivel de esfuerzo</th><th>Contribución al crujido</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Unión">Montante → larguero del asiento</td><td data-label="Carga">Torsión + flexión cíclica</td><td data-label="Esfuerzo">Máximo</td><td data-label="Contribución">~90% de los ruidos audibles</td></tr>
+              <tr><td data-label="Unión">Montante → travesaño superior</td><td data-label="Carga">Tracción</td><td data-label="Esfuerzo">Medio</td><td data-label="Contribución">Ocasional (husillos sueltos)</td></tr>
+              <tr><td data-label="Unión">Pata → larguero (mortaja)</td><td data-label="Carga">Compresión + cizalla</td><td data-label="Esfuerzo">Alto pero estático</td><td data-label="Contribución">Rara; más traqueteo</td></tr>
+              <tr><td data-label="Unión">Travesaños bajos</td><td data-label="Carga">Flexión</td><td data-label="Esfuerzo">Bajo</td><td data-label="Contribución">Crujidos de clima frío</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La unión del montante cicla —carga, descarga, carga— miles de veces por semana por silla en un restaurante ocupado. Cada tecnología de unión responde una pregunta: <strong>¿cómo resiste esta conexión la torsión cíclica sin perder fuerza de sujeción?</strong></p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Las cuatro tecnologías de unión, clasificadas por supervivencia hotelera</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de unión</th><th>Tiempo de montaje</th><th>Retención de sujeción a 2 años</th><th>Modo de falla</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Unión">Mortaja y espiga + adhesivo</td><td data-label="Tiempo">30-60 min</td><td data-label="Retención">95%+</td><td data-label="Falla">Rara; falta de cola</td></tr>
+              <tr><td data-label="Unión">Doble tarugo + adhesivo</td><td data-label="Tiempo">20-40 min</td><td data-label="Retención">85-92%</td><td data-label="Falla">Aflojamiento gradual, reparable</td></tr>
+              <tr><td data-label="Unión">Unión a tope atornillada + cola</td><td data-label="Tiempo">8-15 min</td><td data-label="Retención">40-70%</td><td data-label="Falla">Desgaste de rosca → crujido</td></tr>
+              <tr><td data-label="Unión">Unión a tope solo tornillos</td><td data-label="Tiempo">5-8 min</td><td data-label="Retención">20-50%</td><td data-label="Falla">Colapso progresivo año 3-5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La economía del problema: en un pedido de 500 sillas de banquete, el diferencial entre uniones atornilladas y mortaja-espiga ronda <strong>$4,000-10,000</strong>. Ese ahorro luce convincente en la cotización y cuesta un programa completo de re-encolado en el año tres, a 3-5 veces el precio.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>La humedad: una falla instalada de fábrica</h2>
+        <p>Un bastidor ensamblado al 16% de humedad perderá <strong>1.5-3% de dimensión transversal</strong> al igualarse con el interior climatizado del hotel (8-10%), abriendo físicamente cada mortaja fracciones de milímetro. El hueco es invisible en la entrega y audible en el mes 20.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Humedad al ensamblar</th><th>Comportamiento en servicio</th><th>Verificable mediante</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Humedad">8-10%</td><td data-label="Comportamiento">Estable dimensionalmente</td><td data-label="Verificación">Auditoría con higrómetro de pines</td></tr>
+              <tr><td data-label="Humedad">10-12%</td><td data-label="Comportamiento">Movimiento estacional menor</td><td data-label="Verificación">Aceptable con uniones sanas</td></tr>
+              <tr><td data-label="Humedad">&gt;12%</td><td data-label="Comportamiento">Apertura de uniones, crujido año 1-2</td><td data-label="Verificación">Reflejado en la tasa de posventa</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Pida la lectura de humedad del lote de bastidores.</strong> Las fábricas serias la registran; el registro es una página y responde una pregunta que ningún showroom puede.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Física del tornillo: por qué "apretar más" fracasa</h2>
+        <p>Un tornillo funciona comprimiendo fibras contra su rosca. Cada ciclo de carga las comprime más, de forma permanente: tras unos miles de reclinadas, la rosca se alarga 0.2-0.5 mm, la fuerza de sujeción cae bajo el umbral de fricción y las caras de la unión micro-deslizan bajo carga —ese deslizamiento es el crujido. Reapretar comprime fibras ya aplastadas: la reparación dura meses y luego falla más rápido, porque la rosca quedó sobredimensionada. <strong>La reparación duradera es desarmar, inyectar adhesivo, re-prensar y clavar un tarugo</strong> ($18-35 por unidad, el 30-45% del coste de reemplazo).</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>El dinero: precio de compra contra coste a 5 años (500 sillas)</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Escenario</th><th>Compra</th><th>Coste año 3</th><th>Coste año 5</th><th>Total 5 años</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Escenario">Mortaja-espiga, $78/unidad</td><td data-label="Compra">$39,000</td><td data-label="Año 3">$0</td><td data-label="Año 5">Retoques menores</td><td data-label="Total"><strong>~$40,500</strong></td></tr>
+              <tr><td data-label="Escenario">Unión atornillada, $55/unidad</td><td data-label="Compra">$27,500</td><td data-label="Año 3">Re-encolado $18-25k</td><td data-label="Año 5">Ola de reemplazo</td><td data-label="Total"><strong>$52-58,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Ahorrar $23 por silla se convierte en <strong>$12-30k adicionales</strong> a cinco años, antes de contar el daño a la experiencia del huésped. La especificación correcta se escribe como ingeniería, no como adjetivos: tipo de unión, límite de humedad y prueba cíclica según BIFMA X5.4 o equivalente con informe de laboratorio en archivo. Vea cómo se documentan uniones y controles en la <a href="/fabrica/">página de fabricación</a>.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere una flota de sillas silenciosa a cinco años?"
+      text="Comparta volumen, uso previsto y clase de propiedad. Podemos especificar uniones, humedad y pruebas cíclicas línea por línea antes de producir."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
