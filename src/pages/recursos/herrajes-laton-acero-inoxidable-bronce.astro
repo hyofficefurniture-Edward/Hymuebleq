@@ -1,0 +1,442 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Latón vs Acero Inoxidable vs Bronce en Herrajes: Corrosión y Tacto en el Mobiliario de Lujo";
+const pageDescription = "Comparativa de latón, acero inoxidable y bronce para herrajes de mobiliario: ensayo de niebla salina ASTM B117, tacto, envejecimiento y costo. Qué metal elegir por habitación, con la especificación exacta para escribir.";
+const keywords = [
+  "latón vs acero inoxidable vs bronce",
+  "herrajes muebles de lujo",
+  "ensayo niebla salina ASTM B117",
+  "pátina latón bronce",
+  "especificación herrajes metal",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/herrajes-laton-acero-inoxidable-bronce/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-10-img-01-herrajes-metal.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿Alguna vez vale la pena el herraje niquelado (imitación latón)?",
+    answer: "Para estilismo de corta duración —propiedades en alquiler, renovaciones rápidas o piezas decorativas de bajo uso— el herraje niquelado de USD 4-8 entrega el aspecto por una temporada. En cuanto la pieza es de uso diario o costera, la matemática colapsa: el fallo del baño es terminal y la mano de obra de reposición cuesta más que la mejora.",
+  },
+  {
+    question: "¿Cómo distingo el latón macizo del niquelado?",
+    answer: "Tres pruebas de campo: el peso (el latón macizo es pesado para su tamaño y un tirador macizo tiene heft perceptible), el imán (el latón macizo no es magnético; el zinc niquelado puede serlo y el acero lo es) y una lima o rayado en una superficie oculta (el latón macizo muestra un dorado uniforme a través de la rayadura; el baño muestra una base gris).",
+  },
+  {
+    question: "¿El acero inoxidable se ve demasiado &quot;frío&quot; para interiores de lujo?",
+    answer: "El 304/316 en acabado cepillado o satinado se lee moderno, no clínico, cuando se combina con materiales cálidos —madera, lino, piedra. La percepción de frío viene de los acabados pulidos tipo cromo, no del acero en sí. Especifique cepillado, no espejo, y desaparece en la habitación.",
+  },
+  {
+    question: "¿Por qué mi herraje &quot;de latón&quot; se pica al segundo año?",
+    answer: "O bien no era latón macizo (fallo del baño) o bien la laca falló y expuso la aleación base de zinc. El latón macizo verdadero se empaña; no se pica. La picadura en un herraje color latón es la firma de una base de zamak que nunca iba a sobrevivir.",
+  },
+  {
+    question: "¿Qué acabado debo escribir en la especificación para evitar confusiones?",
+    answer: "Escriba la cadena completa: metal base + aleación + sistema de acabado. &quot;Latón macizo C260, sin lacar, satinado&quot; o &quot;acero inoxidable 316, cepillado, pasivado&quot;. Una especificación que nombra la aleación y el acabado no puede degradarse en silencio —y si se degrada, la desviación es un tema de contrato, no un argumento.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía de materiales &middot; {publicationDateLabel}</p>
+          <h1>Latón, acero inoxidable y bronce: el herraje que delata en qué villa está</h1>
+          <p>Tras una década especificando casegoods y herrajes para proyectos residenciales de alta gama, se puede leer la hoja de especificaciones de una villa desde sus tiradores: el latón macizo que ha madurado a un tono miel es un cliente que especificó desde el inicio; la corrosión alrededor de la bisagra "de latón" al segundo año es un cliente que compró zinc niquelado y lo llamó latón. Esta guía es la comparación que se ejecuta antes de cada decisión de herraje.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-10-img-01-herrajes-metal.webp" alt="Tres herrajes metálicos —latón, acero inoxidable y bronce— comparados sobre una superficie de mármol" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Los metales, definidos por lo que realmente son</h2>
+        <p>Antes de comparar, una aclaración que ahorra fortunas: <strong>estos tres nombres son categorías, no productos.</strong> "Latón" puede significar latón macizo, zinc niquelado o acero pintado —tres productos con una diferencia de precio de 10 veces.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nombre en la cotización</th><th>Lo que suele ser</th><th>Aleación típica</th><th>Posición de precio honesta</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Nombre en la cotización">"Latón"</td><td data-label="Lo que suele ser">Latón macizo (cobre-zinc)</td><td data-label="Aleación típica">C260/C280 (70/30, 60/40)</td><td data-label="Posición de precio honesta">Premium</td></tr><tr><td data-label="Nombre en la cotización">"Acabado latón"</td><td data-label="Lo que suele ser">Zinc niquelado (zamak)</td><td data-label="Aleación típica">Zamak 3 + baño</td><td data-label="Posición de precio honesta">Económico</td></tr><tr><td data-label="Nombre en la cotización">"Efecto latón"</td><td data-label="Lo que suele ser">Acero pintado</td><td data-label="Aleación típica">Acero + laca</td><td data-label="Posición de precio honesta">El más bajo</td></tr><tr><td data-label="Nombre en la cotización">"Inoxidable"</td><td data-label="Lo que suele ser">304 o 316 austenítico</td><td data-label="Aleación típica">18/8 o 18/10 + molibdeno</td><td data-label="Posición de precio honesta">Medio-premium</td></tr><tr><td data-label="Nombre en la cotización">"Bronce"</td><td data-label="Lo que suele ser">Bronce macizo (cobre-estaño)</td><td data-label="Aleación típica">C932/C954</td><td data-label="Posición de precio honesta">El más alto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La cotización rara vez miente —solo dice "latón" y deja que usted asuma la versión cara. <strong>Un tirador de zinc niquelado cuesta 10-15 % del latón macizo y se desgasta a través del baño en 2-4 años</strong> de uso costero diario. Lo que realmente compra es la aleación y el sistema de acabado, no el sustantivo.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Corrosión: la realidad del ensayo de niebla salina</h2>
+        <p>En herrajes de mobiliario, la corrosión es el fallo que realmente termina con el producto. La medida estándar es el <strong>ensayo de niebla salina neutra ASTM B117: horas hasta la primera corrosión visible</strong>.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material</th><th>Horas de niebla salina</th><th>Villa costera (200 m del mar)</th><th>Interior</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Material">Acero inoxidable 316</td><td data-label="Horas de niebla salina">1.000-1.500</td><td data-label="Villa costera (200 m del mar)">Excelente — la única opción sin mantenimiento</td><td data-label="Interior">Excesivo</td></tr><tr><td data-label="Material">Acero inoxidable 304</td><td data-label="Horas de niebla salina">300-600</td><td data-label="Villa costera (200 m del mar)">Bueno; enjuagar de vez en cuando</td><td data-label="Interior">Excesivo</td></tr><tr><td data-label="Material">Latón macizo sin lacar</td><td data-label="Horas de niebla salina">24-72</td><td data-label="Villa costera (200 m del mar)">Pobre — requiere pulido trimestral</td><td data-label="Interior">Envejece con elegancia</td></tr><tr><td data-label="Material">Latón macizo lacado</td><td data-label="Horas de niebla salina">200-400</td><td data-label="Villa costera (200 m del mar)">Bueno hasta que falla la laca (2-5 años)</td><td data-label="Interior">Bueno</td></tr><tr><td data-label="Material">Zinc niquelado</td><td data-label="Horas de niebla salina">24-72 (a través del baño)</td><td data-label="Villa costera (200 m del mar)">Pobre</td><td data-label="Interior">Aceptable</td></tr><tr><td data-label="Material">Bronce macizo</td><td data-label="Horas de niebla salina">100-300</td><td data-label="Villa costera (200 m del mar)">Bueno — la pátina protege, no daña</td><td data-label="Interior">Envejece mejor que todos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El patrón de campo coincide con el ensayo: <strong>en proyectos costeros, el inoxidable es la única opción de instalar y olvidar</strong>, y el 316 (que añade molibdeno) justifica su prima de ~20-30 % sobre el 304 a unos cientos de metros del agua salada. En el interior, la historia se invierte: el latón y el bronce no se corroen tanto como desarrollan una pátina que muchos clientes pagan por tener. <strong>Línea de especificación:</strong> "316 inoxidable, cepillado, pasivado" para costa; "latón macizo lacado o bronce macizo" para piezas de autor en interior.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Tacto: por qué el latón gana la prueba de la mano</h2>
+        <p>El herraje se toca cientos de veces al día —es el componente más experimentado físicamente de una habitación. Y el tacto no es marketing subjetivo; es física.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Propiedad</th><th>Latón (C260)</th><th>Inoxidable (304)</th><th>Bronce (C932)</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Propiedad">Densidad (g/cm³)</td><td data-label="Latón (C260)">8.5</td><td data-label="Inoxidable (304)">8.0</td><td data-label="Bronce (C932)">8.8</td></tr><tr><td data-label="Propiedad">Conductividad térmica (W/m·K)</td><td data-label="Latón (C260)">120</td><td data-label="Inoxidable (304)">16</td><td data-label="Bronce (C932)">36</td></tr><tr><td data-label="Propiedad">Dureza (Brinell)</td><td data-label="Latón (C260)">85-100</td><td data-label="Inoxidable (304)">200-250</td><td data-label="Bronce (C932)">85-100</td></tr><tr><td data-label="Propiedad">Amortiguación interna (tacto)</td><td data-label="Latón (C260)">Alta — "cálido"</td><td data-label="Inoxidable (304)">Baja — "duro/frío"</td><td data-label="Bronce (C932)">Alta — "pesado"</td></tr><tr><td data-label="Propiedad">Sensación bajo la mano</td><td data-label="Latón (C260)">Suave, sedoso</td><td data-label="Inoxidable (304)">Nítido, cortante</td><td data-label="Bronce (C932)">Denso, sólido</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos números explican la brecha táctil. <strong>Conductividad térmica:</strong> el latón extrae calor de la mano más rápido que el acero, por eso se siente más cálido al tacto en una habitación fresca. <strong>Dureza y amortiguación:</strong> el acero es el doble de duro y vibra, mientras que el latón y el bronce absorben la micro-vibración —por eso una maneta de latón se siente "silenciosa" y una de acero, "clínica". Eso no es un argumento contra el acero; es un argumento para emparejar el metal con la habitación, igual que se emparejan la <a href="/recursos/espuma-envuelta-plumon-cojines-lujo/">construcción del cojín</a> o la <a href="/catalogo/">línea de producto</a> con el uso previsto.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Envejecimiento: la cuestión de la pátina</h2>
+        <p>Todo metal envejece. La diferencia es si el envejecimiento se ve como carácter o como fallo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Metal</th><th>Patrón de envejecimiento</th><th>Aspecto al año 5</th><th>Veredicto del comprador</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Metal">Acero inoxidable 316</td><td data-label="Patrón de envejecimiento">Casi no cambia</td><td data-label="Aspecto al año 5">Como el primer día</td><td data-label="Veredicto del comprador">Aburrido para algunos, perfecto para otros</td></tr><tr><td data-label="Metal">Acero inoxidable 304</td><td data-label="Patrón de envejecimiento">Micro-picaduras si se descuida</td><td data-label="Aspecto al año 5">Fino, manchas ocasionales</td><td data-label="Veredicto del comprador">Aceptable</td></tr><tr><td data-label="Metal">Latón lacado</td><td data-label="Patrón de envejecimiento">La laca se astilla → empañado desigual</td><td data-label="Aspecto al año 5">Desparejo</td><td data-label="Veredicto del comprador">Decepcionante</td></tr><tr><td data-label="Metal">Latón sin lacar</td><td data-label="Patrón de envejecimiento">Miel uniforme → tono antiguo</td><td data-label="Aspecto al año 5">Cálido, madurado</td><td data-label="Veredicto del comprador">El aspecto más buscado</td></tr><tr><td data-label="Metal">Bronce macizo</td><td data-label="Patrón de envejecimiento">Pátina oscura y viva</td><td data-label="Aspecto al año 5">Marrón-negro profundo, notas verdes</td><td data-label="Veredicto del comprador">El "acabado vivo"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La distinción crítica: <strong>el latón se empaña de forma progresiva (uniforme, suave, deseable); el zinc niquelado se desgasta a través del baño (parcheado, cortante, terminal)</strong>. Y el bronce es el único cuya pátina es químicamente protectora: la capa oscura es óxido de cobre que frena la corrosión posterior, por eso los herrajes de bronce de grado marino sobreviven décadas en aire salado. <strong>Línea de especificación:</strong> si quiere el aspecto envejecido, especifique latón macizo o bronce sin lacar e informe al cliente de que madurará —eso es una característica. Si quiere que se mantenga brillante, especifique lacado y presupueste el relacado a los años 2-5.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Costo y la trampa del valor</h2>
+        <p>El herraje es una línea pequeña con una dispersión de calidad enorme. Así se ve la dispersión en un tirador o bisagra estándar:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Producto</th><th>Costo unitario</th><th>Costo total a 10 años*</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Producto">Zinc niquelado</td><td data-label="Costo unitario">USD 4-8</td><td data-label="Costo total a 10 años*">USD 12-25</td><td data-label="Notas">Reemplazar una vez al año 4</td></tr><tr><td data-label="Producto">Acero pintado</td><td data-label="Costo unitario">USD 2-5</td><td data-label="Costo total a 10 años*">USD 10-20</td><td data-label="Notas">Reemplazar al año 3</td></tr><tr><td data-label="Producto">Latón macizo</td><td data-label="Costo unitario">USD 25-60</td><td data-label="Costo total a 10 años*">USD 25-60</td><td data-label="Notas">Retoque de laca al año 5</td></tr><tr><td data-label="Producto">Acero inoxidable 304</td><td data-label="Costo unitario">USD 18-45</td><td data-label="Costo total a 10 años*">USD 18-45</td><td data-label="Notas">Ninguno</td></tr><tr><td data-label="Producto">Acero inoxidable 316</td><td data-label="Costo unitario">USD 25-60</td><td data-label="Costo total a 10 años*">USD 25-60</td><td data-label="Notas">Ninguno</td></tr><tr><td data-label="Producto">Bronce macizo</td><td data-label="Costo unitario">USD 40-90</td><td data-label="Costo total a 10 años*">USD 40-90</td><td data-label="Notas">Ninguno; la pátina es el punto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>*Incluye la mano de obra esperada de reposición de los elementos fallados. La trampa es comprar barato dos veces: <strong>el herraje niquelado falla primero de forma invisible</strong> (usted nota el empañado, no la pérdida del baño) y, cuando lo reemplaza, ya pagó 60-100 % del precio del latón macizo solo en mano de obra. Para una villa con 40-80 puntos de contacto de herraje, la diferencia entre niquelado y macizo es de USD 800-2.500 iniciales —un error de redondeo frente al costo de reemplazar y remontar herrajes habitación por habitación. El mismo principio de "comprar barato dos veces" aplica al <a href="/recursos/precio-sofa-medida-decodificado-2026/">precio de un sofá a medida</a>: el descuento inicial suele cobrarse en reparaciones.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>La tabla de decisión: qué habitación, qué metal</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Habitación / condición</th><th>Primera opción</th><th>Por qué</th><th>Segunda opción</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Habitación / condición">Villa costera, junto al exterior</td><td data-label="Primera opción">Acero inoxidable 316</td><td data-label="Por qué">Supervivencia a la niebla salina</td><td data-label="Segunda opción">Bronce macizo</td></tr><tr><td data-label="Habitación / condición">Salón, interior de lujo</td><td data-label="Primera opción">Latón macizo (sin lacar)</td><td data-label="Por qué">Tacto + envejecimiento</td><td data-label="Segunda opción">Bronce macizo</td></tr><tr><td data-label="Habitación / condición">Cocina (lavado frecuente)</td><td data-label="Primera opción">Inoxidable 304/316</td><td data-label="Por qué">Corrosión + limpieza fácil</td><td data-label="Segunda opción">—</td></tr><tr><td data-label="Habitación / condición">Baño (humedad + químicos)</td><td data-label="Primera opción">Acero inoxidable 316</td><td data-label="Por qué">Resistencia química</td><td data-label="Segunda opción">Bronce macizo</td></tr><tr><td data-label="Habitación / condición">Pieza de autor / herencia</td><td data-label="Primera opción">Bronce macizo</td><td data-label="Por qué">Pátina + peso</td><td data-label="Segunda opción">Latón macizo</td></tr><tr><td data-label="Habitación / condición">Casegoods de hotel de alto tráfico</td><td data-label="Primera opción">Inoxidable 304 o latón lacado</td><td data-label="Por qué">Resistencia al abuso</td><td data-label="Segunda opción">Bronce</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Regla práctica del taller:</strong> cuando un cliente no decide, se le hace una sola pregunta: <em>"¿quiere que se vea igual dentro de cinco años, o mejor?"</em>. El acero responde lo primero; el latón y el bronce, lo segundo. Ninguna respuesta es incorrecta: son proyectos distintos. Para proyectos de hotel, el mismo criterio de decisión por ambiente se usa en las <a href="/recursos/proceso-compras-ffe-hoteles-7-etapas/">7 etapas de compra de FF&E</a> y en la selección del <a href="/recursos/top-10-fabricantes-muebles-hoteles-china-2026/">fabricante de mobiliario hotelero</a>.</p>
+        </div>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Necesita especificar los herrajes de su proyecto?"
+      text="Comparta el tipo de ambiente, la proximidad al mar y el acabado deseado. Preparamos una especificación con la aleación y el sistema de acabado nombrados línea por línea."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

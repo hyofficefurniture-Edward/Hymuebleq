@@ -1,0 +1,444 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "5 Señales de Alerta en un Presupuesto de Muebles a Medida: Checklist del Comprador";
+const pageDescription = "Cinco banderas rojas en una cotización de muebles a medida —materiales sin nombrar, suspensión oculta, pagos sin muestra dorada, garantía de una línea y fábrica sin evidencia— con el decodificador de 5 líneas para leer cualquier presupuesto en diez minutos.";
+const keywords = [
+  "señales de alerta presupuesto muebles",
+  "cotización muebles a medida",
+  "banderas rojas fabricante muebles",
+  "suspensión sofá webbing resortes",
+  "muestra dorada muebles",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/banderas-rojas-presupuesto-muebles-cotizacion/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-09-img-01-revision-cotizacion.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿Cuál es la señal de alerta que más se pasa por alto?",
+    answer: "La suspensión sin nombrar. Los compradores revisan la tela (el 20-25 % visible del costo) mientras el sistema que decide si el sofá se hunde al tercer año —webbing genérico frente a resortes— queda sin leer. Es la omisión más común en toda revisión de cotización.",
+  },
+  {
+    question: "¿Una cotización vaga es siempre una estafa?",
+    answer: "No. La mayoría de las fábricas no son deshonestas: responden a lo que se les pidió. Una cotización vaga suele reflejar una solicitud vaga. El arreglo es simétrico: usted endurece la solicitud y la fábrica endurece la respuesta. La señal de alerta aparece cuando usted endurece y ellos no.",
+  },
+  {
+    question: "¿Qué anticipo es razonable en muebles a medida?",
+    answer: "El 30 % para iniciar producción es defendible con una relación establecida; el 50 % es común en el primer trabajo a medida, pero debe estar condicionado a la firma de la muestra dorada. Cualquier pago superior al 50 % antes de inspección debe tratarse como una solicitud de financiamiento, no como una compra.",
+  },
+  {
+    question: "¿Debo exigir inspección de terceros?",
+    answer: "Para pedidos superiores a unos USD 25.000, sí: una inspección previa al embarque con base estadística AQL cuesta 1-3 % del valor y es el seguro más barato de la industria. Para pedidos menores, una videollamada estructurada durante la ventana de inspección en línea (30-40 % de la producción) cubre la mayor parte del riesgo.",
+  },
+  {
+    question: "¿Se puede negociar una mejor garantía?",
+    answer: "A veces — pero solo antes de firmar. Las fábricas calculan el riesgo de garantía dentro del precio; pedir una garantía de bastidor de 5 años después de firmar es como comprar un seguro después del siniestro. Consiga la garantía por componentes por escrito antes del anticipo; espere que sume 2-5 % a una cotización defendible.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía de compra &middot; {publicationDateLabel}</p>
+          <h1>5 señales de alerta en un presupuesto de muebles a medida</h1>
+          <p>Una cotización es un documento legal, no un argumento de venta. En los registros de proyecto, el 60-70 % de las disputas de compra se originan en líneas de especificación vagas —no en fallos de calidad de la fábrica. Esta es la checklist que un comprador profesional ejecuta antes de firmar cualquier orden de compra.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-09-img-01-revision-cotizacion.webp" alt="Revisión de una cotización de muebles a medida con lista de especificaciones sobre la mesa de un taller de tapicería" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>La checklist que ejecuto antes de cada orden de compra</h2>
+        <p>Detrás de las órdenes de compra de mobiliario tapizado para proyectos de villa y hotel boutique hay un patrón repetido: el fallo no estuvo en la fábrica, sino en la cotización —en las líneas que se pasaron por alto porque el precio parecía justo y las fotos parecían correctas. Cada bandera roja de esta guía está ligada a un fallo real, vivido o pagado por un cliente. Si aún no ha visto cómo se descompone el precio de un sofá capa por capa, lea primero la <a href="/recursos/precio-sofa-medida-decodificado-2026/">guía de precios de sofás a medida</a>.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Señal 1: la línea de especificación que no nombra nada</h2>
+        <p>El predictor más fiable de un mal negocio es una especificación escrita con adjetivos en lugar de números. <strong>Cuando una cotización no nombra especies, densidades o normas, la fábrica no está ocultando calidad: está diciendo que no hay calidad que nombrar.</strong></p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Redacción vaga que verá</th><th>Lo que suele significar</th><th>Lo que dice una cotización defendible</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Redacción vaga que verá">Bastidor de madera maciza</td><td data-label="Lo que suele significar">Madera blanda grapada, humedad desconocida</td><td data-label="Lo que dice una cotización defendible">Haya/abedul secado en horno, 8-12 % MC, espigas + refuerzos</td></tr><tr><td data-label="Redacción vaga que verá">Espuma de alta densidad</td><td data-label="Lo que suele significar">Densidad sin verificar, probable 1.5-1.8 lb/ft³</td><td data-label="Lo que dice una cotización defendible">Espuma HR de 2.5+ lb/ft³, norma nombrada (ASTM D3574)</td></tr><tr><td data-label="Redacción vaga que verá">Tela importada</td><td data-label="Lo que suele significar">Poliéster genérico, Martindale desconocido</td><td data-label="Lo que dice una cotización defendible">Fábrica nombrada, 30.000-100.000 ciclos Martindale</td></tr><tr><td data-label="Redacción vaga que verá">Acabado premium</td><td data-label="Lo que suele significar">Una capa de laca, sin norma</td><td data-label="Lo que dice una cotización defendible">Sistema laca/UV con abrasión Taber indicada</td></tr><tr><td data-label="Redacción vaga que verá">Grado contract</td><td data-label="Lo que suele significar">Término de marketing, sin informe</td><td data-label="Lo que dice una cotización defendible">Certificado BIFMA / CAL TB 117-2013 / EN 1729 en archivo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una fábrica puede construir un sofá de USD 3.000 y otro de USD 12.000 en el mismo mes, en la misma línea y con los mismos planos. La diferencia está enteramente en la hoja de especificaciones: la especie, la densidad, la unión, la suspensión. <strong>Acción de checklist:</strong> exija un número y una norma de ensayo en cada línea de material. Si la fábrica se niega, eso no es una táctica de negociación: es la respuesta.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Señal 2: la suspensión que nunca se nombra</h2>
+        <p>La suspensión es la capa invisible donde más divergen dos sofás "idénticos", y también la línea que la fábrica menos se ofrece a detallar. En la práctica, <strong>cerca del 80 % de las cotizaciones de menos de USD 4.000 para un sofá de tres plazas llevan webbing genérico</strong> —no porque la fábrica sea deshonesta, sino porque el comprador nunca preguntó.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Sistema de suspensión</th><th>Horas de mano de obra</th><th>Vida de confort</th><th>Posición de costo</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Sistema de suspensión">Resortes 8-way hand-tied</td><td data-label="Horas de mano de obra">6-10</td><td data-label="Vida de confort">15-20+ años</td><td data-label="Posición de costo">Premium (+USD 800-1.500)</td></tr><tr><td data-label="Sistema de suspensión">Resortes sine / no-sag</td><td data-label="Horas de mano de obra">1-2</td><td data-label="Vida de confort">8-12 años</td><td data-label="Posición de costo">Media (+USD 150-300)</td></tr><tr><td data-label="Sistema de suspensión">Webbing elástico de calidad</td><td data-label="Horas de mano de obra">0.5</td><td data-label="Vida de confort">6-10 años</td><td data-label="Posición de costo">Media-baja</td></tr><tr><td data-label="Sistema de suspensión">Webbing elástico genérico</td><td data-label="Horas de mano de obra">0.3</td><td data-label="Vida de confort">2-4 años</td><td data-label="Posición de costo">Base</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dieciocho meses después, el asiento se hunde en el centro y el comprador culpa a la "marca", mientras la hoja de especificaciones se archiva en silencio. <strong>Acción de checklist:</strong> escriba la suspensión en la orden de compra por su nombre. "Webbing" y "resortes" no son el mismo producto, y la diferencia de precio es exactamente la tabla de mano de obra anterior. El otro gran invisible —el núcleo y la envoltura del cojín— se explica en la <a href="/recursos/espuma-envuelta-plumon-cojines-lujo/">anatomía del cojín envuelto en plumón</a>.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Señal 3: condiciones de pago que saltan la muestra dorada</h2>
+        <p>Todo contrato de muebles a medida tiene un momento en que el riesgo pasa de la fábrica al comprador. Si su calendario de pagos no define ese momento, lo define la fábrica —normalmente en el instante en que recibe el anticipo. <strong>La muestra dorada —una pieza física de referencia firmada— no es un cortesía: es el estándar contractual</strong> contra el que se juzga toda disputa sobre "el acabado acordado".</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Estructura de pago</th><th>Riesgo para el comprador</th><th>Lo que se usa en proyectos de villa</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Estructura de pago">50 % de anticipo, saldo contra entrega</td><td data-label="Riesgo para el comprador">Riesgo total de prepago; sin control de calidad</td><td data-label="Lo que se usa en proyectos de villa">30 % para iniciar producción</td></tr><tr><td data-label="Estructura de pago">50 % de anticipo, sin cláusula de muestra</td><td data-label="Riesgo para el comprador">Aprueba producción a ciegas</td><td data-label="Lo que se usa en proyectos de villa">30 % + firma de muestra dorada antes del lote</td></tr><tr><td data-label="Estructura de pago">Hitos sin inspección</td><td data-label="Riesgo para el comprador">El QC ocurre después de que los defectos quedan ocultos</td><td data-label="Lo que se usa en proyectos de villa">30 / 40 / 25 / 5 % con inspección en línea al 30-40 %</td></tr><tr><td data-label="Estructura de pago">100 % antes de cargar el contenedor</td><td data-label="Riesgo para el comprador">Cero apalancamiento en el peor momento</td><td data-label="Lo que se usa en proyectos de villa">Saldo ligado al informe de inspección previa al embarque</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las fotografías no sustituyen la muestra dorada: la reproducción de color nunca es suficientemente fiable para arbitrar una disputa. <strong>Acción de checklist:</strong> si la cotización no tiene cláusula de muestra dorada, añádala. Si la fábrica se resiste, esa resistencia es en sí misma la señal —la fábrica que teme a la muestra es la fábrica que la necesita.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Señal 4: la garantía escrita en una sola frase</h2>
+        <p>Una fábrica seria desglosa su garantía por componentes, porque los componentes fallan en plazos distintos. Una "garantía general de 1 año" en una sola línea no dice nada y protege menos. La palabra "mano de obra" merece una advertencia especial: es el término más disputado de la legislación de garantía de muebles porque no está definido, y en la mayoría de las disputas excluye todo lo que se desgasta, se mueve, cruje o comprime —que es justamente lo que falla.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Componente</th><th>Garantía defendible</th><th>Qué cubre una cotización débil</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Componente">Bastidor</td><td data-label="Garantía defendible">5-10 años estructural</td><td data-label="Qué cubre una cotización débil">1 año "mano de obra"</td></tr><tr><td data-label="Componente">Suspensión</td><td data-label="Garantía defendible">5-10 años (sin hundimiento)</td><td data-label="Qué cubre una cotización débil">El mismo año 1, agrupado</td></tr><tr><td data-label="Componente">Núcleos de cojín</td><td data-label="Garantía defendible">3-5 años contra pérdida de perfil</td><td data-label="Qué cubre una cotización débil">Nada — "desgaste normal"</td></tr><tr><td data-label="Componente">Acabado / tapicería</td><td data-label="Garantía defendible">1-3 años contra defecto, no desgaste</td><td data-label="Qué cubre una cotización débil">Nada — "desgaste normal"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Acción de checklist:</strong> pida el desglose de garantía por escrito, por componente y con exclusiones listadas. Una fábrica que no puede articular lo que garantiza le está diciendo exactamente lo que no va a garantizar.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Señal 5: sin evidencia de fábrica, sin problema</h2>
+        <p>En 2026, lo más barato que puede enviar una fábrica es una fotografía; lo más caro que puede aceptar un comprador es una. La quinta señal no es una línea: es la ausencia de todo lo que haría verificable la cotización:</p>
+        <ol class="editorial-list">
+          <li>Sin registros de humedad de madera secada en horno (una lectura de una página; su ausencia significa que la madera no se midió).</li>
+          <li>Sin informes de ensayo de ciclos de compresión ni BIFMA —un asiento que pasa el ensayo cíclico BIFMA X5.4 es un producto distinto de uno no ensayado.</li>
+          <li>Sin cláusula de inspección previa al embarque por terceros (la inspección con base AQL es estándar en muebles comerciales; su ausencia es una decisión).</li>
+          <li>Sin visita a fábrica ni recorrido en video de la línea que fabricará su pedido.</li>
+          <li>Sin referencias de proyectos con nombre y escala comparable —tres referencias de tamaño y clase similares, con propietarios a los que pueda llamar.</li>
+        </ol>
+        <p><strong>Acción de checklist:</strong> antes de firmar, reúna la carpeta de evidencia: registros de humedad, informes de ensayo, cláusula de inspección y referencias. Si faltan tres de estos cinco, la cotización es una foto, no un compromiso. Para ver qué controles documenta una fábrica en producción —humedad, uniones, inspección en línea— visite la <a href="/fabrica/">página de fabricación</a>.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>El decodificador de 5 líneas: la checklist en diez minutos</h2>
+        <p>Imprima esta tabla y téngala junto a cada cotización que evalúe:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Línea</th><th>Pida</th><th>Acepte solo</th><th>Trate como alerta si</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Línea">1. Bastidor</td><td data-label="Pida">Especie + humedad + unión</td><td data-label="Acepte solo">"Haya secada en horno, 8-12 % MC, espigada"</td><td data-label="Trate como alerta si">Solo dice "madera maciza"</td></tr><tr><td data-label="Línea">2. Suspensión</td><td data-label="Pida">Sistema con nombre</td><td data-label="Acepte solo">"Resortes 8-way" o "resortes sine"</td><td data-label="Trate como alerta si">Sin especificar</td></tr><tr><td data-label="Línea">3. Cojín</td><td data-label="Pida">Densidad + norma</td><td data-label="Acepte solo">"HR 2.5+ lb/ft³, ASTM D3574"</td><td data-label="Trate como alerta si">Dice "espuma de alta densidad"</td></tr><tr><td data-label="Línea">4. Tela</td><td data-label="Pida">Fábrica + Martindale</td><td data-label="Acepte solo">Fábrica nombrada, 30.000+ ciclos</td><td data-label="Trate como alerta si">Dice "tela importada"</td></tr><tr><td data-label="Línea">5. Garantía</td><td data-label="Pida">Por componentes</td><td data-label="Acepte solo">5-10 años bastidor / 3-5 años cojín</td><td data-label="Trate como alerta si">Garantía general de una línea</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Resumen del comprador:</strong> cinco líneas, diez minutos. Si una cotización pasa las cinco, el precio es defendible aunque sea alto. Si falla dos o más, ningún descuento es suficiente —porque lo que está comprando no es un sofá, sino un calendario de reparaciones. Y si el mueble ya está en servicio y empieza a crujir, la <a href="/recursos/por-que-crujen-sillas-hotel-bastidor/">guía de uniones de bastidor</a> explica por qué la reparación estructural cuesta menos que el tornillo repetido.</p>
+        </div>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere una cotización que nombre cada línea?"
+      text="Comparta el plano o la lista de piezas con el uso previsto. Preparamos una propuesta con materiales, suspensión, cojín, tela y garantía especificados línea por línea, verificables antes de firmar."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

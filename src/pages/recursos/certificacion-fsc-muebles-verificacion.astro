@@ -1,0 +1,452 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "¿Qué Verifica Realmente un Mueble Certificado FSC? La Realidad para Compradores";
+const pageDescription = "La certificación FSC verifica la cadena de custodia de la madera, no la calidad del mueble. Las tres etiquetas, los cinco vacíos que no cubre y el método de verificación en tres pasos que todo comprador debe usar.";
+const keywords = [
+  "certificación FSC muebles",
+  "cadena de custodia FSC",
+  "FSC mix 100 recycled",
+  "verificar certificado FSC",
+  "madera certificada comprador",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/certificacion-fsc-muebles-verificacion/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-11-img-01-certificacion-fsc.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿La madera certificada FSC es de mayor calidad que la no certificada?",
+    answer: "No. FSC verifica el origen y la documentación de la cadena de suministro, no el grado, la durabilidad ni la mano de obra. Una silla FSC mal hecha sigue siendo una silla mal hecha —el certificado solo significa que su madera fue rastreada. La calidad es una especificación separada.",
+  },
+  {
+    question: "¿Cuál es la diferencia entre FSC y PEFC?",
+    answer: "Ambos son sistemas de certificación forestal. FSC es generalmente más estricto en criterios sociales y más conocido para compradores de Norteamérica y la UE; PEFC se apoya en estándares forestales nacionales y es común en Europa. Para compras, cualquiera de los dos es una reclamación de sostenibilidad legítima —escriba &quot;FSC o PEFC equivalente&quot; para mantener opciones.",
+  },
+  {
+    question: "¿Puede una fábrica estar certificada FSC y venderme muebles no certificados?",
+    answer: "Sí —y es completamente legal. La certificación de cadena de custodia significa que la fábrica <em>puede</em> manejar material FSC; no obliga a que cada producto esté certificado. Por eso se verifica la reclamación en la factura de su pedido concreto, no solo el certificado general de la fábrica.",
+  },
+  {
+    question: "¿FSC cubre bambú, ratán u otros materiales no madereros?",
+    answer: "FSC certifica productos forestales en sentido amplio —incluido bambú y ratán— pero cada producto debe llevar su propia reclamación. Una silla con bastidor de madera FSC y tejido de ratán no certificado solo es FSC en el componente de madera. Pregunte qué partes cubre la reclamación.",
+  },
+  {
+    question: "¿Vale la pena la prima FSC en un proyecto de hotel?",
+    answer: "Para proyectos con reporte ESG, estándares de marca o requisitos de política de compras, sí: la prima de 2-15 % es el elemento de cumplimiento más barato de la lista y es auditable de una forma que las reclamaciones de marketing no lo son. Para proyectos sin esos requisitos, es una decisión de marca, no técnica.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Certificación &middot; {publicationDateLabel}</p>
+          <h1>¿Qué verifica realmente un mueble certificado FSC?</h1>
+          <p>Entre en cualquier showroom de mobiliario comercial en 2026 y la palabra "FSC" aparece en la mitad del marketing. Pregunte qué significa y escuchará "es la madera buena". Eso no es incorrecto —pero tampoco es una especificación. Esta guía es la verificación de la realidad que se entrega a cada equipo de compras antes de escribir "certificado FSC" en una especificación.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-11-img-01-certificacion-fsc.webp" alt="Sello y documento de certificación FSC junto a muestras de madera en una fábrica de muebles" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>La etiqueta que todos quieren y pocos entienden</h2>
+        <p>Esto es lo que FSC realmente es: una certificación de gestión forestal y cadena de suministro administrada por el Forest Stewardship Council. Indica que la madera de un producto proviene de bosques gestionados según estándares sociales y ambientales, y que la cadena de suministro del bosque a la fábrica está documentada. Eso es todo. <strong>No es un grado de calidad, no es una reclamación de durabilidad y no es una etiqueta de seguridad química.</strong></p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué verifica FSC: el mecanismo de cadena de custodia</h2>
+        <p>La certificación FSC funciona con dos certificados vinculados:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Certificado</th><th>Quién lo tiene</th><th>Qué verifica</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Certificado">FM (Gestión Forestal)</td><td data-label="Quién lo tiene">Propietarios/gestores de bosque</td><td data-label="Qué verifica">El bosque se gestiona según los estándares sociales y ambientales FSC</td></tr><tr><td data-label="Certificado">CoC (Cadena de Custodia)</td><td data-label="Quién lo tiene">Cada fabricante/procesador/comerciante</td><td data-label="Qué verifica">El material FSC se rastrea y separa a través de su operación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una fábrica de muebles no puede tener un certificado FM —no posee un bosque. Lo que tiene es un <strong>certificado CoC</strong>, que demuestra que cuenta con un sistema para rastrear material FSC de la entrada a la salida, con un <strong>sistema de crédito porcentual</strong> que permite compartir línea de producción entre material certificado y no certificado siempre que el porcentaje FSC quede registrado. <strong>La idea clave:</strong> cuando una fábrica le muestra un certificado FSC, no está viendo la prueba de que su mueble es "bueno"; está viendo la prueba de que tiene un sistema auditable para rastrear el origen de la madera. Son afirmaciones distintas, y solo la segunda es lo que dice el certificado. Para ver cómo se documentan los materiales en una línea de producción real, visite la <a href="/fabrica/">página de fabricación</a>.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Las tres etiquetas: FSC 100 %, FSC Mix y FSC Recycled</h2>
+        <p>La etiqueta que importa es la del producto, no el logo del folleto. Hay tres y significan cosas distintas:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Etiqueta</th><th>Qué significa</th><th>Dónde la verá</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Etiqueta">FSC 100 %</td><td data-label="Qué significa">Toda la madera proviene de bosques certificados FSC</td><td data-label="Dónde la verá">Madera maciza de una sola especie, casegoods premium</td></tr><tr><td data-label="Etiqueta">FSC Mix</td><td data-label="Qué significa">Madera de bosques FSC + fuentes controladas + reciclada</td><td data-label="Dónde la verá">La mayoría del mobiliario comercial, núcleos de chapa, contrachapado</td></tr><tr><td data-label="Etiqueta">FSC Recycled</td><td data-label="Qué significa">100 % de contenido de madera reciclada</td><td data-label="Dónde la verá">Tablero de partículas, núcleos de MDF, algunos núcleos laminados</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>FSC Mix es la etiqueta que la mayoría de los compradores encontrará</strong> —y la "Mix" suele leerse como un compromiso. No lo es. Las "fuentes controladas" son madera de tala legal que no ha sido certificada FSC pero cumple los requisitos de madera controlada de FSC, y los productos FSC Mix llevan una reclamación porcentual (p. ej., "FSC Mix 70 %") que indica exactamente cuánto contenido certificado hay en la pieza. <strong>Consejo de especificación:</strong> escriba "FSC Mix 70 % mínimo" o "FSC 100 %" en la orden, no solo "certificado FSC". El porcentaje es el número que la auditoría exigirá a la fábrica.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué NO verifica FSC: los cinco vacíos</h2>
+        <p>Esta es la parte que cuesta dinero real a los compradores cuando la descubren tarde.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Lo que se asume que FSC prueba</th><th>Qué lo verifica en realidad</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Lo que se asume que FSC prueba">Calidad/durabilidad del mueble</td><td data-label="Qué lo verifica en realidad">Normas BIFMA, EN, QC de fábrica — sin relación con FSC</td></tr><tr><td data-label="Lo que se asume que FSC prueba">Bajas emisiones / sin químicos nocivos</td><td data-label="Qué lo verifica en realidad">CARB Phase 2 (formaldehído), GREENGUARD, Blue Angel</td></tr><tr><td data-label="Lo que se asume que FSC prueba">Producto completo sostenible (espuma, tela, acabado)</td><td data-label="Qué lo verifica en realidad">FSC cubre solo la madera; los demás materiales necesitan reclamaciones separadas</td></tr><tr><td data-label="Lo que se asume que FSC prueba">Sin tala ilegal en todo el producto</td><td data-label="Qué lo verifica en realidad">FSC cubre el contenido de madera certificada/controlada; las partes no madereras quedan excluidas</td></tr><tr><td data-label="Lo que se asume que FSC prueba">Trabajo ético</td><td data-label="Qué lo verifica en realidad">SA8000, BSCI — FSC tiene criterios sociales para bosques, no para fábricas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El ejemplo incómodo: <strong>una silla puede estar certificada FSC Mix y aun así superar los límites de formaldehído CARB Phase 2 en su contrachapado</strong> —porque FSC no regula adhesivos ni emisiones. Un equipo de compras que escribió "certificado FSC" y se detuvo cubrió la madera y se perdió la calidad del aire, la durabilidad y el trabajo. Todos importan más a las personas que se sientan en el mueble que el certificado forestal. La durabilidad, por ejemplo, es una especificación aparte: <a href="/recursos/por-que-crujen-sillas-hotel-bastidor/">la ingeniería de un bastidor</a> o <a href="/recursos/certificacion-bifma-guia-comprador-2026/">cómo se certifica a un fabricante</a> no tienen relación con el origen de la madera.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>FSC vs no certificado: qué compra la prima</h2>
+        <p>El material FSC tiene una prima de costo real. Esto es lo que cobra el mercado y lo que se obtiene:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Categoría</th><th>Prima FSC (típica)</th><th>Qué compra</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Categoría">Madera dura FSC</td><td data-label="Prima FSC (típica)">+5-15 %</td><td data-label="Qué compra">Origen legal y bien gestionado documentado</td></tr><tr><td data-label="Categoría">Contrachapado / chapa FSC</td><td data-label="Prima FSC (típica)">+3-8 %</td><td data-label="Qué compra">Paneles rastreados por cadena de custodia</td></tr><tr><td data-label="Categoría">Producto FSC Mix</td><td data-label="Prima FSC (típica)">+2-6 %</td><td data-label="Qué compra">Contenido certificado parcial, auditado</td></tr><tr><td data-label="Categoría">Núcleo FSC Recycled</td><td data-label="Prima FSC (típica)">+0-3 %</td><td data-label="Qué compra">Reclamación de contenido reciclado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La prima es menor de lo que la mayoría teme —<strong>típicamente 2-15 % según la categoría</strong>— y compra algo real: legalidad auditable y gestión forestal. Si la prima vale la pena es una decisión de marca, no de ingeniería. Para proyectos de hotel y oficina con requisitos de reporte de sostenibilidad, el certificado suele ser la línea más barata de la checklist ESG —la misma checklist donde encajan las <a href="/recursos/proceso-compras-ffe-hoteles-7-etapas/">7 etapas de compra de FF&E</a>.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo verifica realmente un comprador: tres pasos, cinco minutos</h2>
+        <p>La verificación es pública, gratuita y rápida. Este es el proceso que se ejecuta para cada reclamación de proveedor:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Paso</th><th>Acción</th><th>Dónde</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Paso">1</td><td data-label="Acción">Pida el número de certificado CoC (empieza por "FSC-C" o similar)</td><td data-label="Dónde">Su proveedor</td></tr><tr><td data-label="Paso">2</td><td data-label="Acción">Búsquelo en la base de datos pública de certificados FSC</td><td data-label="Dónde">info.fsc.org</td></tr><tr><td data-label="Paso">3</td><td data-label="Acción">Confirme que el nombre y la dirección de la instalación coinciden con su proveedor</td><td data-label="Dónde">La misma base de datos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Tres advertencias desde la experiencia de campo:</p>
+        <ol class="editorial-list">
+          <li>El titular del certificado debe ser su fábrica —un proveedor que le muestra el certificado de <em>su</em> proveedor no le ha pasado la cadena de custodia. Es un atajo común y fatal.</li>
+          <li>Compruebe la fecha de vencimiento —los certificados caducan, y un certificado vencido es un logo de marketing, no una reclamación.</li>
+          <li>Pida la reclamación en la factura, no en el folleto —FSC exige que los productos certificados lleven la etiqueta con un código de licencia; si la factura no referencia material FSC, el certificado es decorativo.</li>
+        </ol>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo escribir FSC en una especificación sin quemarse</h2>
+        <p>Una especificación FSC defendible son cuatro frases, no una:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento de especificación</th><th>Ejemplo de redacción</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Elemento de especificación">Reclamación de producto</td><td data-label="Ejemplo de redacción">"Todos los componentes de madera dura FSC Mix 70 % mínimo o FSC 100 %"</td></tr><tr><td data-label="Elemento de especificación">Evidencia del certificado</td><td data-label="Ejemplo de redacción">"Certificado CoC del proveedor (FSC-C-xxxxxx) válido a la fecha de embarque"</td></tr><tr><td data-label="Elemento de especificación">Verificación</td><td data-label="Ejemplo de redacción">"El nombre del titular del certificado debe coincidir con el fabricante contratante"</td></tr><tr><td data-label="Elemento de especificación">Consecuencia</td><td data-label="Ejemplo de redacción">"Material no conforme rechazado en la inspección previa al embarque"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Resumen del comprador:</strong> esa cuarta línea es la que lo hace exigible. Sin una cláusula de consecuencia, una especificación FSC es una preferencia; con ella, es un término contractual que una inspección previa al embarque puede comprobar de verdad.</p>
+        </div>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Necesita documentación de sostenibilidad para su proyecto?"
+      text="Comparta el alcance y el país de destino. Preparamos la evidencia de certificación —FSC, CARB Phase 2, GREENGUARD— verificable en bases públicas antes de la orden."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

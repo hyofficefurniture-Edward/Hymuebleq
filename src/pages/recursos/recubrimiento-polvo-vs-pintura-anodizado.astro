@@ -1,0 +1,436 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Pintura en Polvo vs Pintura Líquida vs Anodizado: La Perspectiva de Desgaste a 10 Años";
+const pageDescription = "Comparativa de pintura en polvo, pintura líquida y anodizado para bastidores metálicos de mobiliario: horas de niebla salina ASTM B117, el pretratamiento como variable oculta, costo por metro cuadrado y la especificación exacta a 10 años.";
+const keywords = [
+  "pintura en polvo vs pintura líquida vs anodizado",
+  "recubrimiento en polvo muebles metal",
+  "ensayo niebla salina ASTM B117 acabados",
+  "pretratamiento fosfato zinc",
+  "especificación AAMA 2604 muebles",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/recubrimiento-polvo-vs-pintura-anodizado/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-12-img-01-linea-recubrimiento-polvo.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿La pintura en polvo es siempre mejor que la líquida?",
+    answer: "Para durabilidad y costo a 10 años en superficies comerciales planas, sí: película más gruesa, mejor cobertura de bordes y 2-5 veces más horas de niebla salina a costo comparable. Para curvas complejas y reparabilidad en campo, la pintura líquida tiene ventajas reales. &quot;Siempre&quot; es la palabra que hay que quitar de la pregunta.",
+  },
+  {
+    question: "¿Cómo sé si la fábrica pretrató realmente el acero?",
+    answer: "Pida el informe de ensayo de niebla salina de su sistema de acabado concreto —un informe generado sobre paneles con pretratamiento correcto— y audite la línea de pretratamiento en una visita a fábrica. El ensayo es barato, estándar y es el único documento que expone el pretratamiento omitido.",
+  },
+  {
+    question: "¿El aluminio anodizado se raya?",
+    answer: "Sí, se raya —pero no se astilla ni se pela, porque la capa de óxido es parte del metal. Una rayadura en el anodizado es una línea cosmética sobre aluminio; una rayadura en la pintura es una puerta abierta a la corrosión. Para aluminio de alta abrasión, esa diferencia es todo el argumento.",
+  },
+  {
+    question: "¿Qué exige realmente &quot;AAMA 2604&quot; en una especificación?",
+    answer: "AAMA 2604 es el estándar para recubrimientos orgánicos de alto rendimiento sobre aluminio (aunque su marco de ensayo se referencia en varios metales): especifica espesor de película, adherencia, resistencia al impacto y rendimiento de niebla salina/corrosión cíclica. Escribirlo en una especificación de muebles toma prestada la barra de la industria de la construcción —que es exactamente el nivel de rigor que el mobiliario comercial debería tener.",
+  },
+  {
+    question: "¿Se puede igualar el color de la pintura en polvo a una tela o madera?",
+    answer: "Sí —los fabricantes de polvo igualan a RAL, Pantone o muestras físicas, y los talleres de calidad mantienen tolerancia dentro de un delta-E aceptable. La limitación es la misma que en cualquier recubrimiento: los efectos metálicos y texturizados son más difíciles de igualar que los colores sólidos, así que fije la muestra de referencia en la aprobación de la muestra dorada.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Acabados &middot; {publicationDateLabel}</p>
+          <h1>Pintura en polvo, líquida y anodizado: el acabado que decide el año seis</h1>
+          <p>El patrón es consistente: un bastidor se ve perfecto en la entrega, pasa la inspección del primer año y, en algún momento entre el año cuatro y el seis, el recubrimiento de una esquina de alto contacto empieza a fallar. Para el año ocho, el gerente del restaurante pregunta por qué las sillas "duraderas" parecen de diez años. El sistema de acabado es la diferencia entre un mueble que aparenta su edad y uno que no.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-12-img-01-linea-recubrimiento-polvo.webp" alt="Línea de aplicación de pintura en polvo electrostática en una fábrica de muebles metálicos" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Los tres sistemas, explicados sin marketing</h2>
+        <p>Cada uno es una forma fundamentalmente distinta de proteger una superficie metálica. Los nombres se solapan en los catálogos, pero los mecanismos no:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Sistema</th><th>Qué es en realidad</th><th>Espesor de película</th><th>Cómo falla</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Sistema">Pintura en polvo</td><td data-label="Qué es en realidad">Partículas de resina seca fundidas y curadas en una película</td><td data-label="Espesor de película">60-120 micras</td><td data-label="Cómo falla">Se astilla ante impactos; la corrosión empieza en la astilla</td></tr><tr><td data-label="Sistema">Pintura líquida</td><td data-label="Qué es en realidad">Recubrimiento con solvente o agua, pistola o brocha</td><td data-label="Espesor de película">25-60 micras</td><td data-label="Cómo falla">Astillas, rayones, daño por solventes; las películas finas fallan primero</td></tr><tr><td data-label="Sistema">Anodizado</td><td data-label="Qué es en realidad">Capa de óxido electroquímico que crece dentro del aluminio</td><td data-label="Espesor de película">10-25 micras (Tipo II)</td><td data-label="Cómo falla">No se pela; se desgasta fino lentamente; corrosión por picaduras</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La idea estructural: <strong>el polvo es grueso y resistente, la líquida es fina y flexible, el anodizado no es un recubrimiento en absoluto</strong>. Cada uno es correcto para un trabajo específico, y los errores ocurren cuando un sistema diseñado para un uso se aplica a otro.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Los números de niebla salina que predicen la supervivencia costera</h2>
+        <p>El ensayo de corrosión es lo más parecido a una bola de cristal de durabilidad que tiene la industria del acabado. La norma es <strong>ASTM B117 —horas en cámara de niebla salina antes de la corrosión visible</strong>. Este es el rango honesto para sistemas de grado mobiliario:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Sistema (sustrato acero salvo indicación)</th><th>Horas de niebla salina</th><th>Café costero (200 m del mar)</th><th>Interior</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Sistema (sustrato acero salvo indicación)">Polvo, poliéster, pretratamiento correcto</td><td data-label="Horas de niebla salina">500-1.000+</td><td data-label="Café costero (200 m del mar)">Bueno — la opción por defecto</td><td data-label="Interior">Excelente</td></tr><tr><td data-label="Sistema (sustrato acero salvo indicación)">Polvo, epoxi</td><td data-label="Horas de niebla salina">400-800</td><td data-label="Café costero (200 m del mar)">Bueno</td><td data-label="Interior">Excelente</td></tr><tr><td data-label="Sistema (sustrato acero salvo indicación)">Poliuretano líquido 2 componentes</td><td data-label="Horas de niebla salina">300-600</td><td data-label="Café costero (200 m del mar)">Aceptable</td><td data-label="Interior">Bueno</td></tr><tr><td data-label="Sistema (sustrato acero salvo indicación)">Alquídica líquida (esmalte barato)</td><td data-label="Horas de niebla salina">100-300</td><td data-label="Café costero (200 m del mar)">Pobre</td><td data-label="Interior">Aceptable</td></tr><tr><td data-label="Sistema (sustrato acero salvo indicación)">Aluminio anodizado Tipo II (15 µm)</td><td data-label="Horas de niebla salina">300-800</td><td data-label="Café costero (200 m del mar)">Bueno (solo aluminio)</td><td data-label="Interior">Excelente</td></tr><tr><td data-label="Sistema (sustrato acero salvo indicación)">Aluminio anodizado Tipo III (25-50 µm)</td><td data-label="Horas de niebla salina">1.500-3.000+</td><td data-label="Café costero (200 m del mar)">Excelente</td><td data-label="Interior">Excesivo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos lecciones de campo: <strong>los proyectos costeros deben usar polvo sobre acero con 500+ horas de niebla salina</strong>, y <strong>los bastidores de aluminio en ambientes marinos deben anodizarse, no pintarse</strong> —la pintura sobre aluminio es una batalla perdida contra la capa de óxido que se forma debajo y empuja el recubrimiento. La decisión de sustrato y acabado va junto —el mismo criterio que ordena la <a href="/recursos/materiales-muebles-hotel-durabilidad-2026/">guía de durabilidad de materiales para mobiliario</a>.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>La variable oculta: el pretratamiento, no el acabado superior</h2>
+        <p>El hecho que desbarata la mayoría de las comparaciones: <strong>el acabado superior rara vez es lo que falla primero. Lo es el pretratamiento.</strong> Antes de aplicar polvo o pintura, el acero recibe una capa de conversión (fosfato de zinc históricamente, sistemas de circonio libres de cromo cada vez más) que da al recubrimiento algo a lo que adherirse.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Pretratamiento</th><th>Costo relativo</th><th>Impacto en niebla salina</th><th>Estado en 2026</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Pretratamiento">Fosfato de zinc</td><td data-label="Costo relativo">Base</td><td data-label="Impacto en niebla salina">Bueno — la referencia clásica</td><td data-label="Estado en 2026">Estándar, bajo escrutinio REACH</td></tr><tr><td data-label="Pretratamiento">Circonio libre de cromo</td><td data-label="Costo relativo">+5-10 %</td><td data-label="Impacto en niebla salina">Comparable o mejor</td><td data-label="Estado en 2026">En crecimiento, preferido en la UE</td></tr><tr><td data-label="Pretratamiento">Ninguno / solo desengrase</td><td data-label="Costo relativo">-10-15 %</td><td data-label="Impacto en niebla salina">Reduce las horas de niebla salina 50-70 %</td><td data-label="Estado en 2026">La trampa del recorte de costos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una fábrica que omite el pretratamiento ahorra <strong>10-15 % en la línea de acabado</strong> y reduce en silencio la resistencia a la corrosión a la mitad. No se ve en el producto terminado —el polvo se ve idéntico. La única forma de detectarlo es el informe de ensayo de niebla salina o una <a href="/fabrica/">auditoría de la línea de pretratamiento</a>. <strong>Cuando una cotización baja es demasiado buena para ser verdad, el ahorro salió del pretratamiento.</strong></p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Costo por metro cuadrado: la comparación honesta</h2>
+        <p>El costo del acabado suele cotizarse por bastidor o por silla, lo que oculta la economía real. Esta es la imagen por metro cuadrado:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Sistema</th><th>Costo aplicado (por m²)</th><th>Mantenimiento a 10 años</th><th>Costo real a 10 años</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Sistema">Polvo (poliéster)</td><td data-label="Costo aplicado (por m²)">USD 6-12</td><td data-label="Mantenimiento a 10 años">Retoques menores</td><td data-label="Costo real a 10 años">USD 7-14</td></tr><tr><td data-label="Sistema">PU líquido 2 componentes</td><td data-label="Costo aplicado (por m²)">USD 8-15</td><td data-label="Mantenimiento a 10 años">Repintar esquinas años 5-7</td><td data-label="Costo real a 10 años">USD 12-22</td></tr><tr><td data-label="Sistema">Alquídica líquida</td><td data-label="Costo aplicado (por m²)">USD 4-8</td><td data-label="Mantenimiento a 10 años">Repintado completo años 3-5</td><td data-label="Costo real a 10 años">USD 10-18</td></tr><tr><td data-label="Sistema">Anodizado Tipo II</td><td data-label="Costo aplicado (por m²)">USD 8-14</td><td data-label="Mantenimiento a 10 años">Ninguno (aluminio)</td><td data-label="Costo real a 10 años">USD 8-14</td></tr><tr><td data-label="Sistema">Anodizado Tipo III</td><td data-label="Costo aplicado (por m²)">USD 15-25</td><td data-label="Mantenimiento a 10 años">Ninguno</td><td data-label="Costo real a 10 años">USD 15-25</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El hallazgo contraintuitivo: <strong>la pintura líquida suele ser la opción más cara a 10 años pese a la cotización unitaria más baja</strong> —porque las películas finas fallan y la mano de obra del repintado en campo (mover muebles, enmascarar, montar la pistola) supera varias veces el costo del recubrimiento. El polvo parece de precio medio al inicio y gana la década. Y la decisión de repintar o reemplazar forma parte del <a href="/recursos/mantenimiento-muebles-hotel-calendario-2026/">calendario de mantenimiento del mobiliario hotelero</a>.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Donde la pintura líquida aún gana: color y retoques</h2>
+        <p>Toda regla tiene su excepción, y la pintura líquida posee dos nichos legítimos:</p>
+        <ol class="editorial-list">
+          <li>Geometría compleja. El polvo se aplica de forma uniforme en superficies planas y curvas suaves; las esquinas pronunciadas y los huecos profundos reciben cobertura fina donde se concentra el campo eléctrico. La líquida fluye hacia las esquinas que el polvo no alcanza de forma uniforme.</li>
+          <li>Retoque y repintado en campo. Un recubrimiento en polvo no se puede reparar en campo con calidad equivalente —el retoque es, esencialmente, un producto de pintura. Los sistemas líquidos se pueden reparar por puntos e igualar el color en obra, lo que importa en proyectos de retrofit y mobiliario en alquiler que se mueve y maltrata.</li>
+        </ol>
+        <p>Y el nicho del anodizado es simétrico: <strong>es el único sistema que no puede pelarse ni astillarse</strong>, lo que lo convierte en la elección para bastidores de aluminio en ambientes de alta abrasión, alta humedad o costeros —donde un fallo del recubrimiento sería un evento terminal.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>La tabla de decisión para bastidores de mobiliario comercial</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Aplicación</th><th>Primera opción</th><th>Por qué</th><th>Evite</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Aplicación">Bastidores de sillas/mesas de acero, interior</td><td data-label="Primera opción">Polvo, poliéster</td><td data-label="Por qué">Espesor + costo</td><td data-label="Evite">Esmalte alquídico barato</td></tr><tr><td data-label="Aplicación">Terrazas costeras de hotel/restaurante</td><td data-label="Primera opción">Polvo 500+ h o acero inoxidable</td><td data-label="Por qué">Supervivencia a la niebla salina</td><td data-label="Evite">Pinturas líquidas finas</td></tr><tr><td data-label="Aplicación">Bastidores de aluminio, marino/costero</td><td data-label="Primera opción">Anodizado Tipo II/III</td><td data-label="Por qué">No se pela, grado marino</td><td data-label="Evite">Pintura sobre aluminio</td></tr><tr><td data-label="Aplicación">Bastidores esculpidos complejos</td><td data-label="Primera opción">PU líquido 2 componentes</td><td data-label="Por qué">Cobertura de esquinas</td><td data-label="Evite">Polvo (esquinas finas)</td></tr><tr><td data-label="Aplicación">Retrofit / repintado en campo</td><td data-label="Primera opción">Líquida, sistema equivalente</td><td data-label="Por qué">Reparación en obra</td><td data-label="Evite">Cualquier sistema que no pueda igualar</td></tr><tr><td data-label="Aplicación">Salud (limpieza química)</td><td data-label="Primera opción">Polvo o anodizado</td><td data-label="Por qué">Resistencia química</td><td data-label="Evite">Películas finas porosas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Consejo de especificación:</strong> la línea más defendible para mobiliario comercial de acero es <em>"pintura en polvo, poliéster, 60-80 micras de espesor de película seca, según AAMA 2604 o equivalente, con informe de ensayo de niebla salina ≥ 500 horas en archivo"</em>. Cada término de esa frase es comprobable —la lectura de micras, la norma y el informe. Un "polvo duradero" vago es una preferencia; esa línea es un contrato. Para saber dónde encaja esa línea dentro del pliego completo, revise las <a href="/recursos/proceso-compras-ffe-hoteles-7-etapas/">7 etapas de compra de FF&E</a>.</p>
+        </div>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere especificar el acabado de sus bastidores metálicos?"
+      text="Comparta el uso, el entorno (costa, interior, químicos) y el color. Entregamos una especificación con norma, espesor de película y horas de niebla salina, con el informe de ensayo disponible."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
