@@ -5,8 +5,32 @@ import SectionHead from "../components/SectionHead.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProcessSteps from "../components/ProcessSteps.astro";
 import TrustStrip from "../components/TrustStrip.astro";
+import ProductosDestacados from "../components/ProductosDestacados.astro";
 import CTA from "../components/CTA.astro";
 import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../data/site";
+
+const featuredHotelProducts = [
+  {
+    url: "/productos/armario-hotelero-empotrado-chapa-madera/",
+    img: "/images/productos/prd-01/prd-01-01.jpg",
+    title: "Armario Hotelero Empotrado con Chapa de Madera Natural",
+  },
+  {
+    url: "/productos/sofa-curvo-lobby-hotel-mesa-centro/",
+    img: "/images/productos/prd-02/prd-02-01.jpg",
+    title: "Sofá Curvo para Lobby de Hotel con Mesa de Centro a Juego",
+  },
+  {
+    url: "/productos/mesa-conferencias-ejecutiva-nogal-sillas/",
+    img: "/images/productos/prd-03/prd-03-01.jpg",
+    title: "Mesa de Conferencias Ejecutiva con Chapa de Nogal y Sillas Ergonómicas",
+  },
+  {
+    url: "/productos/mesa-centro-redonda-chapa-madera-metal/",
+    img: "/images/productos/prd-04/prd-04-01.jpg",
+    title: "Mesa de Centro Redonda con Chapa de Madera y Patas Metálicas",
+  },
+];
 ---
 <BaseLayout
   title="Muebles para hoteles | Hymueble"
@@ -96,6 +120,15 @@ import { hotelCatalog, hotelCooperationSignals, projects, showrooms } from "../d
       <ProcessSteps />
     </div>
   </section>
+
+  <ProductosDestacados
+    eyebrow="Productos hoteleros"
+    title="Mobiliario hotelero listo para cotizar"
+    text="Revisa productos con especificaciones, fotos y tablas técnicas para incluirlos en tu cotización por proyecto."
+    products={featuredHotelProducts}
+    listHref="/productos/"
+    listLabel="Ver todos los productos hoteleros"
+  />
 
   <CTA title="Cotización de muebles para hotel" text="Puedes enviar tipo de hotel, espacios, cantidades aproximadas y ciudad. Si todavía no tienes planos o lista FF&E, los revisamos después." />
 </BaseLayout>

@@ -70,11 +70,11 @@ export const companySites = [
 
 export const navItems = [
   { label: "Inicio", href: "/" },
-  { label: "Hoteles", href: "/hoteles/", catalog: "/catalogo/hoteles/", projects: "/proyectos/hoteles/" },
-  { label: "Oficinas", href: "/oficinas/", catalog: "/catalogo/oficinas/", projects: "/proyectos/oficinas/" },
-  { label: "Salud", href: "/salud/", catalog: "/catalogo/salud/", projects: "/proyectos/salud/" },
-  { label: "Educación", href: "/educacion/", catalog: "/catalogo/educacion/", projects: "/proyectos/educacion/" },
-  { label: "Residencial", href: "/residencial/", catalog: "/catalogo/residencial/", projects: "/proyectos/residencial/" },
+  { label: "Hoteles", href: "/hoteles/", catalog: "/catalogo/hoteles/", products: "/productos/", projects: "/proyectos/hoteles/" },
+  { label: "Oficinas", href: "/oficinas/", catalog: "/catalogo/oficinas/", products: "/productos-oficina/", projects: "/proyectos/oficinas/" },
+  { label: "Salud", href: "/salud/", catalog: "/catalogo/salud/", products: "/productos-medicos/", projects: "/proyectos/salud/" },
+  { label: "Educación", href: "/educacion/", catalog: "/catalogo/educacion/", products: "/productos-escolares/", projects: "/proyectos/educacion/" },
+  { label: "Residencial", href: "/residencial/", catalog: "/catalogo/residencial/", products: "/productos-residenciales/", projects: "/proyectos/residencial/" },
   { label: "Fábrica", href: "/fabrica/" },
   { label: "Productos", href: "/productos/", children: [
     { label: "Mobiliario Hotelero", href: "/productos/" },

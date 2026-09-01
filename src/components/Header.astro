@@ -20,9 +20,10 @@ import { brand, navItems } from "../data/site";
       {navItems.map((item) => (
         <div class="nav-item">
           <a class="nav-link" href={item.href}>{item.label}</a>
-          {(item.catalog || item.projects || item.children) && (
+          {(item.catalog || item.products || item.projects || item.children) && (
             <div class="dropdown">
               {item.catalog && <a href={item.catalog}>Catálogo</a>}
+              {item.products && <a href={item.products}>Productos</a>}
               {item.projects && <a href={item.projects}>Proyectos</a>}
               {item.children?.map((child) => <a href={child.href}>{child.label}</a>)}
             </div>

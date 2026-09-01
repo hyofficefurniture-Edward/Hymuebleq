@@ -1,0 +1,141 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  text: string;
+  products: { url: string; img: string; title: string }[];
+  listHref: string;
+  listLabel: string;
+}
+
+const { eyebrow, title, text, products, listHref, listLabel } = Astro.props;
+---
+
+<section class="featured-productos" id="productos-destacados" aria-label="Productos destacados">
+  <div class="featured-productos-inner">
+    <p class="fp-eyebrow">{eyebrow}</p>
+    <h2>{title}</h2>
+    <p class="fp-sub">{text}</p>
+    <div class="fp-grid">
+      {products.map((p) => (
+        <a href={p.url} class="fp-card">
+          <img class="fp-img" src={p.img} alt={p.title} loading="lazy" decoding="async" width="400" height="200" />
+          <div class="fp-info">
+            <h3>{p.title}</h3>
+            <span class="fp-link">Ver producto →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+    <div class="fp-cta">
+      <a href={listHref}>{listLabel}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured-productos {
+    background: #f7f4ef;
+    padding: 72px 24px;
+  }
+  .featured-productos-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .fp-eyebrow {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 13px;
+    font-weight: 700;
+    color: #c8442a;
+    margin: 0 0 10px;
+  }
+  .featured-productos h2 {
+    font-size: 32px;
+    color: #2c2416;
+    text-align: center;
+    margin: 0 0 12px;
+    line-height: 1.2;
+  }
+  .featured-productos .fp-sub {
+    text-align: center;
+    color: #6b6358;
+    font-size: 15px;
+    max-width: 760px;
+    margin: 0 auto 40px;
+    line-height: 1.65;
+  }
+  .featured-productos .fp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .featured-productos .fp-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(44, 36, 22, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .featured-productos .fp-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(44, 36, 22, 0.15);
+  }
+  .featured-productos .fp-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #f5f2ec;
+    display: block;
+  }
+  .featured-productos .fp-info {
+    padding: 16px 18px 18px;
+  }
+  .featured-productos .fp-info h3 {
+    font-size: 15px;
+    color: #2c2416;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+  .featured-productos .fp-link {
+    font-size: 13px;
+    color: #c8442a;
+    font-weight: 600;
+  }
+  .featured-productos .fp-cta {
+    text-align: center;
+    margin-top: 36px;
+  }
+  .featured-productos .fp-cta a {
+    display: inline-block;
+    padding: 13px 32px;
+    background: #2c2416;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .featured-productos .fp-cta a:hover {
+    background: #c8442a;
+  }
+  @media (max-width: 900px) {
+    .featured-productos .fp-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 560px) {
+    .featured-productos .fp-grid {
+      grid-template-columns: 1fr;
+    }
+    .featured-productos h2 {
+      font-size: 24px;
+    }
+  }
+</style>

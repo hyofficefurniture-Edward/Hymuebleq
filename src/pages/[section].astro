@@ -5,14 +5,77 @@ import SectionHead from "../components/SectionHead.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProcessSteps from "../components/ProcessSteps.astro";
 import TrustStrip from "../components/TrustStrip.astro";
+import ProductosDestacados from "../components/ProductosDestacados.astro";
 import CTA from "../components/CTA.astro";
 import { categories, projects, sectorCatalogs, sectorPages, showrooms } from "../data/site";
+
+const featuredProductsBySection: Record<string, { listHref: string; listLabel: string; items: { url: string; img: string; title: string }[] }> = {
+  oficinas: {
+    listHref: "/productos-oficina/",
+    listLabel: "Ver todos los productos de oficina",
+    items: [
+      { url: "/productos-oficina/escritorio-ejecutivo-gerente-chapa-madera/", img: "/images/productos-oficina/of-01/of-01-01.jpg", title: "Escritorio Ejecutivo para Gerente con Chapa de Madera" },
+      { url: "/productos-oficina/estacion-trabajo-modular-oficina-abierta/", img: "/images/productos-oficina/of-02/of-02-01.jpg", title: "Estación de Trabajo Modular para Oficina Abierta" },
+      { url: "/productos-oficina/mesa-reuniones-modular-corporativos/", img: "/images/productos-oficina/of-03/of-03-01.jpg", title: "Mesa de Reuniones Modular para Corporativos" },
+      { url: "/productos-oficina/silla-ergonomica-oficina-soporte-lumbar/", img: "/images/productos-oficina/of-04/of-04-01.jpg", title: "Silla Ergonómica de Oficina con Soporte Lumbar" },
+    ],
+  },
+  salud: {
+    listHref: "/productos-medicos/",
+    listLabel: "Ver todos los productos médicos",
+    items: [
+      { url: "/productos-medicos/mobiliario-sala-consulta-medica-antibacteriano/", img: "/images/productos-medicos/med-01/med-01-01.jpg", title: "Mobiliario para Sala de Consulta Médica Antibacteriano" },
+      { url: "/productos-medicos/mobiliario-sala-exploracion-clinica-modular/", img: "/images/productos-medicos/med-02/med-02-01.jpg", title: "Mobiliario para Sala de Exploración Clínica Modular" },
+      { url: "/productos-medicos/equipamiento-habitacion-hospitalaria-curacion/", img: "/images/productos-medicos/med-03/med-03-01.jpg", title: "Equipamiento Integral de Habitación Hospitalaria de Curación" },
+      { url: "/productos-medicos/mostrador-recepcion-hospitalaria-antimicrobiano/", img: "/images/productos-medicos/med-04/med-04-01.jpg", title: "Mostrador de Recepción Hospitalaria Antimicrobiano Modular" },
+    ],
+  },
+  educacion: {
+    listHref: "/productos-escolares/",
+    listLabel: "Ver todos los productos escolares",
+    items: [
+      { url: "/productos-escolares/mobiliario-educacion-infantil-seguro-cantos-redondeados/", img: "/images/productos-escolares/esc-01/esc-01-01.jpg", title: "Mobiliario para Educación Infantil Seguro con Cantos Redondeados" },
+      { url: "/productos-escolares/mobiliario-modular-aprendizaje-colaborativo-aulas/", img: "/images/productos-escolares/esc-02/esc-02-01.jpg", title: "Mobiliario Modular para Aprendizaje Colaborativo en Aulas" },
+      { url: "/productos-escolares/asientos-colaborativos-modulares-espacios-sociales-campus/", img: "/images/productos-escolares/esc-03/esc-03-01.jpg", title: "Asientos Colaborativos Modulares para Espacios Sociales del Campus" },
+      { url: "/productos-escolares/estanterias-libreria-escolar-modulares-madera-e1/", img: "/images/productos-escolares/esc-04/esc-04-01.jpg", title: "Estanterías de Librería Escolar Modulares en Madera E1" },
+    ],
+  },
+  residencial: {
+    listHref: "/productos-residenciales/",
+    listLabel: "Ver todos los productos residenciales",
+    items: [
+      { url: "/productos-residenciales/suite-completa-mobiliario-apartamento-madera-natural/", img: "/images/productos-residenciales/res-01/res-01-01.jpg", title: "Suite Completa de Mobiliario para Apartamento con Madera Natural" },
+      { url: "/productos-residenciales/mobiliario-penthouse-lujo-medida-ffe-integral/", img: "/images/productos-residenciales/res-02/res-02-01.jpg", title: "Mobiliario de Penthouse de Lujo a Medida con FF&E Integral" },
+      { url: "/productos-residenciales/isla-cocina-medida-residencias-lujo-piedra-natural/", img: "/images/productos-residenciales/res-03/res-03-01.jpg", title: "Isla de Cocina a Medida con Encimera de Piedra Natural" },
+      { url: "/productos-residenciales/mobiliario-salon-dormitorio-moderno-madera-certificada/", img: "/images/productos-residenciales/res-04/res-04-01.jpg", title: "Mobiliario de Salón y Dormitorio Moderno con Madera Certificada FSC" },
+    ],
+  },
+};
+const featuredEyebrowLabels: Record<string, string> = {
+  oficinas: "Productos de oficina",
+  salud: "Productos médicos",
+  educacion: "Productos escolares",
+  residencial: "Productos residenciales",
+};
+const featuredSectionTitles: Record<string, string> = {
+  oficinas: "Mobiliario de oficina listo para cotizar",
+  salud: "Mobiliario médico listo para cotizar",
+  educacion: "Mobiliario escolar listo para cotizar",
+  residencial: "Mobiliario residencial listo para cotizar",
+};
+const featuredSectionTexts: Record<string, string> = {
+  oficinas: "Revisa escritorios, estaciones de trabajo, sillas y cabinas con especificaciones técnicas para incluirlos en tu cotización.",
+  salud: "Revisa consultorios, camas hospitalarias y mobiliario clínico con superficies antibacterianas y especificaciones técnicas.",
+  educacion: "Revisa pupitres, sillas, estanterías y mobiliario Montessori con certificación de seguridad infantil.",
+  residencial: "Revisa suites de apartamento, mobiliario de villa y soluciones llave en mano para proyectos residenciales.",
+};
 
 export function getStaticPaths() {
   return Object.keys(sectorPages).map((section) => ({ params: { section } }));
 }
 
 const section = Astro.params.section ?? "oficinas";
+const featuredData = featuredProductsBySection[section];
 const data = sectorPages[section as keyof typeof sectorPages];
 const category = categories.find((item) => item.href.endsWith(`/${section}/`)) ?? categories[1];
 const catalogItems = sectorCatalogs[section as keyof typeof sectorCatalogs] ?? [];
@@ -220,6 +283,17 @@ const projectReferenceText =
       <ProcessSteps />
     </div>
   </section>
+
+  {featuredData && (
+    <ProductosDestacados
+      eyebrow={featuredEyebrowLabels[section] ?? "Productos destacados"}
+      title={featuredSectionTitles[section] ?? "Productos listos para cotizar"}
+      text={featuredSectionTexts[section] ?? "Revisa productos con especificaciones, fotos y tablas técnicas para incluirlos en tu cotización por proyecto."}
+      products={featuredData.items}
+      listHref={featuredData.listHref}
+      listLabel={featuredData.listLabel}
+    />
+  )}
 
   <CTA />
 </BaseLayout>
