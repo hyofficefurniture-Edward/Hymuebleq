@@ -1,0 +1,401 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario de Restaurante de Hotel: Sillas y Mesas para Operaciones F&B de Alto Tráfico (2026)";
+const pageDescription = "Mobiliario de restaurante de hotel: sillas y mesas de grado contract para comedores con 4-8 vueltas diarias. Abrasión, núcleo de tablero, apilado y certificaciones.";
+const keywords = [
+  "mobiliario restaurante hotel",
+  "sillas comedor contract",
+  "especificación mesa hotel",
+  "mesa compacto laminado",
+  "muebles F&B hotel",
+  "sillas apilables restaurante"
+];
+const canonicalPath = "/recursos/mobiliario-restaurante-hotel-fb-2026/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-01-img-03-lobby-hotel-proyecto.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuál es el mejor material para mesas de restaurante de hotel?", answer: "El compacto laminado es el mejor material para comedores de alto tráfico: su núcleo de 8-12mm es la propia superficie, así que no hay chapa que deslamine ni canto que salte. Resiste calor, humedad, ácidos de alimentos y cortes de cuchillo, y dura 8-12 años donde el MDF pintado o la chapa fina fallan en 12-18 meses. Para restaurantes de especialidades, las superficies sólidas o piedra ofrecen 10-15 años pero a 3× el coste." },
+    { question: "¿Cuánto duran las sillas de restaurante de hotel?", answer: "Las sillas de grado contract duran 5-10 años en F&B hotelero según la intensidad del local: buffets de desayuno y comedor de todo el día (4-8 vueltas/día) rondan los 5-7 años, mientras que restaurantes de especialidades (1.5-2 vueltas/día) llegan a 7-10. Los factores decisivos son la unión del bastidor (espiga y mortaja o acero frente a uniones a tope encoladas), el tejido con 100,000+ dobles frotaciones y la espuma de alta resiliencia de 2.0-2.5 lb/ft³." },
+    { question: "¿Qué diferencia hay entre mobiliario comercial y residencial para comedor?", answer: "El mobiliario comercial (contract) está diseñado y probado para uso diario multiturno: bastidores probados a BIFMA X5.4 o equivalente, tejidos con 100,000+ dobles frotaciones, espuma de alta densidad, acabados sellados y capacidad de apilado/enganche para salas multifunción. El residencial no exige grado de abrasión, usa uniones más ligeras y no está probado para cargas comerciales: falla 2-3× más rápido en un comedor de hotel." },
+    { question: "¿Las sillas de restaurante de hotel deben ser ignífugas?", answer: "Sí — la tapicería contract en comedores de hotel debe cumplir típicamente ASTM E84 (Clase A) o NFPA 701, y los proyectos del Reino Unido exigen BS 5852 (crib 5). Los certificados varían por jurisdicción, así que pida siempre el informe real de la combinación exacta de tejido y espuma, y verifíquelo contra el código local antes de ordenar." },
+    { question: "¿Debo comprar sillas apilables para el restaurante de mi hotel?", answer: "Las sillas apilables son muy recomendables si el comedor sirve desayuno, almuerzo y banquetes: reducen el espacio de almacenamiento hasta un 60% y eliminan la necesidad de un segundo inventario de banquetes. Verifique la altura de pila contra sus carros, la durabilidad del enganche (10,000+ acoplamientos) y el peso por pieza (12kg es manejable; más peso arriesga lesiones de personal)." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía B2B · Hotelería F&amp;B 2026 &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario de Restaurante de Hotel: Especificación de Sillas y Mesas para Operaciones F&amp;B de Alto Tráfico (2026)</h1>
+          <p>El mobiliario de restaurante de hotel es cualquier silla, mesa, taburete o banqueta de comedor diseñado para servicio comercial: múltiples vueltas diarias, limpieza constante, movimiento frecuente y un horizonte de reposición de 7-10 años, frente a los 2-4 años que sobrevive el mobiliario residencial en uso F&amp;B. La diferencia no es el estilo: es la especificación — uniones del bastidor, grado de abrasión del tejido, núcleo de la tabla y certificados de cumplimiento.</p>
+          <p>Un solo desayuno al 60% de ocupación en un hotel de 200 habitaciones mueve más de 240 cubiertos por el comedor en menos de tres horas: el equivalente a un mes de desgaste de una butaca de habitación. Por eso el mobiliario F&amp;B se especifica con un estándar distinto al del casegoods de habitación. Esta guía desglosa los cinco números que importan, los núcleos de tablero que pagan su coste y los tres certificados que debe pedir antes de ordenar.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-03-lobby-hotel-proyecto.webp" alt="Sillas y mesas de comedor de grado contract en el restaurante de un hotel" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Los cinco números que importan en una silla de comedor</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Especificación</th><th>Grado residencial</th><th>Grado contract hotel</th><th>Por qué importa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Especificación">Abrasión del tejido (Wyzenbeek)</td><td data-label="Grado residencial">15,000–30,000 dobles frotaciones</td><td data-label="Grado contract hotel">100,000+ dobles frotaciones</td><td data-label="Por qué importa">1,200 cubiertos/día = abrasión alta; el tejido residencial se ve gastado en meses</td></tr>
+              <tr><td data-label="Especificación">Uniones del bastidor</td><td data-label="Grado residencial">A tope encoladas, grapas</td><td data-label="Grado contract hotel">Espiga y mortaja o tarugos reforzados + fijación</td><td data-label="Por qué importa">La falla de unión es la #1 en sillas de comedor</td></tr>
+              <tr><td data-label="Especificación">Prueba de ciclo del bastidor</td><td data-label="Grado residencial">Sin prueba formal</td><td data-label="Grado contract hotel">Equivalente BIFMA X5.4 (100,000+ ciclos)</td><td data-label="Por qué importa">Valida que el bastidor resiste años de carga diaria</td></tr>
+              <tr><td data-label="Especificación">Densidad de espuma (asiento)</td><td data-label="Grado residencial">1.5–1.8 lb/ft³</td><td data-label="Grado contract hotel">2.0–2.5 lb/ft³ alta resiliencia</td><td data-label="Por qué importa">Espuma HR resiste el colapso bajo uso repetido</td></tr>
+              <tr><td data-label="Especificación">Acabado / protección de bordes</td><td data-label="Grado residencial">Laca abierta, bajo espesor</td><td data-label="Grado contract hotel">Laca de curado por humedad, bordes sellados</td><td data-label="Por qué importa">El comedor ve líquidos a diario; los bordes sin sellar fallan</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Comprar fijándose solo en la estética lleva a descubrir en dos años que una silla residencial de $90 cuesta más por cubierto que una silla contract de $180 que dura tres ciclos de servicio.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Núcleo de tablero: el material que se paga solo</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Núcleo</th><th>Índice de coste</th><th>Vida útil (alto tráfico)</th><th>Ideal para</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Núcleo">MDF pintado (canto 0.8mm)</td><td data-label="Índice de coste">1.0×</td><td data-label="Vida útil (alto tráfico)">1–2 años</td><td data-label="Ideal para">Solo eventos temporales / pop-up</td></tr>
+              <tr><td data-label="Núcleo">Tablero aglomerado melaminizado</td><td data-label="Índice de coste">1.2×</td><td data-label="Vida útil (alto tráfico)">2–4 años</td><td data-label="Ideal para">Zonas traseras, cantinas de personal</td></tr>
+              <tr><td data-label="Núcleo">HPL sobre núcleo ingenierizado</td><td data-label="Índice de coste">1.6×</td><td data-label="Vida útil (alto tráfico)">5–7 años</td><td data-label="Ideal para">Comedor principal, buffet, todo el día</td></tr>
+              <tr><td data-label="Núcleo">Compacto laminado (8–12mm, canto propio)</td><td data-label="Índice de coste">2.2×</td><td data-label="Vida útil (alto tráfico)">8–12 años</td><td data-label="Ideal para">Zonas de alto abuso, banquetes, terrazas</td></tr>
+              <tr><td data-label="Núcleo">Superficie sólida / piedra</td><td data-label="Índice de coste">3.0×+</td><td data-label="Vida útil (alto tráfico)">10–15 años</td><td data-label="Ideal para">Restaurante de especialidades, VIP, bar</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El compacto laminado es el caballo de batalla del comedor hotelero porque el núcleo es la superficie: no hay chapa fina que deslaminar ni canto que saltar. Las mesas de compacto laminado de Hongye se cortan con CNC, con cantos sellados y niveladores ajustables, y resisten la exposición diaria a productos químicos de limpieza F&amp;B.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Tres certificados que debe pedir antes de ordenar</h2>
+        <p>1) Inflamabilidad: la tapicería debe cumplir ASTM E84 (Clase A de propagación de llama) o NFPA 701 en la mayoría de mercados; los proyectos del Reino Unido exigen además BS 5852 (crib 5). Pida el informe de laboratorio, no una afirmación comercial.</p>
+        <p>2) Accesibilidad: pasillos de comedor, espacios bajo mesa y alturas de asiento deben cumplir la normativa local (ADA en EE. UU.: alturas de asiento 27-29" para comedor estándar, espacio bajo mesa). Las zonas de barra alta necesitan alternativas accesibles a altura estándar.</p>
+        <p>3) Seguridad estructural: mesas y sillas deben pasar pruebas de estabilidad y resistencia (BIFMA X5.1 para asientos, X5.5 para mesas). Una mesa que cojea o una silla que colapsa en el comedor es un incidente de responsabilidad en ciernes.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Apilado, enganche y el comedor multifunción</h2>
+        <p>Los departamentos F&amp;B modernos operan un mismo espacio físico con tres funciones de ingresos: desayuno, almuerzo y banquetes de noche. Las sillas apilables (anidan hasta 8-10 unidades en un carro) y las mesas con enganche (se unen en filas) hacen esto rentable. Al especificar, confirme: (1) altura de pila y compatibilidad con carros, (2) durabilidad del mecanismo de enganche (probado a 10,000+ acoplamientos), y (3) peso por pieza (una silla de 12kg es manejable; una de 18kg no lo es, y las lesiones de personal son un coste operativo).</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>El estándar F&amp;B de Hongye</h2>
+        <p>Hongye Furniture Group (fundada en 1996; 300,000+ m² de planta; 1,000+ trabajadores) fabrica el mobiliario de restaurante de hotel como un sistema único: bastidores de espiga y mortaja en madera ingenierizada o acero, tableros de compacto laminado y HPL, tejidos contract sobre espuma de alta resiliencia y acabados de curado por humedad aptos para limpieza diaria. Cada pieza pasa nuestro protocolo QC de 36 etapas y viaja con la garantía estructural de 5 años (3 años en piezas móviles y tapicería). En más de 47 marcas hoteleras internacionales y 1,000+ proyectos en 50+ países, el patrón es consistente: especifique al ciclo de servicio, y el comedor se convierte en un activo de larga vida en lugar de una partida recurrente. Pida nuestra hoja de especificación F&amp;B y la documentación de pruebas de ciclo BIFMA con su próxima cotización.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Listo para especificar su comedor F&B?"
+      text="Fabricamos mobiliario de restaurante de hotel con certificaciones BIFMA y pruebas de ciclo documentadas. Solicite una cotización gratuita y reciba la hoja de especificación F&B."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

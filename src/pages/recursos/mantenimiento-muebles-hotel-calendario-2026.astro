@@ -1,0 +1,418 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mantenimiento de Mobiliario de Hotel: Calendarios Diario, Semanal y Anual que Prolongan la Vida del FF&E (2026)";
+const pageDescription = "Mantenimiento de mobiliario de hotel: rutina diaria de 15 minutos, re-apriete trimestral e inspección estructural anual. Cómo los químicos de limpieza matan los acabados y qué ahorra.";
+const keywords = [
+  "mantenimiento muebles hotel",
+  "limpieza mobiliario hotelero",
+  "calendario mantenimiento FF&E",
+  "prolongar vida muebles hotel",
+  "químicos limpieza muebles"
+];
+const canonicalPath = "/recursos/mantenimiento-muebles-hotel-calendario-2026/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-07-img-01-habitacion-hotel-ffe.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Con qué frecuencia debe limpiarse y mantenerse el mobiliario de hotel?", answer: "Quitar polvo y limpiar manchas a diario (15 minutos por habitación), aspirar tapicería semanalmente, re-apretar herrajes trimestralmente y realizar una inspección estructural anual con limpieza profunda profesional. Este calendario extiende la vida del mobiliario 30-50%: propiedades con programas documentados reportan 9-10 años de casegoods frente a 4-5 en propiedades solo reactivas." },
+    { question: "¿Cuál es la mejor forma de limpiar el mobiliario de hotel?", answer: "Use limpiadores pH neutro aprobados por el fabricante con paños de microfibra — nunca lejía, amoníaco ni estropajos abrasivos. Limpie de arriba abajo, absorba (no frote) las manchas de tapicería y seque los bordes tras limpiar para proteger el canto. Siga el código del tejido (W/S/W-S/X): el limpiador equivocado anula garantías y acelera el desgaste." },
+    { question: "¿Con qué frecuencia debe reponerse el mobiliario de hotel?", answer: "Con un programa de mantenimiento, el casegoods dura 7-10 años y los asientos blandos 4-6 en promedio (las propiedades de lujo extienden el casegoods a 10-12 mediante reacondicionamiento por fases). Sin mantenimiento, el mismo mobiliario falla 30-50% antes. La referencia USALI de reservar 5-7% de los ingresos de habitaciones financia estos ciclos; el mantenimiento reduce lo que la reserva debe cubrir." },
+    { question: "¿El mantenimiento regular afecta la garantía del mobiliario?", answer: "Sí, de dos formas: la mayoría de garantías estructurales (incluida la de Hongye: 5 años estructural / 3 años en piezas móviles) exigen prueba de cuidados rutinarios y control del entorno, y el uso de químicos no aprobados puede anular la cobertura de tapicería. Documente su calendario y su lista de químicos: protege su reclamación si ocurre una falla prematura." },
+    { question: "¿El mobiliario de hotel desgastado puede reacondicionarse en lugar de reponerse?", answer: "Sí, cuando la estructura está sana: re-lacar o re-chapar cuesta 25-40% de lo nuevo, y re-tapizar bastidores certificados cuesta 40-55%. Re-espumar asientos hundidos es aún más barato (30-45% de la reposición). Reemplace solo cuando la unión falla, el daño por agua causa delaminación o la reparación supera el 60% del coste de reposición — y especifique la reposición a un estándar de ciclo de vida de 10 años para que la próxima decisión cueste menos." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía B2B · Operación Hotelera 2026 &middot; {publicationDateLabel}</p>
+          <h1>Mantenimiento de Mobiliario de Hotel: Calendarios Diario, Semanal y Anual que Prolongan la Vida del FF&amp;E (2026)</h1>
+          <p>El mantenimiento del mobiliario de hotel — hecho con un calendario diario/semanal/anual — es la mayor palanca de ahorro controlable en el presupuesto de reposición. Una propiedad de 200 habitaciones que gasta $200/habitación/año en cuidados rutinarios evita $600-$1,200/habitación en reposición prematura en un ciclo de 7 años, por lo que los operadores que tratan el mobiliario como un activo mantenible en lugar de un desechable rinden mejor en coste y en satisfacción del huésped.</p>
+          <p>La referencia USALI de reservar 5-7% de los ingresos de habitaciones para FF&amp;E existe precisamente porque la reposición es cara; el mantenimiento reduce lo que esa reserva debe cubrir. Esta guía desglosa la rutina diaria de 15 minutos, el calendario trimestral/anual y el factor oculto que más mata muebles: los químicos de limpieza.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-07-img-01-habitacion-hotel-ffe.webp" alt="Técnico de hotel revisando el estado de mobiliario FF&amp;E en una habitación" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>El coste real de la negligencia</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Escenario</th><th>Gasto anual de mantenimiento</th><th>Coste total a 7 años</th><th>Gatillo de reposición</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Escenario">Sin programa (reactivo)</td><td data-label="Gasto anual de mantenimiento">~$0–$60/habitación</td><td data-label="Coste total a 7 años">$700–$900/habitación (2 reposiciones parciales)</td><td data-label="Gatillo de reposición">Reposición masiva de crisis en año 4-5</td></tr>
+              <tr><td data-label="Escenario">Programa ligero (housekeeping + reparación puntual)</td><td data-label="Gasto anual de mantenimiento">~$120–$180/habitación</td><td data-label="Coste total a 7 años">$500–$650/habitación</td><td data-label="Gatillo de reposición">Reposición por fases en año 6-7</td></tr>
+              <tr><td data-label="Escenario">Programa completo (diario + trimestral + anual)</td><td data-label="Gasto anual de mantenimiento">~$200–$280/habitación</td><td data-label="Coste total a 7 años">$380–$460/habitación</td><td data-label="Gatillo de reposición">Reposición planificada en año 9-10</td></tr>
+              <tr><td data-label="Escenario">Ahorro neto con programa completo</td><td data-label="Gasto anual de mantenimiento">—</td><td data-label="Coste total a 7 años">$300–$500/habitación en 7 años</td><td data-label="Gatillo de reposición">El casegoods alcanza su vida útil de diseño de 10+ años</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El patrón es consistente entre tipos de propiedad: el mantenimiento no compite con la renovación — es la razón por la que una renovación puede retrasarse tres años.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuidado diario: el estándar de 15 minutos por habitación</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tarea</th><th>Frecuencia</th><th>Quién</th><th>Qué usar / hacer</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tarea">Quitar polvo de casegoods y bastidores</td><td data-label="Frecuencia">Diario</td><td data-label="Quién">Housekeeping</td><td data-label="Qué usar / hacer">Paño de microfibra; de arriba abajo para no re-ensuciar</td></tr>
+              <tr><td data-label="Tarea">Limpieza puntual de tapicería</td><td data-label="Frecuencia">Diario</td><td data-label="Quién">Housekeeping</td><td data-label="Qué usar / hacer">Absorber (nunca frotar) con limpiador aprobado; reportar manchas</td></tr>
+              <tr><td data-label="Tarea">Limpiar tableros y vanidades</td><td data-label="Frecuencia">Diario</td><td data-label="Quién">Housekeeping</td><td data-label="Qué usar / hacer">Limpiador pH neutro + paño suave; secar bordes</td></tr>
+              <tr><td data-label="Tarea">Verificar herrajes sueltos (visual)</td><td data-label="Frecuencia">Diario</td><td data-label="Quién">Housekeeping</td><td data-label="Qué usar / hacer">Reportar patas de silla/mesa que cojean, pomos sueltos</td></tr>
+              <tr><td data-label="Tarea">Reportar daños</td><td data-label="Frecuencia">Diario</td><td data-label="Quién">Housekeeping</td><td data-label="Qué usar / hacer">Foto + ubicación en el sistema; reporte temprano = reparación barata</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El hábito crítico es reportar, no reparar: un canto de 2mm que se levanta se arregla con $5 de retoque si se detecta el día 1; si se descubre en la inspección anual, el mismo panel ya absorbió humedad y necesita un reemplazo de $120.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuidado trimestral y anual: la inspección estructural</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tarea</th><th>Frecuencia</th><th>Quién</th><th>Qué previene</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tarea">Re-apriete completo de herrajes</td><td data-label="Frecuencia">Trimestral</td><td data-label="Quién">Mantenimiento</td><td data-label="Qué previene">Aflojamiento de uniones que deriva en cojera, crujidos y falla estructural</td></tr>
+              <tr><td data-label="Tarea">Inspección estructural (bastidores, uniones, soldaduras)</td><td data-label="Frecuencia">Anual</td><td data-label="Quién">Mantenimiento + checklist del proveedor</td><td data-label="Qué previene">Detecta fatiga antes de la falla; valida cobertura de garantía</td></tr>
+              <tr><td data-label="Tarea">Limpieza profunda profesional de tapicería</td><td data-label="Frecuencia">Anual o según marca</td><td data-label="Quién">Limpiador certificado</td><td data-label="Qué previene">Restaura apariencia; elimina suciedad que acelera la abrasión</td></tr>
+              <tr><td data-label="Tarea">Inspección y retoque de acabados</td><td data-label="Frecuencia">Anual</td><td data-label="Quién">Mantenimiento</td><td data-label="Qué previene">Sella bordes expuestos antes del daño por humedad</td></tr>
+              <tr><td data-label="Tarea">Verificación de espuma y suspensión</td><td data-label="Frecuencia">Anual</td><td data-label="Quién">Mantenimiento</td><td data-label="Qué previene">Identifica asientos hundidos para re-espumar (30-45% del coste de reposición)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una regla simple para los equipos de housekeeping: si el limpiador no está aprobado por el fabricante del mobiliario, no toca el mobiliario. Hongye publica una lista de compatibilidad química con cada entrega contract precisamente por esta razón.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Químicos de limpieza: la variable oculta del ciclo de vida</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de químico</th><th>Efecto en el mobiliario</th><th>Alternativa recomendada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de químico">Lejía / cloro</td><td data-label="Efecto en el mobiliario">Despoja la laca, decolora tejidos, degrada adhesivos</td><td data-label="Alternativa recomendada">Limpiador multiuso pH neutro</td></tr>
+              <tr><td data-label="Tipo de químico">Limpiadores con amoníaco</td><td data-label="Efecto en el mobiliario">Nubla lacas, ataca el adhesivo del canto</td><td data-label="Alternativa recomendada">Limpiador sin amoníaco ni alcohol</td></tr>
+              <tr><td data-label="Tipo de químico">Estropajos abrasivos</td><td data-label="Efecto en el mobiliario">Micro-raya acabados, apaga el alto brillo</td><td data-label="Alternativa recomendada">Microfibra + limpiador suave</td></tr>
+              <tr><td data-label="Tipo de químico">Aerosoles de silicona</td><td data-label="Efecto en el mobiliario">Acumulan residuo, atraen polvo, complican el re-acabado</td><td data-label="Alternativa recomendada">Cera/pulimento al agua aprobado por el fabricante</td></tr>
+              <tr><td data-label="Tipo de químico">Toallitas de alcohol isopropílico</td><td data-label="Efecto en el mobiliario">Despojan la capa superior en bordes de alto tráfico</td><td data-label="Alternativa recomendada">Desinfectante aprobado (probar en zona discreta)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los calendarios funcionan mejor cuando se alinean con la especificación del mobiliario: un paquete de casegoods de 10 años con acabados de curado por humedad y uniones de espiga y mortaja solo alcanza su vida de diseño si el entorno se mantiene dentro de especificación — humedad interior 40-65%, sin UV directa sobre acabados y propiedades costeras con la especificación de materiales salinos. Cuando especifique mobiliario, pida el calendario de cuidados al mismo tiempo: Hongye incluye un calendario habitación por habitación con cada contrato, y las propiedades que lo siguen reportan de forma consistente que el casegoods alcanza su vida útil completa de 10+ años. Pida nuestra plantilla de programa de cuidados con su próxima cotización.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Listo para proteger su inversión en FF&E?"
+      text="Incluimos un programa de cuidados habitación por habitación con cada contrato contract. Solicite una cotización gratuita y reciba la plantilla de mantenimiento."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
