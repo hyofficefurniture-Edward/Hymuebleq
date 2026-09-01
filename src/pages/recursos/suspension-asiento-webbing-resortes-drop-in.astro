@@ -1,0 +1,393 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Suspensión de Asiento Contract: Webbing vs Resortes Sine vs Drop-In (Criterios de Especificación)";
+const pageDescription = "Comparativa técnica de sistemas de suspensión para mobiliario contract de alto uso: ciclos de prueba, comportamiento BIFMA, costo relativo y qué sistema especificar según la intensidad de uso del espacio.";
+const keywords = [
+  "suspensión asiento muebles contract",
+  "webbing vs resortes sine",
+  "drop-in springs especificación",
+  "BIFMA ciclos asiento",
+  "ergonomía mobiliario hotelero",
+  "bastidor sofá contract",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/suspension-asiento-webbing-resortes-drop-in/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-14-img-01-suspension-asiento.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿Qué sistema de suspensión resiste más ciclos de uso?",
+    answer: "Los resortes sine de calibre alto (≥ 3,2 mm) con anclaje en clip o alambre continuo superan los 50.000 ciclos de tipo BIFMA X5.4 con degradación mínima, y son la referencia para lobbies y áreas públicas. El webbing de calidad hotelera (correa de ≥ 70 mm con hilos de caucho natural y poliéster) alcanza 25.000-35.000 ciclos y es la mejor relación costo/peso para guestrooms. Los drop-in prefabricados son adecuados para uso residencial ligero y mobiliario de bajo costo, no para alto tránsito.",
+  },
+  {
+    question: "¿El webbing elástico pierde tensión con el tiempo?",
+    answer: "Todo sistema elástico cede, pero la velocidad depende del caucho: las correas de caucho natural con núcleo de poliéster mantienen más del 90% de tensión tras 10 años, mientras que las de caucho sintérico económico pueden perder 30% en 3 años en ambientes cálidos. Por eso la especificación debe incluir el tipo de correa, no solo 'webbing'.",
+  },
+  {
+    question: "¿Se puede combinar más de un sistema en el mismo mueble?",
+    answer: "Sí, y es una práctica recomendada: resortes sine en la zona central del asiento (donde se concentra la carga) y webbing en respaldos y laterales, donde la exigencia es menor. Esta hibridación reduce costo sin sacrificar durabilidad en la zona crítica.",
+  },
+  {
+    question: "¿Qué otro componente afecta la duración además de la suspensión?",
+    answer: "El bastidor: madera seca (humedad ≤ 12%), uniones encoladas y atornilladas, y refuerzos en las esquinas de carga. Una suspensión excelente sobre un bastidor mediocre falla igual. El detalle está en la guía de <a href=&quot;/recursos/por-que-crujen-sillas-hotel-bastidor/&quot;>por qué crujen los muebles y qué revela del bastidor</a>.",
+  },
+  {
+    question: "¿Cómo verifico la calidad de la suspensión en una auditoría?",
+    answer: "Pida el reporte de ciclos del proveedor (no el del fabricante del componente), realice la prueba de presión manual en el centro del asiento (no debe tocar el bastidor con peso de 100 kg) y verifique el anclaje: clips metálicos o ganchos de alambre, nunca solo grapas.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Ingeniería &middot; {publicationDateLabel}</p>
+          <h1>Webbing, resortes sine o drop-in: qué sistema de suspensión especificar según la intensidad de uso real</h1>
+          <p>La suspensión es el componente invisible que decide si un sofá de lobby sobrevive 50.000 ciclos de uso o se degrada en el segundo año. Esta comparativa ordena los tres sistemas dominantes —correas elásticas, resortes sine y unidades drop-in— con los criterios que un equipo de FF&E necesita para especificar sin sobreinvertir ni subestimar.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-14-img-01-suspension-asiento.webp" alt="Primer plano del bastidor de un banco tapizado mostrando correas elásticas de webbing y resortes sine en zigzag montados sobre madera seca" width="1536" height="962" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>El componente que no se ve y decide el ciclo de reposición</h2>
+        <p>En un análisis de fallas de mobiliario hotelero, la suspensión aparece como causa raíz en cerca de un tercio de los reclamos estructurales de tapicería: asientos que se hunden, respaldos que pierden firmeza, chirridos tempranos. No porque la tecnología falle, sino porque el sistema especificado no correspondía a la intensidad de uso del espacio.</p>
+        <p>La pregunta correcta no es '¿cuál es el mejor sistema?' sino '¿qué exigencia tendrá esta plaza en los próximos siete años?'. Un sofá de lobby de aeropuerto y un butacón de guestroom no deberían compartir especificación de suspensión.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Comparativa técnica de los tres sistemas</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Webbing (correa elástica)</th><th>Resortes sine (zigzag)</th><th>Drop-in (unidad prefabricada)</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Criterio">Ciclos típicos verificados</td><td data-label="Webbing (correa elástica)">25.000-35.000 (calidad hotelera)</td><td data-label="Resortes sine (zigzag)">50.000+ (calibre ≥ 3,2 mm)</td><td data-label="Drop-in (unidad prefabricada)">15.000-25.000</td></tr><tr><td data-label="Criterio">Sensación de asiento</td><td data-label="Webbing (correa elástica)">Media-firme, cede gradualmente</td><td data-label="Resortes sine (zigzag)">Firme y uniforme</td><td data-label="Drop-in (unidad prefabricada)">Variable según unidad</td></tr><tr><td data-label="Criterio">Costo relativo instalado</td><td data-label="Webbing (correa elástica)">1,0x</td><td data-label="Resortes sine (zigzag)">1,3-1,6x</td><td data-label="Drop-in (unidad prefabricada)">0,8-0,9x</td></tr><tr><td data-label="Criterio">Peso soportado por plaza</td><td data-label="Webbing (correa elástica)">Hasta ~110 kg</td><td data-label="Resortes sine (zigzag)">Hasta ~150 kg</td><td data-label="Drop-in (unidad prefabricada)">Hasta ~90 kg</td></tr><tr><td data-label="Criterio">Reparación en sitio</td><td data-label="Webbing (correa elástica)">Alta: correa sustituible</td><td data-label="Resortes sine (zigzag)">Media: requiere destapizado parcial</td><td data-label="Drop-in (unidad prefabricada)">Baja: se sustituye la unidad</td></tr><tr><td data-label="Criterio">Aplicación recomendada</td><td data-label="Webbing (correa elástica)">Guestrooms, salas de estar</td><td data-label="Resortes sine (zigzag)">Lobbies, restaurantes, salas de espera</td><td data-label="Drop-in (unidad prefabricada)">Residencial ligero, piezas de baja exigencia</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las cifras de ciclos son indicativas: lo contractualmente exigible es que el proveedor presente resultados de prueba de su propia línea, idealmente con protocolo BIFMA o equivalente EN, y no una copia del catálogo del proveedor de resortes. La guía del comprador de <a href="/recursos/certificacion-bifma-guia-comprador-2026/">certificación BIFMA</a> detalla qué pedir y cómo leer esos reportes.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>El sistema no trabaja solo: bastidor, espuma y ergonomía</h2>
+        <p>La suspensión define el soporte; la espuma define el confort inicial; el bastidor define la vida estructural. Especificar resortes sine sobre espuma de baja densidad produce un asiento firme que colapsa en 18 meses; especificar espuma de alta densidad sobre drop-in ligero produce comfort de showroom y falla temprana. El equilibrio correcto entre densidades y sistemas está explicado en la guía de <a href="/recursos/espuma-envuelta-plumon-cojines-lujo/">espuma envuelta en plumón para cojines de lujo</a>, y el criterio de materiales para los primeros años de operación, en la <a href="/recursos/materiales-muebles-hotel-durabilidad-2026/">guía de durabilidad de materiales</a>.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Matriz de decisión por tipo de espacio</h2>
+        <p>Así traducimos la comparativa a decisiones de proyecto:</p>
+        <ol class="editorial-list">
+          <li>Lobby / área pública 24h: resortes sine calibre alto + espuma HR de alta densidad. Sin excepciones.</li>
+          <li>Restaurante y F&B: sine o webbing hotelera de especificación reforzada, priorizando facilidad de reparación; el desgaste combinado con limpieza húmeda acelera el envejecimiento — criterios en la guía de <a href="/recursos/mobiliario-restaurante-hotel-fb-2026/">mobiliario para restaurantes F&B</a>.</li>
+          <li>Guestroom estándar: webbing hotelera en asiento + respaldo; costo óptimo con vida útil de 7-10 años.</li>
+          <li>Suite y lounge ejecutivo: combinación híbrida (sine central + webbing perimetral) con tapizado de mayor gramaje.</li>
+          <li>Oficinas y salas de reunión: priorizar unidades homologadas con pruebas de uso intensivo, donde la sustitución rápida pesa más que el ciclo extremo.</li>
+        </ol>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Consejo de auditoría:</strong> durante la inspección de muestras, presione el centro del asiento con su antebrazo y sostenga 10 segundos. Si al retirar la presión el tejido tarda más de 2 segundos en recuperar o nota el bastidor, la suspensión está al límite de su especificación. Es la verificación más barata que existe y se hace antes de aprobar el prototipo en la <a href="/fabrica/">línea de producción</a>.</p>
+        </div>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Mantenimiento: la suspensión también se inspecciona</h2>
+        <p>Incluya la revisión de suspensión en las inspecciones periódicas: pérdida de altura de asiento superior al 15% respecto a la entrega, chirridos en zonas de anclaje y ondulaciones visibles en la superficie del tapizado son indicadores tempranos. El plan completo está en el <a href="/recursos/mantenimiento-muebles-hotel-calendario-2026/">calendario de mantenimiento del mobiliario hotelero</a>.</p>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Especificando asientos de alto tránsito?"
+      text="Envíenos el perfil de uso del espacio y le devolvemos la matriz de suspensión recomendada con costo objetivo por plaza."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

@@ -1,0 +1,396 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Acabado a Mano en Mobiliario Contract: Cómo Verificar el Claim Antes de Aprobar la Muestra";
+const pageDescription = "Qué exige realmente 'acabado a mano' en especificaciones contract: niveles reales del claim, puntos de auditoría en la línea de acabado y cómo redactar una especificación verificable.";
+const keywords = [
+  "acabado a mano mobiliario contract",
+  "hand finished furniture verificación",
+  "acabado artesanal muebles hotel",
+  "control de calidad acabados madera",
+  "especificación acabados mobiliario",
+  "auditoría fábrica muebles",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/acabado-a-mano-que-significa-muebles/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿Cómo distingo acabado a mano real de un claim de marketing en una ficha técnica?",
+    answer: "Exija tres evidencias: descripción del proceso (número de manos, gramaje, método de aplicación), criterios de aceptación por nivel de inspección AQL y posibilidad de presenciar la línea de acabado durante la auditoría. Un fabricante con acabado manual real documenta tiempos por pieza; quien no puede describir el proceso probablemente solo retoca a mano el acabado de línea.",
+  },
+  {
+    question: "¿El acabado a mano es siempre superior al de línea automatizada?",
+    answer: "No. En superficies planas grandes, una línea automatizada logra espesores más consistentes que un operario. El acabado manual aporta ventaja en cantos, tallas, madera con veta irregular y piezas de geometría compleja. Lo correcto es especificar hibridación: base automatizada y acabado final manual en zonas críticas.",
+  },
+  {
+    question: "¿Qué impacto tiene en costo y plazo?",
+    answer: "En nuestros proyectos, el acabado manual completo añade entre 12% y 18% al costo de la pieza y amplía el ciclo de producción de 2 a 4 días por lote, según el número de manos. El retoque manual selectivo cuesta 3-5% y es suficiente para la mayoría de guestroom furniture.",
+  },
+  {
+    question: "¿Cómo se controla la consistencia entre lotes?",
+    answer: "Con muestras de acabado firmadas (sealed samples) por lote de producción, registro de mezclas y tintes, y un operario responsable por lote. Sin sealed sample retenida por ambas partes, la discusión sobre diferencias de tono entre contenedores se vuelve imposible de resolver.",
+  },
+  {
+    question: "¿Qué norma aplica al acabado en proyectos con requerimientos de emisiones?",
+    answer: "Para interiores con exigencia de calidad de aire, el acabado debe cumplir límites de COV (por ejemplo GREENGUARD Gold o equivalente local). El acabado manual no exime de certificación: exija la ficha técnica del barniz o laca utilizada y su certificado de emisiones.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Especificación &middot; {publicationDateLabel}</p>
+          <h1>'Acabado a mano' en proyectos contract: qué exigir y cómo verificarlo antes de aprobar la muestra</h1>
+          <p>La frase aparece en la mayoría de fichas técnicas de mobiliario contract, pero pocas especificaciones definen qué implica ni cómo se audita. Esta guía ordena los tres niveles reales del claim y los puntos de control que su equipo de calidad puede verificar durante la /fabrica/ antes de firmar.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp" alt="Manos de un artesano aplicando barniz mate con brocha al canto de un panel de madera maciza en un taller de mobiliario" width="1536" height="962" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>El claim aparece en casi toda ficha técnica; la definición, en casi ninguna</h2>
+        <p>En las revisión de especificaciones para hotelería y residencial de alta densidad, el término <em>hand-finished</em> se usa para describir procesos muy distintos: desde un lijado manual de 30 segundos por pieza hasta la aplicación completa de un sistema de seis manos con pulimento intermedio. La consecuencia práctica es conocida: dos proveedores cotizan el mismo ítem con el mismo claim y entregan calidades incompatibles entre sí.</p>
+        <p>El problema no es el acabado manual —que en las zonas correctas supera a la línea— sino la ausencia de definición. Una especificación auditable debe indicar qué superficies reciben acabado manual, con qué sistema de producto y bajo qué criterio de aceptación.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Los tres niveles reales del claim</h2>
+        <p>Ordenar el claim en niveles evita la mayor parte de las disputas de calidad. Estos son los que aplicamos al auditar líneas de acabado:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nivel</th><th>Qué implica realmente</th><th>Costo relativo</th><th>Dónde tiene sentido exigirlo</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Nivel">Nivel 1 — Retoque manual</td><td data-label="Qué implica realmente">Lijado de cantos y corrección de defectos puntuales sobre acabado de línea</td><td data-label="Costo relativo">+3-5%</td><td data-label="Dónde tiene sentido exigirlo">Guestrooms estándar, mobiliario de oficina</td></tr><tr><td data-label="Nivel">Nivel 2 — Aplicación manual completa</td><td data-label="Qué implica realmente">Sistema de acabado aplicado a mano (tinte, sello, tapaporos, barniz final) sobre base preparada</td><td data-label="Costo relativo">+12-18%</td><td data-label="Dónde tiene sentido exigirlo">Suites, lobbies, piezas de madera maciza con veta visible</td></tr><tr><td data-label="Nivel">Nivel 3 — Artesanía decorativa</td><td data-label="Qué implica realmente">Pátinas, bombeados, dorados a la esponja o técnicas artesanales por pieza única</td><td data-label="Costo relativo">+25% o más</td><td data-label="Dónde tiene sentido exigirlo">Piezas insignia, hospitality de lujo, prototipos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El error más frecuente en licitaciones es exigir Nivel 3 para todo el paquete por un margen de Nivel 1. El resultado es un sobreprecio que nadie auditó o, peor, un proveedor que ganó con precio de Nivel 1 y entrega exactamente eso.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué auditar en la línea de acabado</h2>
+        <p>Si el proyecto justifica acabado manual, la /fabrica/ debe poder demostrarlo. Esta es la checklist que ejecutamos antes de aprobar la muestra de producción:</p>
+        <ol class="editorial-list">
+          <li>Cabinas de aplicación separadas de la zona de lijado (contaminación por polvo = defectos de superficie garantizados).</li>
+          <li>Registro de mezclas: número de lote de tinte y barniz por día de producción, firmado por el operario responsable.</li>
+          <li>Sealed sample retenida y fechada, visible en línea, contra la cual se compara cada lote.</li>
+          <li>Medición de espesor de película (medidor por inducción o gravimétrico) con registro por lote.</li>
+          <li>Tiempo de secado respetado entre manos: pregunte los tiempos reales de la línea, no los del catálogo del producto.</li>
+          <li>Prueba de adherencia y resistencia química sobre muestras del lote actual, no sobre muestras históricas.</li>
+        </ol>
+        <p>Un taller sin estos controles puede producir un buen prototipo, pero no sostendrá la consistencia entre los contenedores 1 y 12 de un proyecto de 200 habitaciones.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo redactar la especificación para que el claim sea auditable</h2>
+        <p>La especificación efectiva tiene cuatro componentes: zona de aplicación (qué superficies), sistema de producto (marco y tipo: PU, AC, aceite-cera), criterio de aceptación (muestra sellada + espesor objetivo + pruebas de la /recursos/recubrimiento-polvo-vs-pintura-anodizado/ cuando aplique a acabados de superficie metálica) y método de verificación (inspección durante auditoría de línea). Con esos cuatro puntos, el claim deja de ser marketing y pasa a ser una condición contractual.</p>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Consejo de especificación:</strong> exija que la frase 'acabado a mano' del catálogo se traduzca en el contrato como nivel, zona y sistema. Y si el proveedor se resiste a definirlo, trátelo como una de las <a href="/recursos/banderas-rojas-presupuesto-muebles-cotizacion/">señales de alerta en un presupuesto de muebles</a>: la ambigüedad deliberada en acabados casi siempre reaparece como reclamo en la recepción de mercancía.</p>
+        </div>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Durabilidad: el acabado manual también se planifica</h2>
+        <p>El acabado es la capa que determina el costo de mantenimiento del mueble durante toda su vida útil. Un sistema manual bien especificado reduce ciclos de reparación; uno mal definido los multiplica. La relación entre espesor, dureza y plan de mantenimiento está detallada en la guía de <a href="/recursos/materiales-muebles-hotel-durabilidad-2026/">durabilidad de materiales para mobiliario</a>, y el plan de inspección posterior a la instalación, en el <a href="/recursos/mantenimiento-muebles-hotel-calendario-2026/">calendario de mantenimiento del mobiliario hotelero</a>.</p>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Su proyecto exige acabado manual verificado?"
+      text="Envíenos la especificación y le devolvemos una matriz de puntos de control auditables antes de producir la muestra de acabado."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

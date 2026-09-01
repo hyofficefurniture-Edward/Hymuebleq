@@ -1,0 +1,404 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Cómo Cotizamos un Paquete de Casegoods de 200 Habitaciones: Método del Ingeniero de Costos";
+const pageDescription = "Recorrido completo del cálculo de un paquete de casegoods para hotel: estructura del BOQ, drivers de costo por habitación tipo, comparativa de escenarios y los 8 puntos donde los presupuestos se descuadran.";
+const keywords = [
+  "cotizar casegoods hotel",
+  "BOQ mobiliario hotelero",
+  "costo mobiliario por habitación",
+  "presupuesto FF&E hotel 200 habitaciones",
+  "casegoods contract pricing",
+  "costo muebles hotel",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/cotizar-casegoods-hotel-200-habitaciones/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-16-img-01-casegoods-hotel.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿Cuánto cuesta el mobiliario tipo casegoods por habitación de hotel?",
+    answer: "Depende del estándar: en proyectos de 3-4 estrellas gestionados por nosotros, el paquete de casegoods (cama, mesitas, escritorio, sillón tapizado, armario r/ropa) ronda típicamente entre USD 1.400 y USD 2.600 por habitación FOB China; en 5 estrellas supera USD 3.500. El rango exacto lo define el brief de especificaciones, no la categoría del hotel.",
+  },
+  {
+    question: "¿Por qué dos proveedores cotizan el mismo BOQ con diferencias de 30%?",
+    answer: "Casi siempre por divergencia en supuestos no escritos: calidad de herrajes, espesor de tableros, tipo de canto, embalaje, margen de reposición o inclusión de flete y seguros. La forma de cerrar la brecha es exigir el desglose por driver de costo — no solo el total. Los criterios de comparación están en la guía de <a href=&quot;/recursos/banderas-rojas-presupuesto-muebles-cotizacion/&quot;>señales de alerta en presupuestos de muebles</a>.",
+  },
+  {
+    question: "¿Qué incluye el BOQ que realmente define el costo?",
+    answer: "El BOQ comercial lista ítems; el BOQ de ingeniería define materiales, herrajes, acabados y cantidades de despiece por habitación tipo. La cotización seria se hace sobre el segundo. Sin despiece, cada proveedor está cotizando 'su versión' del mismo ítem.",
+  },
+  {
+    question: "¿Cuándo conviene consolidar casegoods y asientos con el mismo fabricante?",
+    answer: "En paquetes de 150+ llaves suele bajar el costo logístico y de gestión de calidad, pero el criterio no es automático: si el fabricante es fuerte en casegoods y débil en tapicería, consolidar cuesta más caro de lo que ahorra. La comparativa está en la guía de <a href=&quot;/recursos/fabricante-vs-distribuidor-muebles-comerciales-2026/&quot;>fabricante vs distribuidor para muebles comerciales</a>.",
+  },
+  {
+    question: "¿Cómo se protege el presupuesto contra reposiciones y fallas de lote?",
+    answer: "Con un porcentaje de piezas de reposición (típicamente 2-5% en elementos críticos), retención de calidad por lote en origen y especificación de herrajes de mercado disponible en el país de destino para reparaciones futuras. Todo esto debe estar en el contrato, no en la buena voluntad.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Costos &middot; {publicationDateLabel}</p>
+          <h1>Cómo se cotiza realmente un paquete de casegoods de 200 habitaciones: recorrido con números</h1>
+          <p>Cuando llega un RFQ de casegoods para 200 llaves, el número final no sale de una tabla de precios: sale de un desglose que atraviesa BOQ, drivers de costo por tipo de habitación, escenarios de embalaje y logística. Este es el método que aplicamos, con la estructura exacta y los ocho puntos donde vemos descuidarse los presupuestos.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-16-img-01-casegoods-hotel.webp" alt="Ingeniero de costos revisando planos BOQ de muebles y cotización de un paquete de casegoods de hotel sobre escritorio con muestras de materiales" width="1536" height="962" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Del RFQ al desglose: qué pasa antes del primer número</h2>
+        <p>Un RFQ de casegoods para 200 habitaciones llega con planos de habitación tipo y un BOQ comercial. El primer trabajo no es cotizar: es traducir ese BOQ a un BOQ de ingeniería — despiece por mueble, materiales por componente, herrajes por unidad y cantidades exactas por tipo de habitación. Sobre eso, y solo sobre eso, se puede cotizar comparativamente.</p>
+        <p>En proyectos de 200 llaves típicos manejamos entre 3 y 5 tipos de habitación (estándar, twin, junior suite, suite, habitación accesible). Cotizar 'un promedio por habitación' es el origen del 80% de los descuadres posteriores.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>La estructura del costo, con números de referencia</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Driver de costo</th><th>% típico del precio FOB</th><th>Qué lo mueve</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Driver de costo">Materiales (tableros, madera, tapicería)</td><td data-label="% típico del precio FOB">42-50%</td><td data-label="Qué lo mueve">Especificación de espesores, chapas, espuma HR, telas</td></tr><tr><td data-label="Driver de costo">Herrajes y metálicos</td><td data-label="% típico del precio FOB">8-12%</td><td data-label="Qué lo mueve">Marca y grado (guías, bisagras, soportes)</td></tr><tr><td data-label="Driver de costo">Mano de obra y línea</td><td data-label="% típico del precio FOB">15-20%</td><td data-label="Qué lo mueve">Complejidad de acabado y tapicería</td></tr><tr><td data-label="Driver de costo">Control de calidad y embalaje</td><td data-label="% típico del precio FOB">6-9%</td><td data-label="Qué lo mueve">Embale de exportación, inspección por lote, drop-test</td></tr><tr><td data-label="Driver de costo">Logística FOB + documentación</td><td data-label="% típico del precio FOB">5-8%</td><td data-label="Qué lo mueve">Volumen por contenedor, consolidación</td></tr><tr><td data-label="Driver de costo">Gestión, margen y riesgo</td><td data-label="% típico del precio FOB">12-16%</td><td data-label="Qué lo mueve">Garantía, reposición, condiciones de pago</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Este desglose es la herramienta de negociación real: cuando un proveedor cotiza 30% por debajo, casi siempre recortó en los renglones invisibles al plano — embalaje, herrajes o QC. El panorama de dónde sí y dónde no recortar está en la <a href="/recursos/materiales-muebles-hotel-durabilidad-2026/">guía de durabilidad de materiales</a>.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>El recorrido paso a paso del cálculo</h2>
+        <ol class="editorial-list">
+          <li>Congelar matriz de habitaciones: cantidades exactas por tipo y por mueble, incluidas área pública afectada al paquete.</li>
+          <li>Despiece de ingeniería por mueble prototipo: metros cuadrados de tablero, metros de canto, unidades de herraje, metros de tela y espuma.</li>
+          <li>Precio de materiales a fecha, con cláusula de validez (30-45 días) — la volatilidad de tablero y acero descuenta presupuestos abiertos más de lo que parece.</li>
+          <li>Ciclo de producción por lote y capacidad real de línea: en 200 llaves, el cronograma de prototipo → muestra aprobada → producción define el flete que se puede pagar.</li>
+          <li>Escenarios de embalaje y consolidación: contenedor completo vs LCL, con el cálculo de costo por metro cúbico embarcado.</li>
+          <li>Costo de calidad: inspección por lote, prueba de embalaje (drop-test) y porcentaje de reposición contratado.</li>
+          <li>Composición final del precio con escenarios A/B/C de especificación, para que el dueño del proyecto decida con números y no con sensaciones.</li>
+        </ol>
+        <p>Este recorrido encaja dentro del proceso mayor que va del brief a la instalación: el mapa completo está en la guía de <a href="/recursos/proceso-compras-ffe-hoteles-7-etapas/">compras de FF&E en 7 etapas</a>.</p>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Dato de campo:</strong> en una revisión de tres cotizaciones para el mismo proyecto de 180 llaves, la brecha entre la más cara y la más económica era 34%. Al forzar el desglose por driver, dos tercios de esa brecha se explicaban por herrajes de distinto grado y embalaje distinto. Solo un tercio era margen real. Sin desglose, el cliente habría elegido por precio total — y habría comparado cosas diferentes.</p>
+        </div>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Los 8 puntos donde estos presupuestos se descuadran</h2>
+        <ol class="editorial-list">
+          <li>BOQ sin despiece: cada proveedor cotiza su propia versión del ítem.</li>
+          <li>Habitación 'promedio': las suites se pagan en la diferencia no presupuestada.</li>
+          <li>Herrajes sin marca ni grado especificados.</li>
+          <li>Embalaje de exportación cotizado como embalaje doméstico.</li>
+          <li>Volatilidad de materiales sin cláusula de validez de precio.</li>
+          <li>Reposiciones no contratadas: la primera reposición paga el ahorro inicial.</li>
+          <li>Flete estimado sin consolidación real de contenedores.</li>
+          <li>Garantía sin definición de quién evalúa la falla y quién paga el flete de la pieza.</li>
+        </ol>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Costo total de propiedad, no solo precio FOB</h2>
+        <p>El número que gobierna la decisión final no es el FOB: es el costo por año de servicio, que suma reposición esperada, mantenimiento y obsolescencia. Un paquete 12% más caro con herrajes estándar de mercado y plan de mantenimiento definido — <a href="/recursos/mantenimiento-muebles-hotel-calendario-2026/">calendario incluido</a> — suele vencer al más barato antes del cuarto año. Y cuando el paquete incluye piezas metálicas, el criterio de acabado que define su vida útil está en la comparativa de <a href="/recursos/recubrimiento-polvo-vs-pintura-anodizado/">recubrimiento en polvo vs pintura</a>.</p>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Cotizando casegoods para su proyecto?"
+      text="Envíenos el BOQ o los planos de habitación tipo y le devolvemos el desglose por driver de costo con escenarios comparados en 72 horas."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

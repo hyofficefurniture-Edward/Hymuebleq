@@ -1,0 +1,392 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Melamina vs HPL vs Laminado Compacto: Qué Superficie Sobrevive en Desayunos Hoteleros";
+const pageDescription = "Análisis comparativo de superficies para mesas de alto tránsito en hotelería: resistencia de melamina, HPL y laminado compacto a calor, humedad, impactos y productos de limpieza, con matriz de selección por área.";
+const keywords = [
+  "melamina vs HPL mesas hotel",
+  "laminado compacto mobiliario contract",
+  "superficies mesas desayuno hotel",
+  "resistencia superficies F&B",
+  "especificación mesas restaurante",
+  "HPL contract mobiliario",
+  "HYMUEBLE",
+];
+const canonicalPath = "/recursos/melamina-vs-hpl-vs-laminado-compacto-mesas/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-01";
+const dateModified = "2026-09-01";
+const publicationDateLabel = "Publicada el 1 de septiembre de 2026";
+
+const faqItems = [
+  {
+    question: "¿Cuál de los tres materiales resiste mejor el calor de platos y tazas?",
+    answer: "El laminado compacto (≥ 10 mm) tolera contacto directo con fuentes de hasta ~180°C sin marca. El HPL estándar soporta ~130-140°C de contacto breve; suficiente para vajilla de servicio, al límite con fuentes directas. La melamina de baja presión marca desde ~70-80°C: una taza recién servida apoyada sin posavasos puede dejar un cerco permanente.",
+  },
+  {
+    question: "¿Qué superficie resiste mejor los productos de limpieza hospitalaria?",
+    answer: "El laminado compacto es el más tolerante a desinfectantes de grado comercial, incluidos clorados diluidos. El HPL de calidad contract admite limpiadores neutros y desinfectantes de uso hospitalario con buffered, pero los solventes agresivos pueden dañar el acabado. La melamina pierde capa decorativa con limpiadores fuertes repetidos.",
+  },
+  {
+    question: "¿La melamina sirve para algo en un hotel?",
+    answer: "Sí, en zonas de uso ligero y presupuesto ajustado: escritorios de guestroom con posavasos integrados, mesas auxiliares, mobiliario de back office. El error es extenderla a buffets o mesas de comedor por ahorro inicial; el costo de reposición a 24 meses la encarece.",
+  },
+  {
+    question: "¿Cómo afecta el canto a la durabilidad de la mesa?",
+    answer: "Determinante: el 70% de las fallas de superficie empiezan en el canto — humedad que entra por el borde del tablero y delevita el sustrato. En F&B exija cantos de compacto, ABS de 2 mm o canto de aluminio; el canto de PVC de 0,4 mm es residencial y no sobrevive carros de servicio golpeando la mesa.",
+  },
+  {
+    question: "¿Qué mantenimiento requiere cada superficie?",
+    answer: "Los tres se limpian con paño húmedo y limpiador neutro; la diferencia está en los ciclos de inspección de cantos y uniones, donde HPL y compacto permiten intervalos más largos. El plan por material está en el <a href=&quot;/recursos/mantenimiento-muebles-hotel-calendario-2026/&quot;>calendario de mantenimiento del mobiliario hotelero</a>.",
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Materiales &middot; {publicationDateLabel}</p>
+          <h1>Melamina, HPL o laminado compacto: la superficie correcta para cada área de desayuno y F&B</h1>
+          <p>El desayuno es la prueba de estrés diaria de cualquier superficie hotelera: café a 80°C, jugo cítrico, limpiadores desinfectantes y 300 coberturas por mesa al día. Esta comparativa evalúa los tres materiales dominantes contra ese perfil real de abuso — no contra el catálogo del proveedor — y define qué especificar por zona.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp" alt="Mesa de desayuno con superficie laminada en luz natural cálida, con taza de café y platos de croissants mostrando el detalle del canto de la superficie" width="1536" height="962" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA; no representa un producto o instalación específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>El desayuno: el peor entorno posible para una superficie</h2>
+        <p>Un comedor de desayunos concentra, en 90 minutos, todo lo que una superficie contract debe resistir: líquidos calientes y ácidos, grasa, golpes de carros, arrastre de vajilla y tres ciclos de limpieza con productos desinfectantes. Muchas superficies que lucen impecables en el showroom fallan exactamente ahí.</p>
+        <p>La diferencia entre materiales no es estética sino de ingeniería de capas: qué presión se usó para unir la capa decorativa al sustrato y cuánto sustrato hay debajo. De eso depende todo lo demás.</p>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Comparativa técnica frente al perfil de abuso real</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Melamina (baja presión)</th><th>HPL (alta presión)</th><th>Laminado compacto (≥10 mm)</th></tr>
+            </thead>
+            <tbody>
+<tr><td data-label="Criterio">Resistencia al calor en seco</td><td data-label="Melamina (baja presión)">~70-80°C: marca con taza directa</td><td data-label="HPL (alta presión)">~130-140°C: contacto breve sin daño</td><td data-label="Laminado compacto (≥10 mm)">~180°C: soporta fuentes directas</td></tr><tr><td data-label="Criterio">Resistencia a humedad y vapor</td><td data-label="Melamina (baja presión)">Baja: el sustrato absorbe por cantos</td><td data-label="HPL (alta presión)">Media-alta: depende del sustrato y canto</td><td data-label="Laminado compacto (≥10 mm)">Alta: núcleo compacto sin sustrato de MDF</td></tr><tr><td data-label="Criterio">Impactos y arrastres de carro</td><td data-label="Melamina (baja presión)">Raya y astilla con facilidad</td><td data-label="HPL (alta presión)">Buena resistencia superficial</td><td data-label="Laminado compacto (≥10 mm)">Excelente; absorbe impactos de servicio</td></tr><tr><td data-label="Criterio">Limpiadores desinfectantes</td><td data-label="Melamina (baja presión)">Solo neutros; fuerte la degrada</td><td data-label="HPL (alta presión)">Neutros y hospitalarios moderados</td><td data-label="Laminado compacto (≥10 mm)">Tolera grado comercial incluido clorado diluido</td></tr><tr><td data-label="Criterio">Vida útil en alto tránsito</td><td data-label="Melamina (baja presión)">2-4 años</td><td data-label="HPL (alta presión)">7-10 años</td><td data-label="Laminado compacto (≥10 mm)">12-15 años</td></tr><tr><td data-label="Criterio">Costo relativo por mesa</td><td data-label="Melamina (baja presión)">1,0x</td><td data-label="HPL (alta presión)">1,4-1,8x</td><td data-label="Laminado compacto (≥10 mm)">2,2-2,8x</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El dato que suele ignorarse: la vida útil de la melamina en alto tránsito es tan corta que su costo por año de servicio termina superando al HPL. La melamina no es un mal material — es un material mal asignado cuando se especifica para buffets.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Matriz de selección por área del hotel</h2>
+        <ol class="editorial-list">
+          <li>Buffet y línea de servicio: laminado compacto. Calor directo, humedad y golpes constantes; sin alternativa razonable.</li>
+          <li>Mesas de comedor interior: HPL contract sobre sustrato MDF MR (resistente a humedad) con canto ABS 2 mm o aluminio.</li>
+          <li>Terraza y desayuno exterior: compacto o HPL exterior con sustrato fenólico; cualquier MDF estándar ondula en una temporada de humedad.</li>
+          <li>Escritorio de guestroom: melamina de calidad o HPL fino con posavasos integrado — uso ligero donde el ahorro sí se justifica.</li>
+          <li>Bar y mesas altas: HPL con canto reforzado; el arrastre de vasos y la limpieza frecuente castigan los cantos — criterios complementarios en la guía de <a href="/recursos/mobiliario-restaurante-hotel-fb-2026/">mobiliario para restaurantes y F&B</a>.</li>
+        </ol>
+        <div style="background:#fef3c7;border:1px solid #f59e0b;padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:6px;">
+          <p style="font-size:0.95rem;line-height:1.7;color:#92400e;margin:0;"><strong>Consejo de especificación:</strong> al comparar ofertas de mesas, exija que la cotización desglose material de superficie, espesor, sustrato y tipo de canto por separado. Una mesa 'HPL' con canto de PVC fino y sustrato estándar degradará como una melamina cara — y será discusión de garantía. Si el proveedor no detalla esos cuatro puntos, aplique los criterios de <a href="/recursos/banderas-rojas-presupuesto-muebles-cotizacion/">señales de alerta en presupuestos de muebles</a>.</p>
+        </div>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Superficie y estructura: el tablero es solo la mitad de la mesa</h2>
+        <p>Una superficie excelente sobre una base de columna débil produce la misma reposición a mediano plazo. La base metálica (espesor de tubo, refuerzo de columna, tratamiento anticorrosión para exteriores) y el sistema de unión al tablero completan la especificación. El panorama completo de materiales por vida útil esperada está en la <a href="/recursos/materiales-muebles-hotel-durabilidad-2026/">guía de durabilidad de materiales para mobiliario</a>, y los tratamientos de superficie metálica que deben acompañarla, en la comparativa de <a href="/recursos/recubrimiento-polvo-vs-pintura-anodizado/">recubrimiento en polvo vs pintura</a>.</p>
+    <section class="section  article-section">
+      <div class="container article-prose--wide">
+        <h2>Verificación en recepción de mercancía</h2>
+        <p>Defina en el contrato una prueba simple de recepción: prueba de calor (taza a 90°C sobre posavasos y sin él, según zona), revisión de cantos con lupa en el 5% de las mesas y verificación de plancha de sustrato marcada como MR donde se especificó. Cinco minutos por lote que evitan discusiones de meses; el protocolo se integra al <a href="/recursos/mantenimiento-muebles-hotel-calendario-2026/">plan de mantenimiento anual</a> desde el día uno.</p>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Especificando superficies para F&B?"
+      text="Envíenos el perfil de operación (coberturas diarias y protocolo de limpieza) y le devolvemos la matriz material-espesor-canto por área."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
