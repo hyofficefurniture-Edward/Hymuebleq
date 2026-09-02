@@ -64,6 +64,10 @@ let catalogTriggers = 0;
 let forms = 0;
 const sitemapRoutes = new Set();
 const redirectRoutes = new Set();
+// Pages marked noindex (e.g. paginated pages with canonical to page 1) are
+// intentionally excluded from sitemap.xml per SEO best practice; QA must not
+// require their presence there.
+const noindexRoutes = new Set();
 
 const sitemapPath = path.join(distDir, "sitemap.xml");
 if (fileExists(sitemapPath)) {
@@ -97,6 +101,10 @@ for (const file of htmlFiles) {
   const canonicalCount = (html.match(/rel="canonical"/g) ?? []).length;
   if (canonicalCount !== 1) {
     failures.push(`${displayRoute}: expected exactly one canonical link, found ${canonicalCount}.`);
+  }
+
+  if (/<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html)) {
+    noindexRoutes.add(displayRoute);
   }
 
   if (html.includes("/hoteleria/")) {
@@ -224,6 +232,9 @@ for (const file of htmlFiles) {
   const route = `/${relative}`.replace(/\/+$/, "/");
   const sitemapRoute = route === "//" ? "/" : route;
   if (redirectRoutes.has(sitemapRoute)) {
+    continue;
+  }
+  if (noindexRoutes.has(sitemapRoute)) {
     continue;
   }
   if (sitemapRoutes.size > 0 && !sitemapRoutes.has(sitemapRoute)) {
