@@ -1,0 +1,438 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "ISO 9001 vs ISO 14001 en Fabricación de Muebles: Qué Certifica Realmente Cada Una";
+const pageDescription = "ISO 9001 vs ISO 14001 en muebles: qué certifica cada norma, qué no, cómo auditar una fábrica y verificar certificados en cinco minutos.";
+const keywords = [
+  "ISO 9001 muebles",
+  "ISO 14001 fábrica muebles",
+  "sistema gestión calidad",
+  "sistema gestión ambiental",
+  "verificar certificado ISO",
+  "auditoría fábrica muebles"
+];
+const canonicalPath = "/recursos/iso-9001-vs-iso-14001-fabricacion-muebles/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-11-img-01-certificacion-fsc.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuál es la diferencia entre ISO 9001 e ISO 14001?", answer: "ISO 9001 certifica el sistema de gestión de calidad (procedimientos, inspección, acción correctiva); ISO 14001 certifica el sistema de gestión ambiental (residuos, emisiones, químicos, cumplimiento legal). Ambos son certificados de sistema, no de producto: no garantizan que un mueble específico sea de alta calidad ni ecológico." },
+    { question: "¿ISO 9001 garantiza que el producto es de buena calidad?", answer: "No. ISO 9001 certifica que la fábrica tiene procesos de calidad documentados y que corrige no conformidades de forma sistemática. La calidad de su pedido específico depende de su especificación, su AQL y su inspección. Use ISO 9001 como señal de disciplina de proceso, no como sustituto de las pruebas de producto." },
+    { question: "¿ISO 14001 significa que la madera es sostenible?", answer: "No. ISO 14001 certifica la gestión ambiental de la fábrica. La madera de bosques certificados se documenta con FSC; las bajas emisiones del acabado, con GREENGUARD. Si su requisito es sostenibilidad de materiales, pida esos certificados de producto específicos además del ISO 14001." },
+    { question: "¿Cómo verifico que un certificado ISO es real?", answer: "Haga cinco preguntas: (1) la línea de alcance y dirección del sitio, (2) el organismo certificador y su acreditación IAF, (3) la fecha de la última auditoría de vigilancia y sus hallazgos, (4) el registro de acciones correctivas de los últimos dos años, y (5) qué líneas de producto cubre el alcance. Verifique el organismo en el registro de su acreditador nacional." },
+    { question: "¿ISO 9001 e ISO 14001 tienen que renovarse?", answer: "Sí. Ambos certificados siguen un ciclo de 3 años con auditorías anuales de vigilancia. Un certificado \"vigente\" debe mostrar la fecha de la última auditoría de vigilancia; si lleva más de un año sin auditoría, el sistema puede estar suspendido. Pida la fecha y verifíquela." },
+    { question: "¿Qué certificados tiene Hongye Furniture Group?", answer: "Hongye mantiene ISO 9001 (calidad) e ISO 14001 (ambiental) con alcance que cubre sus líneas de muebles contract, más certificados de producto FSC, GREENGUARD Gold, BIFMA y CE según la línea. Toda la documentación — incluidas las líneas de alcance — se entrega con la cotización y el expediente del proyecto." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Certificación · Fabricación &middot; {publicationDateLabel}</p>
+          <h1>ISO 9001 vs ISO 14001 en Fabricación de Muebles: Qué Certifica Realmente Cada Una</h1>
+          <p>ISO 9001 (gestión de calidad) e ISO 14001 (gestión ambiental) son certificados de sistema de gestión, no de producto. Certifican que la fábrica tiene procesos documentados para gestionar la calidad o el impacto ambiental — no que cada mueble que produce sea perfecto o ecológico. La confusión entre "sistema certificado" y "producto certificado" es la fuente de los errores de compra más caros.</p>
+          <p>Un comprador que pide "fábrica con ISO" sin distinguir cuál, o que asume que ISO 14001 implica madera certificada FSC, está comprando con un supuesto falso. Esta guía desglosa qué prueba cada norma, qué no prueba, cómo se audita una fábrica y las cinco preguntas que revelan si un certificado es real en menos de cinco minutos.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-11-img-01-certificacion-fsc.webp" alt="Certificados de sistema de gestión ISO y documentación de calidad en una fábrica de muebles" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué la confusión cuesta dinero al comprador</h2>
+        <p>La confusión toma tres formas habituales. Primera: asumir que ISO 9001 = producto de calidad. En realidad certifica que la fábrica documenta procedimientos, rastrea no conformidades y corrige problemas — no que su lote específico pase una prueba de rendimiento. Segunda: asumir que ISO 14001 = producto ecológico. Certifica la gestión ambiental de la fábrica (residuos, emisiones, químicos), no que la madera venga de bosques certificados (eso es FSC) ni que el acabado tenga bajas emisiones (eso es GREENGUARD). Tercera: no verificar el alcance del certificado. Un certificado puede cubrir solo una línea de producto o un sitio, no la fábrica que le está vendiendo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>ISO 9001: el sistema de gestión de calidad</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Lo que ISO 9001 demuestra</th><th>Lo que NO demuestra</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Lo que ISO 9001 demuestra">La fábrica tiene procedimientos de calidad documentados</td><td data-label="Lo que NO demuestra">Que su producto específico pase cualquier prueba de rendimiento</td></tr>
+              <tr><td data-label="Lo que ISO 9001 demuestra">Las no conformidades se rastrean y corrigen</td><td data-label="Lo que NO demuestra">Que cada lote salga libre de defectos</td></tr>
+              <tr><td data-label="Lo que ISO 9001 demuestra">Existen puntos de inspección en el proceso</td><td data-label="Lo que NO demuestra">Que el estándar de inspección coincida con su requisito AQL</td></tr>
+              <tr><td data-label="Lo que ISO 9001 demuestra">El personal está capacitado para seguir procedimientos</td><td data-label="Lo que NO demuestra">Que la fábrica nunca haya enviado un contenedor defectuoso</td></tr>
+              <tr><td data-label="Lo que ISO 9001 demuestra">Existen registros de acciones correctivas</td><td data-label="Lo que NO demuestra">Que el certificado cubra el sitio del que usted compra</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El valor real del ISO 9001 para un comprador es la disciplina del proceso: una fábrica con ISO 9001 vigente tiene registros de inspección, acciones correctivas y trazabilidad. Eso hace que sus reclamos de calidad sean manejables y que los problemas se corrijan de forma sistemática. Pero la certificación no sustituye a la especificación de producto ni a las pruebas: usted aún debe definir su AQL, sus pruebas de rendimiento y su inspección previa al embarque.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>ISO 14001: el sistema de gestión ambiental</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Lo que ISO 14001 demuestra</th><th>Lo que NO demuestra</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Lo que ISO 14001 demuestra">La fábrica gestiona residuos y emisiones legalmente</td><td data-label="Lo que NO demuestra">Que la madera de su pedido venga de bosque certificado (eso es FSC)</td></tr>
+              <tr><td data-label="Lo que ISO 14001 demuestra">El manejo de químicos y solventes está controlado</td><td data-label="Lo que NO demuestra">Que el acabado de sus muebles tenga bajas emisiones (eso es GREENGUARD)</td></tr>
+              <tr><td data-label="Lo que ISO 14001 demuestra">Se monitorea el cumplimiento ambiental legal</td><td data-label="Lo que NO demuestra">Que la fábrica sea "carbono neutral"</td></tr>
+              <tr><td data-label="Lo que ISO 14001 demuestra">Existen objetivos ambientales y auditorías</td><td data-label="Lo que NO demuestra">Que el producto en sí sea reciclable</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El ISO 14001 demuestra que la fábrica gestiona su impacto ambiental de forma sistemática: control de residuos, manejo de químicos, cumplimiento legal. Para un comprador hotelero o institucional con políticas de sostenibilidad, es una señal de que el proveedor trata el tema ambiental con seriedad. Pero si su requisito es madera certificada, acabados de bajas emisiones o materiales reciclados, debe pedir los certificados de producto específicos: FSC para la madera, GREENGUARD para las emisiones, y la documentación de material reciclado.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>ISO 9001 vs ISO 14001, lado a lado</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Pregunta</th><th>ISO 9001</th><th>ISO 14001</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Pregunta">Nombre completo</td><td data-label="ISO 9001">Sistemas de gestión de calidad — requisitos</td><td data-label="ISO 14001">Sistemas de gestión ambiental — requisitos</td></tr>
+              <tr><td data-label="Pregunta">Edición vigente</td><td data-label="ISO 9001">ISO 9001:2015</td><td data-label="ISO 14001">ISO 14001:2015</td></tr>
+              <tr><td data-label="Pregunta">Qué gestiona</td><td data-label="ISO 9001">Procesos de calidad</td><td data-label="ISO 14001">Aspectos ambientales</td></tr>
+              <tr><td data-label="Pregunta">Enfoque de auditoría</td><td data-label="ISO 9001">Procedimientos, inspección, acción correctiva</td><td data-label="ISO 14001">Residuos, emisiones, químicos, cumplimiento legal</td></tr>
+              <tr><td data-label="Pregunta">Alcance del certificado</td><td data-label="ISO 9001">Alcance específico de producto/proceso en un sitio</td><td data-label="ISO 14001">Operaciones del sitio</td></tr>
+              <tr><td data-label="Pregunta">Validez</td><td data-label="ISO 9001">Ciclo de 3 años con auditorías anuales de vigilancia</td><td data-label="ISO 14001">Ciclo de 3 años con auditorías anuales de vigilancia</td></tr>
+              <tr><td data-label="Pregunta">Pregunta del comprador que responde</td><td data-label="ISO 9001">"¿Seguirán mi especificación y corregirán problemas?"</td><td data-label="ISO 14001">"¿Gestionan bien su impacto ambiental?"</td></tr>
+              <tr><td data-label="Pregunta">Pregunta que NO responde</td><td data-label="ISO 9001">"¿El producto es de alta calidad?"</td><td data-label="ISO 14001">"¿El producto es ecológico?"</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo funciona una auditoría de fábrica en la práctica</h2>
+        <p>Una auditoría de sistema (la que mantiene vigente el certificado) revisa procesos y registros: procedimientos documentados, registros de no conformidades, acciones correctivas, capacitación del personal, calibración de equipos de inspección y resultados de auditorías internas. El auditor no prueba sus muebles; verifica que la fábrica tenga un sistema que funcione.</p>
+        <p>Una auditoría de producto (la que usted debe hacer como comprador) es distinta: verifica que su especificación se cumpla — materiales, dimensiones, acabados, empaque — mediante inspección en línea y previa al embarque con su AQL. Las dos auditorías son complementarias: la de sistema le dice si la fábrica es disciplinada; la de producto le dice si su pedido está bien. Una fábrica con ISO 9001 pero sin su AQL especificado puede enviarle un contenedor que cumple su propio estándar interno y no el suyo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Verificar las afirmaciones ISO de un proveedor en cinco minutos</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Pregunta</th><th>Qué revela</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Pregunta">"¿Podemos ver la línea de alcance y la dirección del sitio?"</td><td data-label="Qué revela">Si el certificado cubre realmente este sitio y estos productos</td></tr>
+              <tr><td data-label="Pregunta">"¿Quién es el organismo certificador y está acreditado IAF?"</td><td data-label="Qué revela">Si el certificado tiene reconocimiento internacional</td></tr>
+              <tr><td data-label="Pregunta">"¿Cuándo fue la última auditoría de vigilancia y qué hallazgos tuvo?"</td><td data-label="Qué revela">Si el sistema está al día y si los hallazgos fueron graves</td></tr>
+              <tr><td data-label="Pregunta">"¿Podemos ver el registro de acciones correctivas de los últimos dos años?"</td><td data-label="Qué revela">Si el sistema realmente corrige problemas o solo archiva papeles</td></tr>
+              <tr><td data-label="Pregunta">"¿Qué líneas de producto están dentro del alcance?"</td><td data-label="Qué revela">Si su categoría de producto está cubierta</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Estas cinco preguntas convierten una afirmación comercial ("tenemos ISO") en una verificación documental. La línea de alcance y la dirección del sitio son las dos más reveladoras: muchos certificados cubren un sitio o una línea distinta de la que le está vendiendo. Verifique también que el organismo certificador esté acreditado por un miembro de IAF (International Accreditation Forum); un certificado de un organismo sin acreditación IAF tiene poco valor de mercado.</p>
+        <p>Hongye Furniture Group (fundada en 1996; 300,000+ m²; 1,000+ trabajadores) mantiene ISO 9001 e ISO 14001 con alcance que cubre sus líneas de muebles contract, y complementa con certificados de producto FSC, GREENGUARD Gold, BIFMA y CE. En proyectos corporativos — como el programa de mobiliario de oficina que entregamos en Arabia Saudita — el equipo evaluador auditó la línea de alcance de nuestros certificados contra el registro acreditado IAF antes de la orden; la documentación de producto viajó con el expediente de entrega.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Verifica certificados ISO en sus compras de muebles?"
+      text="Solicite las líneas de alcance de nuestros certificados ISO 9001 e ISO 14001 junto con su cotización, y los certificados de producto FSC, GREENGUARD Gold, BIFMA y CE de las líneas de su interés."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

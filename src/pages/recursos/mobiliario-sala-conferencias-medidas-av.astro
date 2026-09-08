@@ -1,0 +1,466 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario de Sala de Conferencias: Medidas, Distribución AV y Guía de Especificación";
+const pageDescription = "Mobiliario de sala de conferencias: dimensiones de mesa por asientos, distribución AV, construcción, sillas BIFMA y costos de una sala de 10 personas.";
+const keywords = [
+  "mobiliario sala conferencias",
+  "medidas mesa conferencias",
+  "mesa sala juntas dimensiones",
+  "sillas conferencia BIFMA",
+  "sala reuniones híbrida AV",
+  "costo amueblar sala juntas"
+];
+const canonicalPath = "/recursos/mobiliario-sala-conferencias-medidas-av/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-02-oficina-ergonomica.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué tamaño de mesa necesito para 10 personas en una sala de conferencias?", answer: "Para 10 personas en sala de juntas, una mesa de 3.6-4.0 m × 1.2-1.4 m (70 cm de borde por persona). Si usa laptops o módulos de energía, sume 10 cm por persona. En distribución en U, 3.6 m × 0.6 m por lado. Deje al menos 1.2 m libres frente a la pared de la pantalla." },
+    { question: "¿Las sillas de conferencia y las de trabajo son lo mismo?", answer: "No exactamente. Las sillas de conferencia (respaldo alto) priorizan la imagen y el soporte para sesiones de 1-3 horas; las de trabajo (respaldo medio) están optimizadas para 8 horas en escritorio. Ambas deben cumplir BIFMA X5.1. Para salas de juntas de clientes elija respaldo alto; para salas de formación, apilables con enganche." },
+    { question: "¿Cuál es la mejor superficie de mesa para una sala de uso diario?", answer: "HPL/laminado: resistente a químicos de limpieza, rayado y uso frecuente, con buen comportamiento frente a cámara. MDF chapado para imagen ejecutiva (reparable); piedra sinterizada para premium de alta durabilidad. Evite superficies muy brillantes o vidrio en salas híbridas por los reflejos." },
+    { question: "¿Cómo hago que una sala de conferencias funcione bien para llamadas híbridas?", answer: "Use distribución en U o V para que nadie quede de espaldas a la cámara, deje el centro abierto para el equipo, añada paneles acústicos en una pared para controlar el eco, integre módulos de energía en la mesa y verifique que la mesa no bloquee el ángulo de cámara. La acústica y la distribución importan más que la pantalla." },
+    { question: "¿Cuánto cuesta el mobiliario de una sala de conferencias?", answer: "Para 10 personas: $4,500-$9,600 en gama media y $8,700-$18,000 en premium (mesa, sillas, credenza y paneles acústicos), excluyendo electrónica AV ($3,000-$20,000 según el nivel). Los tejidos GREENGUARD añaden ~10% a las sillas." },
+    { question: "¿Puede Hongye suministrar mobiliario de conferencias para un proyecto en el extranjero?", answer: "Sí. Hongye Furniture Group (fundada en 1996; 300,000+ m²; 1,000+ trabajadores) fabrica mesas de junta, sillas de conferencia certificadas BIFMA, credenzas y paneles acústicos para proyectos en más de 50 países, incluida la redistribución en V de sedes corporativas con reuniones híbridas. Solicite una cotización con planificación de distribución incluida." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Oficina · Salas de reunión &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario de Sala de Conferencias: Medidas, Distribución AV y Guía de Especificación</h1>
+          <p>El mobiliario de sala de conferencias cubre mesas de reunión, sillas, credenzas y paneles acústicos de salas de juntas, salas de reunión y salas de formación. Se especifica distinto al mobiliario de oficina abierta porque la sala es un instrumento de decisión: la disposición de la mesa determina quién ve a quién, quién ve la pantalla y quién aparece bien en cámara durante las reuniones híbridas.</p>
+          <p>Una mesa de conferencias bien especificada se diseña de afuera hacia adentro: primero el tipo de reunión (decisión formal, formación, videollamada híbrida), luego la distribución, luego las dimensiones por asiento, luego la construcción y la superficie, y al final las sillas y la integración AV. Esta guía sigue ese orden y cierra con benchmarks de costo para una sala de 10 personas.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-02-oficina-ergonomica.webp" alt="Sala de conferencias corporativa con mesa de reuniones, sillas ergonómicas y pantalla" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué el mobiliario de conferencias se sigue especificando mal</h2>
+        <p>Tres errores se repiten en proyectos de oficina. Primero, se compra una mesa de junta grande porque "da estatus" sin verificar si la sala se usa para reuniones híbridas — donde dos tercios de los asistentes de espaldas a la cámara son un problema. Segundo, se dimensiona la mesa por el número de sillas sin contar el espacio de la pantalla, la credenza o los módulos de energía, y la sala termina sin espacio para el equipamiento AV. Tercero, se elige una superficie decorativa (vidrio, madera oscura) que refleja la luz y dificulta la lectura en cámara, cuando la sala se usa a diario. La especificación correcta empieza por el uso real de la sala, no por la estética.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 1: decidir la distribución antes que la mesa</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Distribución</th><th>Ideal para</th><th>Capacidad típica</th><th>Implicación de mobiliario</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Distribución">Sala de juntas (mesa única)</td><td data-label="Ideal para">Decisiones formales, presentaciones a clientes</td><td data-label="Capacidad típica">6-14</td><td data-label="Implicación de mobiliario">Mesa central grande; máxima imagen de estatus</td></tr>
+              <tr><td data-label="Distribución">Forma de U / V</td><td data-label="Ideal para">Reuniones híbridas, formación, revisión</td><td data-label="Capacidad típica">8-20</td><td data-label="Implicación de mobiliario">Mesas perimetrales, centro abierto para la cámara</td></tr>
+              <tr><td data-label="Distribución">Aula / teatro</td><td data-label="Ideal para">Town halls, formación de producto</td><td data-label="Capacidad típica">20-60</td><td data-label="Implicación de mobiliario">Mesas de formación durables, sillas apilables</td></tr>
+              <tr><td data-label="Distribución">Huddle / focus</td><td data-label="Ideal para">2-6 personas, reuniones rápidas</td><td data-label="Capacidad típica">2-6</td><td data-label="Implicación de mobiliario">Mesas pequeñas, asientos lounge o de trabajo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La distribución en U o en V es la respuesta estándar a la reunión híbrida: los asistentes se sientan en el perímetro mirando hacia el centro donde está la cámara, y nadie queda de espaldas. Una sala de juntas tradicional con mesa única sigue siendo correcta para decisiones formales sin participantes remotos — pero si la sala tiene cámara, la U/V suele ser la opción más segura. Decida esto primero; la mesa se adapta a la distribución.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 2: dimensiones de mesa por número de asientos</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Asientos</th><th>Mesa sala de juntas (ancho × fondo)</th><th>Mesa en U (ancho × fondo por lado)</th><th>Nota por persona</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Asientos">4</td><td data-label="Mesa sala de juntas (ancho × fondo)">1.8-2.2 m × 1.0-1.1 m</td><td data-label="Mesa en U (ancho × fondo por lado)">1.6 m × 0.6 m por lado</td><td data-label="Nota por persona">60 cm de borde, solo para conversación</td></tr>
+              <tr><td data-label="Asientos">6</td><td data-label="Mesa sala de juntas (ancho × fondo)">2.4-2.8 m × 1.1-1.2 m</td><td data-label="Mesa en U (ancho × fondo por lado)">2.4 m × 0.6 m por lado</td><td data-label="Nota por persona">65 cm/asiento; +10 cm si usan laptop</td></tr>
+              <tr><td data-label="Asientos">8</td><td data-label="Mesa sala de juntas (ancho × fondo)">3.0-3.2 m × 1.2 m</td><td data-label="Mesa en U (ancho × fondo por lado)">3.0 m × 0.6 m por lado</td><td data-label="Nota por persona">68 cm/asiento; módulos de energía +10 cm</td></tr>
+              <tr><td data-label="Asientos">10</td><td data-label="Mesa sala de juntas (ancho × fondo)">3.6-4.0 m × 1.2-1.4 m</td><td data-label="Mesa en U (ancho × fondo por lado)">3.6 m × 0.6 m por lado</td><td data-label="Nota por persona">70 cm/asiento; dejar 1.2 m para la pantalla</td></tr>
+              <tr><td data-label="Asientos">12-14</td><td data-label="Mesa sala de juntas (ancho × fondo)">4.2-4.8 m × 1.4-1.5 m</td><td data-label="Mesa en U (ancho × fondo por lado)">Dos mesas de 3.6 m en V</td><td data-label="Nota por persona">Considerar doble pantalla; 75 cm/asiento</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La regla práctica: 60-75 cm de borde de mesa por persona según la actividad (conversación vs. laptop), y al menos 1.2 m libres frente a la pared de la pantalla. Para salas híbridas, sume el espacio de la cámara en el centro de la U y verifique que la mesa no bloquee el ángulo de la cámara. Una mesa sobredimensionada es tan disfuncional como una subdimensionada: los extremos quedan fuera de la conversación y de la cámara.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 3: construcción y superficie de la mesa</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Superficie</th><th>Durabilidad</th><th>Imagen</th><th>Mejor rol en sala</th><th>Rango de precio (10 asientos)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Superficie">MDF chapado (roble/nogal)</td><td data-label="Durabilidad">Buena, reparable</td><td data-label="Imagen">Ejecutiva</td><td data-label="Mejor rol en sala">Sala de juntas, salas de clientes</td><td data-label="Rango de precio (10 asientos)">$1,800-$4,500</td></tr>
+              <tr><td data-label="Superficie">HPL / laminado</td><td data-label="Durabilidad">Excelente, resistente a químicos</td><td data-label="Imagen">Corporativa</td><td data-label="Mejor rol en sala">En U, formación, uso diario</td><td data-label="Rango de precio (10 asientos)">$1,200-$2,800</td></tr>
+              <tr><td data-label="Superficie">Piedra sinterizada / porcelánico</td><td data-label="Durabilidad">Excelente, rayado + calor</td><td data-label="Imagen">Premium</td><td data-label="Mejor rol en sala">Sala de juntas ejecutiva</td><td data-label="Rango de precio (10 asientos)">$4,000-$9,000</td></tr>
+              <tr><td data-label="Superficie">Cubierta de vidrio</td><td data-label="Durabilidad">Moderada (rayado, huellas)</td><td data-label="Imagen">Moderna</td><td data-label="Mejor rol en sala">Huddle, reunión pequeña</td><td data-label="Rango de precio (10 asientos)">$1,400-$3,200</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para una sala de uso diario, el HPL o laminado es la elección más práctica: resiste químicos de limpieza, rayado y el desgaste de reuniones frecuentes, con buen comportamiento frente a la cámara. El MDF chapado en roble o nogal ofrece la imagen ejecutiva clásica y es reparable. La piedra sinterizada es la opción premium de alta durabilidad para salas de juntas ejecutivas. Evite superficies muy brillantes o vidrio en salas híbridas: los reflejos dificultan la lectura y la imagen en cámara.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 4: ergonomía y durabilidad de las sillas</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Clase de silla</th><th>Especificación típica</th><th>BIFMA X5.1</th><th>Rango de precio</th><th>Uso</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Clase de silla">De trabajo / respaldo medio</td><td data-label="Especificación típica">Altura neumática, inclinación sincro, brazos 3D</td><td data-label="BIFMA X5.1">Certificada</td><td data-label="Rango de precio">$160-$350</td><td data-label="Uso">Reunión diaria + escritorio</td></tr>
+              <tr><td data-label="Clase de silla">De conferencia / respaldo alto</td><td data-label="Especificación típica">Altura + inclinación, brazos fijos o 4D, piel o malla</td><td data-label="BIFMA X5.1">Certificada</td><td data-label="Rango de precio">$220-$500</td><td data-label="Uso">Sala de juntas, clientes</td></tr>
+              <tr><td data-label="Clase de silla">De formación apilable</td><td data-label="Especificación típica">Base de trineo o cuatro patas, enganche, bandeja opcional</td><td data-label="BIFMA X5.1">Certificada</td><td data-label="Rango de precio">$60-$180</td><td data-label="Uso">Aula, town hall</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las sillas de conferencia se usan 1-3 horas seguidas, varias veces al día — suficiente para que la ergonomía importe, aunque menos que una silla de escritorio de 8 horas. Exija certificación BIFMA X5.1 (resistencia y durabilidad) y elija respaldo alto para salas de juntas donde la imagen y el soporte lumbar importan. Para salas de formación, las sillas apilables con enganche optimizan el almacenaje. Considere tejidos GREENGUARD si su proyecto tiene política de bajas emisiones.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 5: integración AV, acústica y cables</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Solución de cables</th><th>Cuándo usarla</th><th>Costo por mesa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Solución de cables">Módulo de energía/datos emergente</td><td data-label="Cuándo usarla">Mesas de junta y en U</td><td data-label="Costo por mesa">$150-$350 por módulo</td></tr>
+              <tr><td data-label="Solución de cables">Canaleta central + pasacables</td><td data-label="Cuándo usarla">Mesas con alimentación AV fija</td><td data-label="Costo por mesa">$80-$200</td></tr>
+              <tr><td data-label="Solución de cables">Cajas de piso</td><td data-label="Cuándo usarla">Mesas independientes sin canaleta</td><td data-label="Costo por mesa">$200-$500 por caja</td></tr>
+              <tr><td data-label="Solución de cables">Presentación inalámbrica + batería</td><td data-label="Cuándo usarla">Salas huddle, mínima cableado</td><td data-label="Costo por mesa">$400-$1,200 (AV)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La integración AV se planifica con la mesa, no después. Decida si los módulos de energía van en la mesa (emergentes para junta/U), en el piso (para mesas independientes) o si la sala usa presentación inalámbrica (menos cableado, ideal para huddle). Los paneles acústicos en una pared controlan el eco y mejoran la inteligibilidad en llamadas híbridas — el problema acústico nº1 en salas de conferencias con superficies duras.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Benchmarks de costo para una sala de 10 personas</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Línea</th><th>Gama media</th><th>Premium</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Línea">Mesa de 10 asientos HPL o chapada</td><td data-label="Gama media">$1,500-$2,800</td><td data-label="Premium">$3,000-$6,000</td><td data-label="Notas">Cubierta de piedra sinterizada en premium</td></tr>
+              <tr><td data-label="Línea">10 sillas de conferencia</td><td data-label="Gama media">$1,600-$3,500</td><td data-label="Premium">$2,200-$5,000</td><td data-label="Notas">Tejidos GREENGUARD añaden ~10%</td></tr>
+              <tr><td data-label="Línea">Credenza / unidad media</td><td data-label="Gama media">$800-$1,800</td><td data-label="Premium">$2,000-$4,000</td><td data-label="Notas">Integración de rack AV añade mano de obra</td></tr>
+              <tr><td data-label="Línea">Paneles acústicos (1 pared)</td><td data-label="Gama media">$600-$1,500</td><td data-label="Premium">$1,500-$3,000</td><td data-label="Notas">Por 10 m² de cobertura</td></tr>
+              <tr><td data-label="Línea">**Subtotal mobiliario**</td><td data-label="Gama media">**$4,500-$9,600**</td><td data-label="Premium">**$8,700-$18,000**</td><td data-label="Notas">Excluye electrónica AV</td></tr>
+              <tr><td data-label="Línea">AV (pantalla, codec, micrófonos, cámara)</td><td data-label="Gama media">$3,000-$8,000</td><td data-label="Premium">$8,000-$20,000</td><td data-label="Notas">Suele licitarse por separado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El mobiliario es 30-50% del presupuesto de una sala de conferencias; el AV suele licitarse aparte. En proyectos corporativos — como la sede que amueblamos en Riad con sala de juntas ejecutiva y 12 salas de reunión — la redistribución en V con mesas chapadas, sillas de respaldo alto y paneles acústicos resolvió el problema de las reuniones híbridas con inversores remotos sin rehacer el AV.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Equipa una sala de conferencias o varias salas de reunión?"
+      text="Solicite una cotización con planificación de distribución incluida: le asesoramos sobre medidas, superficies, sillas BIFMA e integración AV para salas híbridas de alto rendimiento."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

@@ -1,0 +1,457 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario Preescolar y Kindergarten: Medidas por Edad, Zonas de Aprendizaje y Guía de Especificación";
+const pageDescription = "Mobiliario preescolar y kindergarten: medidas de mesa y silla por edad, zonas de aprendizaje, seguridad para menores de 7 y benchmarks de presupuesto.";
+const keywords = [
+  "mobiliario preescolar",
+  "mobiliario kindergarten",
+  "medidas mesa silla niños",
+  "zonas aprendizaje aula infantil",
+  "muebles educación infantil seguridad",
+  "especificación mobiliario guardería"
+];
+const canonicalPath = "/recursos/mobiliario-preescolar-kindergarten-medidas/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué altura de mesa y silla necesita un niño de 4 años?", answer: "Para preescolar (4-5 años, 105-120 cm de altura), la silla debe tener 30-34 cm de asiento y la mesa 52-56 cm. Para kindergarten (5-6 años, 110-125 cm), asiento de 32-36 cm y mesa de 54-60 cm. Mida al grupo real: use el percentil 5-95 y asigne por zona, no una talla única para todo el aula." },
+    { question: "¿Qué es la EN 1729 y aplica a preescolar?", answer: "La EN 1729-1 define alturas de asiento y mesa para mobiliario educativo, con bandas que empiezan a aplicar alrededor de la talla 1-2 (edad escolar temprana). Para menores de 4 años use la tabla por edad del fabricante y confirme con la distribución real de alturas; la EN 1729 es la referencia para el extremo mayor del rango preescolar (5-6 años)." },
+    { question: "¿Qué mobiliario necesita un aula de kindergarten?", answer: "Un aula de kindergarten bien planificada combina zonas: mesas de 4-6 con sillas para trabajo y merienda, estanterías bajas accesibles para juego en suelo, un rincón de lectura con asientos mullidos, cubbies individuales para la transición, y superficies de arte lavables. El mobiliario se asigna por zona, no uniforme para todo el aula." },
+    { question: "¿Qué certificaciones de seguridad debo pedir para menores de 7 años?", answer: "Pida: emisiones bajas (GREENGUARD Gold o equivalente), estabilidad antivuelco con anclaje para unidades de más de 60 cm, esquinas redondeadas y sin puntos de pellizco, pinturas sin plomo ni metales pesados, y cumplimiento de normas locales de seguridad de mobiliario infantil. Solicite los certificados con la cotización, no después." },
+    { question: "¿Cuánto cuesta amueblar un aula de preescolar?", answer: "Un rango realista es $2,800-$7,700 por aula (mesas, sillas, estanterías, cubbies y rincón de lectura), excluyendo alfombras y equipamiento de juego. Los acabados certificados y materiales de grado contract añaden 10-20% al subtotal pero extienden la vida útil a 8-12 años, reduciendo el costo por año de uso 30-50%." },
+    { question: "¿Qué materiales duran más en un aula de preescolar?", answer: "Contrachapado de abedul con cantos sellados (8-12 años) para mesas y estanterías; polipropileno para sillas apilables (lavables, 8-10 años); compacto laminado para zonas de arte o humedad (10-12 años). Evite aglomerado pintado: falla en 2-3 años por daño de cantos y absorción de humedad." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Educación · Preescolar &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario Preescolar y Kindergarten: Medidas por Edad, Zonas de Aprendizaje y Guía de Especificación</h1>
+          <p>El mobiliario de preescolar y kindergarten cubre mesas, sillas, almacenaje, rincones de lectura y zonas de juego para niños de aproximadamente 2 a 6 años. Se diferencia del mobiliario escolar de grados superiores en tres aspectos: las medidas se fijan por banda de edad (no por talla única), las zonas de aprendizaje definen qué mueble va dónde (no un aula uniforme), y la seguridad para menores de 7 años exige estándares de vuelco, emisiones y esquinas que no aplican igual en primaria.</p>
+          <p>Comprar mobiliario de preescolar "una talla para todos" produce niños incómodos, zonas de aprendizaje mal servidas y reposiciones prematuras. Esta guía desglosa las medidas por edad, qué necesita cada zona de aprendizaje, los materiales que sobreviven la vida infantil y los benchmarks de presupuesto por aula.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp" alt="Aula de preescolar con mesas y sillas de baja altura, estanterías y zonas de aprendizaje" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>La respuesta corta para compradores escolares</h2>
+        <p>Especifique el mobiliario de preescolar por bandas de edad y por zona, no por una talla única. Mida la mesa y la silla al percentil 5-95 del grupo que las usará, y asigne los muebles por zona de aprendizaje — arte, juego en suelo, merienda, lectura — porque cada zona tiene exigencias distintas de altura, superficie y durabilidad. Para menores de 7 años, priorice estabilidad antivuelco, esquinas redondeadas, emisiones bajas (GREENGUARD) y materiales lavables.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Medidas por edad: los números que importan</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Banda de edad</th><th>Rango de altura típico</th><th>Altura de asiento</th><th>Altura de mesa</th><th>Qué significa para la especificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Banda de edad">2-3 años (toddler)</td><td data-label="Rango de altura típico">85-100 cm</td><td data-label="Altura de asiento">22-26 cm</td><td data-label="Altura de mesa">40-46 cm</td><td data-label="Qué significa para la especificación">Domina el juego a nivel de suelo; mesas bajas para arte y merienda</td></tr>
+              <tr><td data-label="Banda de edad">3-4 años (nursery)</td><td data-label="Rango de altura típico">95-110 cm</td><td data-label="Altura de asiento">26-30 cm</td><td data-label="Altura de mesa">46-52 cm</td><td data-label="Qué significa para la especificación">Primeras sillas con respaldo; mesas de grupo de 4-6</td></tr>
+              <tr><td data-label="Banda de edad">4-5 años (preescolar)</td><td data-label="Rango de altura típico">105-120 cm</td><td data-label="Altura de asiento">30-34 cm</td><td data-label="Altura de mesa">52-56 cm</td><td data-label="Qué significa para la especificación">Comienza el trabajo mesa-silla; preparación para escritura</td></tr>
+              <tr><td data-label="Banda de edad">5-6 años (kindergarten)</td><td data-label="Rango de altura típico">110-125 cm</td><td data-label="Altura de asiento">32-36 cm</td><td data-label="Altura de mesa">54-60 cm</td><td data-label="Qué significa para la especificación">Cerca de la banda 3-4 de EN 1729; transición a mobiliario escolar</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La EN 1729-1 define alturas de asiento y mesa para entornos educativos y es la referencia para el extremo mayor de este rango. Para menores de 4 años, donde las bandas de EN 1729 empiezan a aplicar alrededor de la talla 1-2, use la tabla por edad y confirme con la tabla de medidas del fabricante. Hongye publica una tabla de medidas de preescolar con cada cotización para que el mobiliario de cada zona se verifique contra la distribución real de alturas de los niños.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Zonas de aprendizaje y qué necesita cada una</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona</th><th>Actividad</th><th>Mobiliario clave</th><th>Requisito especial</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona">Juego en suelo</td><td data-label="Actividad">Bloques, alfombra, juego simbólico</td><td data-label="Mobiliario clave">Estanterías bajas accesibles, alfombra, cojines</td><td data-label="Requisito especial">Almacenaje a altura de alcance del niño; sin vuelco</td></tr>
+              <tr><td data-label="Zona">Arte y manualidades</td><td data-label="Actividad">Dibujo, pintura, modelado</td><td data-label="Mobiliario clave">Mesas bajas lavables, delantales, secado</td><td data-label="Requisito especial">Superficie lavable; protección de piso</td></tr>
+              <tr><td data-label="Zona">Merienda / comida</td><td data-label="Actividad">Comer en grupo, habilidades sociales</td><td data-label="Mobiliario clave">Mesas de 4-6, sillas con respaldo</td><td data-label="Requisito especial">Superficie de grado alimenticio o fácil de limpiar</td></tr>
+              <tr><td data-label="Zona">Lectura / rincón tranquilo</td><td data-label="Actividad">Cuentos, descanso</td><td data-label="Mobiliario clave">Estantería baja, asientos mullidos, alfombra</td><td data-label="Requisito especial">Zona acogedora; iluminación suave</td></tr>
+              <tr><td data-label="Zona">Transición / llegada</td><td data-label="Actividad">Guardado de abrigos y mochilas</td><td data-label="Mobiliario clave">Cubbies, bancos</td><td data-label="Requisito especial">Cubbies individuales a altura del niño</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Planificar por zonas — en lugar de llenar el aula con mesas y sillas idénticas — reconoce que un niño de 4 años alterna entre el suelo, la mesa y los cubbies docenas de veces al día. Cada zona con su mobiliario correcto reduce el tiempo de transición, apoya la autonomía (el niño alcanza sus cosas sin ayuda) y mejora el comportamiento del grupo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Seguridad, materiales y emisiones para menores de 7 años</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Riesgo</th><th>Estándar / medida</th><th>Qué especificar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Riesgo">Vuelco de almacenaje</td><td data-label="Estándar / medida">Estabilidad y anclaje antivuelco</td><td data-label="Qué especificar">Unidades de más de 60 cm ancladas a pared o con base ancha estable</td></tr>
+              <tr><td data-label="Riesgo">Esquinas y bordes</td><td data-label="Estándar / medida">Esquinas redondeadas</td><td data-label="Qué especificar">Radios de esquina suaves en mesas, estanterías y cubbies</td></tr>
+              <tr><td data-label="Riesgo">Emisiones de acabado</td><td data-label="Estándar / medida">GREENGUARD Gold / bajas emisiones</td><td data-label="Qué especificar">Acabados al agua con certificación de bajas emisiones</td></tr>
+              <tr><td data-label="Riesgo">Atrapamiento de dedos</td><td data-label="Estándar / medida">Holguras de puertas y bisagras</td><td data-label="Qué especificar">Bisagras con protección o sin puntos de pellizco</td></tr>
+              <tr><td data-label="Riesgo">Superficies tóxicas</td><td data-label="Estándar / medida">Pinturas sin plomo, materiales seguros</td><td data-label="Qué especificar">Pinturas certificadas sin metales pesados</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para menores de 7 años, la seguridad no es una lista de opciones: es un estándar. Las unidades de almacenaje altas deben anclarse (una estantería sin anclar es un riesgo de vuelco evitable), las esquinas deben ser redondeadas, y los acabados deben tener emisiones bajas porque los niños pasan horas cerca de las superficies. Especifique GREENGUARD Gold o un estándar equivalente de emisiones y pida el certificado con la cotización.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales que sobreviven la vida infantil</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material</th><th>Índice de coste</th><th>Vida preescolar</th><th>Mejor uso</th><th>Precauciones</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Material">Contrachapado de abedul</td><td data-label="Índice de coste">1.0×</td><td data-label="Vida preescolar">8-12 años</td><td data-label="Mejor uso">Mesas, sillas, estanterías</td><td data-label="Precauciones">Cantos sellados; resiste limpieza frecuente</td></tr>
+              <tr><td data-label="Material">MDF melaminizado</td><td data-label="Índice de coste">1.2×</td><td data-label="Vida preescolar">5-8 años</td><td data-label="Mejor uso">Estanterías, cubbies</td><td data-label="Precauciones">Se astilla en cantos; sellar bordes</td></tr>
+              <tr><td data-label="Material">Compacto laminado</td><td data-label="Índice de coste">1.8×</td><td data-label="Vida preescolar">10-12 años</td><td data-label="Mejor uso">Mesas de arte, zonas húmedas</td><td data-label="Precauciones">Mayor coste; núcleo resistente al agua</td></tr>
+              <tr><td data-label="Material">Polipropileno (sillas)</td><td data-label="Índice de coste">1.0×</td><td data-label="Vida preescolar">8-10 años</td><td data-label="Mejor uso">Sillas apilables de colores</td><td data-label="Precauciones">Lavable; verificar estabilidad y ausencia de bordes filosos</td></tr>
+              <tr><td data-label="Material">Acero con recubrimiento en polvo</td><td data-label="Índice de coste">1.5×</td><td data-label="Vida preescolar">10-15 años</td><td data-label="Mejor uso">Bastidores de mesa, estructuras</td><td data-label="Precauciones">Esquinas protegidas; sin puntos de pellizco</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La elección práctica para un aula de preescolar activa combina contrachapado de abedul o MDF melaminizado con cantos sellados para mesas y estanterías, sillas de polipropileno apilables (lavables, ligeras y de colores) y compacto laminado en zonas de arte o humedad. Evite aglomerado pintado: falla en 2-3 años por daño de cantos y absorción de humedad en un entorno que se limpia a diario.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Benchmarks de presupuesto para mobiliario de preescolar</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Línea</th><th>Rango típico por aula (USD)</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Línea">Mesas (4-6, por banda de edad)</td><td data-label="Rango típico por aula (USD)">$800-$2,000</td><td data-label="Notas">Contrachapado o melamina; una por zona de trabajo</td></tr>
+              <tr><td data-label="Línea">Sillas (20-25, por banda)</td><td data-label="Rango típico por aula (USD)">$700-$1,800</td><td data-label="Notas">Polipropileno apilable o madera con cantos sellados</td></tr>
+              <tr><td data-label="Línea">Estanterías y cubbies</td><td data-label="Rango típico por aula (USD)">$600-$1,800</td><td data-label="Notas">Bajas, ancladas, a altura de alcance del niño</td></tr>
+              <tr><td data-label="Línea">Rincón de lectura / mullidos</td><td data-label="Rango típico por aula (USD)">$300-$900</td><td data-label="Notas">Cojines, alfombra, estantería baja</td></tr>
+              <tr><td data-label="Línea">Almacenaje de transición (cubbies)</td><td data-label="Rango típico por aula (USD)">$400-$1,200</td><td data-label="Notas">Individuales por niño, con banco</td></tr>
+              <tr><td data-label="Línea">**Total mobiliario por aula**</td><td data-label="Rango típico por aula (USD)">**$2,800-$7,700**</td><td data-label="Notas">Excluye alfombras y equipamiento de juego</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los rangos varían con el país, el nivel de certificación y el material. Los acabados GREENGUARD Gold y los materiales de grado contract añaden 10-20% al subtotal pero extienden la vida útil a 8-12 años — un aula de preescolar se reposiciona cuando el mobiliario se ve cansado, no cuando falla. Comprar la durabilidad correcta desde el inicio reduce el costo por año de uso entre 30% y 50% frente a mobiliario económico.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Lista de verificación de especificación para compradores</h2>
+        <p>Antes de ordenar mobiliario de preescolar, confirme: (1) las bandas de edad reales de los niños que usarán cada zona, (2) la tabla de medidas del fabricante contra la distribución de alturas del grupo, (3) certificados de emisiones GREENGUARD Gold o equivalente, (4) plan de anclaje antivuelco para unidades de más de 60 cm, (5) esquinas redondeadas y sin puntos de pellizco, (6) materiales lavables con cantos sellados, y (7) la muestra PP con la hoja de 22 puntos antes de la producción.</p>
+        <p>Hongye Furniture Group (fundada en 1996; 300,000+ m²; 1,000+ trabajadores) fabrica mobiliario de preescolar y kindergarten como sistema por zonas: mesas de contrachapado o melamina con cantos sellados, sillas de polipropileno apilables, estanterías bajas ancladas con opción antivuelco y cubbies individuales, todo con acabados de bajas emisiones y opción GREENGUARD Gold. Cada pedido incluye la tabla de medidas por edad y la muestra PP documentada — el mismo estándar que aplicamos en más de 1,000 proyectos institucionales en 50+ países.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Equipa un aula de preescolar o kindergarten?"
+      text="Solicite una cotización con nuestra tabla de medidas por edad y las opciones de acabado de bajas emisiones GREENGUARD Gold para su proyecto de educación infantil."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

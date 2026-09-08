@@ -1,0 +1,448 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Revestimiento de Pared en Piedra Sinterizada: Losas, Espesores y Guía de Renovación";
+const pageDescription = "Revestimiento de pared en piedra sinterizada: espesores, tamaños de losa, instalación sobre azulejo, acabados de bordes y costo de pared decorativa.";
+const keywords = [
+  "revestimiento pared piedra sinterizada",
+  "losa sinterizada pared",
+  "piedra sinterizada espesores",
+  "instalar sinterizado sobre azulejo",
+  "pared decorativa sinterizada costo",
+  "book-match piedra sinterizada"
+];
+const canonicalPath = "/recursos/revestimiento-pared-piedra-sinterizada/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué espesor de piedra sinterizada necesito para una pared?", answer: "Para una pared interior decorativa, 9 mm es el equilibrio estándar (22 kg/m², adhesivo). El de 6 mm es para renovación sobre azulejo o salpicaderos; el de 12 mm para paredes muy grandes, chimeneas o más exigencia. El de 20 mm es para encimeras y pisos, no pared." },
+    { question: "¿Puedo instalar piedra sinterizada sobre azulejo existente?", answer: "Sí — esa es una de sus grandes ventajas en renovación. Usa losas de 6-9 mm con adhesivo de capa fina directamente sobre el azulejo, siempre que esté plano, bien adherido y desengrasado. No hace falta demoler. Para losas de 12 mm o formatos muy grandes, añade anclajes mecánicos." },
+    { question: "¿Qué tamaño de losa debo elegir?", answer: "Para un techo estándar de 2.6-2.7 m, la losa de 1200 × 2700 da una pieza de piso a techo sin junta horizontal. Las de 1600 × 3200 son para paredes decorativas grandes. Si el diseño tiene veta, planifica el veteado continuo (book-match): la veta fluye de una losa a otra." },
+    { question: "¿Qué es el book-match en piedra sinterizada?", answer: "El book-match (veteado continuo) es la técnica de colocar las losas de modo que la veta del material fluya de una a otra como un espejo o una secuencia continua, imitando cómo se abre un bloque de piedra natural. Es lo que distingue una pared premium de una instalación genérica con losas al azar." },
+    { question: "¿Cuánto cuesta una pared de piedra sinterizada?", answer: "Una pared de TV típica de 6-10 m² cuesta $1,500-$4,500 completa: losa de 9-12 mm ($90-$250/m²), instalación ($60-$200/m²) y detalles CNC ($20-$80 por corte). El veteado continuo y los cortes de fábrica encarecen pero definen el resultado premium." },
+    { question: "¿TAULA fabrica paredes de piedra sinterizada a medida?", answer: "Sí. TAULA (línea de Hongye Furniture Group) fabrica losas con centros CNC de 6 ejes: ingletes a 45°, cantos pulidos, cortes de enchufes precisos y plantillas para aberturas. La fabricación toma 45-60 días, se envía a más de 50 países y lleva la garantía de 10 años de TAULA sobre la superficie." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Interiores · Piedra sinterizada &middot; {publicationDateLabel}</p>
+          <h1>Revestimiento de Pared en Piedra Sinterizada: Losas, Espesores y Guía de Renovación</h1>
+          <p>La piedra sinterizada es un panel de gran formato fabricado con minerales naturales prensados y sinterizados a alta temperatura, que produce una superficie no porosa, resistente al rayado, al calor y a los químicos, con aspecto de piedra, mármol o cemento. Como revestimiento de pared decorativa — pared de TV, salpicadero, recibidor, baño o chimenea — combina la estética de la piedra natural con un mantenimiento mínimo.</p>
+          <p>Esta guía cubre lo que necesitas saber antes de comprar: qué espesor según lo que la pared debe hacer, cómo planificar los tamaños de losa y el veteado continuo (book-match), cómo se instala — en especial sobre azulejo existente en renovaciones —, dónde se decide la calidad (cantos, esquinas y cortes) y cuánto cuesta una pared decorativa típica.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp" alt="Pared decorativa revestida con losas de piedra sinterizada de gran formato" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué las paredes de losa se volvieron la superficie "de lujo" por defecto</h2>
+        <p>La pared de losa de gran formato ganó la categoría de "lujo" por una razón práctica: elimina las líneas de lechada y las juntas visibles que delatan una superficie de azulejo, y consigue un plano continuo de piedra o mármol que antes solo era posible con losas naturales caras y frágiles. La piedra sinterizada añade las ventajas del material de ingeniería: no porosa (no absorbe manchas), resistente al rayado y al calor, y disponible en formatos de hasta 1600 × 3600 mm. Para una pared de TV o un recibidor, es la forma más directa de crear un punto focal de alto impacto con mantenimiento mínimo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 1: elige el espesor según lo que la pared debe hacer</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Espesor</th><th>Peso (aprox.)</th><th>Mejores aplicaciones</th><th>Instalación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Espesor">6 mm</td><td data-label="Peso (aprox.)">~15 kg/m²</td><td data-label="Mejores aplicaciones">Renovación sobre azulejo existente, salpicaderos, paredes decorativas de bajo tráfico</td><td data-label="Instalación">Adhesivo de capa fina</td></tr>
+              <tr><td data-label="Espesor">9 mm</td><td data-label="Peso (aprox.)">~22 kg/m²</td><td data-label="Mejores aplicaciones">Pared de TV, la mayoría de paredes interiores, renovación sobre azulejo</td><td data-label="Instalación">Adhesivo o fijación mecánica</td></tr>
+              <tr><td data-label="Espesor">12 mm</td><td data-label="Peso (aprox.)">~29 kg/m²</td><td data-label="Mejores aplicaciones">Paredes decorativas grandes, chimeneas, escaleras, exterior</td><td data-label="Instalación">Adhesivo + mecánico / montaje en seco</td></tr>
+              <tr><td data-label="Espesor">20 mm</td><td data-label="Peso (aprox.)">~48 kg/m²</td><td data-label="Mejores aplicaciones">Encimeras, pisos, áreas de alto impacto, tableros de mesa</td><td data-label="Instalación">Subestructura / montaje en seco</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para una pared interior decorativa, el espesor de 9 mm es el equilibrio estándar: suficiente rigidez para formatos grandes, peso manejable (22 kg/m²) e instalación con adhesivo. El de 6 mm es la opción de renovación sobre azulejo (menos peso, adhesivo de capa fina) y el de 12 mm se reserva para paredes muy grandes, chimeneas o áreas de mayor exigencia. El de 20 mm es para encimeras y pisos, no para pared.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 2: tamaño, distribución y veteado continuo</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tamaño de losa (mm)</th><th>Uso típico</th><th>Riesgo de desperdicio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tamaño de losa (mm)">1200 × 2400</td><td data-label="Uso típico">Paredes pequeñas, salpicaderos, baños</td><td data-label="Riesgo de desperdicio">Bajo — cabe en la mayoría de paredes</td></tr>
+              <tr><td data-label="Tamaño de losa (mm)">1200 × 2700</td><td data-label="Uso típico">Techos estándar de 2.6-2.7 m</td><td data-label="Riesgo de desperdicio">Bajo — una pieza de piso a techo</td></tr>
+              <tr><td data-label="Tamaño de losa (mm)">1600 × 3200</td><td data-label="Uso típico">Paredes decorativas grandes, salas abiertas</td><td data-label="Riesgo de desperdicio">Medio — requiere planificación</td></tr>
+              <tr><td data-label="Tamaño de losa (mm)">1600 × 3600</td><td data-label="Uso típico">Paredes muy altas, espacios comerciales</td><td data-label="Riesgo de desperdicio">Alto — requiere cuadrilla con experiencia</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos decisiones definen el resultado visual. Primera: el formato — para un techo de 2.6-2.7 m, una losa de 1200 × 2700 da una pieza de piso a techo sin junta horizontal. Segunda: el veteado continuo — si el diseño tiene veta (mármol, piedra), planifica la secuencia de losas para que la veta fluya de una a otra (book-match o secuencia de veta), no losas al azar que rompan el patrón. El veteado continuo encarece el material pero es lo que distingue una pared de losa "premium" de una instalación genérica.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 3: instalación — especialmente sobre azulejo viejo</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Método</th><th>Ideal para</th><th>Requisito clave</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Método">Adhesivo de capa fina</td><td data-label="Ideal para">Losas de 6-9 mm sobre pared plana o azulejo viejo</td><td data-label="Requisito clave">Soporte plano, sano y limpio; adhesivo modificado con polímeros</td></tr>
+              <tr><td data-label="Método">Adhesivo + anclajes mecánicos</td><td data-label="Ideal para">Losas de 9-12 mm, formatos grandes</td><td data-label="Requisito clave">Adhesivo más fijaciones mecánicas discretas por seguridad</td></tr>
+              <tr><td data-label="Método">Montaje en seco / subestructura</td><td data-label="Ideal para">Losas de 12 mm+, exterior, fachadas ventiladas</td><td data-label="Requisito clave">Marco de aluminio o acero, fijaciones ocultas</td></tr>
+              <tr><td data-label="Método">Directo sobre azulejo (renovación)</td><td data-label="Ideal para">Losas de 6-9 mm sobre cerámica sana</td><td data-label="Requisito clave">El azulejo debe estar plano, bien adherido y desengrasado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La gran ventaja de la piedra sinterizada en renovación es que puede instalarse directamente sobre azulejo existente — sin demoler — si el azulejo está plano, bien adherido y desengrasado. Las losas de 6-9 mm con adhesivo de capa fina son las indicadas. Para formatos grandes (1600+) o losas de 12 mm, añade anclajes mecánicos por seguridad. La clave es la preparación: una pared fuera de plano se nota en las juntas; corrige el soporte antes de pegar.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 4: cantos, esquinas y cortes — donde se decide la calidad</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Detalle</th><th>Resultado económico</th><th>Bien hecho</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Detalle">Esquinas interiores / exteriores</td><td data-label="Resultado económico">Perfil de aluminio o junta visible</td><td data-label="Bien hecho">Inglete a 45° de fábrica, veta continua en la vuelta</td></tr>
+              <tr><td data-label="Detalle">Cortes de enchufes e interruptores</td><td data-label="Resultado económico">Perforado en obra, bordes astillados</td><td data-label="Bien hecho">Corte CNC en fábrica, preciso al milímetro</td></tr>
+              <tr><td data-label="Detalle">Cantos superiores y laterales</td><td data-label="Resultado económico">Canto de corte crudo visible</td><td data-label="Bien hecho">Canto pulido o biselado, junta enrasada</td></tr>
+              <tr><td data-label="Detalle">Juntas entre losas</td><td data-label="Resultado económico">Costura visible, veta desalineada</td><td data-label="Bien hecho">Veteado continuo, junta de 2-3 mm</td></tr>
+              <tr><td data-label="Detalle">Aberturas (ventanas, nichos)</td><td data-label="Resultado económico">Riesgo de corte en obra</td><td data-label="Bien hecho">CNC de fábrica con plantillas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La calidad de una pared de losa se decide en los detalles que se ven de cerca: las esquinas con inglete a 45° de fábrica (no perfil de aluminio), los cortes de enchufes hechos con CNC en fábrica (no perforados en obra con bordes astillados), los cantos pulidos y las juntas con veta continua. Especifícalos en el pedido: los cortes CNC y los ingletes se cobran por detalle, pero son la diferencia entre una pared de losa y una pared de losa bien hecha.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuánto cuesta una pared decorativa de losa</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Partida</th><th>Rango (USD)</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Partida">Material de losa</td><td data-label="Rango (USD)">$90-$250 / m²</td><td data-label="Notas">9-12 mm; veteado/book-match en el extremo alto</td></tr>
+              <tr><td data-label="Partida">Instalación (adhesivo)</td><td data-label="Rango (USD)">$60-$120 / m²</td><td data-label="Notas">Pared plana, método adhesivo</td></tr>
+              <tr><td data-label="Partida">Instalación (montaje en seco)</td><td data-label="Rango (USD)">$120-$200 / m²</td><td data-label="Notas">Subestructura + fijación mecánica</td></tr>
+              <tr><td data-label="Partida">Cortes/cantos CNC de fábrica</td><td data-label="Rango (USD)">$20-$80 por detalle</td><td data-label="Notas">Enchufes, ingletes, biseles</td></tr>
+              <tr><td data-label="Partida">Preparación sobre azulejo</td><td data-label="Rango (USD)">$10-$30 / m²</td><td data-label="Notas">Limpiar, imprimar, verificar planitud</td></tr>
+              <tr><td data-label="Partida">**Pared de TV típica (6-10 m²)**</td><td data-label="Rango (USD)">**$1,500-$4,500 total**</td><td data-label="Notas">Material + instalación + detalles</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una pared de TV típica de 6-10 m² cuesta entre $1,500 y $4,500 completa: losa de 9-12 mm ($90-$250/m²), instalación ($60-$200/m² según el método) y detalles CNC. El veteado continuo (book-match) y los cortes de fábrica encarecen el proyecto pero definen el resultado premium. Para renovar sobre azulejo sin demoler, suma $10-$30/m² de preparación del soporte.</p>
+        <p>TAULA (la línea de piedra sinterizada y superficies de Hongye Furniture Group, fundada en 1996) fabrica losas con centros de mecanizado CNC de 6 ejes: cortes e ingletes a 45° de precisión milimétrica, cantos pulidos y biselados, y plantillas para enchufes y aberturas. Cada proyecto — de la pared de TV al recibidor — se fabrica en 45-60 días y se envía a más de 50 países con la garantía de 10 años de TAULA sobre la superficie.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Planeas una pared de piedra sinterizada?"
+      text="Solicita una cotización con planificación de veteado y cortes CNC de fábrica: te asesoramos sobre espesor, formato e instalación, incluso sobre azulejo existente."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

@@ -1,0 +1,419 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Lista de Aprobación de Muestras Pre-Producción: 22 Puntos para Muebles Contract";
+const pageDescription = "Lista de aprobación de muestras pre-producción en 22 puntos: construcción, acabado, herrajes, dimensiones y empaque para muebles contract importados.";
+const keywords = [
+  "aprobacion muestras preproduccion",
+  "lista verificacion muebles",
+  "muestra PP muebles contract",
+  "control calidad fábrica muebles",
+  "inspección previa embarque muebles",
+  "muestra dorada muebles"
+];
+const canonicalPath = "/recursos/lista-aprobacion-muestras-preproduccion/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-04-img-02-control-calidad-muebles.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué es una muestra pre-producción (PP) en muebles?", answer: "Es la primera pieza fabricada con los moldes, materiales y procesos de producción finales, después de la muestra de ingeniería y antes de la producción en serie. Sirve como compuerta de calidad: si no cumple la especificación, la producción no arranca. Al aprobarse se convierte en la \"muestra dorada\" de referencia para la inspección." },
+    { question: "¿Cuántos puntos debe tener una lista de aprobación PP?", answer: "Una lista práctica cubre 22 puntos en cinco secciones: construcción (núcleo, uniones, cantos, refuerzos, peso), acabado (color, sistema, defectos, sellado, datos de prueba), herrajes (bisagras, rieles, consistencia, antivuelco, pasacables), dimensiones (medidas, holguras, nivelación, alturas ADA) y empaque (caja, etiquetado, cubicaje)." },
+    { question: "¿Qué diferencia hay entre muestra de ingeniería y muestra PP?", answer: "La muestra de ingeniería valida el diseño y la fabricabilidad; la muestra PP valida la producción final: mismos materiales, mismos procesos, misma línea. Aprobar una muestra de ingeniería no garantiza que la producción sea correcta — por eso la PP es una compuerta separada e innegociable." },
+    { question: "¿Qué hago si la muestra PP no coincide con la especificación?", answer: "Devuelva la hoja con un veredicto explícito: \"aprobada con correcciones\" con una lista numerada y fechada, o \"rechazada\" con motivos. No apruebe con excepciones verbales: la desviación se convertirá en el estándar de producción. Exija reenvío de muestra corregida o evidencia fotográfica dentro del plazo acordado." },
+    { question: "¿Cuánto tarda el ciclo de aprobación de muestras PP?", answer: "Con una hoja de 22 puntos y fotos enviadas por la fábrica, la revisión del comprador toma 30-60 minutos. El ciclo completo — envío, revisión, correcciones y bloqueo de muestra dorada — suele tomar 1-2 semanas si la retroalimentación es específica y agrupada en una sola lista." },
+    { question: "¿Qué certificaciones respaldan el control de calidad de Hongye?", answer: "Hongye Furniture Group (fundada en 1996; 300,000+ m²; 1,000+ trabajadores) opera con sistema de calidad ISO 9001 y gestión ambiental ISO 14001, y sus productos cuentan con certificaciones FSC, GREENGUARD Gold, BIFMA y CE según la línea. Cada muestra PP viaja con la hoja de 22 puntos llenada por QC y fotografías de verificación." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía de calidad · Muestras PP &middot; {publicationDateLabel}</p>
+          <h1>Lista de Aprobación de Muestras Pre-Producción: 22 Puntos para Muebles Contract</h1>
+          <p>La muestra pre-producción — también llamada muestra PP — es la primera pieza fabricada con los moldes, materiales y procesos de producción finales, no un prototipo de laboratorio. Se produce después de aprobar la muestra de ingeniería y antes del inicio de la producción en serie. Su función es una compuerta dura: si la muestra PP no cumple la especificación, la producción no arranca.</p>
+          <p>Los compradores que tratan la muestra PP como un trámite suelen descubrir los problemas en la inspección previa al embarque, cuando corregir cuesta semanas y pone en riesgo la fecha de apertura del proyecto. Esta guía desglosa la hoja de aprobación de 22 puntos que Hongye Furniture Group utiliza en su propia fábrica (fundada en 1996; 300,000+ m²; 1,000+ trabajadores) y que entrega con cada muestra PP para proyectos en más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-02-control-calidad-muebles.webp" alt="Control de calidad revisando una muestra pre-producción de mobiliario en la fábrica" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué la muestra PP es una compuerta dura, no un trámite</h2>
+        <p>Una muestra PP aprobada fija la "muestra dorada" (golden sample): la pieza de referencia contra la que se comparan las unidades de producción durante la inspección en línea y la inspección previa al embarque. Si la muestra PP tiene una desviación no documentada — un núcleo distinto, un acabado más oscuro, una bisagra más económica — esa desviación se convierte silenciosamente en el estándar de toda la producción. Aprobarla con una excepción verbal es el error de compra más caro en muebles contract: la excepción se olvida y el contenedor llega con la desviación en todas las piezas.</p>
+        <p>Por eso la hoja de aprobación se diseña para que el comprador no necesite ser ingeniero de muebles: cada línea pide un pasa/no pasa contra la especificación escrita, y la fábrica entrega la hoja ya llenada por su control de calidad junto con fotografías de cada punto de verificación. El comprador revisa, marca pasa/no pasa o "aprueba con correcciones", y devuelve la hoja. Solo entonces se bloquea la muestra dorada en control de calidad.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>La hoja de aprobación PP de 22 puntos</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Sección</th><th>Punto</th><th>Qué verificar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Sección">A. Construcción</td><td data-label="Punto">1. Núcleo del tablero</td><td data-label="Qué verificar">Contrachapado vs MDF vs aglomerado: revise el canto o la placa de datos</td></tr>
+              <tr><td data-label="Sección">A. Construcción</td><td data-label="Punto">2. Método de unión</td><td data-label="Qué verificar">Tarugo + cola, espiga y mortaja, o leva según especificación</td></tr>
+              <tr><td data-label="Sección">A. Construcción</td><td data-label="Punto">3. Tratamiento de cantos</td><td data-label="Qué verificar">Canto macizo, canteado o chapa: espesor y adhesión</td></tr>
+              <tr><td data-label="Sección">A. Construcción</td><td data-label="Punto">4. Refuerzos estructurales</td><td data-label="Qué verificar">Paneles traseros, escuadras y travesaños presentes</td></tr>
+              <tr><td data-label="Sección">A. Construcción</td><td data-label="Punto">5. Peso</td><td data-label="Qué verificar">Notablemente más liviana que la muestra = posible sustitución de núcleo</td></tr>
+              <tr><td data-label="Sección">B. Acabado</td><td data-label="Punto">6. Color contra la carta aprobada</td><td data-label="Qué verificar">Bajo luz estándar D65, no luz de showroom</td></tr>
+              <tr><td data-label="Sección">B. Acabado</td><td data-label="Punto">7. Sistema de acabado</td><td data-label="Qué verificar">Tipo de laca, brillo (p. ej. mate 30%), número de manos</td></tr>
+              <tr><td data-label="Sección">B. Acabado</td><td data-label="Punto">8. Defectos de superficie</td><td data-label="Qué verificar">Cortinas, piel de naranja, ojo de pescado en todas las caras visibles</td></tr>
+              <tr><td data-label="Sección">B. Acabado</td><td data-label="Punto">9. Cantos y juntas</td><td data-label="Qué verificar">Esquinas interiores, frentes de cajón y cantos totalmente sellados</td></tr>
+              <tr><td data-label="Sección">B. Acabado</td><td data-label="Punto">10. Datos de resistencia UV/química</td><td data-label="Qué verificar">Si la especificación lo exige, pida el informe con la muestra</td></tr>
+              <tr><td data-label="Sección">C. Herrajes</td><td data-label="Punto">11. Marca y clase de bisagra</td><td data-label="Qué verificar">Coincide con la marca y la clase de cierre suave</td></tr>
+              <tr><td data-label="Sección">C. Herrajes</td><td data-label="Punto">12. Funcionamiento del cajón</td><td data-label="Qué verificar">Extensión total, cierre suave, probado a carga nominal</td></tr>
+              <tr><td data-label="Sección">C. Herrajes</td><td data-label="Punto">13. Consistencia del acabado</td><td data-label="Qué verificar">Todo el herraje visible coincide con el acabado especificado</td></tr>
+              <tr><td data-label="Sección">C. Herrajes</td><td data-label="Punto">14. Antivuelco y seguridad</td><td data-label="Qué verificar">Presente donde se requiere (cómodas, casegoods altos)</td></tr>
+              <tr><td data-label="Sección">C. Herrajes</td><td data-label="Punto">15. Pasacables y puertos</td><td data-label="Qué verificar">Tamaño y posición según el plano</td></tr>
+              <tr><td data-label="Sección">D. Dimensiones</td><td data-label="Punto">16. Dimensiones generales</td><td data-label="Qué verificar">Dentro de la tolerancia de especificación (típicamente ±3 mm)</td></tr>
+              <tr><td data-label="Sección">D. Dimensiones</td><td data-label="Punto">17. Holguras críticas</td><td data-label="Qué verificar">Holguras de cajones, giros de puertas, espacio bajo cabecero</td></tr>
+              <tr><td data-label="Sección">D. Dimensiones</td><td data-label="Punto">18. Nivelación y contacto con piso</td><td data-label="Qué verificar">Niveladores ajustables; la pieza no se balancea</td></tr>
+              <tr><td data-label="Sección">D. Dimensiones</td><td data-label="Punto">19. Alturas ADA (si aplica)</td><td data-label="Qué verificar">Alturas de escritorio y rangos de alcance según el tipo de habitación</td></tr>
+              <tr><td data-label="Sección">E. Empaque</td><td data-label="Punto">20. Especificación de caja</td><td data-label="Qué verificar">Grado de cartón, empaque interior, protección de esquinas según cotización</td></tr>
+              <tr><td data-label="Sección">E. Empaque</td><td data-label="Punto">21. Etiquetado</td><td data-label="Qué verificar">Marcas de caja, códigos de habitación/tipo, marcas de manipulación</td></tr>
+              <tr><td data-label="Sección">E. Empaque</td><td data-label="Punto">22. Cubicaje y plan de carga</td><td data-label="Qué verificar">Coincide con el plan de contenedor — cubicaje por set confirmado</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Defectos comunes que detectamos en nuestra propia fábrica</h2>
+        <p>Los cinco defectos más repetidos en muestras PP no son técnicos: son sustituciones silenciosas. La más frecuente es el cambio de núcleo — se especifica contrachapado y la muestra llega con MDF porque "se ve igual". La segunda es el acabado: un lote de laca más oscuro que la carta aprobada pasa desapercibido bajo luz de showroom pero se nota en la instalación. La tercera es la bisagra o el riel: misma marca visual pero clase inferior de cierre suave. La cuarta es el canto no sellado en esquinas interiores, que se hincha con la humedad a los 12-18 meses. La quinta es el empaque optimizado de más: una caja más liviana que ahorra flete pero aumenta la tasa de daño en tránsito.</p>
+        <p>Cada uno de estos defectos se detecta en la hoja de 22 puntos si el comprador compara contra la especificación escrita y no contra la "sensación" de la muestra. En Hongye, la muestra PP viaja con la hoja llenada por QC y fotografías de cada punto, de modo que la revisión del comprador toma minutos y no días.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>El flujo de aprobación: cómo se ve uno bien hecho</h2>
+        <p>Un flujo de aprobación profesional tiene cinco pasos documentados. Primero, la fábrica envía la muestra PP con su hoja de 22 puntos llenada y fotografías. Segundo, el comprador revisa contra la especificación y la muestra de ingeniería aprobada, y marca cada línea. Tercero, devuelve la hoja con un veredicto explícito: aprobada, aprobada con correcciones (lista cerrada y con fecha), o rechazada con motivos. Cuarto, si hay correcciones, la fábrica reenvía una muestra corregida o evidencia fotográfica de la corrección dentro del plazo acordado. Quinto, la muestra dorada se firma y se guarda en control de calidad como referencia de producción e inspección.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Etapa</th><th>Responsable</th><th>Entregable</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Etapa">1. Envío de muestra PP</td><td data-label="Responsable">Fábrica</td><td data-label="Entregable">Muestra + hoja de 22 puntos + fotos</td></tr>
+              <tr><td data-label="Etapa">2. Revisión del comprador</td><td data-label="Responsable">Comprador / diseñador</td><td data-label="Entregable">Hoja marcada pasa/no pasa</td></tr>
+              <tr><td data-label="Etapa">3. Veredicto</td><td data-label="Responsable">Comprador</td><td data-label="Entregable">Aprobada / aprobada con correcciones / rechazada</td></tr>
+              <tr><td data-label="Etapa">4. Correcciones (si aplica)</td><td data-label="Responsable">Fábrica</td><td data-label="Entregable">Muestra corregida o evidencia fotográfica</td></tr>
+              <tr><td data-label="Etapa">5. Bloqueo de muestra dorada</td><td data-label="Responsable">Ambas partes</td><td data-label="Entregable">Muestra firmada + hoja archivada</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo dar retroalimentación que produce resultados</h2>
+        <p>La retroalimentación efectiva sobre una muestra PP es específica, medible y referenciada a la especificación. En lugar de "el acabado no me gusta", escriba "el color está 2 pasos más oscuro que la carta RAL aprobada; ajustar el lote de laca y reenviar una muestra de esquina". En lugar de "revisen las bisagras", escriba "la bisagra instalada es la clase estándar; la especificación pide cierre suave clase 3 de la marca Blum; sustituir y confirmar por foto".</p>
+        <p>Dos reglas prácticas aceleran el ciclo: agrupe todas las correcciones en una sola lista numerada (una lista cerrada es más fácil de ejecutar que comentarios dispersos) y ponga fecha al reenvío. Las correcciones sin fecha tienden a alargar el cronograma de producción; una lista con fecha convierte la aprobación en un hito controlable del proyecto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Listo para aprobar su primera muestra PP sin sorpresas?"
+      text="Fabricamos muebles contract con control de calidad documentado y entregamos la hoja de aprobación de 22 puntos con cada muestra. Solicite una cotización gratuita y reciba el formato de aprobación PP."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

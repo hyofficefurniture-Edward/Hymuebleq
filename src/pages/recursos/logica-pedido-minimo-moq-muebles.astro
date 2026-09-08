@@ -1,0 +1,427 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Lógica del Pedido Mínimo (MOQ) en Muebles: Por Qué las Fábricas Fijan Mínimos y Cómo Sortearlos";
+const pageDescription = "Por qué las fábricas de muebles fijan MOQ, los tres tipos de mínimo, qué significa un proveedor de MOQ bajo y tácticas de negociación que funcionan.";
+const keywords = [
+  "pedido minimo MOQ muebles",
+  "MOQ fábrica muebles",
+  "minimo por diseño muebles",
+  "consolidar contenedor muebles",
+  "negociar MOQ fabricante",
+  "comprar muebles sin MOQ alto"
+];
+const canonicalPath = "/recursos/logica-pedido-minimo-moq-muebles/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-04-img-03-contenedor-exportacion.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué significa MOQ en fabricación de muebles?", answer: "MOQ (minimum order quantity) es la cantidad más pequeña que una fábrica acepta producir de un diseño, material o pedido. Existe porque una corrida de producción debe cubrir los costos de corte de tablero, compra de herrajes, cambio de línea de acabado e ingeniería, que son iguales sin importar si se fabrican 5 o 500 piezas." },
+    { question: "¿Cuáles son los tres tipos de MOQ?", answer: "Tres: MOQ por diseño (cada diseño único, el más alto, típicamente 50-300 piezas), MOQ por material (cada núcleo/acabado/herraje, medio) y MOQ por pedido (volumen total, el más bajo, a menudo un contenedor). Distinguirlos cambia la negociación: ataque el tipo que le bloquea." },
+    { question: "¿Cómo puedo bajar el MOQ sin cambiar de proveedor?", answer: "Ataque los centros de costo: reduzca el número de acabados (una corrida en vez de tres), estandarice los herrajes a una marca, consolide todo el programa en un contenedor, comprométase a un volumen anual por fases y considere diseños que la fábrica ya produce. Estas tácticas bajan el mínimo real más que regatear el número." },
+    { question: "¿Qué significa un \"MOQ bajo\" de un proveedor?", answer: "Puede significar tres cosas: materiales y diseños en stock (legítimo, sin setup), un mínimo bajo solo para líneas de catálogo mientras los diseños personalizados mantienen mínimos altos, o corridas pequeñas producidas con sustituciones de material para mantener el margen. Pregunte qué diseño y material respaldan el MOQ bajo y exija muestra PP antes de producir." },
+    { question: "¿Qué hago si mi proyecto necesita pocas piezas de muchos diseños?", answer: "Consolide: combine todas las líneas en un contenedor mixto, estandarice acabados y herrajes entre diseños, y si el volumen total aún es pequeño, use piezas de catálogo o consolide con un socio de compras en la misma fábrica. El MOQ por pedido (contenedor) suele ser alcanzable incluso cuando los mínimos por diseño no lo son." },
+    { question: "¿Cómo maneja Hongye los MOQ para proyectos pequeños?", answer: "Hongye estructura programas consolidados: acabados y herrajes estandarizados entre líneas, contenedores mixtos y compromisos por fases. Así un programa de 150 habitaciones o un proyecto de oficinas de varias sedes se compra a precio de fábrica sin fricción de mínimos por diseño, con la misma calidad documentada de cada línea." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía de compra · MOQ &middot; {publicationDateLabel}</p>
+          <h1>Lógica del Pedido Mínimo (MOQ) en Muebles: Por Qué las Fábricas Fijan Mínimos y Cómo Sortearlos</h1>
+          <p>El pedido mínimo (MOQ, por sus siglas en inglés) es la cantidad más pequeña que una fábrica acepta producir de un diseño, un material o un pedido. Para el comprador de muebles suele verse como una barrera arbitraria; para la fábrica es el punto de equilibrio donde una corrida de producción cubre los costos de materiales, cambio de línea y mano de obra. Las dos perspectivas son ciertas — y la negociación efectiva opera en el punto medio.</p>
+          <p>Los compradores que entienden qué costos fijan el MOQ — corte de tablero, compra de herrajes, cambio de acabado, ingeniería — pueden reestructurar sus pedidos para bajar el mínimo real sin cambiar de proveedor. Esta guía desglosa los tres tipos de MOQ, qué significa realmente un proveedor de "MOQ bajo" y las tácticas que funcionan en la práctica para proyectos de volumen moderado.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-03-contenedor-exportacion.webp" alt="Contenedor de exportación de mobiliario cargado en la fábrica para envío internacional" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué existe el mínimo</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Centro de costo</th><th>Qué pasa a bajo volumen</th><th>Por qué fija un mínimo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Centro de costo">Corte de tablero</td><td data-label="Qué pasa a bajo volumen">Una hoja de contrachapado genera desperdicio a bajos rendimientos</td><td data-label="Por qué fija un mínimo">Los patrones de corte se optimizan para hojas completas; las corridas pequeñas desperdician material</td></tr>
+              <tr><td data-label="Centro de costo">Compra de herrajes</td><td data-label="Qué pasa a bajo volumen">Bisagras y rieles se compran en lotes de fábrica</td><td data-label="Por qué fija un mínimo">Un pedido de 20 piezas cuesta más por unidad que uno de 2,000</td></tr>
+              <tr><td data-label="Centro de costo">Acabado y recubrimiento</td><td data-label="Qué pasa a bajo volumen">Una línea de laca debe mezclarse, operarse y limpiarse</td><td data-label="Por qué fija un mínimo">El cambio de línea cuesta lo mismo si se recubren 5 o 500 piezas</td></tr>
+              <tr><td data-label="Centro de costo">Diseño e ingeniería</td><td data-label="Qué pasa a bajo volumen">Planos, muestras y pruebas son costos únicos</td><td data-label="Por qué fija un mínimo">Un diseño personalizado requiere la misma ingeniería se fabriquen 1 o 1,000 piezas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Cada uno de estos centros de costo explica un componente del MOQ. El corte explica por qué las fábricas piden cantidades que llenen hojas de tablero; los herrajes explican por qué estandarizar marcas baja los mínimos; el acabado explica por qué reducir el número de colores es la palanca más poderosa; y la ingeniería explica por qué los diseños estándar de la fábrica siempre tienen el MOQ más bajo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Los tres tipos de MOQ</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de MOQ</th><th>A qué aplica</th><th>Tamaño típico</th><th>Cómo se siente para el comprador</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de MOQ">MOQ por diseño</td><td data-label="A qué aplica">Cada diseño único que usted ordena</td><td data-label="Tamaño típico">El más alto (50-300 pzas por diseño)</td><td data-label="Cómo se siente para el comprador">"Necesito 80 sillas pero piden 200 por estilo"</td></tr>
+              <tr><td data-label="Tipo de MOQ">MOQ por material</td><td data-label="A qué aplica">Cada núcleo, acabado o herraje</td><td data-label="Tamaño típico">Medio</td><td data-label="Cómo se siente para el comprador">"La misma silla en 3 acabados triplica el mínimo"</td></tr>
+              <tr><td data-label="Tipo de MOQ">MOQ por pedido</td><td data-label="A qué aplica">Volumen total de todas las líneas</td><td data-label="Tamaño típico">El más bajo (a menudo un contenedor o un valor)</td><td data-label="Cómo se siente para el comprador">"Con que todo el pedido sea grande, funciona"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La distinción entre los tres tipos cambia la negociación. Si su problema es el MOQ por diseño, la solución es reducir diseños o consolidar. Si es el MOQ por material, la solución es estandarizar acabados y herrajes. Si puede cumplir el MOQ por pedido — un contenedor completo con varias líneas — la fábrica suele ser flexible con los mínimos individuales. El comprador que no distingue los tres tipos negocia contra el número equivocado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo las firmas de diseño sortean los mínimos</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Estrategia</th><th>Cómo funciona</th><th>Ideal para</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Estrategia">Piezas de catálogo estándar</td><td data-label="Cómo funciona">Comprar diseños en producción — sin setup de diseño, materiales en stock</td><td data-label="Ideal para">Habitaciones de hotel, asientos estándar</td></tr>
+              <tr><td data-label="Estrategia">Consolidación en contenedor mixto</td><td data-label="Cómo funciona">Combinar todas las líneas en un contenedor en la fábrica</td><td data-label="Ideal para">Proyectos pequeños completos</td></tr>
+              <tr><td data-label="Estrategia">Estandarización de materiales</td><td data-label="Cómo funciona">Limitar la especificación a núcleos, acabados y herrajes en stock</td><td data-label="Ideal para">Proyectos con diseño personalizado y bajo volumen</td></tr>
+              <tr><td data-label="Estrategia">Pedidos por fases</td><td data-label="Cómo funciona">Comprometerse a un volumen de programa entregado por fases</td><td data-label="Ideal para">Negocios en crecimiento, proyectos de varios pisos</td></tr>
+              <tr><td data-label="Estrategia">Consolidación con socio de compras</td><td data-label="Cómo funciona">Combinar su pedido con otros compradores en la misma fábrica</td><td data-label="Ideal para">Necesidades únicas muy pequeñas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El patrón común de estas estrategias es mover el costo del diseño único al volumen del programa. Un proyecto de 80 sillas personalizadas es caro; un programa de 80 sillas por fase durante un año, con acabados estandarizados y consolidado en contenedores, es un pedido atractivo. En proyectos de varias ubicaciones — como el programa de oficinas de múltiples sitios que consolidamos en Trinidad y Tobago — la consolidación permitió al cliente comprar a precio de fábrica sin alcanzar ningún MOQ por diseño individual.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué significa realmente "proveedor de MOQ bajo"</h2>
+        <p>Un proveedor que anuncia "MOQ bajo" suele conseguirlo por tres vías, y solo una es genuinamente útil. La primera es que ya tiene los materiales y diseños en stock — es la vía legítima: el MOQ es bajo porque no hay setup. La segunda es que el bajo mínimo aplica a una línea limitada (catálogo) mientras los diseños personalizados mantienen mínimos altos — lea la letra pequeña. La tercera, la más riesgosa, es que la fábrica acepta corridas pequeñas pero las produce en líneas de baja calidad o con sustituciones de material para mantener su margen.</p>
+        <p>Antes de celebrar un MOQ bajo, pregunte qué diseño, qué material y qué línea lo respaldan, y exija la muestra PP con la hoja de 22 puntos antes de la producción. Un MOQ bajo con calidad inconsistente cuesta más que un MOQ razonable con control de calidad documentado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Negociar MOQ: lo que realmente funciona</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Táctica</th><th>Por qué funciona</th><th>Qué decir</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Táctica">Reducir el número de acabados</td><td data-label="Por qué funciona">Menos corridas de acabado = menos cambios de línea</td><td data-label="Qué decir">"Tomamos todas las líneas en un acabado si baja el mínimo"</td></tr>
+              <tr><td data-label="Táctica">Reducir el número de herrajes</td><td data-label="Por qué funciona">Una marca de herrajes se agrupa entre diseños</td><td data-label="Qué decir">"Estandarizamos todos los rieles y bisagras a una marca"</td></tr>
+              <tr><td data-label="Táctica">Consolidar en un contenedor</td><td data-label="Por qué funciona">La fábrica llena el contenedor eficientemente</td><td data-label="Qué decir">"Coteje todo el programa como un envío, no por línea"</td></tr>
+              <tr><td data-label="Táctica">Comprometerse a un programa</td><td data-label="Por qué funciona">La fábrica programa producción alrededor de su volumen</td><td data-label="Qué decir">"Nos comprometemos a 150 habitaciones al año por fases"</td></tr>
+              <tr><td data-label="Táctica">Elegir diseños en producción</td><td data-label="Por qué funciona">Costo de setup de diseño cero</td><td data-label="Qué decir">"Muéstrenos primero sus diseños en producción actual"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las tácticas que funcionan atacan los centros de costo del MOQ: acabados, herrajes, contenedor y programa. Las que no funcionan — regatear el número sin cambiar la estructura del pedido, o prometer volumen sin compromiso — solo erosionan la relación. Un comprador que llega con "estandarizamos acabados y herrajes, consolidamos en un contenedor y nos comprometemos a un programa anual" rara vez encuentra un MOQ innegociable.</p>
+        <p>Hongye Furniture Group (fundada en 1996; 300,000+ m²; 1,000+ trabajadores) estructura programas consolidados para hoteles, oficinas y firmas de diseño en más de 50 países: la misma lógica de acabados estandarizados y contenedores mixtos que aplicamos para que un programa de 150 habitaciones se compre a precio de fábrica sin fricción de mínimos por diseño.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Su proyecto choca con los MOQ de las fábricas?"
+      text="Solicite una cotización de programa consolidado: le mostramos cómo estructurar acabados, herrajes y contenedores para comprar a precio de fábrica sin fricción de mínimos."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

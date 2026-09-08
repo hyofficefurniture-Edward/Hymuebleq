@@ -1,0 +1,426 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "BS 5852: Pruebas de Tapicería Ignífuga para Proyectos Hoteleros del Reino Unido";
+const pageDescription = "BS 5852 para hoteles del Reino Unido: fuentes de ignición, crib 5, diferencia con BS 7176 y documentos que exigir al importar muebles tapizados.";
+const keywords = [
+  "BS 5852",
+  "tapicería ignífuga Reino Unido",
+  "crib 5",
+  "BS 7176",
+  "muebles tapizados hotel",
+  "cumplimiento incendio mobiliario UK"
+];
+const canonicalPath = "/recursos/bs-5852-tapiceria-seguridad-incendio-reino-unido/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-08-img-01-union-bastidor-silla.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué es la BS 5852 y por qué importa para hoteles?", answer: "La BS 5852 es la norma británica que prueba la resistencia a la ignición del mobiliario tapizado como artículo terminado (tela + espuma + construcción ensamblados). Importa para hoteles del Reino Unido porque los dormitorios y áreas públicas suelen exigir que los asientos superen las fuentes 0, 1 y crib 5 (peligro medio según BS 7176) para entrar legalmente en servicio." },
+    { question: "¿Cuál es la diferencia entre BS 5852 y BS 7176?", answer: "La BS 5852 es el método de prueba (qué fuentes de ignición supera el artículo); la BS 7176 es la especificación de aplicación (qué grado de peligro necesita su entorno). Especifique ambos: \"BS 5852 fuentes 0, 1 y crib 5, equivalente a BS 7176 peligro medio\" para dormitorios y áreas públicas de hotel." },
+    { question: "¿Qué es el crib 5?", answer: "El crib 5 es una criba de madera en llamas de unos 20 g que simula un incendio real por ignición de un objeto en llamas, como un papel o un cojín incendiado. Es el requisito típico para dormitorios de hotel y la mayoría de áreas públicas según BS 7176 peligro medio. El crib 7 (unos 126 g) se exige en entornos de peligro alto como discotecas." },
+    { question: "¿Puedo importar muebles tapizados a Reino Unido sin prueba BS 5852?", answer: "Técnicamente el Reglamento General de Seguridad de Productos exige que el mobiliario sea seguro y cumpla las normas pertinentes; en la práctica, los proyectos hoteleros, las aseguradoras y las autoridades locales exigen la BS 5852/BS 7176 documentada. Sin el informe, su proyecto puede reprobar la inspección y su póliza puede quedar sin efecto." },
+    { question: "¿Qué documentos debo pedir al fabricante?", answer: "Cuatro: (1) informe de prueba de artículo terminado BS 5852 con las fuentes requeridas, de laboratorio acreditado; (2) declaración de peligro BS 7176 para su entorno; (3) certificado de tejido con datos de retardancia si está disponible; (4) ficha de espuma/entretela. Guarde todo en el expediente de entrega." },
+    { question: "¿Cómo gestiona Hongye el cumplimiento BS 5852?", answer: "Hongye Furniture Group (fundada en 1996; 300,000+ m²; 1,000+ trabajadores; proyectos en 50+ países) gestiona la cadena completa: selección de tejido y espuma compatibles, construcción del artículo terminado, prueba en laboratorio acreditado BS 5852 con las fuentes requeridas y declaración BS 7176 por entorno, entregada con el expediente del proyecto." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Cumplimiento · Reino Unido &middot; {publicationDateLabel}</p>
+          <h1>BS 5852: Pruebas de Tapicería Ignífuga para Proyectos Hoteleros del Reino Unido</h1>
+          <p>La BS 5852 es la norma británica que evalúa la resistencia a la ignición de asientos y mobiliario tapizado, desde una silla de comedor hasta un sofá de lobby. Lo que la hace distinta de otras normas de inflamabilidad es que prueba el artículo terminado — tela, espuma, entretela e interliner ensamblados — y no solo los componentes por separado. Un tejido ignífugo sobre una espuma no ignífuga puede fallar la prueba; por eso la norma exige probar la construcción completa.</p>
+          <p>Para proyectos hoteleros en el Reino Unido, la BS 5852 se combina con la BS 7176, que clasifica el riesgo del entorno (bajo, medio, alto) y define qué fuentes de ignición debe superar cada mueble. Esta guía desglosa qué hace la prueba, la diferencia entre BS 5852 y BS 7176, qué significa para importar desde Asia y la lista de documentos que debe pedir al fabricante antes de ordenar.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-08-img-01-union-bastidor-silla.webp" alt="Silla tapizada de hotel evaluada para cumplimiento de seguridad contra incendios BS 5852" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>La respuesta corta para compradores hoteleros</h2>
+        <p>La BS 5852 establece qué fuentes de ignición debe resistir un asiento tapizado sin propagar un incendio: desde un cigarrillo que arde lentamente hasta una llama de mechero y, en los grados más altos, un "crib" de madera en llamas que simula un incendio real. La BS 7176 complementa la BS 5852 indicando qué nivel de peligro aplica a cada entorno: un dormitorio de hotel suele requerir peligro medio (fuentes 0, 1 y crib 5), mientras que una discoteca o sala de gran ocupación requiere peligro alto (añade crib 7).</p>
+        <p>En la práctica, para la mayoría de los muebles tapizados de un hotel — dormitorios, restaurantes, lobbies, salones de banquetes — el requisito es BS 5852 con fuente 0, 1 y crib 5, declarado como BS 7176 peligro medio. Los colchones y bases de cama siguen otra norma, la BS 7177. Pedir "BS 5852" a secas sin especificar las fuentes o el grado de peligro es una especificación incompleta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué hace realmente la prueba</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Fuente de ignición</th><th>Qué simula</th><th>Requisito típico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Fuente de ignición">Fuente 0</td><td data-label="Qué simula">Cigarrillo que arde lentamente</td><td data-label="Requisito típico">Todo mobiliario tapizado</td></tr>
+              <tr><td data-label="Fuente de ignición">Fuente 1</td><td data-label="Qué simula">Llama de fósforo (fuente pequeña)</td><td data-label="Requisito típico">Todo mobiliario tapizado</td></tr>
+              <tr><td data-label="Fuente de ignición">Fuente 2</td><td data-label="Qué simula">Llama de butano pequeña (equiv. fósforo)</td><td data-label="Requisito típico">A veces alternativa a fuente 1</td></tr>
+              <tr><td data-label="Fuente de ignición">Fuente 5 (crib 5)</td><td data-label="Qué simula">Criba de madera en llamas, ~20 g</td><td data-label="Requisito típico">BS 7176 peligro medio (dormitorios hotel, áreas públicas)</td></tr>
+              <tr><td data-label="Fuente de ignición">Fuente 7 (crib 7)</td><td data-label="Qué simula">Criba de madera mayor, ~126 g</td><td data-label="Requisito típico">BS 7176 peligro alto (discotecas, gran ocupación)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Grado BS 7176</th><th>Pruebas requeridas</th><th>Entornos típicos</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Grado BS 7176">Peligro bajo</td><td data-label="Pruebas requeridas">Fuente 0 + 1</td><td data-label="Entornos típicos">Oficinas, salas de espera de baja ocupación</td></tr>
+              <tr><td data-label="Grado BS 7176">Peligro medio</td><td data-label="Pruebas requeridas">Fuente 0 + 1 + crib 5</td><td data-label="Entornos típicos">Dormitorios de hotel, restaurantes, la mayoría de áreas públicas</td></tr>
+              <tr><td data-label="Grado BS 7176">Peligro alto</td><td data-label="Pruebas requeridas">Fuente 0 + 1 + crib 5 + crib 7</td><td data-label="Entornos típicos">Discotecas, teatros, áreas de gran ocupación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La prueba se realiza sobre una maqueta a escala real del asiento terminado: misma tela, misma espuma, misma construcción. El laboratorio aplica la fuente de ignición, mide la pérdida de masa y el tiempo de propagación de la llama, y verifica que no se produzca una combustión sostenida más allá de los límites. El resultado es un informe de laboratorio que documenta qué fuentes superó esa construcción exacta.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>BS 5852 vs BS 7176: la diferencia que importa</h2>
+        <p>La BS 5852 es el método de prueba (cómo se prueba); la BS 7176 es la especificación de aplicación (qué nivel necesita su entorno). Un fabricante puede decir "cumple BS 5852" y eso solo significa que el artículo pasó ciertas fuentes. Lo que el comprador hotelero debe especificar es "BS 5852 fuentes 0, 1 y crib 5, equivalente a BS 7176 peligro medio". Sin el grado de peligro, el mueble podría haber sido probado solo con cigarrillo y llama pequeña (peligro bajo), insuficiente para un dormitorio de hotel.</p>
+        <p>Al importar desde Asia, la diferencia es crítica porque muchos fabricantes ofrecen "cumplimiento BS 5852" con un informe de fuente 0 y 1 solamente, que es el nivel más bajo y el más barato de certificar. Verifique que el informe de laboratorio nombre las fuentes 0, 1 y crib 5 (o crib 7 si su entorno lo exige) y que el laboratorio esté acreditado por UKAS o un organismo equivalente reconocido.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué significa esto al importar desde Asia</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Qué demuestra</th><th>Quién lo emite</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">Informe de prueba de artículo terminado BS 5852</td><td data-label="Qué demuestra">Que la construcción real pasa las fuentes requeridas</td><td data-label="Quién lo emite">Laboratorio acreditado (UKAS o equivalente)</td></tr>
+              <tr><td data-label="Documento">Declaración de peligro BS 7176</td><td data-label="Qué demuestra">Que el mueble cumple el grado que su entorno necesita</td><td data-label="Quién lo emite">Proveedor, basado en el informe de prueba</td></tr>
+              <tr><td data-label="Documento">Certificado de tejido (si disponible)</td><td data-label="Qué demuestra">Datos de retardancia de llama de la tela</td><td data-label="Quién lo emite">Fábrica textil</td></tr>
+              <tr><td data-label="Documento">Ficha de espuma/entretela</td><td data-label="Qué demuestra">Grado de espuma y tratamiento ignífugo</td><td data-label="Quién lo emite">Proveedor de componentes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En la práctica, Hongye Furniture Group gestiona la cadena completa para proyectos del Reino Unido: selecciona tejidos y espumas compatibles con el requisito, construye el artículo terminado, lo envía a un laboratorio acreditado para la prueba BS 5852 con las fuentes requeridas y entrega la declaración BS 7176 con el grado de peligro de su entorno. Esto evita el error más común al importar: un tejido "ignífugo" certificado por separado que falla cuando se ensambla con una espuma incorrecta.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cumplimiento de seguridad contra incendios para toda la habitación</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Categoría de mobiliario</th><th>Norma relevante</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Categoría de mobiliario">Asientos tapizados</td><td data-label="Norma relevante">BS 5852 + BS 7176 (grado según entorno)</td></tr>
+              <tr><td data-label="Categoría de mobiliario">Colchones y bases de cama</td><td data-label="Norma relevante">BS 7177 (resistencia a la ignición)</td></tr>
+              <tr><td data-label="Categoría de mobiliario">Cabeceros tapizados</td><td data-label="Norma relevante">Tratados como mobiliario tapizado según BS 5852/BS 7176</td></tr>
+              <tr><td data-label="Categoría de mobiliario">Casegoods no tapizados</td><td data-label="Norma relevante">Sin prueba de fuente de ignición; construcción y rutas de evacuación según normativa de edificación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La seguridad contra incendios de una habitación de hotel no termina en el sofá: los colchones siguen la BS 7177, los cabeceros tapizados se tratan como mobiliario tapizado, y las cortinas pueden tener requisitos propios según la normativa local. Pida al fabricante una matriz de cumplimiento por categoría — no un certificado genérico — y guarde todos los informes en el expediente de entrega del proyecto: su aseguradora y la autoridad local pueden pedirlos durante la inspección.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Prepara un proyecto hotelero para el Reino Unido?"
+      text="Solicite una cotización con la matriz de cumplimiento BS 5852/BS 7176 por categoría de mobiliario e incluya los informes de laboratorio en el expediente de entrega."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

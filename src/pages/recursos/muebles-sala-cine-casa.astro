@@ -1,0 +1,460 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Muebles para Sala de Cine en Casa: Asientos, Pared Multimedia y Guía de Montaje";
+const pageDescription = "Muebles para sala de cine en casa: distancia de visión por tamaño de pantalla, consola multimedia, butacas vs sofás modulares, telas resistentes y acústica sin obra.";
+const keywords = [
+  "muebles sala cine casa",
+  "sala multimedia muebles",
+  "butacas cine casa",
+  "sofá modular sala tv",
+  "consola multimedia medidas",
+  "acústica sala de cine hogar"
+];
+const canonicalPath = "/recursos/muebles-sala-cine-casa/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-05-img-01-marco-sofa-taller.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿A qué distancia debo sentarme de una TV de 65\"?", answer: "Para 4K, el rango cómodo es de 2.0 a 2.6 m, con una distancia ideal de ~2.3 m. Eso requiere una sala con al menos 3.5 m de profundidad útil (pared a pared menos el sofá). Si tu sala es más corta, considera 55\" (~1.9 m de distancia, sala de 3.0 m+)." },
+    { question: "¿Butacas de cine o sofá modular para mi sala?", answer: "Para una sala dedicada solo a cine, butacas eléctricas (60-70 cm por asiento). Para una sala familiar de uso mixto, sofá modular (65-80 cm por asiento), más flexible y reconfigurable. El seccional con chaise es cómodo para descansar pero malo para que varios vean la misma pantalla." },
+    { question: "¿Qué tela aguanta mejor una sala de cine con niños y mascotas?", answer: "La tela Crypton o a prueba de líquidos es la mejor: los líquidos se repelen y ruedan, y las manchas se limpian con un paño. El poliéster de alto rendimiento es la alternativa accesible resistente a manchas. Evita terciopelo/chenilla si habrá niños o mascotas: es de alto mantenimiento." },
+    { question: "¿Cómo mejoro la acústica de mi sala sin hacer obra?", answer: "Tres acciones de mayor impacto: alfombra que cubra más del 60% del piso duro (elimina el eco del piso), paneles acústicos tras la pantalla o en paredes laterales (controlan los reflejos que ensucian el diálogo) y cortinas gruesas sobre ventanas. En salas cuadradas, trampas de graves en esquinas." },
+    { question: "¿Cuánto cuesta amueblar una sala de cine en casa?", answer: "Entre $2,250 y $4,700 en opción económica y $4,400-$10,000 en opción de confort (consola, asientos, alfombra acústica, mesas e iluminación), excluyendo TV y altavoces. Los asientos son la línea más alta: $1,200-$4,500 según el tipo." },
+    { question: "¿Fenmi Casa puede fabricar muebles a medida para mi sala?", answer: "Sí. Fenmi Casa diseña consolas, paredes de TV, sofás modulares y mesas de centro a medida, con telas de alto rendimiento, cantos sellados y opciones de acabado personalizadas. La fabricación toma 45-60 días y se envía a más de 50 países con garantía estructural." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hogar · Sala multimedia &middot; {publicationDateLabel}</p>
+          <h1>Muebles para Sala de Cine en Casa: Asientos, Pared Multimedia y Guía de Montaje</h1>
+          <p>Una sala de cine en casa — o sala multimedia — combina una pantalla grande (55" a 98"), un sistema de sonido, asientos cómodos y una pared o consola que organiza el equipo. Se amuebla distinto a una sala de estar porque su función es una sola: ver y escuchar bien. Eso convierte la distancia de visión, el ángulo de la pantalla y la acústica en prioridades de diseño, no en detalles.</p>
+          <p>Esta guía te lleva por el orden correcto: primero la distancia de visión según el tamaño de pantalla, luego la pared y la consola con la profundidad que tu equipo necesita, después los asientos — butacas, sofá modular o seccional —, las telas que sobreviven la vida real y, al final, la acústica que puedes mejorar sin contratar obra.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-05-img-01-marco-sofa-taller.webp" alt="Sala de cine en casa con pantalla grande, sofá modular y consola multimedia" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Empieza por la distancia de visión, no por la pared</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tamaño de pantalla</th><th>Rango cómodo 4K</th><th>Distancia ideal</th><th>Profundidad de sala necesaria</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tamaño de pantalla">55"</td><td data-label="Rango cómodo 4K">1.7-2.2 m</td><td data-label="Distancia ideal">~1.9 m</td><td data-label="Profundidad de sala necesaria">3.0 m+</td></tr>
+              <tr><td data-label="Tamaño de pantalla">65"</td><td data-label="Rango cómodo 4K">2.0-2.6 m</td><td data-label="Distancia ideal">~2.3 m</td><td data-label="Profundidad de sala necesaria">3.5 m+</td></tr>
+              <tr><td data-label="Tamaño de pantalla">75"</td><td data-label="Rango cómodo 4K">2.3-3.0 m</td><td data-label="Distancia ideal">~2.6 m</td><td data-label="Profundidad de sala necesaria">4.0 m+</td></tr>
+              <tr><td data-label="Tamaño de pantalla">85"</td><td data-label="Rango cómodo 4K">2.6-3.4 m</td><td data-label="Distancia ideal">~3.0 m</td><td data-label="Profundidad de sala necesaria">4.5 m+</td></tr>
+              <tr><td data-label="Tamaño de pantalla">98"</td><td data-label="Rango cómodo 4K">3.0-3.9 m</td><td data-label="Distancia ideal">~3.4 m</td><td data-label="Profundidad de sala necesaria">5.0 m+</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La distancia de visión 4K cómoda es de 1.5 a 2 veces la diagonal de la pantalla. Si tu sala tiene 3.5 m de profundidad útil (de la pared de la pantalla a la pared trasera menos el sofá), el tamaño dulce es 65" a 75". Una pantalla demasiado grande para la sala produce fatiga visual; una demasiado pequeña pierde el efecto cine. Mide la profundidad real antes de comprar la pantalla: es el número que gobierna toda la sala.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 1: la pared multimedia y la consola</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Profundidad de consola</th><th>Qué cabe</th><th>Ideal para</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Profundidad de consola">30-35 cm</td><td data-label="Qué cabe">TV slim, barra de sonido, cajas pequeñas</td><td data-label="Ideal para">TV flotante, equipo mínimo</td></tr>
+              <tr><td data-label="Profundidad de consola">35-40 cm</td><td data-label="Qué cabe">Barra + decodificadores + consolas de juego</td><td data-label="Ideal para">La mayoría de salas familiares</td></tr>
+              <tr><td data-label="Profundidad de consola">45-50 cm</td><td data-label="Qué cabe">Receptor AV en bahía abierta, altavoces grandes</td><td data-label="Ideal para">Cine en casa dedicado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Elige la consola después de listar el equipo, no antes. Mide la profundidad del receptor AV (los de gama alta necesitan 40-45 cm con ventilación), la altura de los decodificadores y el espacio para consolas de juego. Una consola de 35-40 cm de profundidad con bahía abierta para el receptor resuelve la mayoría de salas familiares; la pared multimedia (TV flotante con pasacables oculto) libera el suelo y da la imagen más limpia. Deja 5-10 cm libres alrededor de cada equipo para ventilación.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 2: asientos — butacas, sofás modulares o ambos</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de asiento</th><th>Ancho por asiento</th><th>Mejor sala</th><th>Rango de precio (3 plazas)</th><th>Contrapartida</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de asiento">Butaca de cine (eléctrica)</td><td data-label="Ancho por asiento">60-70 cm</td><td data-label="Mejor sala">Sala de medios dedicada</td><td data-label="Rango de precio (3 plazas)">$1,500-$4,500</td><td data-label="Contrapartida">Máxima comodidad, menos flexible</td></tr>
+              <tr><td data-label="Tipo de asiento">Sofá modular (configurable)</td><td data-label="Ancho por asiento">65-80 cm</td><td data-label="Mejor sala">Sala familiar de uso mixto</td><td data-label="Rango de precio (3 plazas)">$1,200-$4,000</td><td data-label="Contrapartida">Distribuciones flexibles, look casual</td></tr>
+              <tr><td data-label="Tipo de asiento">Seccional con chaise</td><td data-label="Ancho por asiento">70-85 cm</td><td data-label="Mejor sala">Espacio familiar de planta abierta</td><td data-label="Rango de precio (3 plazas)">$1,400-$4,500</td><td data-label="Contrapartida">Genial para descansar, malo para varios espectadores frente a una pantalla</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La elección depende de cuántas personas ven regularmente y de si la sala es solo cine o también sala familiar. Para una sala dedicada con asientos fijos, las butacas eléctricas con reposabrazos y portavasos dan la mejor experiencia. Para una sala familiar de uso mixto, el sofá modular es más flexible: puedes reconfigurarlo cuando el uso cambia. El seccional con chaise es cómodo para descansar pero malo para que varios espectadores vean la misma pantalla: quien queda en la chaise ve en ángulo. En una sala familiar con butacas y sofá, coloca las butacas en el centro frente a la pantalla y el sofá atrás o en ángulo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 3: telas y materiales que sobreviven la vida real</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tela / material</th><th>Ideal para</th><th>Lavable</th><th>Apto mascotas</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tela / material">Poliéster de alto rendimiento</td><td data-label="Ideal para">Salas familiares</td><td data-label="Lavable">Sí</td><td data-label="Apto mascotas">Bien</td><td data-label="Notas">Resistente a manchas, precio accesible</td></tr>
+              <tr><td data-label="Tela / material">Crypton / a prueba de líquidos</td><td data-label="Ideal para">Niños + mascotas</td><td data-label="Lavable">Excelente</td><td data-label="Apto mascotas">Excelente</td><td data-label="Notas">Los líquidos se repelen y ruedan</td></tr>
+              <tr><td data-label="Tela / material">Piel / polipiel</td><td data-label="Ideal para">Adultos, uso formal</td><td data-label="Lavable">Excelente</td><td data-label="Apto mascotas">Riesgo de rayado</td><td data-label="Notas">Más fresca en verano, envejece bien</td></tr>
+              <tr><td data-label="Tela / material">Terciopelo / chenilla</td><td data-label="Ideal para">Sala de medios de bajo tráfico</td><td data-label="Lavable">Pobre</td><td data-label="Apto mascotas">Pobre</td><td data-label="Notas">Hermosa pero de alto mantenimiento</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En una sala donde se comen botanas y conviven mascotas, la tela de alto rendimiento o la Crypton (a prueba de líquidos) son la elección práctica: las manchas se limpian con un paño y los líquidos no penetran. El terciopelo se ve espectacular pero es de alto mantenimiento — piénsalo dos veces si habrá niños o mascotas. La piel o polipiel es elegante y lavable, pero se raya con uñas de mascotas. Si la sala es de uso mixto familiar, prioriza la lavabilidad sobre la estética.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Paso 4: acústica sin contratista</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Acción de superficie blanda</th><th>Efecto</th><th>Costo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Acción de superficie blanda">Alfombra sobre &gt;60% del piso duro</td><td data-label="Efecto">Elimina el eco del piso, amortigua pasos</td><td data-label="Costo">$300-$1,200</td></tr>
+              <tr><td data-label="Acción de superficie blanda">Asientos tapizados (vs. madera)</td><td data-label="Efecto">Absorbe reflejos de media frecuencia</td><td data-label="Costo">Incluido en los asientos</td></tr>
+              <tr><td data-label="Acción de superficie blanda">Paneles acústicos tras la pantalla / paredes laterales</td><td data-label="Efecto">Controla primeros reflejos, aclara el diálogo</td><td data-label="Costo">$200-$1,000</td></tr>
+              <tr><td data-label="Acción de superficie blanda">Cortinas gruesas sobre ventanas</td><td data-label="Efecto">Reduce el eco de aleteo y el ruido exterior</td><td data-label="Costo">$200-$800</td></tr>
+              <tr><td data-label="Acción de superficie blanda">Trampas de graves en esquinas (opcional)</td><td data-label="Efecto">Domina el retumbo en salas cuadradas</td><td data-label="Costo">$150-$600</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La mejora acústica de mayor impacto no requiere obra: una alfombra que cubra más del 60% del piso duro elimina el eco del piso, y los paneles acústicos tras la pantalla o en las paredes laterales controlan los primeros reflejos que ensucian el diálogo. Las cortinas gruesas reducen tanto el eco como el ruido exterior. En salas cuadradas, unas trampas de graves en las esquinas dominan el retumbo. Haz primero la alfombra y los paneles; escucha la diferencia antes de gastar más.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Benchmarks de presupuesto para tu sala de cine</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Línea</th><th>Opción económica</th><th>Opción de confort</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Línea">Pared / consola multimedia</td><td data-label="Opción económica">$400-$900</td><td data-label="Opción de confort">$900-$2,000</td><td data-label="Notas">Profundidad acorde al equipo</td></tr>
+              <tr><td data-label="Línea">Asientos de 3 plazas</td><td data-label="Opción económica">$1,200-$2,200 (sofá modular)</td><td data-label="Opción de confort">$2,000-$4,500 (butacas eléctricas)</td><td data-label="Notas">La línea más alta</td></tr>
+              <tr><td data-label="Línea">Alfombra acústica + paneles</td><td data-label="Opción económica">$400-$900</td><td data-label="Opción de confort">$800-$1,800</td><td data-label="Notas">Primero alfombra, luego paneles</td></tr>
+              <tr><td data-label="Línea">Mesas laterales / snack</td><td data-label="Opción económica">$150-$400</td><td data-label="Opción de confort">$400-$900</td><td data-label="Notas">Mesas portavasos si hay butacas</td></tr>
+              <tr><td data-label="Línea">Iluminación (regulable)</td><td data-label="Opción económica">$100-$300</td><td data-label="Opción de confort">$300-$800</td><td data-label="Notas">Luz de sesgo tras la TV</td></tr>
+              <tr><td data-label="Línea">**Total mobiliario**</td><td data-label="Opción económica">**$2,250-$4,700**</td><td data-label="Opción de confort">**$4,400-$10,000**</td><td data-label="Notas">Excluye TV + altavoces</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El mobiliario de una sala de cine en casa cuesta $2,250-$10,000 según el nivel, excluyendo pantalla y audio. La línea más alta son los asientos — por eso conviene decidirlos con la distancia de visión y no al revés. Una consola de 35-40 cm, una alfombra grande y paneles acústicos básicos transforman una sala de estar normal en una experiencia de cine por una fracción del costo del equipo.</p>
+        <p>Fenmi Casa (la línea residencial de Hongye Furniture Group, fundada en 1996; 300,000+ m² de planta) diseña consolas multimedia, paredes de TV, sofás modulares y mesas de centro con acabados que combinan el diseño italiano con la fabricación certificada asiática: maderas con cantos sellados, telas de alto rendimiento y opciones a medida para tu sala. Cada pieza viaja con la garantía estructural y se fabrica en 45-60 días para envío a más de 50 países.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Listo para diseñar tu sala de cine en casa?"
+      text="Solicita una consultoría gratuita de diseño: te ayudamos a elegir la consola, los asientos y las telas según tu pantalla, tu equipo y el uso real de tu sala."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

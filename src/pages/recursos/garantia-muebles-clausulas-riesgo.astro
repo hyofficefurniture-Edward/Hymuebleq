@@ -1,0 +1,429 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Garantía de Muebles: 5 Cláusulas que Transfieren el Riesgo al Comprador";
+const pageDescription = "Garantía de muebles: 5 cláusulas que transfieren el riesgo al comprador (prorrateo, solo partes, exclusiones, instalación, plazos) y cómo negociarlas.";
+const keywords = [
+  "garantia muebles contract",
+  "cláusulas garantía muebles",
+  "reemplazo prorrateado",
+  "garantía partes muebles",
+  "exclusión acabado tela",
+  "negociar garantía fábrica muebles"
+];
+const canonicalPath = "/recursos/garantia-muebles-clausulas-riesgo/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-09-img-01-revision-cotizacion.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-08";
+const dateModified = "2026-09-08";
+const publicationDateLabel = "Publicada el 8 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué debe cubrir una garantía de muebles contract?", answer: "Una garantía equilibrada cubre defectos de fabricación: fallas estructurales (bastidores, uniones) por 5 años o más, y componentes de uso intenso (bisagras, rieles, espuma, costuras) por 2-3 años. Excluye desgaste normal, mal uso y alteración. El comprador debe poder reclamar defectos estructurales durante todo el período con aviso en 30 días desde la detección." },
+    { question: "¿Qué significa \"reemplazo prorrateado\" en una garantía de muebles?", answer: "Significa que la cobertura disminuye con el tiempo: en el año 2 el fabricante cubre el 80% de la pieza, en el año 3 el 60%, etc. Es aceptable para fallas cosméticas, pero debe negociarse que las fallas estructurales se cubran al 100% durante todo el período, con el fabricante asumiendo el flete del reemplazo." },
+    { question: "¿La garantía debe cubrir la tela y la espuma?", answer: "Sí, al menos parcialmente. La espuma y las costuras son lo que más falla en asientos de alto tráfico (hoteles, salas de espera). Negocie cobertura de pérdida de altura de espuma >15% por 3 años y costuras por 3 años. El desgaste del tejido por uso normal suele quedar excluido — es razonable, pero debe estar escrito." },
+    { question: "¿Qué condiciones de instalación pueden anular mi garantía?", answer: "Las cláusulas típicas exigen instalación certificada y ambiente de 20-25 °C con 40-60% de humedad. Negocie que estas condiciones se apliquen solo si el fabricante demuestra que fueron la causa de la falla, y pida un rango realista (15-32 °C, 35-70% HR) para climas tropicales y del Golfo." },
+    { question: "¿Cuál es la garantía de Hongye Furniture Group?", answer: "Hongye ofrece garantía estructural de 5 años (3 años en partes móviles, espuma y acabado) en muebles contract, respaldada por control de calidad de 36 etapas y pruebas BIFMA, FSC, GREENGUARD Gold y CE. El texto completo de la garantía se entrega antes de la orden de compra." },
+    { question: "¿Qué hago si el fabricante rechaza mi reclamo de garantía?", answer: "Revise el texto de la garantía contra la cláusula que invoca el fabricante. Si el reclamo es estructural y está dentro del período, exija la evidencia de que la exclusión aplica (p. ej. medición de humedad que demuestre la causa). Si el texto es ambiguo, la práctica comercial internacional tiende a interpretar las exclusiones en contra del redactor. Documente todo: fotos, informe y correspondencia." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [pageImageUrl],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Guía de compra · Garantías &middot; {publicationDateLabel}</p>
+          <h1>Garantía de Muebles: 5 Cláusulas que Transfieren el Riesgo al Comprador</h1>
+          <p>Una garantía de muebles contract asigna el riesgo de falla entre el fabricante y el comprador: qué cubre, por cuánto tiempo, bajo qué condiciones y con qué procedimiento de reclamo. La duración declarada ("garantía de 5 años") es solo el titular; el cuerpo del texto decide si esa garantía tiene valor real o es principalmente cosmética.</p>
+          <p>Los proyectos hoteleros, de oficina y de salud compran muebles con una vida útil prevista de 7-12 años. Una garantía de 5 años con reemplazo prorrateado puede significar que, a los 3 años de uso, el comprador pague el 60% del reemplazo de una pieza defectuosa. Esta guía revisa las cinco cláusulas más comunes que transfieren el riesgo al comprador y el lenguaje concreto para negociar un texto más equilibrado.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-09-img-01-revision-cotizacion.webp" alt="Documento de garantía de muebles con términos de cobertura sobre la mesa de un proyecto" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué asigna realmente una garantía</h2>
+        <p>Toda garantía de muebles asigna tres cosas: el riesgo de defectos de fabricación (cubierto), el riesgo de desgaste y mal uso (no cubierto), y el riesgo de interpretación (definido por exclusiones y condiciones). El fabricante serio cubre defectos de fabricación por un período razonable y excluye el desgaste normal, el mal uso y la alteración. El problema no es la existencia de exclusiones — son legítimas — sino las cláusulas que diluyen la cobertura de defectos reales: prorrateo agresivo, cobertura solo de partes, exclusiones amplias de acabado y tela, condiciones de instalación imposibles y plazos de reclamo cortos.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cláusula 1: Reemplazo prorrateado</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Mes de falla</th><th>Cobertura típica prorrateada</th><th>Lo que paga el comprador</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Mes de falla">Año 1</td><td data-label="Cobertura típica prorrateada">100% (pieza o reparación)</td><td data-label="Lo que paga el comprador">Flete e instalación</td></tr>
+              <tr><td data-label="Mes de falla">Año 2</td><td data-label="Cobertura típica prorrateada">80%</td><td data-label="Lo que paga el comprador">20% + flete + instalación</td></tr>
+              <tr><td data-label="Mes de falla">Año 3</td><td data-label="Cobertura típica prorrateada">60%</td><td data-label="Lo que paga el comprador">40% + flete + instalación</td></tr>
+              <tr><td data-label="Mes de falla">Año 4</td><td data-label="Cobertura típica prorrateada">40%</td><td data-label="Lo que paga el comprador">60% + flete + instalación</td></tr>
+              <tr><td data-label="Mes de falla">Año 5</td><td data-label="Cobertura típica prorrateada">20%</td><td data-label="Lo que paga el comprador">80% + flete + instalación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El reemplazo prorrateado no es inherentemente injusto: refleja que el mueble ya prestó servicio. El problema es cuando el prorrateo se combina con cláusulas que hacen pagar al comprador también el flete y la instalación del reemplazo. Una falla estructural en el año 3 puede terminar costando al comprador más del 50% del valor de una pieza nueva. Negocie que el prorrateo se aplique solo a fallas cosméticas, no a fallas estructurales, y que el fabricante asuma el flete del reemplazo en piezas estructurales.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cláusula 2: Cobertura solo de partes</h2>
+        <p>La cláusula "cubrimos las partes, no la mano de obra" suena razonable hasta que la pieza llega desarmada. En muebles contract importados, el costo de la mano de obra local para reemplazar una bisagra o un panel puede superar el costo de la parte. Y en piezas estructurales — un bastidor de cama, un marco de sofá — la "parte" no se puede reemplazar sin reconstruir la pieza completa.</p>
+        <p>Negocie que la garantía cubra parte y mano de obra de fábrica (reemplazo de la pieza completa cuando la falla es estructural), y que el comprador cubra solo la instalación local. Esta distinción — pieza completa vs. parte suelta — es la diferencia entre una garantía que protege el proyecto y una que solo protege la factura del fabricante.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cláusula 3: Exclusiones de acabado, tela y partes móviles</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Exclusión común</th><th>Impacto real</th><th>Qué negociar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Exclusión común">Acabado (laca, chapa, color)</td><td data-label="Impacto real">Excluye el defecto más visible: descascarado, amarilleo, pérdida de adherencia</td><td data-label="Qué negociar">Cubrir delaminación y falla de adherencia por 2-3 años</td></tr>
+              <tr><td data-label="Exclusión común">Tela / tapicería</td><td data-label="Impacto real">Excluye costuras, desgaste de tejido y decoloración</td><td data-label="Qué negociar">Cubrir costuras y falla de espuma por 3 años; desgaste por uso normal fuera</td></tr>
+              <tr><td data-label="Exclusión común">Partes móviles (bisagras, rieles)</td><td data-label="Impacto real">Excluye lo que más se usa en hoteles: cajones y puertas</td><td data-label="Qué negociar">Cubrir bisagras y rieles por 3-5 años</td></tr>
+              <tr><td data-label="Exclusión común">Espuma y cojines</td><td data-label="Impacto real">Excluye el colapso de espuma, la falla nº1 en asientos de alto tráfico</td><td data-label="Qué negociar">Cubrir pérdida de altura &gt;15% por 3 años</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las exclusiones de acabado, tela y partes móviles convierten la garantía en un cascarón: cubren el bastidor (que rara vez falla) y excluyen lo que falla en uso real. Un asiento de hotel rota 4-8 veces por servicio; su espuma y sus bisagras trabajan más que el marco. Una garantía que excluye espuma, herrajes y acabado protege muy poco al comprador de un hotel.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cláusula 4: Condiciones de instalación y ambiente</h2>
+        <p>Las garantías suelen condicionar la cobertura a la instalación por personal certificado y a condiciones ambientales de temperatura y humedad (típicamente 20-25 °C y 40-60% HR). Estas condiciones son razonables como especificación, pero se vuelven una trampa cuando el reclamo se rechaza por "instalación no certificada" sin exigir evidencia de que la instalación causó la falla, o por "humedad fuera de rango" sin medirla.</p>
+        <p>Negocie que las condiciones se apliquen solo cuando el fabricante demuestre que la condición fue la causa de la falla, y que se acepte un rango ambiental realista para el mercado del proyecto (p. ej. 15-32 °C y 35-70% HR para climas tropicales y del Golfo). Un hotel en Dubái o Singapur no puede mantener 40-60% HR sin deshumidificadores industriales.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cláusula 5: Plazos de reclamo y requisitos de aprobación</h2>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Requisito</th><th>Riesgo para el comprador</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Requisito">Reclamo en 14 días desde la entrega</td><td data-label="Riesgo para el comprador">Los defectos cosméticos aparecen al desempaquetar; los estructurales, a los 6-12 meses</td></tr>
+              <tr><td data-label="Requisito">Requiere inspección previa firmada</td><td data-label="Riesgo para el comprador">Si el proyecto no hizo inspección formal, la garantía queda sin efecto</td></tr>
+              <tr><td data-label="Requisito">Fotos + informe en 7 días</td><td data-label="Riesgo para el comprador">Plazo corto para un proyecto con múltiples partes interesadas</td></tr>
+              <tr><td data-label="Requisito">Aprobación previa del fabricante para reparar</td><td data-label="Riesgo para el comprador">Si repara sin aprobación, pierde la cobertura de esa pieza</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los plazos de reclamo cortos son la cláusula más subestimada. Una garantía de 5 años con reclamo en 14 días desde la entrega en la práctica cubre solo el daño visible de tránsito, no los defectos de uso. Negocie: defectos cosméticos reclamables en 30 días desde la entrega, defectos estructurales y funcionales reclamables durante todo el período de garantía con aviso en 30 días desde la detección.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo negociar un texto de garantía más equilibrado</h2>
+        <p>Solicite el texto completo de la garantía antes de firmar la orden de compra, no después. Marque las cinco cláusulas de esta guía y proponga el lenguaje equilibrado: prorrateo solo cosmético, pieza completa para fallas estructurales, cobertura de espuma/herrajes/acabado por períodos definidos, condiciones ambientales con carga de la prueba al fabricante, y plazos de reclamo según el tipo de defecto.</p>
+        <p>Un fabricante con control de calidad documentado acepta estos cambios porque sus tasas de falla reales son bajas. La negociación de garantía es, en sí misma, una prueba del fabricante: el que insiste en un texto que excluye todo probablemente tiene una tasa de falla que no quiere mostrar. Hongye Furniture Group publica su garantía estructural de 5 años (3 años en partes móviles, espuma y acabado) y la acompaña con informes de prueba BIFMA/FSC/GREENGUARD para que el comprador verifique la calidad antes de firmar.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere una garantía que proteja su proyecto, no solo su factura?"
+      text="Solicite el texto completo de nuestra garantía estructural de 5 años junto con su cotización, y reciba los informes de prueba BIFMA, FSC y GREENGUARD de las líneas que le interesan."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
