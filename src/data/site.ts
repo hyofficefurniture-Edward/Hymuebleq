@@ -76,13 +76,6 @@ export const navItems = [
   { label: "Educación", href: "/educacion/", catalog: "/catalogo/educacion/", products: "/productos-escolares/", projects: "/proyectos/educacion/" },
   { label: "Residencial", href: "/residencial/", catalog: "/catalogo/residencial/", products: "/productos-residenciales/", projects: "/proyectos/residencial/" },
   { label: "Fábrica", href: "/fabrica/" },
-  { label: "Productos", href: "/productos/", children: [
-    { label: "Mobiliario Hotelero", href: "/productos/" },
-    { label: "Mobiliario de Oficina", href: "/productos-oficina/" },
-    { label: "Mobiliario Médico", href: "/productos-medicos/" },
-    { label: "Mobiliario Escolar", href: "/productos-escolares/" },
-    { label: "Mobiliario Residencial", href: "/productos-residenciales/" },
-  ] },
   { label: "Recursos", href: "/recursos/", children: [
     { label: "Blog", href: "/recursos/blog/" },
     { label: "Videos", href: "/recursos/videos/" },
