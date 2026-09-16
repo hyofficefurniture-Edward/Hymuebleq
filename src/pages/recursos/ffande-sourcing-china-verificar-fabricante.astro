@@ -1,0 +1,462 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Compras FF&E China: cómo verificar al fabricante antes de la orden";
+const pageDescription = "Guía práctica de compras FF&E China: verifique fabricantes, audite certificaciones BIFMA y GREENGUARD Gold y proteja su inversión antes de emitir la orden.";
+const keywords = [
+  "compras FF&E China",
+  "verificar fabricante de muebles",
+  "auditoría proveedor muebles",
+  "FF&E hotelero",
+  "due diligence proveedor",
+  "mobiliario hotelero China"
+];
+const canonicalPath = "/recursos/ffande-sourcing-china-verificar-fabricante/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-04-img-01-linea-produccion-fabrica.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-16";
+const dateModified = "2026-09-16";
+const publicationDateLabel = "Publicada el 16 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cómo elegir un fabricante de FF&E en China?", answer: "Empiece por documentos, no por precio. Verifique la licencia comercial y el nombre del beneficiario, compruebe que el informe BIFMA corresponda a la categoría real de producto, confirme el número de certificado GREENGUARD Gold en el listado de UL y valide el código de cadena de custodia FSC. Después pida un video en vivo sin edición de la línea que fabricará su pedido y compre una muestra paga. Si las cuatro verificaciones pasan, tiene una lista corta con la que vale la pena negociar." },
+    { question: "¿Qué debo revisar antes de pedir muebles de hotel a China?", answer: "Seis cosas: la muestra dorada firmada por ambas partes, tolerancias dimensionales en milímetros escritas en la orden de compra, una puerta de inspección previa al pago final, especificación de empaque con etiqueta por habitación, el voltaje y enchufe correcto para su mercado y un plazo máximo de retrabajo en días. Confirme también por escrito el plazo de producción de 45-60 días más 25-35 días de tránsito, y construya su calendario con esos números, no con estimaciones de ventas." },
+    { question: "¿Es seguro comprar mobiliario de FF&E en China?", answer: "Sí, con la misma disciplina que aplicaría a cualquier proveedor remoto. Los riesgos son estructurales, no geográficos: subcontratación a talleres no verificados, certificación con la norma equivocada, nombres de beneficiario que no coinciden e inspecciones colocadas después del pago. Corrija esos cuatro puntos en el contrato y el riesgo restante es el ordinario de flete y cronograma, que el seguro y el embarque por fases manejan bien." },
+    { question: "¿Cuánto se ahorra realmente comprando FF&E en China?", answer: "Espere un 30-50 % frente a una especificación comparable de fábrica de Europa Occidental o Norteamérica en casos duros, tapicería y soft seating. Descuente de ese ahorro un 10-15 % para cubrir inspecciones, flete aéreo de muestras y un ciclo de retrabajo. En pedidos pequeños el ahorro se estrecha: por debajo de 40-60 habitaciones o de 150.000 USD, el flete y la inspección suelen borrar la ventaja." },
+    { question: "¿Qué certificaciones debe tener un proveedor de mobiliario hotelero?", answer: "ANSI/BIFMA X5.1-2017 para asientos de uso general, X5.4 para butacas de lounge y áreas públicas —que es lo que son la mayoría de las piezas de lobby— y X5.5 para escritorios y mesas. Para calidad de aire en habitaciones, UL GREENGUARD Gold, que limita más de 360 COV individuales más el COV total siguiendo los métodos de la Sección 01350 de California. Añada FSC de cadena de custodia si la madera entra en su especificación de sostenibilidad, y marcado CE para componentes eléctricos en proyectos europeos." },
+    { question: "¿Se puede auditar a un proveedor de muebles en China a distancia?", answer: "En su mayor parte, sí. La verificación de certificados es totalmente remota. El estado de la fábrica queda bien cubierto con un video continuo y sin edición, con fecha visible, más una inspección de tercera parte antes del pago final, que cuesta entre 300 y 600 USD por día-hombre. Lo que la verificación remota realmente no puede evaluar es cómo se comporta la fábrica bajo presión de cronograma en el cuarto mes; por eso una llamada de referencia con un hotel cliente previo, preguntando por las dos últimas semanas antes de la entrega, vale más que cualquier documento." },
+    { question: "¿Qué plazo debo planificar para un paquete FF&E de hotel de 180 habitaciones?", answer: "Planifique de 13 a 18 semanas desde el congelamiento de especificaciones hasta la entrega en obra: 3-5 semanas de aprobación de muestras, 1-2 semanas de la orden al inicio de producción, 45-60 días de producción, 5-10 días de inspección y posible retrabajo, 25-35 días de flete marítimo y 10-14 días de aduana y entrega interna. En propiedades de más de 200 habitaciones, embarque primero las piezas de áreas públicas y habitación muestra para iniciar la instalación antes de que el resto salga de fábrica." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [`https://hymueble.com${/assets/hymueble/recursos/blog/images/hym-04-img-01-linea-produccion-fabrica.webp}`,
+  `https://hymueble.com${hmo-01-img-02.jpg}`,
+  `https://hymueble.com${hmo-12-img-01.png}`],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Compras internacionales · FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Compras FF&amp;E China: guía práctica para verificar al fabricante de muebles antes de emitir la orden</h1>
+          <p>Comprar mobiliario de proyecto en China sigue siendo una decisión rentable y segura, pero solo cuando usted audita la fábrica con el mismo rigor con que evaluaría a un contratista general. Mi regla de trabajo, forjada en más de una década de paquetes hoteleros, es simple: ninguna orden de compra sale de mi escritorio hasta que he visto en vivo la línea de producción que va a fabricar mi pedido, he verificado de forma independiente los números de certificado en las bases de datos oficiales y tengo firmado el registro de muestra dorada. Este artículo es ese proceso, incluidas las partes que cuestan dinero y consumen semanas.</p>
+          <p>En las próximas páginas encontrará la verificación documental previa al anticipo, cómo leer una auditoría de fábrica sin viajar, qué método de verificación detecta cada riesgo y qué cláusulas contractuales marcan la diferencia. Lo verá con cifras reales: costos por habitación, plazos de 45-60 días y tolerancias en milímetros. En Guangdong Hongye Furniture Group operamos más de 300.000 m² de planta con más de 1.000 trabajadores cualificados, y escribo esto desde el lado de quien pasa las auditorías todos los meses.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-01-linea-produccion-fabrica.webp" alt="Línea de producción en la fábrica de mobiliario durante una auditoría de proveedor" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Por qué las compras FF&amp;E China siguen ganando en cifras — y dónde dejan de ganar?</h2>
+        <p>La aritmética no admite discusión. En un hotel de 180 habitaciones de servicio selecto, un paquete de habitación especificado en 4.800 USD por clave con un fabricante europeo suele quedar entre 2.400 y 3.360 USD por clave con una fábrica de Guangdong de capacidad comparable. Esa es la banda del 30-50 % de ventaja de coste, y se sostiene en casos duros, tapicería y soft seating. No se sostiene por igual en todo: los muebles sueltos viajan bien y comprimen más el precio; los paneles de carpintería a medida con exigencias de emparejado de veta comprimen menos, porque la mano de obra ahorrada se pierde en rechazos y reelaboraciones.</p>
+        <p>¿Dónde deja de ganar China? En pedidos pequeños y urgentes. Si necesita 12 sillas de lobby en 30 días, un tapicero local le gana a cualquier fábrica china cuando suma el flete aéreo de muestras, una ventana de producción de 45-60 días, 25-35 días de tránsito marítimo y la distribución final en destino. En mi experiencia, el punto de equilibrio está alrededor de 40-60 habitaciones o unos 150.000 USD de FF&amp;E; por debajo de eso, el flete y la inspección se comen el ahorro.</p>
+        <p>Hay un tercer equilibrio que casi nadie nombra: el de la certificación. GREENGUARD Gold exige cumplir los métodos de prueba de la Sección 01350 del Departamento de Salud Pública de California, con límites sobre más de 360 compuestos orgánicos volátiles individuales más el COV total. Una fábrica que ya mantiene la certificación Gold en su cadena de paneles y espumas cotiza más rápido y más barato que una que debe enviar cada acabado nuevo a laboratorio. Pregunte temprano si la certificación se sostiene a nivel de material o de producto terminado; esa respuesta mueve su costo de forma visible.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Componente</th><th>Rango típico por habitación (USD)</th><th>Riesgo si no se planifica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Componente">Casos duros: velador, escritorio, armario</td><td data-label="Rango típico por habitación (USD)">900 - 1.300</td><td data-label="Riesgo si no se planifica">Desajuste de veta y de alineación de cajones</td></tr>
+              <tr><td data-label="Componente">Tapicería y cabeceros</td><td data-label="Rango típico por habitación (USD)">600 - 950</td><td data-label="Riesgo si no se planifica">Variación de tono entre lotes de tela</td></tr>
+              <tr><td data-label="Componente">Soft seating y piezas de lobby</td><td data-label="Rango típico por habitación (USD)">250 - 500</td><td data-label="Riesgo si no se planifica">Densidad de espuma por debajo de especificación</td></tr>
+              <tr><td data-label="Componente">Iluminación y espejos</td><td data-label="Rango típico por habitación (USD)">180 - 350</td><td data-label="Riesgo si no se planifica">Voltaje y tipo de enchufe incorrectos</td></tr>
+              <tr><td data-label="Componente">Reserva: muestras, inspección y retoques</td><td data-label="Rango típico por habitación (USD)">120 - 220</td><td data-label="Riesgo si no se planifica">Quedarse sin presupuesto para corregir defectos</td></tr>
+              <tr><td data-label="Componente">Total realista ponderado</td><td data-label="Rango típico por habitación (USD)">2.050 - 3.320</td><td data-label="Riesgo si no se planifica">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Fíjese en la última fila de la reserva. Es la partida que los compradores primerizos omiten y la que separa un proyecto ordenado de una cadena de discusiones por correo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Las cinco verificaciones documentales antes de pagar un anticipo</h2>
+        <p>Cinco documentos, unas 48 horas de trabajo de escritorio, y habrá eliminado a la mayoría de los proveedores que debía eliminar. Esta parte de la due diligence no cuesta nada y es la que más ahorra. Primero, la licencia comercial con el código de crédito social unificado, cotejada contra el nombre de la empresa en la factura y en la cuenta bancaria; un beneficiario cuyo nombre no coincide con la razón social es la estructura más común detrás de disputas por anticipos.</p>
+        <p>Segundo, el informe de pruebas BIFMA, y debe corresponder a la categoría exacta de producto. ANSI/BIFMA X5.1-2017 cubre sillas de uso general y su revisión de 2017 elevó la carga de prueba al percentil 95 masculino, 125 kg. X5.5 cubre escritorios y mesas; X5.4 cubre butacas de lounge, que es lo que en realidad son la mayoría de las sillas de lobby. Si un proveedor le muestra un informe X5.1 para butacas de lobby, le mostró el documento equivocado. Tercero, el número de certificado GREENGUARD Gold, verificado en el listado propio de UL y no aceptado como PDF. Cuarto, el código de cadena de custodia FSC, comprobable en fsc.org. Quinto, un documento de propiedad o arrendamiento de la planta que muestre la dirección que aparecerá en su informe de inspección.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-01-img-02.jpg" alt="Almacén de materia prima e inspección de entrada en fábrica de muebles" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Almacén de materia prima con paneles etiquetados y estación de inspección de entrada en planta de muebles.</figcaption>
+        </figure>
+        <p>Una verificación adicional que vale oro: pida el nombre del gerente de calidad de la fábrica y un correo de trabajo con dominio de la propia planta. Las empresas comerciales canalizan todo por ventas. Cuando un supuesto fabricante no puede presentar un solo contacto del área de operaciones, la producción está ocurriendo en un lugar que ellos no controlan.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo leer una auditoría de fábrica sin subirse a un avión</h2>
+        <p>Una inspección de tercera parte en planta antes del embarque cuesta entre 300 y 600 USD por día-hombre y es la partida de mayor retorno en un presupuesto de mobiliario hotelero. Pero el informe solo sirve si usted sabe qué mirar, y la mayoría de los compradores se detiene en la página resumen.</p>
+        <p>Lea primero el inventario de equipos. Router CNC, canteadoras, una línea de acabado en spray o base agua y una estación propia de corte de espuma indican integración vertical real. Si la tapicería aparece como capacidad pero no hay mesa de corte, ni piso de costura, ni inventario de espuma, ese trabajo se está subcontratando a un taller que usted nunca verificó. Después revise los registros de calibración de los instrumentos de medición y las lecturas del medidor de espesor de acabado: una fábrica que registra esos datos es una fábrica que puede sostener una tolerancia. Por último, pida el número de trabajadores por departamento, no el total de la web; un piso con 40 operarios en carpintería y 6 en tapicería le dice exactamente qué se fabrica adentro y qué no.</p>
+        <p>Los recorridos por video han reemplazado en gran parte mis visitas de primera ronda, y los trato como evidencia, no como cortesía. Pido una grabación continua y sin edición de la línea específica que fabricará mi pedido, con la fecha visible, y les pido abrir el cajón correcto, mostrar la parte trasera del mueble y pasar la cámara por el área de paneles. Diez minutos de eso me dicen más que una presentación comercial de 40 páginas. Y cuando llegue la etapa de acabados, pida ver la línea de recubrimiento en polvo si su especificación incluye estructuras metálicas: la uniformidad del espesor de capa y el control de horno son ahí lo que la veta es en madera.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Comparación de métodos de verificación: qué detecta cada uno y qué se le escapa</h2>
+        <p>Cada método de verificación detecta algo y deja pasar otra cosa. Comprarlos todos es un desperdicio; comprar uno solo es negligencia. Así los pondero yo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Método</th><th>Qué detecta</th><th>Qué no detecta</th><th>Costo y plazo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Método">Verificación de documentos y certificados</td><td data-label="Qué detecta">Acreditaciones inválidas, categoría de norma equivocada, beneficiario que no coincide</td><td data-label="Qué no detecta">Calidad real de producción, honestidad sobre capacidad</td><td data-label="Costo y plazo">Casi cero, 2-3 días</td></tr>
+              <tr><td data-label="Método">Video en vivo sin edición</td><td data-label="Qué detecta">Equipos reales, línea real, profundidad de almacén</td><td data-label="Qué no detecta">Calidad de acabado al detalle, presión sobre el personal</td><td data-label="Costo y plazo">Bajo, 1-2 días</td></tr>
+              <tr><td data-label="Método">Inspección previa al embarque de tercera parte</td><td data-label="Qué detecta">Desviaciones dimensionales contra muestra dorada, defectos de acabado, empaque</td><td data-label="Qué no detecta">Capacidad de corregir lo que se encuentra</td><td data-label="Costo y plazo">300-600 USD/día-hombre, 2-4 días</td></tr>
+              <tr><td data-label="Método">Muestra paga con especificación completa</td><td data-label="Qué detecta">Tolerancias, igualación de tono, tacto de herrajes, densidad de espuma</td><td data-label="Qué no detecta">Consistencia en volumen de 200 unidades</td><td data-label="Costo y plazo">400-1.200 USD por muestra, 2-3 semanas</td></tr>
+              <tr><td data-label="Método">Pedido de prueba (1 habitación completa)</td><td data-label="Qué detecta">Plazo real, empaque real, documentación real</td><td data-label="Qué no detecta">Precios a escala de proyecto</td><td data-label="Costo y plazo">Nivel de anticipo, 6-9 semanas</td></tr>
+              <tr><td data-label="Método">Llamada de referencia con hotel cliente previo</td><td data-label="Qué detecta">Conducta de entrega bajo presión de cronograma</td><td data-label="Qué no detecta">Nada si las referencias son seleccionadas a dedo</td><td data-label="Costo y plazo">Cero, 1-2 días</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="hmo-12-img-01.png" alt="Línea de recubrimiento en polvo para acabados de muebles en fábrica" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Línea de recubrimiento en polvo automatizada aplicando acabado uniforme sobre estructuras metálicas de muebles.</figcaption>
+        </figure>
+        <p>Mi regla es gastar en exactamente tres: documentos, video y una muestra paga. Para órdenes por encima de 250.000 USD, añada la inspección previa al embarque como condición contractual del pago final. El pedido de prueba es la señal más fuerte de todas, pero le cuesta al proyecto de seis a nueve semanas; úselo cuando la relación es nueva y el cronograma tiene holgura, no cuando la fecha de instalación ya está fijada.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Es seguro comprar FF&amp;E en China? Las cláusulas que lo deciden</h2>
+        <p>Preguntar si es seguro comprar FF&amp;E en China es la pregunta equivocada. La correcta es si su contrato asigna los riesgos específicos que estas cadenas de suministro realmente tienen. La seguridad es un problema de diseño de contrato, no de país.</p>
+        <p>Escriba la muestra dorada dentro de la orden de compra como referencia física aprobada y firmada por ambas partes, con tolerancias dimensionales en milímetros y un código de acabado con nombre propio —no nogal, sino el código real del proveedor y su nivel de brillo. Fije la puerta de inspección antes del pago final, no después del embarque: cuando el contenedor ya está en el mar, su palanca se convirtió en un descuento para el próximo pedido. Especifique el empaque para su ruta y su obra: control de humedad, protección de esquinas y cada unidad etiquetada por número de habitación, para que el equipo de instalación no esté clasificando 180 cabeceros en un estacionamiento. Declare voltaje y tipo de enchufe para todo componente eléctrico según el mercado de destino, y acote la obligación de retrabajo en días, no en buena voluntad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Cláusula</th><th>Qué exigir por escrito</th><th>Riesgo si falta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Cláusula">Muestra dorada</td><td data-label="Qué exigir por escrito">Referencia física firmada con tolerancias en mm y código de acabado</td><td data-label="Riesgo si falta">Discusiones subjetivas sobre qué es aceptable</td></tr>
+              <tr><td data-label="Cláusula">Puerta de inspección</td><td data-label="Qué exigir por escrito">Aprobación previa al embarque como condición del pago final</td><td data-label="Riesgo si falta">Sin palanca de negociación una vez embarcado</td></tr>
+              <tr><td data-label="Cláusula">Términos de pago</td><td data-label="Qué exigir por escrito">30 % anticipo, 40 % tras aprobación de inspección, 30 % contra BL escaneado</td><td data-label="Riesgo si falta">Proveedor que insiste en 50/50 sin inspección</td></tr>
+              <tr><td data-label="Cláusula">Empaque</td><td data-label="Qué exigir por escrito">Control de humedad, esquinas protegidas, etiqueta por habitación</td><td data-label="Riesgo si falta">Retrasos de instalación y daños en tránsito</td></tr>
+              <tr><td data-label="Cláusula">Retrabajos</td><td data-label="Qué exigir por escrito">Plazo máximo en días para corregir defectos detectados</td><td data-label="Riesgo si falta">Correcciones indefinidas que condicionan la apertura</td></tr>
+              <tr><td data-label="Cláusula">Demoras</td><td data-label="Qué exigir por escrito">Penalizador por retraso declarado aunque nunca se reclame</td><td data-label="Riesgo si falta">Su orden pierde prioridad en el piso de planta</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los pagos que reflejan el riesgo real se ven así: 30 % de anticipo, 40 % contra aprobación de la inspección previa al embarque y 30 % contra conocimiento de embarque escaneado. Un proveedor que insiste en 50/50 sin paso de inspección le está diciendo cómo espera que salga esa inspección. Y ponga el penalizador por demora por escrito incluso si nunca piensa reclamarlo; esa cláusula cambia cómo se programa su orden en el piso.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Calendario realista: del cierre de especificaciones a la instalación</h2>
+        <p>El error más caro que veo en FF&amp;E es un cronograma construido hacia atrás desde un plazo pesimista y comprimido en el último mes con flete aéreo. Mejor parta de la fecha de instalación y reste con honestidad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Etapa</th><th>Duración realista</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Etapa">Congelamiento de especificación y aprobación de muestras</td><td data-label="Duración realista">3-5 semanas</td><td data-label="Notas">Incluye una ronda de revisión</td></tr>
+              <tr><td data-label="Etapa">De la emisión de la orden al inicio de producción</td><td data-label="Duración realista">1-2 semanas</td><td data-label="Notas">Cobro del anticipo y liberación de materiales</td></tr>
+              <tr><td data-label="Etapa">Producción (paquete de 150-200 habitaciones)</td><td data-label="Duración realista">45-60 días</td><td data-label="Notas">Más si hay carpintería a medida pesada</td></tr>
+              <tr><td data-label="Etapa">Inspección previa al embarque y retrabajos</td><td data-label="Duración realista">5-10 días</td><td data-label="Notas">Presupueste un ciclo de corrección</td></tr>
+              <tr><td data-label="Etapa">Flete marítimo a puerto del Golfo o europeo</td><td data-label="Duración realista">25-35 días</td><td data-label="Notas">Temporada alta añade 7-10 días</td></tr>
+              <tr><td data-label="Etapa">Aduana y entrega interna en destino</td><td data-label="Duración realista">10-14 días</td><td data-label="Notas">La secuencia por piso añade tiempo</td></tr>
+              <tr><td data-label="Etapa">Total desde congelamiento hasta obra</td><td data-label="Duración realista">13-18 semanas</td><td data-label="Notas">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos variables mueven este calendario más que cualquier otra. Primera, la aprobación de acabados: un cliente que aprueba el tinte en la semana dos en lugar de la semana cinco gana tres semanas gratis. Segunda, el embarque por fases. En propiedades de más de 200 habitaciones, despacho primero las piezas de áreas públicas y habitación muestra, de modo que la instalación arranque mientras el resto de las habitaciones sigue en producción. Esa secuencia cuesta algo de flete y recupera un riesgo de cronograma que ningún proveedor puede comprimir.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Listo para verificar a su próximo fabricante de FF&E?"
+      text="Hongye Furniture Group, fundada en 1996, opera más de 300.000 m² de planta con más de 1.000 trabajadores cualificados y certificaciones BIFMA, GREENGUARD Gold, FSC y CE verificables en las bases de los organismos emisores. Explore nuestras líneas en /productos/, envíe su especificación por /contacto/ y recibirá en una sola respuesta el paquete cotizado, un calendario de producción realista de 45-60 días y los números de certificado para que usted mismo los compruebe antes de pagar un anticipo."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

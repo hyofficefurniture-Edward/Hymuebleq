@@ -1,0 +1,460 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario laboratorio STEM: superficies, ventilación y layout";
+const pageDescription = "Mobiliario laboratorio STEM para K-12 y universidad: mesas laboratorio escolar, encimeras epóxicas, campana extracción laboratorio y layout flexible.";
+const keywords = [
+  "mobiliario laboratorio STEM",
+  "mesas laboratorio escolar",
+  "campana extracción laboratorio",
+  "encimeras epóxicas laboratorio",
+  "mobiliario laboratorio flexible",
+  "mesas laboratorio química"
+];
+const canonicalPath = "/recursos/mobiliario-laboratorio-stem/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-16";
+const dateModified = "2026-09-16";
+const publicationDateLabel = "Publicada el 16 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué mobiliario se necesita en un laboratorio STEM?", answer: "Cinco grupos: bancos y superficies resistentes a productos químicos, campana de extracción o cerramiento filtrante, armarios con armario de ácidos e inflamables, banquetas o sillas de altura regulable, y servicios en el banco con energía, gas, agua y datos. En K-12 prevea 24-30 puestos; en educación superior, 16-24 más anchos, con ducha y lavaojos dentro de la distancia exigida." },
+    { question: "¿Cuál es el mejor material para las mesas de laboratorio escolar?", answer: "La resina epóxica de 25 mm (1 in) es la mejor opción general para química: resiste ácidos, bases, disolventes y calor y se ensaya bajo criterios SEFA 3. La fenólica es la alternativa económica para ciencias generales y biología, y el acero inoxidable 304 conviene en microbiología. El laminado de alta presión es el más barato y el menos resistente: resérvelo para física y robótica." },
+    { question: "¿Cómo se planifica un layout flexible para un laboratorio STEM?", answer: "Fije los servicios en una corrida perimetral, donde van lavabos, gas y campana, y haga móvil el centro del aula. Los bancos móviles con cajas de piso suman un 15-30 % a la partida de mobiliario, pero cambian el aula del formato magistral a puestos de laboratorio en menos de 10 minutos. Especifique la capacidad de las ruedas según el peso cargado." },
+    { question: "¿Qué velocidad de captación debe exigir en una campana de extracción?", answer: "Exija 80-100 fpm (0,41-0,51 m/s) de velocidad media en el plano frontal con la abertura de la hoja de diseño, y pida que el fabricante declare la altura a la que se mide. Verifique la contención con un ensayo de gas trazador ANSI/ASHRAE 110-2016 en la puesta en marcha y repítalo al menos una vez al año, como espera OSHA 29 CFR 1910.1450." },
+    { question: "¿Cuánto cuesta equipar un laboratorio STEM?", answer: "Un laboratorio docente básico de K-12 con 24 puestos ronda los 28.000-55.000 USD en paquete de mobiliario; uno de química con encimeras epóxicas y campana, 55.000-95.000 USD; y uno de educación superior con 20 puestos, 70.000-140.000 USD. El mobiliario móvil suma un 15-30 %. Son importes de mobiliario: la obra mecánica y eléctrica va aparte y suele ser mayor." },
+    { question: "¿Qué normas aplican al mobiliario y a las superficies de laboratorio?", answer: "SEFA 8 cubre el mobiliario de laboratorio por material (8-W madera, 8-M metal, 8-PL laminado, 8-PH fenólico, 8-P polipropileno) y SEFA 3 la resistencia química de las superficies. En campanas, SEFA 1 y ANSI/ASHRAE 110-2016 gobiernan la contención, y SEFA 9 aplica a cerramientos sin conducto." },
+    { question: "¿Cuánto tarda la fabricación y la instalación del mobiliario de laboratorio?", answer: "Cuente con 45-60 días de producción desde los planos de taller aprobados, más dos a cuatro semanas de aprobación tras la orden de compra, y dos a tres semanas de instalación. Si debe abrir en el semestre de otoño, licite el paquete en el primer trimestre del año." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [`https://hymueble.com${/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp}`,
+  `https://hymueble.com${hmo-04-img-02.png}`,
+  `https://hymueble.com${hmo-16-img-02.png}`],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Educación · Laboratorios &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para laboratorio STEM: mesas, campana de extracción y diseño flexible</h1>
+          <p>Un laboratorio STEM no se resuelve con mobiliario de aula con otro acabado: funciona como un sistema de contención química en el que además se sientan estudiantes. Todo lo que importa se deriva de tres preguntas que el pliego debe responder antes de pedir un solo armario: qué químicos se usarán, hacia dónde van los vapores y quién tendrá que reordenar el aula el próximo septiembre sin llamar al fontanero. Para K-12 y educación superior la respuesta es la misma lista de cinco grupos y los mismos números, aplicados con distinta intensidad: 24-30 puestos en secundaria y 16-24 más anchos en aulas universitarias, encimeras epóxicas de 25 mm donde se hace química y campanas de 80-100 fpm de velocidad frontal, verificadas con un ensayo de contención ANSI/ASHRAE 110-2016 antes de que entre el primer grupo.</p>
+          <p>En esta guía encontrará qué contiene un paquete completo, cómo se comparan los materiales de superficie en resistencia química y coste, qué números de ventilación hay que cumplir para pasar inspección y en qué orden debe emitirse la compra para no pagar dos veces los servicios. Hongye Furniture Group fabrica mobiliario de laboratorio, encimeras epóxicas y cerramientos de campana con referencias SEFA, con una ventaja de coste del 30-50 % y un plazo de producción de 45-60 días.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp" alt="Aula escolar con mesas y sillas modulares configurables para laboratorios STEM" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué mobiliario y equipos necesita realmente un laboratorio STEM?</h2>
+        <p>Un laboratorio STEM no se equipa con un solo tipo de mueble, sino con cinco grupos que se especifican a la vez: superficies que soportan la química, cerramiento que captura los vapores, armarios para reactivos y material de vidrio, asientos a la altura correcta del banco y servicios de energía, gas, agua y datos. Las observaciones que veo apuntan casi siempre a un grupo que quedó fuera del pliego, no a un banco mal fabricado.</p>
+        <p>El grupo de servicios es el que más veces se compra tarde y se paga dos veces: si la energía y el gas no se prevén en la corrida de bancos junto con la distribución del mobiliario, la adecuación posterior obliga a cortar la encimera y a tirar líneas nuevas por muros terminados.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Grupo de mobiliario</th><th>Qué incluye</th><th>Dotación típica en K-12</th><th>Dotación típica en educación superior</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Grupo de mobiliario">Superficies y bancos</td><td data-label="Qué incluye">Encimeras epóxicas, fenólicas o inoxidables sobre bastidor fijo o móvil</td><td data-label="Dotación típica en K-12">24-30 puestos, islas de 4 o 6 alumnos</td><td data-label="Dotación típica en educación superior">16-24 puestos, más superficie por alumno</td></tr>
+              <tr><td data-label="Grupo de mobiliario">Captación de vapores</td><td data-label="Qué incluye">Campana con conducto o cerramiento filtrante</td><td data-label="Dotación típica en K-12">1 campana por aula, uso demostrativo</td><td data-label="Dotación típica en educación superior">2-6 campanas, más cabina de bioseguridad</td></tr>
+              <tr><td data-label="Grupo de mobiliario">Armarios y almacenamiento</td><td data-label="Qué incluye">Bajos, altos, columna, armario de ácidos e inflamables</td><td data-label="Dotación típica en K-12">Bajo banco con llave y un armario químico</td><td data-label="Dotación típica en educación superior">Más volumen para disolventes, inflamables separado</td></tr>
+              <tr><td data-label="Grupo de mobiliario">Asientos</td><td data-label="Qué incluye">Banquetas y sillas de altura regulable, base de 5 patas</td><td data-label="Dotación típica en K-12">Banquetas dimensionadas al banco, 24-30 unidades</td><td data-label="Dotación típica en educación superior">Banquetas y sillas para bancos de instrumentos</td></tr>
+              <tr><td data-label="Grupo de mobiliario">Servicios en el banco</td><td data-label="Qué incluye">Energía, gas, agua y desagüe, datos, ducha y lavaojos</td><td data-label="Dotación típica en K-12">2 tomas por banco, 1 torreta cada 2 bancos, 1 lavabo</td><td data-label="Dotación típica en educación superior">Más densidad eléctrica, varias torretas, datos por puesto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos omisiones se repiten: un lavabo demasiado pequeño o poco profundo para el material de vidrio del currículo, que es un problema de dimensiones y no de fontanería, y una torreta colocada donde el brazo del estudiante barre al agitar.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Superficies de trabajo: resina epóxica, fenólica o acero inoxidable</h2>
+        <p>La superficie de trabajo decide la durabilidad química y buena parte del presupuesto. La resina epóxica es la opción por defecto para química húmeda: un compuesto vertido y curado, de 25 mm (1 in) en docencia, que resiste ácidos, bases, disolventes y calor y aguanta décadas de derrames que ampollarían un laminado.</p>
+        <p>La resina fenólica maciza es la opción intermedia: soporta ciencias generales y biología, pesa y cuesta menos, y falla con disolventes agresivos o ácidos concentrados en caliente. El acero inoxidable tipo 304 es la elección especialista para microbiología y trabajo estéril, porque no es poroso y se limpia bien, aunque se raya a la vista.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material de superficie</th><th>Espesor / especificación</th><th>Resistencia química</th><th>Laboratorio idóneo</th><th>Índice de coste relativo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Material de superficie">Resina epóxica</td><td data-label="Espesor / especificación">25 mm (1 in) en docencia</td><td data-label="Resistencia química">La más alta frente a ácidos, bases y disolventes; ensayo SEFA 3</td><td data-label="Laboratorio idóneo">Química húmeda en K-12 y universidad</td><td data-label="Índice de coste relativo">100 (base)</td></tr>
+              <tr><td data-label="Material de superficie">Resina fenólica maciza</td><td data-label="Espesor / especificación">19-25 mm</td><td data-label="Resistencia química">Buena en química general; menor tolerancia a reactivos concentrados en caliente</td><td data-label="Laboratorio idóneo">Ciencias generales, biología, preparación</td><td data-label="Índice de coste relativo">70-85</td></tr>
+              <tr><td data-label="Material de superficie">Acero inoxidable tipo 304</td><td data-label="Espesor / especificación">Calibre 16-18 sobre sustrato</td><td data-label="Resistencia química">No poroso y fácil de limpiar; limitado frente a ácidos halogenados</td><td data-label="Laboratorio idóneo">Microbiología, zonas limpias</td><td data-label="Índice de coste relativo">90-120</td></tr>
+              <tr><td data-label="Material de superficie">Laminado de alta presión</td><td data-label="Espesor / especificación">25-32 mm</td><td data-label="Resistencia química">El más bajo de los cuatro; solo para trabajo sin química</td><td data-label="Laboratorio idóneo">Física, robótica, matemáticas</td><td data-label="Índice de coste relativo">35-55</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El intercambio que planteo a quien quiere sacar la epóxica del presupuesto es este: sustituirla por laminado ahorra un 40-60 % de esa partida y el primer año la superficie parece aceptable; al tercero, los derrames han penetrado en el sustrato y usted cambia encimeras en un edificio ocupado, con mano de obra e interrupción de clases. Mi regla: gaste donde se hace química y ahorre donde no.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-04-img-02.png" alt="Panorama del taller de fabricación de mobiliario de laboratorio escolar y encimeras epóxicas." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Vista general del taller donde se mecanizan y curan las superficies epóxicas y los módulos de laboratorio.</figcaption>
+        </figure>
+        <p>Al comparar propuestas, asigne material por zona en lugar de un único producto para todo el edificio y defina la carga viva aparte del bastidor: en docencia se calcula para 4,9-12,2 kN/m² (100-250 lb/ft²), pero una encimera pesada sobre un bastidor ligero flexiona igual y ese movimiento raja el material junto al lavabo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona del laboratorio</th><th>Superficie recomendada</th><th>Espesor mínimo</th><th>Carga viva de diseño</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona del laboratorio">Química húmeda (K-12 y universidad)</td><td data-label="Superficie recomendada">Resina epóxica</td><td data-label="Espesor mínimo">25 mm</td><td data-label="Carga viva de diseño">4,9-12,2 kN/m² (100-250 lb/ft²)</td></tr>
+              <tr><td data-label="Zona del laboratorio">Biología y sala de preparación</td><td data-label="Superficie recomendada">Resina fenólica maciza</td><td data-label="Espesor mínimo">19 mm</td><td data-label="Carga viva de diseño">4,9 kN/m² (100 lb/ft²)</td></tr>
+              <tr><td data-label="Zona del laboratorio">Microbiología y trabajo estéril</td><td data-label="Superficie recomendada">Acero inoxidable tipo 304</td><td data-label="Espesor mínimo">Calibre 16</td><td data-label="Carga viva de diseño">3,4 kN/m² (70 lb/ft²)</td></tr>
+              <tr><td data-label="Zona del laboratorio">Física, robótica y matemáticas</td><td data-label="Superficie recomendada">Laminado de alta presión</td><td data-label="Espesor mínimo">25 mm</td><td data-label="Carga viva de diseño">4,9 kN/m² (100 lb/ft²)</td></tr>
+              <tr><td data-label="Zona del laboratorio">Sala de ácidos e inflamables</td><td data-label="Superficie recomendada">Fenólica o polipropileno ventilado</td><td data-label="Espesor mínimo">19 mm</td><td data-label="Carga viva de diseño">3,4 kN/m² (70 lb/ft²)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Ventilación y campana de extracción laboratorio: los números que debe exigir</h2>
+        <p>Una campana de extracción laboratorio solo funciona si el aire que cruza su plano frontal se mantiene en una banda estrecha: demasiado lento y los vapores salen al aula, demasiado rápido y la turbulencia los lleva a la zona de respiración del estudiante. Especifique 80-100 fpm (0,41-0,51 m/s) de velocidad media con la abertura de la hoja de diseño y exija que el fabricante declare la altura a la que se mide.</p>
+        <p>Toda campana debería referenciar SEFA 1 y ensayarse en contención según ANSI/ASHRAE 110-2016, que usa gas trazador y un maniquí para medir lo que llega a la zona de respiración. El ensayo se hace en tres condiciones: tal como se fabrica, tal como se instala y tal como se usa.</p>
+        <p>La norma de laboratorios de OSHA, 29 CFR 1910.1450, exige que campanas y equipos de protección se revisen con regularidad: planifique un ensayo anual como mínimo. Un cerramiento sin conducto necesita control de saturación y calendario de filtros, un coste recurrente que los centros olvidan presupuestar. Para cabinas de bioseguridad la referencia es NSF 49 y para incendios en laboratorios, NFPA 45.</p>
+        <p>La ubicación pesa tanto como el número: una campana junto a una rejilla de impulsión, bajo una ventana practicable o en un paso de circulación pierde contención por corrientes cruzadas, por bien que salga el ensayo en banco, y los criterios de NIOSH sobre corrientes de aire apuntan igual. Primero se coloca la campana y después se dibuja el mobiliario.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Servicios de energía, gas y agua, y ergonomía del puesto de trabajo</h2>
+        <p>Los servicios son el punto donde un laboratorio STEM deja de ser mobiliario y pasa a ser infraestructura del edificio, así que la distribución debe cerrarse antes de la obra gruesa de mecánica y electricidad.</p>
+        <p>En el banco, prevea dos tomas dobles por puesto en K-12 y entre dos y cuatro en educación superior, con circuitos dedicados para instrumentos. Una torreta de gas sirve dos bancos y cada corrida lleva cañería rígida o conexión flexible certificada, nunca manguera suelta. El lavabo es donde más se equivocan los pliegos: profundidad y altura del borde son dimensiones del mobiliario y deben confirmarse contra las buretas y matraces del currículo.</p>
+        <p>En datos, un punto por puesto en K-12 y uno o dos con VLAN de instrumentos en el superior. La ducha de emergencia y el lavaojos deben quedar a unos 10 segundos de recorrido desde cada puesto. Mi consejo constante es sobreprovisionar la canalización: el tubo es barato en un muro abierto y carísimo con el aula terminada, y en los proyectos donde dejamos un 40 % de capacidad libre nunca lo hemos lamentado.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-16-img-02.png" alt="Taburete de laboratorio escolar de altura regulable y tapizado resistente a productos químicos." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Banqueta de altura regulable con base de cinco patas, ajustada a la altura real del banco de laboratorio.</figcaption>
+        </figure>
+        <p>La ergonomía empieza por la altura. Un banco docente queda entre 850 y 900 mm y la banqueta debe cubrir ese rango con al menos 150 mm de regulación, base de cinco patas, aro reposapiés y tapizado químico. En infantil y primaria manda EN 1729; en secundaria y universidad, el ajuste individual, porque en un grupo conviven estudiantes de 150 cm y de 185 cm. Si el asiento no regula, el estudiante se inclina hacia el banco y la postura se rompe a los veinte minutos. Para durabilidad, pida ensayo BIFMA y verifique la elevación con la carga real.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Diseño flexible: mobiliario móvil frente a mobiliario fijo</h2>
+        <p>Aquí los centros compran demasiada flexibilidad o demasiado poca, y conviene ser honesto con el intercambio en lugar de vender por defecto la opción más cara. El mobiliario fijo se ancla al muro con servicios rígidos: es lo más robusto, lo más barato por metro lineal y la respuesta correcta en un laboratorio húmedo universitario cuya distribución no cambiará en veinte años.</p>
+        <p>El mobiliario móvil sobre ruedas o patas nivelantes permite pasar de formato magistral a formato de laboratorio dentro del mismo periodo de clase. La prima es del 15-30 % en la partida de mobiliario y trae dos condiciones: los bancos necesitan conexiones flexibles o cajas de piso, y la capacidad de las ruedas debe especificarse por escrito, porque un banco cargado sobre ruedas infravaloradas es un problema de seguridad, no de muebles.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Enfoque de layout</th><th>Posición de coste</th><th>Tiempo de reconfiguración</th><th>Idóneo para</th><th>Limitación principal</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Enfoque de layout">Mobiliario fijo en muro e islas ancladas</td><td data-label="Posición de coste">El más bajo por metro lineal</td><td data-label="Tiempo de reconfiguración">Semanas (requiere gremios)</td><td data-label="Idóneo para">Laboratorios húmedos de educación superior</td><td data-label="Limitación principal">Rígido: cada cambio exige fontanería y electricidad</td></tr>
+              <tr><td data-label="Enfoque de layout">Islas fijas con almacenamiento móvil</td><td data-label="Posición de coste">Bajo a moderado</td><td data-label="Tiempo de reconfiguración">Horas</td><td data-label="Idóneo para">Aulas docentes universitarias, preparación</td><td data-label="Limitación principal">La geometría de las islas no cambia</td></tr>
+              <tr><td data-label="Enfoque de layout">Bancos móviles con cajas de piso</td><td data-label="Posición de coste">+15-30 % sobre el mobiliario</td><td data-label="Tiempo de reconfiguración">Menos de 10 minutos por aula</td><td data-label="Idóneo para">Laboratorios K-12 multigrado, aulas STEM compartidas</td><td data-label="Limitación principal">Exige cajas de piso; la rueda se especifica según la carga</td></tr>
+              <tr><td data-label="Enfoque de layout">Híbrido: perímetro fijo e islas móviles</td><td data-label="Posición de coste">Moderado</td><td data-label="Tiempo de reconfiguración">Minutos para el centro del aula</td><td data-label="Idóneo para">Aulas que dan clase magistral y práctica en un mismo periodo</td><td data-label="Limitación principal">El perímetro permanece fijo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En K-12 gana el argumento flexible: un laboratorio de secundaria aloja tres grados y dos currículos en la misma semana, y un aula que no cambia de forma se esquiva en el horario. Mi recomendación es el híbrido: fije lavabos, gas y campana en una corrida perimetral y haga móvil el centro del aula.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Costes, plazos y secuencia de compra del paquete de laboratorio</h2>
+        <p>Las cifras deben leerse contra lo que incluyen, porque el coste por banco significa cosas distintas en cada cotización. Los rangos cubren el paquete de mobiliario y armarios, no la obra mecánica, eléctrica y de fontanería, que va en línea contractual aparte y a menudo la supera. Un laboratorio docente básico de K-12 con 24 puestos se mueve entre 28.000 y 55.000 USD; uno de química con encimeras epóxicas de 25 mm y campana, entre 55.000 y 95.000; y uno de educación superior con 20 puestos, entre 70.000 y 140.000. El mobiliario flexible suma un 15-30 %.</p>
+        <p>El plazo de producción va de 45-60 días desde los planos de taller aprobados, y esa aprobación ocupa de dos a cuatro semanas tras la orden de compra; la instalación añade dos a tres semanas. Un laboratorio que deba abrir en el semestre de otoño se licita en el primer trimestre. Los proyectos que se retrasan casi siempre esperan la lista de equipos, no la fábrica de muebles.</p>
+        <p>Hongye Furniture Group, fundada en 1996, opera un complejo industrial de más de 300.000 m² con más de 1.000 trabajadores cualificados y ha entregado más de 1.000 proyectos en más de 50 países, incluidos más de 47 marcas hoteleras internacionales. Su división de educación fabrica mobiliario de laboratorio, encimeras epóxicas y fenólicas, campanas con y sin conducto y asientos STEM, con certificación BIFMA, GREENGUARD Gold, FSC y CE.</p>
+        <p>La ventaja de coste es del 30-50 % frente a paquetes equivalentes fabricados en Occidente, con las mismas referencias SEFA y la misma documentación de ensayo. Puede ver el catálogo en /productos/mobiliario-laboratorio/, comparar criterios en /recursos/ y enviar su plano acotado desde /contacto/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite una cotización por banco para su laboratorio STEM"
+      text="Envíe el plano acotado del laboratorio, la lista de químicos del currículo y las necesidades de energía y gas. Con esos tres documentos devolvemos una cotización por banco con comparativa de materiales de encimera, datos de ensayo referenciados a SEFA, documentación de contención ANSI/ASHRAE 110 y un calendario alineado con su ciclo académico. Plazo de producción de 45-60 días y ventaja de coste del 30-50 %."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

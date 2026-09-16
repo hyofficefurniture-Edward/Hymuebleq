@@ -1,0 +1,462 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Muebles antiligadura para salud mental: guía y especificación";
+const pageDescription = "Especificación de muebles antiligadura para mobiliario salud mental: tolerancias de 3 mm, carga de 400 lb, Joint Commission, CMS y FGI por sala.";
+const keywords = [
+  "muebles antiligadura",
+  "mobiliario salud mental",
+  "mobiliario psiquiátrico seguridad",
+  "muebles para unidad psiquiátrica",
+  "prevención de anclaje en hospitales",
+  "especificación FF&E salud conductual"
+];
+const canonicalPath = "/recursos/muebles-antiligadura-salud-mental/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-16";
+const dateModified = "2026-09-16";
+const publicationDateLabel = "Publicada el 16 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué son exactamente los muebles antiligadura?", answer: "Son piezas diseñadas para que no exista ningún punto donde un cordón, una sábana u otra tela puedan formar un lazo con anclaje sostenible. En concreto: ningún hueco superior a 3 mm en puntos de pinzamiento, ningún gancho ni perilla expuesta, perfiles inclinados o achaflanados en lugar de bordes horizontales, y herrajes que fallan estructuralmente muy por encima de la carga prevista. Es una propiedad de diseño, no una certificación: no existe una norma acreditada de producto, así que se verifica con planos, tolerancias medidas e informes de ensayo." },
+    { question: "¿Qué normativa aplica al mobiliario psiquiátrico de seguridad?", answer: "En Estados Unidos el marco es por capas. Joint Commission NPSG.15.01.01 y NPG.08.01.01 exigen evaluación y mitigación del riesgo ambiental; CMS 42 CFR 482.13(c)(2) establece el derecho del paciente a un entorno seguro y es la cita habitual en inspecciones. Las FGI Guidelines fijan requisitos de diseño por habitación, NFPA 101 regula el bloqueo de puertas y la lista MHEOCC del VA es el inventario de anclajes por accesorio más detallado de acceso público." },
+    { question: "¿Cómo se reduce el riesgo de anclaje en la habitación de un paciente?", answer: "En este orden: fije el nivel de riesgo de la habitación, elimine los anclajes por diseño en lugar de añadir protecciones y, después, documente lo que queda. Eso significa especificar montaje oculto resistente a manipulación, superficies inclinadas en lugar de bordes horizontales, armarios sin riel de colgar, marcos de espejo y dosificador sellados y herrajes con arranque superior a 400 lb. Luego mida cada hueco con galga de 3 mm, corrija y vuelva a medir." },
+    { question: "¿«Antiligadura» y «ligature-resistant» significan lo mismo?", answer: "Sí, en los pliegos de compra son sinónimos, aunque ligature-resistant es el término preferido en documentación clínica y regulatoria. Conviene vigilar un matiz: algunos proveedores lo usan para decir que el producto resiste un intento concreto de anclaje, y otros para decir que no tiene ningún punto de anclaje. Pida la tolerancia de hueco y la resistencia al arranque del herraje: esos dos números resuelven la ambigüedad más rápido que la etiqueta." },
+    { question: "¿Cuánto cuesta el mobiliario antiligadura?", answer: "La sillería de grado salud conductual se sitúa entre USD 850 y USD 2.400 por unidad, frente a USD 250–600 de una silla sanitaria estándar comparable, y el mobiliario de caja lleva un sobrecoste de 2 a 3 veces. El diferencial viene del material, del montaje oculto y de volúmenes de producción menores. El plazo de producción de 45-60 días se cuenta desde planos aprobados." },
+    { question: "¿El diseño antiligadura hace que las habitaciones parezcan institucionales?", answer: "Puede hacerlo, y ese es el equilibrio central del diseño de unidades de salud mental. Lo que cierra esa brecha es el material y el color más que el herraje: superficie sólida con aspecto de madera, HDPE en tonos cálidos, asientos blandos en zonas de menor acuidad y salas de calma con asiento integrado y luz difusa. Lo correcto es fijar el nivel de riesgo por habitación y devolver calidez hasta el máximo que ese nivel permita." },
+    { question: "¿Se puede especificar mobiliario antiligadura sin fabricación a medida?", answer: "En parte: la sillería rotomoldeada y el mobiliario de caja estándar suelen venir de programas de stock, lo que acorta plazo y reduce coste. Lo que casi siempre exige trabajo a medida es la integración fijada a muro o anclada a solera: los montajes, revestimientos y piezas de superficie sólida que deben encajar exactamente con el soporte de la habitación. Presupueste planos a medida para esas partidas y exija al fabricante el detalle de instalación, no solo el producto." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [`https://hymueble.com${/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp}`,
+  `https://hymueble.com${hmo-08-img-01.png}`,
+  `https://hymueble.com${hmo-05-img-01.png}`],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Salud · Seguridad del paciente &middot; {publicationDateLabel}</p>
+          <h1>Muebles antiligadura para salud mental: diseño, ensayos y especificación por sala</h1>
+          <p>Los muebles antiligadura —llamados ligature-resistant o anti-ligature en los pliegos en inglés— son piezas diseñadas para que no exista ningún punto donde un cordón, una sábana o una prenda puedan formar un lazo con anclaje sostenible. En la práctica eso se traduce en cifras: ningún hueco superior a 3 mm en puntos de pinzamiento, ningún gancho, perilla o cabeza de tornillo expuesta, perfiles inclinados o achaflanados en lugar de bordes horizontales, y herrajes que fallan estructuralmente muy por encima de la carga prevista. En una habitación general un sillón falla si se rompe. En una unidad psiquiátrica falla si tiene un hueco de 25 mm entre el brazo y el bastidor del asiento. Materiales, herrajes, ensayos y sobrecoste se derivan de esa única restricción.</p>
+          <p>Esta guía reúne el marco normativo, los números de ensayo, las especificaciones de material y una tabla de especificación sala por sala que puede adjuntar a su cronograma de FF&amp;E. La firma un equipo que fabrica mobiliario contract desde 1996 y opera más de 300.000 m² de planta con más de 1.000 trabajadores cualificados.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp" alt="Detalle del acabado manual y bordes redondeados en mobiliario para salud conductual" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué normativa aplica realmente al mobiliario psiquiátrico de seguridad?</h2>
+        <p>No existe una certificación única de «mueble antiligadura». Si un proveedor afirma tenerla, pregúntele qué organismo acreditado la emitió. Lo que existe es un marco por capas: un deber regulatorio de evaluar el entorno, normas de diseño y guías voluntarias que traducen todo eso a detalle de habitación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Autoridad</th><th>Documento o requisito</th><th>Qué le obliga a hacer</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Autoridad">Joint Commission</td><td data-label="Documento o requisito">NPSG.15.01.01 (riesgo de suicidio)</td><td data-label="Qué le obliga a hacer">Evaluar el entorno frente a riesgos de anclaje; eliminar o mitigar lo identificado</td></tr>
+              <tr><td data-label="Autoridad">Joint Commission</td><td data-label="Documento o requisito">NPG.08.01.01 (entorno conductual)</td><td data-label="Qué le obliga a hacer">Mantener un entorno seguro y funcional; documentar el riesgo ambiental</td></tr>
+              <tr><td data-label="Autoridad">CMS</td><td data-label="Documento o requisito">42 CFR 482.13(c)(2) — derechos del paciente</td><td data-label="Qué le obliga a hacer">El paciente tiene derecho a un entorno seguro; es la cita habitual en inspecciones</td></tr>
+              <tr><td data-label="Autoridad">FGI</td><td data-label="Documento o requisito">FGI Guidelines / FGI Code, capítulos conductuales</td><td data-label="Qué le obliga a hacer">Requisitos de diseño por habitación, incluidas salas de calma</td></tr>
+              <tr><td data-label="Autoridad">NFPA</td><td data-label="Documento o requisito">NFPA 101 Life Safety Code</td><td data-label="Qué le obliga a hacer">Bloqueo de puertas en unidades de salud conductual</td></tr>
+              <tr><td data-label="Autoridad">VA</td><td data-label="Documento o requisito">Mental Health Environment of Care Checklist (MHEOCC)</td><td data-label="Qué le obliga a hacer">Lista de verificación de anclajes por habitación más detallada de acceso público</td></tr>
+              <tr><td data-label="Autoridad">ANSI/BIFMA</td><td data-label="Documento o requisito">X5.1 y X5.11</td><td data-label="Qué le obliga a hacer">Metodología de ensayo de carga que aplican los fabricantes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos lecturas importan. Primero: la Joint Commission y CMS canalizan el riesgo de anclaje a través de la evaluación de riesgo ambiental, así que la carga recae sobre usted. Hace falta un proceso documentado y un registro de lo encontrado y corregido. Una orden de compra no es un artefacto de cumplimiento; una evaluación con hallazgos fechados sí.</p>
+        <p>Segundo: la lista MHEOCC del Departamento de Asuntos de Veteranos (VA) recorre habitación por habitación y accesorio por accesorio lo que hay que revisar, y es de acceso público.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Ingeniería antiligadura: tolerancias de hueco, eliminación de anclajes y carga</h2>
+        <p>En la práctica, la normativa es un conjunto de reglas dimensionales y estructurales. Estos son los umbrales con los que trabaja la mayoría de los especificadores.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Parámetro</th><th>Tolerancia típica especificada</th><th>Por qué existe</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Parámetro">Hueco en pinzamientos y bisagras</td><td data-label="Tolerancia típica especificada">≤ 3 mm (1/8 in); algunos pliegos admiten &lt; 4,8 mm</td><td data-label="Por qué existe">Una esquina de sábana se enhebra y se anuda en cualquier hueco mayor</td></tr>
+              <tr><td data-label="Parámetro">Borde superior de puerta</td><td data-label="Tolerancia típica especificada">Chaflán de 30° o perfil inclinado</td><td data-label="Por qué existe">Elimina el borde horizontal como anclaje sobre la puerta</td></tr>
+              <tr><td data-label="Parámetro">Holgura puerta-marco</td><td data-label="Tolerancia típica especificada">3 in (76 mm) máximo en cabecera y jambas (lista VA)</td><td data-label="Por qué existe">Las jambas anchas funcionan como gancho</td></tr>
+              <tr><td data-label="Parámetro">Resalte expuesto</td><td data-label="Tolerancia típica especificada">≤ 3 mm respecto al plano de la cara</td><td data-label="Por qué existe">No hay nada alrededor de lo cual formar un lazo</td></tr>
+              <tr><td data-label="Parámetro">Radio de esquinas</td><td data-label="Tolerancia típica especificada">≥ 6 mm; radios interiores tan amplios como permita la geometría</td><td data-label="Por qué existe">Elimina aristas de carga y puntos donde se traba un cordón</td></tr>
+              <tr><td data-label="Parámetro">Arranque del herraje</td><td data-label="Tolerancia típica especificada">Ensayado por encima de 400 lb (181 kg)</td><td data-label="Por qué existe">El punto de anclaje debe fallar antes de sostener carga</td></tr>
+              <tr><td data-label="Parámetro">Carga estática de asiento y estante</td><td data-label="Tolerancia típica especificada">400 lb (181 kg) de prueba; bariátrico 400–750 lb</td><td data-label="Por qué existe">El bastidor antiligadura elimina el material que soporta la carga</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La cifra de 400 lb no es arbitraria: sigue la metodología de carga de prueba de ANSI/BIFMA X5.1, y de X5.11 para asientos de mayor corpulencia. Quitar cartelas, travesaños y tornillos vistos elimina la estructura que soporta la carga, así que una silla fijada a muro transfiere todo el peso a través de un montaje oculto resistente a la manipulación. Ese montaje es la ingeniería.</p>
+        <p>La elección de material explica buena parte del sobrecoste.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material</th><th>Dónde se usa</th><th>Por qué se especifica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Material">Polietileno de alta densidad (HDPE)</td><td data-label="Dónde se usa">Asientos moldeados, paneles, cabeceros</td><td data-label="Por qué se especifica">Se moldea sin uniones ni tornillos vistos y resiste la desinfección agresiva</td></tr>
+              <tr><td data-label="Material">Poliuretano rotomoldeado</td><td data-label="Dónde se usa">Sillería y superficies moldeadas</td><td data-label="Por qué se especifica">Curvas continuas sin aristas donde se trabe un cordón</td></tr>
+              <tr><td data-label="Material">Acero laminado en frío soldado y esmerilado</td><td data-label="Dónde se usa">Sillas, mesas, mobiliario fijo</td><td data-label="Por qué se especifica">Soldadura continua sin huecos, tuercas ni cabezas de tornillo</td></tr>
+              <tr><td data-label="Material">Superficie sólida mineral (tipo Corian)</td><td data-label="Dónde se usa">Tapas de lavabo, alféizares, revestimientos</td><td data-label="Por qué se especifica">Se termina sin juntas abiertas y admite reparación in situ</td></tr>
+              <tr><td data-label="Material">Roble o arce macizo con acabado de superficie sólida</td><td data-label="Dónde se usa">Zonas de menor acuidad y transición</td><td data-label="Por qué se especifica">Devuelve calidez sin reintroducir rieles ni ganchos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El detalle de fabricación decisivo es la soldadura continua. Un bastidor de acero soldado en cada intersección y esmerilado después no presenta hueco, cabeza de tornillo ni rendija donde se trabe un cordón —ni donde se acumule carga biológica. Por eso fotografiamos la soldadura en nuestra propia planta en lugar de apoyarnos en renders: la diferencia entre un bastidor correcto y uno deficiente solo se ve ahí.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-08-img-01.png" alt="Unión reforzada del bastidor de una silla de mobiliario psiquiátrico de seguridad con soldadura continua" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Detalle del refuerzo del bastidor de una silla antiligadura: unión soldada y esmerilada sin huecos ni tornillos vistos.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Especificación sala por sala de muebles antiligadura</h2>
+        <p>Aproximadamente nueve de cada diez suicidios de pacientes hospitalizados en unidades psiquiátricas ocurren en la habitación o en el baño. Esa proporción debería decidir a dónde va el presupuesto. El marco siguiente sigue los niveles de riesgo de la Behavioral Health Design Guide (nivel 1 = menor riesgo; nivel 5 = mayor).</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Sala o zona</th><th>Riesgos de anclaje</th><th>Especificación de mobiliario y accesorios</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Sala o zona">Habitación de paciente (nivel 4–5)</td><td data-label="Riesgos de anclaje">Bastidor de cama, cabecero, barandilla, armario, herrajes, riel de cortina</td><td data-label="Especificación de mobiliario y accesorios">Cama con fijaciones ocultas; cabecero inclinado integrado; armarios sin riel de colgar; puertas achaflanadas</td></tr>
+              <tr><td data-label="Sala o zona">Baño del paciente</td><td data-label="Riesgos de anclaje">Barras de apoyo, ducha, toallero, espejo, dosificador, bisagras</td><td data-label="Especificación de mobiliario y accesorios">Barras con brida oculta; grifería de bajo caudal; sin ganchos de toalla; marcos sellados; bisagra ≤ 3 mm</td></tr>
+              <tr><td data-label="Sala o zona">Sillería y sala de día</td><td data-label="Riesgos de anclaje">Brazos, bastidores, estructura inferior de mesas, costuras</td><td data-label="Especificación de mobiliario y accesorios">Sillería rotomoldeada o con soldadura continua, brazos inclinados, 400 lb de prueba; mesas con pie central</td></tr>
+              <tr><td data-label="Sala o zona">Sala de calma y desescalada</td><td data-label="Riesgos de anclaje">Todo lo anterior, más cerradura y vidrio de observación</td><td data-label="Especificación de mobiliario y accesorios">Nivel 5 completo: sin mobiliario suelto, superficies moldeadas, asiento integrado y bloqueo conforme a NFPA 101</td></tr>
+              <tr><td data-label="Sala o zona">Estación de personal</td><td data-label="Riesgos de anclaje">Línea de visión, voladizo del puesto</td><td data-label="Especificación de mobiliario y accesorios">Mobiliario de caja que conserva la visibilidad hacia puertas de habitación y entradas de baño</td></tr>
+              <tr><td data-label="Sala o zona">Transición y baja acuidad (nivel 1–3)</td><td data-label="Riesgos de anclaje">Riesgo reducido, no eliminado</td><td data-label="Especificación de mobiliario y accesorios">Mobiliario duradero que recupera sensación de hogar —superficie sólida con aspecto de madera, asientos blandos— sin perder la construcción sin anclajes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las filas de menor acuidad deciden el equilibrio entre dignidad y seguridad, y es un equilibrio real, no un eslogan. Una unidad de transición de nivel 1–2 puede llevar una mesa de noche con tirador porque el perfil de riesgo y el modelo de observación lo permiten. Una unidad de nivel 5 no puede, y fingir lo contrario pone a pacientes en riesgo. El criterio: fijar el nivel de riesgo por habitación antes de escribir el cronograma de FF&amp;E y documentar el razonamiento, porque esa documentación es lo que pide un inspector.</p>
+        <p>Ese criterio también ordena la compra: exija planos de montaje, tolerancias medidas y certificados por lote. Nuestra gama por tipología está en /productos/ y las fichas técnicas en /recursos/.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo se ejecuta una evaluación de riesgo de anclaje</h2>
+        <p>Una evaluación de riesgo de anclaje es un recorrido con galga de espesores, cámara y registro escrito. No requiere software caro; requiere constancia. Va en cinco pasos.</p>
+        <p>1. Fije el nivel de riesgo por habitación. Las salas de mayor acuidad se evalúan primero y con la tolerancia más estricta.</p>
+        <p>2. Recorra la sala a la altura y al alcance del paciente: todo lo alcanzable por encima de 1,8 m desde la cama entra en el estudio.</p>
+        <p>3. Mida cada hueco con galga, no con el ojo: una galga de 3 mm y una cinta métrica bastan. Registre el número, no un adjetivo.</p>
+        <p>4. Fotografíe y etiquete cada hallazgo con código de ubicación: «habitación 214, bisagra, lado de jamba, 6 mm» es un hallazgo; «algunos huecos en puertas» no lo es.</p>
+        <p>5. Asigne mitigación y fecha, y vuelva a medir después de corregir. Tanto la Joint Commission como CMS quieren ver el ciclo cerrado, no solo el hallazgo registrado.</p>
+        <p>La periodicidad cuenta igual: repita las evaluaciones en un ciclo definido y tras cualquier cambio en el entorno físico, la población de pacientes o el modelo de observación.</p>
+        <p>En la mitigación es donde muchos proyectos descubren que el catálogo no resuelve nada: cerrar un hueco de 20 mm o cambiar un bastidor obliga a fabricación a medida, y la tolerancia final se decide en el taller, no en el pliego.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-05-img-01.png" alt="Bastidor de madera a medida en fabricación dentro del taller de carpintería de muebles antiligadura" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mecanizado de bastidores a medida en el taller de carpintería, ajustados a tolerancia de hueco.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Coste, plazos y el equilibrio entre seguridad y dignidad</h2>
+        <p>Hablemos de dinero, porque aquí el presupuesto decide el alcance real del proyecto. La sillería de grado salud conductual se sitúa entre USD 850 y USD 2.400 por unidad, frente a USD 250–600 de una silla sanitaria estándar comparable. El mobiliario de caja lleva un sobrecoste similar, de 2 a 3 veces. El diferencial viene del material, del montaje oculto y de volúmenes menores.</p>
+        <p>En una unidad de 30 camas, esa diferencia decide si el proyecto se financia. Por eso trabajamos con cronogramas por fases que especifican primero las habitaciones de mayor riesgo: se protege lo crítico con el capital disponible y el resto queda para una segunda fase documentada.</p>
+        <p>El plazo de producción de 45-60 días se cuenta desde los planos aprobados, y las partidas a medida quedan en el extremo largo. Si su cronograma de obra es más corto, separe las piezas de programa estándar de las a medida y negocie ambas por separado.</p>
+        <p>Sobre dignidad, mi posición es sencilla: el diseño antiligadura puede volver institucional una habitación, y ese es el verdadero coste del sistema. Una sala sin puntos de anclaje tampoco tiene riel de armario, ni perchero, ni estante decorativo. Lo que cierra esa brecha es el material y el color: superficie sólida con aspecto de madera, HDPE en tonos cálidos, asientos blandos en zonas de menor acuidad y salas de calma con luz difusa. La regla que aplico es devolver calidez hasta el máximo que permita el nivel de riesgo de cada sala.</p>
+        <p>Para presupuestar con criterio, pida tres documentos por escrito: tolerancia de hueco por tipología, resistencia al arranque del herraje e informe de ensayo de carga. Con esos papeles y el nivel de riesgo por sala, el cronograma de FF&amp;E se defiende solo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Tiene los niveles de riesgo por sala? Nosotros ponemos los planos"
+      text="Envíe los niveles de riesgo por habitación y las tolerancias de hueco y carga que está especificando a /contacto/ y le devolvemos una respuesta a nivel de plano, con detalle de soldadura, diseño de montaje y documentación de ensayo adjunta. Hongye Furniture Group fabrica mobiliario contract desde 1996, con más de 300.000 m² de planta, más de 1.000 trabajadores cualificados, certificaciones BIFMA + GREENGUARD Gold + FSC + CE, un plazo de producción de 45-60 días y una ventaja de coste del 30-50 %."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

@@ -1,0 +1,441 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Pared ducha piedra sinterizada: impermeabilización, juntas y sustrato";
+const pageDescription = "Pared ducha piedra sinterizada: impermeabilización ANSI A118.10, sustrato plano, juntas de 1-3 mm, pesos por m² y comparación con azulejo para hoteles.";
+const keywords = [
+  "pared ducha piedra sinterizada",
+  "panel gran formato ducha",
+  "piedra sinterizada vs azulejo",
+  "sustrato pared ducha",
+  "ducha book-match",
+  "membrana ANSI A118.10"
+];
+const canonicalPath = "/recursos/pared-ducha-piedra-sinterizada/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-16";
+const dateModified = "2026-09-16";
+const publicationDateLabel = "Publicada el 16 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Se puede usar piedra sinterizada en una ducha?", answer: "Sí. La piedra sinterizada absorbe menos del 0,1 % de agua según ISO 10545-3, así que el panel soporta la exposición húmeda constante sin sellado. Lo que exige ingeniería es todo lo que va detrás: una membrana adherida ANSI A118.10, un sustrato plano a 3 mm en 3 m y un adhesivo C2TES1. Especificado así, es uno de los materiales de pared de gran formato más seguros para duchas." },
+    { question: "¿Qué sustrato necesita un panel gran formato ducha?", answer: "Una pared plana, aplomada y rígida. Placa de cemento o panel de XPS sobre montantes cada 406 mm, plana a 3 mm en 3 m con juntas reforzadas, después una membrana ANSI A118.10 y luego adhesivo C2TES1 con todo el reverso untado. Los lechos de mortero sirven para paredes fuera de plomo; la placa de yeso desnuda no sirve en zonas mojadas." },
+    { question: "¿Es mejor la piedra sinterizada que el azulejo para una pared de ducha?", answer: "Es mejor en juntas y mantenimiento: 2-3 uniones en lugar de cientos de juntas de fragua, y sin sellado anual. El azulejo es mejor en reparación puntual y cambios de diseño por fases. En programas hoteleros especifico paneles; en reformas por fases, el azulejo sigue teniendo su sitio. Lo decide el encargo." },
+    { question: "¿Qué espesor debe tener un panel de piedra sinterizada para pared de ducha?", answer: "6 mm es el estándar en pared, con unos 14,5 kg/m². Use 12 mm (unos 29 kg/m²) para nichos y bancos, y reserve 20 mm (unos 48 kg/m²) para suelos, umbrales y encimeras. Más grueso no es mejor en pared: el peso sube sin aportar valor frente al agua." },
+    { question: "¿Cómo se impermeabiliza una pared ducha piedra sinterizada?", answer: "Detrás del panel, no sobre él. Aplique una membrana adherida ANSI A118.10 (en lámina, o líquida en dos manos) con refuerzo en esquinas y nichos, y haga prueba de estanqueidad de 24 horas (72 en vapor) antes de revestir. El panel mismo es solo la capa de acabado." },
+    { question: "¿Se puede hacer book-match en una pared ducha piedra sinterizada?", answer: "Sí, con paños consecutivos espejados a lo largo del recinto. Espere un desperdicio de corte del 25-35 % frente al 10-15 % de un layout estándar, coordinación de plazo más larga y ninguna garantía de que un recambio posterior coincida. Apruebe el layout con fotografías de los paños reales en fábrica, nunca con un render." },
+    { question: "¿Cuánto cuesta una pared ducha piedra sinterizada?", answer: "El material de paño ronda los USD 45-120/m² en fábrica en 2026, según espesor, acabado y serie; los juegos book-match mecanizados cuestan más instalados. TAULA suele quedar un 30-50 % por debajo del precio de fábricas europeas con plazos de 45-60 días, y por eso los programas FF&E de hotel siguen llegando a mi mesa." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [`https://hymueble.com${/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp}`,
+  `https://hymueble.com${hmo-01-img-03.jpg}`,
+  `https://hymueble.com${hmo-19-img-02.png}`],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Interiores · Piedra sinterizada &middot; {publicationDateLabel}</p>
+          <h1>Pared ducha piedra sinterizada: impermeabilización, juntas de gran formato y sustrato</h1>
+          <p>Una pared ducha piedra sinterizada resuelve de golpe tres problemas que el azulejo arrastra desde siempre: casi ninguna junta, cero sellados periódicos y una superficie que la limpieza con desincrustantes no daña. Pero en años de compras FF&amp;E para hoteles casi nunca he visto fallar el material; he heredado instalaciones donde falló lo que estaba detrás del panel. Una membrana a la que nadie hizo prueba de estanqueidad, un sustrato que una regla de aluminio habría rechazado, un adhesivo comprado sin verificar su clasificación. Por eso esta guía dedica la mayor parte del recorrido a lo que no se ve: impermeabilización, sustrato, adhesivos y juntas, y cierra con una comparación directa de piedra sinterizada vs azulejo.</p>
+          <p>Aquí encontrará los números que necesita para escribir una especificación defendible: espesores de 6, 12 y 20 mm, paños de 3200×1600 mm, juntas de 1-3 mm, pesos por m², rangos de precio en USD y plazos de producción. TAULA, la marca de piedra sinterizada de Hongye Furniture Group, mecaniza sus paños en centros de mecanizado CNC de 6 ejes, y esos datos salen directamente de fábrica, no de un folleto.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp" alt="Superficie de piedra sinterizada de gran formato con canto pulido" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Se puede usar piedra sinterizada en la ducha?</h2>
+        <p>La piedra sinterizada es un cuerpo porcelánico totalmente densificado: minerales prensados y cocidos por encima de 1.200 °C hasta que la porosidad prácticamente desaparece. Medida por inmersión según ISO 10545-3, un paño de calidad marca menos de 0,1 % de absorción de agua, cinco veces más hermético que el techo del 0,5 % que define la porcelana impermeable. Para una pared de ducha, esa cifra se traduce en tres ventajas concretas.</p>
+        <p>Primera: no hay programa de sellado. Un mármol pulido en una ducha de hotel vive atado a un ciclo anual de resellado; la piedra sinterizada pide una bayeta y una limpieza decente. Segunda: la química. Aceites corporales, jabón, ácidos desincrustantes: el paño los resiste, y por eso las quejas del equipo de housekeeping desaparecen a partir del segundo mes. Tercera: los ciclos de vapor y choque térmico no agrietan la superficie, así que el mismo panel sirve para una ducha estándar y para un recinto de vapor.</p>
+        <p>Una advertencia honesta: la cifra de absorción describe el material, no la instalación. Un panel del 0,1 % pegado sobre una membrana con fugas sigue siendo una ducha con fugas. De eso trata el resto de esta guía.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Impermeabilización: la membrana que va detrás del panel</h2>
+        <p>Un panel de piedra sinterizada es una capa de acabado, no un sistema de impermeabilización. La gestión del agua vive detrás. Mi especificación por defecto es una membrana bonded certificada según ANSI A118.10, la norma estadounidense para membranas impermeabilizantes adheridas bajo porcelánico y piedra. Hay dos caminos. Las membranas líquidas se aplican en dos manos hasta un espesor seco total de 0,5 a 1,0 mm, con tejido de refuerzo trabado en esquinas, nichos y cambios de plano. Las membranas en lámina cuestan más por m² y exigen un sustrato más limpio, pero eliminan la adivinanza de espesores. Para programas hoteleros me inclino por la lámina: la inspección es más simple cuando el espesor es un dato de fábrica y no la opinión de quien aplica el recubrimiento.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-01-img-03.jpg" alt="Revestimiento de piedra sinterizada de gran formato en el lobby de un hotel con veteado continuo" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Zona húmeda de gran formato en el lobby de un hotel: la misma piedra sinterizada que en las paredes de ducha cubre mostradores y revestimientos, con juntas mínimas y veteado continuo.</figcaption>
+        </figure>
+        <p>Antes de colgar ningún panel, prueba de estanqueidad: 24 horas para duchas, 72 para saunas de vapor, desagüe tapado y nivel de agua marcado en el rehundido. La prueba cuesta medio día y cierra discusiones que de otro modo se reabrirían cuando ya están instalados los techos. Los fabricantes ensayan sus membranas según métodos ASTM; pida la ficha técnica donde conste la certificación A118.10, no un catálogo comercial.</p>
+        <p>El TCNA Handbook for Ceramic, Glass and Stone Tile Installation es el documento que le entrego a los contratistas. Sus métodos de ducha (B421, B422 y las soluciones sin borde B421C/B422C) combinan membranas, sustratos y desagües que se sabe que funcionan juntos. Los recintos de vapor añaden una conversación más: las membranas adheridas frenan el agua líquida, pero el empuje sostenido de vapor exige un sistema de membrana o panel con permeancia de 0,5 perms o menos.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué sustrato necesita un panel gran formato ducha?</h2>
+        <p>La respuesta aburrida es la correcta: lo que sea plano, aplomado y rígido, porque un paño de 3200×1600 mm reproduce al milímetro cada ondulación que tenga detrás. La planitud es donde la práctica convencional del azulejo se queda corta: el azulejo tolera 6 mm en 3 m, mientras que el gran formato aprieta el requisito a 3 mm en 3 m, la tolerancia que recogen ANSI A137.3 (la norma de material para paneles porcelánicos calibrados) y su compañera de instalación ANSI A108.19. Pase una regla por la pared después de montar el soporte, y resane o cuñe hasta que la luz desaparezca. Además: montantes cada 406 mm, flecha no peor que L/360 y juntas del soporte con malla y masilla.</p>
+        <p>La elección del material del sustrato tiene matices que conviene decir en voz alta:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Sustrato para pared de ducha</th><th>Planitud real que obtiene</th><th>Mejor encaje</th><th>Puntos de atención</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Sustrato para pared de ducha">Placa de cemento (backer board)</td><td data-label="Planitud real que obtiene">Solo tras una capa de nivelación</td><td data-label="Mejor encaje">Obra nueva y reformas integrales</td><td data-label="Puntos de atención">Añade carga muerta; juntas con malla antes de la membrana</td></tr>
+              <tr><td data-label="Sustrato para pared de ducha">Panel de XPS para ducha</td><td data-label="Planitud real que obtiene">Casi perfecta de fábrica</td><td data-label="Mejor encaje">Reformas, recintos de vapor, montantes torcidos</td><td data-label="Puntos de atención">Respetar el patrón de fijación del fabricante</td></tr>
+              <tr><td data-label="Sustrato para pared de ducha">Mortero tendido en sitio</td><td data-label="Planitud real que obtiene">Aplomado a mano a 3 mm en 3 m</td><td data-label="Mejor encaje">Paredes patrimoniales, estructura muy fuera de plomo</td><td data-label="Puntos de atención">La vía más lenta y la que más depende del oficio</td></tr>
+              <tr><td data-label="Sustrato para pared de ducha">Azulejo existente, solapado</td><td data-label="Planitud real que obtiene">Solo tan plano como dicte el levantamiento</td><td data-label="Mejor encaje">Sustituciones donde profundidad de puerta y nicho lo permitan</td><td data-label="Puntos de atención">Superficies esmaltadas piden imprimación de adherencia</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Y el adhesivo. Un panel gran formato ducha pertenece a un cementoso clasificado C2TES1 según ISO 13007: resistencia mejorada (C2), antideslizante (T), tiempo abierto extendido (E) y deformable (S1). La deformabilidad importa en paredes que se mueven; la antideslizancia es innegociable cuando el panel va sobre la cabeza. Unte el reverso de cada panel, peine los surcos en una sola dirección para que el aire escape y contrate a una cuadrilla que tenga ventosas de repuesto. He visto a dos instaladores pelearse con un paño de 1.600 mm y dos ventosas: siempre gana el panel.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Juntas, encuentros y layouts book-match</h2>
+        <p>Las juntas entre paneles van de 1 a 3 mm. Yo pido a los fabricantes mantener 2 mm dentro de un mismo paño y abrir a 3 mm donde el canto del panel encuentra una junta estructural. Las juntas en zona húmeda se rellenan con porcelana epoxi del color del paño. En los cambios de plano (pared con pared, pared con techo) la junta debe seguir siendo un sellante elastomérico, que es lo que ANSI A108.01 espera para absorber movimiento; una rigida epoxi atravesando una esquina se agrieta justo donde el edificio quiere flexionar.</p>
+        <p>Aparejo alineado, no a soga: los paños grandes se ven ingenieriles cuando las juntas coinciden, y el aparejo alineado evita la lotería de desniveles del aparejo a soga.</p>
+        <p>El book-match es la opción seductora. Paños consecutivos espejan la veta a lo largo del recinto y fotografían como escultura. El coste es el rendimiento: un corte ordinario desperdicia el 10-15 % del paño, mientras que un ducha book-match, que obliga a cortes pareados desde paños apareados, puede llegar al 25-35 %, y un solo panel roto a mitad de programa puede detener la pared porque el recambio no coincidirá. Mi mitigación en TAULA: aprobar el layout contra un alzado fotográfico del book-match tomado de los paños reales en fábrica, nunca contra un render. Los renders con veta inventada han quemado más aprobaciones de prototipo que cualquier fallo de adhesivo que recuerde.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-19-img-02.png" alt="Operario dando acabado manual al canto de un panel de piedra sinterizada en taller" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Taller de TAULA: un operario repasa a mano el canto biselado de un panel de piedra sinterizada tras el mecanizado CNC de 6 ejes, controlando milímetro a milímetro el acabado final.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Piedra sinterizada vs azulejo: la comparación práctica</h2>
+        <p>La decisión de piedra sinterizada vs azulejo casi siempre se reduce a qué valora más el propietario: menos juntas o reparación más fácil. Las dos respuestas se pueden defender.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Pared de piedra sinterizada</th><th>Ducha de azulejo cerámico/porcelánico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio">Absorción de agua</td><td data-label="Pared de piedra sinterizada">Menos de 0,1 % (ISO 10545-3)</td><td data-label="Ducha de azulejo cerámico/porcelánico">Hasta 0,5 % porcelánico; 3-10 % cerámico</td></tr>
+              <tr><td data-label="Criterio">Juntas en una pared de 2,4 × 2,4 m</td><td data-label="Pared de piedra sinterizada">2-3 uniones verticales de 1-3 mm</td><td data-label="Ducha de azulejo cerámico/porcelánico">Una junta de fragua cada 200-300 mm</td></tr>
+              <tr><td data-label="Criterio">Mantenimiento</td><td data-label="Pared de piedra sinterizada">Sin sellados; superficie de limpiar en un paso</td><td data-label="Ducha de azulejo cerámico/porcelánico">Limpieza de juntas; sellado anual si es piedra natural</td></tr>
+              <tr><td data-label="Criterio">Reparabilidad</td><td data-label="Pared de piedra sinterizada">Cambio de panel completo; conviene guardar repuestos</td><td data-label="Ducha de azulejo cerámico/porcelánico">Reparación puntual de una pieza, el mismo día</td></tr>
+              <tr><td data-label="Criterio">Coste de material</td><td data-label="Pared de piedra sinterizada">USD 45-120/m² el paño, según espesor</td><td data-label="Ducha de azulejo cerámico/porcelánico">USD 25-60/m² el azulejo de campo</td></tr>
+              <tr><td data-label="Criterio">Cuadrilla y herramientas</td><td data-label="Pared de piedra sinterizada">2-3 instaladores, marcos de ventosas, recortes CNC</td><td data-label="Ducha de azulejo cerámico/porcelánico">Cuadrilla estándar de alicatado, radial de agua</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Lea primero las dos últimas filas. El azulejo sigue siendo la respuesta correcta cuando el presupuesto se gestiona por partidas, el diseño cambia por fases o el mantenimiento quiere cambiar una pieza agrietada sin tocar una pared. Los paneles ganan donde pesan la higiene, el tiempo de inspección y una pared con tres juntas, lo cual describe la mayoría de los baños de hotel que especifico.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Especificar TAULA: espesor, peso, precio y plazo</h2>
+        <p>El espesor es la primera bifurcación. 6 mm es mi valor por defecto en pared: lo bastante ligero para dos instaladores y un marco de ventosas. 12 mm se justifica en nichos, bancos y repisas integradas. 20 mm pertenece a suelos, umbrales y encimeras de lavabo, no a una pared donde su peso no compra nada. Con una densidad de unos 2,4 g/cm³, los pesos escalan limpio:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Espesor</th><th>Peso del panel</th><th>Aplicación típica en ducha</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Espesor">6 mm</td><td data-label="Peso del panel">≈14,5 kg/m²</td><td data-label="Aplicación típica en ducha">Revestimiento integral de pared; solapado en reformas</td></tr>
+              <tr><td data-label="Espesor">12 mm</td><td data-label="Peso del panel">≈29 kg/m²</td><td data-label="Aplicación típica en ducha">Paredes protagonistas, nichos, bancos de ducha</td></tr>
+              <tr><td data-label="Espesor">20 mm</td><td data-label="Peso del panel">≈48 kg/m²</td><td data-label="Aplicación típica en ducha">Suelos, umbrales, encimeras de lavabo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una pared de ducha de 12 m² en 6 mm añade unos 175 kg a la estructura. Normalmente es un redondeo, pero declárelo igualmente en el submittal FF&amp;E; los ingenieros estructurales preguntan. En precio: el material en fábrica ronda los USD 45-120/m² según espesor, acabado y serie; los juegos book-match mecanizados con cortes CNC cuestan más instalados. Frente a fábricas europeas de grado comparable, TAULA suele ofrecer una ventaja de coste del 30-50 % con plazos de exportación de 45-60 días.</p>
+        <p>La fabricación es donde la marca se distingue. Los paños se cortan, se fresan y se perfilan en centros de mecanizado CNC de 6 ejes, de modo que los recortes para grifería, los retornos de nicho y las repisas integradas salen de un datum de máquina y no de una plantilla con radial. Puede revisar el catálogo en /productos/, ver aplicaciones de baño en /proyectos/ o enviar su juego de planos a través de /contacto/ para recibir una cotización de fabricación.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Envíe sus planos y reciba una cotización de fabricación"
+      text="TAULA mecaniza paños de 3200×1600 mm en espesores de 6, 12 y 20 mm en centros de mecanizado CNC de 6 ejes, con plazos de producción de 45-60 días y una ventaja de coste del 30-50 % frente a fábricas europeas. Envíe su juego de planos por /contacto/ y recibirá una revisión de fabricación con despiece y precios en USD."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

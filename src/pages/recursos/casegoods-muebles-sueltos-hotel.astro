@@ -1,0 +1,464 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Casegoods hotel vs. muebles sueltos: reparto del presupuesto FF&E";
+const pageDescription = "Los casegoods hotel son los muebles fijos de la habitación y absorben el 20-35 % del presupuesto FF&E. Vea cómo se reparte línea por línea.";
+const keywords = [
+  "casegoods hotel",
+  "muebles sueltos hotel",
+  "presupuesto FF&E hotel",
+  "casegoods para hoteles",
+  "mobiliario suelto hotelero",
+  "desglose presupuesto FF&E"
+];
+const canonicalPath = "/recursos/casegoods-muebles-sueltos-hotel/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-16-img-01-casegoods-hotel.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-16";
+const dateModified = "2026-09-16";
+const publicationDateLabel = "Publicada el 16 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué son los casegoods en un hotel?", answer: "Son las piezas de superficie dura y sin tapizar: cabeceros, mesas de noche, escritorios, armarios, cómodas, muebles de televisor, gabinetes de minibar y bancos de equipaje. Lo que los define es la carpintería —cajones, puertas o armazón estructural—, y por eso se ensayan con BIFMA X5.9 y se compran como partida propia. Absorben 20-35 % del presupuesto FF&E y 30-40 % del paquete de habitación." },
+    { question: "¿Cuál es la diferencia entre casegoods y muebles sueltos?", answer: "La construcción y la movilidad. Los casegoods se fabrican como cajas con armazón y cajones, se instalan en sitio y se reponen por lotes con acabado y herrajes coincidentes. Los muebles sueltos hotel son autoportantes —butacas, pufs, sofás, mesas auxiliares— y se reponen pieza por pieza cada 3-5 años, frente a 5-7 de los casegoods. Los casegoods cargan las pruebas estructurales (BIFMA X5.9, 50.000 ciclos de cajón); el asiento, las de inflamabilidad y abrasión (CAL 117, BS 5852)." },
+    { question: "¿Qué porcentaje del presupuesto FF&E hotelero corresponde a los casegoods?", answer: "Entre 20 y 35 % del presupuesto FF&E total, y entre 30 y 40 % del paquete de habitación: unos 1.800-6.500 USD por habitación. Los proyectos midscale se acercan al extremo inferior y los upper-upscale alcanzan o superan el superior. Los cabeceros a veces se especifican como carpintería fija y se contabilizan en obra, lo que baja artificialmente el porcentaje." },
+    { question: "¿Conviene comprar casegoods a medida o mobiliario suelto estándar?", answer: "Compre casegoods a medida cuando el proyecto tenga tres o más tipos de habitación, un estándar de marca con perfil propio, o una renovación donde las piezas deban calzar en vanos existentes: la consistencia se paga sola en 5-7 años. Compre mobiliario suelto estándar para servicio interno, salas de reunión y asiento secundario, donde la silueta no influye en la percepción del huésped." },
+    { question: "¿Cuánto tardan los plazos de entrega de casegoods para un proyecto hotelero internacional?", answer: "De 45 a 60 días de producción desde las muestras aprobadas, más 3-5 semanas de muestreo y habitación maqueta, y 4-6 semanas de flete y aduana: entre 4 y 6 meses de punta a punta. Los perfiles en stock comprimen la producción a 30-45 días. La aprobación de la habitación maqueta es la que más se retrasa, porque depende de la cadena de firma de la marca." },
+    { question: "¿Qué certificaciones deben acompañar a los casegoods de hotel?", answer: "Cumplimiento EPA TSCA Title VI para paneles compuestos (0,05 ppm triplay, 0,09 ppm tablero de partículas, 0,11 ppm MDF, 0,13 ppm MDF delgado), informes BIFMA X5.9 de laboratorio acreditado y GREENGUARD Gold para acabados. Sume FSC de cadena de custodia, CE para Europa, y en piezas tapizadas CAL 117 más BS 5852." },
+    { question: "¿Por qué fallan tantos casegoods importados en los ensayos BIFMA?", answer: "Porque la brecha entre mobiliario residencial y contract es invisible en fotografías. Tablero con humedad alta, tablero de partículas sustituyendo triplay, fondos de cajón engrapados y cola subespecificada pasan la inspección visual y fallan la prueba estructural: en nuestros propios ensayos, cerca de 40 % falla al menos un requisito BIFMA en el primer intento." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [`https://hymueble.com${/assets/hymueble/recursos/blog/images/hym-16-img-01-casegoods-hotel.webp}`,
+  `https://hymueble.com${hmo-01-img-01.jpg}`,
+  `https://hymueble.com${hmo-06-img-01.png}`],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Proyectos hoteleros · FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Casegoods hotel y muebles sueltos: cómo se reparte el presupuesto FF&amp;E</h1>
+          <p>Casi todos los propietarios hacen la misma pregunta en la primera reunión de compras: «¿dónde termina el casegoods y dónde empieza el mueble suelto?». La respuesta práctica es que el casegoods hotel es la carpintería de superficie dura y sin tapizar de la habitación —cabecero, mesas de noche, escritorio, armario, cómoda, mueble de televisor, gabinete de minibar y banco de equipaje— y suele cargar con el 20-35 % del presupuesto FF&amp;E hotel, más que cualquier otra categoría individual. Todo lo que un huésped puede levantar o retapizar sin carpintero es mobiliario suelto, y se lleva otro 22-27 %. He visto a un hotel de 220 habitaciones en Dubái recortar su línea de casegoods un 12 % para financiar el asiento de lobby, y descubrir en la habitación maqueta que el estándar de marca exigía un canto sólido que el proveedor barato no podía sostener en 220 unidades.</p>
+          <p>Esta guía ordena las dos líneas con números verificables: qué porcentaje del presupuesto FF&amp;E hotel toca a cada categoría, qué rangos por habitación son defendibles, qué normas —BIFMA X5.9, TSCA Title VI, GREENGUARD Gold, FSC, CE— separan un casegood de siete años de uno de tres, y cuándo conviene ir a medida. Hongye Furniture Group fabrica ambas líneas desde 1996 en más de 300.000 m² en Guangdong, con más de 1.000 trabajadores cualificados y entregas a más de 1.000 proyectos en más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-16-img-01-casegoods-hotel.webp" alt="Mobiliario casegoods de hotel fabricado a medida junto a piezas sueltas de grado contract" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué son los casegoods en un hotel? La definición que sí sirve</h2>
+        <p>Casegoods es el término del oficio para los muebles de superficie dura y sin tapizar; «case» designa un cuerpo de caja con ensambles, cajones o puertas. En una habitación de hotel son el cabecero, las mesas de noche, el escritorio, el armario, la cómoda, el mueble del televisor, el gabinete del minibar y el banco de equipaje. La prueba útil no es «¿está anclado al muro?», sino «¿es una caja con carpintería?». Esa pregunta decide quién lo fabrica, quién lo ensaya y cómo se repone.</p>
+        <p>Hay una zona gris: los cabeceros y paneles multimedia suelen especificarse como carpintería fija y terminan costeados en el presupuesto de obra, no en el FF&amp;E. En los proyectos que fabricamos, cerca de un tercio de los clientes mueve el cabecero al paquete FF&amp;E para que el acabado coincida con las mesas de noche. Conviene resolverlo antes de pedir cotizaciones.</p>
+        <p>El mobiliario suelto —muebles sueltos hotel— es todo lo que un huésped puede levantar, arrastrar por la alfombra o retapizar sin carpintero: butacas de lounge, pufs, sillas de escritorio, sofás, mesas auxiliares y el asiento de lobby y de A&amp;B. Comparte presupuesto con los casegoods, pero se comporta distinto en casi todos los ejes que importan a un calendario de compras.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Casegoods hotel vs. muebles sueltos: comparación lado a lado</h2>
+        <p>Las dos categorías no fallan igual, no se reponen igual y no se ensayan con la misma norma. La tabla resume las diferencias que reaparecen en cada reunión de compra.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Dimensión</th><th>Casegoods de hotel</th><th>Muebles sueltos</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Dimensión">Piezas típicas</td><td data-label="Casegoods de hotel">Cabeceros, mesas de noche, escritorios, armarios, cómodas, muebles de TV, gabinetes de minibar, bancos de equipaje</td><td data-label="Muebles sueltos">Butacas de lounge, pufs, sillas de escritorio, sofás, mesas auxiliares, asiento de lobby y A&amp;B</td></tr>
+              <tr><td data-label="Dimensión">Participación del presupuesto FF&amp;E</td><td data-label="Casegoods de hotel">20-35 % (la línea más grande de la habitación)</td><td data-label="Muebles sueltos">22-27 %; 10-15 % en áreas públicas</td></tr>
+              <tr><td data-label="Dimensión">Vida útil</td><td data-label="Casegoods de hotel">5-7 años en midscale; 7-10 en upscale</td><td data-label="Muebles sueltos">3-5 años; A&amp;B y lobby los más cortos</td></tr>
+              <tr><td data-label="Dimensión">Cómo se repone</td><td data-label="Casegoods de hotel">Por lotes, con el acabado y el perfil originales</td><td data-label="Muebles sueltos">Pieza por pieza durante la renovación suave</td></tr>
+              <tr><td data-label="Dimensión">Normas dominantes</td><td data-label="Casegoods de hotel">BIFMA X5.9, ciclos de cajón, TSCA Title VI</td><td data-label="Muebles sueltos">BIFMA X5.1, CAL 117 o BS 5852, Wyzenbeek</td></tr>
+              <tr><td data-label="Dimensión">Palanca de renovación</td><td data-label="Casegoods de hotel">Reacabado y cambio de herrajes: 20-35 % del costo nuevo</td><td data-label="Muebles sueltos">Retapizado: 30-45 % del costo nuevo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos números explican casi todas las discusiones. Los casegoods pesan más en dólares pero se desgastan más despacio, así que su costo anualizado suele ser menor que el del asiento. Y la palanca de renovación es más barata: reacabar y cambiar herrajes cuesta 20-35 % del precio nuevo, frente a 30-45 % del retapizado.</p>
+        <p>También fallan distinto. Un casegood falla despacio y a la vista: un riel que se traba, un canto laminado que se levanta, un aro de agua. El asiento falla rápido y sin aviso: bastidor flojo, espuma comprimida, tejido abrasado en el brazo. Cuando eso llega a una reseña, ya lleva 6-12 meses ocurriendo.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-01-img-01.jpg" alt="Casegoods hotel a medida en habitación doble con cabecero y armario" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Habitación de hotel terminada: cabecero, mesas de noche y armario alineados con el mismo perfil y acabado.</figcaption>
+        </figure>
+        <p>El huésped también movió el cálculo: quien reserva vio fotografías de cerca y nota si los cajones están desalineados o si se ve la junta entre cabecero y muro. La línea de casegoods se volvió un activo comercial, y la fotografía de fábrica de los ensambles es hoy parte de cómo un diseñador evalúa a un proveedor.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Desglose del presupuesto FF&amp;E hotelero: dónde se ubican los casegoods</h2>
+        <p>Los porcentajes solo sirven si sabe por qué denominador divide. Tres se mezclan todo el tiempo: presupuesto total del proyecto, presupuesto FF&amp;E total y valor del paquete de habitación. Una línea que pesa 30 % del paquete de habitación no pesa 30 % del FF&amp;E total.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Categoría FF&amp;E</th><th>Participación del presupuesto FF&amp;E</th><th>Participación del paquete de habitación</th><th>Rango por habitación (USD)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Categoría FF&amp;E">Casegoods de habitación</td><td data-label="Participación del presupuesto FF&amp;E">20-35 %</td><td data-label="Participación del paquete de habitación">30-40 %</td><td data-label="Rango por habitación (USD)">1.800-6.500 (carpintería a medida arriba; HPL estándar abajo)</td></tr>
+              <tr><td data-label="Categoría FF&amp;E">Asiento tapizado (mobiliario suelto)</td><td data-label="Participación del presupuesto FF&amp;E">12-18 %</td><td data-label="Participación del paquete de habitación">12-18 %</td><td data-label="Rango por habitación (USD)">900-3.200</td></tr>
+              <tr><td data-label="Categoría FF&amp;E">Colchón y ropa de cama</td><td data-label="Participación del presupuesto FF&amp;E">10-18 %</td><td data-label="Participación del paquete de habitación">10-15 %</td><td data-label="Rango por habitación (USD)">700-2.400</td></tr>
+              <tr><td data-label="Categoría FF&amp;E">Mobiliario suelto de áreas públicas y A&amp;B</td><td data-label="Participación del presupuesto FF&amp;E">10-15 %</td><td data-label="Participación del paquete de habitación">—</td><td data-label="Rango por habitación (USD)">2.000-10.000 por grupo de asiento</td></tr>
+              <tr><td data-label="Categoría FF&amp;E">Iluminación decorativa</td><td data-label="Participación del presupuesto FF&amp;E">5-10 %</td><td data-label="Participación del paquete de habitación">8-12 %</td><td data-label="Rango por habitación (USD)">400-1.800</td></tr>
+              <tr><td data-label="Categoría FF&amp;E">Cortinas y tratamientos de ventana</td><td data-label="Participación del presupuesto FF&amp;E">9-13 %</td><td data-label="Participación del paquete de habitación">8-12 %</td><td data-label="Rango por habitación (USD)">350-1.200</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El FF&amp;E total de un hotel midscale cae en 8.000-15.000 USD por habitación; un proyecto upper-upscale o de lujo corre entre 20.000 y 45.000 USD con el mismo número de llaves, y una renovación agrega 15-25 %. Mantenga los casegoods en su propia línea con su propio contingente: cuando aparece un sobrecosto en soft goods, la reserva de casegoods es lo primero que se saquea.</p>
+        <p>Por nivel de propiedad, el reparto se mueve así.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nivel de propiedad</th><th>FF&amp;E por habitación (USD)</th><th>Casegoods por habitación (USD)</th><th>Plazo típico de reposición</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Nivel de propiedad">Midscale / select service</td><td data-label="FF&amp;E por habitación (USD)">8.000-12.000</td><td data-label="Casegoods por habitación (USD)">1.800-3.200</td><td data-label="Plazo típico de reposición">7-9 años</td></tr>
+              <tr><td data-label="Nivel de propiedad">Upscale</td><td data-label="FF&amp;E por habitación (USD)">12.000-20.000</td><td data-label="Casegoods por habitación (USD)">2.800-4.800</td><td data-label="Plazo típico de reposición">8-10 años</td></tr>
+              <tr><td data-label="Nivel de propiedad">Upper-upscale / lujo</td><td data-label="FF&amp;E por habitación (USD)">20.000-45.000</td><td data-label="Casegoods por habitación (USD)">4.500-6.500</td><td data-label="Plazo típico de reposición">10-12 años</td></tr>
+              <tr><td data-label="Nivel de propiedad">Renovación (cualquier nivel)</td><td data-label="FF&amp;E por habitación (USD)">+15-25 % sobre costo nuevo</td><td data-label="Casegoods por habitación (USD)">20-35 % del costo nuevo</td><td data-label="Plazo típico de reposición">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para la secuencia completa de compra, vea la guía de compras FF&amp;E para hoteles en /recursos/compra-ffe-hotel/.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales, ensayos y especificaciones que deciden su línea de casegoods</h2>
+        <p>La distancia entre un casegood que dura siete años y otro que se cae en tres está casi toda en la especificación, y casi toda es invisible en una sala de exhibición. En Norteamérica, los paneles de madera compuesta deben cumplir los límites de formaldehído de la EPA TSCA Title VI (40 CFR Part 770): 0,05 ppm para triplay de madera dura, 0,09 ppm para tablero de partículas, 0,11 ppm para MDF y 0,13 ppm para MDF delgado. El grado E0 y E1 es la abreviatura europea y asiática equivalente. Si el proveedor no emite el certificado del tablero específico que usa, trate la línea como no verificada.</p>
+        <p>La BIFMA X5.9 es la norma de desempeño: un entrepaño que soporta 50 lb por pie cuadrado durante siete días sin deflexión; una cubierta de cómoda que aguanta 200 lb estáticas sin falla de ensamble, 300 lb si es mueble de televisor; cajones que sobreviven 50.000 ciclos de apertura y cierre con 25 lb dentro; y una prueba de estabilidad que no debe volcar con 50 lb en el canto de un cajón abierto. Los herrajes son la tercera palanca: rieles de extensión total y cierre suave de Accuride, Blum o Hettich separan un cajón silencioso en el año seis de un programa de reposición.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Área de especificación</th><th>Qué exigir</th><th>Ensayo o norma</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Área de especificación">Emisión de formaldehído del panel</td><td data-label="Qué exigir">Cumplimiento TSCA Title VI; tablero E0/E1</td><td data-label="Ensayo o norma">40 CFR Part 770; CARB Fase 2</td></tr>
+              <tr><td data-label="Área de especificación">Acabados de bajo COV</td><td data-label="Qué exigir">Recubrimientos GREENGUARD Gold</td><td data-label="Ensayo o norma">UL GREENGUARD Gold</td></tr>
+              <tr><td data-label="Área de especificación">Origen de la madera</td><td data-label="Qué exigir">Cadena de custodia documentada por lote</td><td data-label="Ensayo o norma">FSC CoC</td></tr>
+              <tr><td data-label="Área de especificación">Desempeño estructural del casegood</td><td data-label="Qué exigir">Informe BIFMA X5.9 de laboratorio acreditado</td><td data-label="Ensayo o norma">BIFMA X5.9</td></tr>
+              <tr><td data-label="Área de especificación">Herrajes y ensamble del cajón</td><td data-label="Qué exigir">Rieles de marca, cierre suave, extensión total, cola de milano</td><td data-label="Ensayo o norma">50.000 ciclos con carga</td></tr>
+              <tr><td data-label="Área de especificación">Tapizado y consistencia de acabado</td><td data-label="Qué exigir">Mínimo 30.000 dobles roces; Delta-E ≤ 2,0 contra el estándar aprobado</td><td data-label="Ensayo o norma">Wyzenbeek; espectrofotómetro</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="hmo-06-img-01.png" alt="Muebles sueltos de hotel: butacas y cojines tapizados en paleta coordinada" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Pufs, cojines y butacas tapizadas del mobiliario suelto, elegidos en la misma paleta de acabados.</figcaption>
+        </figure>
+        <p>La consistencia de color es la que más sorprende en proyectos de 300 habitaciones: una tolerancia que se ve bien en una muestra de 6 pulgadas se vuelve un desajuste evidente cuando 40 armarios se alinean en un pasillo. Medimos con espectrofotómetro, no a ojo, y guardamos la receta de laca por proyecto para que una reposición del año cinco coincida con la entrega original. Materiales y acabados en detalle: /recursos/materiales-mobiliario-hotel/.</p>
+        <p>En piezas tapizadas agregue inflamabilidad y abrasión: CAL 117 en Estados Unidos, BS 5852 en el Reino Unido y el Golfo, y un mínimo de 30.000 dobles roces Wyzenbeek para habitación, que sube a 50.000 en A&amp;B y lobby. Sin esos tres documentos —estructura, emisión y fuego— el expediente no pasa la revisión de marca.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Plazos, logística y el equilibrio entre personalizado y estándar</h2>
+        <p>Aquí viene la parte honesta: los casegoods a medida no son automáticamente mejores, y el mobiliario suelto estándar no es automáticamente la opción barata. La decisión depende de cuántos tipos de habitación tiene el proyecto y de cuánto pesa la silueta en la percepción del huésped.</p>
+        <p>Los casegoods a medida requieren 45-60 días de producción desde la aprobación, más 3-5 semanas de muestreo y habitación maqueta, y 4-6 semanas de flete y aduana: entre 4 y 6 meses de punta a punta. Manejan un mínimo práctico de 100-500 unidades por diseño y entregan coincidencia exacta de perfil, acabado y dimensión en todos los tipos de habitación. El costo es real: herramental amarrado a una sola fábrica e ingeniería posterior cara. El retorno llega en la renovación, cuando reacaba y cambia herrajes por 20-35 % del costo nuevo.</p>
+        <p>El mobiliario suelto estándar corre en 30-45 días para perfiles en stock y le permite reponer el mismo SKU desde inventario. La contrapartida: el acabado puede derivar entre corridas y el llenado del contenedor se desperdicia por debajo de 8-12 paquetes de habitación. Un contenedor de 40HQ rinde unos 65-68 m³ útiles; los casegoods se desarman para lograr esa densidad, mientras que un asiento armado desperdicia volumen y sube el flete por unidad.</p>
+        <p>Mi regla después de años en planta: personalizado es correcto para casegoods cuando hay tres o más tipos de habitación, un estándar de marca con perfil propio, o una renovación donde las piezas deben calzar en vanos existentes. Estándar es correcto para mobiliario suelto donde la percepción del huésped no depende de una silueta única: servicio interno, salas de reunión y asiento secundario. Hongye fabrica ambos modelos en la misma planta, así que un proyecto puede combinar casegoods a medida y asientos estándar sin partir la cadena de control de calidad.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo verificar la línea de casegoods antes de firmar</h2>
+        <p>En nuestros propios ensayos, aproximadamente 40 % de los casegoods importados falla al menos un requisito BIFMA en el primer intento. No es un problema de capacidad de fábrica, es de especificación: tablero con humedad alta, tablero de partículas sustituyendo triplay, fondos de cajón engrapados y cola subespecificada pasan la inspección visual y fallan la prueba estructural en días.</p>
+        <p>El primer control es la humedad del tablero: medimos cada lote con higrómetro antes de maquinar, porque un panel con 12 % de humedad se contrae y abre la junta a los seis meses de entrega. El segundo es el ensamble: cola, espiga y escuadra en muestra destructiva por corrida. El tercero, el acabado: espectrofotómetro contra el patrón aprobado, Delta-E ≤ 2,0. El cuarto, inspección previa al embarque con fotografía de cada bulto y conteo por habitación.</p>
+        <p>Pida los informes BIFMA X5.9 de un laboratorio acreditado, no una carta de conformidad genérica, y el certificado TSCA Title VI emitido para el tablero específico de su pedido. Si el proveedor no puede individualizar el tablero ni el lote de laca, la línea no está verificada, y este es el momento más barato para descubrirlo. Fichas técnicas y acabados en /productos/, o escríbanos desde /contacto/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Necesita un número de casegoods defendible?"
+      text="Envíenos su mezcla de habitaciones, el número de llaves y el estándar de marca, y le devolvemos un desglose por línea —no un rango genérico— en 5 días hábiles. Fabricamos casegoods a medida y mobiliario suelto estándar en la misma planta de Guangdong, con plazo de producción de 45-60 días desde la aprobación y certificación BIFMA, GREENGUARD Gold, FSC y CE. Escríbanos desde /contacto/ o consulte acabados en /productos/."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

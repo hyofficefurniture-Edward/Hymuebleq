@@ -1,0 +1,457 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Vestidor a medida en villas: diseño, materiales y luz";
+const pageDescription = "Vestidor a medida en villas de lujo: pasillos de 90 cm, barras a 168-173 cm, ventilación de 4-6 ACH, luz 3000K CRI 90 y paneles CARB P2.";
+const keywords = [
+  "vestidor a medida",
+  "diseño vestidor villa",
+  "iluminación vestidor",
+  "armario vestidor de lujo",
+  "ventilación vestidor",
+  "carpintería a medida"
+];
+const canonicalPath = "/recursos/vestidor-villas-medidas-luz/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-16";
+const dateModified = "2026-09-16";
+const publicationDateLabel = "Publicada el 16 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cómo se diseña un vestidor a medida?", answer: "Empiece por la circulación, no por el mueble. Fije un pasillo libre de 90 cm para un solo usuario y de 107-122 cm donde dos personas se cruzan o un cajón abre hacia el paso. Coloque la barra de ropa larga a 168-173 cm, las de ropa corta a 107-112 cm y a 213 cm, mantenga los estantes a 30-36 cm de profundidad y deje 30-46 cm sobre el último estante. Después elija materiales por comportamiento ante la humedad, especifique ventilación de 4-6 ACH y cierre con luz de 3000-3500K y CRI 90 o superior." },
+    { question: "¿Cuál es el mejor material para los estantes de un vestidor?", answer: "Para la mayoría de los vestidores, el contrachapado enchapado equilibra resistencia a la luz entre apoyos, estabilidad ante la humedad y calidad de acabado, con el MDF con melamina como alternativa económica para cajones y cuerpos interiores. La madera maciza conviene en estantes que quedan a la vista y admiten retoque, pero se mueve con la humedad y necesita holgura de dilatación. El vidrio con marco de aluminio o la piedra sinterizada cambian por completo el carácter a un coste mayor." },
+    { question: "¿Necesita ventilación un vestidor cerrado?", answer: "Sí. Un vestidor cerrado es una de las habitaciones menos ventiladas de una casa grande y los riesgos se acumulan: aire viciado, condensación sobre muros exteriores fríos y un desprendimiento más lento de los acabados nuevos, ya que CARB indica que la emisión sube con la temperatura y la humedad. Diseñamos con 4-6 renovaciones por hora mediante extractor con sensor de humedad o un circuito equilibrado de suministro y retorno, más un recorte bajo la puerta para que el aire pueda salir." },
+    { question: "¿Cuántas renovaciones de aire por hora necesita un vestidor?", answer: "No existe una cifra única publicada para todos los vestidores, porque la norma residencial de ASHRAE expresa los requisitos como caudal por unidad de área o por ocupante y no como una tasa fija de renovaciones. Como especificación de trabajo diseñamos vestidores cerrados con 4-6 ACH: 4 ACH en clima templado y vestidor de uso diario, 6 ACH en villas costeras húmedas o en vestidores con piel y textiles de archivo." },
+    { question: "¿Qué temperatura de color debe tener la iluminación de un vestidor?", answer: "Especifique 3000-3500K con CRI 90 o superior, y considere CRI 95 en secciones de exhibición con joyería o bolsos. Ese rango favorece los tonos de piel y los tejidos naturales y, al mismo tiempo, permite separar azul marino de gris carbón y topo de gris. Evite 4000K y más, que se lee clínico sobre los textiles, y evite tiras de CRI bajo que hacen que dos prendas distintas parezcan idénticas." },
+    { question: "¿Cuánto cuesta un vestidor a medida en una villa de lujo?", answer: "Como rango de planificación, presupueste aproximadamente USD 450-1.200 por pie lineal de tramo para carpintería a medida en Estados Unidos, con los acabados premium, frentes de vidrio o piel e iluminación integrada empujando hacia el extremo superior. Un sistema modular de las mismas dimensiones nominales suele costar entre 30 % y 50 % menos. Compare presupuestos por el plan interior de accesorios y no por el frente de la puerta." },
+    { question: "¿Cuánto tarda la fabricación de un vestidor a medida?", answer: "Fenmi Casa cotiza un plazo de producción de 45-60 días para carpintería a medida una vez aprobados los planos, con el flete adicional en entregas internacionales. Los factores que mueven el calendario son el ciclo de dibujo y aprobación, la selección de acabados y la coordinación de ventilación e iluminación con los demás oficios. Los sistemas modulares se despachan antes, a menudo en semanas, y ese es su argumento más fuerte cuando la fecha de mudanza está fijada." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: [`https://hymueble.com${/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.webp}`,
+  `https://hymueble.com${hmo-95-img-02.jpg}`,
+  `https://hymueble.com${hmo-13-img-02.png}`],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hogar · Interiores a medida &middot; {publicationDateLabel}</p>
+          <h1>Vestidor a medida en villas de lujo: reglas de diseño, materiales, ventilación e iluminación</h1>
+          <p>Si solo recuerda una cifra de este artículo, que sea 90 cm: el ancho libre mínimo para un vestidor a medida de un solo usuario. La mayoría de los problemas que aparecen en villas no vienen del acabado ni del herraje, sino de una habitación dimensionada antes de dibujar los armarios. Con 90 cm usted puede estar de pie y revisar la ropa sin girar el cuerpo; en cuanto un cajón abre hacia el pasillo, ese ancho se pierde, y por eso el cajonero va frente a la entrada o bajo una cómoda. Después vienen las alturas: barra de ropa larga a 168-173 cm del piso, barras de ropa corta a 107-112 cm y a 213 cm en configuración doble, estantes de 30-36 cm de profundidad. La ventilación de un vestidor cerrado la especificamos en 4-6 renovaciones de aire por hora (ACH) y la iluminación de vestidor, en 3000-3500K con CRI 90 o superior.</p>
+          <p>El orden de decisión de este artículo es el que usamos en obra: circulación, materiales, ventilación y luz. Son las cuatro partidas que definen si el cuarto sigue funcionando dentro de diez años, y también las más caras de corregir cuando el mueble ya está fabricado. Detrás de las recomendaciones está Fenmi Casa, la marca residencial de Guangdong Hongye Furniture Group Co., Ltd., fundada en 1996, con más de 300.000 m² de planta y más de 1.000 proyectos entregados en más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.webp" alt="Dormitorio principal de villa con zona de vestidor a medida integrada" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Circulación y diseño de vestidor de villa: las medidas que deciden si funciona</h2>
+        <p>El ancho del pasillo es una medida de uso, no de estética: depende de lo que ocurre dentro de ese hueco. Un pasillo de 90 cm sirve para una persona que se cambia sola y quiere ver la ropa sin inclinarse ni girar el torso. En el instante en que un cajón abre hacia el pasillo, el ancho útil cae por debajo de 60 cm; de ahí que los cajoneros se ubiquen frente a la entrada, integrados en una isla o bajo una cómoda baja. Cuando dos personas se visten a la vez, planifique 107-122 cm y asuma que está comprando circulación, no almacenaje.</p>
+        <p>Las barras y los estantes siguen la misma lógica. La ropa larga (vestidos, abrigos, gabardinas) necesita la barra a 168-173 cm para que los ruedos no toquen la base. Los tramos de doble barra colocan ropa corta a 107-112 cm y a 213 cm, de modo que dos niveles de camisas y pantalones doblados conviven en un mismo tramo vertical; una barra única desperdicia entre 40 % y 50 % de la altura disponible. Los estantes trabajan a 30-36 cm de profundidad: a partir de 45 cm el fondo deja de ser alcanzable y se convierte en un tercio muerto. Sobre el último estante conviene dejar 30-46 cm hasta el cielo raso, para maletas, sombrereras y rotación de temporada.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona del vestidor</th><th>Medida libre</th><th>Por qué importa</th><th>Error frecuente en villas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona del vestidor">Pasillo de un usuario</td><td data-label="Medida libre">90 cm</td><td data-label="Por qué importa">Revisar la ropa sin girar el cuerpo</td><td data-label="Error frecuente en villas">Se mide la habitación, no el mueble</td></tr>
+              <tr><td data-label="Zona del vestidor">Pasillo de dos personas o con cajones</td><td data-label="Medida libre">107-122 cm</td><td data-label="Por qué importa">Cruzarse y abrir cajones a la vez</td><td data-label="Error frecuente en villas">Cajón frente a un pasillo de 90 cm</td></tr>
+              <tr><td data-label="Zona del vestidor">Eje de barra de ropa larga</td><td data-label="Medida libre">168-173 cm sobre el piso</td><td data-label="Por qué importa">Los ruedos quedan libres de la base</td><td data-label="Error frecuente en villas">Barra baja y prendas que arrastran</td></tr>
+              <tr><td data-label="Zona del vestidor">Ejes de barras de ropa corta</td><td data-label="Medida libre">107-112 cm y 213 cm</td><td data-label="Por qué importa">Dos niveles de camisas en un tramo</td><td data-label="Error frecuente en villas">Barra única que pierde 40-50 % de altura</td></tr>
+              <tr><td data-label="Zona del vestidor">Estantes de doblado y bolsos</td><td data-label="Medida libre">30-36 cm de profundidad</td><td data-label="Por qué importa">Visibilidad completa hasta el fondo</td><td data-label="Error frecuente en villas">Estantes de 45 cm con fondo muerto</td></tr>
+              <tr><td data-label="Zona del vestidor">Último estante al cielo raso</td><td data-label="Medida libre">30-46 cm libres</td><td data-label="Por qué importa">Maletas y rotación de temporada</td><td data-label="Error frecuente en villas">Mueble a techo sin almacenaje alcanzable</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La isla se pide antes de comprobar si la habitación la admite. Solo se justifica cuando el pasillo a cada lado conserva 90 cm o más después de colocarla; con 75 cm, el vestidor se transforma en un corredor con banco. En las villas que trabajamos, la isla rinde a partir de unos 9,3 m²; por debajo de esa superficie, un mueble bajo de 45 cm de fondo entrega casi toda la función de doblado sin consumir circulación. Antes de aprobar cualquier despiece, mida la habitación y el inventario: 40 prendas largas, 120 camisas y 15 bolsos cambian por completo la distribución de barras y cajones.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales: qué aguanta de verdad en un vestidor a medida</h2>
+        <p>Los materiales de un vestidor responden a tres fuerzas: movimiento por humedad, luz estructural entre apoyos y calidad de acabado. El interior de un vestidor no está climatizado como una cava de vinos, y en una villa costera la oscilación diaria de humedad es lo que abre las juntas de los cajones y comba los cantos de los estantes. Los tableros derivados (contrachapado y MDF con chapa o laminado) toleran ese movimiento mejor que la madera maciza porque son dimensionalmente estables en ambos sentidos. La maciza se ve mejor, pero exige apoyos más frecuentes y holguras de dilatación en los extremos.</p>
+        <p>Nosotros especificamos el núcleo de los tableros conforme a CARB Fase 2 / EPA TSCA Title VI en cada vestidor que fabricamos, con tableros E0 disponibles cuando el cliente los pide por escrito. Ambas autoridades fijan el mismo límite de emisión de formaldehído para contrachapado de madera dura, aglomerado y MDF. Lo que sorprende a los propietarios es el punto siguiente de la propia CARB: la tasa de emisión sube con la temperatura y la humedad, de modo que un vestidor cálido y húmedo libera más incluso con paneles que cumplen norma. Para mobiliario con certificación de bajas emisiones trabajamos también con componentes aptos para GREENGUARD Gold (UL).</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material interior</th><th>Mejor uso en el vestidor</th><th>Comportamiento ante humedad</th><th>Coste relativo</th><th>Limitación honesta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Material interior">MDF con melamina</td><td data-label="Mejor uso en el vestidor">Cajones, cuerpo interior</td><td data-label="Comportamiento ante humedad">Estable, poco movimiento</td><td data-label="Coste relativo">El más bajo</td><td data-label="Limitación honesta">Los cantos se ven delgados en estante abierto</td></tr>
+              <tr><td data-label="Material interior">Contrachapado enchapado</td><td data-label="Mejor uso en el vestidor">Estantes, tramos completos, traseras</td><td data-label="Comportamiento ante humedad">Estable y resistente a la luz entre apoyos</td><td data-label="Coste relativo">Medio</td><td data-label="Limitación honesta">El calce de veta añade coste y merma</td></tr>
+              <tr><td data-label="Material interior">Madera maciza</td><td data-label="Mejor uso en el vestidor">Marcos vistos, tableros de isla</td><td data-label="Comportamiento ante humedad">Se mueve con la humedad</td><td data-label="Coste relativo">Alto</td><td data-label="Limitación honesta">Exige holgura de dilatación y suma peso</td></tr>
+              <tr><td data-label="Material interior">Aluminio + vidrio</td><td data-label="Mejor uso en el vestidor">Secciones de exhibición, muro de calzado</td><td data-label="Comportamiento ante humedad">No le afecta</td><td data-label="Coste relativo">Alto</td><td data-label="Limitación honesta">Marca cada huella y cada pelusa</td></tr>
+              <tr><td data-label="Material interior">Paneles forrados en piel</td><td data-label="Mejor uso en el vestidor">Frentes de cajón, detalle de isla</td><td data-label="Comportamiento ante humedad">Estable sobre núcleo de tablero</td><td data-label="Coste relativo">Alto</td><td data-label="Limitación honesta">Sensible a la abrasión y a los aceites</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El herraje es donde un vestidor barato se delata. Una corredera de cierre suave certificada para 50.000 ciclos es el mínimo de trabajo para el vestidor de una suite principal; la diferencia aparece como holgura y desalineación a los tres o cuatro años de uso diario. Por defecto usamos correderas de marca con ciclaje documentado, bisagras con freno y extracción total en los cajones profundos. En mi experiencia, sustituir herraje económico cuesta más que especificarlo bien desde el inicio.</p>
+        <p>Los textiles y la piel son la parte del vestidor que más sufre y la que menos se especifica. Cojines de temporada, ropa de cama, mantas y fundas de traje ocupan volumen real y necesitan cajas rígidas y etiquetadas, no bolsas apiladas. La piel, el ante y la cachemira piden humedad relativa entre 45 % y 55 % y ventilación constante; por encima de esa banda aparecen manchas y olor a humedad. Reserve un tramo de 30-36 cm con tapa ventilada y guarde la ropa de temporada en fundas de algodón, nunca en plástico cerrado.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-95-img-02.jpg" alt="Almacenamiento de cojines y textiles en estantes de un vestidor a medida" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cajoneras etiquetadas para cojines, ropa de cama y textiles de temporada en un vestidor de villa.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Ventilación y humedad: la partida que nadie especifica</h2>
+        <p>Un vestidor cerrado es una de las habitaciones menos ventiladas de una casa grande, y las consecuencias se acumulan: aire viciado, condensación sobre muros exteriores fríos y un desprendimiento más lento de los acabados nuevos. La norma ASHRAE 62.2 aborda la ventilación y la calidad del aire interior en edificios residenciales de baja altura, y la propia ASHRAE advierte que estas normas expresan la ventilación como caudal por unidad de área o por ocupante en lugar de una cifra fija de renovaciones, porque el caudal correcto depende del espacio y de su uso. Por eso no existe un único valor publicado de ACH que sirva para todos los vestidores.</p>
+        <p>En proyecto trabajamos con 4-6 renovaciones por hora, entregadas por un extractor silencioso con control de humedad o por un circuito de suministro y retorno conectado a la ventilación mecánica de la casa. El extremo de 4 ACH corresponde a clima templado y vestidor que se abre a diario; 6 ACH más deshumidificación corresponden a villas costeras o a vestidores con piel, ante y textiles de archivo. La guía al consumidor de CARB apunta en la misma dirección: ventilación, extractores y menor temperatura y humedad reducen el formaldehído y los olores de acabado de los muebles nuevos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Escenario</th><th>Objetivo de ventilación</th><th>Control y medidas complementarias</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Escenario">Clima templado, vestidor de uso diario</td><td data-label="Objetivo de ventilación">4 ACH</td><td data-label="Control y medidas complementarias">Extractor con sensor de humedad, HR sostenida 45-55 %</td></tr>
+              <tr><td data-label="Escenario">Villa costera o húmeda</td><td data-label="Objetivo de ventilación">6 ACH + deshumidificación</td><td data-label="Control y medidas complementarias">Sensor de HR, registro del punto de rocío mensual</td></tr>
+              <tr><td data-label="Escenario">Piel, ante y textiles de archivo</td><td data-label="Objetivo de ventilación">6 ACH</td><td data-label="Control y medidas complementarias">HR 45-55 %, 5-8 cm libres detrás de la ropa, fundas de algodón</td></tr>
+              <tr><td data-label="Escenario">Vestidor interior sin ventana</td><td data-label="Objetivo de ventilación">4-6 ACH</td><td data-label="Control y medidas complementarias">Rejilla de transferencia o recorte bajo la puerta</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos medidas pesan tanto como el propio extractor. Mantenga la humedad relativa entre 45 % y 55 % en villas costeras, porque el almacenamiento de piel y ante se deteriora por encima de esa banda, y deje el vestidor por debajo del punto de consigna de verano de la casa. Deje además 5-8 cm de holgura detrás de la ropa colgada: una barra pegada al panel trasero crea una bolsa de aire muerto donde la lana y la cachemira atraen polilla. Y cuide la salida del aire: un extractor no puede extraer de una caja sellada, así que un recorte bajo la puerta o una rejilla de transferencia discreta cierran el circuito por muy poco dinero si se dibujan a tiempo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Iluminación de vestidor: temperatura de color y CRI deciden si la luz miente</h2>
+        <p>La iluminación de vestidor tiene dos tareas que tiran en direcciones distintas. Debe permitirle distinguir prendas casi idénticas (azul marino de gris carbón, topo de gris) y debe presentar el cuarto como el espacio diseñado que es. Ambas dependen de la calidad de color y no del brillo bruto. Nuestra especificación trabaja en 3000-3500K con CRI 90 o superior, y en secciones de exhibición con joyería o bolsos subimos a CRI 95. La guía del Illuminating Engineering Society sobre calidad de color es la referencia que mostramos al cliente cuando la discusión es cálido frente a neutro, y no la elección de la luminaria.</p>
+        <p>La segunda decisión es la iluminación vertical. Un techo iluminado solo desde arriba aclara el piso y la parte superior de los armarios y deja la ropa en sombra, cuando la ropa colgada es justamente la superficie vertical que usted necesita evaluar. Las tiras LED montadas por encima y ligeramente por delante de cada barra, más secciones de luz rasante en los paneles laterales, hacen un trabajo que un downlight no puede hacer. El interior de los cajones pide una tira de baja potencia activada por interruptor, y el muro de joyería, mayor CRI, porque una luz que cambia el color hace que una gema se lea mal. Un cuarto iluminado solo desde el cielo raso halaga la arquitectura y le miente sobre cada prenda que contiene.</p>
+        <figure class="article-inline-figure">
+          <img src="hmo-13-img-02.png" alt="Taller de mobiliario a medida fabricando los cuerpos de un vestidor" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Fresado del canal para la tira LED en los estantes, en el taller de carpintería a medida.</figcaption>
+        </figure>
+        <p>Ese detalle se resuelve en el despiece, no en obra. El canal de la tira LED se fresca en el estante durante la fabricación del cuerpo de armario, y el paso del cableado se prevé en el mismo dibujo que define barras y cajones. Cuando la iluminación se deja para el final, el instalador perfora paneles terminados, y cada perforación fuera de plano es un punto donde el tablero queda expuesto a la humedad.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Vestidor a medida o sistema modular? La comparación que mueve el presupuesto</h2>
+        <p>Esta decisión mueve el presupuesto más que cualquier elección de material. Un sistema modular se diseña sobre anchos estándar: es predecible, rápido y suele costar entre 30 % y 50 % menos que la carpintería a medida con el mismo acabado visible. La carpintería a medida se dimensiona sobre su habitación y su inventario, así que el rincón incómodo se aprovecha en lugar de rellenarse con tapas ciegas, y cada accesorio interior corresponde a lo que usted realmente guarda.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Punto de decisión</th><th>Sistema modular</th><th>Carpintería a medida</th><th>Cuándo gana cada uno</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Punto de decisión">Ajuste a la geometría</td><td data-label="Sistema modular">Módulos estándar con tapas de relleno</td><td data-label="Carpintería a medida">Ajuste al milímetro, ángulos resueltos</td><td data-label="Cuándo gana cada uno">A medida en cuartos irregulares o en ángulo</td></tr>
+              <tr><td data-label="Punto de decisión">Plazo desde el pedido</td><td data-label="Sistema modular">A menudo semanas, desde stock</td><td data-label="Carpintería a medida">45-60 días típicos</td><td data-label="Cuándo gana cada uno">Modular si la fecha de mudanza es fija</td></tr>
+              <tr><td data-label="Punto de decisión">Coste con igual acabado</td><td data-label="Sistema modular">Línea base de referencia</td><td data-label="Carpintería a medida">Entre 30 % y 50 % más</td><td data-label="Cuándo gana cada uno">Modular en cuartos rectangulares simples</td></tr>
+              <tr><td data-label="Punto de decisión">Adaptación posterior</td><td data-label="Sistema modular">Módulos que se añaden o se mueven</td><td data-label="Carpintería a medida">Ampliaciones exigen rehacer el tramo</td><td data-label="Cuándo gana cada uno">Modular si la colección va a cambiar</td></tr>
+              <tr><td data-label="Punto de decisión">Altura y techo</td><td data-label="Sistema modular">Limitada por el rango de módulos</td><td data-label="Carpintería a medida">Llega a cualquier altura</td><td data-label="Cuándo gana cada uno">A medida por encima de unos 2,7 m</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Mi lectura honesta después de años especificando ambas: la mayoría de los propietarios compra de más en el frente visible y de menos en el plan interior. Un modular con una distribución interior excelente le sirve mejor que unas puertas a medida sobre un interior pensado a la ligera. Si su habitación es casi rectangular, su colección convencional y su calendario corto, el modular es la decisión correcta, y se lo diré sin rodeos. La carpintería a medida justifica su prima en tres casos: cuartos estructuralmente irregulares, colecciones realmente atípicas y villas donde el vestidor es una habitación diseñada que va a fotografiarse. En Estados Unidos, presupueste aproximadamente USD 450-1.200 por pie lineal de tramo para carpintería a medida, y una instalación modular comparable queda entre 30 % y 50 % por debajo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo cerrar el diseño de un vestidor de villa sin arrepentimientos</h2>
+        <p>Un vestidor a medida funciona cuando el pasillo permite usarlo, las barras y los estantes están a la altura correcta, los materiales soportan la humedad del lugar, el aire circula y la luz dice la verdad sobre el color. Corrija primero la circulación, porque el ancho del pasillo no se recupera después de fabricar el mueble. Después cierre materiales y accesorios interiores, que es donde vive la experiencia diaria. La ventilación y la iluminación van al final en la secuencia de dibujo, pero merecen atención de primera línea en la especificación: rehacerlas sobre carpintería terminada cuesta varias veces lo que cuesta preverlas.</p>
+        <p>Fenmi Casa fabrica vestidores a medida para villas en más de 50 países, incluido el mercado estadounidense, con núcleos de tablero especificados a CARB Fase 2 / EPA TSCA Title VI, herraje de cierre suave de 50.000 ciclos y un plazo de producción de 45-60 días. La ventaja de coste frente a producciones europeas comparables se sitúa entre 30 % y 50 %. Puede revisar el servicio de /vestidores-a-medida/, ver otros interiores de /interiores-villa/ o escribirnos por /contacto/ con el plano medido de su habitación.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite un plano medido de su vestidor"
+      text="Envíenos el plano de la habitación con alturas y la lista de inventario, y le devolvemos un despiece con pasillos de 90-122 cm, barras a 168-173 cm y ventilación calculada. Fabricamos a medida con paneles CARB Fase 2 / EPA TSCA Title VI, herraje de 50.000 ciclos y un plazo de producción de 45-60 días. Escríbanos por /contacto/ o revise /vestidores-a-medida/ para ver proyectos entregados en más de 50 países."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
