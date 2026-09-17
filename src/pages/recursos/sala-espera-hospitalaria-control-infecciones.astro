@@ -1,0 +1,444 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para sala de espera hospitalaria y control de infecciones";
+const pageDescription = "Guía de especificación de mobiliario para sala de espera hospitalaria: telas antimicrobianas, vinilos aptos para lejía, costuras termofusionadas e ICRA.";
+const keywords = [
+  "mobiliario sala de espera hospitalaria",
+  "control de infecciones",
+  "tela antimicrobiana",
+  "vinilo apto para lejía",
+  "poliuretano integral",
+  "ICRA"
+];
+const canonicalPath = "/recursos/sala-espera-hospitalaria-control-infecciones/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-05-img-01-marco-sofa-taller.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-17";
+const dateModified = "2026-09-17";
+const publicationDateLabel = "Publicada el 17 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué ciclo mínimo de desinfección debe soportar el tapizado de una sala de espera?", answer: "Especifique al menos 10 ciclos de desinfección diarios durante la vida del producto, lo que en la práctica equivale a 500-1.000 ciclos documentados al año. Exija que el informe de resistencia química del proveedor indique ciclos probados frente a amonio cuaternario y lejía 1:10, no solo frente a limpiadores de base acuosa." },
+    { question: "¿Basta la tela antimicrobiana por sí sola para el control de infecciones?", answer: "No. Los agentes antimicrobianos frenan el crecimiento microbiano en superficie, pero no sustituyen la limpieza mecánica ni una barrera frente a fluidos. La tela antimicrobiana es adecuada para asientos de consulta de bajo riesgo; las salas expuestas a fluidos corporales deben usar vinilo apto para lejía o poliuretano integral." },
+    { question: "¿Qué significa exactamente «vinilo apto para lejía» en un pliego?", answer: "Significa que el vinilo lleva una capa superior reticulada probada frente a hipoclorito sódico a dilución 1:10 (unos 5.000 ppm) durante cientos de ciclos sin agrietarse, amarillear ni perder el recubrimiento. Pida el informe de ensayo que indique la concentración de lejía y el número de ciclos." },
+    { question: "¿Por qué fallan las costuras cosidas en los asientos sanitarios?", answer: "Cada perforación de aguja es un microcanal por el que los fluidos ascienden hasta la espuma, donde no se pueden desinfectar y se convierten en un reservorio de contaminación permanente. Las costuras termofusionadas o invertidas, o el poliuretano completamente sin costuras, eliminan esa vía." },
+    { question: "¿Cuál es el MOQ y el plazo de producción para pedidos de proyecto?", answer: "Hongye Furniture Group atiende desde paquetes de vestíbulo de un solo lote en adelante, con un plazo de producción estándar de 45-60 días desde la confirmación del pedido para asientos sanitarios certificados BIFMA, incluida la inspección previa al embarque y la carga de contenedor desde nuestras plantas de Guangdong." },
+    { question: "¿Cómo se gestionan el envío y la garantía en proyectos sanitarios internacionales?", answer: "El mobiliario viaja montado o desmontado con protección de cantos y asegurado según los términos comerciales pactados. La garantía estructural habitual es de 5 años en estructuras y 2 años en tapizados, con la documentación GREENGUARD Gold y CE aportada en cada embarque para revisiones de aduanas y acreditación." },
+    { question: "¿Cómo debe referenciar el ICRA al proveedor de mobiliario?", answer: "Adjunte en la fase de RFQ la especificación de materiales, la declaración de compatibilidad con desinfectantes, los certificados de bajas emisiones y el plan de secuencia de montaje al expediente del ICRA, de modo que el equipo de prevención de infecciones revise y apruebe antes de emitir las órdenes de compra." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-05-img-01-marco-sofa-taller.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-08-img-01.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-05-img-01.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Salud · Control de infecciones &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para sala de espera hospitalaria: guía de control de infecciones</h1>
+          <p>Una butaca de sala de espera se desinfecta varias veces más al día que cualquier sillón de un vestíbulo de hotel, y decenas de pacientes la tocan en cada turno. Ese dato sencillo lo condiciona todo: la tela, la costura, la densidad de la espuma, el herraje e incluso el perfil de la pata. La especificación de mobiliario para sala de espera hospitalaria empieza, por tanto, en el material. Si la superficie se elige mal, el tapizado se agrieta, absorbe fluidos y deja de poder limpiarse; en lugar de ocho años de servicio, el conjunto termina reemplazado en dieciocho meses. Si se especifica bien —tela antimicrobiana en zonas de bajo riesgo, vinilo apto para lejía en la espera general y poliuretano integral en urgencias y salud conductual— la misma inversión rinde durante toda la vida útil del centro.</p>
+          <p>En esta guía explico, con el lenguaje de quien licita FF&amp;E hospitalario, cómo comparar los tres materiales dominantes, cómo leer los informes de resistencia química que debe exigir al proveedor y cómo integrar el mobiliario en el ICRA (Infection Control Risk Assessment). Hongye Furniture Group, fundada en 1996, fabrica asientos sanitarios con certificación BIFMA, GREENGUARD Gold, FSC y CE en un campus de más de 300.000 m² en Guangdong, con más de 1.000 trabajadores cualificados y proyectos entregados en más de 50 países. Todo lo que sigue aplica igual si compra diez butacas o un paquete completo de 200 puestos.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-05-img-01-marco-sofa-taller.webp" alt="Sillería de sala de espera hospitalaria tapizada con materiales limpiables" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué el control de infecciones empieza en el material</h2>
+        <p>Los apoyabrazos, los cantos del asiento y las mesillas de revistas de un área de espera figuran de forma recurrente entre las superficies más contaminadas de un centro sanitario, según las publicaciones de los CDC y de APIC. Un asiento en un vestíbulo ambulatorio con tráfico alto acumula entre 20 y 40 eventos de contacto al día, y el equipo de limpieza (EVS) puede desinfectarlo entre 3 y 10 veces diarias. Cada pasada es, en la práctica, un pequeño ataque químico sobre el tapizado.</p>
+        <p>El mensaje para el comprador es directo: la selección de materiales antecede a la distribución, al color y al manual de marca. Tres familias dominan la especificación actual. La tela antimicrobiana, tejida con iones de plata u otros agentes incorporados, frena el crecimiento microbiano en superficie, pero sigue necesitando un tejido denso y una barrera trasera contra fluidos. El vinilo recubierto de PVC es el caballo de batalla del sector: las formulaciones aptas para lejía resisten hipoclorito sódico diluido 1:10 (unos 5.000 ppm) siempre que lleven una capa superior protectora. Y el poliuretano integral autoreticulado es una piel continua, sin costuras cosidas: los fluidos no penetran y la superficie tolera amonio cuaternario, lejía y peróxido de hidrógeno.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Comparativa de materiales: tela antimicrobiana, vinilo y poliuretano integral</h2>
+        <p>La tabla siguiente resume el comportamiento de los tres materiales frente a los criterios que deciden una compra. Una advertencia de oficio: «apto para lejía» es una afirmación de formulación, no de catálogo. Pida al fabricante el informe de resistencia química, no la ficha comercial.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Tela antimicrobiana</th><th>Vinilo (PVC)</th><th>Poliuretano integral</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio">Tolerancia a la lejía (1:10)</td><td data-label="Tela antimicrobiana">De pobre a regular; depende de la barrera</td><td data-label="Vinilo (PVC)">Buena con capa protectora</td><td data-label="Poliuretano integral">Excelente</td></tr>
+              <tr><td data-label="Criterio">Tolerancia al amonio cuaternario</td><td data-label="Tela antimicrobiana">Buena</td><td data-label="Vinilo (PVC)">Excelente</td><td data-label="Poliuretano integral">Excelente</td></tr>
+              <tr><td data-label="Criterio">Peróxido de hidrógeno / ácido peracético</td><td data-label="Tela antimicrobiana">Regular</td><td data-label="Vinilo (PVC)">Buena</td><td data-label="Poliuretano integral">Excelente</td></tr>
+              <tr><td data-label="Criterio">Penetrabilidad de la costura</td><td data-label="Tela antimicrobiana">Alta (perforaciones de aguja)</td><td data-label="Vinilo (PVC)">Moderada (costura cosida)</td><td data-label="Poliuretano integral">Nula (sin costuras)</td></tr>
+              <tr><td data-label="Criterio">Barrera frente a fluidos</td><td data-label="Tela antimicrobiana">Requiere membrana trasera</td><td data-label="Vinilo (PVC)">Intrínseca</td><td data-label="Poliuretano integral">Intrínseca</td></tr>
+              <tr><td data-label="Criterio">Confort y tacto tapizado</td><td data-label="Tela antimicrobiana">El mejor</td><td data-label="Vinilo (PVC)">Bueno</td><td data-label="Poliuretano integral">Firme, de regular a bueno</td></tr>
+              <tr><td data-label="Criterio">Vida útil con desinfección diaria</td><td data-label="Tela antimicrobiana">2-4 años</td><td data-label="Vinilo (PVC)">5-8 años</td><td data-label="Poliuretano integral">8-12 años</td></tr>
+              <tr><td data-label="Criterio">Índice de coste relativo</td><td data-label="Tela antimicrobiana">1,0</td><td data-label="Vinilo (PVC)">1,2</td><td data-label="Poliuretano integral">1,8</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-08-img-01-union-bastidor-silla.webp" alt="Butaca sanitaria con asiento de poliuretano integral sin costuras para sala de espera hospitalaria" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Detalle del asiento con tapizado de poliuretano integral moldeado, sin costuras visibles en la superficie de contacto.</figcaption>
+        </figure>
+        <p>Mi regla habitual en los pliegos: tela antimicrobiana para consultas y zonas administrativas de bajo riesgo, vinilo para la espera general y poliuretano integral para urgencias, salas de salud conductual y zonas pediátricas. En licitaciones recientes hemos visto asientos de vinilo sanitario entre 250 y 500 USD por puesto, y soluciones de poliuretano integral entre 500 y 900 USD. El sobreprecio se recupera con creces si evita un recambio prematuro a los dos años.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Compatibilidad química: qué hacen los desinfectantes con el tapizado</h2>
+        <p>El desinfectante que use su equipo de limpieza va a durar más que cualquier tela que elija. La compatibilidad, y no la resistencia a manchas, es la verdadera prueba de durabilidad. Dos químicas concentran la mayoría de los fallos de especificación. El amonio cuaternario («quat»), el desinfectante hospitalario más común, es relativamente suave con el vinilo, pero plastifica y fragiliza poco a poco los textiles sin tratar, y deja residuos que atraen suciedad hacia el tejido: con barrera trasera, los deshilachados de canto aparecen entre los 18 y 24 meses. El hipoclorito sódico diluido 1:10 —unos 5.000 ppm de cloro disponible— es obligatorio en aislamientos y tras eventos de riesgo de C. difficile; oxida colorantes y ataca las cadenas poliméricas, de modo que una tela comercial o un vinilo sin capa superior amarillea y se agrieta antes de los 500 ciclos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Desinfectante</th><th>Concentración típica</th><th>Efecto en tela</th><th>Efecto en vinilo</th><th>Efecto en poliuretano integral</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Desinfectante">Amonio cuaternario</td><td data-label="Concentración típica">1:256 (≈800 ppm)</td><td data-label="Efecto en tela">Residuos y fragilización progresiva</td><td data-label="Efecto en vinilo">Mínimo con capa protectora</td><td data-label="Efecto en poliuretano integral">Mínimo</td></tr>
+              <tr><td data-label="Desinfectante">Hipoclorito sódico (lejía)</td><td data-label="Concentración típica">1:10 (≈5.000 ppm)</td><td data-label="Efecto en tela">Decoloración y degradación de la fibra</td><td data-label="Efecto en vinilo">Seguro solo en formulación «apta para lejía»</td><td data-label="Efecto en poliuretano integral">Mínimo</td></tr>
+              <tr><td data-label="Desinfectante">Peróxido de hidrógeno</td><td data-label="Concentración típica">3-7 %</td><td data-label="Efecto en tela">Decoloración oxidativa gradual</td><td data-label="Efecto en vinilo">Buena tolerancia</td><td data-label="Efecto en poliuretano integral">Excelente</td></tr>
+              <tr><td data-label="Desinfectante">Mezcla quat + alcohol</td><td data-label="Concentración típica">Alcohol al 55-70 %</td><td data-label="Efecto en tela">Resecado y agrietamiento de recubrimientos</td><td data-label="Efecto en vinilo">Buena</td><td data-label="Efecto en poliuretano integral">Excelente</td></tr>
+              <tr><td data-label="Desinfectante">Ácido peracético</td><td data-label="Concentración típica">0,2-0,35 %</td><td data-label="Efecto en tela">No recomendado</td><td data-label="Efecto en vinilo">Regular; verificar capa superior</td><td data-label="Efecto en poliuretano integral">Excelente</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos acciones de compra se derivan de esta tabla. Primera: exija el informe de resistencia química con ciclos probados frente a desinfectantes de marca; una tela que aguanta 500 pasadas de quat y cero de lejía no es grado hospitalario. Segunda: durante la revisión del ICRA, alinee el pliego con la lista real de productos del departamento de EVS, para que la butaca que compra y el desinfectante que usan casen sobre el papel antes de la entrega. Las directrices de la Facility Guidelines Institute (FGI) exigen superficies compatibles con los desinfectantes designados y limpiables sin degradación; escriba ese requisito tal cual en la especificación.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Costuras, herrajes y detalles que deciden la limpiabilidad</h2>
+        <p>Hasta el material correcto fracasa si la construcción atrapa fluidos. El control de infecciones se gana en la costura: una costura cosida lleva miles de perforaciones de aguja por metro lineal, cada una un microcanal para líquidos, y un vivo o cordón añade una línea de sombra que ninguna pasada de trapo alcanza a limpiar.</p>
+        <p>La jerarquía constructiva, de más a menos limpiable, es clara. Primero, las costuras termofusionadas o soldadas por radiofrecuencia, donde los paneles de vinilo se fusionan en una superficie continua sin agujeros. Después, las costuras invertidas u ocultas bajo el asiento o por su cara trasera. En tercer lugar, la costura de doble aguja con sellante, mínimo aceptable en espera general y nunca en aislamiento ni salud conductual. Y al final, el vivo cosido sobre tela comercial, que solo cabe en áreas administrativas no clínicas.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp" alt="Taller de confección de tapizados sanitarios con costuras selladas para mobiliario hospitalario" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Operarios de la planta de Guangdong cosiendo y termofusionando fundas sanitarias antes del montaje de los asientos.</figcaption>
+        </figure>
+        <p>Los herrajes pesan tanto como las costuras. Las grapas y las cabezas de tornillo a la vista acumulan suciedad y perforan guantes: especifique pies embutidos, sistemas de fijación ocultos y canaletas plásticas en la unión asiento-estructura. Bajo el asiento, mantenga al menos 38 mm (1,5 pulgadas) de despeje para que la fregona plana pase sin arrastrar la butaca; los muebles que el personal de limpieza debe mover a mano acaban con la estructura dañada y la pared rayada. Aplique la misma lógica a mesas auxiliares, mostradores de recepción y bancos de pasillo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>ICRA: llevar el control de infecciones al pliego de compras</h2>
+        <p>El ICRA (Infection Control Risk Assessment) es el proceso estructurado, formalizado en las directrices FGI, con el que el equipo del centro evalúa cómo afecta una compra u obra al riesgo de infección. En la mayoría de los proyectos se discute para demoliciones y climatización, pero la compra de mobiliario pertenece a la misma revisión, por tres motivos. Primero: los muebles nuevos entran en áreas con pacientes ocupadas; entregas, pasillos de acopio y montaje generan tráfico en zonas clínicas en horario operativo. Segundo: la ficha técnica es la evidencia; el expediente del ICRA se beneficia de los certificados de resistencia química, de bajas emisiones GREENGUARD Gold y de las declaraciones de limpiabilidad archivados junto a la evaluación de riesgo. Tercero: la renovación por fases depende de ello; un refresco escalonado del vestíbulo necesita mobiliario que se pueda limpiar, embalar y trasladar sin convertirse en vector de contaminación.</p>
+        <p>Un paquete ICRA listo para licitación incluye la especificación de material y costura, la declaración de compatibilidad con desinfectantes, el certificado de bajo VOC y el plan de secuencia de montaje (ensamblaje fuera de área, transporte embalado y EPI específicos para los instaladores). Exigir este paquete en la fase de RFQ, y no después de la adjudicación, filtra a los proveedores que no pueden documentar lo que prometen. En /productos/ puede revisar las líneas de asiento sanitario certificadas, y nuestro equipo adjunta el dossier técnico completo con cada cotización solicitada a través de /contacto/.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Dimensiones, distribución y zonas de salud conductual y pediátrica</h2>
+        <p>El control de infecciones interactúa con la distribución más de lo que los pliegos suelen reconocer. Un asiento amontonado anula la higiene de superficies; un plan bien espaciado da al personal de limpieza el despeje que necesita para hacer su trabajo. Los parámetros siguientes asumen equipos estándar de fregado plano; confírmelos frente a las herramientas reales de su centro durante la revisión del ICRA.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Parámetro</th><th>Dimensión mínima</th><th>Justificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Parámetro">Circulación entre filas</td><td data-label="Dimensión mínima">915 mm (36 pulgadas)</td><td data-label="Justificación">Paso de silla de ruedas y camilla; acceso de fregona</td></tr>
+              <tr><td data-label="Parámetro">Ruta accesible</td><td data-label="Dimensión mínima">1.220 mm (48 pulgadas)</td><td data-label="Justificación">Continuidad de la ruta accesible</td></tr>
+              <tr><td data-label="Parámetro">Ancho por puesto</td><td data-label="Dimensión mínima">510-610 mm (20-24 pulgadas)</td><td data-label="Justificación">Reduce el contacto hombro con hombro</td></tr>
+              <tr><td data-label="Parámetro">Despeje bajo el asiento</td><td data-label="Dimensión mínima">38 mm (1,5 pulgadas)</td><td data-label="Justificación">Paso de fregona plana bajo el asiento</td></tr>
+              <tr><td data-label="Parámetro">Hueco trasero al muro</td><td data-label="Dimensión mínima">25-50 mm (1-2 pulgadas)</td><td data-label="Justificación">Protege el muro y deja la cara trasera limpiable</td></tr>
+              <tr><td data-label="Parámetro">Puestos por tramo continuo</td><td data-label="Dimensión mínima">Máximo 4</td><td data-label="Justificación">Distanciamiento en picos; segmentos de limpieza</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Evite tramos de más de cuatro asientos sin hueco intermedio o mesa auxiliar; los tramos cortos dan flexibilidad de distanciamiento en picos de demanda y definen segmentos lógicos de limpieza. Deje al menos 305 mm de despeje lateral en cada extremo del tándem para el acceso de la fregona. En salud conductual y pediátrica se añade una segunda capa: resistencia a ligaduras (sin cables expuestos ni huecos entre asiento y respaldo mayores que el diámetro de un lápiz), tornillos antimanipulación, tándems de más de 45 kg o anclados al suelo en unidades de adolescentes, cantos visibles con radio mínimo de 3 mm y tapizados de poliuretano en tonos medios que disimulan manchas entre ciclos de limpieza.</p>
+        <p>Lo que veo en fábrica es que la zona pediátrica es la que más se beneficia del poliuretano integral: allí los zumos, la orina y los fluidos corporales son la regla, no la excepción. En salud conductual, conviene sumar a la revisión de la especificación a la dirección de enfermería y, cuando aplique, al comité de entorno de prevención del suicidio del centro; es otra razón por la que encuadrar la compra dentro del ICRA acaba pagando.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su dossier ICRA y el informe de ciclos de lejía"
+      text="Hongye Furniture Group, fundada en 1996, acumula más de 1.000 proyectos en más de 50 países desde una planta de más de 300.000 m² con más de 1.000 trabajadores cualificados, y también sirve FF&E a más de 47 marcas hoteleras internacionales. Solicite en /contacto/ el informe de resistencia química con ciclos de lejía, el paquete documental listo para el ICRA y su cotización con plazo de producción de 45-60 días y ventaja de coste del 30-50 % frente a alternativas regionales."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

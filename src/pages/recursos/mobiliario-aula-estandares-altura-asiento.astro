@@ -1,0 +1,454 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Estándares de mobiliario de aula: EN 1729, BIFMA y altura del asiento";
+const pageDescription = "Guía de estándares de mobiliario de aula: tallas EN 1729 0-6, pruebas BIFMA X5.1 y tabla de altura de asiento por grado para licitaciones escolares.";
+const keywords = [
+  "estándares de mobiliario de aula",
+  "EN 1729",
+  "altura del asiento",
+  "BIFMA X5.1",
+  "mobiliario escolar regulable",
+  "licitación de mobiliario educativo"
+];
+const canonicalPath = "/recursos/mobiliario-aula-estandares-altura-asiento/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-17";
+const dateModified = "2026-09-17";
+const publicationDateLabel = "Publicada el 17 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué altura de asiento corresponde a kínder y primer grado?", answer: "Especifique 310-350 mm, que corresponde a las tallas 1 y 2 de EN 1729. Para salas de maternal y preescolar baje a la talla 0, con 260 mm. Antes de fijar un número, verifique la dispersión real de edades del grupo." },
+    { question: "¿EN 1729 o BIFMA: cuál conviene a mi proyecto escolar?", answer: "Depende del mercado. Los proyectos europeos y la mayoría de los internacionales especifican EN 1729-1 y -2; los norteamericanos y los colegios con currículo de EE. UU. especifican ANSI/BIFMA X5.1, normalmente junto con GREENGUARD Gold. El doble cumplimiento es habitual y poco costoso para fabricantes consolidados." },
+    { question: "¿Compro sillas escolares regulables o de altura fija?", answer: "Elija regulables cuando las aulas atienden varios grupos de edad, como laboratorios y salas compartidas. Elija altura fija cuando cada aula tiene un solo grupo: suele costar entre un 15 y un 25 % menos por unidad y tiene menos piezas que mantener." },
+    { question: "¿Cuál es el pedido mínimo (MOQ) para mobiliario de aula?", answer: "Hongye Furniture Group acompaña programas de FF&E escolar desde lotes piloto pequeños; las corridas estándar suelen iniciar en 100-200 unidades por modelo, con consolidación de varios modelos para llenar contenedores de forma eficiente. Envíenos su programa de aulas y le confirmamos el MOQ exacto por artículo." },
+    { question: "¿Cuánto tarda un pedido completo de mobiliario para un colegio?", answer: "El plazo de producción estándar es de 45-60 días tras la aprobación de planos y muestras, según volumen y complejidad de acabados. El envío desarmado reduce el volumen marítimo entre un 40 y un 60 % frente a unidades totalmente ensambladas." },
+    { question: "¿El mobiliario escolar se envía desarmado o ensamblado?", answer: "Ambas opciones. La mayoría de los proyectos de exportación viaja desarmado (knock-down) para reducir el flete, con sillas preensambladas o de montaje simple con 4 tornillos en obra. La entrega totalmente ensamblada está disponible para proyectos con mano de obra limitada en sitio." },
+    { question: "¿Qué garantía debo exigir en una licitación de mobiliario escolar?", answer: "Pida 5 años de garantía estructural para bastidores y 2 años para mecanismos o pistones de gas, con repuestos garantizados durante 7 años. Exija esas condiciones en el documento de oferta, no solo en el folleto del proveedor." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-24-img-02.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-21-img-01.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Educación · Normativa &middot; {publicationDateLabel}</p>
+          <h1>Estándares de mobiliario de aula: EN 1729, BIFMA y altura del asiento por grado</h1>
+          <p>Los estándares de mobiliario de aula existen por una razón muy concreta: traducen las dimensiones del cuerpo del estudiante a medidas de silla y pupitre, y lo demuestran con ensayos de laboratorio en lugar de promesas de catálogo. Si usted prepara una licitación de FF&amp;E educativo, dos normas concentran casi todo lo relevante: EN 1729 en Europa y en la mayoría de los proyectos internacionales, y ANSI/BIFMA X5.1 en Norteamérica. Los números hablan solos: un asiento a 380 mm corresponde a la talla 3 de EN 1729 y sirve a estudiantes de 133-159 cm de estatura; uno a 460 mm, a la talla 5, para cursos de secundaria. Cuando el pliego cita la parte 1 para tallas y la parte 2 para resistencia, el comprador no pide una preferencia de marca: pide un requisito medible y auditable. Esa diferencia es la que separa ofertas comparables de precios especulativos.</p>
+          <p>En esta guía condensamos ambas normas en tablas de altura de asiento por grado escolar, listas para incorporar al anexo técnico, además de criterios claros para decidir entre mobiliario regulable y de altura fija. En Hongye Furniture Group, fundada en 1996 y con más de 300.000 m² de planta, fabricamos sillas y pupitres a estos estándares desde hace años. Lo que sigue refleja tanto la norma escrita como lo que veo en fábrica y en la revisión de ofertas de licitaciones escolares. Detrás de cada pedido hay más de 1.000 trabajadores cualificados en una planta de más de 300.000 m², con proyectos entregados en más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp" alt="Aula escolar con mobiliario conforme a la norma EN 1729 y alturas por grado" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué los estándares de mobiliario de aula importan en las compras</h2>
+        <p>La respuesta directa: los estándares existen para traducir las medidas corporales del estudiante a dimensiones de mobiliario y para demostrar, mediante ensayo, que el equipo sobrevivirá al aula. Cuando una licitación cita EN 1729-1 para tallas y EN 1729-2 para resistencia, el comprador exige un contrato verificable, no una impresión de calidad.</p>
+        <p>Saltarse este paso cuesta dinero de forma silenciosa. Un asiento mal dimensionado obliga al estudiante a flexionar la cadera y encorvar los hombros durante seis horas diarias; organismos como NAEYC (naeyc.org) incluyen el mobiliario correctamente escalado entre los criterios de calidad de la educación temprana. Una silla que falla el ensayo de estabilidad, por su parte, se convierte en un reclamo de responsabilidad en lugar de una partida presupuestaria. Y hay un efecto menos visible: si un lote completo debe reponerse a mitad de semestre, ese gasto suele borrar el margen de toda la partida de aulas.</p>
+        <p>En mi experiencia revisando pliegos, el problema casi nunca es la falta de normas disponibles, sino cláusulas vagas que permiten al ofertante sustituir un producto certificado por uno equivalente sin certificado. Las secciones siguientes le dan el vocabulario técnico exacto para cerrar esa puerta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>EN 1729-1 y EN 1729-2: las tallas 0 a 6 explicadas</h2>
+        <p>EN 1729-1, publicada por CEN (cen.eu), asigna tallas de 0 a 6 según la estatura del estudiante y la altura poplítea, emparejando cada talla con una altura de asiento y una altura de pupitre. EN 1729-2 cubre la seguridad: resistencia, durabilidad, estabilidad y ensayo de vuelco para sillas y mesas. El sistema es deliberadamente simple: en lugar de discutir edades, quien especifica mide o estima el rango de estaturas del grupo y elige la talla.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Talla EN 1729-1</th><th>Edad aproximada</th><th>Altura asiento (mm)</th><th>Altura pupitre (mm)</th><th>Grupo típico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Talla EN 1729-1">Talla 0</td><td data-label="Edad aproximada">3-4 años</td><td data-label="Altura asiento (mm)">260</td><td data-label="Altura pupitre (mm)">400</td><td data-label="Grupo típico">Preescolar y primeros años</td></tr>
+              <tr><td data-label="Talla EN 1729-1">Talla 1</td><td data-label="Edad aproximada">4-6 años</td><td data-label="Altura asiento (mm)">310</td><td data-label="Altura pupitre (mm)">460</td><td data-label="Grupo típico">Kínder a 1.º grado</td></tr>
+              <tr><td data-label="Talla EN 1729-1">Talla 2</td><td data-label="Edad aproximada">6-8 años</td><td data-label="Altura asiento (mm)">350</td><td data-label="Altura pupitre (mm)">530</td><td data-label="Grupo típico">1.º a 3.er grado</td></tr>
+              <tr><td data-label="Talla EN 1729-1">Talla 3</td><td data-label="Edad aproximada">8-11 años</td><td data-label="Altura asiento (mm)">380</td><td data-label="Altura pupitre (mm)">590</td><td data-label="Grupo típico">3.º a 5.º grado</td></tr>
+              <tr><td data-label="Talla EN 1729-1">Talla 4</td><td data-label="Edad aproximada">11-14 años</td><td data-label="Altura asiento (mm)">420</td><td data-label="Altura pupitre (mm)">640</td><td data-label="Grupo típico">5.º a 8.º grado</td></tr>
+              <tr><td data-label="Talla EN 1729-1">Talla 5</td><td data-label="Edad aproximada">14-17 años</td><td data-label="Altura asiento (mm)">460</td><td data-label="Altura pupitre (mm)">710</td><td data-label="Grupo típico">8.º a 11.º grado</td></tr>
+              <tr><td data-label="Talla EN 1729-1">Talla 6</td><td data-label="Edad aproximada">17+ años</td><td data-label="Altura asiento (mm)">500</td><td data-label="Altura pupitre (mm)">760</td><td data-label="Grupo típico">11.º y 12.º grado, adultos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos apuntes prácticos de fábrica. Primero, los valores de altura de asiento son máximos para cada talla: una silla puede entregarse algo más baja y seguir cumpliendo. Segundo, el pupitre debe quedar unos 220-280 mm por encima del asiento emparejado para permitir una postura de escritura cómoda; comprar sillas de talla 4 con pupitres aún de talla 3 es uno de los errores de especificación más frecuentes que detecto en revisión de ofertas. Verifique también qué edición de la norma referencia el certificado del proveedor: tras la revisión de EN 1729-1 con datos antropométricos actualizados, siguen circulando certificados contra la edición sustituida.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-03-img-02-planta-produccion.webp" alt="Línea de producción de mobiliario escolar con sillas y pupitres apilados" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Producción en serie de sillas y pupitres escolares antes del empaque para exportación.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>ANSI/BIFMA X5.1: qué ensaya y por qué la exigen los colegios</h2>
+        <p>La respuesta directa: ANSI/BIFMA X5.1 es la norma estadounidense para sillas de oficina y de trabajo, publicada por BIFMA (bifma.org), y gobierna cómo se somete a carga, ciclos y verificación de estabilidad una silla de escuela o biblioteca en proyectos norteamericanos.</p>
+        <p>Donde EN 1729 parte de las tallas, X5.1 parte del ensayo. La norma define ciclos de durabilidad del asiento, resistencia del respaldo, carga de apoyabrazos, ensayos de caída y estabilidad de inclinación con cargas y puntos de aplicación de fuerza definidos. Una silla certificada bajo X5.1 ha resistido, por ejemplo, impactos repetidos del asiento con cargas representativas del ocupante: una evidencia que pesa cuando el equipo legal de un distrito escolar revisa el expediente de compra. Como X5.1 se redactó para sillas de trabajo y no para asiento fijo de aula, la mayoría de los especificadores en Norteamérica la combina con la certificación GREENGUARD Gold por emisiones químicas bajas (límites de COV), que suele ser el requisito más difícil de cumplir y el primero que auditan.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>EN 1729 (partes 1 y 2)</th><th>ANSI/BIFMA X5.1</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio">Alcance principal</td><td data-label="EN 1729 (partes 1 y 2)">Sillas y mesas para entornos educativos</td><td data-label="ANSI/BIFMA X5.1">Sillas de oficina y de trabajo</td></tr>
+              <tr><td data-label="Criterio">Base de tallado</td><td data-label="EN 1729 (partes 1 y 2)">Tallas 0-6 por estatura y altura de asiento</td><td data-label="ANSI/BIFMA X5.1">Sin tallas; guía ergonómica</td></tr>
+              <tr><td data-label="Criterio">Enfoque de ensayo</td><td data-label="EN 1729 (partes 1 y 2)">Resistencia, durabilidad, estabilidad y vuelco</td><td data-label="ANSI/BIFMA X5.1">Ciclos de asiento y respaldo, caída, inclinación</td></tr>
+              <tr><td data-label="Criterio">Mercado típico</td><td data-label="EN 1729 (partes 1 y 2)">Europa, Medio Oriente, colegios internacionales</td><td data-label="ANSI/BIFMA X5.1">Norteamérica y colegios con currículo de EE. UU.</td></tr>
+              <tr><td data-label="Criterio">Certificación habitual</td><td data-label="EN 1729 (partes 1 y 2)">Marcado CE</td><td data-label="ANSI/BIFMA X5.1">GREENGUARD Gold por emisiones</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para grupos educativos internacionales, por ejemplo un campus en Dubái con currículo estadounidense, el enfoque más limpio es el doble cumplimiento: tallas EN 1729-1 para las aulas y bastidores ensayados según X5.1 con dossier GREENGUARD Gold para los materiales. Para fabricantes consolidados, ese doble cumplimiento es rutina y no encarece el proyecto de forma significativa.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Altura del asiento por grado escolar: tabla de selección práctica</h2>
+        <p>La respuesta directa: asigne cada banda de grados a una talla EN 1729 y especifique un rango de altura de asiento, no un número único, porque cualquier aula real abarca una dispersión de estaturas de 20-30 cm.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Banda de grados</th><th>Edad aproximada</th><th>Talla EN 1729</th><th>Altura asiento (mm)</th><th>Altura pupitre (mm)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Banda de grados">Kínder a 1.º</td><td data-label="Edad aproximada">5-7 años</td><td data-label="Talla EN 1729">1-2</td><td data-label="Altura asiento (mm)">310-350</td><td data-label="Altura pupitre (mm)">460-530</td></tr>
+              <tr><td data-label="Banda de grados">2.º a 4.º</td><td data-label="Edad aproximada">7-10 años</td><td data-label="Talla EN 1729">2-3</td><td data-label="Altura asiento (mm)">350-380</td><td data-label="Altura pupitre (mm)">530-590</td></tr>
+              <tr><td data-label="Banda de grados">5.º a 6.º</td><td data-label="Edad aproximada">10-12 años</td><td data-label="Talla EN 1729">3-4</td><td data-label="Altura asiento (mm)">380-420</td><td data-label="Altura pupitre (mm)">590-640</td></tr>
+              <tr><td data-label="Banda de grados">7.º a 9.º</td><td data-label="Edad aproximada">12-15 años</td><td data-label="Talla EN 1729">4-5</td><td data-label="Altura asiento (mm)">420-460</td><td data-label="Altura pupitre (mm)">640-710</td></tr>
+              <tr><td data-label="Banda de grados">10.º a 12.º</td><td data-label="Edad aproximada">15-18 años</td><td data-label="Talla EN 1729">5-6</td><td data-label="Altura asiento (mm)">460-500</td><td data-label="Altura pupitre (mm)">710-760</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Use el extremo inferior de cada rango cuando el grupo incluya a los más pequeños de la banda: un aula de 5.º grado con estudiantes de 10 años no debe amueblarse completa en el máximo de 420 mm. Para espacios compartidos (bibliotecas, salas de proyectos, salas de exámenes), elija la talla que se ajuste al centro de la población visitante, no al número de grado intermedio. Este método de mapeo por grado es el mismo que aplica nuestro equipo de proyectos al optimizar el presupuesto aula por aula: auditamos la demografía real de estudiantes por edificio y repartimos las tallas en proporción, en lugar de asignar una sola talla por colegio.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-14-img-01-suspension-asiento.webp" alt="Silla escolar regulable en altura con mecanismo de pasador para aulas compartidas" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Silla escolar regulable en altura, de la talla 2 a la 5, en aula compartida.</figcaption>
+        </figure>
+        <p>La segunda decisión es regulable frente a fijo. Especifique altura regulable cuando un mismo aula atiende varios grupos de edad o cambia de función durante el día; especifique altura fija cuando el aula pertenece a un solo grupo y el presupuesto manda.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Factor</th><th>Altura regulable (gas o pasador)</th><th>Altura fija</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Factor">Mejor caso de uso</td><td data-label="Altura regulable (gas o pasador)">Aulas multiage, laboratorios, salas compartidas</td><td data-label="Altura fija">Aulas de un solo grupo</td></tr>
+              <tr><td data-label="Factor">Coste unitario relativo</td><td data-label="Altura regulable (gas o pasador)">Mayor: el mecanismo añade coste</td><td data-label="Altura fija">Típicamente 15-25 % más bajo</td></tr>
+              <tr><td data-label="Factor">Riesgo de mantenimiento</td><td data-label="Altura regulable (gas o pasador)">Desgaste del mecanismo a partir de 5 años</td><td data-label="Altura fija">Mínimas piezas móviles</td></tr>
+              <tr><td data-label="Factor">Tallado EN 1729</td><td data-label="Altura regulable (gas o pasador)">Cubre varias tallas</td><td data-label="Altura fija">Fijado a una sola talla</td></tr>
+              <tr><td data-label="Factor">Evaluación en licitación</td><td data-label="Altura regulable (gas o pasador)">Puntúa más por flexibilidad</td><td data-label="Altura fija">Puntúa más por coste de ciclo de vida</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La movilidad completa la decisión. Las ruedas dobles con freno tienen sentido en aprendizaje por proyectos y reconfiguración rápida de aulas, pero solo con freno duro en las sillas que se usan frente al pupitre; si no, el asiento se desliza al escribir. Para disposiciones fijas, especifique patas con deslizadores de nailon o fieltro: protegen el vinilo, el concreto pulido y la madera, y cuestan una fracción de una actualización a ruedas. En cualquier caso, exija que la hoja técnica indique el material de contacto con el piso, no un simple uso en interiores.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Durabilidad, garantía y cláusulas para el pliego</h2>
+        <p>La respuesta directa: una silla escolar ensayada según EN 1729-2 o X5.1 debe rendir más de 10 años, y su pliego debe exigir una garantía estructural de 3-5 años con disponibilidad de repuestos por escrito.</p>
+        <p>En un programa reciente de secundaria en Johor, Malasia, el operador entrante heredó un parque mixto donde cerca de un tercio de las sillas había fallado de bastidor en menos de cuatro años, casi todas de proveedores que nunca presentaron certificados de ensayo. El plan de reposición que preparamos especificó tallas por banda de grados, citó ensayos cláusula por cláusula de EN 1729-2 y fijó la garantía en 5 años para bastidores y 2 años para pistones de gas. La oferta ganadora quedó por debajo del presupuesto original, en buena parte porque especificar normas desde el inicio eliminó la especulación de precios que invitan los pliegos vagos.</p>
+        <p>Cláusula de tallado: las sillas de aula cumplirán EN 1729-1, con las tallas programadas por aula y las alturas de asiento según la tabla por grados del anexo B.</p>
+        <p>Cláusula de ensayo: los bastidores estarán ensayados por tipo según EN 1729-2 (resistencia, durabilidad, estabilidad); para entregas en Norteamérica, informes de ensayo ANSI/BIFMA X5.1 con fecha no mayor a 36 meses.</p>
+        <p>Cláusula de emisiones: todo el asiento y las superficies de trabajo mantendrán certificación GREENGUARD Gold vigente a la fecha de entrega.</p>
+        <p>Cláusula de garantía: garantía estructural mínima de 5 años para bastidores y 2 años para mecanismos, con repuestos disponibles durante 7 años tras la entrega. Ancle cada cláusula a un documento que el ofertante deba presentar (número de certificado, fecha del informe, organismo certificador), de modo que el cumplimiento sea verificable en la etapa de oferta y no se descubra en la entrega. Para ver cómo fabricamos sillas y pupitres a estas normas, consulte /productos/, y para enviar directamente su programa por grados, /contacto/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Convierta las normas en un presupuesto verificable"
+      text="Envíenos su programa de aulas por grado y en una semana le devolvemos la asignación de tallas EN 1729, el dossier de certificación (BIFMA, GREENGUARD Gold, FSC y CE) y el plan de contenedores, con un plazo de producción de 45-60 días y una ventaja de coste del 30-50 %. Escríbanos por /contacto/ o explore primero la gama en /productos/."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

@@ -1,0 +1,430 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mesa de comedor a medida para villas de lujo: medidas y materiales";
+const pageDescription = "Mesa de comedor a medida para villas de lujo: cm por comensal, distancias libres, comparativa de materiales y plazos reales de producción y envío marítimo.";
+const keywords = [
+  "mesa de comedor a medida",
+  "muebles para villa de lujo",
+  "medidas de mesa de comedor",
+  "mesa de piedra sinterizada",
+  "mesa de nogal macizo",
+  "fabricante de muebles a medida"
+];
+const canonicalPath = "/recursos/mesa-comedor-medida-villa/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-17";
+const dateModified = "2026-09-17";
+const publicationDateLabel = "Publicada el 17 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto tarda la fabricación de una mesa de comedor a medida para villa?", answer: "El plazo estándar es de 45-60 días desde la firma de planos hasta salida de fábrica, seguido de 2-4 semanas de flete marítimo. Es posible comprimir la producción a 35 días en diseños sencillos, pero la sourcing de planchas de piedra rara vez se acorta." },
+    { question: "¿Qué tamaño de mesa necesito para 12 comensales?", answer: "Una mesa de 320 × 100 cm sienta 12 personas a 60-70 cm por comensal, siempre que la sala ofrezca 90-120 cm de holgura en todo el perímetro y que la base use doble pedestal o caballete para que las plazas centrales tengan espacio de rodillas." },
+    { question: "¿Es mejor la piedra sinterizada que el mármol para una mesa de comedor?", answer: "Para hogares con mucho uso y villas de alquiler, sí: la piedra sinterizada resiste calor, rayaduras y ácidos sin mantenimiento prácticamente. El mármol gana en prestigio y singularidad, pero exige sellado anual y limpieza inmediata de derrames. Muchos clientes eligen mármol en el comedor formal y sinterizada en la zona de comedor familiar." },
+    { question: "¿Se puede enviar una mesa a medida al extranjero sin riesgos?", answer: "Sí, con embalaje de grado de exportación y seguro adecuado. Fabricamos cajas de plywood a medida con barrera de humedad y arriostrado interno, enviamos con seguro marítimo puerta a puerta por el valor completo, y entregamos con equipos de guante blanco que desembalan, montan y nivelan la mesa en la villa." },
+    { question: "¿Cuáles son los límites de personalización de una mesa a medida?", answer: "Dimensiones, especie de madera, selección de piedra, ingeniería de la base y acabado son totalmente personalizables. Los límites prácticos son estructurales —tableros de más de 120 cm de fondo requieren subestructura calculada— y la disponibilidad de planchas, ya que un tablero de mármol de 320 cm en una sola pieza exige una plancha excepcional." },
+    { question: "¿Cómo mantengo una mesa de comedor de nogal macizo?", answer: "Retire el polvo con un paño seco suave, limpie los derrames en minutos y reaplique aceite endurecedor de grado mobiliario cada 12-24 meses. Evite apoyar recipientes calientes directamente sobre la madera y use posavasos bajo las copas; la pátina natural se irá profundizando con elegancia durante años." },
+    { question: "¿Qué seguro cubre el envío internacional de los muebles?", answer: "Cada pedido de exportación viaja con seguro marítimo de reposición por el valor completo, cubriendo el tránsito puerta a puerta. Ofrecemos además una ampliación opcional que cubre la fase de instalación en vivienda, que recomendamos especialmente para mesas con tablero de piedra." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-24-img-01.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-02-img-03.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hogar · Interiores a medida &middot; {publicationDateLabel}</p>
+          <h1>Mesa de comedor a medida para villas de lujo: medidas, materiales y capacidad</h1>
+          <p>Elegir una mesa de comedor a medida para una villa de lujo se reduce a tres números: 60-70 cm de ancho por comensal, un fondo de tablero de 90-100 cm y un mínimo de 90-120 cm de holgura alrededor de la mesa. Con esas cifras bien resueltas, la decisión de material —roble macizo, nogal, piedra sinterizada, mármol o cristal con metal— deja de ser un riesgo técnico y se convierte en una cuestión de estilo de vida y mantenimiento. Sesenta centímetros por persona es el mínimo cómodo para un servicio formal; setenta centímetros regala un despliegue tipo hacienda, con copas de pie y platos de servicio completos. En cuanto al fondo, 90-100 cm mantiene las caras lo bastante cerca para conversar; los tableros de más de 110 cm lucen espectaculares en el render y luego aíslan en silencio a los comensales situados en diagonal.</p>
+          <p>En esta guía reúno las reglas de dimensionado que aplicamos en proyectos reales de villa, la comparativa honesta de materiales con precios orientativos en dólares, y lo que debe esperar de un pedido a medida con entrega internacional. Mi regla después de una década gestionando FF&amp;E residencial: el plano miente menos que la memoria, pero solo si se mide con las sillas puestas. Como marca residencial de Hongye Furniture Group —fundada en 1996, con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados— cada mesa se fabrica por encargo y se envía a más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp" alt="Mesa de comedor de madera maciza a medida en el comedor de una villa" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuántas personas caben realmente en su comedor de villa?</h2>
+        <p>La respuesta más rápida se obtiene dividiendo la longitud útil del tablero entre 60-70 cm por persona. Pero la aritmética sola engaña: una mesa de 320 cm necesita unos 5 metros de ancho libre de pared a pared para respetar la regla de holgura de 90-120 cm, y el número de plazas baja —no sube— si las patas o los pedestales se colocan en el sitio equivocado. Por eso la posición de la base se diseña junto con el tablero, nunca se elige después.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Longitud de la mesa</th><th>Capacidad</th><th>Uso típico en villas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Longitud de la mesa">200 cm</td><td data-label="Capacidad">6 comensales</td><td data-label="Uso típico en villas">Zona de comedor compacta o desayunador secundario en una villa de 4 dormitorios</td></tr>
+              <tr><td data-label="Longitud de la mesa">240 cm</td><td data-label="Capacidad">8 comensales</td><td data-label="Uso típico en villas">La opción más frecuente en comedores principales de villas familiares</td></tr>
+              <tr><td data-label="Longitud de la mesa">280 cm</td><td data-label="Capacidad">10 comensales</td><td data-label="Uso típico en villas">Comedores formales y villas que organizan cenas con regularidad</td></tr>
+              <tr><td data-label="Longitud de la mesa">320 cm</td><td data-label="Capacidad">12 comensales</td><td data-label="Uso típico en villas">Grandes comedores de fincas y espacios de doble altura para recevoir invitados</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos detalles separan un proyecto bien resuelto de uno costoso. Primero, la longitud solo funciona si la sala respira; la regla que aplico es dejar que la mesa ocupe como máximo un tercio de la superficie de la zona de comedor. Segundo, conviene verificar el recorrido real: en el levantamiento in situ colocamos una silla ocupada en cada plaza, la retiramos hasta la postura natural de comer y caminamos la sala como un camarero con dos platos en la mano. Si algo se siente ajustado en el ensayo, fallará en la cena de veinte personas de las fiestas.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Comparativa de materiales: cuál conviene a su mesa de comedor a medida</h2>
+        <p>El material determina el coste, el peso, el mantenimiento y —sobre todo para propietarios de segundas residencias en el extranjero— cómo envejece la mesa tras décadas de uso. Esta es la comparativa que presentamos en la reunión de selección, con precios orientativos de fabricación a medida para el conjunto de mesa:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material</th><th>Durabilidad</th><th>Mantenimiento</th><th>Precio orientativo (USD)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Material">Roble macizo certificado FSC</td><td data-label="Durabilidad">Alta; veta resistente al desgaste</td><td data-label="Mantenimiento">Bajo; reencerar cada 1-2 años</td><td data-label="Precio orientativo (USD)">US$ 2.800–5.500</td></tr>
+              <tr><td data-label="Material">Nogal macizo</td><td data-label="Durabilidad">Alta; ligeramente más blando que el roble</td><td data-label="Mantenimiento">Bajo; la pátina natural gana carácter</td><td data-label="Precio orientativo (USD)">US$ 3.500–7.000</td></tr>
+              <tr><td data-label="Material">Piedra sinterizada</td><td data-label="Durabilidad">Muy alta; resiste calor, rayaduras y UV</td><td data-label="Mantenimiento">Mínimo; paño húmedo, sin sellado</td><td data-label="Precio orientativo (USD)">US$ 3.200–6.800</td></tr>
+              <tr><td data-label="Material">Mármol natural</td><td data-label="Durabilidad">Media; poroso, puede marcarse</td><td data-label="Mantenimiento">Moderado; sellado anual y limpieza inmediata</td><td data-label="Precio orientativo (USD)">US$ 4.500–9.000+</td></tr>
+              <tr><td data-label="Material">Cristal y estructura metálica</td><td data-label="Durabilidad">Media; el cristal exige limpieza frecuente</td><td data-label="Mantenimiento">Moderado; huellas y polvo a la vista</td><td data-label="Precio orientativo (USD)">US$ 2.500–5.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-02-fabrica-materia-prima.webp" alt="Taller de carpintería mecanizando una mesa de comedor a medida de nogal macizo" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Carpintero perfilando el canto de un tablero de nogal macizo para una mesa de comedor a medida.</figcaption>
+        </figure>
+        <p>Algunas observaciones honestas desde la fábrica. El nogal macizo es el material que la mayoría de propietarios elige dos veces: la primera mesa en roble les enseña que querían un tono más profundo y una veta más cerrada. La piedra sinterizada se ha convertido en la caballeriza de las villas de inversión para alquiler, porque un huésped puede apoyar una sartén caliente sin consecuencia y resiste rayaduras en niveles que ponen nerviosos a los dueños de mármol. El mármol sigue siendo insuperable como declaración de lujo, pero pide un hogar que acepte la pátina: el limón, el vino tinto y el vinagre marcan la superficie si se dejan toda la noche. En cuanto a la sostenibilidad, ya no es opcional en proyectos premium: trabajamos madera con certificación FSC y acabados de bajas emisiones verificados bajo GREENGUARD Gold, además del marcado CE para el mercado europeo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Distancias libres: las cifras que deciden si la sala funciona</h2>
+        <p>El error de dimensionado más habitual en villas es encargar la mesa más larga que entra en el plano sobre el papel. Una mesa que deja 60 cm hasta la pared técnicamente cabe, pero nadie puede retirar la silla sin golpear la moldura, y un camarero jamás podrá circular durante una cena servida. En proyectos a medida especificamos tres holguras mínimas: 90 cm desde el borde de la mesa a la pared (100-110 cm recomendados) para levantarse sin choques; 100 cm hasta el aparador o la consola (110-120 cm recomendados) para que los cajones y puertas sigan abriéndose con las sillas ocupadas; y 110-120 cm de paso detrás de un comensal sentado, de modo que quien recibe pueda servir y despegar platos sin pedirle a nadie que se levante.</p>
+        <p>Una nota aparte merece el fondo del tablero. Los 90-100 cm son el estándar en villas porque mantienen las caras a distancia de conversación; los fondos superiores a 110 cm son un problema silencioso que no aparece hasta la primera cena. En mi experiencia, cuando el cliente insiste en un tablero profundo por estética, propongo reducir el número de plazas por lado en lugar de sacrificar la comunicación en la mesa. Es un intercambio que conviene decidir sobre plano, no con la mesa ya instalada.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Bases, pedestales y proporción en villas de planta abierta</h2>
+        <p>La respuesta corta: elija la base después de fijar el plan de asientos, porque las patas —no el tablero— deciden si las doce plazas son realmente utilizables. Un tablero de 320 cm sobre cuatro patas convencionales en las esquinas atrapa a los comensales centrales contra las patas; quien ocupa la posición central pelea por el espacio de rodillas con un faldón de 10 cm. Las soluciones que más fabricamos en proyectos de villa son tres: bases de doble pedestal, que eliminan las patas de los extremos y liberan las cabeceras y toda la zona de rodillas a lo largo de la mesa, ideales para 280-320 cm; bases de caballete con pies retranqueados 40-50 cm de cada extremo, que mantienen holgada la plaza de cabeza; y estructuras metálicas en voladizo, de ingeniería exigente y gran impacto en comedores de doble altura. Para tableros de 200-240 cm, las patas de madera en diagonal siguen siendo perfectamente válidas.</p>
+        <p>La altura del faldón es la variable oculta. Un faldón decorativo a menos de 68 cm del suelo roba holgura de rodillas a cualquier persona de estatura media-alta; nosotros lo mantenemos con su cara inferior a 70-72 cm salvo que el diseño lo impida. En tableros de mármol o piedra sinterizada confirmamos además la carga del forjado con el ingeniero estructural del proyecto cuando la mesa supera los 150 kg —una consideración real en áticos con suelo técnico elevado—.</p>
+        <p>En plantas abiertas, la mesa debe mandar en la zona de comedor sin ocupar más de un tercio de su superficie, y son la iluminación y el tratamiento del techo los que definen el recinto que las paredes no delimitan. Tres reglas de proporción que aplicamos: la lámpara mide aproximadamente la mitad del ancho del tablero y se cuelga a 75-85 cm sobre la superficie; la alfombra solo ancla la mesa si supera en 60 cm el perímetro de las sillas, y muchos proyectos con piedra sinterizada prescinden de ella; y el peso visual se acompasa a la altura del techo —un monolito de nogal de 320 cm con doble pedestal sostiene un techo de 6 metros, pero se siente atiborrado bajo un falso techo de 2,7—.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-06-lobby-hongye-shengda.webp" alt="Villa de lujo con mesa de comedor a medida de piedra sinterizada y doble pedestal" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Comedor principal de una villa con mesa de piedra sinterizada de 320 cm y doble pedestal ya instalada.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Plazos, embalaje de exportación e instalación con guante blanco</h2>
+        <p>Respuesta directa: una mesa de comedor a medida completamente a medida requiere un plazo de producción de 45-60 días, más 2-4 semanas de flete marítimo a la mayoría de puertos de destino, y unos días para la instalación con guante blanco en la villa. El calendario de producción, en secuencia:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Etapa</th><th>Duración</th><th>Qué ocurre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Etapa">Confirmación de diseño y planos de taller</td><td data-label="Duración">Semana 1</td><td data-label="Qué ocurre">Planos acotados, muestras de material y revisión de ingeniería de la base firmados</td></tr>
+              <tr><td data-label="Etapa">Selección y preparación de material</td><td data-label="Duración">Semanas 2-3</td><td data-label="Qué ocurre">Elección de plancha (mármol o sinterizada) o confirmación de madera de secadero; documentación FSC</td></tr>
+              <tr><td data-label="Etapa">Fabricación y acabado</td><td data-label="Duración">Semanas 3-7</td><td data-label="Qué ocurre">Carpintería, base, acabado del tablero y curado con recubrimientos conformes GREENGUARD Gold</td></tr>
+              <tr><td data-label="Etapa">Inspección y embalaje</td><td data-label="Duración">Semanas 7-8</td><td data-label="Qué ocurre">Inspección de 30 puntos y embalaje de grado de exportación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El embalaje para envío transfronterizo es donde se ganan o pierden las mesas a medida. Usamos embalaje de exportación multicapa: protección de canto en espuma, barrera de humedad, escuadras en las esquinas y caja de plywood fabricada a medida con arriostrado interno. Los tableros de mármol y piedra sinterizada viajan en subestructuras específicas que alejan la carga del eje más débil de la piedra. Cada envío va asegurado por el valor íntegro de reposición puerta a puerta, y recomiendo a los clientes confirmar que la póliza cubre daños durante la instalación en vivienda, no solo el tránsito puerto a puerto.</p>
+        <p>En destino, el equipo de guante blanco desembala, monta la base, nivela el tablero —un monolito de 320 cm requiere calzas de precisión— y retira todos los residuos de embalaje; al propietario solo le queda una tarjeta de cuidados. Para villas con entregas por fases coordinamos almacenamiento e instalaciones escalonadas, de forma que el mobiliario llegue junto con la adecuación de interiores y no meses antes. Si desea ver acabados y estructuras disponibles, consulte /productos/ o solicite presupuesto directamente en /contacto/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Listo para dimensionar su mesa de comedor a medida?"
+      text="Envíenos su plano y el número de comensales objetivo: nuestro equipo de diseño devolverá planos acotados y muestras de material en 5 días hábiles, con producción en 45-60 días y entrega con guante blanco a más de 50 países. Solicite su presupuesto en /contacto/ o explore acabados disponibles en /productos/."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

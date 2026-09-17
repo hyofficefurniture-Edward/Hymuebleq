@@ -1,0 +1,442 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Presupuesto FF&E de hotel por tipo de habitación: guía 2026";
+const pageDescription = "Presupuesto FF&E hotel por tipo de habitación: rangos en USD para King, Double Queen, suites y habitaciones ADA, con ahorros de 30-50 % desde China.";
+const keywords = [
+  "presupuesto FF&E hotel",
+  "costo de mobiliario hotelero por habitación",
+  "desglose de FF&E por tipo de habitación",
+  "precios de casegoods hoteleros",
+  "costo FF&E habitación ADA",
+  "compra de mobiliario de hotel en China"
+];
+const canonicalPath = "/recursos/presupuesto-ffe-hotel-tipo-habitacion/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-07-img-01-habitacion-hotel-ffe.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-17";
+const dateModified = "2026-09-17";
+const publicationDateLabel = "Publicada el 17 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuál es el MOQ típico para pedidos de FF&E de hotel a un fabricante chino?", answer: "La mayoría de las fábricas verticales trabaja sobre la base de contenedor completo. En proyectos hoteleros, los MOQ prácticos rondan el equivalente en casegoods de 20-30 habitaciones por ciclo de contenedor, aunque la escala ideal es un hotel completo de 150-300 llaves. Hongye Furniture Group admite carga mixta de contenedores para que una planta piloto pueda embarcarse antes del despliegue total." },
+    { question: "¿Cuánto tarda todo el proceso de FF&E desde la orden hasta la instalación?", answer: "Planifique 45-60 días de producción tras confirmar especificación y depósito, más 8-10 semanas de flete marítimo a la mayoría de los puertos principales, más 2-4 semanas de instalación en sitio. La duración total del proyecto suele ser de 5 a 7 meses, por lo que las compras deben iniciar al menos 9 meses antes de la apertura." },
+    { question: "¿Conviene comprar FOB o DDP el mobiliario de hotel?", answer: "FOB le da a su equipo logístico el control del flete marítimo consolidado y suele ser más económico en pedidos de varios contenedores. DDP traslada el riesgo de aduana y última milla al proveedor y conviene a propietarios sin experiencia de importación. Cotizamos ambos; en un programa con muchos 40HQ, la vía FOB suele ahorrar entre un 8 % y un 12 % del costo puesto en destino." },
+    { question: "¿Qué garantía debe tener el FF&E de hotel?", answer: "La cobertura contract estándar es de 3 a 5 años de garantía estructural sobre casegoods y marcos de asientos, y de 1 a 2 años sobre acabados, mecanismos y colchones por defectos de fabricación. Las piezas de grado hotelero deben probarse conforme a los niveles de durabilidad ANSI/BIFMA antes del embarque." },
+    { question: "¿Qué términos de pago son estándar para FF&E desde China?", answer: "La práctica de mercado es un 30 % de depósito con la orden y un 70 % de saldo contra inspección o copia del bill of lading. Fabricantes consolidados con historial exportador pueden aceptar LC a la vista o esquemas 20/80 para cuentas recurrentes de marca. Nunca libere el saldo sin una inspección previa al embarque aprobada." },
+    { question: "¿Cuánto extra hay que presupuestar para habitaciones ADA?", answer: "Reserve un sobreprecio del 15-25 % sobre la habitación estándar equivalente en proyectos de 4 estrellas, y del 20-30 % en proyectos de 5 estrellas. El costo está sobre todo en casegoods accesibles semimedidos y en la menor eficiencia de producción, no en muebles especializados." },
+    { question: "¿Una sola fábrica puede suministrar camas, casegoods y asientos juntos?", answer: "Sí, siempre que la fábrica esté integrada verticalmente, con producción propia de paneles, tapicería y metal. La consolidación elimina las capas de margen que suelen cobrar 2 o 3 intermediarios —el núcleo del ahorro del 30-50 %— y deja una sola parte responsable por encaje, acabado y secuencia de entrega." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-07-img-01-habitacion-hotel-ffe.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-29-img-01.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-83-img-01.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Compras internacionales · FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Presupuesto FF&amp;E de hotel: desglose de costos por tipo de habitación</h1>
+          <p>El presupuesto FF&amp;E de un hotel se define —y se rompe— a nivel de tipo de habitación, no del proyecto completo. Como referencia de mercado, un proyecto contract trabaja con $6.000 a $9.500 por habitación King estándar, $7.000 a $11.000 por una Double Queen y $15.000 a $28.000 por suite, mientras que las habitaciones accesibles (ADA) agregan entre un 15 % y un 25 % sobre su tipo base. Estos valores corresponden solo a mobiliario: quedan fuera OS&amp;E, señalética y obra de arte. En mi experiencia revisando licitaciones en Norteamérica, Medio Oriente y el Sudeste Asiático, el error más común no es un mal número global, sino una mezcla de habitaciones mal ponderada: la suite cuesta tres veces una King y nadie lo vio venir.</p>
+          <p>Esta guía desglosa los rangos realistas en USD por tipo de habitación, muestra qué categorías se llevan la mayor parte del gasto y explica dónde el modelo de compra directa a fábrica —el que Hongye Furniture Group aplica desde 1996— recupera entre un 30 % y un 50 % sin tocar la especificación. Con más de 1.000 proyectos entregados en más de 50 países y certificaciones BIFMA, GREENGUARD Gold, FSC y CE, la fábrica que firma su pedido también es la mejor fuente de datos para presupuestarlo.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-07-img-01-habitacion-hotel-ffe.webp" alt="Presupuesto de FF&amp;E hotelero por tipo de habitación revisado sobre planos" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuánto cuesta el FF&amp;E de hotel por tipo de habitación</h2>
+        <p>La forma más rápida de validar un presupuesto es asignar el mix de habitaciones por tipo antes de cotizar cualquier otra cosa. Con datos agregados de proyectos de 4 y 5 estrellas entregados a Norteamérica, Medio Oriente y el Sudeste Asiático, el gasto por habitación se concentra en estos rangos:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de habitación</th><th>Rango 4 estrellas (USD)</th><th>Rango 5 estrellas (USD)</th><th>Factores que mueven el costo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de habitación">King estándar</td><td data-label="Rango 4 estrellas (USD)">$6.000-$8.500</td><td data-label="Rango 5 estrellas (USD)">$8.000-$12.000</td><td data-label="Factores que mueven el costo">Base de cama, set de casegoods, banco de equipaje</td></tr>
+              <tr><td data-label="Tipo de habitación">Double Queen</td><td data-label="Rango 4 estrellas (USD)">$7.000-$9.500</td><td data-label="Rango 5 estrellas (USD)">$9.500-$13.500</td><td data-label="Factores que mueven el costo">Segunda cama, veladores duplicados, escritorio de trabajo</td></tr>
+              <tr><td data-label="Tipo de habitación">Junior suite</td><td data-label="Rango 4 estrellas (USD)">$11.000-$16.000</td><td data-label="Rango 5 estrellas (USD)">$15.000-$22.000</td><td data-label="Factores que mueven el costo">Grupo de sofás, mesa de centro, casegoods de minibar</td></tr>
+              <tr><td data-label="Tipo de habitación">Suite ejecutiva</td><td data-label="Rango 4 estrellas (USD)">$15.000-$22.000</td><td data-label="Rango 5 estrellas (USD)">$20.000-$28.000+</td><td data-label="Factores que mueven el costo">Juego de comedor, butacas, cómoda o ropero</td></tr>
+              <tr><td data-label="Tipo de habitación">Habitación ADA</td><td data-label="Rango 4 estrellas (USD)">+15-25 % sobre el tipo base</td><td data-label="Rango 5 estrellas (USD)">+20-30 % sobre el tipo base</td><td data-label="Factores que mueven el costo">Casegoods accesibles, circulaciones conformes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos patrones importan. Primero, la Double Queen corre entre un 10 % y un 15 % por encima de la King estándar, y no es solo por la cama extra —un set de cama contract cuesta entre $900 y $1.600— sino porque cada pieza de casegoods adyacente se duplica. Segundo, las habitaciones ADA rara vez cuestan más por los muebles en sí: el sobreprecio viene de las circulaciones accesibles que reducen las opciones de layout y obligan a casegoods semimedidos. Las normas ANSI/BIFMA definen las pruebas de durabilidad y seguridad que cualquier pieza contract debe pasar, sin importar el tipo de habitación.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué categorías se llevan el presupuesto FF&amp;E</h2>
+        <p>Los totales por habitación esconden la historia real. Al dividir el gasto en las categorías del mobiliario contract, la asignación es sorprendentemente consistente entre mercados:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Categoría</th><th>Participación del presupuesto</th><th>Gasto típico por llave (4 estrellas)</th><th>Qué mueve el número</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Categoría">Casegoods (ropero, escritorio, minibar, consola TV)</td><td data-label="Participación del presupuesto">35-45 %</td><td data-label="Gasto típico por llave (4 estrellas)">$2.800-$4.000</td><td data-label="Qué mueve el número">Chapa vs. laminado, tapas de piedra, medidas especiales</td></tr>
+              <tr><td data-label="Categoría">Camas y colchones</td><td data-label="Participación del presupuesto">15-20 %</td><td data-label="Gasto típico por llave (4 estrellas)">$1.300-$1.900</td><td data-label="Qué mueve el número">Especificación del colchón, cabecera tapizada, base</td></tr>
+              <tr><td data-label="Categoría">Asientos</td><td data-label="Participación del presupuesto">15-20 %</td><td data-label="Gasto típico por llave (4 estrellas)">$1.200-$1.800</td><td data-label="Qué mueve el número">Tapicería COM/COL, estructura, densidad de la espuma</td></tr>
+              <tr><td data-label="Categoría">Mesas y superficies</td><td data-label="Participación del presupuesto">8-12 %</td><td data-label="Gasto típico por llave (4 estrellas)">$700-$1.100</td><td data-label="Qué mueve el número">Mesas de centro, mesas laterales, retorno de escritorio</td></tr>
+              <tr><td data-label="Categoría">Piezas sueltas y acentos</td><td data-label="Participación del presupuesto">5-10 %</td><td data-label="Gasto típico por llave (4 estrellas)">$400-$800</td><td data-label="Qué mueve el número">Espejos, racks de equipaje, marcos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-01-dormitorio-hotel.webp" alt="Mobiliario completo de habitación estándar de hotel con cama, casegoods y asientos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Vista general del mobiliario de una habitación estándar de hotel con todos sus componentes FF&amp;E</figcaption>
+        </figure>
+        <p>Los casegoods dominan porque son dimensionales, específicos del proyecto y casi nunca artículos de catálogo. Un ropero que cierra contra un techo de 2.650 mm en una torre de Riad no es un producto: es una orden de fabricación. Por eso también son la categoría donde la estrategia de abastecimiento paga o castiga. Mi regla es simple: si más del 40 % del presupuesto está en casegoods, cotizar esa categoría con una sola fábrica vertical vale más que cualquier descuento suelto. Puede revisar nuestra línea contract en /productos/ antes de pedir una cotización formal.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>4 estrellas o 5 estrellas: en qué se va realmente el dinero</h2>
+        <p>La brecha por llave entre una habitación de 4 estrellas y una de 5 ronda el 35-60 %, pero no se reparte parejo. La cantidad de muebles casi no cambia: una King de 5 estrellas contiene prácticamente el mismo número de piezas que una de 4. Lo que cambia es el grado del material.</p>
+        <p>En casegoods, el laminado o la chapa de papel ceden ante maderas macizas y chapas aparejadas, y la tapa de HPL se reemplaza por piedra o piedra sinterizada: solo ese salto suma entre $1.500 y $3.000 por habitación. En tapicería, la tela contract deja su lugar a material COM del cliente, a $60-$120 por yarda, y las cabeceras planas se convierten en capitoné hecho a mano.</p>
+        <p>La tolerancia de acabado de un 5 estrellas también pesa: exige igualación de color entre lotes y pruebas de acabado de cinco niveles, lo que frena la producción y eleva el margen de rechazo. Y los asientos blandos pasan de espuma estándar a espuma de alta resiliencia (HR) con densidad 2.0 o superior, agregando una o dos semanas al plazo de producción.</p>
+        <p>Una regla práctica de nuestros registros de proyecto: una especificación de 5 estrellas cuesta alrededor de 1,4 veces una de 4 estrellas a nivel de fábrica, pero casi el doble en precios de canal minorista, porque los intermediarios del segmento premium aplican un margen porcentual sobre el costo. Cuanto más ancha esa brecha, más fuerte el argumento para comprar directo a fábrica.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo la compra directa desde China ahorra un 30-50 %</h2>
+        <p>El ahorro es estructural, no un descuento de fin de temporada. Un hotel de 4 estrellas de tamaño medio que compra un paquete FF&amp;E completo desde Europa paga típicamente un margen de trading (15-25 %), un margen de distribuidor regional (10-20 %) y una base de mano de obra manufacturera más alta. La compra directa a fábrica elimina esos eslabones y captura el diferencial de costo de fabricación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Modelo de abastecimiento</th><th>Índice de costo de casegoods</th><th>Plazo de entrega</th><th>Capas de margen típicas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Modelo de abastecimiento">Marca europea vía distribuidor</td><td data-label="Índice de costo de casegoods">100 (base)</td><td data-label="Plazo de entrega">90-120 días</td><td data-label="Capas de margen típicas">Fábrica + trading + distribuidor</td></tr>
+              <tr><td data-label="Modelo de abastecimiento">Marca contract de EE. UU.</td><td data-label="Índice de costo de casegoods">85-95</td><td data-label="Plazo de entrega">60-90 días</td><td data-label="Capas de margen típicas">Fábrica + grupo de representantes</td></tr>
+              <tr><td data-label="Modelo de abastecimiento">China directa (fabricante vertical)</td><td data-label="Índice de costo de casegoods">50-70</td><td data-label="Plazo de entrega">45-60 días + flete</td><td data-label="Capas de margen típicas">Solo fábrica</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-03-contenedor-exportacion.webp" alt="Almacén de muebles de hotel con piezas terminadas listas para embarque" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mobiliario hotelero terminado almacenado y preparado para la carga en contenedor</figcaption>
+        </figure>
+        <p>El modelo solo funciona con integración vertical: producción de paneles, tapicería y metal bajo un mismo techo. Guangdong Hongye Furniture Group Co., Ltd. opera más de 300.000 m² de planta con más de 1.000 trabajadores cualificados, lo que permite consolidar casegoods, camas y asientos de un hotel de 180 llaves en un solo plan de producción. En un proyecto reciente de 220 llaves y 5 estrellas en Dubái (detalles solo por ciudad), siete paquetes de proveedores se convirtieron en una orden única y la línea de FF&amp;E bajó cerca de un 38 % frente a la cotización original del distribuidor, manteniendo una ventana de producción de 45-60 días.</p>
+        <p>La disciplina de ahorro igual exige proceso: habitaciones muestra aprobadas, inspección de terceros antes del embarque del contenedor y claridad sobre FOB o DDP desde la cotización. El 30-50 % no aparece con la firma: se sostiene con hitos.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Dónde se descontrolan los presupuestos de FF&amp;E</h2>
+        <p>Tras revisar más de 1.000 proyectos entregados para más de 47 marcas hoteleras internacionales, veo que los sobrecostos se concentran en cuatro lugares predecibles.</p>
+        <p>Primero, el flete y los aranceles, subestimados entre un 20 % y un 40 %. Los equipos presupuestan precio de fábrica y después se encuentran con $4.500-$7.000 por contenedor 40HQ hacia puertos de la costa este de EE. UU., más aranceles. Presupueste el flete por contenedor en la etapa de cotización, no después.</p>
+        <p>Segundo, las readaptaciones ADA después de aprobar el layout. Cambiar un paquete de casegoods accesible tras la orden cuesta entre 2 y 3 veces el diferencial original. Congele las especificaciones de habitaciones accesibles durante el desarrollo del diseño, con apoyo en las referencias de la industria hotelera.</p>
+        <p>Tercero, la escalada de upgrades en casegoods. Un propietario pasa de chapa a madera maciza a mitad de proyecto; cada mejora debe valorarse con su impacto en el plazo, porque la madera maciza agrega de 2 a 3 semanas al calendario.</p>
+        <p>Cuarto, la deriva de frontera entre FF&amp;E y OS&amp;E. Racks de equipaje, espejos y muebles de minibar migran entre ambos presupuestos y terminan duplicados o huérfanos. Asigne un responsable por partida antes de emitir las órdenes de compra.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Una secuencia de presupuesto FF&amp;E hotel que se sostiene</h2>
+        <p>Trate la tabla por tipo de habitación como un contrato y trabaje hacia atrás. Confirme el mix de llaves —cuántas habitaciones ADA exige el código, no cuántas le gustaría tener—, aplique la división por categorías y pruebe el resultado con dos cotizaciones: una de fábrica consolidada y otra multiproveedor, antes de fijar el calendario de compras.</p>
+        <p>Si la cotización consolidada cae dentro de un ±5 % de su presupuesto por llave, con un plazo de producción de 45-60 días y derechos de inspección por escrito, tiene un plan financiable. Si no, la brecha casi siempre está en la complejidad de los casegoods, y esa conversación de diseño vale más tres meses antes de la orden de mobiliario que tres semanas después.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su presupuesto FF&E por tipo de habitación"
+      text="Envíenos su mix de llaves y reciba un modelo de costo habitación por habitación en cinco días hábiles, con la ventaja de coste del 30-50 % frente a cadenas de suministro regionales y un plazo de producción de 45-60 días. Escríbanos por /contacto/ y un especialista FF&E de Hongye Furniture Group le responde el mismo día hábil."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

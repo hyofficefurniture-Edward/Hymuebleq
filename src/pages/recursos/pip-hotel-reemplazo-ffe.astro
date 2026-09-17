@@ -1,0 +1,439 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Reemplazo de FF&E en el PIP hotelero: fases y presupuesto";
+const pageDescription = "Guía de reemplazo de FF&E para el PIP hotelero: plazos de marca, fases por piso, presupuesto por habitación y compra directa desde China con 30-50 % de ahorro.";
+const keywords = [
+  "reemplazo de FF&E",
+  "PIP hotelero",
+  "compra de FF&E desde China",
+  "estándares de marca hotelera",
+  "renovación de hotel por fases",
+  "mobiliario para habitaciones de hotel"
+];
+const canonicalPath = "/recursos/pip-hotel-reemplazo-ffe/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-01-img-03-lobby-hotel-proyecto.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-17";
+const dateModified = "2026-09-17";
+const publicationDateLabel = "Publicada el 17 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué es el PIP de un hotel y qué lo origina?", answer: "Un Property Improvement Plan es un alcance correctivo obligatorio que la marca franquiciadora emite tras una inspección de la propiedad. Se activa cuando cualquier elemento —lo más frecuente es el FF&E, los acabados o la señalización— queda por debajo del estándar vigente de la marca, y lleva una fecha límite de ejecución con penalizaciones por habitación o terminación de la franquicia como consecuencias." },
+    { question: "¿Cuánto tiempo tengo para completar el PIP de mi hotel?", answer: "La mayoría de las marcas conceden entre 6 y 24 meses desde la notificación hasta la re-inspección, según la gravedad del alcance y los términos del contrato. Como la producción de FF&E más el tránsito marítimo consumen 4-5 meses de ese plazo, conviene ordenar el mobiliario de mayor anticipación dentro de los primeros 60-90 días." },
+    { question: "¿Puedo reemplazar el FF&E del PIP con muebles de un fabricante chino?", answer: "Sí, siempre que el fabricante cumpla las especificaciones y normas de la marca: estándares de desempeño BIFMA, documentación de inflamabilidad y el cuadro de acabados y dimensiones. Lo que la marca aprueba es el producto, no el país de origen; una fuente directa conforme que supere la revisión de muestras y planos es una vía estándar." },
+    { question: "¿Cuál es el presupuesto típico de FF&E por habitación en un PIP?", answer: "Las actualizaciones ligeras van de $6.000 a $9.000 por habitación, el reemplazo completo estándar de $8.000 a $18.000 y los paquetes superiores de servicio completo de $15.000 a $30.000 o más. Comprar directo desde un fabricante chino conforme suele quedar 30-50 % por debajo del precio de proveedores estadounidenses para el mismo paquete según especificación de marca." },
+    { question: "¿Qué cantidad mínima de pedido exige un fabricante de FF&E hotelero en China?", answer: "La mayoría de los fabricantes enfocados en hotelería trabajan con un MOQ práctico de 20-30 habitaciones por estilo, aunque son comunes los pedidos de contenedor mixto que se adaptan a calendarios de PIP por fases. Confirme por escrito el MOQ, la consolidación de contenedores y las ventanas de entrega escalonada antes de presentar el plan, porque algunas marcas exigen hitos de entrega." },
+    { question: "¿Cuánto tarda el FF&E embarcado desde China hasta Estados Unidos?", answer: "Calcule 45-60 días de producción más 25-40 días de tránsito marítimo según puerto y temporada. Para un PIP por fases, alinee las oleadas de producción con los cierres por piso y añada un colchón de 10-15 % en los meses pico de embarque, para no dejar habitaciones fuera de servicio sin mobiliario en sitio." },
+    { question: "¿Qué garantía debo exigir al mobiliario del PIP?", answer: "Solicite una garantía estructural mínima de 2 años en casegoods y de 1 a 3 años en mecanismos de asientos, con cobertura escrita por delaminación, falla de herrajes y defectos de acabado. Los fabricantes serios además se comprometen a repuestos —algo crítico cuando la re-inspección está a 18 meses y hay que igualar un cabecero dañado." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-01-img-03-lobby-hotel-proyecto.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-07-img-01.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-01-img-03.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Proyectos hoteleros · FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Reemplazo de FF&amp;E en el PIP hotelero: fases, presupuesto y cumplimiento de marca</h1>
+          <p>Un PIP (Property Improvement Plan) no es negociable: cuando el inspector de la marca señala cuerpos de almacenaje desgastados, sillas hundidas o cabeceros desactualizados, el propietario debe reemplazarlos según especificación dentro de un plazo fijo que normalmente va de 6 a 24 meses. Y el FF&amp;E concentra el problema: en un PIP típico de servicio limitado de 120 habitaciones, el mobiliario más los bienes blandos representa entre el 40 y el 60 % del presupuesto total. Perder la fecha límite tiene consecuencias reales: penalizaciones por habitación y día o, en casos persistentes, la terminación del contrato de franquicia.</p>
+          <p>En esta guía le explico el ciclo completo del reemplazo de FF&amp;E: el calendario que suelen imponer las marcas, los patrones de fases que mantienen el 70-85 % de las habitaciones vendibles, los presupuestos por habitación que resisten una revisión financiera y la forma de comprar directo desde China sin suspender la re-inspección. En Hongye Furniture Group llevamos desde 1996 fabricando FF&amp;E para más de 47 marcas hoteleras internacionales en más de 50 países, así que lo que sigue viene de proyectos reales, no de un manual genérico. Con más de 300.000 m² de planta y un equipo de más de 1.000 trabajadores cualificados, Hongye Furniture Group respalda cada programa de PIP desde la fábrica hasta el hotel.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-03-lobby-hotel-proyecto.webp" alt="Instalación de mobiliario FF&amp;E en habitación de hotel durante un proyecto PIP" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué es un PIP y por qué el FF&amp;E concentra el gasto</h2>
+        <p>Un PIP es el documento de acciones correctivas que la marca franquiciadora emite después de una inspección de rutina, por lo general cada 1 a 3 años. El inspector califica todo, desde el aspecto exterior hasta el estado de cada habitación, contra el manual vigente de estándares de la marca. Todo lo que quede por debajo del umbral exigido —almacenaje desgastado, tapicería manchada, encimeras astilladas, cabeceros que ya no coinciden con el paquete de diseño renovado— entra en el PIP con una fecha límite de ejecución.</p>
+        <p>¿Por qué domina el FF&amp;E el costo del proyecto? Porque las habitaciones se inspeccionan una por una y el mobiliario es el elemento más visible y más usado. En mi experiencia, la partida de FF&amp;E suele adelantar incluso a las renovaciones de baño en los planes de alcance ligero. Esa concentración significa que la estrategia de compras —no solo el calendario de obra— decide si el PIP cierra dentro del presupuesto.</p>
+        <p>Y el incumplimiento cuesta caro. Marcas como Marriott o Hilton pueden aplicar penalizaciones por habitación y día o, si el retraso se prolonga, rescindir la franquicia. Por eso los grupos propietarios tratan las fechas del PIP como fechas duras, y el pedido de FF&amp;E es el ítem de mayor plazo y mayor riesgo en toda la ruta crítica.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>El calendario del PIP: de la notificación a la re-inspección</h2>
+        <p>La mayoría de los acuerdos de franquicia siguen un ritmo parecido. Conocer ese calendario le permite ordenar el FF&amp;E con tiempo suficiente y evitar los dos fallos clásicos: pagar flete aéreo urgente para muebles o pedir una extensión de plazo porque los contenedores llegaron tarde. Esta es la secuencia habitual.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Fase</th><th>Duración habitual</th><th>Qué ocurre</th><th>Acción de FF&amp;E requerida</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Fase">Notificación de la marca</td><td data-label="Duración habitual">Semana 0</td><td data-label="Qué ocurre">Informe de inspección y carta del PIP</td><td data-label="Acción de FF&amp;E requerida">Revisar el alcance de FF&amp;E línea por línea contra el estándar de marca</td></tr>
+              <tr><td data-label="Fase">Presentación del plan</td><td data-label="Duración habitual">30-60 días</td><td data-label="Qué ocurre">El propietario presenta el plan con costos para aprobación</td><td data-label="Acción de FF&amp;E requerida">Definir la vía de suministro: programa de marca, proveedor licenciado o fuente directa conforme</td></tr>
+              <tr><td data-label="Fase">Compras y aprobaciones</td><td data-label="Duración habitual">60-120 días</td><td data-label="Qué ocurre">Muestras de acabado, planos de taller, documentación normativa</td><td data-label="Acción de FF&amp;E requerida">Enviar muestras de acabado y documentación BIFMA y de inflamabilidad para visto bueno</td></tr>
+              <tr><td data-label="Fase">Producción y embarque</td><td data-label="Duración habitual">45-120 días</td><td data-label="Qué ocurre">Fabricación más tránsito marítimo hasta puerto</td><td data-label="Acción de FF&amp;E requerida">Bloquear un plazo de producción de 45-60 días y reservar contenedores en temporada alta</td></tr>
+              <tr><td data-label="Fase">Instalación y remates</td><td data-label="Duración habitual">30-90 días</td><td data-label="Qué ocurre">Entregas por fases, montaje y lista de pendientes</td><td data-label="Acción de FF&amp;E requerida">Entregas piso por piso ajustadas al calendario de cierre de habitaciones</td></tr>
+              <tr><td data-label="Fase">Re-inspección</td><td data-label="Duración habitual">6-24 meses en total</td><td data-label="Qué ocurre">La marca verifica el cumplimiento o aplica penalizaciones</td><td data-label="Acción de FF&amp;E requerida">Archivar el expediente: especificaciones, ensayos y garantías</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos cifras pesan más que las demás. Primera: la aprobación del plan toma 30-60 días, así que su proveedor de FF&amp;E debería estar preseleccionado antes de presentar el plan —la marca quiere evidencia de que el fabricante cumple especificación. Segunda: un plazo de producción de 45-60 días más 25-40 días de tránsito marítimo desde Guangdong hasta la costa oeste de Estados Unidos implica que un pedido directo debe cerrarse, como muy tarde, 4-5 meses antes del primer cierre de habitaciones. Los propietarios que descubren esta aritmética después de aprobar el plan son los que terminan pagando extensiones.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-16-img-01-casegoods-hotel.webp" alt="Casegoods personalizados para habitación de hotel en línea de producción" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cuerpos de almacenaje a medida para habitaciones de hotel: armarios, escritorios y cómodas listas para la aprobación de la marca.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Fases por piso: reemplazar el FF&amp;E sin cerrar el hotel</h2>
+        <p>Nunca saque un hotel completo de servicio por un PIP. El enfoque estándar es la renovación rodante: cerrar un piso, un ala o un bloque de habitaciones cada vez, de modo que la propiedad siga operando a capacidad parcial. Un PIP por fases bien ejecutado mantiene el 70-85 % de las habitaciones vendibles durante todo el proyecto. El patrón exacto depende de la geometría del edificio y de la estacionalidad de la ocupación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Patrón de fases</th><th>Ideal para</th><th>Habitaciones fuera de servicio</th><th>Contrapartida clave</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Patrón de fases">Rotación piso por piso</td><td data-label="Ideal para">Hoteles de servicio limitado en altura media</td><td data-label="Habitaciones fuera de servicio">15-25 llaves (10-20 %)</td><td data-label="Contrapartida clave">Zonas limpias y separación sencilla de housekeeping</td></tr>
+              <tr><td data-label="Patrón de fases">Ala por ala</td><td data-label="Ideal para">Propiedades largas, de poca altura o en forma de U</td><td data-label="Habitaciones fuera de servicio">20-40 llaves</td><td data-label="Contrapartida clave">El calendario global más rápido; exige separar corredores</td></tr>
+              <tr><td data-label="Patrón de fases">Patrón por bloques verticales</td><td data-label="Ideal para">Hoteles de servicio completo con circulación vertical</td><td data-label="Habitaciones fuera de servicio">25-35 llaves</td><td data-label="Contrapartida clave">Concentra todo el trabajo junto a un mismo grupo de ascensores</td></tr>
+              <tr><td data-label="Patrón de fases">Cambio en turno nocturno</td><td data-label="Ideal para">PIP ligeros solo de FF&amp;E, sin obra húmeda</td><td data-label="Habitaciones fuera de servicio">0-8 llaves</td><td data-label="Contrapartida clave">Pérdida nula de habitaciones vendibles, pero mayor costo de mano de obra</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Reglas prácticas que protegen a la vez los ingresos y el resultado de la inspección: ejecute primero los pisos con peor calificación, para que cualquier visita de la marca a mitad de proyecto encuentre avance visible; reserve un 5-8 % de sobrestock de FF&amp;E (cabeceros, patas de silla, encimeras) para absorber daños de montaje sin reordenar; y coordine el ciclo de desocupación-renovación-devolución de modo que ninguna habitación esté fuera de servicio más de 3-5 días hábiles en un alcance solo de mobiliario. En hoteles de estadía prolongada y resorts, fijar las fases según los valles de ocupación —no según el calendario— suele ahorrar cifras de seis dígitos en ingresos desplazados.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Presupuesto del paquete FF&amp;E: referencias por habitación</h2>
+        <p>El presupuesto de FF&amp;E por habitación varía según el nivel de marca y la profundidad del alcance, pero para presentar el plan del PIP necesita cifras defendibles. Estas referencias reflejan rangos del mercado estadounidense 2025-2026 para paquetes completos de FF&amp;E de habitación: cuerpos de almacenaje, asientos, cabeceros, escritorios, espejos y accesorios de equipaje, sin incluir bienes blandos ni arte.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nivel de alcance</th><th>Presupuesto por habitación (USD)</th><th>Contenido típico del paquete</th><th>Tipo de bandera habitual</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Nivel de alcance">Actualización ligera</td><td data-label="Presupuesto por habitación (USD)">$6.000-$9.000</td><td data-label="Contenido típico del paquete">Cabeceros, sillas de acento, restauración o reemplazo selectivo de encimeras</td><td data-label="Tipo de bandera habitual">PIP de reposicionamiento en servicio limitado</td></tr>
+              <tr><td data-label="Nivel de alcance">Reemplazo completo estándar</td><td data-label="Presupuesto por habitación (USD)">$8.000-$18.000</td><td data-label="Contenido típico del paquete">Set completo de casegoods, asientos, cabecero, escritorio y espejo</td><td data-label="Tipo de bandera habitual">La mayoría de los PIP de servicio limitado</td></tr>
+              <tr><td data-label="Nivel de alcance">Superior / servicio completo</td><td data-label="Presupuesto por habitación (USD)">$15.000-$30.000+</td><td data-label="Contenido típico del paquete">Chapas premium, cabeceros tapizados, asientos de salón y mueble de minibar</td><td data-label="Tipo de bandera habitual">Banderas upscale e inventario con muchas suites</td></tr>
+              <tr><td data-label="Nivel de alcance">Paquete de estadía prolongada</td><td data-label="Presupuesto por habitación (USD)">$9.000-$14.000</td><td data-label="Contenido típico del paquete">Casegoods de alta durabilidad, comedor junto a kitchenette y asientos reforzados</td><td data-label="Tipo de bandera habitual">Especificaciones orientadas a longevidad</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La disciplina presupuestaria se apoya en tres hábitos. Primero, trate el estándar de marca como piso de especificación, no como brief de diseño: todo lo que exceda el manual es gasto opcional que puede aplazar. Segundo, compare cualquier cotización contra la economía real del canal: cada oferta que llega a través de intermediarios y programas de marca arrastra su margen comercial incorporado en el precio. Tercero, valide toda cotización que supere $2.500 por set de casegoods contra una alternativa de fuente directa conforme antes de firmar —en mi experiencia, los recargos domésticos sobre casegoods de especificación estándar suelen quedar 40-60 % por encima del costo puesto en destino desde una fábrica china calificada.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-06-img-01-cojin-plumon.webp" alt="Cabeceros tapizados para FF&amp;E de hotel en producción para renovación PIP" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Producción de cabeceros tapizados y piezas blandas para paquetes FF&amp;E de hotel con control de calidad por lote.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cumplir los estándares de marca comprando directo desde China</h2>
+        <p>El mito de que comprar directo equivale a mobiliario no conforme se derrumba en cuanto se lo pone frente a un manual de especificaciones. Lo que la marca audita es el entregable: dimensiones dentro del paquete de diseño, laminados y perfiles de canto según el cuadro de acabados, desempeño estructural según las normas BIFMA (X5.1 para sillas de huésped, X5.5 para casegoods), documentación de resistencia a la llama según CAL TB 117-2013 donde corresponda, y durabilidad del acabado en superficies de contacto. Un fabricante capaz ensaya exactamente con esos estándares y presenta muestras de acabado y planos de taller por el mismo flujo de aprobación que siguen los proveedores licenciados de la marca. La marca aprueba el producto, no el país de origen.</p>
+        <p>El ahorro, además, es estructural y no cosmético: la compra en fábrica elimina los márgenes del distribuidor y del programa de marca manteniendo la especificación idéntica. En un PIP de reemplazo completo de 120 habitaciones, ese diferencial frente a cotizaciones estadounidenses se ubica de forma consistente en el 30-50 % —la diferencia entre una línea de FF&amp;E de $16.000 y otra de $9.000 por habitación. Pero conviene reconocer la contrapartida: la vía directa le transfiere a usted la gestión de muestras, documentación y logística, por lo que solo conviene si el fabricante tiene experiencia real en aprobaciones de marca y entregas por fases.</p>
+        <p>Una advertencia del terreno: especifique embalaje con control de humedad y desecantes en contenedor para todo pedido de casegoods con destino a Estados Unidos, y confirme que la fábrica suministre protectores de esquina y cajas de prueba de caída. El daño en tránsito marítimo es la causa más común de retrasos en un paquete de FF&amp;E de fuente directa —y se previene por completo en piso de fábrica. Si quiere ver el modelo de costo puesto en destino línea por línea, lo desglosamos en /blogs/guia-compra-casegoods-hotel/ y en el catálogo de /productos/.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Caso práctico: PIP de 120 habitaciones en Dallas</h2>
+        <p>Un proyecto reciente de 120 habitaciones de servicio limitado en Dallas, Texas, ilustra la secuencia completa. La inspección de la marca ordenó reemplazar todos los casegoods, asientos y cabeceros de habitación con una ventana de ejecución de 12 meses. El propietario presentó un plan por fases: 6 pisos, uno por ciclo de 5 semanas, manteniendo cerca del 80 % de las llaves vendibles durante todo el proyecto.</p>
+        <p>El paquete de FF&amp;E se compró directo en fábrica: set completo de casegoods, asientos de huésped y cabeceros tapizados con un costo puesto en destino de unos $9.800 por habitación, frente a una cotización de programa doméstico de $16.500 —un ahorro del 40 % que devolvió unos $800.000 al presupuesto de capital solo en la línea de FF&amp;E. Los detalles que lo hicieron funcionar: muestras y documentación BIFMA entregadas a la marca 8 semanas antes de presentar el plan; producción de 55 días con dos oleadas de contenedores consolidados ajustadas a los cierres por piso; y re-inspección aprobada en la primera visita. Para un alcance similar, la decisión de comprar o fabricar localmente se resuelve casi siempre con esta misma aritmética.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Tiene fecha límite de PIP a la vista?"
+      text="Solicite una cotización acotada al alcance de su PIP con paquete de muestras de acabado: producción certificada BIFMA y GREENGUARD Gold, documentación FSC y CE, plazos de 45-60 días y una ventaja de coste del 30-50 % frente a programas domésticos. Escríbanos desde /contacto/ y en 48 horas recibirá el desglose por habitación."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
