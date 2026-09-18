@@ -1,0 +1,470 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario hotelero: guía de compra FF&E para proyectos en LatAm";
+const pageDescription = "Guía de compra de mobiliario hotelero para proyectos FF&E en Latinoamérica: niveles contract, costes, plazos y errores que encarecen su inversión.";
+const keywords = [
+  "mobiliario hotelero",
+  "mobiliario contract",
+  "FF&E hotel",
+  "compra de muebles para hoteles",
+  "fabricante de mobiliario hotelero",
+  "proyecto hotelero",
+  "muebles para habitaciones de hotel"
+];
+const canonicalPath = "/recursos/mobiliario-hotelero-guia-compra/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-01-img-04-hotel-huaer-exterior.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto cuesta amueblar una habitación de hotel por habitación?", answer: "En proyectos de nivel midscale a upscale, el FF&E de habitación suele moverse entre 8.000 y 15.000 USD por unidad, de los cuales el mobiliario representa un 55-70 %. Comprando con fabricantes exportadores certificados, ese rango puede bajar entre un 30 % y un 50 % frente a la producción local, siempre que el volumen supere las 80-100 habitaciones." },
+    { question: "¿Cuánto tarda la producción de mobiliario hotelero en China?", answer: "El plazo de producción estándar de un fabricante exportador es de 45-60 días desde la aprobación del prototipo. Hay que sumar 35-55 días de embarque hasta un puerto latinoamericano, más el despacho aduanero, por lo que la regla práctica es cerrar el pedido entre 8 y 10 meses antes de la apertura del hotel." },
+    { question: "¿Qué significa que un mueble sea de nivel contract?", answer: "Significa que está diseñado para uso comercial intensivo: estructuras reforzadas ensayadas bajo normas como BIFMA, tapizados ignífugos certificados según BS 5852 o CAL 117, y resistencia al desgaste de 12-16 horas de uso diario. Es la diferencia entre un sillón que dura 18 meses y uno que aguanta un ciclo de renovación completo." },
+    { question: "¿Qué certificados debe pedir a un fabricante de mobiliario para hoteles?", answer: "Como mínimo: BIFMA para estructuras y estabilidad, ensayos ignífugos de tapizados, GREENGUARD Gold para emisiones de aire interior y FSC si el proyecto busca certificación de sostenibilidad. Pida siempre el certificado con fecha, laboratorio emisor y número de informe, no una mención genérica en el sitio web." },
+    { question: "¿Conviene comprar todo el mobiliario del hotel a un solo proveedor?", answer: "Tiene ventajas reales: un solo interlocutor, consistencia de acabados y mejor precio por volumen. El matiz está en las piezas que definen identidad —artesanía local en el lobby, por ejemplo—, donde la vía mixta suele funcionar mejor: importar el grueso estandarizado y producir localmente entre un 10 % y un 15 % de piezas decorativas." },
+    { question: "¿Qué es un cuarto modelo y por qué es importante?", answer: "Es una habitación completa montada con el mobiliario definitivo antes de autorizar la producción en serie. Los ajustes que ahí aparecen —alturas, tomas eléctricas, acabados— cuestan cientos de dólares corregirlos; si se descubren después de producir 150 habitaciones, ya hablamos de decenas de miles. Es la inversión de menor riesgo de todo el proyecto." },
+    { question: "¿Cuánto tiempo antes de la apertura debo encargar el FF&E?", answer: "Como regla práctica, 10-12 meses antes para proyectos de 100 habitaciones o más: 2-3 meses de especificación y muestras, 45-60 días de producción, 2 meses de logística internacional y 1-2 meses de instalación y punch list. Para reformas menores el ciclo se acorta, pero el pedido nunca debería cerrarse con menos de 5 meses de margen." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-01-img-04-hotel-huaer-exterior.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-16-img-02.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-04-img-02.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Proyectos hoteleros · FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario hotelero: guía de compra para proyectos FF&amp;E en Latinoamérica</h1>
+          <p>Comprar mobiliario hotelero para un proyecto nuevo o de renovación se resume en tres decisiones: qué categorías FF&amp;E necesita, qué nivel de resistencia contract exige cada espacio y en qué momento del calendario de obra debe cerrar cada pedido. Un hotel de 120 habitaciones mueve habitualmente entre 8.000 y 15.000 USD de FF&amp;E por habitación, y entre un 55 % y un 70 % de esa cifra corresponde a muebles: camas, escritorios, sillones, mesas de lobby y mobiliario de restaurante. Si se equivoca en el orden de compra, pierde 30-90 días de apertura; si se equivoca en la calidad, pierde la operación. Esta guía le muestra cómo hacerlo bien las dos veces.</p>
+          <p>He acompañado proyectos de FF&amp;E en América Latina, Oriente Medio y el sudeste asiático, y el patrón se repite: quien planifica la compra de mobiliario en la fase de anteproyecto gasta entre un 15 % y un 25 % menos que quien la deja para después de la obra civil. En Hongye Furniture Group —fundada en 1996, con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados— hemos visto más de 1.000 proyectos y más de 47 marcas hoteleras internacionales pasar por nuestras líneas de producción. Lo que sigue es la versión condensada de lo que aprendimos en el camino, con números concretos y sin maquillaje.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-04-hotel-huaer-exterior.webp" alt="Mobiliario hotelero contract: habitación estándar con casegoods y escritorio" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué incluye el FF&amp;E de un hotel: las categorías que debe presupuestar</h2>
+        <p>FF&amp;E significa furniture, fixtures and equipment, y en un proyecto hotelero agrupa todo lo que no va pegado al edificio. La primera regla que doy a cualquier desarrollador es separar las categorías desde el día uno, porque cada una tiene proveedores, plazos y criterios de compra distintos. Mezclarlas en una sola partida de presupuesto es la vía rápida a sobrecostes del 10-20 %.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Categoría</th><th>Qué incluye</th><th>Peso típico del presupuesto</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Categoría">Mobiliario de habitaciones</td><td data-label="Qué incluye">Camas, cabeceros, escritorios, sillas, minibar, armarios</td><td data-label="Peso típico del presupuesto">45-55 %</td></tr>
+              <tr><td data-label="Categoría">Áreas públicas</td><td data-label="Qué incluye">Recepción, lobby, sillones lounge, mesas de centro</td><td data-label="Peso típico del presupuesto">15-25 %</td></tr>
+              <tr><td data-label="Categoría">Restaurantes y bar</td><td data-label="Qué incluye">Mesas, sillas, banquetas, estaciones de servicio</td><td data-label="Peso típico del presupuesto">10-15 %</td></tr>
+              <tr><td data-label="Categoría">Back of house</td><td data-label="Qué incluye">Vestuarios, oficinas, mobiliario de personal</td><td data-label="Peso típico del presupuesto">5-10 %</td></tr>
+              <tr><td data-label="Categoría">Exterior y piscina</td><td data-label="Qué incluye">Tumbonas, sombrillas, juego de exterior</td><td data-label="Peso típico del presupuesto">5-10 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Fíjese en que las habitaciones se llevan casi la mitad del presupuesto, pero las áreas públicas son las que definen la primera impresión del huésped y soportan el mayor desgaste. Mi recomendación práctica: reserve un margen del 5 % sobre el total de FF&amp;E para imprevistos de última hora —una unidad de muestra que se ajusta, un acabado que cambia cuando la marca validó el proyecto—. Ese margen existe en todos los proyectos serios; el error es no escribirlo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Nivel contract: por qué el mobiliario de hotel no es mobiliario doméstico</h2>
+        <p>El término contract no es marketing: designa mobiliario diseñado para uso intensivo, con estructuras reforzadas, materiales ignífugos y piezas de repuesto garantizadas. Un sillón doméstico aguanta 3-4 horas de uso al día; uno de lobby aguanta 12-16 horas con maletas, ruedas de equipaje y limpiezas agresivas. Si compra nivel doméstico para un hotel, a los 18 meses estará reponiendo.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-01-img-07-hotel-boutique-exterior.webp" alt="Mobiliario hotelero contract en el lobby: recepción, sillones y mesas de nivel comercial" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Recepción y lounge de hotel con sillones y mesas de nivel contract en uso diario.</figcaption>
+        </figure>
+        <p>¿Qué traduce esto en términos verificables? Normas y ensayos. Para el mercado internacional, los hoteles suelen exigir cumplimiento de BIFMA en estructuras y estabilidad, ensayos de ignífugos en tapizados tipo BS 5852 o CAL 117, y certificación de emisiones de aire interior como GREENGUARD Gold, sobre todo si la cadena hotelera opera bajo estándares de sostenibilidad. También conviene pedir madera con trazabilidad FSC cuando el proyecto apunta a certificación LEED o similar.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Exigencia contract típica</th><th>Norma o referencia</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Silla de habitación</td><td data-label="Exigencia contract típica">1.000-2.000 ciclos de fatiga, estructura de haya o acero</td><td data-label="Norma o referencia">BIFMA X5.1</td></tr>
+              <tr><td data-label="Elemento">Tapizados de áreas públicas</td><td data-label="Exigencia contract típica">40.000-100.000 ciclos Martindale, ignífugo</td><td data-label="Norma o referencia">BS 5852 / CAL 117</td></tr>
+              <tr><td data-label="Elemento">Escritorio y mesita</td><td data-label="Exigencia contract típica">Superficie de resistencia a manchas y calor</td><td data-label="Norma o referencia">BIFMA / EN 12521</td></tr>
+              <tr><td data-label="Elemento">Colchón</td><td data-label="Exigencia contract típica">Barrera ignífuga y densidad de 30-40 kg/m³</td><td data-label="Norma o referencia">16 CFR 1633</td></tr>
+              <tr><td data-label="Elemento">Emisiones de aire interior</td><td data-label="Exigencia contract típica">Límites de COV para habitaciones cerradas</td><td data-label="Norma o referencia">GREENGUARD Gold</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Un apunte de fábrica: no todos los fabricantes que dicen cumplir BIFMA tienen los informes de laboratorio actualizados. Pida el certificado con fecha y laboratorio, no una frase en la web. En nuestro caso, las certificaciones BIFMA, GREENGUARD Gold, FSC y CE forman parte del expediente estándar de cualquier proyecto hotelero, y eso mismo debería exigir a cualquier proveedor que cotice.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Comprar en China, en la región o cerca de la obra: la comparación honesta</h2>
+        <p>Esta es la pregunta que todo comité de inversión hace y donde muchos consultores maquillan la respuesta. La comparación honesta tiene tres columnas: fábrica regional, importación desde Asia y una vía mixta. No existe una respuesta única; existe una respuesta según su plazo, su volumen y su tolerancia logística.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Importación desde China</th><th>Fabricación regional</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio">Coste por habitación</td><td data-label="Importación desde China">8.000-12.000 USD</td><td data-label="Fabricación regional">13.000-20.000 USD</td></tr>
+              <tr><td data-label="Criterio">Ventaja de coste</td><td data-label="Importación desde China">30-50 % sobre producción local</td><td data-label="Fabricación regional">Referencia base</td></tr>
+              <tr><td data-label="Criterio">Plazo de producción</td><td data-label="Importación desde China">45-60 días</td><td data-label="Fabricación regional">60-120 días según taller</td></tr>
+              <tr><td data-label="Criterio">Logística total</td><td data-label="Importación desde China">35-55 días hasta puerto latinoamericano</td><td data-label="Fabricación regional">1-3 semanas en camión</td></tr>
+              <tr><td data-label="Criterio">Capacidad de gran volumen</td><td data-label="Importación desde China">Muy alta (300.000 m² de planta, +1.000 trabajadores)</td><td data-label="Fabricación regional">Limitada en proyectos de +150 habitaciones</td></tr>
+              <tr><td data-label="Criterio">Nivel contract y certificados</td><td data-label="Importación desde China">Alta con fabricantes exportadores certificados</td><td data-label="Fabricación regional">Variable, revisar caso por caso</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En mi experiencia, la importación gana claramente cuando el proyecto supera las 80-100 habitaciones y el calendario lo permite: la ventaja de coste del 30-50 % paga la logística con margen. La fabricación regional tiene sentido en tres casos: proyectos pequeños de menos de 40 habitaciones, reformas urgentes donde cada semana de cierre cuesta más que la diferencia de precio, y piezas especiales de artesanía local que dan identidad al hotel. La vía mixta —importar el grueso estandarizado y comprar local lo decorativo— es la que más veces he visto equilibrar coste, plazo y carácter.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>El calendario de procurement: del plano a la habitación 101</h2>
+        <p>El error más caro del procurement hotelero es empezar tarde. El mobiliario parece el último eslabón, pero sus decisiones —dimensiones exactas, tomas eléctricas en escritorios, cargas de suelo en el lounge— se congelan en el diseño de interiores, mucho antes de que la obra civil termine. Este es el calendario que aplicamos en proyectos típicos de 100-200 habitaciones.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Fase</th><th>Momento ideal</th><th>Qué decide usted aquí</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Fase">Definición de especificaciones</td><td data-label="Momento ideal">Mes -12 a -10</td><td data-label="Qué decide usted aquí">Nivel contract, estilo, presupuesto por habitación</td></tr>
+              <tr><td data-label="Fase">Selección y muestras</td><td data-label="Momento ideal">Mes -10 a -8</td><td data-label="Qué decide usted aquí">Fabricante, acabados, prototipo de habitación modelo</td></tr>
+              <tr><td data-label="Fase">Pedido y producción</td><td data-label="Momento ideal">Mes -8 a -5</td><td data-label="Qué decide usted aquí">Contrato con hitos, 30-50 % de anticipo</td></tr>
+              <tr><td data-label="Fase">Producción en fábrica</td><td data-label="Momento ideal">45-60 días</td><td data-label="Qué decide usted aquí">Inspección previa al embarque</td></tr>
+              <tr><td data-label="Fase">Embarque y aduana</td><td data-label="Momento ideal">Mes -5 a -2</td><td data-label="Qué decide usted aquí">Documentación, incoterms, agente de aduanas</td></tr>
+              <tr><td data-label="Fase">Recepción e instalación</td><td data-label="Momento ideal">Mes -2 a 0</td><td data-label="Qué decide usted aquí">Cuadrillas, montaje, lista de punch</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-16-img-01-casegoods-hotel.webp" alt="Instalación de mobiliario hotelero en habitación: cama, escritorio y armario en montaje" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cuadrilla de instalación montando el mobiliario de una habitación de hotel terminada.</figcaption>
+        </figure>
+        <p>Dos consejos que valen dinero. Primero, el cuarto modelo: pida una habitación completa montada antes de autorizar la producción en serie; los ajustes que ahí se detectan —una altura de escritorio incómoda, un enchufe mal ubicado— cuestan cientos de dólares y sin él cuestan decenas de miles. Segundo, la inspección previa al embarque: un tercero o su propio equipo revisando el 10-20 % de la carga en fábrica evita sorpresas de aduana que después no tiene nadie a quién reclamar en el puerto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Los costes que nadie pone en el Excel</h2>
+        <p>Cuando reviso presupuestos fallidos, el problema casi nunca es el precio del mueble: son los rubros que faltaban. Estos son los cuatro que con más frecuencia se olvidan en proyectos latinoamericanos, con su peso real sobre el total.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Coste olvidado</th><th>Rango típico</th><th>Cómo controlarlo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Coste olvidado">Flete y aduana no estimados</td><td data-label="Rango típico">12-22 % del valor FF&amp;E</td><td data-label="Cómo controlarlo">Cerrar incoterm y duty en el contrato</td></tr>
+              <tr><td data-label="Coste olvidado">Almacenaje por obra retrasada</td><td data-label="Rango típico">2-5 USD por m² al mes</td><td data-label="Cómo controlarlo">Coordinar embarque con avance de obra</td></tr>
+              <tr><td data-label="Coste olvidado">Montaje y punch list</td><td data-label="Rango típico">3-8 % del valor FF&amp;E</td><td data-label="Cómo controlarlo">Incluir cuadrilla en el contrato del fabricante</td></tr>
+              <tr><td data-label="Coste olvidado">Repuestos del primer año</td><td data-label="Rango típico">1-2 % del valor FF&amp;E</td><td data-label="Cómo controlarlo">Exigir kit de repuestos y planos de despiece</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El almacenaje merece un párrafo aparte porque es el que más discusiones genera. Si la mercancía llega y la obra no está lista, el contenedor o el almacén cobran por semana, y en puestos portuarios de la región esas semanas se facturan en miles de dólares. La solución no es contratar barato: es contratar con visibilidad del avance de obra y pactar en el contrato una ventana de embarque con cierta flexibilidad. Un fabricante acostumbrado a proyectos hoteleros —con más de 50 países servidos y experiencia en obra hotelera viva— lo sabe negociar de entrada; quien solo vende contenedores a distribuidores, no.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Checklist antes de firmar con el fabricante</h2>
+        <p>Antes de firmar, deje este checklist sobre la mesa. No es una formalidad: cada punto resume un problema real que hemos visto costar semanas o decenas de miles de dólares a algún proyecto. Si su proveedor responde con documentación clara a los siete puntos, tiene un socio; si duda en tres o más, siga cotizando.</p>
+        <p>Uno: certificados vigentes y con nombre de laboratorio —BIFMA, ignífugos, GREENGUARD Gold, FSC cuando aplique—. Dos: un cuarto modelo o prototipo incluido en el contrato. Tres: plazo de producción escrito en días, no en semanas —el estándar de exportación está en 45-60 días—. Cuatro: incoterm, ventana de embarque y quién paga la demora. Cinco: kit de repuestos y despieces de cada pieza. Seis: plan de instalación con cuadrillas propias o supervisadas. Siete: referencias de proyectos hoteleros verificables, con ciudad y número de habitaciones, aunque la marca del cliente sea confidencial —los buenos fabricantes las tienen y las muestran así.</p>
+        <p>Si quiere contrastar este checklist con capacidad real de fábrica, en /productos/ puede revisar las líneas de mobiliario hotelero por categoría y en /contacto/ solicitar un presupuesto con desglose por habitación, plazos de producción y referencia de proyectos similares al suyo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Tiene un proyecto hotelero en marcha? Pida su desglose por habitación"
+      text="Hongye Furniture Group, fundada en 1996 con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados, ha equipado más de 1.000 proyectos hoteleros en más de 50 países con plazos de producción de 45-60 días. Escríbanos por /contacto/ con su número de habitaciones y le devolvemos un presupuesto de mobiliario hotelero con desglose por habitación en menos de 72 horas."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

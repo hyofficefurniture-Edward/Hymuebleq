@@ -1,0 +1,444 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario escolar: escritorios regulables por edad y talla";
+const pageDescription = "Guía para comprar escritorios escolares regulables: tallas por edad, normas de seguridad, durabilidad, precios en USD y plazos de producción para su aula.";
+const keywords = [
+  "mobiliario escolar",
+  "escritorios escolares regulables",
+  "mesas escolares regulables",
+  "sillas escolares",
+  "mobiliario para aulas",
+  "normas de seguridad mobiliario escolar"
+];
+const canonicalPath = "/recursos/mobiliario-escolar-escritorios-regulables/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué altura debe tener un escritorio escolar según la edad del niño?", answer: "La referencia práctica es EN 1729-1: un niño de 6 a 8 años (115-128 cm de estatura) necesita mesa de 46 cm; de 8 a 11 años, de 52 cm; de 11 a 14 años, de 58 cm; y de 14 a 17 años, de 64 cm. Como regla rápida, el plano de trabajo debe quedar 2-5 cm por debajo del codo del alumno con los pies apoyados en el suelo." },
+    { question: "¿Es mejor comprar mesas escolares regulables o tallas fijas?", answer: "Depende del ciclo: en primaria y secundaria, donde el alumno permanece varios años, la regulable (rango 52-76 cm) ahorra renovaciones y compensa su 15-25 % de sobreprecio. En preescolar, los rangos de estatura son tan estrechos que una mesa fija de 40 cm cumple sobradamente y cuesta menos." },
+    { question: "¿Cuánto cuesta un escritorio escolar regulable?", answer: "Como referencia FOB por unidad en pedidos de 100 a 2.000 unidades, una mesa regulable por trinquete cuesta entre 55 y 90 USD; una mesa fija con tablero HPL, entre 28 y 45 USD. Al valor FOB hay que sumar flete (8-15 %) y aranceles locales." },
+    { question: "¿Qué certificaciones debe cumplir el mobiliario escolar?", answer: "Las mínimas recomendadas son BIFMA para resistencia estructural, GREENGUARD Gold para bajas emisiones químicas en espacios cerrados y CE donde sea exigido. Para licitaciones públicas conviene añadir FSC en los componentes de madera. Exija el certificado del modelo exacto, no uno genérico de la fábrica." },
+    { question: "¿Cuánto tarda la producción y entrega de mobiliario para toda una escuela?", answer: "Con fábrica exportadora, calcule 2-3 semanas de especificaciones y muestra, 45-60 días de producción y 20-40 días de tránsito marítimo: unos cuatro meses en total. Para no retrasar la apertura del ciclo, cierre las especificaciones con al menos seis meses de anticipación." },
+    { question: "¿Qué materiales de tablero y estructura duran más en las aulas?", answer: "Tablero de partícula con chapa HPL de 1 mm y borde ABS de 2 mm dura 8-12 años frente a los 3-4 años del MDF melamínico con borde fino. La estructura óptima es acero tubular de 1,2-1,5 mm con recubrimiento epoxi, que supera los 15 años de uso diario." },
+    { question: "¿Cómo sé si la silla escolar es de la talla correcta?", answer: "Con el niño sentado, sus pies deben apoyar completamente en el suelo, las rodillas quedar en ángulo de 90 grados y el borde del asiento no presionar la parte posterior de las rodillas. Si entre el asiento y la pantorrilla queda un puño de holgura y la espalda alcanza el respaldo, la talla es correcta." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-15-img-01.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-27-img-01.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Educación · Aulas modernas &middot; {publicationDateLabel}</p>
+          <h1>Escritorios escolares regulables: tallas por edad, normas y compra inteligente</h1>
+          <p>Un escritorio escolar regulable es la mesa cuyo plano de trabajo se ajusta en altura para acompañar el crecimiento del estudiante: en la práctica, entre los 4 y los 18 años un escolar crece cerca de 60 cm, y una mesa fija de 58 cm que le resulta cómoda a los 8 años se convierte en un problema postural a los 12. Por eso los proyectos serios de mobiliario para aulas ya no compran una sola talla: compran rangos regulables o un plan de tallas por ciclo educativo. La regla que aplico en mi experiencia de fábrica es simple: la mesa debe quedar entre 2 y 5 cm por debajo del codo del niño sentado, y los pies deben apoyar planos en el suelo.</p>
+          <p>Este artículo resume lo que Hongye Furniture Group, fundada en 1996 y con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados, ha aprendido suministrando mobiliario escolar a proyectos en más de 50 países. Verá tablas de dimensiones por edad, comparativas de materiales, precios de referencia en USD y los plazos reales de producción, de modo que pueda defender su presupuesto con datos y no con catálogos.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-03-img-01-aula-escolar.webp" alt="Aula con escritorios escolares regulables en altura y sillas ergonómicas" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué la altura regulable define el aula moderna</h2>
+        <p>Las aulas ya no son filas de pupitres idénticos. Los modelos pedagógicos actuales alternan trabajo individual, colaboración en grupos de 4 a 6 alumnos y exposición frontal, y eso exige mesas que se muevan, se agrupen y se ajusten. Un escritorio regulable de altura cubre dos necesidades a la vez: se adapta al crecimiento del niño durante su paso por la escuela y permite reconfigurar la clase entre una sesión de matemáticas sentada y un taller en grupo sin comprar dos juegos de mobiliario.</p>
+        <p>Hay además un argumento económico que los directores suelen pasar por alto. Si calcula el coste por año de uso, una mesa fija se reemplaza cada vez que el alumno cambia de ciclo, mientras que una mesa regulable con rango de 46 a 76 cm cubre desde segundo grado hasta bachillerato. El precio inicial es un 15-25 % mayor, pero el costo anual por alumno baja. Lo que veo en fábrica es que las escuelas que hacen este cálculo terminan migrando a regulables; las que compran por precio unitario más bajo terminan renovando el mobiliario tres veces en la vida de una generación.</p>
+        <p>Dicho esto, conviene reconocer la contraparte: las mesas regulables tienen más mecanismos, y un mecanismo barato es el primer punto de falla. La diferencia entre una regulable que dura 10 años y una que se tambalea al segundo semestre está en la calidad de la columna de ajuste y del anclaje del tablero, no en el precio de etiqueta. Ese es el criterio que desarrollamos en las secciones siguientes.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Tallas por edad: la tabla de dimensiones que sí funciona</h2>
+        <p>La referencia internacional más usada es la norma europea EN 1729-1, que define marcas de talla según la estatura del alumno. Aunque en América Latina no siempre es obligatoria, es la escala que la mayoría de fabricantes —incluidos los exportadores asiáticos— usan para dimensionar asientos y mesas. Mi regla es: si el proveedor no puede decirle en qué talla EN 1729 cae cada modelo suyo, está improvisando.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Talla (EN 1729)</th><th>Edad aproximada</th><th>Estatura del alumno</th><th>Altura de asiento</th><th>Altura de mesa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Talla (EN 1729)">0</td><td data-label="Edad aproximada">4-6 años</td><td data-label="Estatura del alumno">95-115 cm</td><td data-label="Altura de asiento">22-26 cm</td><td data-label="Altura de mesa">40 cm</td></tr>
+              <tr><td data-label="Talla (EN 1729)">1</td><td data-label="Edad aproximada">6-8 años</td><td data-label="Estatura del alumno">115-128 cm</td><td data-label="Altura de asiento">26-30 cm</td><td data-label="Altura de mesa">46 cm</td></tr>
+              <tr><td data-label="Talla (EN 1729)">2</td><td data-label="Edad aproximada">8-11 años</td><td data-label="Estatura del alumno">128-145 cm</td><td data-label="Altura de asiento">30-34 cm</td><td data-label="Altura de mesa">52 cm</td></tr>
+              <tr><td data-label="Talla (EN 1729)">3</td><td data-label="Edad aproximada">11-14 años</td><td data-label="Estatura del alumno">145-160 cm</td><td data-label="Altura de asiento">34-38 cm</td><td data-label="Altura de mesa">58 cm</td></tr>
+              <tr><td data-label="Talla (EN 1729)">4</td><td data-label="Edad aproximada">14-17 años</td><td data-label="Estatura del alumno">160-179 cm</td><td data-label="Altura de asiento">38-42,5 cm</td><td data-label="Altura de mesa">64 cm</td></tr>
+              <tr><td data-label="Talla (EN 1729)">5</td><td data-label="Edad aproximada">mayores de 17</td><td data-label="Estatura del alumno">más de 179 cm</td><td data-label="Altura de asiento">42,5-46,5 cm</td><td data-label="Altura de mesa">70-76 cm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para escritorios escolares regulables, la práctica común es agrupar: una mesa con rango de 52 a 64 cm atiende del tercer grado al noveno, y otra de 58 a 76 cm cubre secundaria completa. En preescolar, donde los rangos de estatura son más estrechos, muchas escuelas optan por tallas fijas de 40 cm, que cuestan menos y sobreviven a la etapa sin problema. Es un equilibrio honesto: regular todo es pagar mecanismos donde no hacen falta.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-11-img-01-certificacion-fsc.webp" alt="Aula escolar con mesas regulables agrupadas para trabajo colaborativo de estudiantes" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Aula de colaboración con escritorios regulables agrupados en islas, donde estudiantes de primaria trabajan de pie y sentados.</figcaption>
+        </figure>
+        <p>Un detalle que casi nadie revisa al comprar: la profundidad y el ángulo del tablero. Para escritura basta un plano de 50-60 cm de profundidad; para uso de computadora portátil conviene una banda inclinada o una nervadura antideslizante en el borde. Y si la mesa se usa tanto sentada como de pie (aulas activas), exija un rango superior mínimo de 72 cm y estabilidad lateral certificada: un tablero que vibra cuando un alumno se apoya arruina la experiencia del aula.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales y durabilidad: qué resiste el uso escolar diario</h2>
+        <p>El aula es, sin exagerar, uno de los entornos más agresivos para el mobiliario: tizas, marcadores, limpiadores, una taza de café por docente y patines de silla arrastrándose todo el día. Por eso mi criterio de selección es distinto al del mobiliario de hogar: primero resistencia mecánica, después estética. Estas son las combinaciones que venimos especificando con mejores resultados de ciclo de vida.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Componente</th><th>Opción económica</th><th>Opción recomendada</th><th>Vida útil esperada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Componente">Tablero</td><td data-label="Opción económica">MDF melamínico de 15 mm</td><td data-label="Opción recomendada">Tablero de partícula con chapa HPL de 1 mm y borde ABS</td><td data-label="Vida útil esperada">8-12 años</td></tr>
+              <tr><td data-label="Componente">Estructura</td><td data-label="Opción económica">Acero tubular de 1,0 mm</td><td data-label="Opción recomendada">Acero de 1,2-1,5 mm con recubrimiento epoxi</td><td data-label="Vida útil esperada">15-20 años</td></tr>
+              <tr><td data-label="Componente">Mecanismo regulable</td><td data-label="Opción económica">Tornillo simple sin guía</td><td data-label="Opción recomendada">Columna de ajuste por trinquete o gas con bloqueo</td><td data-label="Vida útil esperada">10-15 años</td></tr>
+              <tr><td data-label="Componente">Asiento</td><td data-label="Opción económica">Polipropileno liso</td><td data-label="Opción recomendada">Polipropileno con refuerzo interno y anti-rayado</td><td data-label="Vida útil esperada">8-12 años</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Fíjese en el borde del tablero: es donde el 80 % de las mesas escolares empiezan a fallar. Un borde ABS de 2 mm bien encolado resiste golpes de mochila y humedad de limpieza; el borde de PVC fino o pintado se descascara en el primer año y expone el aglomerado, que se hincha con el trapeado. Es la diferencia entre un mueble que se ve viejo a los tres años y uno que llega a diez.</p>
+        <p>Sobre origen: no es lo mismo comprar a un taller local que a una fábrica exportadora. Un fabricante con planta propia y control de calibre de chapa puede garantizar espesores constantes; un ensamblador que subcontrata, no siempre. En Hongye Furniture Group producimos en más de 300.000 m² con procesos propios de corte, soldadura y recubrimiento, lo que nos permite certificar cada lote y sostener la ventaja de coste del 30-50 % frente a producción local sin sacrificar espesor de materiales. La contraparte que conviene aceptar es el tiempo: un pedido desde Asia mueve 45-60 días de producción más el transporte marítimo, frente a 2-3 semanas de un taller local. Planificar con tres meses de anticipación es parte del ahorro.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Seguridad y certificaciones: qué exigir al proveedor</h2>
+        <p>En mobiliario escolar, seguridad significa tres cosas concretas: estabilidad (que la mesa no vuelque si un niño se cuelga del borde), aristas y esquinas redondeadas (radio mínimo de 2 mm en todo el perímetro), y materiales que no emitan compuestos orgánicos volátiles por encima de los límites aceptados. Nada de eso es opcional, y ninguna de esas tres cosas se puede verificar mirando una foto de catálogo.</p>
+        <p>Las certificaciones que deben aparecer por escrito en su orden de compra son: BIFMA, que valida resistencia y durabilidad estructural en pruebas de carga y ciclos de uso; CE para el mercado que lo exija; y GREENGUARD Gold, que certifica emisiones químicas bajas, un punto crítico en aulas cerradas con aire acondicionado donde los niños pasan entre 4 y 6 horas diarias. Si el proyecto recibe financiamiento público, pregunte además por FSC en los componentes de madera, cada vez más requerido en licitaciones. Todas estas certificaciones las mantenemos vigentes en nuestras líneas de aula precisamente porque los comités de compra las piden cada vez con más frecuencia.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-03-img-02-planta-produccion.webp" alt="Niña ajustando la altura de un escritorio escolar regulable en su aula" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Niña ajusta con ayuda de su profesora la altura de un escritorio regulable infantil hasta dejarlo a la altura exacta de sus codos.</figcaption>
+        </figure>
+        <p>Una advertencia práctica: pida el certificado del modelo exacto que compra, no un certificado genérico de la fábrica. He visto licitaciones donde se aceptó un documento BIFMA de una silla distinta a la suministrada, y el colegio quedó sin respaldo cuando la estructura falló. Un proveedor serio le entrega el número de informe de ensayo por cada referencia, y acepta que su comité verifique con el laboratorio emisor. Si un vendedor se molesta por esa verificación, ese dato ya es información.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Costes y compra por volumen: precios reales en USD</h2>
+        <p>Hablemos de dinero, porque las listas de precios de catálogo rara vez coinciden con lo que termina pagando un proyecto. Los rangos siguientes son valores FOB de referencia por unidad que manejamos en pedidos de 200 a 2.000 unidades, y varían según espesor de tablero, mecanismo y acabado.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Producto</th><th>Rango FOB (USD/unidad)</th><th>Pedido mínimo típico</th><th>Nota</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Producto">Mesa fija de aula, tablero HPL</td><td data-label="Rango FOB (USD/unidad)">28-45</td><td data-label="Pedido mínimo típico">100 unidades</td><td data-label="Nota">Preescolar y primaria</td></tr>
+              <tr><td data-label="Producto">Mesa regulable por trinquete</td><td data-label="Rango FOB (USD/unidad)">55-90</td><td data-label="Pedido mínimo típico">100 unidades</td><td data-label="Nota">Ciclo completo primaria-secundaria</td></tr>
+              <tr><td data-label="Producto">Silla escolar apilable</td><td data-label="Rango FOB (USD/unidad)">12-25</td><td data-label="Pedido mínimo típico">200 unidades</td><td data-label="Nota">Polipropileno reforzado</td></tr>
+              <tr><td data-label="Producto">Mesa con ruedas y anclaje grupal</td><td data-label="Rango FOB (USD/unidad)">75-130</td><td data-label="Pedido mínimo típico">100 unidades</td><td data-label="Nota">Aulas de colaboración</td></tr>
+              <tr><td data-label="Producto">Estación de profesor</td><td data-label="Rango FOB (USD/unidad)">90-160</td><td data-label="Pedido mínimo típico">50 unidades</td><td data-label="Nota">Con módulo de almacenaje</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El flete marítimo agrega entre 8 y 15 % sobre el valor FOB según destino y temporada, y los aranceles varían por país: antes de cerrar presupuesto, pida a su agente de aduanas el tratamiento arancelario exacto para mobiliario de asiento y sus partes. Para contextos donde el calendario es urgente —una apertura de ciclo en enero, por ejemplo—, la combinación honesta es esta: mesas regulables y sillas desde fábrica (45-60 días de producción, contenedor directo), y mobiliario complementario de reposición con un proveedor local. No todo el proyecto necesita venir de Asia para que el ahorro agregado siga siendo real.</p>
+        <p>Sugiero también presupuestar un 3-5 % de repuestos: patines, tornillería, un par de tableros de recambio. Un fabricante que despacha piezas de reposición durante 5 años vale más que uno que le hace un descuento del 2 % en la factura inicial. Puede revisar el catálogo completo de líneas para aulas en /productos/ y pedir la lista de precios por volumen en /contacto/.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Del pedido al aula: plazos, logística y puesta en marcha</h2>
+        <p>El cronograma realista de un proyecto escolar con fábrica exportadora se ve así: dos a tres semanas para definición de especificaciones y muestra física aprobada; 45-60 días de producción según volumen; y de 20 a 40 días de tránsito marítimo según el puerto de destino. Sumado, el ciclo completo cabe bien dentro de cuatro meses, pero solo si el comité de compra cierra especificaciones a tiempo. La demora más común que veo no está en producción sino en aprobaciones internas de muestra que tardan seis semanas.</p>
+        <p>Tres consejos que evitan dolores de cabeza. Primero, apruebe una muestra física y congélela como referencia contractual: color, espesor, tipo de borde. Segundo, para aulas de collaboration, pida montaje sin herramientas o con llave única; su personal de mantenimiento lo agradecerá cada vez que reconfiguren un salón. Tercero, coordine la recepción con descarga y paletizado identificado por aula —si cada paquete dice "Aula 7, 12 mesas, 24 sillas", la instalación de una escuela de 20 aulas toma dos días en lugar de una semana.</p>
+        <p>Con más de 1.000 proyectos entregados en más de 50 países, la lección que resume esta guía es de planificación, no de catálogo: defina tallas por ciclo educativo, exija certificaciones por modelo, compre regulable donde el alumno permanece varios años y fijo donde no, y reserve el margen de tiempo del flete. El resultado es un aula que dura toda una generación escolar con el mismo presupuesto que otros gastan en dos renovaciones.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Planifiquemos juntos su próximo proyecto de aulas"
+      text="Hongye Furniture Group cotiza proyectos desde 100 unidades, con producción de 45-60 días, certificaciones BIFMA y GREENGUARD Gold, y una ventaja de coste del 30-50 % frente a producción local en su planta de más de 300.000 m². Envíe su listado de aulas y cantidades a /contacto/ y reciba en 48 horas una propuesta con tallas por edad, muestras y precios FOB."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

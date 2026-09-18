@@ -1,0 +1,440 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Cómo elegir el sofá perfecto: medidas, telas y durabilidad";
+const pageDescription = "Cómo elegir el sofá perfecto: medidas, telas, espumas y durabilidad con precios reales en USD. Guía técnica para acertar con su sofá de salón.";
+const keywords = [
+  "cómo elegir el sofá perfecto",
+  "sofá para el salón",
+  "medidas de sofá",
+  "tela de sofá resistente",
+  "espuma de alta resiliencia",
+  "sofá a medida"
+];
+const canonicalPath = "/recursos/como-elegir-sofa-salon/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-06-img-01-cojin-plumon.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuántos ciclos Martindale necesita la tela de un sofá de uso diario?", answer: "Para uso doméstico diario, mínimo 25.000 ciclos; lo ideal es 40.000 o más. Con mascotas o niños, busque tejidos de 50.000 ciclos o nivel contract, que es el estándar exigido en hoteles." },
+    { question: "¿Qué densidad de espuma es mejor para los cojines del asiento?", answer: "Entre 30 y 40 kg/m³ de espuma de alta resiliencia es el punto óptimo para uso diario: soporte firme con vida útil de 8-15 años. Por debajo de 25 kg/m³ el cojín se hunde en 1-2 años." },
+    { question: "¿Cuánto espacio debo dejar entre el sofá y la mesa de centro?", answer: "Entre 60 y 90 cm de paso libre es la medida recomendada; nunca menos de 45 cm. Además, el sofá no debería superar dos tercios del ancho de la pared donde se coloca." },
+    { question: "¿Es mejor un sofá de tela o de cuero?", answer: "Depende del uso: el cuero limpia en un gesto y envejece bien, pero cuesta 40-70 % más y exige acondicionamiento periódico. Una chenilla o microfibra técnica de 50.000 ciclos rinde igual o mejor con niños y mascotas por mucho menos dinero." },
+    { question: "¿Conviene comprar un sofá a medida o uno de catálogo?", answer: "El sofá a medida vale la pena cuando su espacio tiene medidas atípicas o necesita varias piezas iguales para un proyecto: sube 10-20 % el coste, pero resuelve encaje perfecto. Para espacios estándar, el catálogo es más rápido y económico." },
+    { question: "¿Cuánto cuesta un sofá de calidad en USD?", answer: "Un 3 plazas con espuma de 30 kg/m³ y tela de 25.000 ciclos cuesta entre 600 y 1.200 USD en importación directa, y 1.500-3.000 USD en retail local con la misma especificación. Lo barato por debajo de 400 USD suele traer espuma de baja densidad." },
+    { question: "¿Cuánto dura un sofá bueno?", answer: "Con estructura de madera seca al horno, espuma HR de 30-40 kg/m³ y tela de 40.000 ciclos, un sofá familiar rinde 8-15 años. La mayoría de los sofás que se descartan a los 3 años fallaron por espuma de menos de 25 kg/m³, no por diseño." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-06-img-01-cojin-plumon.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-34-img-01.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-35-img-01.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hogar · Salón y sofás &middot; {publicationDateLabel}</p>
+          <h1>Cómo elegir el sofá perfecto para su salón</h1>
+          <p>Si usted se pregunta cómo elegir el sofá perfecto, la respuesta empieza por números, no por color. Un sofá para el salón bien elegido combina tres variables: medidas coherentes con el espacio (deje 60-90 cm de paso libre entre sofá y mesa), una estructura de madera de haya o de acero con garantía mínima de 5 años, y un asiento con espuma de alta resiliencia de 30-40 kg/m³ que recupere su forma tras el uso diario. Un sofá que falla en cualquiera de estas tres cosas va a deformarse, crujir o hundirse en menos de 3 años, por muy bonito que se vea en la foto.</p>
+          <p>Esta guía condensa lo que aprendí revisando fábricas, laboratorios de abrasión y salas de muestra en tres continentes: qué medir, qué tela aguanta a los niños y al perro, cuánta densidad de espuma es suficiente y qué precio es razonable en USD. En Hongye Furniture Group —fundada en 1996, con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados— producimos y probamos sofás a diario, y le contamos con qué criterios juzgamos la calidad antes de enviarla a más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-06-img-01-cojin-plumon.webp" alt="Sofá de tela beige en salón moderno con mesa de centro" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Medidas: qué tamaño de sofá encaja de verdad en su salón</h2>
+        <p>El error número uno no es estético, es métrico. La regla que aplico siempre: el sofá no debe superar dos tercios del ancho de la pared donde va, y debe dejar 60-90 cm de paso libre entre su borde y la mesa de centro. Si el paso queda por debajo de 45 cm, el salón se siente estrecho aunque el sofá sea cómodo sentado.</p>
+        <p>La profundidad de asiento importa tanto como el ancho: 500-550 mm funciona para la mayoría de adultos de estatura media; por encima de 600 mm usted se hunde y la espalda queda sin apoyo, a menos que use cojines. La altura del asiento, medida hasta la parte superior del cojín comprimido, debe rondar 420-450 mm.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de sofá</th><th>Ancho total (mm)</th><th>Profundidad de asiento (mm)</th><th>Salón mínimo recomendado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de sofá">Sofá de 2 plazas</td><td data-label="Ancho total (mm)">1.500-1.700</td><td data-label="Profundidad de asiento (mm)">500-550</td><td data-label="Salón mínimo recomendado">9 m²</td></tr>
+              <tr><td data-label="Tipo de sofá">3 plazas estándar</td><td data-label="Ancho total (mm)">1.900-2.200</td><td data-label="Profundidad de asiento (mm)">520-580</td><td data-label="Salón mínimo recomendado">12 m²</td></tr>
+              <tr><td data-label="Tipo de sofá">3 plazas con chaise</td><td data-label="Ancho total (mm)">2.400-2.800</td><td data-label="Profundidad de asiento (mm)">550-600</td><td data-label="Salón mínimo recomendado">15 m²</td></tr>
+              <tr><td data-label="Tipo de sofá">Modular en L</td><td data-label="Ancho total (mm)">2.800-3.500</td><td data-label="Profundidad de asiento (mm)">550-650</td><td data-label="Salón mínimo recomendado">18-20 m²</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Mida también los accesos: puerta del ascensor, escaleras y pasillos. Un modular de 3.200 mm que no entra por la escalera acaba vendiéndose a mitad de precio. Si su espacio es atípico, un sofá a medida resuelto en fábrica cuesta 10-20 % más que uno de catálogo y evita ese problema completo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Telas y tapizados: cuál resiste el uso real</h2>
+        <p>La pregunta correcta no es «¿qué tela me gusta?» sino «¿cuántos ciclos Martindale aguanta?». Es el test de abrasión estándar: cada ciclo equivale a un roce. Para un sofá de uso diario le recomiendo mínimo 25.000 ciclos; por encima de 50.000 estamos en nivel contract, el mismo que se exige en hoteles.</p>
+        <p>Con niños o mascotas, mi regla es microfibra o un tejido técnico lavable: perdonan manchas y no se enganchan. El lino es precioso y transpirable, ideal para climas cálidos de América Latina, pero se arruga y su resistencia es menor. El cuero envejece bien y se limpia en un gesto, aunque sube el precio 40-70 % respecto a un tejido equivalente y exige acondicionador dos veces al año.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tela</th><th>Resistencia (ciclos Martindale)</th><th>Mantenimiento</th><th>Coste relativo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tela">Poliéster estándar</td><td data-label="Resistencia (ciclos Martindale)">25.000-40.000</td><td data-label="Mantenimiento">Bajo, limpieza en seco puntual</td><td data-label="Coste relativo">Base</td></tr>
+              <tr><td data-label="Tela">Microfibra / chenilla técnica</td><td data-label="Resistencia (ciclos Martindale)">50.000-80.000</td><td data-label="Mantenimiento">Muy bajo, quita manchas con agua</td><td data-label="Coste relativo">Base +10-20 %</td></tr>
+              <tr><td data-label="Tela">Lino natural</td><td data-label="Resistencia (ciclos Martindale)">15.000-20.000</td><td data-label="Mantenimiento">Medio, arrugas y manchas visibles</td><td data-label="Coste relativo">Base +20-30 %</td></tr>
+              <tr><td data-label="Tela">Cuero genuino</td><td data-label="Resistencia (ciclos Martindale)">No aplica (test diferente)</td><td data-label="Mantenimiento">Acondicionador 2 veces/año</td><td data-label="Coste relativo">Base +40-70 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-05-img-01-marco-sofa-taller.webp" alt="Primer plano de tela de sofá resistente con trenzado denso de chenilla técnica" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Detalle del tejido de un sofá en chenilla técnica: el gramaje y el trenzado visible delatan una tapicería lista para años de uso diario.</figcaption>
+        </figure>
+        <p>Pida siempre la ficha técnica del tejido con su ciclo Martindale y su composición. Si el proveedor no puede entregarla, eso ya es una respuesta.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Relleno y espumas: la diferencia entre un sofá que dura 3 años y uno que dura 15</h2>
+        <p>Lo que veo en fábrica es simple: casi todos los sofás hundidos que llegan a garantía fallan por espuma de baja densidad, no por estructura. La densidad se mide en kg/m³ y es el dato que más debería importarle. Por debajo de 25 kg/m³ el cojín pierde soporte en 1-2 años; entre 30 y 40 kg/m³ con espuma de alta resiliencia (HR) hablamos de 8-15 años de uso familiar.</p>
+        <p>La combinación que suelo recomendar: núcleo de espuma HR de 35 kg/m³ con capa superior de fibra o de pluma para el acabado suave. Los cojines de pluma pura son lujosos pero exigen «acomodar» el cojín a diario y son peores para personas con dolor lumbar. Los resortes ensacados como capa intermedia añaden un plus de confort, con un sobrecosto moderado.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Espuma (densidad)</th><th>Vida útil esperada</th><th>Sensación al sentarse</th><th>Uso recomendado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Espuma (densidad)">20-25 kg/m³</td><td data-label="Vida útil esperada">1-3 años</td><td data-label="Sensación al sentarse">Blanda, se hunde rápido</td><td data-label="Uso recomendado">Solo decorativo o uso ocasional</td></tr>
+              <tr><td data-label="Espuma (densidad)">28-30 kg/m³ estándar</td><td data-label="Vida útil esperada">4-7 años</td><td data-label="Sensación al sentarse">Equilibrada</td><td data-label="Uso recomendado">Uso doméstico moderado</td></tr>
+              <tr><td data-label="Espuma (densidad)">30-40 kg/m³ HR</td><td data-label="Vida útil esperada">8-15 años</td><td data-label="Sensación al sentarse">Firme con adaptación</td><td data-label="Uso recomendado">Uso diario familiar</td></tr>
+              <tr><td data-label="Espuma (densidad)">HR 35 + pluma (híbrido)</td><td data-label="Vida útil esperada">10-15 años</td><td data-label="Sensación al sentarse">Suave arriba, soporte abajo</td><td data-label="Uso recomendado">Uso intensivo y salón principal</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Pregunte también por el rebound (recuperación): una espuma HR recupera el 95 % de su altura en segundos tras comprimirse. Es una prueba que puede hacer en tienda: apriete el cojín con la palma y cuente cuánto tarda en volver.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Estructura, patas y certificados: lo que no se ve decide la vida útil</h2>
+        <p>El armazón ideal es madera de haya o de pino seca al horno (humedad 8-12 %) con uniones encoladas y atornilladas, o bien acero tubular para diseños modernos. Evite tablero de partículas en zonas de apoyo: cruje a los 2-3 años. Las patas deben ser de madera maciza o metal con anclaje metálico, no simplemente atornilladas al tablero.</p>
+        <p>Los certificados le ahorran el trabajo de creerle al vendedor. BIFMA valida resistencia y durabilidad del mueble; GREENGUARD Gold garantiza bajas emisiones de compuestos orgánicos volátiles (COV), relevante si hay niños o personas alérgicas; FSC certifica que la madera viene de bosques gestionados de forma responsable; y CE cubre requisitos de seguridad aplicables en varios mercados.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-04-img-03-contenedor-exportacion.webp" alt="Corte transversal de sofá mostrando espuma de alta resiliencia y estructura interna" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Corte transversal de un asiento que revela el interior: espuma de alta resiliencia sobre estructura reforzada, la combinación que sostiene años de uso.</figcaption>
+        </figure>
+        <p>Una garantía seria de estructura debería cubrir 5-10 años. Si el vendedor ofrece 1 año para el armazón, asuma que el armazón no le convence ni a él.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Presupuesto: cuánto cuesta un sofá de calidad en USD</h2>
+        <p>Hablemos de dinero con números reales. Un 3 plazas decente con espuma de 30 kg/m³ y tela de 25.000 ciclos se mueve entre 600 y 1.200 USD en importación directa desde Asia; el mismo nivel de especificación en retail local o fabricación artesanal suele costar 1.500-3.000 USD. La diferencia no es magia: es escala. La ventaja de coste del 30-50 % que ofrece fabricar en China es real, pero hay que sopesarla contra el plazo de producción de 45-60 días y el coste de flete marítimo.</p>
+        <p>En mi experiencia, la importación conviene cuando usted pide tres o más piezas iguales, un proyecto completo de salas para varios apartamentos, o un sofá a medida con medidas fuera de estándar. Para un único sofá de catálogo, el retail local puede compensar con entrega inmediata. Reconozca el trade-off: importar ahorra, pero exige planificar con 2 meses de antelación y aceptar que el retiro o la reposición de una pieza dañada no es inmediato.</p>
+        <p>Empresas como Hongye Furniture Group, con más de 1.000 proyectos entregados y certificaciones BIFMA y GREENGUARD Gold, cierran esa brecha: especificaciones contract con precio de fábrica. Si quiere comparar precios de referencia, puede revisar la línea completa en /productos/ y pedir cotización por /contacto/ con las medidas de su espacio.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Checklist final antes de pagar</h2>
+        <p>Antes de cerrar la compra, revise esta lista en 10 minutos: mida el paso de circulación (mínimo 60 cm), verifique la densidad de espuma por escrito (30 kg/m³ o más para uso diario), exija la ficha Martindale de la tela (25.000 ciclos mínimo), confirme el material del armazón y su garantía (5 años o más), compruebe que las medidas totales pasan por puertas y ascensor, y pida muestra física del tejido si compra en línea.</p>
+        <p>Y una última cosa que casi nadie hace: siéntese como se sienta de verdad, con los pies en el suelo y la espalda recostada, durante al menos 5 minutos. La foto del sofá en la tienda no le va a sostener 10 años; la ergonomía a los 5 minutos de prueba, sí.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere un sofá que dure más de 10 años?"
+      text="Envíenos las medidas de su salón a través de /contacto/ y reciba en 48 horas una cotización con espuma certificada, tela de 50.000 ciclos y plazo de producción de 45-60 días. Con más de 1.000 proyectos entregados en más de 50 países, Hongye Furniture Group fabrica sofás a medida con ventaja de coste del 30-50 %."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

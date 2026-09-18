@@ -1,0 +1,453 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Encimeras de piedra sinterizada: ventajas, precios y cuidado";
+const pageDescription = "Descubra las ventajas de las encimeras de piedra sinterizada: resistencia al calor y rayaduras, aplicaciones y mantenimiento. Guía con datos y precios en USD.";
+const keywords = [
+  "encimeras de piedra sinterizada",
+  "ventajas de la piedra sinterizada",
+  "precio encimera piedra sinterizada",
+  "mantenimiento piedra sinterizada",
+  "piedra sinterizada vs cuarzo",
+  "encimera porcelánico"
+];
+const canonicalPath = "/recursos/encimeras-piedra-sinterizada-ventajas/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Se puede poner una olla caliente directamente sobre una encimera de piedra sinterizada?", answer: "Sí. El material se hornea a más de 1.200 °C durante su fabricación, por lo que soporta ollas y sartenes calientes sin quemarse ni marcarse. Aun así, en cocinas con losas de 6 mm sobre soporte frágil recomiendo trébedes, porque el problema no es el calor sino el choque térmico sobre un apoyo deficiente." },
+    { question: "¿La piedra sinterizada se raya con el uso diario?", answer: "Con dureza 6-7 en la escala Mohs, resiste cuchillos, utensilios y limpieza habitual sin rayarse. No es indestructible: cerámica sin esmaltar, arena arrastrada por objetos o herramientas de corte de diamante pueden marcarla. La tabla de corte sigue siendo el hábito correcto." },
+    { question: "¿Cuánto cuesta una encimera de piedra sinterizada por metro cuadrado?", answer: "La losa en bruto cuesta entre 25 y 95 USD/m² según espesor y marca, y la encimera fabricada e instalada se mueve entre 60 y 120 USD/m². Los recortes, cantos y el flete influyen más que el precio base, así que pida siempre presupuesto cerrado con plano de despiece." },
+    { question: "¿Qué es mejor para la cocina: cuarzo o piedra sinterizada?", answer: "Para cocina de uso intensivo, la piedra sinterizada gana por calor y exteriores; el cuarzo gana en facilidad de fabricación de cantos decorativos y en reparabilidad de astillados. Si cocina a diario con ollas grandes, elija sinterizada; si prioriza diseño de canto y presupuesto ajustado, el cuarzo es razonable." },
+    { question: "¿Se mancha la piedra sinterizada con vino, café o aceite?", answer: "No, porque la absorción de agua es inferior al 0,1 % y no hay porosidad donde el líquido penetre. Un derrame de vino tinto puede dejar residuo superficial si se seca durante semanas, pero se retira con limpiador de pH neutro y no deja mancha permanente." },
+    { question: "¿Se puede usar piedra sinterizada para fachadas y exteriores?", answer: "Sí, y es una de sus ventajas frente al cuarzo. Al no contener resinas, el color no se degrada con la radiación UV y resiste lluvia, helada y variaciones térmicas. Para fachada ventilada se usa el espesor de 6 mm con sistema de anclaje oculto." },
+    { question: "¿Cuánto dura una encimera de piedra sinterizada?", answer: "Con instalación correcta y mantenimiento básico, una vida útil superior a 25 años, en muchos casos equiparable a la del mueble o superior. Los únicos riesgos reales son astillados de canto por impactos y fallas de la sujeción, no del material en sí." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-01-img-07.png",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hmo-01-img-06.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Interiores · Piedra sinterizada &middot; {publicationDateLabel}</p>
+          <h1>Encimeras de piedra sinterizada: ventajas, rendimiento y mantenimiento</h1>
+          <p>La piedra sinterizada responde a la pregunta que más escuchamos en proyectos residenciales y de hostelería: ¿qué material aguanta años de uso intenso sin perder el aspecto del primer día? Se trata de una superficie fabricada con minerales naturales —arcillas, feldespato, sílice y pigmentos— prensados a alta presión y horneados a más de 1.200 °C, imitando el proceso geológico que forma la roca natural pero en cuestión de horas. El resultado es una lámina con absorción de agua inferior al 0,1 %, resistencia directa a ollas calientes y una dureza que resiste la rayadura del cuchillo sin pedirle sellados periódicos. A diferencia del cuarzo, no sufre con el calor; a diferencia del mármol, no absorbe vino, café ni aceite. En esta guía le explico qué esperar de las encimeras de piedra sinterizada, dónde tienen sentido, cuándo conviene otra opción y cómo cuidarlas para que duren décadas.</p>
+          <p>Preparé este contenido a partir de lo que veo en fábrica y en proyectos reales, porque no todo lo que luce en un catálogo sobrevive a un servicio de catering o a una familia con tres niños. En las siguientes secciones encontrará tablas comparativas, precios orientativos en USD y una rutina de limpieza de dos minutos. Y si su proyecto va más allá de una cocina doméstica, sepa que Guangdong Hongye Furniture Group Co., Ltd. —fundada en 1996, con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados— integra encimeras y mobiliario a medida en más de 1.000 proyectos en más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym-13-img-01-acabado-mano.webp" alt="Encimera de piedra sinterizada con fregadero integrado en cocina" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué es la piedra sinterizada y cómo se fabrica?</h2>
+        <p>La sinterización consiste en compactar partículas minerales hasta que, bajo presión extrema y temperaturas superiores a 1.200 °C, se fusionan entre sí sin llegar a fundirse por completo. El punto de partida es una mezcla de arcillas, feldespato, sílice y óxidos minerales que se prensan en prensas de varios miles de toneladas. Al no incorporar resinas orgánicas —a diferencia del cuarzo engineered—, el material resulta químicamente inerte y estable ante la luz ultravioleta, algo que luego se nota en exteriores.</p>
+        <p>Las losas se producen en formatos grandes, típicamente 3.200 × 1.600 mm, con espesores de 6, 12 y 20 mm. Mi recomendación habitual por uso: 6 mm para revestimiento de paredes y fachadas, 12 mm para encimeras de cocina y baño, y 20 mm cuando se busca un canto grueso visible o una barra de desayuno en voladizo.</p>
+        <p>Ahora, la parte honesta que pocos catálogos mencionan: esa misma dureza complica el trabajo en taller. La fabricación exige herramientas diamantadas, los cantos pueden astillarse con impactos puntuales mal ejecutados y reparar un astillado resulta más difícil que en cuarzo. Por eso la calidad de instalación pesa tanto como la calidad del material; un corte mal pulido arruina cualquier losa, por cara que sea.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Dónde brilla: aplicaciones más allá de la encimera de cocina</h2>
+        <p>Aunque la encimera es la aplicación estrella, las encimeras de piedra sinterizada comparten material con toda una familia de superficies: frentes de ducha, paneles de pared, mesas de comedor, revestimiento de isla, barbacoas exteriores e incluso fachadas ventiladas. La resistencia UV permite usarla en terrazas y cocinas al aire libre sin que el color se lave, un terreno prohibido para el cuarzo.</p>
+        <p>En proyectos de hostelería y vivienda la aplicación que más crece, según lo que veo en los pedidos, es el panel decorativo de gran formato: paredes de televisión, cabeceros y salpicaderos continuos sin juntas aparentes. Como la losa alcanza 3.200 × 1.600 mm, un salón completo suele cubrirse con dos o tres piezas, y el efecto de veta continua entre encimera y pared —logrado cortando de la misma losa— es el detalle que más fotografían los clientes al entregar el proyecto.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-15-img-01-superficie-mesas.webp" alt="Pared de TV de piedra sinterizada en salón moderno con mueble bajo." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Pared de televisión en piedra sinterizada integrada al salón de un proyecto residencial contemporáneo.</figcaption>
+        </figure>
+        <p>Hay un límite práctico a considerar: el peso. Una losa de 12 mm ronda los 30 kg por m², así que en paredes de yeso conviene reforzar la sujeción con perfil metálico o adhesivo estructural sobre soporte rígido. En renovationes rápidas, ese trabajo adicional puede sumar 8-15 USD/m² a la partida de instalación.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Rendimiento técnico: los datos que debe exigir a su proveedor</h2>
+        <p>Antes de pagar por metro cuadrado, pida la ficha técnica y compare contra estos valores de referencia. Si un fabricante no publica absorción de agua o resistencia a la flexión, esa opacidad ya es una señal.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Propiedad</th><th>Valor típico</th><th>Qué significa en la práctica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Propiedad">Absorción de agua</td><td data-label="Valor típico">Menos del 0,1 %</td><td data-label="Qué significa en la práctica">No mancha con vino, café ni aceite; nunca necesita sellado</td></tr>
+              <tr><td data-label="Propiedad">Resistencia térmica</td><td data-label="Valor típico">Hasta 1.000 °C</td><td data-label="Qué significa en la práctica">Olla caliente apoyada directamente sin daños</td></tr>
+              <tr><td data-label="Propiedad">Dureza (escala Mohs)</td><td data-label="Valor típico">6-7</td><td data-label="Qué significa en la práctica">Resiste rayaduras de cuchillo; la tabla de corte sigue siendo buena idea</td></tr>
+              <tr><td data-label="Propiedad">Estabilidad UV</td><td data-label="Valor típico">Color 100 % estable</td><td data-label="Qué significa en la práctica">Apta para exteriores y para cocinas con ventanales</td></tr>
+              <tr><td data-label="Propiedad">Resistencia química</td><td data-label="Valor típico">Alta</td><td data-label="Qué significa en la práctica">Soporta limpiadores domésticos, limón y vinagre sin grabarse</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos matices sobre estos números. Primero, la resistencia a la flexión crece con el espesor: una losa de 6 mm necesita apoyo continuo, mientras que una de 20 mm admite voladizos de hasta 400-500 mm con refuerzo adecuado. Segundo, ningún dato de laboratorio anula la física: el canto de la encimera sigue siendo el punto débil frente a golpes de objetos duros, como una olla de hierro fundido que cae de borde. En mi experiencia, el 90 % de los daños que llegan a garantía son astillados de canto por manejo durante la instalación o el traslado, no fallas del material en uso.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Piedra sinterizada frente a cuarzo, granito y mármol</h2>
+        <p>La pregunta real no es cuál es el mejor material en abstracto, sino cuál conviene a su cocina, su clima y su presupuesto. Esta comparación resume los cuatro candidatos habituales del mercado latinoamericano:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Característica</th><th>Piedra sinterizada</th><th>Cuarzo</th><th>Granito</th><th>Mármol</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Característica">Calor</td><td data-label="Piedra sinterizada">Excelente</td><td data-label="Cuarzo">Regular: se daña sobre 150 °C</td><td data-label="Granito">Buena</td><td data-label="Mármol">Regular</td></tr>
+              <tr><td data-label="Característica">Rayaduras</td><td data-label="Piedra sinterizada">Excelente</td><td data-label="Cuarzo">Buena</td><td data-label="Granito">Buena</td><td data-label="Mármol">Baja</td></tr>
+              <tr><td data-label="Característica">Porosidad</td><td data-label="Piedra sinterizada">Menos del 0,1 %</td><td data-label="Cuarzo">Casi nula</td><td data-label="Granito">0,4-1,5 %</td><td data-label="Mármol">0,5-2 %</td></tr>
+              <tr><td data-label="Característica">Uso en exteriores</td><td data-label="Piedra sinterizada">Sí</td><td data-label="Cuarzo">No: el UV amarilla la resina</td><td data-label="Granito">Sí</td><td data-label="Mármol">No recomendado</td></tr>
+              <tr><td data-label="Característica">Precio instalado (USD/m²)</td><td data-label="Piedra sinterizada">60-120</td><td data-label="Cuarzo">50-100</td><td data-label="Granito">40-90</td><td data-label="Mármol">80-200</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym-12-img-01-linea-recubrimiento-polvo.webp" alt="Cocina moderna con encimera de piedra sinterizada junto al comedor." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cocina y comedor de un proyecto con encimera y panel de piedra sinterizada en tono mármol.</figcaption>
+        </figure>
+        <p>Mi regla después de ver cientos de proyectos: si la cocina se usa de verdad todos los días, hay exterior involucrado o el cliente quiere veta continua entre pared y encimera, la piedra sinterizada gana. Si el presupuesto manda y el diseño pide cantos decorativos elaborados —biselados, cornisa, gola integrada—, el cuarzo sigue siendo más fácil y barato de fabricar. El granito conserva su sitio como opción económica honesta, y el mármol es una decisión estética que exige aceptar la pátina como parte del encanto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Mantenimiento diario: dos minutos y sin productos especiales</h2>
+        <p>Aquí está la ventaja que más agradecen los usuarios de hotel y de casa: no hay sellado anual, no hay cera, no hay tratamientos. La superficie no porosa impide que líquidos, bacterias o moho penetren, por eso la piedra sinterizada se especifica con frecuencia en cocinas de restaurante y bancos de trabajo de laboratorio.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Situación</th><th>Qué hacer</th><th>Qué evitar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Situación">Manchas frescas</td><td data-label="Qué hacer">Paño húmedo con jabón neutro</td><td data-label="Qué evitar">Dejar secar café o vino durante días</td></tr>
+              <tr><td data-label="Situación">Grasa acumulada</td><td data-label="Qué hacer">Agua tibia y limpiador de pH neutro</td><td data-label="Qué evitar">Esponjas metálicas y estropajos</td></tr>
+              <tr><td data-label="Situación">Residuos adheridos</td><td data-label="Qué hacer">Espátula de plástico y agua tibia</td><td data-label="Qué evitar">Golpear con objetos metálicos duros</td></tr>
+              <tr><td data-label="Situación">Desinfección</td><td data-label="Qué hacer">Alcohol diluido o lejía suave bien enjuagada</td><td data-label="Qué evitar">Soda cáustica concentrada sin enjuagar</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La rutina completa cabe en dos minutos: pasar un paño con agua y jabón neutro, secar con microfibra y retirar cualquier resto con espátula de plástico si hace falta. Los dos únicos cuidados que sí pido a los clientes son preventivos: usar tablas de corte para proteger el filo de sus cuchillos —no la encimera— y colocar bases de silicona bajo electrodomésticos que se arrastran, porque el frote repetido de una base metálica puede pulir y opacar el acabado mate con el tiempo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Precios, formatos y compra para proyectos: qué esperar</h2>
+        <p>Los precios varían según marca, formato y complejidad de fabricación. Esta tabla resume los rangos orientativos que manejo para presupuestos en 2026:</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Formato</th><th>Espesor</th><th>Uso típico</th><th>Precio orientativo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Formato">Losa estándar 3.200 × 1.600 mm</td><td data-label="Espesor">6 mm</td><td data-label="Uso típico">Paredes, fachadas y revestimiento</td><td data-label="Precio orientativo">25-45 USD/m²</td></tr>
+              <tr><td data-label="Formato">Losa estándar</td><td data-label="Espesor">12 mm</td><td data-label="Uso típico">Encimeras de cocina y baño</td><td data-label="Precio orientativo">40-70 USD/m²</td></tr>
+              <tr><td data-label="Formato">Losa estándar</td><td data-label="Espesor">20 mm</td><td data-label="Uso típico">Encimeras premium con canto grueso</td><td data-label="Precio orientativo">55-95 USD/m²</td></tr>
+              <tr><td data-label="Formato">Encimera fabricada e instalada</td><td data-label="Espesor">12-20 mm</td><td data-label="Uso típico">Proyecto llave en mano con corte y cantos</td><td data-label="Precio orientativo">60-120 USD/m²</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Cuando el proyecto combina encimeras con mobiliario —cocinas de hotel, isla central con mueble a medida, baños completos—, comprar todo al mismo proveedor simplifica la logística y los acabados. En pedidos de FF&amp;E integrados desde Asia, la ventaja de coste del 30-50 % frente a fabricación local suele absorber el flete, y el plazo de producción de 45-60 días incluye fabricación de mueble y montaje de encimera en planta antes del embarque. Trabajamos con líneas certificadas BIFMA + GREENGUARD Gold + FSC + CE, lo que facilita la aprobación en proyectos de marca hotelera; puede revisar acabados y formatos disponibles en /productos/.</p>
+        <p>Un consejo de comprador veterano: antes de cerrar el pedido, pida siempre una muestra física del acabado exacto —mate, satinado o pulido— y confirme el plano de despiece con el fabricante. La veta que ve en pantalla rara vez coincide con la losa completa, y aprobar el despiece por fotografía de la losa real evita sorpresas que ningún descuento arregla después. Para muestras, planos técnicos y cotización por m² con flete incluido, el canal más directo es /contacto/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Planifica una cocina, un baño o un proyecto hotelero a medida?"
+      text="Cotizamos encimeras y mobiliario integrado en 48 horas, con producción de 45-60 días y envío a más de 50 países. Visite /contacto/ o solicite muestras de piedra sinterizada con precio por m² y flete incluido: respondemos con planos técnicos y presupuesto cerrado."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
