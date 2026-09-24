@@ -1,0 +1,435 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mesas de sala de juntas: dimensiones, cableado y presupuesto";
+const pageDescription = "Guía para elegir mesas de sala de juntas: dimensiones según aforo, cableado audiovisual, sillas ergonómicas y niveles de presupuesto, con precios y plazos.";
+const keywords = [
+  "mesas de sala de juntas",
+  "mesas para sala de directorios",
+  "mesa de conferencias",
+  "mobiliario de oficina",
+  "mesa de reuniones con cableado",
+  "salas de juntas pequeñas"
+];
+const canonicalPath = "/recursos/mesas-sala-juntas-guia/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym24-es11-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto espacio se necesita por persona en una sala de juntas?", answer: "Cuenta 90 cm de ancho de mesa por persona, 60-70 cm de profundidad de puesto y 100 cm de circulación por detrás de las sillas. Para una sala cómoda de 8 personas, esto sitúa la superficie mínima en 20-24 m², incluido el espacio de proyección." },
+    { question: "¿Conviene una mesa rectangular, ovalada o en U para el directorio?", answer: "La rectangular es la más eficiente en aforo por metro y la estándar para 4-12 personas. Las ovaladas facilitan la vista de todos y funcionan bien en directorios de 10-14. Las configuraciones en U se reservan para salas de 16 o más puestos con presentaciones frecuentes." },
+    { question: "¿Cómo se ocultan los cables en una mesa de conferencias?", answer: "Mediante una tapa de registro central continua o canaleta perimetral que conecta con módulos de energía y pasamuros hacia el suelo técnico. El objetivo es que ningún cable cruce el paso de las sillas y que el equipo de videoconferencia se conecte en un único punto." },
+    { question: "¿Qué altura debe tener una mesa de juntas?", answer: "El estándar es 73-76 cm desde el suelo hasta la superficie de trabajo. Si el diseño incluye un tablero grueso de 40-50 mm, la estructura debe compensar esa altura, no reducir el espacio para las piernas." },
+    { question: "¿Merece la pena pagar la gestión de cables integrada?", answer: "Para salas con videoconferencia diaria, sí: el sobrecosto del 8-15 % se recupera en orden, seguridad y velocidad de montaje de reuniones. Para salas de uso esporádico, un par de módulos de energía en los extremos suele bastar y mantiene el precio bajo." },
+    { question: "¿Cuántas sillas caben en una sala de juntas de 20 m²?", answer: "Con una mesa de 300-320 cm y 100 cm de circulación alrededor, caben 8 puestos cómodamente. Es el tamaño de sala más pedido en oficinas de 30-60 personas y el punto de partida de la mayoría de nuestros proyectos." },
+    { question: "¿Cuál es el plazo de entrega de una mesa de directorios a medida?", answer: "El plazo de producción es de 45-60 días desde la aprobación de la muestra, más 25-40 días de tránsito marítimo según el puerto de destino. Para aperturas de oficina con fecha fija, recomendamos iniciar el proceso 4-5 meses antes." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym24-es11-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es11-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es11-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Oficina · Salas de juntas &middot; {publicationDateLabel}</p>
+          <h1>Cómo elegir mesas y sillas para salas de juntas y directorios</h1>
+          <p>La sala de juntas es la habitación más visible de una oficina y, a la vez, la que más decisiones caras concentra en un solo mueble. A diferencia de un puesto de trabajo individual, la mesa de juntas se compra por aforo: cuántas personas deben sentarse con holgura, con qué equipos se reúnen y si la sala se usa para videoconferencias diarias o para el directorio mensual. De ese análisis salen tres números que condicionan todo el proyecto: el largo de la mesa en centímetros, la circulación mínima alrededor (100 cm por lado) y el tipo de gestión de cables. Elegir la mesa por foto de catálogo, sin medidas ni aforo, es la causa más común de salas donde la mesa no deja pasar entre la silla y la pared.</p>
+          <p>En Hongye Furniture Group, fundada en 1996, fabricamos mesas de juntas y directorios para oficinas corporativas, coworkings y sedes regionales en más de 50 países, desde una planta de más de 300.000 m² con más de 1.000 trabajadores cualificados. Esta guía resume las dimensiones que aplicamos en proyectos reales, cómo integrar el cableado audiovisual sin que parezca un parche, qué silla corresponde a cada nivel de reunión y qué incluye cada tramo de presupuesto. Si quieres comparar modelos concretos mientras lees, el catálogo de gamas ejecutivas está disponible en /productos/.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es11-hero.jpg" alt="Sala de juntas con mesa de conferencias y sillas ejecutivas" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Empezar por el aforo: las medidas que marca la norma</h2>
+        <p>Todo cálculo de mesa de juntas empieza en el ancho por puesto. La referencia ergonómica estándar es de 90 cm de ancho de mesa por persona y 60-70 cm de profundidad de puesto; por debajo de 80 cm por puesto, los portátiles, cuadernos y vasos empiezan a disputarse el mismo espacio y las reuniones largas se vuelven incómodas. A ese aforo hay que sumarle la circulación: 100 cm mínimo por detrás de las sillas en pasillo de servicio y 120-150 cm entre la mesa y la pared donde se proyecta, para que alguien pueda pasar sin que todos se levanten.</p>
+        <p>La altura de trabajo es el otro número fijo: 73-76 cm es el estándar internacional para mesas de reunión, y conviene mantenerlo aunque el diseño sea de tabla maciza gruesa, ajustando la estructura y no el tablero. Un error frecuente en directorios es comprar mesas de 3 metros pensando en 12 personas: con 90 cm por puesto, una mesa de 300 cm acomoda bien 8; para 12 se necesitan 360-420 cm. Ese ajuste de expectativa, hecho sobre el plano y no sobre el catálogo, ahorra el problema clásico de la mesa que llega y no cabe.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Dimensiones recomendadas de la mesa según el número de personas</h2>
+        <p>La tabla siguiente recoge las medidas que usamos como punto de partida al cotizar, pensadas para mesas rectangulares con sillas a ambos lados y cabeceras. Son valores de diseño cómodo, no mínimos: si tu sala aprieta, se puede trabajar a 80 cm por puesto reduciendo el aforo real, pero conviene que la decisión sea consciente y no un accidente de compra.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Aforo</th><th>Largo de mesa</th><th>Sala mínima recomendada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Aforo">4 personas</td><td data-label="Largo de mesa">200-240 cm</td><td data-label="Sala mínima recomendada">12-14 m²</td></tr>
+              <tr><td data-label="Aforo">6 personas</td><td data-label="Largo de mesa">240-300 cm</td><td data-label="Sala mínima recomendada">15-18 m²</td></tr>
+              <tr><td data-label="Aforo">8 personas</td><td data-label="Largo de mesa">300-360 cm</td><td data-label="Sala mínima recomendada">20-24 m²</td></tr>
+              <tr><td data-label="Aforo">10-12 personas</td><td data-label="Largo de mesa">360-420 cm</td><td data-label="Sala mínima recomendada">26-32 m²</td></tr>
+              <tr><td data-label="Aforo">14-16 personas (directorio)</td><td data-label="Largo de mesa">480-540 cm o módulos en U</td><td data-label="Sala mínima recomendada">36-45 m²</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es11-s1.jpg" alt="Mesa de conferencias con sillas ejecutivas en sala de juntas moderna de proyecto real" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mesa de juntas rectangular en laminado con estructura metálica y sillas ejecutivas en una sala de proyecto entregada.</figcaption>
+        </figure>
+        <p>Para directorios de más de 12 personas, mi recomendación práctica es modular en vez de monolítica: dos o tres módulos de 180 cm con uniones alineadas producen la misma mesa de 540 cm pero se embarcan en contenedor estándar, bajan por escaleras sin grúa y permiten reconfigurar la sala si la empresa crece. La mesa monolítica de 5 metros tiene su lugar en sedes corporativas con acceso directo por ascensor de carga, pero hay que reconocer el compromiso: mejor presencia, logística y coste de reemplazo claramente peores.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cableado audiovisual y gestión de energía en la mesa</h2>
+        <p>En videoconferencia diaria, la mesa sin gestión de cables es un defecto de diseño. El estándar actual pasa por una canaleta central o tapa de registro en todo el largo de la mesa, desde la que salen módulos de energía (tomas de 110/220 V según el país de destino), puertos USB-C con carga de 60-100 W y pasamuros para HDMI o USB-C hacia la pantalla y la cámara. La regla que aplico: cada puesto debe tener acceso a energía sin que ningún cable cruce el paso de una silla, y el equipo de videoconferencia se conecta a un único punto, no a tres extensiones improvisadas.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Opción de cableado</th><th>Qué resuelve</th><th>Impacto en coste</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Opción de cableado">Tapa de registro central continua</td><td data-label="Qué resuelve">Pasa cableado a todo lo largo; máxima flexibilidad</td><td data-label="Impacto en coste">+8-15 % sobre mesa base</td></tr>
+              <tr><td data-label="Opción de cableado">Módulos de energía individuales</td><td data-label="Qué resuelve">Tomas y USB-C puntuales donde se necesitan</td><td data-label="Impacto en coste">+4-8 % sobre mesa base</td></tr>
+              <tr><td data-label="Opción de cableado">Canaleta lateral perimetral</td><td data-label="Qué resuelve">Mantiene el tablero limpio en mesas de directorio</td><td data-label="Impacto en coste">+5-10 % sobre mesa base</td></tr>
+              <tr><td data-label="Opción de cableado">Sin gestión integrada</td><td data-label="Qué resuelve">Solo para salas de uso esporádico sin videollamada</td><td data-label="Impacto en coste">Coste base</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Conviene ser honesto con el trade-off: la gestión integrada de cables encarece la mesa y resta algo de flexibilidad si dentro de dos años cambia el estándar de conectores. Para una sala de uso diario con videoconferencia, el sobrecosto se paga solo en la primera semana de evitar acumuladores y cables al suelo. Para una sala de reuniones esporádicas o una sala de descanso multifuncional, un módulo de energía individual en los extremos suele bastar y mantiene el precio bajo control.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Sillas y ergonomía para reuniones largas</h2>
+        <p>La mesa fija el aforo; la silla decide si la reunión de tres horas termina bien. Para juntas diarias de 1-2 horas, una silla de malla o tapizada con espalda media y base de cuatro patas o trineo cubre el 90 % de los casos con un coste unitario razonable. Para el directorio y reuniones con clientes, la silla de espalda alta o media con tapizado en cuero o vinílico de gama ejecutiva marca la diferencia de presencia, y aquí el sobrecosto unitario se justifica por lo que la sala comunica. Un detalle de operativa: en salas de tránsito intenso prefiero bases de trineo, porque el cilindro de gas de las giratorias es lo primero que falla con uso masivo y las ruedas rayan el suelo.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es11-s2.jpg" alt="Sala de reuniones moderna con mesa larga y sillas de trineo junto a pantalla" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sala de reuniones contemporánea con mesa larga, sillas de trineo y pared con pantalla de videoconferencia encendida.</figcaption>
+        </figure>
+        <p>Las medidas se coordinan entre sí: con una mesa de 300 cm de largo, las sillas de trineo necesitan 60-65 cm de frente por unidad, lo que confirma el aforo de 8 que daba el cálculo de anchos. Verifica también que la silla entre bajo el tablero: un faldón o viga central baja puede impedir empujar la silla al final de la reunión, y eso convierte cualquier sala en un desorden permanente. Nuestra línea de sillería ejecutiva se certifica con BIFMA y GREENGUARD Gold, al igual que las mesas, y el catálogo completo está en /productos/ para combinar gamas.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Presupuesto por niveles: qué incluye cada gama</h2>
+        <p>En proyectos reales el presupuesto se ordena en tres niveles claros, y conviene que el cliente sepa qué se gana y qué se pierde en cada uno. Los rangos siguientes son FOB China para pedidos de 10-50 puestos, combinando mesa y sillas, con la ventaja de coste del 30-50 % que supone comprar en origen frente a la cadena de distribuidores locales. No incluyo en los rangos el flete, porque entre México, Colombia o Chile la diferencia de tránsito y aranceles cambia mucho el número final.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nivel</th><th>Inversión aproximada USD (mesa + 8 sillas)</th><th>Qué incluye</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Nivel">Operativo</td><td data-label="Inversión aproximada USD (mesa + 8 sillas)">1.500-2.800</td><td data-label="Qué incluye">Mesa en laminado 300 cm, sillas de malla, gestión básica de cables</td></tr>
+              <tr><td data-label="Nivel">Ejecutivo intermedio</td><td data-label="Inversión aproximada USD (mesa + 8 sillas)">2.800-5.500</td><td data-label="Qué incluye">Tablero premium o chapa natural, sillas tapizadas, tapa de registro completa</td></tr>
+              <tr><td data-label="Nivel">Directorio</td><td data-label="Inversión aproximada USD (mesa + 8 sillas)">5.500-12.000</td><td data-label="Qué incluye">Mesa modular en chapa de nogal, sillas ejecutivas de respaldo alto, módulos de energía y AV integrados</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos advertencias de comprador frecuente. Primera: el nivel operativo no es un nivel «malo»; para una startup o una sala de uso compartido, laminado de alta presión con canto de ABS aguanta perfectamente 5-8 años y el ahorro se aprovecha mejor en sillas, que son el contacto diario. Segunda: el nivel directorio pierde valor si se recorta en la gestión de cables; una mesa de chapa natural con extensiones visuales por el suelo comunica exactamente lo contrario de lo que busca. Si el presupuesto no alcanza para todo, recomiendo bajar un nivel de mesa antes que recortar sillería o cableado.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Proceso de compra y plazos de entrega</h2>
+        <p>Comprar mesas de juntas a un fabricante sigue un proceso de cinco pasos. Primero, envías el aforo objetivo y las medidas de la sala, idealmente con un plano simple; con eso cotizamos en 3-5 días hábiles proponiendo la configuración óptima. Segundo, definimos acabados y gestión de cables, y fabricamos una muestra o enviamos referencias de materiales. Tercero, aprobación de muestra; cada ronda de ajuste añade 7-10 días. Cuarto, producción con plazo de 45-60 días e inspección de calidad por lote, con certificados BIFMA, GREENGUARD Gold, FSC y CE disponibles para proyectos que lo requieren. Quinto, embarque marítimo con documentación de exportación completa hacia cualquier puerto de América Latina.</p>
+        <p>Puedes solicitar la cotización directamente por /contacto/ con tu aforo y medidas de sala. Mi último consejo, que sale de ver cientos de proyectos: pide la sala de juntas completa —mesa, sillas y armario auxiliar si lo hay— en un solo pedido. La coordinación de acabados entre tres proveedores distintos rara vez cierra bien, y consolidar embarque reduce el flete unitario de forma notable. Con el aforo definido y las medidas de la sala a mano, el resto de la decisión es un diálogo técnico corto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Cotiza tu sala de juntas completa con el fabricante"
+      text="Envía el aforo y las medidas de tu sala y recibe en 3-5 días hábiles una propuesta con mesa, sillas y gestión de cables, con muestra antes de producir. Más de 1.000 proyectos en más de 50 países, producción de 45-60 días y ventaja de coste del 30-50 % frente a intermediarios. Escríbenos por /contacto/."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

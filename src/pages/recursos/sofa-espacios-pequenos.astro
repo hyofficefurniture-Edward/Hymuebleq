@@ -1,0 +1,455 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Sofá para espacios pequeños: medidas, módulos y trucos";
+const pageDescription = "Sofá para espacios pequeños: medidas exactas en cm, sofá modular, distribuciones en L y trucos visuales para ganar amplitud. Guía de Hongye Furniture Group.";
+const keywords = [
+  "sofá para espacios pequeños",
+  "sofás pequeños",
+  "sofá modular",
+  "distribución del salón",
+  "sofá chaise longue",
+  "salón compacto"
+];
+const canonicalPath = "/recursos/sofa-espacios-pequenos/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym24-es12-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuál es el tamaño ideal de sofá para un salón pequeño?", answer: "Para salones de 10-14 m², un lineal de 2-3 plazas de 160-190 cm de largo y 85-90 cm de fondo es el punto óptimo. Respete 60-75 cm de pasillo frente al sofá y deje que su largo no supere dos tercios de la pared. Con esas reglas caben 3 plazas reales sin ahogar la estancia." },
+    { question: "¿Conviene un sofá chaise longue en un espacio pequeño?", answer: "Sí, si la pared mide 220 cm o más y la chaise se orienta hacia la ventana o el extremo libre. Añade unos 60 cm de fondo, pero sustituye a un puf y da zona de estirar piernas. En salones menores de 8 m², prefiera una chaise extraíble o un puf con ruedas que se guarda bajo la mesa." },
+    { question: "¿Un sofá modular ocupa más espacio que uno fijo?", answer: "Ocupa lo mismo si los módulos tienen el mismo fondo, pero suele ser algo más hondo por la estructura de unión, de 90-100 cm. La ventaja no está en el metro cuadrado sino en la flexibilidad: puede reconfigurarlo en una mudanza o sumar módulos. Pida fondo total de 90 cm máximo para un salón compacto." },
+    { question: "¿Qué tela es mejor para un sofá de uso diario?", answer: "Busque una abrasión Martindale de 25.000 ciclos como mínimo: la chenilla de 30.000-40.000 es el equilibrio habitual, y la microfibra conviene con mascotas porque repele líquidos. Prefiera fundas desmontables con cremallera y tonos medios que disimulen el desgaste mejor que los colores muy oscuros o muy claros." },
+    { question: "¿Qué colores agrandan visualmente un salón pequeño?", answer: "Tonos claros mates como beige, gris piedra o verde salvia, con patas de madera a la vista que dejan ver el suelo. Complete con cortinas del color de la pared colgadas desde el techo y un espejo frente a la ventana. La combinación devuelve fácilmente medio metro visual a la estancia." },
+    { question: "¿Cuánto cuesta un sofá pequeño fabricado en fábrica?", answer: "Un lineal de 2-3 plazas ronda los 280-620 USD según tela y espuma, y un modular de 3-5 módulos entre 800 y 1.700 USD, sin contar flete de 150-450 USD a puerto latinoamericano. Comprar directo a fábrica mantiene una ventaja de coste del 30-50 % frente al minorista local, con espumas de mayor densidad." },
+    { question: "¿Cuánto tarda en llegar un sofá encargado a fábrica?", answer: "El plazo de producción es de 45-60 días desde la aprobación de la propuesta, más 25-40 días de tránsito marítimo según el puerto de destino. En total, calcule 75-100 días: si tiene mudanza con fecha, ordene el sofá con dos meses de margen mínimo." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym24-es12-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es12-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es12-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hogar · Salones compactos &middot; {publicationDateLabel}</p>
+          <h1>Sofá para espacios pequeños: cómo elegirlo sin renunciar a nada</h1>
+          <p>El error más frecuente que veo en salones compactos no es de estilo, sino de proporción: sofás demasiado hondos que se comen el paso, chaise longues colocadas en la única pared que permitía circular, y salas de estar convertidas en pasillos incómodos. Un sofá para espacios pequeños se elige empezando por el metro, no por el catálogo: fondo total, pasillo de circulación y distancia a la mesa de centro son los tres números que deciden si el mueble funciona en el día a día o si durante años tendrá que esquivarlo de lado. En esta guía parto de proyectos reales de vivienda compacta, no de renders de revista.</p>
+          <p>A continuación encontrará las medidas exactas en cm, las distribuciones que rinden según el ancho de la pared, cuándo compensa un sofá modular y cuándo es un gasto, más tapizados y costes orientativos en USD. Trabajamos en Guangdong Hongye Furniture Group Co., Ltd. (Hongye Furniture Group), fábrica fundada en 1996 con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados, y puede ver las series residenciales descritas aquí en /productos/, con envíos a más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es12-hero.jpg" alt="Sofá compacto de tela en salón de apartamento pequeño" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Primero la cinta métrica: qué medir antes de mirar catálogos</h2>
+        <p>Antes de comparar modelos, dedique quince minutos a medir cuatro cosas: el ancho libre de la pared destino, el paso de circulación entre esa pared y el elemento opuesto, la ubicación de tomas eléctricas y radiadores, y —detalle que se olvida siempre— el ancho de la puerta y del ascensor de su edificio. Un sofá de 180 cm puede no entrar nunca a un apartamento si el pasillo de acceso gira en ángulo recto; los modelos desmontables con patas desenroscables y brazos atornillados evitan ese disgusto.</p>
+        <p>Con las medidas en la mano, aplique la regla que uso en todos los proyectos residenciales: el largo del sofá no debe superar dos tercios de la pared en la que se apoya. En una pared de 300 cm, eso significa un cuerpo de 180-200 cm como máximo; el resto se resuelve con una lámpara de pie o una estantería estrecha, que además da ritmo visual y evita el efecto mueble-empotrado. Reserve la pared completa solo para salones de más de 18 m².</p>
+        <p>También conviene decidir en esta fase qué hará el sofá cada día. Si recibe visitas dos veces al año, gane pasillo con un cuerpo de 2 plazas y resuelva los invitados con un puf o un sillón apilable. Si duerme siestas a diario o la familia come en el salón, priorice profundidad de asiento y un brazo único delgado: es exactamente el tipo de equilibrio que definimos en las siguientes secciones.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Medidas y proporciones: los números que evitan errores</h2>
+        <p>Estos son los rangos con los que trabajamos en fábrica para vivienda compacta. No son teóricos: cada cifra responde a cómo se usa un salón de verdad, desde cruzarlo con una bandeja en la mano hasta estirar las piernas frente al televisor.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Mínimo funcional</th><th>Recomendado</th><th>Nota práctica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Fondo total del sofá</td><td data-label="Mínimo funcional">75 cm</td><td data-label="Recomendado">85-95 cm</td><td data-label="Nota práctica">Por encima de 95 cm solo en salones de 15 m² o más</td></tr>
+              <tr><td data-label="Elemento">Ancho de asiento por plaza</td><td data-label="Mínimo funcional">50 cm</td><td data-label="Recomendado">55-60 cm</td><td data-label="Nota práctica">Por debajo de 50 cm no se come sentado</td></tr>
+              <tr><td data-label="Elemento">Altura del asiento</td><td data-label="Mínimo funcional">40 cm</td><td data-label="Recomendado">42-45 cm</td><td data-label="Nota práctica">Con respaldo bajo, suba a 45 cm para sostener la lumbar</td></tr>
+              <tr><td data-label="Elemento">Pasillo frente al sofá</td><td data-label="Mínimo funcional">45 cm</td><td data-label="Recomendado">60-75 cm</td><td data-label="Nota práctica">Con menos de 45 cm el salón se percibe estrecho</td></tr>
+              <tr><td data-label="Elemento">Hueco sofá-mesa de centro</td><td data-label="Mínimo funcional">30 cm</td><td data-label="Recomendado">40-45 cm</td><td data-label="Nota práctica">Basta para estirar las piernas y pasar el aspirador</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es12-s1.jpg" alt="Salón pequeño con sofá de estructura de madera, alfombra clara y textiles neutros" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sofá de estructura de madera en un salón compacto real, con mesa auxiliar, alfombra y textil en tonos neutros.</figcaption>
+        </figure>
+        <p>Sobre respaldos, mi regla es clara en espacios cortos: respaldo bajo (75-80 cm de altura total) o respaldo compacto con brazos finos de 12-15 cm. Un brazo ancho clásico de 25 cm puede robar 30 cm útiles a un salón de tres metros de ancho, y treinta centímetros son la diferencia entre circular o esquivar. La imagen de arriba es de un proyecto con estructura de madera vista: el perfil fino deja respirar la pared y agranda visualmente el conjunto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Distribuciones: contra la pared, en L o flotante</h2>
+        <p>La disposición pesa tanto como el mueble. He visto salones de 10 m² parecer amplios y salones de 18 m² sentirse atascados, y casi siempre la diferencia era dónde apoyó el sofá. Estas son las cuatro distribuciones que resuelven el 90 % de los casos, con su coste espacial real.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Distribución</th><th>Espacio mínimo</th><th>Superficie que consume</th><th>Ideal para</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Distribución">Lineal contra la pared</td><td data-label="Espacio mínimo">Pared de 200 cm</td><td data-label="Superficie que consume">solo el fondo del mueble</td><td data-label="Ideal para">Salones de 8-12 m² con TV en pared opuesta</td></tr>
+              <tr><td data-label="Distribución">Chaise longue orientada a la ventana</td><td data-label="Espacio mínimo">Pared de 220 cm</td><td data-label="Superficie que consume">60 cm extra de fondo</td><td data-label="Ideal para">Quien estira las piernas a diario</td></tr>
+              <tr><td data-label="Distribución">En L con esquina abierta</td><td data-label="Espacio mínimo">Dos paredes de 200 cm</td><td data-label="Superficie que consume">12-15 % del salón</td><td data-label="Ideal para">Familias que comen y ven TV en el salón</td></tr>
+              <tr><td data-label="Distribución">Flotante con consola trasera</td><td data-label="Espacio mínimo">Salón de 300 cm de ancho</td><td data-label="Superficie que consume">30-40 cm de pasillo</td><td data-label="Ideal para">Estudios abiertos que necesitan zona de paso</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos advertencias honestas. La esquina en L es cómodísima pero se vende bien y cabe mal: si el salón mide menos de 3 × 3 m, una L de esquina deja menos espacio libre que un lineal más un puf. Y el sofá flotante —sin tocar ninguna pared— solo funciona si deja un pasillo trasero de 60-75 cm; de lo contrario, la gente lo rodea arrastrando los hombros por la pared.</p>
+        <p>En apartamentos de 45-60 m², la combinación que más repito es lineal de 3 plazas de 170-180 cm contra la pared más larga, chaise longue extraíble o puf con ruedas en el lado de la ventana, y mesa de centro de 60 × 60 cm con altura de 40 cm. Con eso queda un pasillo de 70 cm a la mesa y espacio de sobra para abrir la puerta del balcón.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Sofá modular: flexibilidad real con condiciones</h2>
+        <p>El módulo es la gran promesa para espacios pequeños: mueva un chaise, cambie la configuración cuando cambie de casa. Y en buena parte es cierto. Un sistema modular de asientos de 70-75 cm de ancho por módulo le permite empezar con tres piezas y sumar una cuarta cuando la familia crezca, sin comprar un sofá nuevo. Para quien se muda cada 3-4 años —muy habitual en renting en Ciudad de México, Bogotá o Santiago—, es la compra más racional.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es12-s2.jpg" alt="Detalle de costura y unión entre módulos de sofá modular con patas de madera" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Detalle de unión y costura entre módulos de un sofá modular, con patas de madera y remate de chenilla.</figcaption>
+        </figure>
+        <p>Ahora el contrapeso: un modular bien resuelto no es barato y su comodidad depende de la unión. Exija estructuras de madera maciza o tablero de 25 mm en la base de cada módulo, anclajes metálicos entre piezas —no simples velcros— y asientos con espuma de 30-35 kg/m³ de densidad. Un modular con espumas de 22 kg/m³ se hunde en dos años y, al ser asientos independientes, cada hueco entre módulos se siente al sentarse. La fotografía muestra un detalle de nuestra serie modular: costura continua, unión metálica y remate del tapizado entre piezas, que es donde se adivina la calidad de una distancia.</p>
+        <p>Mi recomendación práctica: si su salón mide 12 m² o menos y no piensa mudarse, compre un lineal fijo de buena factura y gane el ahorro en calidad de espumas. Si el salón es irregular, el piso es de alquiler o prevea mudanza, el modular de 3-4 módulos con patas de madera compensa cada peso extra.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Tapizados y materiales: aguantar el día a día y agrandar la vista</h2>
+        <p>En un salón pequeño la tela se elige doblemente: por resistencia al uso diario y por cómo juega con la luz. Una tela clara y de textura fina puede hacer ver el mismo sofá 15-20 cm más corto de lo que es; una textura rugosa oscura hace lo contrario. Esta es la comparación con cifras de abrasión Martindale, el estándar que usamos en fábrica.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tela</th><th>Abrasión Martindale</th><th>Mantenimiento</th><th>Cuándo elegirla</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tela">Lino mezcla</td><td data-label="Abrasión Martindale">15.000-20.000 ciclos</td><td data-label="Mantenimiento">medio, arruga con el uso</td><td data-label="Cuándo elegirla">Ambientes secos y estética natural</td></tr>
+              <tr><td data-label="Tela">Tela plana de algodón</td><td data-label="Abrasión Martindale">20.000-30.000 ciclos</td><td data-label="Mantenimiento">medio, funda desmontable</td><td data-label="Cuándo elegirla">Uso familiar moderado</td></tr>
+              <tr><td data-label="Tela">Chenilla</td><td data-label="Abrasión Martindale">30.000-40.000 ciclos</td><td data-label="Mantenimiento">bajo, repasa con trapo húmedo</td><td data-label="Cuándo elegirla">La opción equilibrada para uso diario</td></tr>
+              <tr><td data-label="Tela">Microfibra</td><td data-label="Abrasión Martindale">más de 40.000 ciclos</td><td data-label="Mantenimiento">muy bajo, repele líquidos</td><td data-label="Cuándo elegirla">Hogares con mascotas o niños pequeños</td></tr>
+              <tr><td data-label="Tela">Eco-piel</td><td data-label="Abrasión Martindale">más de 50.000 ciclos</td><td data-label="Mantenimiento">bajo, se limpia al paso</td><td data-label="Cuándo elegirla">Estética limpia; pide clima templado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para uso diario, el umbral que aplico es 25.000 ciclos Martindale como mínimo; por debajo, la tela luce pelusa y descolorido en el primer año. Prefiera fundas desmontables con cremallera en asiento y respaldo si hay niños: una lavadora vale más que cualquier tratamiento antimanchas. Y en climas húmedos del Caribe o la costa, evite el lino puro en contacto directo con ventanas: la humedad marca manchas permanentes en la trama.</p>
+        <p>Para el truco visual final: tonos claros mates (beige, gris piedra, verde salvia) con patas de madera a la vista elevan el sofá del suelo y dejan ver más alfombra, que es lo que realmente agranda un salón pequeño. Complemente con un espejo frente a la ventana y cortinas del color de la pared colgadas desde el techo; juntos devuelven fácilmente medio metro visual a la estancia.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Costes, plazos y cómo encargar desde América Latina</h2>
+        <p>Estos rangos corresponden a fabricación en fábrica con espumas de alta densidad y estructuras de madera certificada, sin contar flete. Son orientativos y varían con la tela y la complejidad del módulo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Concepto</th><th>Rango orientativo (USD)</th><th>Nota</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Concepto">Sofá lineal 2-3 plazas (160-190 cm)</td><td data-label="Rango orientativo (USD)">280-620</td><td data-label="Nota">según tela y calidad de espuma</td></tr>
+              <tr><td data-label="Concepto">Chaise longue o lineal con chaise</td><td data-label="Rango orientativo (USD)">450-900</td><td data-label="Nota">estructura reforzada en el lado largo</td></tr>
+              <tr><td data-label="Concepto">Modular de 3-5 módulos</td><td data-label="Rango orientativo (USD)">800-1.700</td><td data-label="Nota">incluye anclajes y patas de madera</td></tr>
+              <tr><td data-label="Concepto">Flete marítimo a puerto latinoamericano</td><td data-label="Rango orientativo (USD)">150-450</td><td data-label="Nota">según volumen y destino</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Comprar directo a fábrica tiene una lógica clara: con una planta de más de 300.000 m² y producción estandarizada, la ventaja de coste del 30-50 % frente al comercio minorista local se mantiene incluso sumando el flete. La contrapartida debe conocerla antes de decidir: el plazo de producción es de 45-60 días y el tránsito marítimo añade 25-40 días según el puerto, frente a la entrega inmediata de una tienda. Si su mudanza tiene fecha, pida el sofá con dos meses de margen.</p>
+        <p>El proceso es directo: envíe las medidas de su salón y una foto de la pared desde /contacto/, y el equipo técnico de Hongye Furniture Group —con más de 1.000 proyectos entregados en más de 50 países— le devuelve propuesta acotada y presupuesto en 3-5 días hábiles, con muestras de tela disponibles. Puede revisar las series residenciales y combinar su sofá con mesas y estanterías de la misma familia en /productos/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Quiere un sofá que encaje de verdad en su salón?"
+      text="Envíe las medidas de su pared y una foto desde /contacto/, y en 3-5 días hábiles recibirá propuesta con render y presupuesto detallado. Hongye Furniture Group, fundada en 1996, fabrica sofás residenciales con espumas de alta densidad, plazos de 45-60 días y envío a más de 50 países."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

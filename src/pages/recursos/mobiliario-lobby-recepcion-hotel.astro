@@ -1,0 +1,451 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para Lobby y Recepción de Hotel: Guía 2026";
+const pageDescription = "Guía de mobiliario para lobby y recepción de hotel: dimensiones del mostrador, materiales contract, costes en USD y plazos para proyectos en Latinoamérica.";
+const keywords = [
+  "mobiliario lobby hotel",
+  "mostrador de recepción de hotel",
+  "mobiliario contract para hoteles",
+  "sillones para lobby",
+  "mobiliario hotelero Latinoamérica",
+  "fabricante de muebles para hoteles"
+];
+const canonicalPath = "/recursos/mobiliario-lobby-recepcion-hotel/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym24-es08-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué altura debe tener el mostrador de recepción de un hotel?", answer: "La altura estándar de atención de pie es de 100-110 cm. Además, debe incluir un tramo accesible de 75-85 cm de alto y 90-120 cm de largo para atención en silla de ruedas. La profundidad de encimera recomendada es de 60-80 cm." },
+    { question: "¿Cuántos puestos de recepción necesita mi hotel?", answer: "Como referencia operativa, un puesto por cada 60-80 habitaciones. Un hotel de 120 habitaciones funciona bien con dos puestos más un tramo accesible, siempre que el paso interior del personal sea de al menos 90 cm." },
+    { question: "¿Qué diferencia hay entre mobiliario contract y mobiliario residencial?", answer: "El mobiliario contract está diseñado para uso intensivo: espumas de 30-40 kg/m³, tapices de más de 40.000 ciclos Martindale y estructuras certificadas BIFMA. El residencial está pensado para pocas horas de uso diario y se degrada mucho más rápido en un lobby." },
+    { question: "¿Cuánto cuesta amueblar el lobby de un hotel de 60 habitaciones?", answer: "Para un lobby de 120-180 m², el rango habitual es de 18.000 a 45.000 USD según nivel de acabado, incluyendo mostrador, asientos de espera y mesas auxiliares. Comprar directamente a fábrica reduce el coste entre un 30 % y un 50 % frente a distribuidores." },
+    { question: "¿Cuánto tarda la producción de mobiliario de lobby a medida?", answer: "El plazo de producción estándar es de 45-60 días desde la aprobación de la muestra física, más el tiempo de transporte marítimo hasta su puerto. Por eso conviene arrancar el proceso al menos 4 meses antes de la apertura." },
+    { question: "¿Qué certificaciones debe tener el mobiliario de hotel?", answer: "Busque BIFMA en estructura y seguridad, GREENGUARD Gold en emisiones de aire interior, FSC en la madera y CE para el mercado europeo. Pida los certificados vigentes por escrito antes de firmar el pedido." },
+    { question: "¿Es mejor comprar mobiliario estándar o a medida?", answer: "El estándar despacha más rápido y cuesta menos por pieza; el a medida aprovecha mejor el plano y refuerza la identidad del hotel. En aperturas con fecha fija, una mezcla de mostrador a medida y asientos de línea estándar suele ser la opción más segura." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym24-es08-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es08-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es08-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Proyectos hoteleros · Lobby &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para lobby y recepción de hotel: la guía práctica para proyectos en Latinoamérica</h1>
+          <p>Amueblar el lobby de un hotel no es un problema de decoración, sino de operación. En los primeros 8 segundos, el huésped decide si el establecimiento está a la altura de lo que pagó, y en ese juicio pesan el mostrador de recepción, la zona de espera y la facilidad con la que encuentra a una persona que lo atienda. Después de acompañar proyectos de equipamiento hotelero en México, Colombia, Perú y Panamá, mi regla es simple: primero se define el flujo de las maletas y del personal, y solo después se elige el estilo. Un lobby precioso por el que nadie puede pasar con un carrito de equipaje es un pasivo, no un activo.</p>
+          <p>En esta guía encontrará las dimensiones de trabajo que usamos en proyectos reales, la diferencia entre mobiliario residencial y contract, rangos de coste en USD y los plazos de producción habituales. En Guangdong Hongye Furniture Group Co., Ltd., fundada en 1996, con más de 300.000 m² de planta y más de 1.000 proyectos entregados en más de 50 países, hemos visto qué materiales sobreviven cinco años y cuáles no. Todo lo que sigue está pensado para dueños y gerentes de hoteles independientes en Latinoamérica, con cifras concretas y sin promesas vagas.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es08-hero.jpg" alt="Recepción de hotel boutique: mostrador de madera y ambiente cálido" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Planificación del layout: zonas, flujos y superficies</h2>
+        <p>Un lobby funcional se organiza en cuatro zonas mínimas: recepción con su mostrador, espera informal, conserjería y control de equipaje, y —cuando el espacio lo permite— un lounge con servicio de café o bar. Antes de dibujar nada, mida los dos flujos críticos: el del huésped desde la puerta hasta el ascensor y el del personal de limpieza y mantenimiento. Ambos deben cruzarse lo menos posible. En hoteles de 40 a 80 habitaciones, la experiencia muestra que reservar entre el 25 % y el 35 % de la superficie del lobby para espera genera la proporción correcta entre sensación de amplitud y rentabilidad del metro cuadrado.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona</th><th>Superficie de referencia</th><th>Piezas clave</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona">Recepción</td><td data-label="Superficie de referencia">15-25 m² por puesto de trabajo</td><td data-label="Piezas clave">Mostrador de 180-240 cm, estantería de llaves, silla operativa</td></tr>
+              <tr><td data-label="Zona">Espera informal</td><td data-label="Superficie de referencia">1,8-2,5 m² por butaca</td><td data-label="Piezas clave">Sillones modulares, mesas auxiliares de 45-55 cm de diámetro</td></tr>
+              <tr><td data-label="Zona">Lounge / lobby bar</td><td data-label="Superficie de referencia">2,5-3 m² por comensal</td><td data-label="Piezas clave">Sofás de 200-260 cm, mesas bajas de 40-45 cm de altura</td></tr>
+              <tr><td data-label="Zona">Conserjería y equipaje</td><td data-label="Superficie de referencia">6-10 m²</td><td data-label="Piezas clave">Estantería cerrada, banca de 150-180 cm</td></tr>
+              <tr><td data-label="Zona">Circulación principal</td><td data-label="Superficie de referencia">Paso de 180-240 cm</td><td data-label="Piezas clave">Sin mobiliario fijo en el eje puerta-ascensor</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los pasillos de circulación secundaria admiten 120-150 cm de ancho, pero el eje principal entre la entrada y los ascensores necesita al menos 180 cm para que pasen dos personas con equipaje. Un error frecuente en renovaciones es colocar maceteros o biombos justamente en ese eje. En mi experiencia, conviene dejar el 60 % del piso del lobby libre: la percepción de amplitud vende más que cualquier pieza extra. Si busca referencias de piezas modulares para montar estas zonas, puede revisar la línea completa en /productos/ antes de fijar el plano.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>El mostrador de recepción: alturas, medidas y funciones</h2>
+        <p>El mostrador es la pieza más exigida del lobby: recibe golpes de maletas, llaves, laptops de huéspedes y derrames de café. La altura estándar de atención de pie se sitúa entre 100 y 110 cm; para cumplir con accesibilidad, un tramo de 75-85 cm de alto y 90-120 cm de largo permite la atención de personas en silla de ruedas, y cada vez más marcos normativos lo exigen. La profundidad útil de trabajo ronda los 60-80 cm, con un paso interior de 90 cm para el personal sentado. Como regla de capacidad, cuente un puesto de recepción por cada 60-80 habitaciones.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Parámetro</th><th>Valor recomendado</th><th>Por qué importa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Parámetro">Altura de atención de pie</td><td data-label="Valor recomendado">100-110 cm</td><td data-label="Por qué importa">Postura correcta del recepcionista y del huésped de pie</td></tr>
+              <tr><td data-label="Parámetro">Tramo accesible</td><td data-label="Valor recomendado">75-85 cm de alto, 90-120 cm de largo</td><td data-label="Por qué importa">Atención en silla de ruedas y cumplimiento normativo</td></tr>
+              <tr><td data-label="Parámetro">Profundidad de encimera</td><td data-label="Valor recomendado">60-80 cm</td><td data-label="Por qué importa">Espacio para terminal, impresora y documentación</td></tr>
+              <tr><td data-label="Parámetro">Largo total</td><td data-label="Valor recomendado">180-360 cm</td><td data-label="Por qué importa">Un puesto por cada 60-80 habitaciones</td></tr>
+              <tr><td data-label="Parámetro">Paso interior del personal</td><td data-label="Valor recomendado">90 cm mínimo</td><td data-label="Por qué importa">Rotación entre puestos sin obstruir al compañero</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es08-s1.jpg" alt="Recepción de hotel con mostrador de madera y área de espera" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mostrador de recepción de madera clara con panel frontal, zona de atención y estación de trabajo en hotel boutique.</figcaption>
+        </figure>
+        <p>En materiales, recomendamos encimera de cuarzo o madera con lámina de alta presión sobre estructura de acero, y frontal enchapado con listones que enmascaran los golpes de las maletas. Evite lacas brillantes en el frontal: a los seis meses muestran cada arañazo. Para la parte trasera, una estantería cerrada con puertas guarda llaves y documentación fuera de la vista del huésped, que es exactamente donde debe estar.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales y nivel de uso: contract frente a residencial</h2>
+        <p>El mobiliario de hotel no es mobiliario de casa más grande. Un sillón residencial se usa dos o tres horas al día; uno de lobby, ocho o más, con maletas apoyadas, desinfectante y sol directo. Por eso hablamos de grado contract: espumas de alta resiliencia de 30-40 kg/m³, tapices con resistencia a la abrasión Martindale de 40.000 ciclos o más, y estructuras de madera maciza o multilaminado con certificación FSC. La diferencia de precio frente a un mueble residencial parece alta en la cotización y pequeña en el costo por año de uso.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material</th><th>Ventaja principal</th><th>Límite a considerar</th><th>Uso recomendado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Material">Madera maciza con FSC</td><td data-label="Ventaja principal">Estructura reparable, acabados cálidos</td><td data-label="Límite a considerar">Coste superior al multilaminado</td><td data-label="Uso recomendado">Mostradores, mesas de lounge</td></tr>
+              <tr><td data-label="Material">Multilaminado de alta presión</td><td data-label="Ventaja principal">Resistencia a rayas y humedad, coste contenido</td><td data-label="Límite a considerar">Menos valor táctil</td><td data-label="Uso recomendado">Encimeras, estanterías traseras</td></tr>
+              <tr><td data-label="Material">Acero con recubrimiento en polvo</td><td data-label="Ventaja principal">Alta durabilidad estructural</td><td data-label="Límite a considerar">Acabados fríos sin combinación con madera</td><td data-label="Uso recomendado">Bases, patas y estructuras internas</td></tr>
+              <tr><td data-label="Material">Tapiz de alta resistencia (≥40.000 Martindale)</td><td data-label="Ventaja principal">Soporta uso intensivo y limpieza química</td><td data-label="Límite a considerar">Paleta de colores más limitada</td><td data-label="Uso recomendado">Sillones y bancas de espera</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En certificaciones, exija BIFMA en estructura, GREENGUARD Gold en emisiones de aire interior —importante en lobbies cerrados con climatización— y FSC en la madera. Un fabricante que no puede documentar estos tres puntos le está transfiriendo el riesgo de sustitución anticipada. Reconozcamos el equilibrio real: los materiales de máxima resistencia cuestan entre un 15 % y un 25 % más, y en hoteles de temporada baja prolongada puede no compensar; la decisión debe salir de su tasa de ocupación, no del catálogo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Zonas de espera y pasillos: comodidad que resiste</h2>
+        <p>Para las butacas de espera, la altura de asiento correcta está entre 45 y 48 cm y la profundidad entre 55 y 60 cm; más profundo parece lujoso, pero el huésped de 1,60 m termina deslizado hacia adelante. La inclinación del respaldo, de 100 a 105 grados, sostiene conversaciones sin incitar a la siesta. Solicite asientos con funda desmontable o tapiz lavable: en un lobby, la limpieza diaria con producto desinfectante es la norma, y los tapices delicados envejecen mal bajo ese régimen. Las mesas auxiliares deben quedar a 10-15 cm del brazo del sillón y con la encimera a la altura del apoyabrazos.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es08-s2.jpg" alt="Pasillo de hotel con bancas de madera e iluminación cálida" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Pasillo de piso de hotel con bancas tapizadas, iluminación cálida empotrada y tabiquería de madera a ambos lados.</figcaption>
+        </figure>
+        <p>Los pasillos de piso y las zonas comunes de los niveles superiores suelen quedar fuera del presupuesto inicial y son, precisamente, donde el desgaste se nota primero. Una banca cada 12-15 metros de corredor basta: no más, porque estrecha el paso. Mantenga la iluminación general entre 200 y 300 lux en pasillos y use la misma familia de materiales que en el lobby para que el mantenimiento compre un solo tipo de repuesto y de tapiz. Es el tipo de decisión invisible que reduce el coste operativo del año tres.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Presupuesto: cuánto cuesta amueblar el lobby de un hotel medio</h2>
+        <p>Con las medidas anteriores sobre la mesa, hablamos de dinero. Para un hotel de 60 habitaciones con lobby de 120-180 m², el equipamiento completo —mostrador, 12 a 18 asientos de espera, mesas auxiliares, iluminación de mobiliario y estantería— suele moverse entre 18.000 y 45.000 USD según nivel de acabado. Los rangos por pieza que verá abajo corresponden a producción directa de fábrica con certificación contract; la compra en retail local puede duplicarlos por la misma calidad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Concepto</th><th>Rango de coste (USD)</th><th>Vida útil esperada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Concepto">Mostrador de recepción a medida (240-360 cm)</td><td data-label="Rango de coste (USD)">1.500-4.500</td><td data-label="Vida útil esperada">8-12 años</td></tr>
+              <tr><td data-label="Concepto">Sillón de lobby grado contract</td><td data-label="Rango de coste (USD)">280-600 por unidad</td><td data-label="Vida útil esperada">5-8 años</td></tr>
+              <tr><td data-label="Concepto">Sofá modular de lounge (200-260 cm)</td><td data-label="Rango de coste (USD)">650-1.400</td><td data-label="Vida útil esperada">5-8 años</td></tr>
+              <tr><td data-label="Concepto">Mesa auxiliar de encimera sólida</td><td data-label="Rango de coste (USD)">90-220</td><td data-label="Vida útil esperada">8-10 años</td></tr>
+              <tr><td data-label="Concepto">Banca de pasillo</td><td data-label="Rango de coste (USD)">180-380</td><td data-label="Vida útil esperada">6-8 años</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Trabajar directamente con fábrica, sin intermediarios comerciales, genera una ventaja de coste del 30-50 % frente a importar por distribuidores. Ahora bien, hay un equilibrio honesto que conviene nombrar: la producción a medida exige plazo de producción de 45-60 días más el transporte marítimo, mientras que el mobiliario estándar de línea puede despacharse más rápido. Si su apertura tiene fecha fija, la estrategia mixta —mostrador a medida y asientos de línea estándar— es la que menos dolores de cabeza nos ha dado en aperturas de temporada alta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo trabajar con el fabricante: plazos, certificaciones y control de calidad</h2>
+        <p>El proceso típico con un fabricante directo tiene cinco pasos: plano de distribución aprobado, aprobación de muestra física de una pieza crítica, producción con inspección intermedia, carga en contenedor y entrega al puerto de destino. En Guangdong Hongye Furniture Group Co., Ltd., con más de 1.000 trabajadores cualificados y experiencia con más de 47 marcas hoteleras internacionales, el plazo de producción de 45-60 días corre desde la aprobación de la muestra, no desde la firma del contrato; ese matiz evita el 90 % de los malentendidos de agenda. Pida siempre el cronograma por escrito con la fecha de carga del contenedor.</p>
+        <p>Antes de firmar, verifique tres cosas: certificados vigentes (BIFMA, GREENGUARD Gold, FSC, CE), política de repuestos para tapices y herrajes, y la posibilidad de inspección en fábrica o por terceros antes del embarque. Si su proyecto está en fase de planificación, la vía más corta es escribirnos por /contacto/ con el plano del lobby y el número de habitaciones; con eso se devuelve una propuesta de distribución y cotización por volumen en pocos días. La mejor negociación no es la que consigue el menor precio de lista, sino la que cierra el círculo precio-plazo-repuestos.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Tiene el plano de su lobby? Reciba una propuesta en pocos días"
+      text="Envíenos por /contacto/ el plano del lobby, el número de habitaciones y el estilo buscado. Con más de 1.000 proyectos hoteleros entregados desde 1996, devolvemos una propuesta de distribución con cotización por volumen y plazo de producción de 45-60 días. También puede ver líneas estándar disponibles en /productos/."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

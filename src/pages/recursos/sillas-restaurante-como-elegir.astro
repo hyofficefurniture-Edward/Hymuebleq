@@ -1,0 +1,439 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Sillas de restaurante: cómo elegirlas para uso comercial";
+const pageDescription = "Guía para elegir sillas de restaurante: materiales, durabilidad, apilado, limpieza y costes por volumen, con precios en USD y plazos reales de producción.";
+const keywords = [
+  "sillas de restaurante",
+  "sillas apilables para restaurante",
+  "sillas para cafetería",
+  "mobiliario para restaurantes",
+  "sillas comerciales",
+  "comprar sillas al por mayor"
+];
+const canonicalPath = "/recursos/sillas-restaurante-como-elegir/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym24-es10-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto peso debe soportar una silla de restaurante?", answer: "Como referencia comercial se exige una carga estática de asiento equivalente a unos 160 kg según el estándar BIFMA. Para uso intensivo recomiendo exigir además el ensayo de fatiga de 100.000 ciclos, que es lo que garantiza que la silla aguanta años de servicio con dos o tres turnos diarios." },
+    { question: "¿Qué material conviene para una terraza: metal, madera o polipropileno?", answer: "Para exterior descubierto, el aluminio o el polipropileno son la elección práctica: no se oxidan y admiten lavado a presión. La madera maciza puede usarse en terrazas cubiertas si el barniz es de grado exterior, pero exige mantenimiento anual y su coste de reposición es mayor." },
+    { question: "¿Cuántas sillas apilables puedo guardar en un almacén pequeño?", answer: "Una torre de 8 sillas apilables ocupa menos de 0,3 m² de planta. Con un almacén de 3 m² puedes guardar 60-70 sillas. Si el apilado es parte crítica de tu operación, fíjalo por escrito en el pedido junto con los separadores que evitan rayones." },
+    { question: "¿Qué cantidad mínima pide un fabricante para exportar?", answer: "En pedidos directos de fábrica el mínimo habitual es de 50-100 unidades por modelo, o un contenedor consolidado mezclando modelos. Por debajo de esa cantidad suelen aplicar un sobrecosto unitario del 10-20 % que compensa revisar antes de cerrar." },
+    { question: "¿Se pueden pedir colores y tapizados personalizados?", answer: "Sí. Trabajamos con muestras de color Pantone o RAL para lacados y con catálogos de vinílico y tela para tapizados. Un color especial añade normalmente 7-10 días al plazo de producción y, en cantidades pequeñas, puede llevar un sobrecosto de color que conviene confirmar en la cotización." },
+    { question: "¿Cuánto tarda un pedido desde la confirmación hasta la entrega en México o Colombia?", answer: "El plazo de producción es de 45-60 días desde la aprobación de la muestra, más 25-40 días de tránsito marítimo según el puerto. Para aperturas con fecha fija, conviene iniciar el proceso 4-5 meses antes." },
+    { question: "¿Qué garantía debe ofrecer un fabricante serio de sillas comerciales?", answer: "Una garantía de 2-3 años sobre la estructura, que cubra aflojamiento de uniones, soldaduras y roturas por fatiga en uso normal. Desconfía de garantías superiores a 5 años sobre tapizados, porque ningún tapizado comercial en servicio intenso dura tanto sin señales de uso." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym24-es10-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es10-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es10-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hostelería · Restaurantes &middot; {publicationDateLabel}</p>
+          <h1>Cómo elegir sillas de restaurante para uso comercial intensivo</h1>
+          <p>En un restaurante o cafetería, la silla es el mueble que más veces se usa al día: cada cliente la mueve, se sienta con peso completo, la arrastran en pleno servicio y la personal de limpieza la empuja varias veces por turno. Con dos o tres rotaciones por mesa y más de 300 días de operación al año, una silla doméstica normal queda inservible en 12-18 meses. Por eso la primera regla es separar la compra doméstica de la compra comercial: lo que decide no es el diseño, sino la estructura, el material y el coste por año de vida útil. Una silla que cuesta el doble pero dura cuatro años siempre resulta más barata que la económica que hay que reponer cada temporada. En esta guía explico, con las cifras que manejo al cotizar proyectos de hostelería, qué mirar antes de firmar cualquier pedido.</p>
+          <p>En Hongye Furniture Group, empresa fundada en 1996 con una planta de más de 300.000 m² y más de 1.000 trabajadores cualificados, fabricamos sillas y mesas para restaurantes, cadenas de cafeterías y proyectos de hostelería en más de 50 países. Esta guía recoge los criterios que aplicamos en más de 1.000 proyectos entregados: qué materiales resisten el uso intensivo, qué ensayos debe superar una silla comercial, cómo afecta el apilado a tu operación diaria y qué precios por volumen puedes esperar. Si prefieres ver productos concretos antes de leer, puedes revisar el catálogo completo en /productos/.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es10-hero.jpg" alt="Sillas de madera maciza en restaurante de ambiente mediterráneo" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Los cinco criterios que deciden una silla de restaurante</h2>
+        <p>Antes de hablar de estilos, conviene ordenar la decisión. En mi experiencia, el 80 % de las devoluciones y reposiciones evitables se explican por haber invertido el orden de los criterios: se eligió primero el color y se preguntó por la estructura al final. Mi regla es evaluar cinco puntos en este orden exacto: tipo de unión de la estructura, material del asiento y respaldo, carga de trabajo diaria, necesidad de apilado o almacenamiento, y coste total por año de uso. Ninguno de estos cinco puntos es negociable en un local con servicio continuo.</p>
+        <p>El primero, la unión, es el que más problemas silenciosos causa. Una silla atornillada con herrajes de ferretería se afloja a las pocas semanas de vibración; las uniones de espiga y cola en madera o las soldaduras continuas en metal aguantan años sin mantenimiento. El segundo, la carga de trabajo, se mide en horas de uso al día: no es lo mismo una cafetería de especialidad con rotaciones de 40 minutos que un salón de banquetes con eventos de 5 horas. El quinto criterio, el coste, hay que leerlo como una división: precio de compra dividido entre años reales de servicio. Ese número, y no el precio de la etiqueta, es el que compara presupuestos de forma honesta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales y estructuras: madera maciza, metal y polipropileno</h2>
+        <p>Los tres grandes familias de materiales cubren prácticamente todos los casos. La madera maciza de haya o roble aporta calidez y peso visual, y es la opción habitual en restaurantes de cocina de autor y hoteles boutique. El metal tubular con recubrimiento en polvo gana en resistencia al vandalismo y al uso continuo, y domina en food halls y cadenas de comida rápida. El polipropileno moldeado se apila en torres altas, se lava a presión y cuesta una fracción del resto, lo que lo hace ideal para terrazas y salones de eventos. El contrachapado moldeado se sitúa a medio camino: estructura de metal con asiento curvado de madera prensada, muy usado en cafeterías.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Material</th><th>Ventajas principales</th><th>Ideal para</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Material">Madera maciza de haya o roble</td><td data-label="Ventajas principales">Calidez visual, reparable, larga vida útil</td><td data-label="Ideal para">Restaurantes de autor, hoteles boutique</td></tr>
+              <tr><td data-label="Material">Contrachapado moldeado</td><td data-label="Ventajas principales">Ligero, formas ergonómicas, coste medio</td><td data-label="Ideal para">Cafeterías, panaderías, espacios de brunch</td></tr>
+              <tr><td data-label="Material">Acero tubular con pintura en polvo</td><td data-label="Ventajas principales">Máxima resistencia, apilable, bajo mantenimiento</td><td data-label="Ideal para">Food halls, cadenas, comedores de alto tránsito</td></tr>
+              <tr><td data-label="Material">Aluminio</td><td data-label="Ventajas principales">No se oxida, apto exterior, peso bajo</td><td data-label="Ideal para">Terrazas, rooftops, zonas de piscina</td></tr>
+              <tr><td data-label="Material">Polipropileno</td><td data-label="Ventajas principales">Precio bajo, apilado alto, lavado a presión</td><td data-label="Ideal para">Eventos, banquetes, terrazas de temporada</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es10-s1.jpg" alt="Sillas de restaurante de madera maciza en comedor con acabado natural y unión de espiga" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sillas de restaurante en madera maciza de haya terminadas en natural, fotografiadas en un comedor de proyecto.</figcaption>
+        </figure>
+        <p>Un detalle que casi nadie pregunta y que conviene exigir: cómo se une el asiento a la estructura. En madera, las uniones de espiga reforzadas con adhesivo estructural superan con creces los simples tornillos; en metal, la soldadura continua en todo el perímetro evita que el asiento cantelear con el uso. También merece la pena fijar la altura del asiento en 45-47 cm y la profundidad en 40-42 cm, valores que funcionan para el 95 % de la clientela adulta en es-419 y que facilitan combinar sillas de distintos lotes en el mismo salón.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Durabilidad: qué exigir a una silla de uso intensivo</h2>
+        <p>La palabra «resistente» no sirve de nada sin números detrás. El estándar de referencia en mobiliario comercial es BIFMA, que define ensayos de carga y fatiga con valores concretos: carga estática de asiento equivalente a unos 160 kg, y resistencia a fatiga medida en decenas de miles de ciclos de sentado. Cuando un fabricante declara conformidad con BIFMA, puedes pedir el informe de ensayo y contrastar esos valores; cuando no lo declara, estás comprando a ciegas. Nuestra producción se certifica además con GREENGUARD Gold para emisiones de aire interior, FSC para la trazabilidad de la madera y CE para el mercado europeo, un pack que los proyectos con licitación suelen pedir documentado.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Ensayo o parámetro</th><th>Valor de referencia comercial</th><th>Qué significa en la operación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Ensayo o parámetro">Carga estática de asiento</td><td data-label="Valor de referencia comercial">1.600 N (≈160 kg)</td><td data-label="Qué significa en la operación">Aguanta clientes de cualquier peso sin deformarse</td></tr>
+              <tr><td data-label="Ensayo o parámetro">Fatiga de asiento y respaldo</td><td data-label="Valor de referencia comercial">100.000 ciclos</td><td data-label="Qué significa en la operación">Equivale a varios años de servicio con 2-3 turnos</td></tr>
+              <tr><td data-label="Ensayo o parámetro">Estabilidad hacia adelante</td><td data-label="Valor de referencia comercial">Sin vuelco a 600 N</td><td data-label="Qué significa en la operación">Evita accidentes cuando alguien se inclina</td></tr>
+              <tr><td data-label="Ensayo o parámetro">Carga de respaldo</td><td data-label="Valor de referencia comercial">900 N aplicada lateral</td><td data-label="Qué significa en la operación">Resiste el gesto de apoyarse de costado</td></tr>
+              <tr><td data-label="Ensayo o parámetro">Garantía de estructura</td><td data-label="Valor de referencia comercial">2-3 años</td><td data-label="Qué significa en la operación">Cubre aflojamiento de uniones y soldaduras</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Conviene admitir el compromiso real: las certificaciones elevan el precio unitario entre un 8 % y un 15 % frente a sillas sin ensayo documentado. Para un local pequeño con 30-40 sillas la diferencia se recupera evitando una sola reposición masiva; para un operador de un solo local con presupuesto muy ajustado, comprar una muestra y probarla tres meses en el peor turno puede ser una vía intermedia razonable antes de certificar todo el pedido.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Apilado, limpieza y mantenimiento diario</h2>
+        <p>El apilado no es un capricho: define cuánto espacio operativo necesitas. Una silla apilable en torres de 6-8 unidades libera el salón para limpiar a fondo o montar eventos; una silla que no se apila obliga a dedicar almacén permanente. Si tu operación depende de reconfigurar el espacio, fija en el pedido el apilado mínimo (6 unidades), los separadores que evitan rayones entre sillas y un peso unitario que una sola persona pueda mover (idealmente por debajo de 5 kg en metal y polipropileno; las de madera maciza suelen quedar en 5-7 kg).</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es10-s2.jpg" alt="Cafetería moderna con sillas apilables y mesas de mármol en ambiente cálido" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Interior de una cafetería contemporánea con sillas apilables junto a mesas de mármol y paredes en tonos cálidos.</figcaption>
+        </figure>
+        <p>En limpieza, el material manda. El polipropileno y el metal admiten desinfectante clorado diluido y hasta hidrolavadora en terraza; la madera barnizada acepta paño húmedo con jabón neutro, pero el cloro activo le daña el acabado con el tiempo; y en tapizados, el vinílico (poliuretano) se limpia con desinfectante de uso diario, mientras la tela natural exige tratamiento antimanchas y aún así envejece más rápido cerca de la cocina. Un truco que aplico en todos los proyectos: pedir las patas con tapones de rosca, no encolados, porque se reponen en minutos y evitan que el desgaste del suelo se convierta en queja recurrente del local.</p>
+        <p>El mantenimiento preventivo semanal cabe en una lista de cinco minutos: revisar apriete de tornillos visibles, revisar tapones de patas, y pasar el desinfectante adecuado según material. Con esa rutina, una silla comercial bien fabricada supera los 5-7 años de servicio; sin ella, incluso la mejor silla envejece a la mitad de ese plazo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Costes de compra por volumen: precios y plazos reales</h2>
+        <p>Hablemos de números, porque aquí es donde más se engaña la gente con fotos bonitas. Los rangos que siguen corresponden a compras directas de fábrica en pedidos de 50-200 unidades, FOB China, con nuestra ventaja de coste del 30-50 % frente a comprar a través de distribuidores intermediarios en destino. Un local de 60 puestos que arme su pedido mezclando dos modelos puede ahorrar varios miles de dólares solo por comprar en origen y evitar la doble cadena de comercialización.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de silla</th><th>Precio unitario USD (50-200 uds)</th><th>Vida útil esperada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de silla">Polipropileno apilable</td><td data-label="Precio unitario USD (50-200 uds)">12-25</td><td data-label="Vida útil esperada">3-5 años</td></tr>
+              <tr><td data-label="Tipo de silla">Metal tubular pintado</td><td data-label="Precio unitario USD (50-200 uds)">25-45</td><td data-label="Vida útil esperada">5-8 años</td></tr>
+              <tr><td data-label="Tipo de silla">Contrachapado moldeado con metal</td><td data-label="Precio unitario USD (50-200 uds)">30-55</td><td data-label="Vida útil esperada">5-8 años</td></tr>
+              <tr><td data-label="Tipo de silla">Madera maciza de haya</td><td data-label="Precio unitario USD (50-200 uds)">40-80</td><td data-label="Vida útil esperada">7-10 años</td></tr>
+              <tr><td data-label="Tipo de silla">Tapizada en vinílico comercial</td><td data-label="Precio unitario USD (50-200 uds)">60-120</td><td data-label="Vida útil esperada">5-7 años</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Al comparar cotizaciones, exige que el precio incluya lo mismo en todas las columnas: embalaje individual o múltiple, montaje parcial, y sobre todo el mismo estándar de ensayo. Un presupuesto 20 % más barato con herrajes de menor especificación no es una oferta: es una reposición futura. Y calcula el plazo total con honestidad: nuestro plazo de producción es de 45-60 días desde la confirmación del pedido y la muestra aprobada, a los que se suman 25-40 días de tránsito marítimo según el puerto de destino en América Latina. Para aperturas con fecha fija, la regla es arrancar el proceso de compra 4-5 meses antes del día de apertura, no 6 semanas.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Del pedido a la entrega: cómo comprar directamente al fabricante</h2>
+        <p>El proceso de compra en origen tiene cinco pasos y funciona mejor cuando el cliente llega con datos. Primero, envías el listado de cantidades, el estilo de referencia y, si lo tienes, el plano del salón; con eso preparamos una cotización en 3-5 días hábiles. Segundo, fabricamos y enviamos una muestra física del modelo elegido, que pagarás descontada del pedido final si confirmas. Tercero, apruebas la muestra o pides ajustes de acabado o tapizado; cada ronda de ajuste añade normalmente 7-10 días. Cuarto, producción de 45-60 días con inspección de calidad documentada por lote. Quinto, embarque marítimo consolidado o contenedor completo según volumen, con documentación de exportación incluida.</p>
+        <p>Puedes ver la gama completa de sillas, taburetes y mesas para hostelería en /productos/ y escribirnos directamente por /contacto/ con tu listado. Mi consejo final, después de ver cientos de aperturas: decide las sillas de tu restaurante al mismo tiempo que las mesas, no después, porque las alturas y los voladizos se coordinan entre sí y comprarlas por separado casi siempre termina en un salón donde las sillas no entran bien bajo la mesa. Un mensaje inicial con cantidades aproximadas basta para arrancar; no necesitas el proyecto cerrado al milímetro para pedir el primer presupuesto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Pide presupuesto por volumen para tu restaurante"
+      text="Envíanos tu listado de sillas con cantidades y recibe una cotización FOB en 3-5 días hábiles, con muestra física antes de producir. Más de 1.000 proyectos entregados en más de 50 países, producción de 45-60 días y ventaja de coste del 30-50 % frente a intermediarios. Escríbenos por /contacto/ y bloquea tu plazo de embarque."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

@@ -1,0 +1,455 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Camas tapizadas: estructura, tapizado y medidas para elegir";
+const pageDescription = "Cama tapizada: estructura del armazón, telas y rellenos, medidas de cabecero y con cajones, costes en USD. Guía práctica de Hongye Furniture Group.";
+const keywords = [
+  "cama tapizada",
+  "camas tapizadas",
+  "cabecero tapizado",
+  "cama con cajones",
+  "tela para cabecero",
+  "dormitorio moderno"
+];
+const canonicalPath = "/recursos/camas-tapizadas-guia/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym24-es13-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué altura debe tener el cabecero de una cama tapizada?", answer: "Entre 110 y 140 cm desde el suelo es el rango habitual, de modo que el acolchado supere el colchón en 60-80 cm y sostenga la espalda al leer. Por encima de 140 cm se necesita techo alto y pared despejada, y conviene revisar que no interfiera con lámparas o ventanas." },
+    { question: "¿Las camas tapizadas acumulan ácaros y son poco higiénicas?", answer: "Acumulan algo más que las superficies duras, pero se controla fácil: aspire el cabecero una vez al mes con boquilla de tapicería, use funda de colchón transpirable y lave la ropa de cama a 60 °C. Las telas de trama cerrada como la chenilla rinden mejor en climas húmedos que el lino abierto." },
+    { question: "¿Conviene comprar una cama con cajones inferiores?", answer: "Solo si va a usarlos a diario: cada cajón necesita 60-70 cm libres delante para abrirse del todo. Guardan hasta cuatro juegos de ropa de cama por lado, pero en dormitorios con menos de 50 cm de paso resultan inservibles. En espacios estrechos, mejor cajones en un solo lado o arcón frontal parcial." },
+    { question: "¿Qué tela es mejor para un cabecero tapizado?", answer: "Para uso diario, la chenilla de 30.000-40.000 ciclos Martindale es el equilibrio entre tacto, resistencia y limpieza. Con mascotas, microfibra; en hoteles, eco-piel. El umbral mínimo que recomiendo es 25.000 ciclos, y si es posible, tela con tratamiento antimanchas y baja emisión certificado." },
+    { question: "¿Cuánto cuesta una cama tapizada fabricada en fábrica?", answer: "Una individual ronda los 160-380 USD, una matrimonio o queen entre 260 y 620 USD, y una king o con cajones entre 380 y 850 USD, sin colchón ni flete. Comprando directo a fábrica se mantiene una ventaja de coste del 30-50 % frente al minorista local, con espumas de mayor densidad." },
+    { question: "¿Cuánto tarda en llegar una cama encargada a fábrica?", answer: "El plazo de producción es de 45-60 días desde la aprobación del render, más 25-40 días de tránsito marítimo según el puerto de destino. En total, calcule 75-100 días; si su mudanza tiene fecha cerrada, ordene la cama con al menos dos meses de antelación." },
+    { question: "¿Cómo saber si una cama tapizada es de buena calidad?", answer: "Revise cuatro cosas: tablero del armazón de 18-25 mm, listones curvados de haya con soportes de goma, cabecero anclado con pernos metálicos y espuma del respaldo de 30-35 kg/m³. Pruebe también sentándose con energía en el showroom: una cama bien construida no cruje ni se mueve al empujar el cabecero." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym24-es13-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es13-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es13-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hogar · Dormitorio &middot; {publicationDateLabel}</p>
+          <h1>Camas tapizadas: cómo elegir la suya y no arrepentirse</h1>
+          <p>La cama tapizada ha pasado de objeto de hotel boutique a opción habitual en dormitorios de vivienda, y con razón: permite leer en la cama sin almohadas mal colocadas, amortigua los golpes en dormitos estrechos y da un acabado que el panel de madera no logra. Pero también es el mueble donde más se disimula el bajo coste, porque la tela cubre todo. Antes de comprar, conviene saber mirar bajo el tejido: qué estructura sostiene el colchón, cómo está anclado el cabecero y con qué densidad de espuma se rellenó el respaldo. Esa inspección de cinco minutos es la diferencia entre una cama de diez años y una que cruje en el segundo invierno.</p>
+          <p>En esta guía desmonto la cama pieza por pieza, con medidas en cm, densidades de relleno, comparación de telas por abrasión Martindale y costes orientativos en USD. La experiencia viene de fábrica: Guangdong Hongye Furniture Group Co., Ltd. (Hongye Furniture Group), fundada en 1996, con más de 300.000 m² de planta y más de 1.000 trabajadores cualificados, produce camas y dormitorios completos para proyectos residenciales y hoteleros en más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es13-hero.jpg" alt="Cama tapizada con cabecero capitoné en dormitorio principal" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué es una cama tapizada y cuándo es la mejor opción</h2>
+        <p>Una cama tapizada es un armazón —madera y tablero— recubierto con espuma y tela, con o sin cabecero integrado. Frente a una cama de madera o metal, su valor está en el confort táctil: el respaldo acolchado sostiene la espalda al leer, y el conjunto amortigua ruido y golpes, algo que aprecia cualquiera que haya chocado con una cabecera de madera dura a medianoche.</p>
+        <p>Cuándo conviene: dormitorios donde se lee o trabaja en la cama, habitaciones con cabecero pegado a una pared fría (la tela aísla), y proyectos de hospedaje donde la cama es la protagonista visual de la foto del anuncio. Cuándo pensar dos veces: si usted es de las personas que cena en la cama a diario con salsas y café, o si el dormitorio es muy húmedo sin ventilación; en esos casos, una tela técnica o una cama con panel lavable rinden mejor. Es un trade-off honesto: la tapizada gana en confort y estética, y cede algo en limpieza frente a superficies duras.</p>
+        <p>Un apunte de proyecto: en hoteles boutique de América Latina con los que trabaja nuestra división de hospitalidad, la cama tapizada se ha vuelto estándar precisamente porque el huesped juzga el dormitorio en los primeros diez segundos. La misma lógica aplica a la habitación principal de su casa, si entiende que el mantenimiento no va a ser cero.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>El armazón: la parte que no se ve y decide todo</h2>
+        <p>Antes de tocar la tela, pregunte por la estructura. Estos son los mínimos que exigimos en producción propia y que conviene exigir en cualquier presupuesto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Componente</th><th>Especificación recomendada</th><th>Por qué importa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Componente">Tablero del armazón</td><td data-label="Especificación recomendada">18-25 mm de espesor</td><td data-label="Por qué importa">Menos de 18 mm flexiona y afloja los anclajes</td></tr>
+              <tr><td data-label="Componente">Listones del somier</td><td data-label="Especificación recomendada">haya curvada, 15-20 unidades</td><td data-label="Por qué importa">Espaciado mayor de 7 cm hace hundir el colchón</td></tr>
+              <tr><td data-label="Componente">Refuerzo central</td><td data-label="Especificación recomendada">pata central y travesaño de acero</td><td data-label="Por qué importa">Imprescindible desde 150 cm de ancho de colchón</td></tr>
+              <tr><td data-label="Componente">Anclaje del cabecero</td><td data-label="Especificación recomendada">pernos metálicos M8, no tornillos de madera</td><td data-label="Por qué importa">Los tornillos directos aflojan con el roce diario</td></tr>
+              <tr><td data-label="Componente">Patas</td><td data-label="Especificación recomendada">madera maciza o metal, 12-18 cm de alto</td><td data-label="Por qué importa">Menos de 10 cm impide limpiar debajo con robot</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es13-s1.jpg" alt="Habitación principal con cama tapizada de cabecero alto y ropa de cama en tonos tierra" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cama tapizada con cabecero alto en una habitación principal real, con ropa de cama en tonos tierra y luz natural.</figcaption>
+        </figure>
+        <p>El detalle que separa una cama tapizada seria de una barata está en la base del somier: los listones curvados de haya con soportes de goma amortiguan el movimiento de la pareja y evitan que el colchón forme valle. Si el vendedor no puede decirle cuántos listones lleva y de qué madera son, asuma que no son buenos. También merece la pena comprobar el ruido: pruebe la cama en el showroom sentándose con energía; un armazón bien atornillado no emite nada, ni siquiera un crujido seco en las esquinas.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cabeceros: alturas, formas y anclaje correcto</h2>
+        <p>El cabecero define la cama y el dormitorio, y aquí las medidas importan más que la forma. La altura total habitual va de 110 a 140 cm desde el suelo; para que funcione como respaldo al leer, el acolchado debe superar el colchón en 60-80 cm. Con un colchón de 30 cm más base de 20, eso significa cabeceros de 110-130 cm. Por encima de 140 cm entra el terreno del cabecero monumental, que exige pared limpia y sobre todo techo alto: en cuartos de 2,40 m de altura, un respaldo de 150 cm y una lámpara colgante se pelean el espacio.</p>
+        <p>Sobre formas, tres familias cubren todo: el panel recto, el más eficiente y el que cabe en cualquier dormitorio; el capitoné o con botones, que reparte mejor la presión y envejece bien, aunque recoge más polvo en las hendiduras; y las formas curvas u orgánicas, fotogénicas pero con tapizado más caro por el mayor consumo de tela y el trabajo manual de curvado. Mi consejo práctico: si el presupuesto es medio, capitoné en el centro y panel liso en los extremos da el 80 % del efecto con un coste sensiblemente menor.</p>
+        <p>Y el anclaje, que es donde más camas fallan: el cabecero debe ir unido al armazón con pernos pasantes de acero y soportes en L, nunca solo atornillado por detrás. Si la cama se mueve al empujar el respaldo —pruébelo siempre—, acabará marcando la pared y aflojando la unión en meses. En camas de 180 cm, exija además dos puntos de anclaje, uno por lado.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Tapizado y relleno: telas, densidades y limpieza</h2>
+        <p>La tela se juzga por abrasión Martindale y el relleno por densidad. El cabecero de calidad lleva espuma moldeada de 30-35 kg/m³ con una capa de fibra siliconada de 200-300 g/m² que redondea el tacto; por debajo de 25 kg/m³ el respaldo se aplana donde apoya la cabeza y a los dos años la tela arruga sin retorno.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tela</th><th>Abrasión Martindale</th><th>Mantenimiento</th><th>Cuándo elegirla</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tela">Chenilla</td><td data-label="Abrasión Martindale">30.000-40.000 ciclos</td><td data-label="Mantenimiento">trapo húmedo, sin frotar</td><td data-label="Cuándo elegirla">El equilibrio general para uso diario</td></tr>
+              <tr><td data-label="Tela">Lino o mezcla lino</td><td data-label="Abrasión Martindale">15.000-25.000 ciclos</td><td data-label="Mantenimiento">medio, arruga con carácter</td><td data-label="Cuándo elegirla">Climas cálidos y estética natural</td></tr>
+              <tr><td data-label="Tela">Pana (corduroy)</td><td data-label="Abrasión Martindale">30.000-45.000 ciclos</td><td data-label="Mantenimiento">bajo, cepillo suave</td><td data-label="Cuándo elegirla">Dormitorios con poca luz: da calidez</td></tr>
+              <tr><td data-label="Tela">Microfibra</td><td data-label="Abrasión Martindale">más de 40.000 ciclos</td><td data-label="Mantenimiento">muy bajo, repele líquidos</td><td data-label="Cuándo elegirla">Hogares con mascotas</td></tr>
+              <tr><td data-label="Tela">Eco-piel</td><td data-label="Abrasión Martindale">más de 50.000 ciclos</td><td data-label="Mantenimiento">bajo, limpiador neutro</td><td data-label="Cuándo elegirla">Hoteles y limpieza a diario</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es13-s2.jpg" alt="Detalle de cabecero tapizado con textiles de lino y manta de punto en capas" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Detalle de textiles de dormitorio: cabecero tapizado, sábana de lino y manta de punto en capas.</figcaption>
+        </figure>
+        <p>Para higiene, la pregunta honesta es la que todos hacen: ¿acumula ácaros? Toda tela los acumula más que el metal, pero el asunto se resuelve con hábitos: aspirar el cabecero una vez al mes con boquilla de tapicería, funda de colchón transpirable y, si es posible, tapizado con tratamiento antimanchas de base acuosa y certificación de baja emisión tipo GREENGUARD Gold, que en cama —donde se pasan ocho horas— es más salud que marketing. En clima húmedo, la chenilla de trama cerrada rinde mejor que el lino abierto, que retiene humedad.</p>
+        <p>Un matiz de acabado que cuesta poco y cambia la percepción: pedir el cabecero con cremallera oculta en la parte trasera para retapizarlo. El tapizado de una cama vale entre el 20 y el 30 % de su precio, y poder cambiar la tela dentro de diez años, sin comprar cama nueva, es la compra más sostenible que puede hacer.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Medidas y tipologías: individual, matrimonial, queen, king y con cajones</h2>
+        <p>Las medidas estándar de colchón mandan sobre el armazón, y cada tamaño exige una superficie mínima de dormitorio para circular con dignidad. Calcule 60 cm de paso a cada lado como mínimo y 70-80 cm si quiere abrir un cajón sin estorbos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Medida de colchón</th><th>Largo de cama recomendado</th><th>Dormitorio mínimo</th><th>Ideal para</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Medida de colchón">90 × 190/200 cm (individual)</td><td data-label="Largo de cama recomendado">largo + 15 cm</td><td data-label="Dormitorio mínimo">7-8 m²</td><td data-label="Ideal para">Juveniles y huéspedes</td></tr>
+              <tr><td data-label="Medida de colchón">135 × 190 cm (matrimonio)</td><td data-label="Largo de cama recomendado">largo + 15 cm</td><td data-label="Dormitorio mínimo">9-10 m²</td><td data-label="Ideal para">Parejas en apartamentos compactos</td></tr>
+              <tr><td data-label="Medida de colchón">150 × 200 cm (queen)</td><td data-label="Largo de cama recomendado">largo + 15 cm</td><td data-label="Dormitorio mínimo">10-12 m²</td><td data-label="Ideal para">El estándar actual en América Latina</td></tr>
+              <tr><td data-label="Medida de colchón">180 × 200 cm (king)</td><td data-label="Largo de cama recomendado">largo + 15 cm</td><td data-label="Dormitorio mínimo">12-14 m²</td><td data-label="Ideal para">Dormitorios principales amplios</td></tr>
+              <tr><td data-label="Medida de colchón">Con cajones inferiores</td><td data-label="Largo de cama recomendado">igual + hueco de 60 cm</td><td data-label="Dormitorio mínimo">+1 m² de giro</td><td data-label="Ideal para">Cada lado con cajón necesita 70 cm de paso</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Sobre camas con cajones, la regla que insisto en repetir: solo compré si va a abrirlos cada semana. Un cajón de 80 × 190 × 20 cm guarda hasta cuatro juegos de ropa de cama, pero exige 60-70 cm libres delante y ruedas de calidad; si su dormitorio deja 45 cm de paso, comprará un cajón que abrirá dos veces al año y odiará cada vez. Para espacios estrechos, una base con arcón frontal parcial o cajones en un solo lado suelen ser la solución más honesta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Costes, plazos y cómo encargar desde América Latina</h2>
+        <p>Rangos orientativos de fabricación en fábrica con armazón de 25 mm, listones de haya y espumas de alta densidad, sin colchón ni flete. Suben con telas premium y cabeceros capitoné de gran formato.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Concepto</th><th>Rango orientativo (USD)</th><th>Nota</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Concepto">Cama individual tapizada</td><td data-label="Rango orientativo (USD)">160-380</td><td data-label="Nota">cabecero panel o capitoné básico</td></tr>
+              <tr><td data-label="Concepto">Cama matrimonio o queen</td><td data-label="Rango orientativo (USD)">260-620</td><td data-label="Nota">según tela y altura de cabecero</td></tr>
+              <tr><td data-label="Concepto">Cama king o con cajones</td><td data-label="Rango orientativo (USD)">380-850</td><td data-label="Nota">incluye refuerzo central de acero</td></tr>
+              <tr><td data-label="Concepto">Flete marítimo a puerto latinoamericano</td><td data-label="Rango orientativo (USD)">100-350</td><td data-label="Nota">según volumen y destino</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La aritmética de fabricar en origen es sencilla: con una planta de más de 300.000 m² y procesos estandarizados, la ventaja de coste del 30-50 % frente al comercio local se mantiene incluso con flete incluido. La contrapartida es el tiempo: plazo de producción de 45-60 días más 25-40 días de tránsito marítimo, frente a la entrega inmediata de una tienda; si su mudanza tiene fecha, el pedido debe salir con dos meses de margen.</p>
+        <p>Para encargar, basta con la medida de colchón, la altura de techo y una foto del dormitorio desde /contacto/: el equipo técnico de Hongye Furniture Group, con más de 1.000 proyectos en más de 50 países, devuelve renders con muestras de tela y presupuesto en 3-5 días hábiles. Puede ver camas, mesillas y armarios de la misma serie para unificar el dormitorio en /productos/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="¿Listo para elegir su cama tapizada?"
+      text="Envíe la medida de su colchón y una foto del dormitorio desde /contacto/, y en 3-5 días hábiles recibirá render, muestras de tela y presupuesto. Hongye Furniture Group, fundada en 1996, fabrica camas con armazón reforzado, plazos de 45-60 días y envío a más de 50 países."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

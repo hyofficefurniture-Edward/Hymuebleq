@@ -1,0 +1,458 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para clínicas: sala de espera, consultorio y enfermería";
+const pageDescription = "Guía de mobiliario para clínicas: sala de espera, consultorio y puesto de enfermería, con dimensiones, materiales y precios en USD para centros médicos.";
+const keywords = [
+  "mobiliario para clínicas",
+  "equipamiento de consultorio",
+  "mobiliario médico",
+  "sillas de espera para clínica",
+  "puesto de enfermería",
+  "mobiliario para centros médicos"
+];
+const canonicalPath = "/recursos/mobiliario-clinica-equipamiento/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym24-es14-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuántas plazas de asiento necesita la sala de espera de una clínica?", answer: "La referencia habitual es de 1,5 a 2 plazas por cada consultorio activo, más un 10 % si atiende pacientes que llegan acompañados. Una clínica de 4 consultorios funciona bien con 12 a 16 plazas repartidas en dos o tres agrupaciones, y siempre con una zona reservada para sillas de ruedas." },
+    { question: "¿Qué materiales aguantan la desinfección diaria con lejía?", answer: "Superficies continuas como el compacto o el fenólico postformado en encimeras, melamina de alta presión en paneles, acero inoxidable en patas y piel técnica sellada en tapizados. El textil abierto y las melaminas de gama baja se degradan en meses; pida siempre la ficha técnica de resistencia química antes de comprar." },
+    { question: "¿Cuánto cuesta amueblar una clínica de 3 a 4 consultorios?", answer: "Un proyecto completo de ese tamaño se sitúa normalmente entre 9.000 y 15.000 USD con producción de fábrica certificada: 2.500-4.500 USD en sala de espera, 900-1.600 USD por consultorio, 1.200-2.500 USD en enfermería y 1.500-3.000 USD en recepción. Los rangos varían según nivel de personalización y cantidades." },
+    { question: "¿Conviene mobiliario estándar o fabricación a medida?", answer: "La combinación da el mejor resultado: piezas estándar certificadas para sillería, camillas y mesas de consulta, y fabricación a medida solo para recepción y puesto de enfermería, que deben ajustarse al plano del local. El 100 % a medida encarece entre 20 % y 35 % y añade semanas de plazo que pocas clínicas necesitan." },
+    { question: "¿Cuál es el plazo de producción y entrega del equipamiento?", answer: "El plazo de producción es de 45-60 días desde la aprobación de color y planos, más el tránsito marítimo hasta su puerto. Para una apertura con fecha fija recomendamos iniciar la compra con 4 meses de margen, incluyendo descarga e instalación en el local." },
+    { question: "¿Qué certificaciones debo exigir al fabricante de mobiliario médico?", answer: "Como mínimo BIFMA para estructura y durabilidad, GREENGUARD Gold para emisiones interiores, CE para conformidad de seguridad y FSC si se especifica madera certificada. Estas certificaciones sustentan las auditorías sanitarias, aunque siempre deben complementarse con la normativa sanitaria local de su país." },
+    { question: "¿El proveedor gestiona la entrega e instalación en mi país?", answer: "Hongye Furniture Group exporta a más de 50 países y gestiona embalaje de exportación, documentación y coordinación de entrega al puerto o al local. Para proyectos médicos ofrecemos además el plano de distribución previo sin coste, de modo que cada pieza llegue con su ubicación ya definida en obra." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym24-es14-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es14-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es14-s2.png"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Salud · Clínicas &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para clínicas y centros médicos: guía de equipamiento por zonas</h1>
+          <p>Amueblar una clínica pequeña o mediana es un ejercicio de precisión: cada metro cuadrado debe trabajar a favor del paciente y del personal a la vez. La regla que aplico en proyectos de salud es simple: la sala de espera resuelve la primera impresión, el consultorio concentra cerca del 70 % del trabajo clínico diario y el puesto de enfermería conecta todo el flujo entre ambas. Un mobiliario mal dimensionado produce pasillos bloqueados con camillas, consultorios incómodos y superficies que la desinfección diaria deteriora en pocos meses. En esta guía explico, zona por zona, qué piezas necesita un centro médico de tamaño medio, con medidas orientativas en cm, rangos de precio en USD y criterios de higiene que cualquier protocolo actual exige. La meta es planificar el equipamiento completo sin improvisaciones ni presupuestos inflados.</p>
+          <p>Detrás de esta guía está la experiencia de Guangdong Hongye Furniture Group Co., Ltd., fundada en 1996, con más de 300.000 m² de planta productiva y más de 1.000 proyectos ejecutados en más de 50 países, incluidos equipamientos médico-asistenciales para clínicas privadas y residencias geriátricas. Fabricamos bajo certificación BIFMA, GREENGUARD Gold, FSC y CE, y trabajamos con una ventaja de coste del 30-50 % frente a la compra minorista local, gracias a la producción directa de fábrica. En las próximas secciones encontrará tablas de dimensiones, un plano de distribución de referencia y un desglose de inversión por área, además del enlace a /productos/ para consultar las series disponibles.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es14-hero.jpg" alt="Sala de espera de clínica con sillería de acero y recepción" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué distingue al mobiliario de clínica del mobiliario de oficina</h2>
+        <p>A primera vista, una silla de espera de clínica y una silla de oficina parecen piezas parecidas. No lo son. El mobiliario médico convive con protocolos de desinfección que aplican lejía diluida varias veces al día, con pacientes que se apoyan con fuerza en los brazos de las sillas para levantarse y con un uso público que puede superar las 12 horas continuas. Una silla de oficina aguanta 4 horas diarias; la de sala de espera trabaja el triple, con usuarios de todas las edades y tallas.</p>
+        <p>Hay una segunda diferencia que muchos promotores descubren tarde: la higiene. Cada junta, cada costura y cada esquina inferior del mueble se convierte en un punto donde se acumulan fluidos y polvo. Por eso, en proyectos de salud mi regla es priorizar superficies continuas, tapizados sellados y patas metálicas sin roscas expuestas, aunque el coste inicial sea entre 10 % y 15 % superior al de una versión estándar. Ese sobrecoste se recupera en el primer año de limpieza y mantenimiento.</p>
+        <p>La tercera diferencia es normativa. Un centro médico debe poder justificar ante inspección sanitaria que sus superficies son lavables y que los materiales no liberan compuestos orgánicos volátiles en exceso. Certificaciones como GREENGUARD Gold o CE no son un adorno comercial: son documentos que la administración del centro presenta en las auditorías. Conviene exigirlas desde la primera cotización, no al final del proyecto.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Sala de espera: dimensiones, asientos y flujo de pacientes</h2>
+        <p>La sala de espera es la zona con más errores de diseño que he visto en clínicas medianas. El cálculo base que recomiendo es de 1,5 a 2 plazas de asiento por consultorio activo, sumando un 10 % adicional si el centro atiende a acompañantes de pacientes pediátricos o geriátricos, que casi nunca vienen solos. Una clínica de 4 consultorios necesita, en la práctica, entre 12 y 16 plazas distribuidas en dos o tres agrupaciones, no en una sola fila interminable.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es14-s1.jpg" alt="Sillas de espera tapizadas en azul dentro de la sala de espera de una clínica" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sillería de espera para clínica con tapizado antimanchas, brazos de apoyo y estructura metálica de uso intensivo.</figcaption>
+        </figure>
+        <p>El layout importa tanto como la cantidad. Deje pasillos libres de 120 cm como mínimo para que una camilla pueda cruzar sin pedirle a media sala que se levante, y reserve una zona con espacio perimetral libre de 150 cm para sillas de ruedas. La tabla siguiente resume las medidas que aplicamos en los proyectos de equipamiento clínico.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Medida orientativa</th><th>Observación práctica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Pasillo de circulación</td><td data-label="Medida orientativa">120-150 cm de ancho libre</td><td data-label="Observación práctica">Debe permitir el cruce de una camilla</td></tr>
+              <tr><td data-label="Elemento">Silla individual con brazos</td><td data-label="Medida orientativa">55-60 cm de ancho por plaza</td><td data-label="Observación práctica">Los brazos ayudan a levantarse a mayores</td></tr>
+              <tr><td data-label="Elemento">Banco de 3-4 plazas</td><td data-label="Medida orientativa">170-220 cm de largo total</td><td data-label="Observación práctica">Menos juntas de limpieza que sillas sueltas</td></tr>
+              <tr><td data-label="Elemento">Mesa auxiliar central</td><td data-label="Medida orientativa">90 × 45 cm, altura 45 cm</td><td data-label="Observación práctica">Para dispensador de gel y documentación</td></tr>
+              <tr><td data-label="Elemento">Separación entre filas</td><td data-label="Medida orientativa">90-100 cm</td><td data-label="Observación práctica">Espacio mínimo para silla de ruedas</td></tr>
+              <tr><td data-label="Elemento">Zona accesible reservada</td><td data-label="Medida orientativa">150 × 130 cm libres</td><td data-label="Observación práctica">1 plaza por cada 20 de la sala, como mínimo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Un detalle que marca la diferencia percibida: divida la sala en agrupaciones de 4 a 6 plazas con mesas auxiliares entre ellas. Reduce la sensación de sala de aeropuerto y distribuye el desgaste del tapizado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Consultorio médico: mesa, asientos y camilla</h2>
+        <p>El consultorio estándar de una clínica privada mide entre 9 y 12 m², y en ese espacio deben caber cuatro funciones sin rozarse: consulta sentada, exploración breve, almacenamiento y circulación. La mesa de consulta de 160 × 80 cm funciona mejor que las mesas grandes de despacho: deja libres 90 cm detrás del médico y permite que el paciente se siente al costado, no enfrente como en una entrevista de trabajo. Ese detalle cambia la dinámica de la consulta y no cuesta nada.</p>
+        <p>La camilla es la pieza con más exigencias técnicas del consultorio: superficie de 190 × 65 cm, altura regulable entre 60 y 75 cm, respaldo articulado y estructura que soporte cargas dinámicas según BIFMA. Si el presupuesto aprieta, recorte en decoración antes que en la camilla; es el mueble que el personal usa cientos de veces al día y el que más se nota cuando falla.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Pieza</th><th>Medida orientativa</th><th>Función principal</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Pieza">Mesa de consulta</td><td data-label="Medida orientativa">160 × 80 cm, altura 75 cm</td><td data-label="Función principal">Consulta sentada y revisión de documentos</td></tr>
+              <tr><td data-label="Pieza">Silla del médico</td><td data-label="Medida orientativa">Asiento regulable 45-55 cm</td><td data-label="Función principal">Postura estable en jornadas de 8-10 horas</td></tr>
+              <tr><td data-label="Pieza">Taburete de exploración</td><td data-label="Medida orientativa">Regulable 45-60 cm, con ruedas</td><td data-label="Función principal">Desplazamiento rápido hacia la camilla</td></tr>
+              <tr><td data-label="Pieza">Camilla de exploración</td><td data-label="Medida orientativa">190 × 65 cm, altura 60-75 cm</td><td data-label="Función principal">Examen del paciente y pequeñas curaciones</td></tr>
+              <tr><td data-label="Pieza">Armario bajo de archivo</td><td data-label="Medida orientativa">90 × 45 cm, altura 80 cm</td><td data-label="Función principal">Historias clínicas y consumibles de uso diario</td></tr>
+              <tr><td data-label="Pieza">Silla del paciente</td><td data-label="Medida orientativa">48-50 cm de ancho</td><td data-label="Función principal">Consulta breve, sin brazos si falta espacio</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En cuanto a almacenamiento, la combinación que mejor funciona en clínicas medianas es un armario bajo por consultorio más un módulo de archivo central compartido entre dos o tres consultorios. Reduce el mobiliario duplicado entre 20 % y 25 % y libera pared para el equipamiento clínico real, que siempre acaba necesitando más sitio del previsto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Superficie o componente</th><th>Material recomendado</th><th>Por qué conviene</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Superficie o componente">Encimera de consulta</td><td data-label="Material recomendado">Compacto o fenólico postformado</td><td data-label="Por qué conviene">Sin juntas y resiste desinfectantes a base de lejía</td></tr>
+              <tr><td data-label="Superficie o componente">Frentes y paneles</td><td data-label="Material recomendado">Melamina de alta presión</td><td data-label="Por qué conviene">Superficie continua, sin poros ni costuras</td></tr>
+              <tr><td data-label="Superficie o componente">Patas y estructura</td><td data-label="Material recomendado">Acero inoxidable o aluminio</td><td data-label="Por qué conviene">No se corroe con la limpieza química diaria</td></tr>
+              <tr><td data-label="Superficie o componente">Tapizados de asientos</td><td data-label="Material recomendado">Piel técnica sellada</td><td data-label="Por qué conviene">Se desinfecta entera sin retener fluidos</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Puesto de enfermería y recepción: el centro operativo</h2>
+        <p>El puesto de enfermería de una clínica mediana no es un mostrador decorativo: es una estación de trabajo donde se registran pacientes, se preparan curas y se custodian consumibles. La altura de trabajo recomendada es de 110 cm para la barra de atención de pie, con un tramo interior a 75 cm donde el personal trabaja sentado. Sin ese tramo rebajado, el personal acaba haciendo historias clínicas de pie y la lumbopatía aparece en los primeros dos años. Lo he visto repetirse en suficientes centros como para tratarlo como norma, no como sugerencia.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es14-s2.jpg" alt="Plano de distribución de proyecto médico-asistencial con medidas y ubicación de mobiliario" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Plano de distribución de un centro médico con zonificación de sala de espera, consultorios y puesto de enfermería.</figcaption>
+        </figure>
+        <p>Antes de comprar una sola pieza, conviene trabar el proyecto sobre un plano de distribución como el de la imagen anterior: entradas de pacientes, flujo hacia consultorios, posición del puesto de enfermería controlando el paso y almacén accesible sin cruzar la sala de espera. Este documento, que entregamos sin coste en los proyectos a medida, evita el error más caro del equipamiento sanitario: muebles que bloquean un pasillo o una salida de emergencia cuando ya están facturados.</p>
+        <p>Para la recepción, aplique la misma lógica de doble altura que en enfermería: barra exterior de 110 cm con sector rebajado a 75 cm para pacientes en silla de ruedas, un módulo bajo de archivo con llave para documentación sensible y, si el volumen de pacientes lo justifica, un mostrador de 180-240 cm de largo. La recepción absorbe el 40 % de las consultas presenciales del centro; invertir en su ergonomía se traduce en colas más cortas y menos errores de registro.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Higiene, materiales y normas: qué exigir al fabricante</h2>
+        <p>En un entorno clínico, el material equivocado no envejece: se degrada. Los tapizados textiles retienen fluidos y olores, las melaminas de gama baja se hinchan en las aristas inferiores con cada trapeado húmedo y los herrajes con baño decorativo pierden la capa en cuestión de meses ante los desinfectantes amoniacales. Cuando coticé mi primer proyecto médico aprendí a pedir al fabricante la ficha técnica de resistencia química de cada superficie, no solo la muestra de color.</p>
+        <p>Sobre normas, el paquete mínimo que considero aceptable para equipamiento de clínica es este: BIFMA para resistencia estructural y durabilidad del mobiliario, GREENGUARD Gold para emisiones de compuestos orgánicos volátiles en interiores, CE como conformidad europea de seguridad y FSC cuando se especifica madera certificada. Ninguna de las cuatro sustituye a la normativa sanitaria local de su país, pero todas reducen el riesgo de que un inspector observe superficies no lavables o emisiones elevadas en un recinto cerrado con pacientes.</p>
+        <p>Hay un compromiso que conviene asumir con honestidad: el mobiliario sanitario a medida cuesta más y tarda más que el catálogo estándar. Un banco de espera modificado con hueco para dispensador de gel o una recepción con sector accesible añaden entre 2 y 3 semanas al plazo. La alternativa es combinar piezas estándar certificadas con 2 o 3 piezas a medida realmente críticas, que es la fórmula que mejor equilibrio de coste y plazo ofrece en clínicas de 3 a 10 consultorios.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Presupuesto, plazos y proceso de compra</h2>
+        <p>Con las medidas y materiales ya definidos, la pregunta que llega siempre es la misma: cuánto cuesta equipar la clínica completa. Los rangos siguientes corresponden a producción directa de fábrica con certificación sanitaria, y asumen mobiliario estándar con ajustes a medida en recepción y enfermería.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Área del proyecto</th><th>Inversión orientativa (USD)</th><th>Contenido típico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Área del proyecto">Sala de espera de 20 m²</td><td data-label="Inversión orientativa (USD)">2.500-4.500</td><td data-label="Contenido típico">12-16 plazas, mesas auxiliares y zona accesible</td></tr>
+              <tr><td data-label="Área del proyecto">Consultorio (por unidad)</td><td data-label="Inversión orientativa (USD)">900-1.600</td><td data-label="Contenido típico">Mesa, sillas, camilla regulable y armario bajo</td></tr>
+              <tr><td data-label="Área del proyecto">Puesto de enfermería</td><td data-label="Inversión orientativa (USD)">1.200-2.500</td><td data-label="Contenido típico">Barra de 200-300 cm, tramo rebajado y archivadores</td></tr>
+              <tr><td data-label="Área del proyecto">Recepción completa</td><td data-label="Inversión orientativa (USD)">1.500-3.000</td><td data-label="Contenido típico">Mueble de recepción con sector accesible y asientos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para una clínica de 4 consultorios, el equipamiento completo suele situarse entre 9.000 y 15.000 USD, con una ventaja de coste del 30-50 % respecto a comprar las mismas especificaciones en comercio minorista. El plazo de producción es de 45-60 días desde la aprobación de la confirmación de color y plano, a los que hay que sumar el transporte marítimo según el puerto de destino. Si su apertura tiene fecha fija, planifique la compra con 4 meses de margen: es el colchón con el que dormimos tranquilos en cada proyecto que gestionamos.</p>
+        <p>El proceso que seguimos con clínicas y centros médicos es sencillo: usted envía el plano del local o las medidas de cada zona, preparamos la propuesta de distribución y cotización por áreas en 5-7 días, y la producción arranca tras aprobar muestras de tapizado y acabado. Si lo prefiere, puede revisar primero las series disponibles en /productos/ y pedirnos ajustes sobre ellas, o escribir directamente por /contacto/ con el plano de su local para recibir el estudio completo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Reciba el estudio de distribución y la cotización de su clínica"
+      text="Envíenos el plano de su local y en 5-7 días recibirá la propuesta de distribución por zonas con precios de fábrica: una ventaja de coste del 30-50 % y un plazo de producción de 45-60 días. Escríbanos por /contacto/ o consulte las series certificadas en /productos/ para iniciar su proyecto."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

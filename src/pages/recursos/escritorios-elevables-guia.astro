@@ -1,0 +1,453 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Escritorios Elevables: Guía de Compra y Datos de Salud 2026";
+const pageDescription = "Guía de escritorios elevables: datos de salud sobre estar sentado, alturas correctas, parámetros técnicos y claves de compra por volumen para empresas.";
+const keywords = [
+  "escritorios elevables",
+  "escritorio de altura ajustable",
+  "mesa de escritorio y pie",
+  "escritorio ergonómico de oficina",
+  "escritorios elevables por mayoreo",
+  "mobiliario de oficina ergonómico"
+];
+const canonicalPath = "/recursos/escritorios-elevables-guia/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hym24-es09-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-09-18";
+const dateModified = "2026-09-18";
+const publicationDateLabel = "Publicada el 18 de septiembre de 2026";
+
+const faqItems = [
+    { question: "¿Realmente sirven los escritorios elevables para la salud?", answer: "Los programas con escritorios de altura ajustable reportan reducciones de 60-90 minutos diarios de tiempo sentado y descensos de hasta un 50 % en informes de molestias lumbares y cervicales. El beneficio depende del uso alternado, no solo del mueble." },
+    { question: "¿Cuál es la altura correcta para trabajar de pie?", answer: "El tablero debe quedar 2-3 cm por debajo del codo flexionado con el hombro relajado; para una persona de 1,75 m ronda los 108-113 cm. La pantalla debe mantener el borde superior a la altura de los ojos en ambas posturas." },
+    { question: "¿Qué diferencia hay entre motor simple y doble motor?", answer: "El doble motor ofrece más capacidad de carga (100-120 kg), mayor velocidad de ajuste y mejor estabilidad con cargas desbalanceadas. En puestos con doble monitor o tableros de más de 140 cm, la diferencia se nota desde el primer día." },
+    { question: "¿Cuánto cuesta un escritorio elevable por mayoreo?", answer: "Los rangos de fábrica van de 180-320 USD por puesto con motor simple y de 250-600 USD con doble motor, según tablero y accesorios. Comprar directo a fábrica representa una ventaja de coste del 30-50 % frente a distribuidores." },
+    { question: "¿Cuánto tarda un pedido por volumen?", answer: "El plazo de producción estándar es de 45-60 días desde la aprobación de la muestra física, más el transporte marítimo hasta el puerto de destino. Con pedidos mínimos de 30-50 unidades por modelo, conviene planificar 4 meses antes de la mudanza o renovación." },
+    { question: "¿Qué certificaciones debe tener un escritorio elevable de oficina?", answer: "Busque BIFMA para estructura y mecanismo, GREENGUARD Gold para emisiones de aire interior, FSC para la madera del tablero y CE para el sistema eléctrico. Pida los certificados vigentes antes de firmar el pedido." },
+    { question: "¿Necesito comprar también una silla ergonómica?", answer: "Sí, son la mitad del mismo sistema postural: la silla debe regularse entre 42-52 cm de altura de asiento y ofrecer apoyo lumbar. Cotizar el puesto completo simplifica la logística y evita que una buena mesa se use sobre una silla inadecuada." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hym24-es09-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es09-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/sep24-es09-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Oficina · Ergonomía &middot; {publicationDateLabel}</p>
+          <h1>Escritorios elevables: qué revisar antes de comprar, con datos de salud y parámetros técnicos</h1>
+          <p>Los escritorios elevables dejaron de ser un capricho de oficina tecnológica y hoy son la pieza más solicitada en los proyectos de equipamiento corporativo. La razón es simple y está en los datos: el trabajo de oficina acumula entre 9 y 10 horas diarias de sedestación, y los programas que combinan escritorios de altura ajustable con hábitos de uso logran reducirlas entre 60 y 90 minutos por persona al día, con caídas reportadas de hasta un 50 % en informes de molestias lumbares y cervicales. No se trata de estar de pie todo el día —eso crea otros problemas—, sino de alternar posturas varias veces por hora.</p>
+          <p>El problema comercial es que por fuera todos los modelos parecen iguales: una tabla, dos columnas y un botón. Por dentro, la diferencia entre un ajustador de mesa que aguanta 8 horas diarias durante 8 años y uno que falla al año está en el motor, el rango de altura y el ciclo de trabajo. En esta guía revisamos ambos frentes: la evidencia de salud que justifica la inversión y los parámetros técnicos que debe exigir en una cotización. Como referencia de contexto, en Guangdong Hongye Furniture Group Co., Ltd., fundada en 1996, producimos mobiliario de oficina en más de 300.000 m² de planta con certificación BIFMA y GREENGUARD Gold para proyectos en más de 50 países.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es09-hero.jpg" alt="Escritorio elevable eléctrico en oficina moderna" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué dicen los datos: alternar posturas, no estar de pie todo el día</h2>
+        <p>La evidencia disponible apunta a una conclusión consistente: el problema no es sentarse, es sentarse sin pausas durante horas. Las intervenciones de oficina con escritorios de altura ajustable reportan reducciones de tiempo de sedestación de entre 60 y 90 minutos diarios por trabajador, y los estudios de seguimiento en empresas muestran disminuciones relevantes en molestias de zona lumbar, cuello y hombros tras 6 a 12 meses de uso. En paralelo, estar de pie de forma estática más de 4 horas seguidas se asocia con hinchazón de piernas y fatiga; el objetivo ergonómico real es el ciclo alternado, no la postura perfecta.</p>
+        <p>Mi regla práctica, confirmada en implantaciones reales: por cada 30-60 minutos sentado, entre 5 y 15 minutos de pie. Los programas que además acompañan el cambio de escritorio con recordatorios y capacitación logran tasas de uso regular superiores al 70 %; los que solo entregan el mueble y no hacen nada más, se quedan cerca del 30 % y el presupuesto se devalúa. Esto lo menciono porque la parte del programa que falla casi nunca es el mueble, y conviene saberlo antes de firmar la orden de compra.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Indicador observado</th><th>Cambio reportado</th><th>Horizonte típico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Indicador observado">Tiempo diario de sedestación</td><td data-label="Cambio reportado">Reducción de 60-90 min por persona</td><td data-label="Horizonte típico">Primeros 3 meses de uso</td></tr>
+              <tr><td data-label="Indicador observado">Informes de molestia lumbar o cervical</td><td data-label="Cambio reportado">Descensos de hasta un 50 %</td><td data-label="Horizonte típico">6-12 meses de uso alternado</td></tr>
+              <tr><td data-label="Indicador observado">Tasa de uso regular del ajuste de altura</td><td data-label="Cambio reportado">70 % con capacitación, ~30 % sin ella</td><td data-label="Horizonte típico">Durante todo el programa</td></tr>
+              <tr><td data-label="Indicador observado">Ciclo de uso recomendado</td><td data-label="Cambio reportado">5-15 min de pie por cada 30-60 min sentado</td><td data-label="Horizonte típico">Continuo</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Parámetros técnicos: qué exigir en la cotización</h2>
+        <p>Aquí es donde una cotización se gana o se pierde, y donde las diferencias de precio entre proveedores se explican por completo. El rango de altura útil para una plantilla mixta es de 65 a 125 cm con tablero: por debajo de ese rango, las personas de más de 1,90 m no logran postura de pie correcta; por encima de 65 cm de mínimo, los usuarios más bajos no alcanzan postura sentada cómoda. La capacidad de carga mínima razonable es de 80 kg contando tablero y equipos; los ajustadores de doble motor suelen entregar 100-120 kg y más estabilidad con cargas excéntricas, como el monitor desplazado a un costado.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Parámetro</th><th>Valor recomendado</th><th>Por qué importa</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Parámetro">Rango de altura (con tablero)</td><td data-label="Valor recomendado">65-125 cm</td><td data-label="Por qué importa">Cubre plantillas de 1,50 m a 1,95 m</td></tr>
+              <tr><td data-label="Parámetro">Motorización</td><td data-label="Valor recomendado">Doble motor, columnas de 2 o 3 tramos</td><td data-label="Por qué importa">Más estabilidad y velocidad de ajuste</td></tr>
+              <tr><td data-label="Parámetro">Capacidad de carga</td><td data-label="Valor recomendado">80-120 kg</td><td data-label="Por qué importa">Tablero más monitores, CPU y accesorios</td></tr>
+              <tr><td data-label="Parámetro">Velocidad de ajuste</td><td data-label="Valor recomendado">35-45 mm/s</td><td data-label="Por qué importa">Ajuste completo en menos de 15 segundos</td></tr>
+              <tr><td data-label="Parámetro">Nivel de ruido</td><td data-label="Valor recomendado">Menos de 50 dB</td><td data-label="Por qué importa">No interrumpe llamadas ni espacios abiertos</td></tr>
+              <tr><td data-label="Parámetro">Ciclo de trabajo</td><td data-label="Valor recomendado">10 % (2 min de uso por 18 de reposo)</td><td data-label="Por qué importa">Sobrevelar el motor acorta su vida útil</td></tr>
+              <tr><td data-label="Parámetro">Consumo en espera</td><td data-label="Valor recomendado">Menos de 0,1 W</td><td data-label="Por qué importa">Cientos de puestos enchufados todo el día</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es09-s1.jpg" alt="Escritorio elevable de oficina con doble monitor y panel divisorio" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Puesto de trabajo de oficina con escritorio elevable de tablero claro, doble monitor y panel divisorio entre estaciones.</figcaption>
+        </figure>
+        <p>Dos detalles que casi nadie pregunta y conviene negociar: la memoria de altura con 2 a 4 posiciones predefinidas, que multiplica el uso real porque elimina la pereza de reajustar cada mañana, y el bloqueo anticolisión, que frena el descenso si detecta un obstáculo. En plantas con cajoneras bajo el escritorio, el sensor evita el accidente típico de la primera semana. Si quiere comparar configuraciones de columna y tablero disponibles, la gama de escritorios está en /productos/ con las fichas técnicas por modelo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Alturas correctas: cómo ajustar el escritorio a cada persona</h2>
+        <p>El ajuste no es cuestión de gusto, sigue una geometría sencilla. Sentado: codos a 90 grados, antebrazos apoyados, la pantalla con el borde superior a la altura de los ojos y los muslos paralelos al piso. De pie: la referencia es la altura del codo flexionado; el tablero debe quedar 2-3 cm por debajo del codo con el hombro relajado. Si el tablero queda más alto, el usuario compensa elevando el hombro y la molestia cervical aparece en dos semanas. La tabla siguiente sirve de referencia rápida de implantación y puede pegarse junto a cada puesto durante el primer mes.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Estatura del usuario</th><th>Altura sentado (referencia)</th><th>Altura de pie (referencia)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Estatura del usuario">1,55-1,60 m</td><td data-label="Altura sentado (referencia)">60-64 cm</td><td data-label="Altura de pie (referencia)">95-99 cm</td></tr>
+              <tr><td data-label="Estatura del usuario">1,65-1,70 m</td><td data-label="Altura sentado (referencia)">63-68 cm</td><td data-label="Altura de pie (referencia)">101-106 cm</td></tr>
+              <tr><td data-label="Estatura del usuario">1,75-1,80 m</td><td data-label="Altura sentado (referencia)">68-73 cm</td><td data-label="Altura de pie (referencia)">108-113 cm</td></tr>
+              <tr><td data-label="Estatura del usuario">1,85-1,90 m</td><td data-label="Altura sentado (referencia)">73-78 cm</td><td data-label="Altura de pie (referencia)">115-120 cm</td></tr>
+              <tr><td data-label="Estatura del usuario">1,95-2,00 m</td><td data-label="Altura sentado (referencia)">78-82 cm</td><td data-label="Altura de pie (referencia)">121-125 cm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Nótese por qué el rango de 65-125 cm con tablero es el estándar exigible: cubre del percentil bajo al alto sin dejar fuera a nadie. Un rango de 72-115 cm, común en modelos de entrada, deja fuera a los usuarios más altos y a los más bajos; en una plantilla de 100 personas eso suele afectar a 15-20 de ellas, que serán precisamente las primeras en dejar de usar la función de ajuste.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Coste real: escritorio elevable frente a escritorio fijo</h2>
+        <p>Hablemos de números sin maquillaje. Un ajustador de mesa eléctrico de un motor cuesta en fábrica entre 180 y 320 USD según tablero; el de doble motor, entre 250 y 600 USD con tablero de mayor espesor o con accesorios. Frente a un escritorio fijo de calidad (80-200 USD), el sobrecoste por puesto va de 100 a 400 USD. Frente a eso, el ahorro evitado es lo que pesa en el balance: una sola baja médica por molestia musculoesquelética cuesta a la empresa varias veces esa diferencia entre días de incapacidades, sustitución y pérdida de productividad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Concepto</th><th>Escritorio fijo</th><th>Escritorio elevable eléctrico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Concepto">Coste por puesto (fábrica)</td><td data-label="Escritorio fijo">80-200 USD</td><td data-label="Escritorio elevable eléctrico">180-600 USD</td></tr>
+              <tr><td data-label="Concepto">Ajuste a distintos usuarios</td><td data-label="Escritorio fijo">No posible</td><td data-label="Escritorio elevable eléctrico">Inmediato, con memoria de alturas</td></tr>
+              <tr><td data-label="Concepto">Sobrecoste frente a la opción básica</td><td data-label="Escritorio fijo">—</td><td data-label="Escritorio elevable eléctrico">100-400 USD por puesto</td></tr>
+              <tr><td data-label="Concepto">Vida útil esperada en uso intensivo</td><td data-label="Escritorio fijo">8-10 años</td><td data-label="Escritorio elevable eléctrico">8-10 años (motor certificado BIFMA)</td></tr>
+              <tr><td data-label="Concepto">Coste por año de uso diferencial</td><td data-label="Escritorio fijo">—</td><td data-label="Escritorio elevable eléctrico">12-50 USD por puesto y año</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hym24-es09-s2.jpg" alt="Silla ergonómica de malla con apoyabrazos ajustables en estudio" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Silla ergonómica de oficina con respaldo medio de malla, apoyabrazos ajustables y base de cinco ruedas sobre fondo neutro.</figcaption>
+        </figure>
+        <p>Una advertencia honesta: el escritorio elevable sin una silla ergonómica correcta es una inversión a medias. El apoyo lumbar, el asiento regulable en altura (42-52 cm) y los apoyabrazos ajustables son la otra mitad del sistema postural; de poco sirve alternar de pie si las 6 horas restantes se pasan en una silla fija de 45 cm con respaldo recto. Por eso recomendamos cotizar el puesto completo —silla y mesa— y no piezas sueltas, algo que también simplifica la logística de la entrega.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Compra por volumen: MOQ, plazos y certificaciones</h2>
+        <p>Para empresas y proyectos corporativos, la compra directa a fábrica opera con pedidos mínimos de 30-50 unidades por modelo y una ventaja de coste del 30-50 % frente a adquirir por distribuidores locales. El plazo de producción de 45-60 días corre desde la aprobación de la muestra, y a eso súmese el transporte marítimo hasta su puerto. En Hongye Furniture Group, con más de 1.000 trabajadores cualificados y más de 1.000 proyectos entregados, el flujo típico es: definición de tablero y color, muestra física de un puesto, producción con inspección intermedia y carga en contenedor con fecha confirmada por escrito.</p>
+        <p>En certificaciones, el paquete mínimo que debe exigir para mobiliario de oficina es BIFMA en estructura y seguridad del mecanismo, GREENGUARD Gold en emisiones —crítico en oficinas cerradas con climatización—, FSC en la madera del tablero y CE para el sistema eléctrico. Guarde los certificados con el expediente de compra: en licitaciones y auditorías de sostenibilidad corporativa se piden con frecuencia, y un proveedor que no puede presentarlos vigentes le transfiere ese riesgo a usted. Para cerrar condiciones por volumen, escriba por /contacto/ con el número de puestos y la ciudad de entrega.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Errores frecuentes al implantar escritorios elevables</h2>
+        <p>El primero: comprar el mueble y olvidar el programa. Sin capacitación inicial ni recordatorios en los primeros dos meses, la mayoría de los usuarios vuelve a la altura fija de siempre; con una sesión de 30 minutos y avisos periódicos, la tasa de uso regular se duplica. El segundo: cotizar solo el motor más barato sin revisar el ciclo de trabajo ni la garantía del mecanismo; el ahorro de 30 USD por puesto no cubre reemplazar columnas en el año tres. El tercero: pedir tableros de 160 cm para puestos de 120 cm de ancho en plantas urbanas, y descubrir que no caben ni circulan.</p>
+        <p>El cuarto error es el silencio sobre los equilibrios. Sí, el escritorio elevable cuesta más que uno fijo y sí, un pedido a medida exige 45-60 días de producción; contra eso, el estándar de fábrica despacha más rápido y cubre la mayoría de los casos con el rango de altura 65-125 cm. Si la urgencia manda, una mezcla razonable es equipar primero los puestos con mayor antigüedad o mayor carga horaria y completar el resto con la línea estándar. Así el presupuesto se estira sin sacrificar el criterio ergonómico del proyecto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Equipe el puesto completo: cotización por volumen en pocos días"
+      text="Escríbanos por /contacto/ con el número de puestos, la ciudad de entrega y el rango de estaturas de su plantilla. Como fabricante desde 1996 con planta de más de 300.000 m², devolvemos cotización por volumen con plazo de producción de 45-60 días y muestra física disponible. Consulte modelos estándar en /productos/."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
