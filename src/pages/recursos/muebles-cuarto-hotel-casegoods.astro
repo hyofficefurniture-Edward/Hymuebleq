@@ -1,0 +1,452 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Muebles de cuarto de hotel (casegoods): guía FF&E";
+const pageDescription = "Guía de muebles de cuarto de hotel o casegoods: medidas King y Queen, materiales, niveles de durabilidad BIFMA y claves de compra FF&E para su proyecto.";
+const keywords = [
+  "muebles de cuarto de hotel",
+  "casegoods hoteleros",
+  "mobiliario FF&E",
+  "muebles para habitaciones de hotel",
+  "compra de casegoods",
+  "proveedor de muebles hoteleros"
+];
+const canonicalPath = "/recursos/muebles-cuarto-hotel-casegoods/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD1-es15-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-01";
+const dateModified = "2026-10-01";
+const publicationDateLabel = "Publicada el 1 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué significa exactamente casegoods en un proyecto hotelero?", answer: "Casegoods es el conjunto de muebles de la habitación: cabecero, base de cama, mesitas, escritorio, armario, maletero y minibar. Se especifica y se compra como un paquete porque comparte acabado, herrajes y tolerancias. Separarlo en compras sueltas suele generar diferencias de color y repuestos duplicados." },
+    { question: "¿Qué medidas debe tener una habitación King estándar?", answer: "Cama de 193 × 203 cm, mesitas de noche de 55-60 cm de alto y escritorio con tablero a 72-76 cm. El armario se especifica con 58-60 cm de profundidad y el paso lateral de la cama no baja de 60 cm. Estas cifras funcionan en habitaciones de 30-35 m²." },
+    { question: "¿Cuánto tarda la producción de los muebles de una habitación?", answer: "El plazo de producción habitual es de 45-60 días, contados desde la aprobación de la muestra de acabado. Si el diseño todavía está abierto, ese reloj no empieza y la fecha de apertura queda sin control. Para abrir antes, conviene elegir perfiles de catálogo en lugar de desarrollo nuevo." },
+    { question: "¿Qué normas debo exigir en el pliego de casegoods?", answer: "Para tableros y mesas, BIFMA X5.5-2021; para asientos, BIFMA X5.1. En gestión de planta, ISO 9001:2015, y en madera con origen trazable, FSC-STD-40-004 V3-1. Para emisiones de formaldehído, EPA TSCA Título VI y CARB Fase 2." },
+    { question: "¿Cómo se controlan las emisiones y los olores en habitaciones nuevas?", answer: "Se controlan con el sustrato y el acabado, no con ventilación posterior. Pida informe de laboratorio frente a EPA TSCA Título VI y, en interiores con ocupación continua, acabados con sello GREENGUARD Gold. Un barniz de bajo VOC cuesta algo más y evita quejas por olor en las primeras semanas." },
+    { question: "¿Cuál es la diferencia de coste frente a comprar en Europa?", answer: "La ventaja de coste de una fábrica asiática bien gestionada se sitúa entre el 30 % y el 50 % sobre el precio FOB de referencia. Ese porcentaje no incluye flete, arancel ni instalación. Compare siempre el costo total puesto en obra, no el precio unitario del mueble." },
+    { question: "¿Qué debo pedir para comparar dos proveedores de casegoods?", answer: "Pida un Bill of Materials por tipología de habitación, con cantidades, acabados y herrajes incluidos. Sobre ese documento común, solicite precio, plazo por hitos e informe de ensayos por norma. Sin un alcance igual, los presupuestos no son comparables." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD1-es15-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1001-es15-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1001-es15-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hoteles · Habitaciones &middot; {publicationDateLabel}</p>
+          <h1>Muebles de cuarto de hotel (casegoods): guía de especificación y compra FF&amp;E</h1>
+          <p>Para especificar muebles de cuarto de hotel, también llamados casegoods, sin rehacer el proyecto a mitad de obra, conviene partir de una referencia cerrada: habitación King de 30-35 m², cama de 193 × 203 cm, mesitas de noche de 55-60 cm de alto, escritorio con tablero a 72-76 cm y armario de 58-60 cm de profundidad. Ese paquete completo se fabrica y entrega en un plazo de producción de 45-60 días si el diseño está congelado y las muestras firmadas. Si usted necesita abrir antes de esa fecha, la decisión de compra cambia: conviene elegir acabados y perfiles de catálogo en lugar de desarrollo nuevo. En mi experiencia con proyectos de más de 100 habitaciones, la diferencia entre una apertura a tiempo y un retraso de dos meses casi nunca está en el diseño, sino en la fecha en que se cierran las especificaciones y se aprueban las muestras de acabado.</p>
+          <p>Esta guía recoge lo que aplicamos en proyectos hoteleros reales: qué medir antes de dibujar, qué materiales resisten cinco años de rotación alta, qué ensayos exigir al fabricante y cómo comparar presupuestos sin comparar peras con manzanas. Guangdong Hongye Furniture Group Co., Ltd. es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 trabajadores cualificados y más de 1.000 proyectos entregados en más de 50 países, incluidos Latinoamérica, Oriente Medio y Europa. Trabajamos con más de 47 marcas hoteleras internacionales como referencia de estándar de producto, no como identificación de cliente.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-es15-hero.jpg" alt="Habitación de hotel con cama King y mesitas de noche en madera cálida" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué incluye un proyecto de casegoods y quién decide qué</h2>
+        <p>Casegoods es el nombre que la industria hotelera da a los muebles fijos y móviles de la habitación: cabecero y base de cama, mesitas de noche, escritorio con cajonera, armario, maletero, minibar y repisas. Se compran como un paquete, no pieza por pieza, porque comparten acabado, herrajes y tolerancias. Un error muy caro es tratar el cabecero como un elemento de obra y el escritorio como una compra suelta: si los dos se fabrican con criterios distintos, el acabado nunca coincide y el mantenimiento se vuelve un problema de repuestos duplicados. La lista estándar de una habitación suele incluir entre 8 y 12 piezas por unidad, y en un hotel de 200 llaves eso equivale a más de 2.000 elementos que deben llegar embalados, identificados por número de habitación y sin daño de transporte. Por eso el casegoods se gestiona como logística de proyecto y no como compra de muebles sueltos.</p>
+        <p>Hay tres responsables que deben hablar el mismo idioma desde el día uno: el propietario o su gerente de proyecto, el estudio de interiorismo y el comprador de FF&amp;E. El propietario define el nivel de la marca y el presupuesto; el estudio fija dimensiones, acabados y detalles; el comprador negocia precio, plazo y logística. El punto crítico es la congelación de especificaciones: a partir de ahí cualquier cambio de color o de perfil retrasa la producción y suele costar más que la diferencia de precio entre dos proveedores. En proyectos de Latinoamérica y Oriente Medio, la distancia entre fábrica y obra añade otra variable: un cambio aprobado tarde puede obligar a repetir un lote completo de cabeceros.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Medidas de referencia para habitaciones King, Queen y doble</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-es15-s1.jpg" alt="Cama doble y mesitas contiguas en dormitorio de hotel terminado, vista de conjunto." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Combinación de cama King con dos mesitas de noche en madera cálida del catálogo hotelero 2025.</figcaption>
+        </figure>
+        <p>Las medidas de la tabla siguiente son las que usamos como base de trabajo y son compatibles con la práctica habitual de las cadenas hoteleras. No son obligatorias, pero salirse de ellas sin motivo obliga a justificar cada desviación ante el estudio de diseño y ante el propio mantenimiento del hotel. Si usted trabaja con habitaciones adaptadas, los anchos de paso crecen y conviene revisar el conjunto completo, no solo la cama.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Medida recomendada</th><th>Comentario de obra</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Cama King</td><td data-label="Medida recomendada">193 × 203 cm</td><td data-label="Comentario de obra">Base fija o con cajón; dejar 60 cm de paso libre a cada lado</td></tr>
+              <tr><td data-label="Elemento">Cama Queen</td><td data-label="Medida recomendada">152 × 203 cm</td><td data-label="Comentario de obra">Opción habitual en habitaciones de 24-28 m²</td></tr>
+              <tr><td data-label="Elemento">Mesita de noche</td><td data-label="Medida recomendada">55-60 cm de alto, 45-50 cm de ancho</td><td data-label="Comentario de obra">Debe quedar al nivel de la cama o ligeramente por debajo</td></tr>
+              <tr><td data-label="Elemento">Tablero de escritorio</td><td data-label="Medida recomendada">72-76 cm de alto, fondo de 50-60 cm</td><td data-label="Comentario de obra">Escritorio de 1.200 mm de ancho útil para portátil y carpeta</td></tr>
+              <tr><td data-label="Elemento">Armario o clóset</td><td data-label="Medida recomendada">58-60 cm de profundidad</td><td data-label="Comentario de obra">Barral a 175-180 cm; de 4 a 6 perchas por huésped</td></tr>
+              <tr><td data-label="Elemento">Maletero o banco</td><td data-label="Medida recomendada">45-50 cm de alto</td><td data-label="Comentario de obra">Debe admitir una maleta de cabina abierta sin tambalear</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El pasillo entre la cama y el frente del armario nunca debe quedar por debajo de 90 cm, y el espacio entre la cama y la pared del escritorio, de 70-80 cm. En habitaciones dobles de dos camas, deje 45-60 cm entre camas: menos obliga al huésped a pasar de lado. Si el proyecto es de 150 habitaciones o más, vale la pena construir una habitación piloto completa antes de producir el lote. Esa inversión se recupera casi siempre en los ajustes de instalación.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales, acabados y control de emisiones</h2>
+        <p>En casegoods hoteleros, el sustrato manda sobre la apariencia. Tablero de partículas o MDF con chapa natural, laminado de alta presión (HPL) o melamina de buena densidad son las tres familias que se usan a diario. El tablero de canto crudo se hincha con la humedad de una habitación con aire acondicionado mal regulado, así que el canto ABS de 1-2 mm no es un detalle estético: es lo que evita que el mueble se abra en el segundo año de operación. En climas húmedos de costa, el sello de canto y el sellado inferior del tablero pesan más que el color del acabado, y conviene exigirlos por escrito en el pliego técnico.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Componente</th><th>Especificación típica</th><th>Norma o control aplicable</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Componente">Tablero de partículas y MDF</td><td data-label="Especificación típica">Clase baja en emisiones</td><td data-label="Norma o control aplicable">EPA TSCA Título VI y CARB Fase 2</td></tr>
+              <tr><td data-label="Componente">Chapa y cadena de custodia</td><td data-label="Especificación típica">Chapa de 0,6 mm, origen trazable</td><td data-label="Norma o control aplicable">FSC-STD-40-004 V3-1</td></tr>
+              <tr><td data-label="Componente">Sistema de calidad en planta</td><td data-label="Especificación típica">Trazabilidad de lote y de acabado</td><td data-label="Norma o control aplicable">ISO 9001:2015</td></tr>
+              <tr><td data-label="Componente">Lacado y barniz</td><td data-label="Especificación típica">Poliuretano de bajo contenido de VOC</td><td data-label="Norma o control aplicable">GREENGUARD Gold</td></tr>
+              <tr><td data-label="Componente">Tapizado de cabecero</td><td data-label="Especificación típica">Tejido con tratamiento ignífugo</td><td data-label="Norma o control aplicable">BS 5852, si el proyecto lo exige</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Sobre emisiones, la exigencia se escribe en el pliego y se verifica con informe, no con promesa verbal. En proyectos para Latinoamérica y Oriente Medio pedimos laboratorio acreditado y comparación con los límites de EPA TSCA Título VI. Para interiores con ocupación continua, el sello GREENGUARD Gold acota la emisión de compuestos orgánicos volátiles. Un acabado barato ahorra entre 5 % y 10 % del mueble y suele costar el doble en repintado.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Niveles de durabilidad: qué ensaya realmente un casegoods</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-es15-s2.jpg" alt="Escritorio de madera con silla tapizada y televisión en habitación de hotel equipada" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Zona de trabajo de la habitación con escritorio de madera, silla tapizada y televisión de pantalla plana.</figcaption>
+        </figure>
+        <p>Durabilidad no es un adjetivo, es un protocolo de ensayo. Los tableros y las mesas se evalúan bajo BIFMA X5.5-2021, que mide carga estática, carga concentrada y resistencia de cajones y puertas. Las sillas y los asientos siguen BIFMA X5.1, con ciclos de carga repetida sobre el respaldo y el asiento. Cuando una ficha técnica dice únicamente «alta resistencia», usted no tiene nada que comparar: pida el informe por número de norma y por lote.</p>
+        <p>Los puntos que más fallan en operación no son los ensayos grandes, sino los herrajes. Guías de cajón sin amortiguación, bisagras sin regulación y tiradores atornillados a un canto fino se rompen antes que el tablero. Exija ciclos de apertura por escrito y especifique herraje de marca reconocida o equivalente aprobado. Para el tapizado del cabecero, BS 5852 sigue siendo la referencia que piden los proyectos con normativa de incendio estricta. Un cabecero bien construido lleva el tapizado sobre una base rígida, no sobre espuma expuesta, y eso alarga la vida del textil frente al roce diario de las maletas.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo comparar proveedores: coste, MOQ y plazo</h2>
+        <p>Comparar presupuestos de casegoods sin normalizar el alcance es la forma más rápida de elegir mal. Un proveedor cotiza sin herrajes, otro sin embalaje de exportación y un tercero sin instalación: los tres parecen competir y no compiten. Fije primero un Bill of Materials por tipología de habitación, con cantidades y acabados, y pida el precio sobre ese documento común. Cuando todos cotizan lo mismo, el precio deja de ser una adivinanza y se vuelve comparable de verdad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de proveedor</th><th>Fortaleza principal</th><th>Riesgo o límite</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de proveedor">Fábrica directa en Asia</td><td data-label="Fortaleza principal">Coste y volumen con control de calidad propio</td><td data-label="Riesgo o límite">Exige especificación cerrada y muestras firmadas</td></tr>
+              <tr><td data-label="Tipo de proveedor">Importador local en destino</td><td data-label="Fortaleza principal">Entrega rápida y repuestos cerca de la obra</td><td data-label="Riesgo o límite">Menos margen de personalización por proyecto</td></tr>
+              <tr><td data-label="Tipo de proveedor">Taller local de mobiliario</td><td data-label="Fortaleza principal">Ajuste fino a medidas atípicas</td><td data-label="Riesgo o límite">Capacidad limitada para lotes de 200 habitaciones o más</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En la parte económica, la ventaja de coste del 30-50 % frente a la compra en Europa es real, pero se calcula sobre precio FOB de referencia y no sobre el precio final puesto en obra. A ese precio hay que sumar flete marítimo, seguro, arancel, transporte interno e instalación. Una fábrica fundada en 1996, con más de 300.000 m² y más de 1.000 trabajadores cualificados, sostiene ese ahorro porque compra madera y herraje a escala, no porque recorte el ensayo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Concepto</th><th>Rango de referencia</th><th>Cómo verificarlo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Concepto">Plazo de producción</td><td data-label="Rango de referencia">45-60 días desde la muestra aprobada</td><td data-label="Cómo verificarlo">Hitos por lote escritos en el contrato</td></tr>
+              <tr><td data-label="Concepto">Ventaja de coste frente a Europa</td><td data-label="Rango de referencia">30-50 %</td><td data-label="Cómo verificarlo">Comparar precio FOB de referencia, no el precio final</td></tr>
+              <tr><td data-label="Concepto">Muestra de acabado</td><td data-label="Rango de referencia">Un juego por proyecto</td><td data-label="Cómo verificarlo">Aprobación por escrito antes de fabricar</td></tr>
+              <tr><td data-label="Concepto">Flete y seguro</td><td data-label="Rango de referencia">Según volumen y puerto de destino</td><td data-label="Cómo verificarlo">Incluir en el costo total del FF&amp;E</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El MOQ también ordena la conversación. Un paquete de una sola habitación no justifica utillaje nuevo ni acabados exclusivos; en cambio, un proyecto de 120 habitaciones sí permite desarrollar un perfil propio. Si su volumen está entre esos dos extremos, mi recomendación es usar la línea de catálogo para las piezas grandes y reservar la personalización para el cabecero y el frente del armario, que es lo que el huésped recuerda.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Checklist de compra y errores que encarecen el FF&amp;E</h2>
+        <p>Antes de firmar, verifique cinco cosas: medidas contrastadas con el plano de arquitectura, acabado aprobado con muestra física, herrajes con marca y ciclos, informe de emisiones por lote y fechas de entrega por etapas. Si alguno de esos puntos queda en un correo informal, en obra se convierte en discusión. Puede revisar fichas y configuraciones en /productos/ y comparar criterios de especificación en /recursos/blog/ antes de cerrar el alcance.</p>
+        <p>Los errores más caros que veo se repiten. El primero es aprobar acabados después de emitir la orden de compra. El segundo es mezclar mobiliario fijo de obra con casegoods de fábrica sin unificar el color. El tercero es calcular el presupuesto solo con el precio del mueble y descubrir el flete al final. El cuarto es ignorar los repuestos: un hotel necesita poder reponer una bisagra o una chapa de canto durante diez años, y eso se pacta, no se improvisa. El quinto error es no reservar del presupuesto un porcentaje para reposición y para los daños normales de la primera temporada.</p>
+        <p>El equilibrio real no está entre caro y barato, sino entre control y velocidad. Comprar de catálogo con un proveedor experimentado reduce riesgo y acorta el plazo; desarrollar cada pieza da un resultado único pero alarga el calendario y sube el coste unitario. Para la mayoría de proyectos hoteleros de 80 a 400 habitaciones, la combinación que mejor funciona es catálogo en lo estructural y diseño propio en los elementos visibles. Si quiere una estimación cerrada, envíe su lista de habitaciones por /contacto/ y la revisamos contra las medidas de esta guía.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización, muestra y Bill of Materials"
+      text="Envíe la lista de habitaciones y las medidas de referencia y le devolvemos una cotización con precio FOB de referencia, opciones de acabado y plazo de producción de 45-60 días. Fabricamos en más de 300.000 m² con más de 1.000 trabajadores cualificados y entregamos en más de 50 países, con ventaja de coste del 30-50 %. Escríbanos por /contacto/ para coordinar muestra física y visita de proyecto."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

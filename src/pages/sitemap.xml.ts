@@ -14,6 +14,8 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/muebles-cuarto-hotel-casegoods/",
+  "/recursos/mesa-comedor-medidas/",
   "/recursos/mobiliario-lobby-recepcion-hotel/",
   "/recursos/escritorios-elevables-guia/",
   "/recursos/sillas-restaurante-como-elegir/",

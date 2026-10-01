@@ -1,0 +1,456 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Medidas de mesa de comedor: guía para 4, 6, 8 y 10 personas";
+const pageDescription = "Medidas de mesa de comedor para 4, 6, 8 y 10 personas: tamaño del tablero, altura, espacio libre y pasillos según la forma y el material.";
+const keywords = [
+  "medidas mesa de comedor",
+  "mesa de comedor 6 personas",
+  "tamaño de mesa para 8 personas",
+  "altura mesa de comedor",
+  "mesa comedor redonda o rectangular",
+  "espacio pasillo comedor"
+];
+const canonicalPath = "/recursos/mesa-comedor-medidas/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD1-es25-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-01";
+const dateModified = "2026-10-01";
+const publicationDateLabel = "Publicada el 1 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto mide una mesa de comedor para 4 personas?", answer: "Para cuatro personas, la medida de referencia es 120 × 80 cm, con 60 cm de ancho por comensal. Si el espacio lo permite, una mesa de 130 a 140 cm ofrece más holgura para fuentes y bandejas. El fondo de 80 cm es el mínimo cómodo; por debajo, el centro de la mesa queda demasiado ajustado." },
+    { question: "¿Qué tamaño de mesa necesito para 6 u 8 personas?", answer: "Para seis personas, 160 × 90 cm; para ocho, 200 × 100 cm. Estas medidas asumen 60 cm de ancho por plaza y un fondo que permite colocar una fuente central. Si su sala es estrecha, considere una mesa extensible que pase de 120 a 180 cm solo en ocasiones." },
+    { question: "¿Cuánto espacio libre hay que dejar alrededor de la mesa?", answer: "Deje 90 cm en cada lado con sillas y 110 cm donde haya circulación hacia la cocina o la entrada. Esas distancias se miden desde el borde del tablero, con la silla retirada en posición de uso. Sin ellas, la mesa cabe en el plano pero no se usa con comodidad." },
+    { question: "¿A qué altura debe estar el tablero de una mesa de comedor?", answer: "El tablero se sitúa a 75 cm del suelo y el asiento a 45 cm, con 62 a 65 cm libres entre el asiento y la parte inferior del tablero. Esa relación permite apoyar los codos y cruzar las piernas. Confirme que sus sillas actuales respetan los 45 cm antes de comprar la mesa." },
+    { question: "¿Es mejor una mesa redonda o rectangular?", answer: "La rectangular aprovecha mejor los comedores alargados y permite usar los extremos, mientras la redonda reparte mejor las distancias y evita esquinas. Hasta seis personas, la redonda funciona muy bien; por encima de ocho, la rectangular de 200 a 240 cm es más práctica. La forma de la sala suele decidir el empate." },
+    { question: "¿Qué material de tablero conviene para el uso diario?", answer: "La madera maciza se puede lijar y recuperar, la chapa sobre núcleo estable mantiene tableros grandes sin deformarse y la piedra o el compacto resisten mejor las manchas y el calor. Cada uno tiene un coste de mantenimiento distinto. Con niños pequeños y comidas diarias, la madera con acabado protector suele ser la opción más equilibrada." },
+    { question: "¿Se puede fabricar una mesa de comedor a medida?", answer: "Sí, y se justifica cuando el comedor es irregular o necesita un tamaño intermedio entre los estándar. La fabricación a medida mantiene el plazo de producción de 45-60 días y una ventaja de coste del 30-50 % frente a la compra minorista. Conviene definir medidas, forma y material antes de confirmar el pedido." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD1-es25-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1001-es25-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1001-es25-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hogar · Comedor &middot; {publicationDateLabel}</p>
+          <h1>Medidas de mesa de comedor: cómo elegir el tamaño para 4, 6, 8 y 10 personas</h1>
+          <p>La respuesta corta: cuatro comensales caben en 120 × 80 cm, seis en 160 × 90 cm, ocho en 200 × 100 cm y diez en 240 × 110 cm, con el tablero a 75 cm del suelo y entre 62 y 65 cm de espacio libre por debajo. A esas cifras hay que añadir la circulación, que es donde fallan la mayoría de los comedores: 90 cm en los lados donde hay sillas y 110 cm cuando ese paso conduce hacia la cocina o la puerta principal. Con estas medidas resueltas, la mesa deja de elegirse por intuición y pasa a elegirse por geometría. Si su comedor es pequeño, la primera decisión no es la forma, sino cuántas plazas necesita de verdad: una mesa para diez que se usa tres veces al año rara vez compensa el espacio que ocupa el resto del tiempo. En los siguientes apartados encontrará las tablas completas por número de comensales, los valores de paso libre y altura, y los criterios para decidir entre madera, piedra y compacto.</p>
+          <p>Esta guía reúne las medidas que aplico al revisar planos de vivienda y proyectos de interiorismo, contrastadas con la norma EN 12521:2015 sobre seguridad, resistencia y estabilidad del mobiliario doméstico de mesa. Detrás está Guangdong Hongye Furniture Group Co., Ltd., empresa fundada en 1996, con más de 300.000 m² de planta, más de 1.000 trabajadores cualificados y más de 1.000 proyectos entregados en más de 50 países, que produce bajo certificación BIFMA, GREENGUARD Gold, FSC y CE, con una ventaja de coste del 30-50 % y un plazo de producción de 45-60 días. Puede ver las series domésticas en /productos/ antes de decidir el tamaño.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-es25-hero.jpg" alt="Comedor familiar con mesa de madera maciza y sillas tapizadas" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Medidas de mesa de comedor según el número de comensales</h2>
+        <p>Todo parte de una cifra: 60 cm de ancho de tablero por comensal. Es la anchura que permite colocar un plato, un vaso y los cubiertos sin invadir al vecino, y por debajo de 55 cm por plaza dos adultos terminan chocando los codos. La norma EN 12521:2015 regula la resistencia, la durabilidad y la estabilidad de las mesas de uso doméstico, así que cualquier mesa que compre debería cumplirla; lo que no fija esa norma es el tamaño, y ahí conviene guiarse por la ergonomía. Mi regla es no bajar de 80 cm de profundidad: por debajo, el centro de la mesa queda demasiado cerca de los platos y no cabe una fuente para compartir. A partir de 90 cm de fondo, el tablero gana una zona central útil donde colocar bandejas o una pieza decorativa sin apretar a nadie.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Comensales</th><th>Tamaño de tablero</th><th>Ancho por plaza</th><th>Fondo recomendado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Comensales">4 personas</td><td data-label="Tamaño de tablero">120 × 80 cm</td><td data-label="Ancho por plaza">60 cm</td><td data-label="Fondo recomendado">80 cm</td></tr>
+              <tr><td data-label="Comensales">6 personas</td><td data-label="Tamaño de tablero">160 × 90 cm</td><td data-label="Ancho por plaza">60-64 cm</td><td data-label="Fondo recomendado">90 cm</td></tr>
+              <tr><td data-label="Comensales">8 personas</td><td data-label="Tamaño de tablero">200 × 100 cm</td><td data-label="Ancho por plaza">62-65 cm</td><td data-label="Fondo recomendado">100 cm</td></tr>
+              <tr><td data-label="Comensales">10 personas</td><td data-label="Tamaño de tablero">240 × 110 cm</td><td data-label="Ancho por plaza">60-66 cm</td><td data-label="Fondo recomendado">110 cm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Si la mesa va pegada a una pared, recuerde que las plazas de los extremos quedan condicionadas: en una mesa de 160 cm con sillas solo en los lados largos caben cuatro personas cómodas, no seis. Para aprovechar las cabeceras hacen falta al menos 70 cm de fondo libre en cada extremo, además del espacio necesario para retirar la silla. La tabla siguiente resume las medidas que funcionan mejor según la forma del tablero, un factor que pesa tanto como el número de plazas.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Forma</th><th>Medidas típicas</th><th>Comensales</th><th>Cuándo conviene</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Forma">Rectangular</td><td data-label="Medidas típicas">120 × 80 a 240 × 110 cm</td><td data-label="Comensales">4 a 10</td><td data-label="Cuándo conviene">Comedores alargados y mesas junto a pared</td></tr>
+              <tr><td data-label="Forma">Cuadrada</td><td data-label="Medidas típicas">90 × 90 a 120 × 120 cm</td><td data-label="Comensales">4 a 8</td><td data-label="Cuándo conviene">Espacios reducidos y conversación cercana</td></tr>
+              <tr><td data-label="Forma">Redonda</td><td data-label="Medidas típicas">Diámetro de 110 a 150 cm</td><td data-label="Comensales">4 a 8</td><td data-label="Cuándo conviene">Salas sin esquinas y reparto uniforme</td></tr>
+              <tr><td data-label="Forma">Ovalada</td><td data-label="Medidas típicas">150 × 90 a 220 × 100 cm</td><td data-label="Comensales">6 a 8</td><td data-label="Cuándo conviene">Suaviza esquinas sin perder longitud útil</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una observación que ahorra discusiones: una mesa redonda de 130 cm de diámetro admite seis personas con más holgura que una rectangular de 140 cm, porque nadie queda atrapado en una esquina. A cambio, ocupa una huella cuadrada mayor de 1,3 m por lado y no se apoya bien contra una pared. En comedores estrechos de menos de 3 m de ancho, la rectangular sigue siendo la opción más eficiente.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuánto espacio libre necesita alrededor de la mesa</h2>
+        <p>El error más frecuente no es la mesa, sino el pasillo. Reviso planos con cierta frecuencia y en la mayoría el tamaño del tablero está bien calculado, pero el paso perimetral queda por debajo de lo necesario. Sin 90 cm libres en los lados con sillas, nadie se sienta ni se levanta con comodidad; sin 110 cm donde hay tránsito hacia la cocina, cada comida se convierte en un juego de esquivar sillas. Estas cifras se miden desde el borde del tablero, no desde el respaldo de la silla, porque al comer la silla se retira hacia atrás.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-es25-s1.jpg" alt="Mesa ovalada de piedra clara con base metálica y sillas tapizadas en sala de exposición" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mesa de comedor ovalada con tablero de piedra clara y base metálica, exhibida con sillas tapizadas.</figcaption>
+        </figure>
+        <p>Si el espacio es justo, hay dos soluciones honestas. La primera es reducir el tamaño del tablero y aceptar una plaza menos de las previstas; la segunda es dejar la mesa arrimada a la pared y usarla como isla de cuatro plazas en el día a día, reservando el lado libre para las comidas grandes. La tercera, muy habitual en pisos de dos ambientes, es una mesa extensible de 120 a 180 cm, que resuelve el caso puntual sin ocupar el comedor todo el año.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de paso</th><th>Ancho libre mínimo</th><th>Cuándo aplicarlo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de paso">Circulación de servicio</td><td data-label="Ancho libre mínimo">110 cm</td><td data-label="Cuándo aplicarlo">Paso hacia cocina o entrada principal</td></tr>
+              <tr><td data-label="Tipo de paso">Sentarse y levantarse</td><td data-label="Ancho libre mínimo">90 cm</td><td data-label="Cuándo aplicarlo">Cada lado con sillas</td></tr>
+              <tr><td data-label="Tipo de paso">Mesa contra pared</td><td data-label="Ancho libre mínimo">60 cm</td><td data-label="Cuándo aplicarlo">Solo circulación estrecha, sin usar esa plaza</td></tr>
+              <tr><td data-label="Tipo de paso">Paso entre muebles</td><td data-label="Ancho libre mínimo">100-120 cm</td><td data-label="Cuándo aplicarlo">Comedor con aparador o vitrina</td></tr>
+              <tr><td data-label="Tipo de paso">Plaza accesible</td><td data-label="Ancho libre mínimo">90 cm de ancho útil</td><td data-label="Cuándo aplicarlo">Lado sin cabecera para silla de ruedas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Mida siempre con la silla ocupada. Coloque la silla en posición de uso, siéntese y compruebe que quien pasa por detrás no le empuja. Ese gesto de dos minutos evita comprar una mesa que en la tienda parecía pequeña y en casa bloquea el paso. Si desea ver cómo aplicamos estas holguras en distribuciones reales, en /recursos/blog/ publicamos ejemplos de comedores resueltos paso a paso.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Rectangular, redonda o cuadrada: cómo elegir la forma</h2>
+        <p>La forma decide más cosas que la estética. Una mesa rectangular concentra el espacio en los lados largos: es ideal si a diario son cuatro personas y en celebraciones quiere llegar a ocho con los extremos ocupados. La redonda reparte mejor la distancia entre comensales —todos quedan entre 60 y 70 cm del centro— y facilita la conversación, pero necesita más huella para el mismo número de plazas. La cuadrada es un caso intermedio: funciona bien hasta cuatro personas y se vuelve incómoda cuando el grupo crece.</p>
+        <p>En mi experiencia, el factor que rompe el empate es la forma de la sala. Comedor alargado y estrecho: rectangular. Comedor casi cuadrado con acceso por dos lados: redonda u ovalada. Salas con isla de cocina integrada: rectangular, alineada con la isla para no crear un laberinto. Y si la pared o el techo tienen ángulos muy marcados, la ovalada suele ser el compromiso que menos discute con el espacio disponible.</p>
+        <p>Hay un límite que conviene conocer: por encima de ocho comensales, la mesa redonda pierde eficiencia, porque el diámetro necesario supera los 150 cm y deja un centro tan grande que nadie alcanza la fuente. A partir de ahí, la rectangular de 200 a 240 cm es más práctica y aprovecha mejor la sala. La forma no es una cuestión de gusto aislado: determina cuántas plazas reales obtiene del mismo espacio.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Altura del tablero, de la silla y espacio bajo la mesa</h2>
+        <p>La altura es la medida que menos se discute y más incomodidad genera cuando está mal resuelta. El tablero de comedor se sitúa a 75 cm del suelo y el asiento a 45 cm, una diferencia de 30 cm que permite comer con los codos apoyados sin encogerse. Entre el asiento y la parte inferior del tablero deben quedar 62 a 65 cm libres; por debajo de esa cifra, las piernas no cruzan y la comida se vuelve incómoda en veinte minutos. Con las mesas altas de barra los valores cambian por completo y conviene tratarlas como otra categoría.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-es25-s2.jpg" alt="Textura de piedra natural en tonos crema y gris vista en primer plano" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Detalle del veteado de una superficie de piedra pulida en tonos crema y gris para tableros de comedor.</figcaption>
+        </figure>
+        <p>Un detalle que muchos catálogos omiten: si sus sillas tienen brazos, necesita aún más franqueo bajo el tablero y, sobre todo, sillas que se guarden bien. Una mesa con faldón profundo impide recoger las sillas, y entonces ocupa 40 cm más de lo previsto en el plano. Antes de comprar, compruebe la altura del asiento de sus sillas actuales: si no coincide con los 45 cm estándar, la mesa nueva puede quedar descompensada. Mezclar alturas distintas es el error que más veces he visto obligar a cambiar una mesa entera.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Medida de referencia</th><th>Criterio práctico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Altura del tablero</td><td data-label="Medida de referencia">75 cm</td><td data-label="Criterio práctico">Estándar en comedor doméstico</td></tr>
+              <tr><td data-label="Elemento">Altura del asiento</td><td data-label="Medida de referencia">45 cm</td><td data-label="Criterio práctico">Mantiene 30 cm hasta el tablero</td></tr>
+              <tr><td data-label="Elemento">Espacio libre bajo el tablero</td><td data-label="Medida de referencia">62-65 cm</td><td data-label="Criterio práctico">Permite cruzar las piernas</td></tr>
+              <tr><td data-label="Elemento">Fondo útil por plaza</td><td data-label="Medida de referencia">40 cm</td><td data-label="Criterio práctico">Del borde del tablero al frente del asiento</td></tr>
+              <tr><td data-label="Elemento">Grosor del tablero</td><td data-label="Medida de referencia">2-4 cm en madera; 1-2 cm en piedra</td><td data-label="Criterio práctico">Influye en el peso y en el apoyo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las normas de mobiliario fijan estas relaciones de forma más general. La EN 12521:2015 se centra en resistencia y estabilidad, y en mobiliario escolar la EN 1729-1 establece alturas por talla del usuario, un enfoque que en casa no aplica: el comedor se resuelve con una altura común para todos. Por eso, antes de buscar excepciones, confirme que la mesa cumple 75 cm de tablero y 62-65 cm de hueco; son los dos valores que garantizan comodidad a cualquier edad.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Material del tablero: madera maciza, chapa, piedra o compacto</h2>
+        <p>El material cambia el mantenimiento más que el uso. La madera maciza envejece bien, se puede lijar y recuperar, y aguanta décadas; a cambio, se mueve con la humedad y conviene protegerla de los líquidos calientes. La chapa de madera sobre núcleo estable ofrece la misma veta con mucha menos deformación en tableros grandes, aunque no admite lijados profundos. La piedra y el compacto resisten manchas y calor, pero pesan más, cuestan más y transmiten frío al apoyar los brazos. No hay un material superior en abstracto: hay un material adecuado a cómo come su familia.</p>
+        <p>Si elige madera, exija trazabilidad. La certificación FSC-STD-40-004 V3-1 garantiza la cadena de custodia del material forestal y, para los tableros compuestos, conviene comprobar el cumplimiento de emisiones: la EPA TSCA Título VI y la CARB Fase 2 limitan el formaldehído en paneles de madera, un punto relevante porque el comedor es una estancia cerrada y de uso diario. Estos documentos se piden una vez y protegen durante años; en mi experiencia, un proveedor que no los tiene a mano rara vez controla el resto del proceso.</p>
+        <p>El compromiso real aparece entre durabilidad y coste. La piedra natural y el compacto encabezan la resistencia a manchas; la madera maciza encabeza la reparabilidad; la chapa sobre núcleo encabeza la relación entre precio y superficie continua. Si en la casa hay niños pequeños y comidas diarias, un tablero de madera con acabado protector suele dar mejor resultado que una piedra clara, que muestra cada huella. Decida primero el uso y después el material, no al contrario.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo medir su comedor antes de comprar la mesa</h2>
+        <p>Antes de abrir catálogos, tome tres medidas. Primero, el ancho y el largo libres de la sala, sin contar muebles fijos. Segundo, la distancia entre la mesa prevista y la pared más cercana, en el punto más estrecho. Tercero, el recorrido de las puertas y de los cajones que deban abrirse. Con esas tres cifras puede descartar la mitad de los tamaños sin salir de casa y descubrir si el problema real es la mesa o la distribución del comedor.</p>
+        <p>Después decida qué es estándar y qué conviene fabricar a medida. Un tablero rectangular de 120 a 200 cm se resuelve bien con producción estándar, más rápida y económica. Si su comedor es irregular, si necesita un tamaño intermedio —por ejemplo 175 cm— o si quiere la misma veta en la mesa y en un aparador, la fabricación a medida se justifica. El plazo de producción de 45-60 días se aplica a los proyectos a medida, con una ventaja de coste del 30-50 % frente a la compra minorista local.</p>
+        <p>Si prefiere partir del precio antes de decidir la forma, consulte las mesas y sillas disponibles en /productos/ y compárelas con las medidas de su sala. Para dudas concretas de distribución, puede escribir a /contacto/ con las medidas de su comedor y una foto del espacio: le indicaremos qué tamaño realista admite el hueco. Un comedor bien medido se disfruta veinte años; uno elegido por intuición se cambia antes de la tercera cena.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Resuelva el tamaño de su mesa con asesoría de medidas"
+      text="Envíe las medidas de su comedor y recibirá una recomendación de tamaño, forma y material, además del catálogo doméstico para descargar. Escríbanos por /contacto/ o indíquenos en /productos/ la serie que le interesa y coordinamos una visita al showroom. La producción a medida mantiene el plazo de 45-60 días."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
