@@ -196,6 +196,22 @@ const projectReferenceText =
     secondaryHref={data.catalogHref}
   />
 
+  {section === "residencial" && (
+    <section class="residential-routing" aria-labelledby="residential-routing-title">
+      <div class="container residential-routing__inner">
+        <div>
+          <p class="eyebrow">Antes de continuar</p>
+          <h2 id="residential-routing-title">¿Compra para una promoción residencial o para tu propia vivienda?</h2>
+          <p>
+            Hymueble atiende desarrollos, apartamentos, unidades modelo y compras por lote. Para una villa, casa de lujo o penthouse propio,
+            y para estudios de interiorismo pequeños, la línea residencial indicada en español es Hymobiliario.
+          </p>
+        </div>
+        <a href="https://hymobiliario.com/" target="_blank" rel="noopener noreferrer">Visitar Hymobiliario &rarr;</a>
+      </div>
+    </section>
+  )}
+
   <section class="section alt">
     <div class="container">
       <SectionHead
@@ -297,3 +313,13 @@ const projectReferenceText =
 
   <CTA />
 </BaseLayout>
+
+<style>
+  .residential-routing { padding: 28px 0; background: #e8f1f4; }
+  .residential-routing__inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+  .residential-routing h2 { margin: 0; color: #143c4e; font-size: 1.4rem; }
+  .residential-routing p { max-width: 820px; margin: 9px 0 0; color: #405966; line-height: 1.65; }
+  .residential-routing a { flex: 0 0 auto; color: #fff; background: #17627b; border-radius: 6px; padding: 12px 16px; font-weight: 700; text-decoration: none; }
+  .residential-routing a:hover { background: #104e63; }
+  @media (max-width: 760px) { .residential-routing__inner { align-items: flex-start; flex-direction: column; } }
+</style>

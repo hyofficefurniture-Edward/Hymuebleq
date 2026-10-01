@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Hongye Furniture Group: mobiliario comercial y residencial a medida";
+const description = "Conoce las líneas del grupo: Hymueble para proyectos comerciales y Fenmi Casa para residencias, villas y estudios de interiorismo.";
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/grupo-y-marcas/">
+  <section class="brand-page">
+    <div class="container brand-page__intro">
+      <p class="eyebrow">Hongye Furniture Group</p>
+      <h1>Dos líneas de mobiliario para necesidades distintas</h1>
+      <p class="lead">
+        Elegir la línea correcta desde el inicio ayuda a preparar mejor las referencias, el alcance y la conversación de proyecto.
+      </p>
+    </div>
+
+    <div class="container brand-page__grid">
+      <article class="brand-card brand-card--commercial">
+        <p class="eyebrow">Commercial</p>
+        <h2>Hymueble: proyectos comerciales, hoteleros e institucionales</h2>
+        <p>
+          Para equipos de compras, operadores, desarrolladores, contratistas y diseñadores que necesitan coordinar cantidades,
+          especificaciones, muestras, fabricación y exportación para un proyecto.
+        </p>
+        <ul>
+          <li>Hoteles, oficinas, salud, educación y desarrollos inmobiliarios.</li>
+          <li>Alcances por volumen, documentación técnica y cotización por proyecto.</li>
+          <li>Fabricación a medida y apoyo de exportación desde China.</li>
+        </ul>
+        <a class="brand-card__cta" href="/contacto/">Hablar sobre un proyecto comercial &rarr;</a>
+      </article>
+
+      <article class="brand-card brand-card--residential">
+        <p class="eyebrow">Residential</p>
+        <h2>Hymobiliario: la línea residencial en español</h2>
+        <p>
+          Para propietarios y pequeños estudios de interiorismo que buscan definir mobiliario, materiales y detalles para una residencia en español.
+        </p>
+        <ul>
+          <li>Villas, mansiones, penthouses y residencias de alto nivel.</li>
+          <li>Soluciones para sala, dormitorio, vestidor, comedor y terrazas.</li>
+          <li>Acompañamiento para convertir planos, medidas o moodboards en piezas fabricables.</li>
+        </ul>
+        <a class="brand-card__cta" href="https://hymobiliario.com/" target="_blank" rel="noopener noreferrer">Visitar Hymobiliario &rarr;</a>
+      </article>
+    </div>
+
+    <section class="container brand-page__note" aria-labelledby="routing-title">
+      <h2 id="routing-title">¿Cuál sitio debo usar?</h2>
+      <p>
+        Si tu necesidad depende de un proyecto comercial, una compra por volumen o un sector institucional, continúa en Hymueble.
+        Si estás amueblando una vivienda propia o trabajas en un estudio de interiorismo pequeño para una villa o residencia, Hymobiliario es la línea en español indicada.
+      </p>
+    </section>
+  </section>
+</BaseLayout>
+
+<style>
+  .brand-page { padding: 76px 0 96px; background: #f6f5f2; }
+  .brand-page__intro { max-width: 820px; text-align: center; }
+  .eyebrow { margin: 0 0 12px; color: #9c742c; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  h1 { max-width: 760px; margin: 0 auto; color: #142536; font-size: clamp(2.2rem, 5vw, 4.15rem); line-height: 1.08; }
+  .lead { max-width: 670px; margin: 22px auto 0; color: #52606d; font-size: 1.15rem; line-height: 1.7; }
+  .brand-page__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 52px; }
+  .brand-card { padding: 38px; border: 1px solid #e6e0d7; border-radius: 14px; background: #fff; box-shadow: 0 10px 30px rgba(17, 29, 41, .06); }
+  .brand-card--commercial { border-top: 5px solid #a27831; }
+  .brand-card--residential { border-top: 5px solid #1b6a86; }
+  .brand-card h2 { margin: 0; color: #142536; font-size: 1.6rem; line-height: 1.25; }
+  .brand-card p, .brand-card li { color: #53616c; line-height: 1.7; }
+  .brand-card ul { padding-left: 20px; }
+  .brand-card__cta { display: inline-block; margin-top: 12px; color: #173f56; font-weight: 700; text-decoration: none; }
+  .brand-card__cta:hover { text-decoration: underline; }
+  .brand-page__note { max-width: 900px; margin-top: 44px; padding: 30px 36px; border-radius: 12px; background: #142536; color: #fff; }
+  .brand-page__note h2 { margin: 0; font-size: 1.35rem; }
+  .brand-page__note p { margin-bottom: 0; line-height: 1.7; color: #e0e8ed; }
+  @media (max-width: 760px) { .brand-page { padding: 52px 0 70px; } .brand-page__grid { grid-template-columns: 1fr; margin-top: 34px; } .brand-card { padding: 28px; } .brand-page__note { padding: 26px; } }
+</style>

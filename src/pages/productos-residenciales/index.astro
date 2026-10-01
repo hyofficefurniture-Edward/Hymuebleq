@@ -19,6 +19,11 @@ const canonicalUrl = "/productos-residenciales/";
       <div class="content-container">
         <h1>Mobiliario Residencial</h1>
         <p>Fabricante de mobiliario residencial con 12 productos especializados. Desde suites completas para apartamentos hasta mobiliario premium para villas y aticos, pasando por cocinas, banos y soluciones compactas para viviendas pequenas. Fabricacion a medida para promotores, constructoras y proyectos llave en mano.</p>
+        <aside class="fenmi-routing" aria-label="Derivación para vivienda particular">
+          <strong>¿Amueblas tu propia villa, casa o penthouse?</strong>
+          <span>Hymobiliario es la línea en español dedicada a propietarios y pequeños estudios de interiorismo.</span>
+          <a href="https://hymobiliario.com/" target="_blank" rel="noopener noreferrer">Ir a Hymobiliario &rarr;</a>
+        </aside>
       </div>
     </div>
 
@@ -113,6 +118,10 @@ const canonicalUrl = "/productos-residenciales/";
   .listing-header { background: var(--color-surface, #FFFFFF); padding: 48px 0; border-bottom: 1px solid var(--color-border, #E8E3D9); }
   .listing-header h1 { font-size: 32px; margin-bottom: 12px; color: var(--color-text, #2C2416); }
   .listing-header p { font-size: 15px; color: var(--color-text-light, #6B6358); max-width: 800px; }
+  .fenmi-routing { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; max-width: 800px; margin-top: 22px; padding: 15px 18px; border-left: 4px solid #17627b; background: #eef7f9; color: #244b58; font-size: 14px; }
+  .fenmi-routing span { flex: 1 1 300px; }
+  .fenmi-routing a { color: #17627b; font-weight: 700; text-decoration: none; }
+  .fenmi-routing a:hover { text-decoration: underline; }
   .content-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .section { padding: 48px 0; }
   .productos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }

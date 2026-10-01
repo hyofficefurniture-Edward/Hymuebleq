@@ -80,7 +80,18 @@ const socialIcon = (platform: string) => {
         <a href="/privacidad/">Privacidad</a>
       </div>
       <div class="hy-group-member">
-        <a href="https://hysdfurniture.com/about/" target="_blank" rel="noopener">Member of Hongye Furniture Group &rarr;</a>
+        <a href="/grupo-y-marcas/" aria-label="Conocer las marcas Hongye Furniture Group Commercial y Fenmi Casa Residential">
+          <img
+            class="group-brands-logo"
+            src="/assets/hymueble/brand/hongye-fenmi-commercial-residential.jpg"
+            alt="Hongye Furniture Group Commercial y Fenmi Casa Residential, marcas del grupo"
+            width="640"
+            height="640"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>Conoce nuestras marcas: proyectos comerciales y residencias a medida &rarr;</span>
+        </a>
       </div>
     </div>
   </div>
@@ -98,9 +109,19 @@ const socialIcon = (platform: string) => {
   .hy-group-member a {
     color: #999;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
   .hy-group-member a:hover {
     color: #666;
     text-decoration: underline;
+  }
+  .group-brands-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: #fff;
   }
 </style>
