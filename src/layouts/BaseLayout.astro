@@ -184,7 +184,7 @@ const organizationJsonLd = {
           }
         });
 
-        document.querySelectorAll<HTMLFormElement>("form[data-form-purpose='project-inquiry']").forEach((form) => {
+        document.querySelectorAll<HTMLFormElement>("form[data-form-purpose='commercial-rfq']").forEach((form) => {
           form.addEventListener("submit", async (event) => {
             if (form.dataset.demoForm !== undefined) {
               event.preventDefault();
@@ -205,14 +205,20 @@ const organizationJsonLd = {
               }
 
               const formData = new FormData(form);
-              const payload = Object.fromEntries(formData.entries());
+              const attachment = formData.get("attachment");
+              if (attachment instanceof File && attachment.size > 5 * 1024 * 1024) {
+                throw new Error("El archivo supera el límite de 5 MB.");
+              }
+              formData.set("source_url", window.location.href);
+              formData.set("source_path", window.location.pathname);
+              formData.set("referrer", document.referrer || "direct");
+              ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach((key) => {
+                const value = new URLSearchParams(window.location.search).get(key);
+                if (value) formData.set(key, value);
+              });
               const response = await fetch(form.action, {
                 method: "POST",
-                headers: {
-                  Accept: "application/json",
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(payload),
+                body: formData,
               });
               const result = await response.json().catch(() => null);
 
@@ -227,10 +233,12 @@ const organizationJsonLd = {
                 success.textContent = "¡Muchas gracias! Recibimos tu consulta. En menos de 24 horas un consultor te contactará por WhatsApp o correo.";
                 success.focus();
               }
-            } catch {
+            } catch (error) {
               form.classList.add("is-error");
               if (success) {
-                success.textContent = "No pudimos enviar tu consulta. Intenta nuevamente o escríbenos por WhatsApp.";
+                success.textContent = error instanceof Error && error.message.includes("5 MB")
+                  ? error.message
+                  : "No pudimos enviar tu solicitud. Intenta nuevamente o escríbenos por WhatsApp.";
                 success.focus();
               }
             } finally {
