@@ -12,6 +12,7 @@ const staticPaths = [
   "/showroom/",
   "/contacto/",
   "/privacidad/",
+  "/grupo-y-marcas/",
   "/recursos/",
   "/recursos/blog/",
   "/recursos/muebles-cuarto-hotel-casegoods/",
