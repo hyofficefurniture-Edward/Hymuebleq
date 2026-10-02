@@ -1,0 +1,453 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Renovación hotelera por fases: guía y presupuesto FF&E";
+const pageDescription = "Renovación hotelera por fases sin cerrar el hotel: cómo dividir alas y plantas, presupuestar el FF&E por etapa y fijar el calendario de instalación.";
+const keywords = [
+  "renovación hotelera por fases",
+  "renovación de hotel sin cerrar",
+  "renovación hotelera por etapas",
+  "presupuesto FF&E por etapas",
+  "calendario de instalación FF&E",
+  "proveedor FF&E hotelero"
+];
+const canonicalPath = "/recursos/renovacion-hotelera-fases-presupuesto/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD2-es16-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-02";
+const dateModified = "2026-10-02";
+const publicationDateLabel = "Publicada el 2 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué significa renovar por fases sin cerrar el hotel?", answer: "Significa dividir la obra en tramos de 40-80 habitaciones o de 1-2 plantas y trabajar en ellos mientras el resto del hotel sigue operando. Cada tramo tiene su propia ventana de obra, su Bill of Materials y su orden de compra. Las áreas comunes y las rutas de evacuación se mantienen libres durante toda la etapa." },
+    { question: "¿Cómo se dividen las etapas de una renovación hotelera?", answer: "Lo habitual es cortar por ala del edificio o por planta completa, en bloques de 40-80 habitaciones. La unidad de trabajo suele fijarla la instalación compartida: si dos plantas comparten retorno de aire o montante de fontanería, conviene cerrarlas juntas. La primera etapa se recomienda como planta piloto, de 1-2 plantas." },
+    { question: "¿Cuánto dura la producción del FF&E de cada etapa?", answer: "El plazo de producción de referencia es de 45-60 días, contado desde la aprobación por escrito de la muestra de acabado. A ese plazo hay que sumar flete, seguro, despacho y la ventana de instalación de 8-12 semanas por etapa. Por eso el calendario se planifica hacia atrás desde la fecha de reapertura de cada bloque." },
+    { question: "¿Cómo se reparte el presupuesto FF&E entre etapas?", answer: "No se reparte en partes iguales. Como referencia de planificación, el casegoods fijo concentra el 45-55 %, el mobiliario suelto y asientos el 20-25 %, y los textiles el 10-15 %. Conviene reservar un 5-8 % de contingencia desde la primera etapa y añadir el utillaje en la etapa piloto." },
+    { question: "¿Qué documentos y normas debe entregar el proveedor por etapa?", answer: "Informes de ensayo por lote, no solo certificados de planta. Para tableros y mesas, BIFMA X5.5-2021; para asientos, BIFMA X5.1-2011. En madera con origen trazable, FSC-STD-40-004 V3-1; en emisiones de formaldehído, EPA TSCA Título VI y CARB Fase 2." },
+    { question: "¿Cómo se controla la seguridad en obra con huéspedes alojados?", answer: "Con barreras físicas entre zonas, rutas de materiales separadas de las de huéspedes y salidas de evacuación siempre libres. En proyectos alineados con práctica estadounidense, la referencia es NFPA 101, Life Safety Code, que rige las condiciones de ocupación durante la obra. El horario de los trabajos ruidosos debe coordinarse con la operación del hotel." },
+    { question: "¿Cuánto se ahorra comprando a fábrica frente a Europa?", answer: "La ventaja de coste de referencia es del 30-50 % sobre el precio FOB, no sobre el precio final puesto en obra. A ese ahorro hay que sumar flete, seguro, arancel e instalación para obtener el coste total. Compare siempre sobre un Bill of Materials común, porque un alcance distinto invalida la comparación." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD2-es16-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1002-es16-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1002-es16-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hoteles · PIP y Renovación &middot; {publicationDateLabel}</p>
+          <h1>Renovación hotelera por fases: guía de planificación y presupuesto FF&amp;E</h1>
+          <p>Planificar una renovación hotelera por fases significa aceptar una regla dura: el hotel sigue vendiendo habitaciones mientras se trabaja. Por eso el proyecto se corta en tramos de 40-80 habitaciones o de 1-2 plantas, cada uno con una ventana de obra de 8-12 semanas, un Bill of Materials propio y una orden de compra separada. El inventario de FF&amp;E se reparte en tranches para que ninguna etapa consuma el presupuesto ni el stock de la siguiente. La secuencia habitual es: cerrar el bloque de habitaciones, desmontar, ajustar obra menor, instalar casegoods, punch list y reapertura. Si usted deja abiertas las especificaciones de la etapa 2 mientras instala la etapa 1, el calendario se rompe, porque los proveedores reservan capacidad por lote y un cambio tardío obliga a repetir utillaje y muestras. La referencia de medidas no cambia entre etapas —cama King de 193 × 203 cm, mesitas de noche de 55-60 cm de alto, tablero de escritorio a 72-76 cm y armario de 58-60 cm de profundidad— pero sí cambia la fecha en que cada bloque debe estar listo, y esa fecha gobierna todo el plan.</p>
+          <p>Esta guía recoge cómo estructuramos la renovación por etapas en proyectos reales: qué se compra en cada tranche, cómo se escalona el calendario entre muestras, producción y ventana de instalación, y qué documentos debe entregar el proveedor en cada fase. Guangdong Hongye Furniture Group Co., Ltd. es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 trabajadores cualificados y más de 1.000 proyectos entregados en más de 50 países, incluidos Latinoamérica, Oriente Medio y Europa. Trabajamos con más de 47 marcas hoteleras internacionales como referencia de estándar de producto, no como identificación de cliente.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD2-es16-hero.jpg" alt="Habitación de hotel con cama King, cabecero tapizado, escritorio y armario empotrado" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué cambia cuando la renovación se planifica por fases</h2>
+        <p>La diferencia entre renovar por fases y cerrar el hotel una temporada no es únicamente logística: cambia el contrato, el presupuesto y el riesgo. Cerrar el hotel concentra el trabajo y suele ser más rápido en obra, pero detiene los ingresos de todas las habitaciones al mismo tiempo. Renovar por fases mantiene ingresos parciales y obliga a un control más fino: obra con huéspedes implica horarios, ruido, polvo, rutas de servicio y evacuación. En proyectos alineados con la práctica estadounidense, la norma de seguridad humana que rige estas condiciones es NFPA 101, Life Safety Code, y exige mantener salidas y rutas de evacuación libres durante toda la obra.</p>
+        <p>En operación, el plan por fases también cambia la compra. Usted no emite una sola orden por 300 habitaciones; emite órdenes por tranche, con cantidades y acabados cerrados por bloque. Eso reduce el riesgo financiero y permite ajustar la siguiente etapa con lo aprendido en la anterior. El coste es una gestión más intensa: más hitos, más muestras y más coordinación con obra. En mi experiencia con proyectos de renovación en Latinoamérica y Oriente Medio, la etapa piloto —de una planta o unas 40 habitaciones— es la que evita los errores caros del resto del hotel, porque revela tiempos reales de desmontaje, instalación y repaso antes de repetir el modelo en las demás plantas.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo dividir el hotel en etapas: alas, plantas y habitaciones fuera de servicio</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD2-es16-s1.jpg" alt="Cama con cabecero gris, armario de madera clara y zona de office en suite hotelera." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Habitación de hotel con cama, cabecero tapizado, mesita de noche y armario empotrado en un proyecto de alojamiento.</figcaption>
+        </figure>
+        <p>El divisor más habitual es el ala del edificio o la planta completa, porque permite aislar instalaciones y personal. Pero lo que decide la unidad de trabajo es la infraestructura: si una planta comparte el retorno de aire acondicionado o el montante de fontanería con la siguiente, conviene cerrar ambas a la vez. Fuera de servicio, cada bloque necesita su propia ruta de materiales, su ascensor de obra y una barrera física que separe la zona de huéspedes de la zona intervenida. En hoteles con restaurante o salón en planta baja, conviene revisar además si la etapa toca el sistema de extracción o la climatización de esas áreas comunes, porque un corte de aire afecta a la operación del día.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Unidad de corte</th><th>Tamaño típico</th><th>Ventaja</th><th>Límite a gestionar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Unidad de corte">Planta completa</td><td data-label="Tamaño típico">1-2 plantas por etapa</td><td data-label="Ventaja">Aísla instalaciones y personal de obra</td><td data-label="Límite a gestionar">Exige ascensor de obra dedicado</td></tr>
+              <tr><td data-label="Unidad de corte">Ala del edificio</td><td data-label="Tamaño típico">40-80 habitaciones</td><td data-label="Ventaja">Mantiene ingresos en la otra ala</td><td data-label="Límite a gestionar">Coordinación de accesos y rutas</td></tr>
+              <tr><td data-label="Unidad de corte">Bloque por tipología</td><td data-label="Tamaño típico">20-40 habitaciones</td><td data-label="Ventaja">Menor inversión por tranche</td><td data-label="Límite a gestionar">Más hitos administrativos y muestras</td></tr>
+              <tr><td data-label="Unidad de corte">Suites y áreas públicas</td><td data-label="Tamaño típico">10-25 unidades</td><td data-label="Ventaja">Trabaja en horarios de baja ocupación</td><td data-label="Límite a gestionar">Interfiere con restaurante y lobby</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La secuencia que mejor funciona en hoteles de 150 a 400 habitaciones es empezar por una planta piloto, medir tiempos reales de instalación y solo entonces repetir el modelo. Esa primera etapa cuesta algo más por unidad porque absorbe los ajustes, pero da una curva de aprendizaje que reduce el riesgo de las siguientes. Si usted trabaja con habitaciones adaptadas, cada etapa debe incluir su proporción de unidades accesibles, no concentrarlas todas en la última, porque la normativa de accesibilidad se verifica planta por planta y una reapertura sin ese cupo obliga a reabrir el bloque cerrado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Presupuesto FF&amp;E por etapa: qué se compra en cada tranche</h2>
+        <p>El error de presupuesto más común es calcular el total del hotel y dividirlo en partes iguales por etapas. El FF&amp;E no se reparte así: la primera etapa suele incluir utillaje, muestras y la habitación piloto, y las últimas absorben reposición y repasos de instalación. La forma práctica es presupuestar por tranche con tres bloques —casegoods fijo, mobiliario suelto y textiles— más un fondo de contingencia reservado desde el inicio. Cada etapa se aprueba entonces con su propio número y no con una cuota heredada de la anterior, lo que permite detectar una desviación cuando todavía se puede corregir.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Bloque de compra</th><th>Cuándo se compra</th><th>Peso orientativo en el FF&amp;E</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Bloque de compra">Casegoods fijo (cabecero, armario, escritorio)</td><td data-label="Cuándo se compra">Etapa 1, tras aprobar la muestra</td><td data-label="Peso orientativo en el FF&amp;E">45-55 % (estimación de planificación)</td></tr>
+              <tr><td data-label="Bloque de compra">Mobiliario suelto y asientos</td><td data-label="Cuándo se compra">Por tranche, antes de cada instalación</td><td data-label="Peso orientativo en el FF&amp;E">20-25 % (estimación de planificación)</td></tr>
+              <tr><td data-label="Bloque de compra">Textiles y cortinas</td><td data-label="Cuándo se compra">Con cada tranche, según ventana</td><td data-label="Peso orientativo en el FF&amp;E">10-15 % (estimación de planificación)</td></tr>
+              <tr><td data-label="Bloque de compra">Piezas piloto y utillaje</td><td data-label="Cuándo se compra">Solo en la etapa 1</td><td data-label="Peso orientativo en el FF&amp;E">1-3 % adicional (estimación de planificación)</td></tr>
+              <tr><td data-label="Bloque de compra">Contingencia y reposición</td><td data-label="Cuándo se compra">Reservado desde el inicio</td><td data-label="Peso orientativo en el FF&amp;E">5-8 % (estimación de planificación)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Estos porcentajes son estimaciones de planificación, no cuotas cerradas: varían según nivel de marca, tipología y país de destino. En la parte económica, la ventaja de coste del 30-50 % frente a la compra en Europa se calcula sobre precio FOB de referencia y no sobre el precio final puesto en obra, porque al precio del mueble hay que sumar flete marítimo, seguro, arancel e instalación. Lo importante es reservar la contingencia desde la primera etapa, ya que los daños de instalación y los repasos casi siempre aparecen al final del calendario. Si la dirección quiere comparar proveedores, pida el desglose sobre un Bill of Materials por tipología de habitación: sin ese documento común, dos presupuestos nunca son comparables.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Calendario: muestras, producción y ventana de instalación</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD2-es16-s2.jpg" alt="Vista de armario de piso a techo y escritorio con televisor en habitación." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Armario empotrado y consola-escritorio junto a la zona de office de la misma habitación.</figcaption>
+        </figure>
+        <p>El calendario por etapas se gestiona hacia atrás desde la fecha de reapertura de cada bloque, no desde hoy. Se fijan cuatro hitos por tranche: aprobación de la muestra de acabado, cierre de especificaciones y BoM, salida de fábrica y ventana de instalación en destino. Entre el cierre de especificaciones y la entrega, el plazo de producción de 45-60 días es el intervalo de referencia, contado desde la muestra aprobada por escrito. Si ese reloj arranca tarde, ninguna presión posterior recupera la fecha: la producción de un lote no se comprime sin sacrificar control de calidad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Hito</th><th>Antelación orientativa</th><th>Responsable</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Hito">Aprobación de muestra de acabado</td><td data-label="Antelación orientativa">Semana 0 de la etapa</td><td data-label="Responsable">Estudio de diseño y propiedad</td></tr>
+              <tr><td data-label="Hito">Cierre de especificaciones y BoM</td><td data-label="Antelación orientativa">Semana 2-3</td><td data-label="Responsable">Comprador FF&amp;E y proveedor</td></tr>
+              <tr><td data-label="Hito">Producción y control de calidad</td><td data-label="Antelación orientativa">45-60 días</td><td data-label="Responsable">Fábrica y QC de proyecto</td></tr>
+              <tr><td data-label="Hito">Ventana de instalación</td><td data-label="Antelación orientativa">8-12 semanas por etapa</td><td data-label="Responsable">Contratista y supervisión de obra</td></tr>
+              <tr><td data-label="Hito">Punch list y reapertura</td><td data-label="Antelación orientativa">1-2 semanas por bloque</td><td data-label="Responsable">Propiedad y mantenimiento</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos detalles mueven fechas más de lo que parece. El primero es el transporte marítimo y el despacho en destino: sume flete, seguro y arancel al cronograma, no solo el plazo de producción. El segundo es la ruta de materiales dentro del hotel: si la instalación compite con el ascensor de huéspedes, la etapa se alarga. Reserve un montacargas de obra y una zona de acopio por etapa; el volumen de una sola planta puede superar los 20 m³ de cajas, y mover ese volumen por un ascensor compartido añade días a cada bloque.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Estándares y documentos que debe entregar el proveedor en cada etapa</h2>
+        <p>Cada etapa debe cerrarse con documentación, no solo con muebles instalados. Exigir los informes por tranche evita que un lote sin ensayo se descubra cuando ya está montado en la habitación. Las normas y certificados son los mismos para todo el hotel, pero el proveedor debe entregarlos por lote y por fecha de producción, no como un certificado general de planta que no responde por la etapa concreta.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Ámbito</th><th>Norma o documento</th><th>Qué debe entregar el proveedor</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Ámbito">Tableros y mesas</td><td data-label="Norma o documento">BIFMA X5.5-2021</td><td data-label="Qué debe entregar el proveedor">Informe de ensayo por lote de producción</td></tr>
+              <tr><td data-label="Ámbito">Asientos y sillas</td><td data-label="Norma o documento">BIFMA X5.1-2011</td><td data-label="Qué debe entregar el proveedor">Ciclos de carga sobre respaldo y asiento</td></tr>
+              <tr><td data-label="Ámbito">Gestión de calidad y ambiente</td><td data-label="Norma o documento">ISO 9001:2015 e ISO 14001:2015</td><td data-label="Qué debe entregar el proveedor">Certificado vigente con alcance de planta</td></tr>
+              <tr><td data-label="Ámbito">Madera y cadena de custodia</td><td data-label="Norma o documento">FSC-STD-40-004 V3-1</td><td data-label="Qué debe entregar el proveedor">Certificado de cadena de custodia</td></tr>
+              <tr><td data-label="Ámbito">Formaldehído en compuestos</td><td data-label="Norma o documento">EPA TSCA Título VI y CARB Fase 2</td><td data-label="Qué debe entregar el proveedor">Informe de laboratorio acreditado</td></tr>
+              <tr><td data-label="Ámbito">Ignifugado de tapizados</td><td data-label="Norma o documento">BS 5852</td><td data-label="Qué debe entregar el proveedor">Informe de ensayo si el proyecto lo exige</td></tr>
+              <tr><td data-label="Ámbito">Reacción al fuego de paneles y acabados</td><td data-label="Norma o documento">EN 13501-1 (clase B-s1,d0)</td><td data-label="Qué debe entregar el proveedor">Clasificación por elemento instalado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En proyectos alineados con la práctica estadounidense, la superficie de paneles y acabados también se documenta frente a ASTM E84, que mide la propagación de llama y el desarrollo de humo. Para interiores con ocupación continua, GREENGUARD Gold (UL 2818) acota la emisión de compuestos orgánicos volátiles y es útil porque se verifica con informe, no con declaración verbal. Nuestro enfoque combina ensayo de producto y gestión de planta: la base vigente es BIFMA + GREENGUARD Gold + FSC + CE, apoyada en ISO 9001:2015. Puede revisar fichas y configuraciones en /productos/ y el detalle técnico de cada ensayo en /recursos/blog/. Lo que importa en un proyecto por fases es que el informe llegue por lote: un certificado de planta no sustituye el ensayo de la producción de la etapa 3.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Errores frecuentes al renovar por fases (y cómo evitarlos)</h2>
+        <p>Los errores se repiten con nombre propio. El primero es aprobar acabados después de emitir la orden de compra: cualquier cambio de color retrasa el lote y suele costar más que la diferencia de precio entre dos proveedores. El segundo es mezclar mobiliario fijo de obra con casegoods de fábrica sin unificar el acabado, y descubrirlo al abrir la primera planta. El tercero es comprar cada tranche por separado sin un BoM común, lo que impide comparar precios y controlar repuestos. Los tres se evitan con la misma disciplina: cerrar la especificación de la etapa antes de comprarla.</p>
+        <p>El cuarto error es no planificar el acopio: prever una zona de buffer con el equivalente a una etapa y una tasa de reposición del 2-3 % es una recomendación de planificación que evita parar la instalación por una pieza dañada. El quinto es dejar la logística fuera del presupuesto y descubrir el flete al final. El sexto, y el más caro, es no reservar horas de supervisión de instalación: en obra hotelera, una puerta mal regulada o un cajón desalineado genera una visita de mantenimiento que ya se pagó dos veces. Si quiere cerrar el alcance por etapas con un solo interlocutor, envíe su listado de habitaciones y su calendario de reapertura por /contacto/ y le devolvemos un BoM por tranche con precio FOB de referencia.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E por etapas"
+      text="Envíe su listado de habitaciones y su calendario de reapertura y le devolvemos un Bill of Materials por tranche, con precio FOB de referencia, opciones de acabado y plazo de producción de 45-60 días. Fabricamos en más de 300.000 m² con más de 1.000 trabajadores cualificados y entregamos en más de 50 países. Escríbanos por /contacto/ para coordinar muestra de acabado y visita de proyecto."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
