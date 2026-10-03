@@ -1,0 +1,470 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Feria de Cantón 2026: mobiliario, fase 2 y compra FF&E";
+const pageDescription = "El mobiliario contract se exhibe en la segunda fase de la Feria de Cantón 2026 (23-27 de octubre). Guía de compra FF&E: fases, proveedores, MOQ y certificados.";
+const keywords = [
+  "feria de cantón 2026 mobiliario",
+  "en qué fase de la feria de cantón se exhibe el mobiliario",
+  "compra ffe feria de cantón",
+  "fases de la feria de cantón 2026",
+  "verificación de proveedores mobiliario contract",
+  "certificados y moq mobiliario de proyecto"
+];
+const canonicalPath = "/recursos/feria-canton-2026-mobiliario-fase-compra-ffe/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD1-a201-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-03";
+const dateModified = "2026-10-03";
+const publicationDateLabel = "Publicada el 3 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿En qué fase de la Feria de Cantón se exhibe el mobiliario?", answer: "El mobiliario se exhibe en la segunda fase, del 23 al 27 de octubre de 2026, bajo el eje temático de hogar de calidad. La segunda fase reúne además materiales de construcción y decoración, equipamiento de baño y artículos de decoración del hogar (Centro de Comercio Exterior de China, 2026). El mobiliario sanitario y de residencias de mayores corresponde a la tercera fase." },
+    { question: "¿Cuánto dura la Feria de Cantón y cuántas fases tiene?", answer: "La 140.ª edición se celebra en tres fases consecutivas entre el 15 de octubre y el 4 de noviembre de 2026, con dos periodos de recambio sin negociación abierta. La primera fase va del 15 al 19 de octubre, la segunda del 23 al 27 de octubre y la tercera del 31 de octubre al 4 de noviembre (Centro de Comercio Exterior de China, 2026). En total son algo más de dos semanas de actividad repartidas en tres tramos." },
+    { question: "¿Cómo registrarse como comprador en la Feria de Cantón?", answer: "El registro como comprador extranjero se hace por adelantado a través del sitio oficial del organizador, con datos de pasaporte y de empresa, y da acceso a una credencial de comprador que se recoge en el recinto. Los requisitos y los canales de pre-registro se actualizan cada edición, así que conviene verificarlos en la web del organizador y en la embajada o consulado correspondiente antes de reservar el viaje. La negociación en el recinto se desarrolla de 9:30 a 18:00 (web oficial de la Feria de Importación y Exportación de China, 2026)." },
+    { question: "¿Dónde se ve el mobiliario médico y de atención a mayores en la Feria de Cantón?", answer: "El mobiliario sanitario y de atención a mayores se concentra en la tercera fase, del 31 de octubre al 4 de noviembre de 2026, junto con el equipamiento médico. La segunda fase cubre camas, armarios y mobiliario de proyecto, pero no camas hospitalarias, carros clínicos ni mostradores sanitarios (web oficial de la Feria de Importación y Exportación de China, 2026). Si el proyecto es una clínica o una residencia, planifique la tercera fase desde el inicio." },
+    { question: "¿Qué certificados debe entregar el fabricante antes de producir?", answer: "Antes de liberar la producción debe recibir certificados vigentes con titular, alcance y fecha. En mobiliario de proyecto las referencias habituales son ISO 9001:2015 para gestión de calidad, BIFMA X5.5-2021 y BIFMA X5.1-2011 para resistencia, FSC-STD-40-004 V3-1 para cadena de custodia, GREENGUARD Gold (UL 2818) para emisiones bajas, CARB Fase 2 o EPA TSCA Título VI para tablero compuesto y CE para el marcado aplicable. Si el destino está en la Unión Económica Euroasiática, hay que sumar la documentación de conformidad EAC aplicable." },
+    { question: "¿Se puede visitar la fábrica durante la Feria de Cantón?", answer: "Sí; la visita a fábrica se coordina con cita previa y encaja bien en el recambio del 28 al 30 de octubre o en los días posteriores a la feria. La planta de Guangdong Hongye Furniture Group Co., Ltd. está en Heshan, Jiangmen (Guangdong), a unas dos horas de Guangzhou, y permite ver línea, muestras y control de calidad. Como referencia de calendario, Hongye entregó 295 habitaciones y más de 1.770 piezas para el Hilton Tashkent City (Taskent, Uzbekistán) en 52 días." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD1-a201-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1a2-a201-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1a2-a201-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Ferias · Compras FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Feria de Cantón 2026: en qué fase se exhibe el mobiliario y cómo planificar su compra FF&amp;E</h1>
+          <p>El mobiliario contract se exhibe en la segunda fase de la Feria de Cantón 2026, del 23 al 27 de octubre, bajo el eje temático de hogar de calidad. Esa es la semana en la que un comprador de FF&amp;E cierra la ronda de proveedores, pero no es la semana en la que empieza su trabajo: la agenda rentable arranca diez días antes, en la primera fase, del 15 al 19 de octubre, donde se negocian los insumos que después condicionan la instalación, como herrajes, iluminación, componentes eléctricos y materiales de acabado. Quien llega el 23 de octubre sin haber cerrado esos suministros suele descubrir que el mueble que quiere especificar depende de un herraje que ya se negoció en otro pabellón.</p>
+          <p>La Feria de Cantón es la feria de importación y exportación de China que se celebra dos veces al año en Cantón (Guangzhou). Su denominación oficial es Feria de Importación y Exportación de China y su nombre en inglés es Canton Fair. La edición de otoño de 2026 es la número 140 y se reparte en tres fases consecutivas entre el 15 de octubre y el 4 de noviembre, separadas por dos periodos de recambio sin negociación abierta.</p>
+          <p>Esta guía está escrita desde el lado de la compra y no del viaje. Reúne cómo usar las tres fases para abastecer un proyecto, qué preguntar en el recinto antes de firmar, qué documentos de certificación exigir y cómo encajar el calendario de un proyecto FF&amp;E con las fechas de feria. Guangdong Hongye Furniture Group Co., Ltd. es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 trabajadores cualificados y más de 1.000 proyectos entregados en más de 50 países, entre ellos Latinoamérica, Oriente Medio y Europa; trabaja con más de 47 marcas hoteleras internacionales como referencia de estándar de producto, no como identificación de cliente. Su planta está en Heshan, Jiangmen (Guangdong), a unas dos horas de Guangzhou.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-a201-hero.jpg" alt="Profesionales revisando especificaciones y muestrarios en una mesa de reunión en recinto ferial" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿En qué fase de la Feria de Cantón 2026 se exhibe el mobiliario?</h2>
+        <p>El mobiliario se exhibe en la segunda fase, del 23 al 27 de octubre de 2026, junto con los materiales de construcción y decoración, el equipamiento de baño y los artículos de decoración del hogar. La 140.ª edición se organiza en tres fases: la primera, del 15 al 19 de octubre; la segunda, del 23 al 27 de octubre; y la tercera, del 31 de octubre al 4 de noviembre (Centro de Comercio Exterior de China, 2026). La feria, por tanto, ocupa algo más de dos semanas de actividad repartidas en tres tramos, con dos interrupciones intermedias en las que no hay negociación abierta.</p>
+        <p>Para planificar la visita conviene fijar cinco referencias antes de reservar el desplazamiento. Las áreas de mobiliario se ubican en la segunda fase, bajo el eje temático de hogar de calidad, del 23 al 27 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). La superficie total de la 140.ª edición ronda los 1.550.000 m² y reúne a unos 32.000 expositores (web oficial de la Feria de Importación y Exportación de China, 2026). La edición anterior recibió compradores de 220 países y regiones, con 314.000 asistentes (web oficial de la Feria de Importación y Exportación de China, 2026). El recinto está en el número 382 de Yuejiang Zhong Road, distrito de Haizhu, Cantón, con horario de negociación de 9:30 a 18:00 (web oficial de la Feria de Importación y Exportación de China, 2026). Y los periodos de recambio son del 20 al 22 de octubre y del 28 al 30 de octubre, sin negociación abierta (web oficial de la Feria de Importación y Exportación de China, 2026).</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Fase</th><th>Fechas 2026</th><th>Qué se exhibe</th><th>Uso para su proyecto FF&amp;E</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Fase">1.ª · Fabricación avanzada</td><td data-label="Fechas 2026">15-19 de octubre</td><td data-label="Qué se exhibe">Herrajes, herramientas, iluminación, productos eléctricos y electrónicos</td><td data-label="Uso para su proyecto FF&amp;E">Compra previa: herraje, luminaria y accesorios que definen el mueble</td></tr>
+              <tr><td data-label="Fase">2.ª · Hogar de calidad</td><td data-label="Fechas 2026">23-27 de octubre</td><td data-label="Qué se exhibe">Mobiliario, materiales de construcción y decoración, equipamiento de baño, artículos de decoración</td><td data-label="Uso para su proyecto FF&amp;E">Ronda de muebles para hotel, oficina, educación y proyectos institucionales</td></tr>
+              <tr><td data-label="Fase">3.ª · Vida saludable</td><td data-label="Fechas 2026">31 de octubre - 4 de noviembre</td><td data-label="Qué se exhibe">Productos farmacéuticos y equipamiento médico, papelería de oficina</td><td data-label="Uso para su proyecto FF&amp;E">Mobiliario sanitario y de residencias de mayores; suministro de oficina</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una lectura de esa tabla ahorra viajes. El mobiliario no aparece en la primera fase, así que quien reserva un solo vuelo para la semana del 15 al 19 de octubre vuelve a casa sin ver muebles. Lo contrario también cuesta: presentarse el 23 de octubre sin haber visto herrajes ni iluminación obliga a especificar con el catálogo de un tercero y a asumir plazos que no controla. La pauta que funciona es doble, con una semana de separación: primera fase para insumos y segunda fase para mobiliario. Los días 20, 21 y 22 de octubre quedan entre ambas fases y no hay negociación abierta (web oficial de la Feria de Importación y Exportación de China, 2026), así que ese hueco se aprovecha para visitar fábricas o para desplazarse a Jiangmen y a Foshan, no para comprar en el recinto. Si su proyecto incluye baño y revestimiento, la segunda fase concentra también esos rubros y evita una tercera visita.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Por qué la compra FF&amp;E debe empezar en la primera fase (15-19 de octubre)</h2>
+        <p>Empezar en la primera fase no es una preferencia, es una consecuencia del proyecto. En una habitación de hotel el mueble no se entrega solo: lleva herraje, tirador, iluminación de cabecera, tomas y a veces perfilería metálica. Todo eso se negocia en la primera fase, con proveedores que después abastecen al propio fabricante de muebles. Si usted fija el herraje antes de comprar el mueble, controla acabado y plazo; si lo deja para el final, acepta lo que el fabricante tenga en catálogo.</p>
+        <p>Hay una segunda razón, de calendario. El herraje y la luminaria que llegan tarde retrasan el montaje aunque el mueble esté listo, porque la instalación se detiene en el detalle que falta. Si su cronograma fija la fecha de instalación, la compra de insumos en la primera fase es lo que protege ese compromiso. Cerrar herraje e iluminación antes de la ronda de muebles convierte además la segunda fase en una conversación técnica y no en una subasta de precios.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Insumo de la primera fase</th><th>Dónde se usa en el proyecto FF&amp;E</th><th>Riesgo si se compra tarde</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Insumo de la primera fase">Herrajes (bisagras, guías, tiradores)</td><td data-label="Dónde se usa en el proyecto FF&amp;E">Puertas de armario, cajones, mesitas de noche</td><td data-label="Riesgo si se compra tarde">Sustitución por catálogo del fabricante y acabado distinto</td></tr>
+              <tr><td data-label="Insumo de la primera fase">Iluminación (tiras LED, apliques, downlights)</td><td data-label="Dónde se usa en el proyecto FF&amp;E">Cabecero, espejo, baño, pasillo</td><td data-label="Riesgo si se compra tarde">Rebaje de especificación y mayor consumo eléctrico</td></tr>
+              <tr><td data-label="Insumo de la primera fase">Componentes eléctricos (tomas, USB, interruptores)</td><td data-label="Dónde se usa en el proyecto FF&amp;E">Mesita de noche, escritorio, zona de trabajo</td><td data-label="Riesgo si se compra tarde">Reapertura del tablero en obra y sobrecoste de instalación</td></tr>
+              <tr><td data-label="Insumo de la primera fase">Materiales de acabado y perfilería</td><td data-label="Dónde se usa en el proyecto FF&amp;E">Cantos, patas metálicas, marcos de espejo</td><td data-label="Riesgo si se compra tarde">Diferencia de tono entre lotes y rechazo en inspección</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Antes de subir al pabellón, prepare la lista de herrajes con referencia técnica y no con descripción genérica. Una anotación como «bisagra con cierre suave» no permite comparar; en cambio, ángulo de apertura, tipo de cierre, material y acabado sí. Lo mismo vale para la luminaria: temperatura de color, índice de reproducción cromática y tensión de alimentación. Con la lista cerrada, la primera fase se reduce a tres o cuatro pabellones y deja de ser un recorrido a ciegas. Si su organización compra también mobiliario de archivo y mostrador, la papelería de oficina aparece en la tercera fase, de modo que el suministro de escritorio y papelería se reparte entre la segunda y la tercera semana. Para proyectos en Riad (Arabia Saudí) o Ciudad de Panamá (Panamá), cerrar el herraje antes de la ronda de muebles evita además reespecificar cuando el barco ya está reservado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo filtrar proveedores en el recinto: preguntas de verificación y visita a fábrica</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-a201-s1.jpg" alt="Verificación de herrajes y acabados en mesa de taller de fábrica contract." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sofá modular blanco en sala luminosa de showroom residencial con detalles a medida.</figcaption>
+        </figure>
+        <p>En el pabellón, la pregunta que separa a un fabricante de un comercializador no es cuánto cuesta, sino quién produce. Un proveedor que no puede mostrar la planta, el proceso de control y los certificados a nombre del fabricante está revendiendo, y en un proyecto FF&amp;E eso se traduce en plazos y acabados que no controla. Haga tres preguntas antes de guardar la tarjeta: qué produce en planta propia, cómo controla la calidad por lote y qué certificados puede emitir a nombre de la fábrica.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Bloque a verificar</th><th>Pregunta concreta en el recinto</th><th>Documento o prueba que debe pedir</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Bloque a verificar">Producción</td><td data-label="Pregunta concreta en el recinto">¿Qué procesos son propios y cuáles se subcontratan (chapado, lacado, tapizado, metal)?</td><td data-label="Documento o prueba que debe pedir">Lista de procesos internos y capacidad diaria por línea</td></tr>
+              <tr><td data-label="Bloque a verificar">Control de calidad</td><td data-label="Pregunta concreta en el recinto">¿Cómo se inspecciona cada lote y quién firma el parte?</td><td data-label="Documento o prueba que debe pedir">Plan de QC por lote, con registro de defectos y criterios de aceptación</td></tr>
+              <tr><td data-label="Bloque a verificar">Certificaciones</td><td data-label="Pregunta concreta en el recinto">¿A nombre de qué empresa están emitidas?</td><td data-label="Documento o prueba que debe pedir">Copias de ISO 9001:2015, FSC-STD-40-004 V3-1 y GREENGUARD Gold, con titular visible</td></tr>
+              <tr><td data-label="Bloque a verificar">Embalaje de exportación</td><td data-label="Pregunta concreta en el recinto">¿Qué configuración usan para contenedor y cómo protegen los cantos?</td><td data-label="Documento o prueba que debe pedir">Ficha de embalaje y fotos de la caja con esquineros y film</td></tr>
+              <tr><td data-label="Bloque a verificar">Trazabilidad y repuestos</td><td data-label="Pregunta concreta en el recinto">¿Cómo se repone una pieza tres años después?</td><td data-label="Documento o prueba que debe pedir">Referencia de componentes y disponibilidad de repuesto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una visita a fábrica resuelve en dos horas lo que diez catálogos no aclaran. Si su viaje lo permite, reserve una jornada entre la segunda y la tercera fase, o durante el recambio del 28 al 30 de octubre, para ir a la planta: verá la línea, el almacén de chapa y el área de embalaje, y podrá pedir una muestra física de acabado. En Guangdong, el corredor de fabricación se concentra en Jiangmen, Foshan y Dongguan, a dos o tres horas de Guangzhou. Guangdong Hongye Furniture Group Co., Ltd. tiene su planta en Heshan, Jiangmen (Guangdong) y atiende visitas con cita previa para ver línea, muestras y control de calidad. Si necesita un criterio previo al viaje, en /recursos/fabricante-vs-distribuidor-muebles-comerciales-2026/ está la comparación entre fábrica e intermediario, con las señales que aparecen en una primera reunión.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué negociar antes de firmar: MOQ, plazo, embalaje, pago y certificados</h2>
+        <p>La negociación útil en feria se concentra en cinco cláusulas y no en el precio unitario. Un precio bajo con un MOQ mal definido o con un plazo sin hitos cuesta más que un precio medio con condiciones claras, porque el sobrecoste aparece en la instalación y no en la factura. Cierre por escrito, en la misma reunión, el MOQ por familia y acabado, el plazo contado desde la aprobación de la muestra, la configuración del embalaje, la forma de pago y la lista de certificados con su titular.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Cláusula</th><th>Referencia habitual en mobiliario de proyecto</th><th>Qué dejar por escrito</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Cláusula">MOQ</td><td data-label="Referencia habitual en mobiliario de proyecto">Se define por familia y acabado, no por artículo suelto</td><td data-label="Qué dejar por escrito">Cantidad mínima por línea, tolerancia y su efecto en el precio</td></tr>
+              <tr><td data-label="Cláusula">Plazo de producción</td><td data-label="Referencia habitual en mobiliario de proyecto">30-45 días desde la muestra de acabado aprobada</td><td data-label="Qué dejar por escrito">Fecha de inicio, hitos de avance y fecha de salida de fábrica</td></tr>
+              <tr><td data-label="Cláusula">Embalaje de exportación</td><td data-label="Referencia habitual en mobiliario de proyecto">Flat-pack, caja de cartón con esquineros y film, optimizado para contenedor</td><td data-label="Qué dejar por escrito">Ficha de embalaje, cubicaje por contenedor y protección de cantos</td></tr>
+              <tr><td data-label="Cláusula">Pago</td><td data-label="Referencia habitual en mobiliario de proyecto">Anticipo y saldo contra documentos; INCOTERMS FOB, CIF, CFR, EXW o DDP</td><td data-label="Qué dejar por escrito">Porcentaje de anticipo, hito del saldo y término INCOTERM exacto</td></tr>
+              <tr><td data-label="Cláusula">Certificación y admisión</td><td data-label="Referencia habitual en mobiliario de proyecto">ISO 9001:2015, BIFMA X5.5-2021, FSC-STD-40-004 V3-1, GREENGUARD Gold (UL 2818), CARB Fase 2 y CE</td><td data-label="Qué dejar por escrito">Certificado vigente con titular, alcance y fecha, más el requisito de admisión del país de destino</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los estándares se piden con número, no con nombre comercial. En mobiliario de oficina, la resistencia de las mesas se verifica con BIFMA X5.5-2021 y la de las sillas con BIFMA X5.1-2011; en mobiliario escolar, la referencia de talla y ergonomía es EN 1729. Para paneles y superficies, el comportamiento frente al fuego se documenta con EN 13501-1 y, en proyectos del Reino Unido, con BS 5852 en tapicería. La cadena de custodia de la madera se acredita con FSC-STD-40-004 V3-1; las emisiones bajas, con GREENGUARD Gold (UL 2818); el formaldehído en tablero compuesto, con CARB Fase 2 o EPA TSCA Título VI; y la gestión de calidad, con ISO 9001:2015. Si el proyecto se instala en un país de la Unión Económica Euroasiática, pida además la documentación de conformidad EAC aplicable; si va a Latinoamérica u Oriente Medio, verifique el requisito de admisión local antes de cerrar el pedido. La secuencia completa, desde la especificación hasta la recepción, está descrita en /recursos/proceso-compras-ffe-hoteles-7-etapas/.</p>
+        <p>El plazo merece una precisión que casi nunca se escribe. El plazo de producción de referencia del grupo es de 30-45 días y corre desde la aprobación por escrito de la muestra de acabado; no incluye transporte ni instalación. Un pedido fragmentado en muchas familias y acabados tiende a alargarse, porque el cuello de botella está en el cambio de acabado más que en el volumen. Agrupe el proyecto en el menor número de familias y acabados posible y trate ese punto como una cláusula, no como una conversación informal. La ventaja de coste de referencia del 30-50 % frente a la compra en Europa se calcula sobre precio FOB, no sobre el coste final puesto en obra: al precio del mueble hay que sumar flete, seguro, arancel y montaje.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo encajar el calendario FF&amp;E con las tres fases de la feria?</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD1-a201-s2.jpg" alt="Embalaje flat-pack apilado y listo para embarque marítimo de mobiliario de proyecto." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Veta de piedra sinterizada en detalle para la selección de acabados del cliente.</figcaption>
+        </figure>
+        <p>El calendario de un proyecto FF&amp;E se ordena en seis hitos y la feria encaja en los dos primeros. Primero la ronda de proveedores en feria; después la visita a fábrica y la muestra física de acabado; a continuación la aprobación por escrito del prototipo; luego la producción en serie; después el embarque y el tránsito; y al final la instalación y la lista de pendientes. El margen crítico está entre la aprobación de la muestra y la producción en serie, porque ahí se decide si el plazo de 30-45 días se cumple o se queda corto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Hito</th><th>Cuándo</th><th>Margen de seguridad a reservar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Hito">Ronda de proveedores en feria</td><td data-label="Cuándo">Segunda fase, 23-27 de octubre</td><td data-label="Margen de seguridad a reservar">Un día por familia de producto, no por pabellón</td></tr>
+              <tr><td data-label="Hito">Compra de insumos en feria</td><td data-label="Cuándo">Primera fase, 15-19 de octubre</td><td data-label="Margen de seguridad a reservar">Cerrar herraje e iluminación antes de la ronda de muebles</td></tr>
+              <tr><td data-label="Hito">Visita a fábrica y muestra</td><td data-label="Cuándo">Recambio del 28-30 de octubre o después de la feria</td><td data-label="Margen de seguridad a reservar">Una jornada por planta; muestras enviadas en paralelo</td></tr>
+              <tr><td data-label="Hito">Aprobación de muestra</td><td data-label="Cuándo">Después de la visita a planta</td><td data-label="Margen de seguridad a reservar">Firma por escrito antes de liberar la producción</td></tr>
+              <tr><td data-label="Hito">Producción y embarque</td><td data-label="Cuándo">Tras la aprobación de muestra</td><td data-label="Margen de seguridad a reservar">30-45 días de producción, más tránsito y despacho</td></tr>
+              <tr><td data-label="Hito">Instalación y pendientes</td><td data-label="Cuándo">Fecha meta del proyecto</td><td data-label="Margen de seguridad a reservar">Colchón para la lista de pendientes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Traducir esa tabla a fechas obliga a una decisión temprana. Si la instalación está fijada para el primer trimestre de 2027, la visita a fábrica debe cerrarse antes de que acabe 2026, porque el tránsito marítimo, el despacho y el montaje consumen semanas que no se recuperan después. Trabaje desde la fecha de instalación hacia atrás y no desde la fecha de feria hacia delante. Para un paquete de habitaciones, el embalaje flat-pack reduce el cubicaje y permite cargar mesitas, armarios y cabeceros en un mismo contenedor, lo que obliga a cerrar dimensiones y acabados antes de aprobar el prototipo. Como referencia internacional, Hongye entregó 295 habitaciones y más de 1.770 piezas para el Hilton Tashkent City (Taskent, Uzbekistán) en 52 días, con cero defectos en la inspección de recepción. Puede revisar familias y configuraciones de mobiliario de proyecto en /catalogo/ antes de decidir qué pabellones visitar.</p>
+        <p>Un detalle del recambio que conviene ordenar con antelación: los días 20 al 22 y 28 al 30 de octubre no hay negociación abierta (web oficial de la Feria de Importación y Exportación de China, 2026). Son el hueco natural para la visita a fábrica en Jiangmen y para despachar muestras, siempre que la logística se planifique desde antes del viaje.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Dónde ver mobiliario médico y de atención a mayores en la Feria de Cantón?</h2>
+        <p>El mobiliario sanitario y de atención a mayores no está en la segunda fase; aparece en la tercera, del 31 de octubre al 4 de noviembre, junto con los productos farmacéuticos y el equipamiento médico. El eje de hogar de calidad cubre camas, armarios y mobiliario de proyecto, pero no camas hospitalarias, carros clínicos ni mostradores sanitarios. Si su proyecto es una clínica, una residencia de mayores o un centro de día, planifique la tercera fase desde el principio y no espere encontrar ese surtido en la ronda de muebles.</p>
+        <p>Fases distintas significan viajes distintos, y eso conviene decidirlo antes de comprar el billete. Un comprador que atiende a la vez un hotel y una residencia de mayores puede cubrir las dos necesidades en un solo desplazamiento de tres semanas: primera fase para insumos, segunda para mobiliario de hotel y tercera para mobiliario sanitario. La papelería de oficina, si el proyecto incluye back office, también se concentra en la tercera fase. Para una residencia de mayores en Abu Dabi (Emiratos Árabes Unidos) o un centro de día en Singapur, el mobiliario de atención exige superficies lavables y limpieza de cantos que se verifican mejor en la tercera fase, donde el expositor conoce el uso sanitario.</p>
+        <p>Antes de reservar la agenda, resuma lo esencial. El mobiliario de proyecto se exhibe en la segunda fase, del 23 al 27 de octubre de 2026, y el mobiliario sanitario en la tercera, del 31 de octubre al 4 de noviembre. La compra rentable empieza en la primera fase, del 15 al 19 de octubre, con herrajes, iluminación y componentes eléctricos. El recambio del 20 al 22 y del 28 al 30 de octubre no tiene negociación abierta y sirve para visitar fábricas en Jiangmen y Foshan. Los estándares se piden con número: BIFMA X5.5-2021, EN 1729, EN 13501-1, FSC-STD-40-004 V3-1, GREENGUARD Gold, CARB Fase 2 e ISO 9001:2015.</p>
+        <p>Si su proyecto necesita una ronda de proveedores ordenada, envíe la lista de ambientes y las cantidades antes de viajar y coordinamos una visita a la planta durante el recambio o después de la feria. Escríbanos por /contacto/ para agendar la visita a Heshan, Jiangmen, y para preparar la lista de herrajes y acabados que llevará a la primera fase. Hongye Furniture Group trabaja con una base de ocho certificaciones internacionales, entre ellas BIFMA, GREENGUARD Gold, FSC y CE, y con más de 1.000 proyectos entregados en más de 50 países.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E y su agenda de feria"
+      text="Envíe su lista de ambientes, las cantidades y el estándar de certificación que exige su proyecto y le preparamos una ronda de proveedores ordenada por fases, con los puntos de negociación de MOQ, plazo y embalaje ya definidos. Fabricamos en más de 300.000 m² en Heshan, Jiangmen (Guangdong), sobre una base de ocho certificaciones internacionales, entre ellas BIFMA, GREENGUARD Gold, FSC y CE, con un plazo de producción de 30-45 días desde la muestra aprobada. Escríbanos por /contacto/ para agendar la visita a planta durante el recambio o después de la feria. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
