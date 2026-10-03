@@ -75,7 +75,31 @@ const organizationJsonLd = {
     <meta name="twitter:image" content={imageUrl} />
     <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationJsonLd)}></script>
     <title>{title}</title>
-  </head>
+  <!-- HY-ANALYTICS:BEGIN -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-THLLQX7B2F"></script>
+<script is:inline>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-THLLQX7B2F', { site: 'hymueble', content_group: 'commercial', page_language: 'es' });
+(function(){
+  function ev(n, p) { try { gtag('event', n, Object.assign({ site: 'hymueble' }, p || {})); } catch (e) {} }
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('wa.me') > -1) ev('wa_click', { link_url: h });
+    else if (h.indexOf('t.me') > -1) ev('tg_click', { link_url: h });
+    else if (h.indexOf('mailto:') === 0) ev('email_click', { link_url: h });
+    else if (/(cotizacion|contacto|diseno|diseño|presupuesto|catalogo|proyecto)/i.test(h)) ev('consult_click', { link_url: h });
+  }, true);
+  document.addEventListener('submit', function () {
+    ev('generate_lead', { lead_type: 'COMMERCIAL_PROJECT', form_page: location.pathname });
+  }, true);
+})();
+</script>
+<!-- HY-ANALYTICS:END -->
+</head>
   <body>
     <Header />
     <main>
