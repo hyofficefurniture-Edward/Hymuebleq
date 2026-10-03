@@ -1,0 +1,450 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Metros cuadrados por puesto de trabajo: guía de oficina";
+const pageDescription = "Metros cuadrados por puesto de trabajo en oficinas: valores de referencia por layout, medidas EN 527-2, pasillos y planificación de espacios.";
+const keywords = [
+  "metros cuadrados por puesto de trabajo",
+  "espacio por empleado en oficina",
+  "planificación open office",
+  "distancia entre puestos bench desk",
+  "EN 527-2 medidas escritorio",
+  "layout de oficina por m2"
+];
+const canonicalPath = "/recursos/metros-cuadrados-puesto-trabajo/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD3-es17-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-03";
+const dateModified = "2026-10-03";
+const publicationDateLabel = "Publicada el 3 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cuántos metros cuadrados necesita un puesto de trabajo en oficina?", answer: "Como referencia de planificación, un puesto en open office ocupa entre 6 y 8 m² de superficie neta. Si se suman salas de reunión, zonas de apoyo y pasillos, la superficie bruta sube a 8-12 m² por persona. Son valores empíricos que varían con el sector y la normativa local." },
+    { question: "¿Qué dice la norma EN 527-2:2016 sobre la mesa de oficina?", answer: "La norma europea EN 527-2:2016 fija la altura de trabajo entre 72 y 75 cm y una profundidad mínima de 80 cm. Los anchos de módulo bench habituales son de 120, 140 y 160 cm. Un tablero por debajo de esos mínimos obliga a reajustar la silla y castiga la postura." },
+    { question: "¿Qué ancho deben tener los pasillos de una oficina?", answer: "El pasillo principal debe medir al menos 120 cm para permitir el cruce de dos personas y el paso accesible, y el secundario unos 90 cm. Detrás de cada silla conviene reservar entre 75 y 90 cm. Estas medidas responden a uso y evacuación, no solo a estética." },
+    { question: "¿Cuánta distancia debe haber entre dos puestos enfrentados?", answer: "En un bench enfrentado, la separación neta entre tableros debe ser de al menos 120 cm, contando el fondo de la silla y el paso. Por debajo de esa cifra, dos personas no pueden levantarse a la vez. Si no cabe esa separación, el problema es la densidad, no el mueble." },
+    { question: "¿Qué iluminancia exige la norma en un puesto de trabajo?", answer: "La norma EN 12464-1:2021 fija 500 lx en el plano de trabajo para tareas de oficina. La uniformidad y el control del deslumbramiento son tan importantes como el nivel. Al subir la densidad, conviene revisar la posición de las luminarias junto con los separadores." },
+    { question: "¿Cómo se calcula la superficie total de una planta de oficinas?", answer: "Se parte de la superficie bruta por puesto y se multiplica por la plantilla prevista. La circulación y las zonas comunes consumen entre el 30 y el 40 % de la planta. Después hay que verificar pasillos y salidas con el técnico del edificio antes de cerrar el layout." },
+    { question: "¿Cuál es el plazo de producción y cómo se compara el coste?", answer: "El plazo de producción de referencia es de 45-60 días, contado desde la aprobación por escrito de la muestra de acabado. La ventaja de coste de referencia es del 30-50 % sobre precio FOB, no sobre el coste final puesto en obra. A ese ahorro hay que sumar flete, seguro, arancel e instalación." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD3-es17-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1003-es17-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d1003-es17-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Oficinas · Planificación &middot; {publicationDateLabel}</p>
+          <h1>Metros cuadrados por puesto de trabajo: guía de planificación de oficinas</h1>
+          <p>Un puesto de trabajo en oficina abierta ocupa, como referencia de planificación, entre 6 y 8 m²; si se suman las salas de reunión, las zonas de apoyo y los pasillos, la superficie sube a 8-12 m² por persona. Estamos ante valores empíricos, no ante una cifra normativa única: cambian según el sector, las exigencias del país y la densidad que la empresa decida asumir. Lo que sí es medible es la base técnica. La norma EN 527-2:2016 fija la altura de trabajo de un escritorio entre 72 y 75 cm y una profundidad mínima de 80 cm; los modelos bench en fila manejan anchos de módulo de 120, 140 o 160 cm. A esto se suman los anchos de circulación —120 cm en pasillo principal y 90 cm en secundario— y una distancia libre de al menos 120 cm entre dos puestos enfrentados de un bench, contando el fondo de la silla y el paso.</p>
+          <p>Esta guía reúne cómo se traduce todo eso en un layout comprable: qué tipo de oficina elegir, cómo calcular los metros cuadrados, qué normas exige la administración de su país y cómo cerrar el proyecto con un proveedor que entregue e instale. Guangdong Hongye Furniture Group Co., Ltd. es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 trabajadores cualificados y más de 1.000 proyectos entregados en más de 50 países, incluidos Latinoamérica, Oriente Medio y Europa. Trabajamos con más de 47 marcas hoteleras internacionales como referencia de estándar de producto, no como identificación de cliente, y aplicamos ese mismo criterio a los proyectos de oficina.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD3-es17-hero.jpg" alt="Oficina abierta con puestos bench en fila, separadores bajos azules y sillas de trabajo" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuántos metros cuadrados por puesto de trabajo: valores de referencia</h2>
+        <p>La primera decisión es separar dos cifras que suelen confundirse. La superficie neta de un puesto es la huella del mueble más el espacio de uso; la superficie bruta añade pasillos, salas de reunión, recepción, cocina y servicios. Si usted presupuesta solo con la cifra neta, el layout le quedará corto, porque en una oficina densa la circulación y las zonas comunes consumen entre el 30 y el 40 % de la planta. Trabaje siempre con dos números y deje claro cuál está usando en cada oferta.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de espacio</th><th>m² de referencia por puesto</th><th>Base del dato</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de espacio">Open office / bench</td><td data-label="m² de referencia por puesto">6-8 m²</td><td data-label="Base del dato">Referencia empírica de planificación, sin circulación</td></tr>
+              <tr><td data-label="Tipo de espacio">Oficina con salas y apoyo</td><td data-label="m² de referencia por puesto">8-12 m²</td><td data-label="Base del dato">Incluye reunión, servicios y zonas comunes</td></tr>
+              <tr><td data-label="Tipo de espacio">Despacho de supervisión</td><td data-label="m² de referencia por puesto">12-15 m²</td><td data-label="Base del dato">Referencia empírica por unidad</td></tr>
+              <tr><td data-label="Tipo de espacio">Sala de consejo o reunión</td><td data-label="m² de referencia por puesto">2-2,5 m² por asiento</td><td data-label="Base del dato">Según formato y tipo de mesa</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Estas cifras son referencias de planificación, no límites de norma: varían con el sector —una gestoría y un centro de desarrollo de software no reparten igual su espacio— y con la normativa local de prevención y accesibilidad. Para una primera estimación de compra, tome la superficie bruta por puesto y multiplíquela por la plantilla prevista; después verifique pasillos y salidas con el técnico del edificio. Si necesita ajustar la densidad sin tocar la estructura, el tipo de layout y el tamaño de módulo del mueble son las dos palancas que más cambian el resultado. En oficinas con poca profundidad de fachada, la densidad máxima la suele marcar el ancho de los pasillos, no el tamaño del escritorio.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Open office, bench desk y oficinas cerradas: qué layout elegir</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD3-es17-s1.jpg" alt="Vista general de escritorios corridos con archivadores en oficina luminosa." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Zona de oficina abierta con puestos bench en fila y separadores bajos azules.</figcaption>
+        </figure>
+        <p>El open office maximiza la densidad y la comunicación, pero exige control de ruido y de privacidad visual. El bench desk —mesa corrida compartida por dos o más personas— es la forma más eficiente de open office, porque concentra el cableado y reduce el número de patas y de islas. Las oficinas cerradas o cabinas de una y dos personas sacrifican densidad y ganan concentración; suelen reservarse para gerencias, recursos humanos, finanzas y puestos que exigen confidencialidad. Y el trabajo híbrido añade un cuarto tipo: hot desks y zonas de paso, que reducen el número de puestos fijos necesarios.</p>
+        <p>En mi experiencia con proyectos corporativos en Latinoamérica, la mezcla que mejor funciona reparte entre el 60 y el 70 % del área en open office o bench, un 15-20 % en salas de reunión y apoyo, y el resto en oficinas cerradas de mando. El error clásico es llenar la planta de puestos y no dejar superficie para reunirse: cuando el equipo necesita hablar, ocupa una mesa de trabajo y la densidad real cae. Elija el layout por tarea —concentración, colaboración, confidencialidad— y deje la densidad como consecuencia, no como punto de partida. Puede revisar módulos y sistemas de bench en /productos/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Medidas que no se negocian: EN 527-2, pasillos y distancia entre puestos</h2>
+        <p>El cumplimiento empieza por el mueble. La norma europea EN 527-2:2016 define las dimensiones funcionales de las mesas de oficina: altura de trabajo entre 72 y 75 cm, profundidad mínima de 80 cm y anchos de módulo bench habituales de 120, 140 y 160 cm. Un tablero por debajo de esos mínimos obliga a reajustar la silla y castiga la postura. En paralelo, la resistencia estructural se verifica con BIFMA X5.5-2021, que somete el escritorio a cargas repetidas; en escritorios regulables eléctricos, el ensayo de referencia es el mismo BIFMA X5.5, acompañado de los criterios ergonómicos de ANSI/BIFMA G1.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Medida</th><th>Norma o criterio</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Altura de tablero de trabajo</td><td data-label="Medida">72-75 cm</td><td data-label="Norma o criterio">EN 527-2:2016</td></tr>
+              <tr><td data-label="Elemento">Profundidad de tablero</td><td data-label="Medida">≥ 80 cm</td><td data-label="Norma o criterio">EN 527-2:2016</td></tr>
+              <tr><td data-label="Elemento">Ancho de módulo bench</td><td data-label="Medida">120 / 140 / 160 cm</td><td data-label="Norma o criterio">EN 527-2:2016</td></tr>
+              <tr><td data-label="Elemento">Resistencia estructural del escritorio</td><td data-label="Medida">Cargas repetidas</td><td data-label="Norma o criterio">BIFMA X5.5-2021</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las medidas de circulación no son un detalle estético; son requisito de uso y de evacuación. Un pasillo principal de 120 cm permite el cruce de dos personas y el paso de una silla de ruedas; un pasillo secundario de 90 cm da servicio a los puestos sin bloquear la salida. Detrás de cada silla conviene reservar entre 75 y 90 cm para entrar y salir sin empujar al vecino. En un bench enfrentado, la separación neta entre dos tableros debe ser de al menos 120 cm, contando el fondo de la silla y el paso: por debajo de esa cifra, dos personas no pueden levantarse a la vez. Si su oficina tiene pasillos por debajo de estos valores, el problema suele ser la densidad, no el mueble.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Circulación o separación</th><th>Medida mínima</th><th>Para qué sirve</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Circulación o separación">Pasillo principal</td><td data-label="Medida mínima">120 cm</td><td data-label="Para qué sirve">Cruce de dos personas y paso accesible</td></tr>
+              <tr><td data-label="Circulación o separación">Pasillo secundario</td><td data-label="Medida mínima">90 cm</td><td data-label="Para qué sirve">Acceso a puestos sin bloquear salida</td></tr>
+              <tr><td data-label="Circulación o separación">Actividad tras la silla</td><td data-label="Medida mínima">75-90 cm</td><td data-label="Para qué sirve">Entrar y salir del puesto</td></tr>
+              <tr><td data-label="Circulación o separación">Bench enfrentado (distancia neta)</td><td data-label="Medida mínima">≥ 120 cm</td><td data-label="Para qué sirve">Incluye fondo de silla y paso</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Iluminación, ergonomía y gestión de cables según la densidad</h2>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD3-es17-s2.jpg" alt="Estacion de trabajo con cajonera y guardarropa auxiliar en layout corporativo." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Puestos de trabajo con separadores bajos y archivadores de almacenaje en oficina abierta.</figcaption>
+        </figure>
+        <p>La iluminación condiciona el layout más de lo que parece. La norma EN 12464-1:2021 fija 500 lx en el plano de trabajo para tareas de oficina, con control de deslumbramiento y buena uniformidad. Cuando la densidad sube, las luminarias se acercan al puesto y aparece el reflejo en pantalla; por eso las mesas orientadas en paralelo a la ventana y los separadores altos ayudan a repartir la luz. Si usted reorganiza la planta sin revisar el alumbrado, puede cumplir la densidad y fallar el confort.</p>
+        <p>El cableado es el segundo punto que decide si el layout funciona a los dos años. Un bench bien resuelto lleva las tomas y los datos por el centro de la mesa, con canaleta o caja de suelo, y deja subir solo el cable de cada puesto. Así se evita el cableado visto y las regletas en el suelo, que estorban el paso y dificultan la limpieza. Al pedir una configuración, exija el esquema de paso de cables y las posiciones de toma por módulo: es la parte del proyecto que más se olvida en la oferta y más se paga en la instalación. El detalle técnico de ensayos y acabados está en /recursos/blog/.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Proyecto llave en mano: MOQ, embalaje, control de calidad e instalación</h2>
+        <p>El paso de planificación a pedido define el coste final. La cantidad mínima de pedido (MOQ) se fija por familia y acabado, no por artículo suelto, porque un lote pequeño no absorbe el montaje de producción; lo normal es definirla en la cotización junto con el Bill of Materials. El embalaje de exportación estándar es flat-pack: mueble desmontado, caja de cartón con esquineros protectores y film, pensado para contenedor. El control de calidad se realiza antes de la salida de fábrica, con inspección por lote y verificación de acabados y herrajes. La instalación se apoya en planos y manual, con supervisión remota o presencial.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Aspecto de suministro</th><th>Referencia del proyecto</th><th>Nota</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Aspecto de suministro">MOQ</td><td data-label="Referencia del proyecto">Se define por familia y acabado</td><td data-label="Nota">Se cierra en la cotización con el BoM</td></tr>
+              <tr><td data-label="Aspecto de suministro">Embalaje de exportación</td><td data-label="Referencia del proyecto">Flat-pack, caja de cartón con esquineros</td><td data-label="Nota">Optimizado para contenedor</td></tr>
+              <tr><td data-label="Aspecto de suministro">Control de calidad</td><td data-label="Referencia del proyecto">Inspección por lote antes de salida</td><td data-label="Nota">Verificación de acabados y herrajes</td></tr>
+              <tr><td data-label="Aspecto de suministro">Instalación</td><td data-label="Referencia del proyecto">Planos + manual, supervisión remota o presencial</td><td data-label="Nota">Sin número de puestos fijado en esta guía</td></tr>
+              <tr><td data-label="Aspecto de suministro">Plazo de producción</td><td data-label="Referencia del proyecto">45-60 días</td><td data-label="Nota">Desde la muestra de acabado aprobada</td></tr>
+              <tr><td data-label="Aspecto de suministro">Ventaja de coste</td><td data-label="Referencia del proyecto">30-50 %</td><td data-label="Nota">Sobre precio FOB de referencia</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Aquí conviene ser claro con las cifras. La ventaja de coste del 30-50 % frente a la compra en Europa se calcula sobre precio FOB de referencia, no sobre el coste final puesto en obra: al precio del mueble hay que sumar flete marítimo, seguro, arancel y montaje. Como orientación de presupuesto, un puesto en bench se mueve en una horquilla amplia de precio FOB de referencia, orientativo, de unos USD 150 a 450 según módulo, acabado y accesorios; no es una tarifa, sino un orden de magnitud para su cuadro de mando. El plazo de producción de 45-60 días corre desde la aprobación por escrito de la muestra de acabado y no incluye transporte ni instalación.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo ampliar y presupuestar sin perder densidad</h2>
+        <p>Cuando el layout ya está definido, la pregunta que llega es cómo crecer sin rehacerlo todo. La regla práctica es reservar entre el 15 y el 20 % de puestos libres o de superficie ampliable, y elegir un sistema de módulos estándar —120, 140 y 160 cm— que permita alargar una fila bench sin cambiar el resto. Si el proyecto arranca con una planta y crece por fases, congele el acabado y el sistema de cableado desde la primera etapa: así el mobiliario de la fase dos es compatible con el de la fase uno y no se pierde la inversión.</p>
+        <p>Para cerrar el anteproyecto, compare siempre sobre un Bill of Materials común y sobre los mismos anchos de paso, porque un alcance distinto invalida cualquier comparación de coste. Si necesita evaluar alternativas de densidad para un edificio concreto, envíe su plano y su número de puestos por /contacto/ y le devolvemos un layout con el cálculo de m² por puesto, las normas aplicables y un precio FOB de referencia. Hongye Furniture Group trabaja con una base de certificaciones BIFMA + GREENGUARD Gold + FSC + CE y con más de 1.000 proyectos entregados en más de 50 países.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E y el layout en m² por puesto"
+      text="Envíe su plano, su número de puestos y su densidad objetivo y le devolvemos un layout con el cálculo de metros cuadrados por puesto, las normas aplicables y un precio FOB de referencia. Fabricamos en más de 300.000 m² sobre una base de certificaciones BIFMA + GREENGUARD Gold + FSC + CE, con plazo de producción de 45-60 días y una ventaja de coste del 30-50 % sobre precio FOB. Escríbanos por /contacto/ para coordinar muestra de acabado y planos de instalación. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
