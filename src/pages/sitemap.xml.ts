@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/checklist-comprador-feria-canton-2026/",
   "/recursos/feria-canton-2026-mobiliario-fase-compra-ffe/",
   "/recursos/metros-cuadrados-puesto-trabajo/",
   "/recursos/renovacion-hotelera-fases-presupuesto/",
