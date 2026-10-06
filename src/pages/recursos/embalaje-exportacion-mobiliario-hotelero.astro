@@ -1,0 +1,450 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Embalaje de exportación mobiliario hotelero: guía FF&E";
+const pageDescription = "El embalaje de exportación mobiliario de un proyecto hotelero protege cada pieza desde fábrica hasta obra: materiales, cubicaje, estiba y control pre-embarque.";
+const keywords = [
+  "embalaje de exportación mobiliario",
+  "embalaje exportación muebles hotel",
+  "estiba contenedor mobiliario hotelero",
+  "cubicaje contenedor muebles hospitalidad",
+  "protección transporte casegoods hotel",
+  "inspección pre-embarque mobiliario"
+];
+const canonicalPath = "/recursos/embalaje-exportacion-mobiliario-hotelero/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD4-a210-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-06";
+const dateModified = "2026-10-06";
+const publicationDateLabel = "Publicada el 6 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué es el embalaje de exportación de mobiliario hotelero?", answer: "Es el sistema de capas, soportes y sujeciones que protege cada pieza de un proyecto FF&E durante el transporte marítimo y la espera en obra. Se diseña por familia de mueble y se aprueba antes de producir, porque un hotel se entrega por plantas y por fechas y un bulto dañado retrasa la instalación. Las cinco capas habituales son fundas de polietileno, film de burbujas, esquineros de cartón, cartón honeycomb y listones de madera, combinadas según la pieza." },
+    { question: "¿Cuántas piezas de mobiliario entran en un contenedor?", answer: "Depende del volumen del bulto, no del número de piezas: un contenedor de 20 pies ronda los 33 m³, uno de 40 pies unos 67 m³ y un 40 HQ unos 76 m³ (práctica logística estándar). El cálculo se hace con una ficha de embalaje bulto por bulto, porque los muebles desmontados y planos aprovechan mejor el volumen que los muebles huecos. Por eso el número de contenedores se deriva del cubicaje real del proyecto y no de una media." },
+    { question: "¿Qué diferencia hay entre embalaje para exportación y embalaje normal?", answer: "El embalaje de exportación protege la pieza durante un viaje marítimo de semanas y una espera en obra, mientras que el embalaje normal solo cubre un transporte corto. En exportación se añaden esquineros, film, cartón honeycomb y listones que resisten el apilado y la humedad, y todo el lote pasa una inspección pre-embarque antes de cerrar el contenedor. Esa diferencia evita el daño que aparece justo cuando el mueble ya está en destino." },
+    { question: "¿Cómo se controla la calidad antes de embarcar el mobiliario?", answer: "Con una inspección pre-embarque que se realiza pieza por pieza y bulto por bulto antes de cerrar el contenedor. Se comprueba el acabado frente a la muestra aprobada, la integridad de los herrajes, la protección de cantos y esquinas, y la estabilidad del flejado y el paletizado. Solo cuando el lote pasa la revisión se carga y se sella, con el parte de inspección archivado por bulto." },
+    { question: "¿Cómo se estiba el mobiliario dentro del contenedor?", answer: "Se coloca la carga pesada y rígida en el fondo, se continúa con las piezas largas que hacen de estructura y se rellenan los huecos con los bultos pequeños. Entre bloques se colocan listones y separadores, y la carga se fija con flejes y, cuando hace falta, con puntales de madera. Los bultos se numeran por ambiente y se ordenan por planta para que la descarga siga el orden de instalación." },
+    { question: "¿Cuál es el MOQ y el plazo de producción de un proyecto hotelero?", answer: "El MOQ es flexible y se confirma por proyecto según las familias y los acabados, así que no hay un mínimo rígido que obligue a ajustar la lista del hotel. El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda siempre sujeto a lo que establezca el contrato. El alcance puede incluir soporte de instalación en destino o supervisión de instalación, según lo acordado con el cliente." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD4-a210-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d4a2-a210-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d4a2-a210-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hotel · FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Embalaje de exportación de mobiliario hotelero: cómo proteger, cubicar y estibar un proyecto FF&amp;E</h1>
+          <p>El embalaje de exportación de mobiliario hotelero es el conjunto de decisiones que protege cada pieza de un proyecto FF&amp;E desde que sale de la fábrica hasta que se instala en obra: qué material envuelve cada mueble, cómo se agrupa la carga, cómo se estiba el contenedor y quién verifica el estado antes de embarcar. No se trata de envolver con más cartón, sino de repartir el riesgo de un viaje de semanas entre varias capas —interior, cantos, esquinas y sujeción— para que un cabecero, una mesita o un armario de casegoods lleguen sin golpes ni humedad. En un hotel, un solo bulto dañado retrasa una planta entera.</p>
+          <p>Esta guía reúne, con criterio de compra y no de catálogo, los cinco materiales de protección que usamos en fábrica, el cubicaje real por tipo de contenedor, el orden de estiba que evita movimientos y la inspección pre-embarque que se archiva por bulto. Explica también cómo el embalaje se decide junto con las especificaciones y no al final del pedido, y por qué el cubicaje cambia el coste de flete de todo el proyecto. Como referencia de escala del sector, la 139.ª Feria de Cantón recibió a 314.000 compradores de 220 países y regiones (web oficial de la Feria de Importación y Exportación de China, 2026), y buena parte de esas compras es mobiliario que después viaja embalado por mar.</p>
+          <p>Detrás de este procedimiento está Guangdong Hongye Furniture Group Co., Ltd., fábrica fundada en 1996 con más de 300.000 m² de planta y más de 1.000 trabajadores, que suma más de 1.000 proyectos entregados en más de 50 países —Latinoamérica, Oriente Medio y Europa entre ellos— y sirve a más de 47 marcas hoteleras internacionales, con ocho certificaciones internacionales entre las que figuran BIFMA, GREENGUARD Gold, FSC y CE. Produce en Heshan (Jiangmen, Guangdong) con un plazo de 30-45 días desde la muestra aprobada y embala cada proyecto según su destino: no hay dos hoteles que se carguen de la misma forma.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD4-a210-hero.jpg" alt="Operarios envolviendo un sofá con film de estiramiento y protectores de cartón en la zona de embalaje de una fábrica de mobiliario" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué es el embalaje de exportación de mobiliario hotelero?</h2>
+        <p>El embalaje de exportación de mobiliario hotelero es el sistema de capas, soportes y sujeciones que protege cada pieza de un proyecto FF&amp;E durante el transporte marítimo y la espera en obra; se diseña por familia de mueble, no por bulto aislado, y se aprueba antes de producir. Un hotel no se entrega por piezas, sino por plantas y por fechas, de modo que el embalaje cumple dos funciones al mismo tiempo: evitar el daño y permitir que la carga se ordene en el contenedor por prioridad de instalación. La primera protege el acabado —chapa, laca, tapizado y herraje visto—; la segunda convierte esa protección en una secuencia de descarga que el equipo de obra puede seguir sin abrir bultos al azar. Cuando las dos se piensan juntas, el proyecto llega completo; cuando se dejan para el final, se paga en reprocesos y en piezas repuestas por vía aérea. Unas capas bien elegidas cuestan menos que una pieza repuesta por urgencia durante la instalación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Capa de protección</th><th>Material</th><th>Qué protege</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Capa de protección">Capa interior</td><td data-label="Material">Fundas de polietileno</td><td data-label="Qué protege">Polvo, humedad leve y roces superficiales del acabado</td></tr>
+              <tr><td data-label="Capa de protección">Amortiguación</td><td data-label="Material">Film de burbujas</td><td data-label="Qué protege">Golpes leves y contacto entre piezas apiladas</td></tr>
+              <tr><td data-label="Capa de protección">Cantos y esquinas</td><td data-label="Material">Esquineros de cartón</td><td data-label="Qué protege">Esquinas, cantos y aristas vivas del mueble</td></tr>
+              <tr><td data-label="Capa de protección">Rigidez de pila</td><td data-label="Material">Cartón honeycomb</td><td data-label="Qué protege">Compresión vertical y aplastamiento en el apilado</td></tr>
+              <tr><td data-label="Capa de protección">Refuerzo y sujeción</td><td data-label="Material">Listones de madera</td><td data-label="Qué protege">Marcos, patas y separación entre bultos dentro del contenedor</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Estas cinco capas no se aplican igual en todas las piezas, y esa diferencia separa un embalaje pensado de uno genérico. Un cabecero combina funda de polietileno y esquineros en los cuatro vértices, pero no necesita film de burbujas en toda su cara; una mesita de noche con tablero de piedra sinterizada sí lo necesita, porque dos superficies rígidas se marcan al rozar. Los asientos tapizados viajan envueltos y separados entre sí, y los tableros grandes llevan listones de madera que reparten la carga y evitan que la pila se venza. Antes de calcular bultos conviene tener el pedido agrupado por ambientes, y para eso resulta útil <a href="/recursos/mobiliario-hotelero-guia-compra/">la guía de compra de mobiliario hotelero</a>, que ordena el proyecto por zonas y por partidas. Ese orden por ambientes es el que después define cómo se agrupan los bultos y en qué secuencia se cargan dentro del contenedor, de modo que la lista de compra y el plan de embalaje nacen del mismo documento.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuántas piezas de mobiliario caben en un contenedor de 20 o 40 pies?</h2>
+        <p>La respuesta directa es que el contenedor no se llena de piezas, sino de metros cúbicos: un contenedor de 20 pies ronda los 33 m³, uno de 40 pies unos 67 m³ y un 40 HQ unos 76 m³ (práctica logística estándar). Sobre ese volumen se calcula el cubicaje, que es el espacio que ocupa cada bulto embalado y no la pieza suelta. Un contenedor de 40 HQ ofrece alrededor de un 13 % más de volumen útil que uno de 40 pies convencional, y esa diferencia decide cuántos armarios y cabeceros entran en el mismo viaje. Por eso el embalaje y el cubicaje se negocian al cerrar el pedido: la altura del bulto, el paletizado y la forma de apilar cambian por completo el número de contenedores que necesita un hotel. Un mismo hotel puede pasar de un contenedor a dos solo por no optimizar la altura de los bultos, así que el cubicaje se revisa antes de firmar el pedido.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de contenedor</th><th>Volumen útil aproximado</th><th>Uso habitual en un proyecto FF&amp;E</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de contenedor">20 pies (20 DV)</td><td data-label="Volumen útil aproximado">Unos 33 m³</td><td data-label="Uso habitual en un proyecto FF&amp;E">Lotes parciales, reposiciones y proyectos pequeños</td></tr>
+              <tr><td data-label="Tipo de contenedor">40 pies (40 DV)</td><td data-label="Volumen útil aproximado">Unos 67 m³</td><td data-label="Uso habitual en un proyecto FF&amp;E">Carga general de casegoods y mobiliario de habitación</td></tr>
+              <tr><td data-label="Tipo de contenedor">40 HQ (40 pies high cube)</td><td data-label="Volumen útil aproximado">Unos 76 m³</td><td data-label="Uso habitual en un proyecto FF&amp;E">Proyectos grandes que aprovechan la altura extra del contenedor</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD4-a210-s1.jpg" alt="Edificio de la planta de producción de mobiliario del grupo en Guangdong." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Planta de producción del grupo en Guangdong: los talleres de carpintería y tapicería alimentan la línea de embalaje antes de la estiba del contenedor.</figcaption>
+        </figure>
+        <p>El cálculo real se hace con una ficha de embalaje bulto por bulto, porque dos fábricas pueden dar el mismo número de cajas y cargar volúmenes muy distintos. Los muebles de casegoods viajan desmontados y planos —tableros apilados, patas y herrajes en cajas aparte—, lo que aprovecha mejor el volumen y evita muebles huecos que solo llenan aire. Los cabeceros y las piezas de gran formato suelen ir en bultos largos que se colocan en la base del contenedor, y la carga se completa por capas hasta la altura útil. Para estimar el coste de un proyecto completo conviene partir de una referencia como <a href="/recursos/cotizar-casegoods-hotel-200-habitaciones/">cómo cotizar casegoods para un hotel de 200 habitaciones</a>, donde el número de contenedores se deriva del cubicaje y no de una media. El coste por pieza embalada incluye el aire que ocupa cada bulto, y ese detalle permite comparar ofertas entre fábricas sobre la misma base.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales de protección por familia de mueble: cómo se especifica cada bulto</h2>
+        <p>El embalaje se especifica por familia de mueble, porque cada una se daña de forma distinta y exige una combinación de materiales diferente. Los casegoods —armarios, cómodas y mesitas— viajan desmontados y planos, con tableros apilados, herrajes en bolsa y esquineros de cartón en cada vértice; su punto débil es la compresión en la pila, que se controla con cartón honeycomb y un flejado correcto. Los asientos y las piezas tapizadas se envuelven en fundas de polietileno y film de burbujas, separados entre sí para que el roce no marque el tejido ni el cuero. Las mesas y los tableros de piedra sinterizada llevan protección de canto reforzada y listones de madera que evitan la flexión. Espejos, cristales y superficies pulidas son los bultos más sensibles: van en caja rígida, separados y señalizados como frágiles. El embalaje se ajusta a la forma, el peso y la fragilidad de cada familia, y esa decisión se documenta junto con las especificaciones del proyecto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Familia de mobiliario</th><th>Configuración de embalaje</th><th>Punto crítico a proteger</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Familia de mobiliario">Casegoods (armarios, cómodas, mesitas)</td><td data-label="Configuración de embalaje">Desmontado y plano, tableros apilados, herrajes en bolsa, esquineros de cartón y flejado</td><td data-label="Punto crítico a proteger">Compresión vertical y cantos de tablero</td></tr>
+              <tr><td data-label="Familia de mobiliario">Asientos y tapicería</td><td data-label="Configuración de embalaje">Fundas de polietileno y film de burbujas, piezas separadas entre sí</td><td data-label="Punto crítico a proteger">Roce entre piezas y marcas en el tejido o el cuero</td></tr>
+              <tr><td data-label="Familia de mobiliario">Mesas y tableros</td><td data-label="Configuración de embalaje">Protección de canto reforzada y listones de madera de refuerzo</td><td data-label="Punto crítico a proteger">Flexión del tablero y golpes en la arista</td></tr>
+              <tr><td data-label="Familia de mobiliario">Espejos y superficies pulidas</td><td data-label="Configuración de embalaje">Caja rígida, separadores internos y etiqueta de frágil</td><td data-label="Punto crítico a proteger">Rotura y rayado de la superficie</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Hay una regla que ordena todo lo anterior: el embalaje se aprueba junto con la muestra, no después. Si la muestra de acabado se firma sin decidir cómo viaja la pieza, es probable que el bulto llegue a obra con una solución improvisada, y en un hotel eso significa abrir cajas en la planta equivocada o reponer un tablero por vía aérea. Por eso el proyecto cierra a la vez la muestra física y el esquema de embalaje, con la referencia de cada bulto y su contenido anotados. El detalle de esa aprobación previa está en <a href="/recursos/lista-aprobacion-muestras-preproduccion/">la lista de aprobación de muestras previa a la producción</a>, que puede usarse como lista de comprobación también para el embalaje de cada familia. Con ambas aprobaciones juntas, el fabricante optimiza el tamaño del bulto antes de comprar material y el comprador recibe un cubicaje ya calculado, en lugar de resolverlo a última hora con el pedido ya en curso.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se controla la calidad del embalaje antes de embarcar?</h2>
+        <p>La calidad del embalaje se controla con una inspección pre-embarque: un control final, pieza por pieza y bulto por bulto, que se realiza antes de cerrar el contenedor y no al llegar a destino. La inspección verifica que el acabado coincide con la muestra aprobada, que los herrajes están completos, que cada canto y esquina lleva su protección y que el flejado y el paletizado resisten el apilado previsto. Solo cuando el lote pasa esa revisión se carga y se sella el contenedor, con el parte de inspección archivado por bulto. Inspeccionar antes de embarcar es más barato que reclamar después: un defecto detectado en fábrica se corrige en horas, mientras que uno detectado en obra obliga a reponer, reembarcar y reprogramar la instalación. La revisión se documenta con fotografías y con un parte firmado, porque una inspección sin registro no sirve de prueba si más tarde aparece una discrepancia en obra.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Punto de inspección</th><th>Qué se comprueba</th><th>Antes de</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Punto de inspección">Acabado y color</td><td data-label="Qué se comprueba">Coincidencia con la muestra física aprobada del proyecto</td><td data-label="Antes de">Cerrar el bulto</td></tr>
+              <tr><td data-label="Punto de inspección">Integridad de piezas y herrajes</td><td data-label="Qué se comprueba">Juego completo de tiradores, bisagras y accesorios por mueble</td><td data-label="Antes de">Embalar el herraje</td></tr>
+              <tr><td data-label="Punto de inspección">Protección de cantos y esquinas</td><td data-label="Qué se comprueba">Esquineros, film y listones colocados en cada punto crítico</td><td data-label="Antes de">Flejar el bulto</td></tr>
+              <tr><td data-label="Punto de inspección">Flejado y paletizado</td><td data-label="Qué se comprueba">Estabilidad de la pila y resistencia al apilado en el contenedor</td><td data-label="Antes de">Cargar el contenedor</td></tr>
+              <tr><td data-label="Punto de inspección">Etiquetado y contenido</td><td data-label="Qué se comprueba">Referencia de bulto, ambiente de destino y lista de contenido</td><td data-label="Antes de">Sellar la carga</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD4-a210-s2.jpg" alt="Vista aérea del parque industrial de Hongye Furniture Group en Guangdong." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Parque industrial de Hongye Furniture Group: la base productiva desde la que salen los contenedores con destino a más de 50 países.</figcaption>
+        </figure>
+        <p>La inspección pre-embarque no sustituye al control de calidad de producción, lo completa: primero se revisa la pieza al fabricarla y después se revisa el bulto al preparar el envío. Ese doble control explica por qué un proyecto cerrado puede entregarse sin sorpresas, y por qué conviene que el comprador reciba el parte de inspección junto con los documentos de embarque. Cuando el proyecto lo requiere, la verificación se puede coordinar con un inspector independiente y el resultado se comparte antes de autorizar el despacho. La secuencia completa, desde la especificación hasta la recepción del lote en obra, se detalla en <a href="/recursos/proceso-compras-ffe-hoteles-7-etapas/">el proceso de compras FF&amp;E para hoteles en siete etapas</a>, donde la inspección figura como hito con documento propio. Ese parte viaja con la carga y se archiva por bulto, de modo que cualquier incidencia en destino puede rastrearse hasta la pieza, el operario y la fecha exacta de la inspección.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Estiba, secuencia de carga y documentación de exportación</h2>
+        <p>La estiba es la forma de colocar la carga dentro del contenedor para que no se mueva durante el viaje. Se empieza por los bultos más pesados y rígidos en el fondo y sobre el piso, se continúa con las piezas largas —cabeceros y tableros— que actúan como estructura, y se terminan de rellenar los huecos con los bultos pequeños. Entre bloques se colocan listones y separadores de cartón, y toda la carga se fija con flejes y, cuando corresponde, con puntales de madera que impiden el desplazamiento longitudinal. El reparto de pesos se equilibra para no cargar un solo lado, y las piezas que no deben apilarse, como espejos y superficies pulidas, viajan arriba o en caja rígida protegida. Cargar bien es la última capa de protección del embalaje.</p>
+        <p>La secuencia de carga se planifica en el mismo orden en que la obra va a instalar, para que la descarga no obligue a vaciar medio contenedor antes de encontrar lo primero. Los bultos se numeran por ambiente y se ordenan por planta, de modo que la cuadrilla descarga en el orden previsto y no pierde jornadas buscando una referencia. Junto con la carga viajan los documentos de exportación: factura comercial, lista de empaque con el contenido de cada bulto, certificados de origen y de materiales, e instrucciones de descarga y montaje. Ese conjunto permite que el cliente y su agente de aduanas tramiten la entrada sin retrasos y que el equipo de instalación sepa exactamente qué abrir primero en cada planta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Casos internacionales y planificación con el fabricante</h2>
+        <p>Los proyectos hoteleros que entregamos repiten el mismo patrón de embalaje adaptado a cada destino. Para un hotel Hilton en Tashkent (Uzbekistán) se embalaron y estibaron más de 1.770 piezas para 295 habitaciones, con una entrega en 52 días y cero defectos en la recepción. En un proyecto hotelero en Riad (Arabia Saudita) el énfasis estuvo en la protección de superficies frente al polvo y el calor del trayecto, con bultos sellados y numerados por planta. En otro proyecto en Ciudad de México (México) la prioridad fue el cubicaje, porque el número de contenedores decidía el coste total del flete. El patrón se repite: embalaje por familia de mueble, estiba por secuencia de instalación y control pre-embarque en cada lote.</p>
+        <p>Planificar el embalaje con el fabricante ahorra tiempo y dinero desde la primera reunión. Guangdong Hongye Furniture Group Co., Ltd. acumula más de 1.000 proyectos entregados en más de 50 países y sirve a más de 47 marcas hoteleras internacionales (datos internos de Hongye, 2026), experiencia que se traduce en un esquema de embalaje probado para cada destino. El MOQ es flexible y se confirma por proyecto según familias y acabados, así que un hotel no necesita ajustar su lista a un mínimo rígido; la lógica de ese cálculo puede verse en <a href="/recursos/logica-pedido-minimo-moq-muebles/">la lógica del pedido mínimo en mobiliario</a>. El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y siempre queda sujeto a lo que fije el contrato, y el alcance puede incluir soporte de instalación en destino o supervisión de instalación según lo acordado. Lo que decide el coste final no es solo el precio de la pieza, sino cuántos contenedores necesita el proyecto y cómo se cargan, y por eso el embalaje se negocia junto con las especificaciones y no al final.</p>
+        <p>Si está definiendo el embalaje de un proyecto hotelero, lo más útil es partir de la lista de ambientes y cantidades. Con esa lista, el fabricante calcula bultos, cubicaje y número de contenedores, y devuelve una propuesta de embalaje junto con la cotización por partida. Para iniciar ese cálculo puede <a href="/contacto/">solicitar una cotización FF&amp;E con embalaje de exportación</a>, indicando las familias, las cantidades aproximadas por ambiente y el puerto de destino.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E con embalaje de exportación incluido"
+      text="Para cotizar un proyecto hotelero necesitamos tres datos: la lista de familias y cantidades por ambiente, el número de habitaciones y el puerto de destino. Escríbanos por /contacto/ con esa información y le devolveremos una cotización FF&E por partida junto con una propuesta de embalaje de exportación: configuración de bultos, cubicaje estimado y número de contenedores previstos. El MOQ es flexible y se confirma por proyecto, el plazo de producción se sitúa en 30-45 días desde la muestra aprobada y sujeto a contrato, y el alcance puede incluir soporte de instalación en destino o supervisión de instalación. Fabricamos sobre más de 300.000 m², con más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales, entre ellas BIFMA, GREENGUARD Gold, FSC y CE. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
