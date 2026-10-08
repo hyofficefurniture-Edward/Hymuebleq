@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/",
   "/recursos/embalaje-exportacion-mobiliario-hotelero/",
   "/recursos/como-visitar-feria-canton-2026-compradores-ffe/",
   "/recursos/feria-canton-2026-mobiliario-fase-compra-ffe/",

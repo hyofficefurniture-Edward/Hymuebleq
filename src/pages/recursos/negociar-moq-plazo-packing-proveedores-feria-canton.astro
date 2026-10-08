@@ -1,0 +1,457 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Negociar MOQ y plazo con proveedores de mobiliario en feria";
+const pageDescription = "Cómo negociar MOQ y plazo con proveedores de mobiliario en la Feria de Cantón: escalones de pedido, packing, cubicaje y certificados. Pida su cotización.";
+const keywords = [
+  "negociar MOQ y plazo con proveedores de mobiliario",
+  "negociar MOQ feria de Cantón",
+  "plazo de entrega mobiliario hotelero",
+  "packing de exportación mobiliario",
+  "certificados de exportación de muebles",
+  "escalones de pedido mobiliario"
+];
+const canonicalPath = "/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD6-a212-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-08";
+const dateModified = "2026-10-08";
+const publicationDateLabel = "Publicada el 8 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué se negocia realmente en la Feria de Cantón con un proveedor de mobiliario?", answer: "Se negocian cuatro condiciones comerciales: la cantidad mínima, la fecha de entrega, el packing de exportación y los certificados. El precio importa, pero estas cuatro deciden el resultado del proyecto, porque un mínimo mal fijado carga stock, una fecha sin holgura retrasa la apertura y un packing flojo convierte la entrega en reposiciones. Conviene separar lo que el fabricante puede cerrar en el puesto de lo que debe confirmar en fábrica con el despiece real." },
+    { question: "¿El MOQ de mobiliario es negociable?", answer: "Sí, el MOQ de mobiliario es flexible y se confirma por proyecto. La cantidad mínima depende sobre todo de la economía de producción, así que suele negociarse por familia de mueble y por acabado en lugar de ser un número rígido. Una forma habitual de bajarlo sin comprar de más es aprobar primero una muestra física y repartir el pedido en dos embarques: un lote corto para obra y un lote mayor tras validar el acabado." },
+    { question: "¿Cuánto tarda la producción de un pedido de mobiliario?", answer: "El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda sujeto a lo que establezca el contrato. Ese plazo no incluye el tiempo previo de muestras ni la orden de compra, ni tampoco el transporte posterior, así que el calendario del proyecto debe sumar todos esos tramos. En un proyecto con fecha de apertura conviene añadir una semana de holgura y acordar hitos de avance con parte fotográfico." },
+    { question: "¿Qué es el cubicaje y por qué importa antes de firmar?", answer: "El cubicaje es el volumen, medido en metros cúbicos, que ocupa cada bulto embalado y, en conjunto, todo el pedido. Importa antes de firmar porque un contenedor se llena de volumen y no de piezas: dos fábricas pueden dar el mismo número de cajas y ocupar volúmenes muy distintos, lo que cambia el número de contenedores y el coste de flete. Conviene pedir el cubicaje estimado junto con el precio y no aceptar una estimación de bultos sin volumen." },
+    { question: "¿Qué certificados hay que pedir a un proveedor de mobiliario de exportación?", answer: "Conviene pedir los certificados de producto y materiales, los de origen y la documentación de la carga, y confirmar cuáles exige el país de destino. En mobiliario para proyectos suelen solicitarse los de gestión de calidad y medio ambiente, los de bajas emisiones, los de resistencia al uso contract y los de origen de la madera. La vigencia se comprueba por el número y la fecha de emisión, y el certificado de origen comercial se tramita antes del embarque." },
+    { question: "¿Cómo se ata la fecha de entrega a la fecha de apertura del proyecto?", answer: "La fecha de entrega se ata negociando cuatro momentos y no uno: aprobación de muestra, fin de producción, embarque y llegada a obra. Entre ellos se colocan hitos de avance, cada uno con su parte fotográfico, para detectar cualquier desviación a tiempo. Si el proyecto tiene fecha de apertura, conviene incluir una semana de holgura dentro del calendario y una cláusula de revisión que fije de antemano cómo se recupera el tiempo ante un retraso del fabricante." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD6-a212-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d6a2-a212-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d6a2-a212-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Ferias · Compras FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Negociar MOQ, plazo, packing y certificados con proveedores de mobiliario en la Feria de Cantón</h1>
+          <p>Negociar MOQ y plazo con proveedores de mobiliario es el conjunto de decisiones que un comprador cierra con el fabricante antes de firmar: la cantidad mínima por referencia, los escalones de pedido, la fecha de entrega contada desde la muestra aprobada, el tipo de packing de exportación y los certificados que viajan con la carga. No consiste en regatear un precio, sino en dejar por escrito las condiciones que después gobiernan el proyecto. En un hotel, un hospital o un campus, esas condiciones pesan más que el descuento: una fecha mal fijada retrasa una apertura y un packing flojo convierte una entrega en una ristra de reposiciones urgentes.</p>
+          <p>Esta guía responde a qué conviene negociar realmente en la segunda fase de la 140.ª Feria de Cantón y cómo hacerlo. Ordena cuatro bloques de negociación: la cantidad mínima y los escalones de pedido, la fecha de entrega, el packing de exportación con su cubicaje, y los certificados y documentos del pedido. Los acompaña con casos de proyectos entregados en Asia Central, Oriente Medio, África, América Latina y Europa. Como referencia de escala, la 139.ª Feria de Cantón recibió a 314.000 compradores internacionales procedentes de 220 países y regiones (web oficial de la Feria de Importación y Exportación de China, 2026), y buena parte de esas compras es mobiliario que después se negocia, se embala y se embarca.</p>
+          <p>Detrás de este criterio está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta y más de 1.000 trabajadores, que suma más de 1.000 proyectos entregados en más de 50 países y sirve a más de 47 marcas hoteleras internacionales, con ocho certificaciones internacionales entre las que figuran ISO 9001, ISO 14001, BIFMA, GREENGUARD, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong), con un plazo de 30-45 días desde la muestra aprobada, y negocia cada proyecto sobre las mismas condiciones: MOQ flexible, términos FOB, CIF, CFR, EXW y DDP, y un packing decidido junto con las especificaciones.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD6-a212-hero.jpg" alt="Dos profesionales revisando muestras de material sobre una mesa en un recinto ferial" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se negocia realmente en la segunda fase de la Feria de Cantón?</h2>
+        <p>En la segunda fase de la Feria de Cantón se negocian las condiciones comerciales del mobiliario y no solo el producto: cantidad mínima, fecha de entrega, packing de exportación y certificados. Es la fase dedicada al hogar de calidad y la que reúne a los expositores de mobiliario, y su celebración está fijada del 23 al 27 de octubre de 2026 (Centro de Comercio Exterior de China, 2026). La 140.ª edición ocupa unos 1,55 millones de m² de superficie de exposición y reúne a cerca de 32.000 expositores (web oficial de la Feria de Importación y Exportación de China, 2026). Conviene llegar con la lista de condiciones preparada y no improvisarla frente al muestrario; <a href="/recursos/como-visitar-feria-canton-2026-compradores-ffe/">la guía para visitar la feria como comprador FF&amp;E</a> ordena esa preparación por fases y ayuda a no perder tiempo entre expositores.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Condición a negociar</th><th>Qué se cierra en el puesto</th><th>Qué exige confirmación en fábrica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Condición a negociar">Cantidad mínima (MOQ)</td><td data-label="Qué se cierra en el puesto">El escalón orientativo por familia y por acabado</td><td data-label="Qué exige confirmación en fábrica">El MOQ exacto de la combinación de acabados elegida</td></tr>
+              <tr><td data-label="Condición a negociar">Precio y término comercial</td><td data-label="Qué se cierra en el puesto">La banda por volumen y el término FOB, CIF, CFR, EXW o DDP</td><td data-label="Qué exige confirmación en fábrica">El precio final tras aprobar muestra y packing</td></tr>
+              <tr><td data-label="Condición a negociar">Fecha de entrega</td><td data-label="Qué se cierra en el puesto">El plazo orientativo desde la muestra aprobada</td><td data-label="Qué exige confirmación en fábrica">La fecha firme con el volumen y los acabados reales</td></tr>
+              <tr><td data-label="Condición a negociar">Packing y cubicaje</td><td data-label="Qué se cierra en el puesto">El tipo de embalaje por familia de mueble</td><td data-label="Qué exige confirmación en fábrica">El número de bultos y de contenedores del proyecto</td></tr>
+              <tr><td data-label="Condición a negociar">Certificados</td><td data-label="Qué se cierra en el puesto">Qué certificados existen y su vigencia</td><td data-label="Qué exige confirmación en fábrica">Qué exige el país de destino y quién lo emite</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La tabla separa dos cosas que suelen confundirse durante la feria: lo que un fabricante puede decidir en el puesto y lo que depende de la fábrica. La cantidad mínima orientativa, la banda de precio por volumen, el término comercial y el tipo de embalaje se acuerdan cara a cara; en cambio, el MOQ exacto de una combinación de acabados, la fecha firme de entrega y el número de contenedores necesitan volver a fábrica y calcularse sobre el despiece real. Un comprador avisado firma en el puesto solo lo que puede sostener después y deja el resto anotado como pendiente con fecha.</p>
+        <p>Hay una razón práctica para trabajar así. El tiempo del expositor es limitado y las respuestas que da de memoria pueden no resistir un cálculo con acabados concretos. Por eso conviene llevar al recinto una ficha por proveedor con las cuatro condiciones y marcar, junto a cada una, si es firme o pendiente de confirmación. Esa ficha, y no el catálogo, permite después comparar ofertas entre fábricas sobre la misma base, algo que en un proyecto de varias plantas decide más que el precio unitario. <a href="/recursos/checklist-comprador-feria-canton-2026/">La lista de comprobación del comprador de la Feria de Cantón</a> cubre los campos que no deberían quedar sin respuesta antes de acordar una visita a fábrica.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo fijar el MOQ de mobiliario sin cargar stock</h2>
+        <p>El MOQ de mobiliario se fija por escalones de pedido y no como un mínimo rígido. La cantidad mínima existe sobre todo por economía de producción: cambiar un acabado, montar una línea o cortar una chapa distinta tiene un coste fijo que solo se reparte con volumen. Por eso el escalón se negocia familia por familia y acabado por acabado, y no sobre el número total del proyecto. En la práctica, el comprador gana cuando acepta un mínimo por familia más bajo y concentra el volumen en las piezas que comparten material, y pierde cuando reparte la cantidad mínima entre demasiadas referencias distintas.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Escalón de pedido</th><th>Qué incluye</th><th>Efecto en el coste</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Escalón de pedido">Escalón de muestra</td><td data-label="Qué incluye">Una o pocas unidades de una referencia</td><td data-label="Efecto en el coste">Precio unitario alto; sirve para aprobar el acabado</td></tr>
+              <tr><td data-label="Escalón de pedido">Escalón de lote corto</td><td data-label="Qué incluye">Cantidad reducida por familia de mueble</td><td data-label="Efecto en el coste">El coste fijo se reparte entre pocas piezas</td></tr>
+              <tr><td data-label="Escalón de pedido">Escalón de proyecto</td><td data-label="Qué incluye">El volumen completo por ambiente</td><td data-label="Efecto en el coste">Mejor precio por volumen y producción continua</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El MOQ no es igual en todas las familias. Un asiento tapizado obliga a cortar tejido y montar estructura, así que su mínimo suele ser más alto que el de una mesita de casegoods, que se produce de forma más continua. Conviene, por tanto, agrupar el pedido por material compartido y preguntar por el escalón de cada familia por separado, en lugar de exigir un único número global. En proyectos en Riad (Arabia Saudita) y en Ciudad de México (México) hemos visto que separar el mínimo por familia abre la puerta a lotes cortos en las piezas de acabado especial. <a href="/recursos/proceso-compras-ffe-hoteles-7-etapas/">El proceso de compras FF&amp;E para hoteles en siete etapas</a> sitúa la definición de cantidades antes de negociar el precio, y ese orden evita cerrar un MOQ sobre una lista que todavía va a cambiar.</p>
+        <p>Hay dos formas de reducir el mínimo sin comprar de más. La primera es aprobar una muestra física antes de escalar la cantidad, de modo que la primera compra sea pequeña y la producción posterior se acuerde sobre una referencia ya validada. La segunda es repartir el pedido en dos embarques: un primer lote corto para instalar y probar en obra, y un segundo lote mayor una vez confirmado el acabado. Ambas reducen el riesgo, aunque elevan algo el coste unitario del primer escalón, y ese intercambio conviene dejarlo por escrito junto con el término comercial acordado, sea FOB, CIF, CFR, EXW o DDP.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se fija la fecha de entrega cuando el proyecto tiene fecha de apertura?</h2>
+        <p>La fecha de entrega se fija contando desde la muestra aprobada y no desde la primera conversación. Nuestro plazo de producción se sitúa en 30-45 días desde esa aprobación y queda sujeto a lo que establezca el contrato, pero el calendario real del proyecto empieza antes: hay que reservar tiempo para la muestra, la orden de compra, la producción, el transporte y la instalación. Cuando existe una fecha de apertura comprometida, como un hotel que abre temporada o un hospital que entra en servicio, el error habitual es negociar solo la salida de fábrica y olvidar la llegada a obra.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Hito del calendario</th><th>Desde cuándo se cuenta</th><th>Qué se negocia</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Hito del calendario">Aprobación de muestra</td><td data-label="Desde cuándo se cuenta">Desde la firma del contrato</td><td data-label="Qué se negocia">Plazo y proceso de aprobación de muestras</td></tr>
+              <tr><td data-label="Hito del calendario">Producción</td><td data-label="Desde cuándo se cuenta">Desde la muestra aprobada</td><td data-label="Qué se negocia">Plazo de 30-45 días e hitos de avance</td></tr>
+              <tr><td data-label="Hito del calendario">Inspección pre-embarque</td><td data-label="Desde cuándo se cuenta">Antes de cargar el contenedor</td><td data-label="Qué se negocia">Alcance y parte de inspección por bulto</td></tr>
+              <tr><td data-label="Hito del calendario">Tránsito y aduana</td><td data-label="Desde cuándo se cuenta">Desde el embarque</td><td data-label="Qué se negocia">Término comercial acordado y documentación</td></tr>
+              <tr><td data-label="Hito del calendario">Instalación en obra</td><td data-label="Desde cuándo se cuenta">Desde la llegada al puerto de destino</td><td data-label="Qué se negocia">Soporte o supervisión de instalación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para atar la fecha conviene negociar cuatro momentos y no uno: la aprobación de muestra, el final de producción, el embarque y la llegada a obra. Entre ellos se colocan hitos de avance, como fin de corte, fin de acabado y pre-embarque, cada uno con su parte fotográfico y su fecha. Un proyecto hotelero entregado en Tashkent (Uzbekistán) funcionó precisamente porque el calendario se acordó por hitos y no por una sola fecha: cada avance se revisó antes de pasar al siguiente, de modo que cualquier desviación se detectaba a tiempo y no al final.</p>
+        <p>Si el proyecto tiene fecha de apertura, el comprador puede pedir dos cosas al negociar. La primera es una semana de holgura dentro del propio calendario, no fuera de él. La segunda es una cláusula de revisión: si la producción se retrasa por causas del fabricante, se acuerda de antemano cómo se recupera el tiempo, ya sea con refuerzo de turno o con un embarque parcial. Un plazo sin holgura no es un plazo optimista, es un plazo frágil, y en un proyecto con fecha de apertura esa fragilidad se paga en obra con jornadas dobles.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD6-a212-s1.jpg" alt="Habitación de hotel con cama, cabecero y sofá del equipamiento FF&amp;E de un proyecto." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Habitación de hotel equipada con casegoods y tapicería del grupo: cada familia de mueble se negocia con su propio bulto y su propio cubicaje.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Packing de exportación y cubicaje: la condición que más se olvida</h2>
+        <p>El packing de exportación y el cubicaje se negocian junto con el pedido y no después. Un contenedor no se llena de piezas, sino de metros cúbicos, y cada decisión de embalaje cambia cuántos bultos entran en un viaje. Un cabecero que viaja plano ocupa menos que uno montado; una mesita con tablero de piedra sinterizada necesita protección de canto y, por tanto, más volumen por pieza. Si el packing se deja para el final, el comprador acaba descubriendo en la factura de flete lo que no acordó en el puesto.</p>
+        <p>Hay tres campos que conviene cerrar con el fabricante antes de firmar. El primero es la configuración de embalaje por familia: qué se envía desmontado y plano, qué va flejado y qué se paletiza. El segundo es el cubicaje estimado, expresado en bultos y en metros cúbicos, junto con el número previsto de contenedores de 20 o 40 pies. El tercero es el etiquetado: cada bulto identificado por referencia, ambiente y planta de destino, de modo que la descarga siga el orden de instalación. <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">La guía de embalaje de exportación de mobiliario hotelero</a> detalla cómo se combinan las capas de protección según la pieza.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD6-a212-s2.jpg" alt="Edificio de la planta de producción de mobiliario del grupo en Guangdong." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Nave de producción del grupo en Guangdong: el plazo de 30-45 días se construye en estas líneas antes del embalaje de exportación.</figcaption>
+        </figure>
+        <p>El cubicaje merece un comentario aparte porque decide el coste final más que el precio unitario. Dos fábricas pueden dar el mismo número de cajas y ocupar volúmenes muy distintos, así que conviene pedir el volumen y no la cantidad de bultos, y comparar ofertas sobre la misma base. En un proyecto en Lagos (Nigeria) la negociación giró en torno al número de contenedores, porque era ese número y no el precio por pieza lo que movía el presupuesto. Para un proyecto completo, <a href="/recursos/cotizar-casegoods-hotel-200-habitaciones/">cómo cotizar casegoods para un hotel de 200 habitaciones</a> muestra cómo los contenedores se derivan del cubicaje real y no de una media.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué certificados y documentos conviene pedir antes de firmar?</h2>
+        <p>Antes de firmar conviene pedir cuatro grupos de documentos: certificados de producto y materiales, certificados de origen, documentación de la carga y fichas técnicas de acabado. En mobiliario de exportación los más habituales son los de gestión de calidad y medio ambiente, los de bajas emisiones, los de resistencia y seguridad del mueble y los de origen de la madera. Nuestras ocho certificaciones internacionales incluyen ISO 9001, ISO 14001, BIFMA, GREENGUARD, SGS, CE, CARB P2 y FSC, y su vigencia se comprueba por el número y la fecha de emisión, nunca por una copia sin fecha.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Para qué sirve</th><th>Cuándo pedirlo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">Calidad (ISO 9001)</td><td data-label="Para qué sirve">Acredita el sistema de gestión de la fábrica</td><td data-label="Cuándo pedirlo">En la primera reunión</td></tr>
+              <tr><td data-label="Documento">Ambiental (ISO 14001)</td><td data-label="Para qué sirve">Acredita la gestión ambiental del proceso</td><td data-label="Cuándo pedirlo">En la primera reunión</td></tr>
+              <tr><td data-label="Documento">Emisiones (GREENGUARD, CARB P2)</td><td data-label="Para qué sirve">Acredita la baja emisión de los materiales</td><td data-label="Cuándo pedirlo">Antes de aprobar acabados</td></tr>
+              <tr><td data-label="Documento">Resistencia contract (BIFMA)</td><td data-label="Para qué sirve">Acredita el uso intensivo del mueble</td><td data-label="Cuándo pedirlo">Antes de firmar el contrato</td></tr>
+              <tr><td data-label="Documento">Origen de la madera (FSC)</td><td data-label="Para qué sirve">Acredita la trazabilidad de la madera</td><td data-label="Cuándo pedirlo">Antes de aprobar acabados</td></tr>
+              <tr><td data-label="Documento">Certificado de origen comercial</td><td data-label="Para qué sirve">Acredita el origen de la mercancía en aduana</td><td data-label="Cuándo pedirlo">Antes del embarque</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Cada documento cumple una función distinta y ninguno sustituye a otro. ISO 9001 e ISO 14001 acreditan el sistema con el que trabaja la fábrica; BIFMA acredita que el mueble resiste el uso intensivo de un entorno contract; GREENGUARD y CARB P2 acreditan el comportamiento de los materiales en interiores; FSC acredita el origen de la madera; y el certificado de origen acredita la mercancía ante la aduana. Pedirlos en el puesto evita que aparezca más tarde un requisito del país de destino que nadie había previsto, algo frecuente cuando el proyecto se destina a mercados con reglas propias.</p>
+        <p>También conviene confirmar quién emite cada documento y en qué idioma. Algunos certificados los emite un laboratorio externo, otros los emite la propia fábrica y el certificado de origen lo tramita una entidad autorizada. Si el país de destino exige inspección previa, hay que acordarla antes del embarque y anexar el parte de inspección a la carga, archivado por bulto. <a href="/recursos/ffande-sourcing-china-verificar-fabricante/">La guía para verificar un fabricante en China</a> explica cómo contrastar estos documentos con la fábrica antes de comprometer un pedido y qué señales conviene vigilar.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>De la negociación al pedido: casos internacionales y siguientes pasos</h2>
+        <p>Los proyectos que entregamos repiten el mismo patrón de negociación adaptado a cada destino. Para un hotel Hilton en Tashkent (Uzbekistán) se cerraron la cantidad mínima por familia, un plazo contado desde la muestra aprobada y un packing ordenado según la secuencia de instalación. En un proyecto hotelero en Riad (Arabia Saudita) la negociación se centró en los certificados de materiales y en la protección frente al calor del trayecto. En otro proyecto en Lagos (Nigeria) el punto crítico fue el cubicaje, porque el número de contenedores decidía el coste total del flete.</p>
+        <p>Al comparar un proyecto en Varsovia (Polonia) con otro en Ciudad de México (México) aparece la misma lección: las condiciones que más pesan son las que se negocian primero, no las que se discuten al final. En Europa suele exigirse más documentación de materiales y de origen; en América Latina, mayor flexibilidad en el MOQ y embarques parciales; en Oriente Medio y África, protección reforzada y un cubicaje ajustado. Ninguna de esas prioridades se improvisa en el puesto, y por eso conviene llevar la ficha preparada con lo que cada mercado pide.</p>
+        <p>El paso siguiente a la feria es siempre el mismo: comparar las fichas, cerrar la muestra, firmar las condiciones y programar el calendario. Hongye Furniture Group expone en la 140.ª Feria de Cantón y produce en Heshan (Jiangmen, Guangdong) con un plazo de 30-45 días desde la muestra aprobada. Si está preparando la negociación de un proyecto, <a href="/recursos/checklist-comprador-feria-canton-2026/">la lista de comprobación del comprador de la Feria de Cantón</a> reúne los puntos que conviene resolver antes de firmar, y nuestro equipo puede revisar con usted el MOQ, el plazo, el packing y los certificados de su proyecto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización con MOQ, plazo y packing confirmados"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Vale la pena dejar sus datos antes de viajar: recibirá el número de stand y la carta de invitación, podrá reservar un horario de atención exclusivo con nuestro equipo y coordinaremos, si lo desea, una visita a la fábrica en Heshan (Jiangmen, Guangdong). Para preparar una cotización necesitamos tres datos: la lista de familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto, y el puerto de destino. El MOQ es flexible y se confirma por proyecto, el plazo de producción se sitúa en 30-45 días desde la muestra aprobada y sujeto a contrato, y el alcance puede incluir el análisis de packing y cubicaje del proyecto. Fabricamos sobre más de 300.000 m², con más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
