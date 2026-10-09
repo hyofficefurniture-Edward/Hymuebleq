@@ -1,0 +1,457 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Seleccionar proveedores de mobiliario en la Feria de Cantón";
+const pageDescription = "Cómo seleccionar proveedores de mobiliario en la Feria de Cantón: criba en el puesto, preguntas de verificación y visita a fábrica. Pida su cotización FF&E.";
+const keywords = [
+  "seleccionar proveedores de mobiliario en la Feria de Cantón",
+  "criba de proveedores feria de Cantón",
+  "preguntas de verificación de fábrica",
+  "visita a fábrica de mobiliario",
+  "segunda fase feria de Cantón mobiliario",
+  "verificar fabricante de muebles en China"
+];
+const canonicalPath = "/recursos/seleccionar-proveedores-mobiliario-feria-canton/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD7-a214-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-09";
+const dateModified = "2026-10-09";
+const publicationDateLabel = "Publicada el 9 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cómo cribar proveedores de mobiliario en la Feria de Cantón?", answer: "La criba se hace en el puesto con tres filtros y en pocos minutos: qué fabrica el expositor, dónde está su planta y con qué respaldo documental cuenta. Si en quince minutos no queda claro el producto, la ubicación de la fábrica y sus certificados, conviene pasar al siguiente expositor. Después se anota la decisión en una ficha por proveedor, de modo que se pueda comparar ofertas sobre la misma base y decidir a quién se dedica la visita a planta." },
+    { question: "¿Qué preguntas separan a un fabricante de un intermediario en un stand?", answer: "Las preguntas sobre capacidad y titularidad de la fábrica son las que mejor separan a un fabricante de un intermediario. Un fabricante concreta ciudad, provincia, superficie, número de líneas de producción y familias que produce de forma continua; un intermediario responde con estimaciones, habla de socios sin nombrarlos y deriva las preguntas técnicas a un tercero. Preguntar también quién fabrica la muestra ayuda, porque una muestra subcontratada no garantiza que la producción siga el mismo estándar." },
+    { question: "¿Qué documentos conviene pedir a un proveedor de mobiliario antes de la visita a fábrica?", answer: "Antes de la visita conviene pedir los certificados de producto y materiales, el certificado de origen y la información de inspección previa al embarque. En mobiliario de proyecto suelen solicitarse los de gestión de calidad y medio ambiente, los de bajas emisiones, los de resistencia al uso contract y los de origen de la madera. La vigencia se comprueba por el número y la fecha de emisión, y conviene confirmar cuáles exige el país de destino y quién emite cada documento." },
+    { question: "¿Cómo se organiza una visita a fábrica durante la Feria de Cantón?", answer: "La visita a fábrica se organiza desde Guangzhou y conviene fijarla para un día de cambio de expositores, cuando no hay negociación al público, o para un día fuera de las fechas de feria. Antes de viajar hay que acordar quién recibe, qué se verá y qué se discutirá, y preparar un guion que recorra almacén de materiales, línea de corte, cabina de acabado y zona de embalaje. Al cierre conviene dejar por escrito qué se vio, qué queda pendiente y para cuándo." },
+    { question: "¿Qué se pregunta sobre control de calidad y packing a un proveedor de mobiliario?", answer: "Sobre control de calidad conviene preguntar en qué hitos se inspecciona cada lote, si al corte, tras el acabado y antes de embarcar, y quién firma el parte de inspección. Sobre packing conviene preguntar qué se envía montado y qué plano, cómo se protegen los cantos y cómo se etiqueta cada bulto por referencia y ambiente de destino. También conviene pedir el cubicaje estimado en metros cúbicos, porque dos ofertas con el mismo número de cajas pueden mover volúmenes distintos." },
+    { question: "¿Cuánto tarda la producción de mobiliario de proyecto tras aprobar la muestra?", answer: "El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda sujeto a lo que establezca el contrato. Ese plazo no incluye el tiempo previo de muestras ni la orden de compra, ni tampoco el transporte posterior, así que el calendario del proyecto debe sumar todos esos tramos. Cuando el proyecto tiene fecha de apertura, conviene preguntar por ese plazo en el puesto y confirmar después, en la visita a fábrica, la disponibilidad real de la planta en la ventana del pedido." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD7-a214-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d7a2-a214-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d7a2-a214-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Ferias · Sourcing FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Cómo seleccionar proveedores de mobiliario en la Feria de Cantón: criba en el puesto y preguntas de verificación</h1>
+          <p>Seleccionar proveedores de mobiliario en la Feria de Cantón es el proceso de criba que un comprador aplica en el puesto para separar a los fabricantes reales de los intermediarios antes de comprometer un pedido. Consiste en hacer pocas preguntas, bien elegidas, y en anotar cada respuesta con la misma disciplina con la que después se revisa un contrato. No se trata de recorrer más pasillos, sino de decidir en pocos minutos qué expositores merecen una visita a fábrica y cuáles conviene descartar. En un proyecto FF&amp;E, esa decisión temprana pesa más que cualquier descuento conseguido al final.</p>
+          <p>Esta guía responde a cómo hacer esa criba en la segunda fase de la 140.ª Feria de Cantón y qué preguntas conviene llevar escritas. La fase dedicada al hogar de calidad, donde se exhibe el mobiliario, se celebra del 23 al 27 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). La 140.ª edición ocupa unos 1,55 millones de m² de superficie de exposición y reúne a cerca de 32.000 expositores (web oficial de la Feria de Importación y Exportación de China, 2026), y la 139.ª recibió a 314.000 compradores internacionales de 220 países y regiones (web oficial de la Feria de Importación y Exportación de China, 2026). Con esa escala, la diferencia entre un buen día de feria y uno perdido está en la preparación.</p>
+          <p>Detrás de este criterio está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta y más de 1.000 trabajadores, que suma más de 1.000 proyectos entregados en más de 50 países y sirve a más de 47 marcas hoteleras internacionales, con ocho certificaciones internacionales entre las que figuran ISO 9001, ISO 14001, BIFMA, GREENGUARD, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong), con un plazo de 30-45 días desde la muestra aprobada, y trabaja cada proyecto con MOQ flexible, términos FOB, CIF, CFR, EXW y DDP, y un packing decidido junto con las especificaciones.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD7-a214-hero.jpg" alt="Comprador y responsable de fábrica revisando muestras de chapa y herrajes sobre una mesa en la planta" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo hacer una primera criba de proveedores en la segunda fase de la Feria de Cantón?</h2>
+        <p>Una primera criba de proveedores en la segunda fase de la Feria de Cantón se hace con tres filtros y en menos de diez minutos por expositor: qué fabrica, dónde lo fabrica y con qué respaldo documental. La fase dedicada al hogar de calidad, donde se exhibe el mobiliario, se celebra del 23 al 27 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). No es la única fase del certamen: la primera va del 15 al 19 de octubre, la tercera del 31 de octubre al 4 de noviembre, y entre ellas hay dos periodos de cambio de expositores, del 20 al 22 y del 28 al 30 de octubre, sin negociación al público (web oficial de la Feria de Importación y Exportación de China, 2026). Para no perder tiempo entre pabellones conviene llevar la ruta preparada; <a href="/recursos/como-visitar-feria-canton-2026-compradores-ffe/">la guía para visitar la feria como comprador FF&amp;E</a> ordena el recorrido por fases y evita pasear sin criterio.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio de criba</th><th>Señal que descarta al expositor</th><th>Señal que lo mantiene en la lista</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio de criba">Producto</td><td data-label="Señal que descarta al expositor">Responde con el catálogo y evita decir qué produce de forma continua</td><td data-label="Señal que lo mantiene en la lista">Nombra las familias que fabrica y con qué materiales trabaja</td></tr>
+              <tr><td data-label="Criterio de criba">Origen</td><td data-label="Señal que descarta al expositor">No concreta provincia ni ciudad de la planta</td><td data-label="Señal que lo mantiene en la lista">Indica la ubicación exacta y ofrece visita a fábrica con fechas</td></tr>
+              <tr><td data-label="Criterio de criba">Titularidad</td><td data-label="Señal que descarta al expositor">Habla de socios o de terceros sin nombrarlos</td><td data-label="Señal que lo mantiene en la lista">Confirma planta propia, superficie y número de líneas</td></tr>
+              <tr><td data-label="Criterio de criba">Respaldo</td><td data-label="Señal que descarta al expositor">Enumera certificados sin número ni fecha de emisión</td><td data-label="Señal que lo mantiene en la lista">Muestra certificados vigentes y proyectos de tamaño comparable</td></tr>
+              <tr><td data-label="Criterio de criba">Seguimiento</td><td data-label="Señal que descarta al expositor">Promete todo sin plazo ni responsable</td><td data-label="Señal que lo mantiene en la lista">Deja por escrito qué queda pendiente y para cuándo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El primer filtro es el producto y no el catálogo. Un fabricante de mobiliario de proyecto explica sin dudar qué familias produce de forma continua, con qué materiales trabaja y qué deja subcontratado. El segundo filtro es el origen: una respuesta vaga sobre la ubicación de la planta, sin provincia ni ciudad, es la señal más rápida de que se habla con un intermediario. El tercero es el respaldo: qué certificados tiene, cuántos proyectos de tamaño comparable ha entregado y en qué países. Estas tres respuestas se cruzan con la ficha que cada comprador prepara antes de viajar; <a href="/recursos/checklist-comprador-feria-canton-2026/">la lista de comprobación del comprador de la Feria de Cantón</a> reúne los campos que conviene dejar cerrados antes de acordar una visita a fábrica.</p>
+        <p>A la criba conviene añadir un elemento que no se ve en el catálogo: la coherencia entre lo que se promete en el puesto y lo que se puede verificar en planta. Un expositor que acepta una visita a fábrica con fechas concretas transmite más que otro que responde con generalidades. Por eso la regla práctica es sencilla: si tras quince minutos no queda claro qué se fabrica, dónde y con qué documentos, se pasa al siguiente expositor y se reserva el tiempo para los que sí responden con datos. Anotar esa decisión, aunque sea en una línea, evita volver al mismo puesto dos días después.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué preguntar en el puesto sobre capacidad y titularidad de la fábrica</h2>
+        <p>En el puesto conviene preguntar por la capacidad y por la titularidad de la fábrica, porque ahí se decide si el interlocutor es un fabricante o un revendedor. Un fabricante conoce el número de líneas de producción, el personal de planta y las familias que produce de forma continua; un intermediario responde con estimaciones y deriva las preguntas técnicas a un tercero. Nuestra planta en Heshan (Jiangmen, Guangdong) trabaja sobre más de 300.000 m² y cuenta con más de 1.000 trabajadores, y ese dato de escala es justo el tipo de información que un comprador puede pedir en cualquier puesto para comparar ofertas sobre la misma base y no sobre impresiones.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Pregunta de criba</th><th>Respuesta que confirma fábrica</th><th>Respuesta que delata intermediario</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Pregunta de criba">¿Dónde está la planta?</td><td data-label="Respuesta que confirma fábrica">Ciudad y provincia concretas, con dirección</td><td data-label="Respuesta que delata intermediario">Solo indica la región o habla de almacén</td></tr>
+              <tr><td data-label="Pregunta de criba">¿Cuántas líneas y cuánta superficie?</td><td data-label="Respuesta que confirma fábrica">Cifra de líneas, superficie y turnos</td><td data-label="Respuesta que delata intermediario">Responde con expresiones generales sin datos</td></tr>
+              <tr><td data-label="Pregunta de criba">¿Qué familias produce de forma continua?</td><td data-label="Respuesta que confirma fábrica">Nombra familias propias y su capacidad</td><td data-label="Respuesta que delata intermediario">Dice que todo depende del pedido</td></tr>
+              <tr><td data-label="Pregunta de criba">¿Quién fabrica la muestra?</td><td data-label="Respuesta que confirma fábrica">La propia planta, con plazo de aprobación</td><td data-label="Respuesta que delata intermediario">No aclara el origen de la muestra</td></tr>
+              <tr><td data-label="Pregunta de criba">¿Puedo visitar la fábrica?</td><td data-label="Respuesta que confirma fábrica">Propone fechas y responsable de recepción</td><td data-label="Respuesta que delata intermediario">Pospone la visita sin proponer alternativa</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las respuestas se leen en dos direcciones. Una respuesta que confirma la fábrica menciona ciudad, superficie, número de líneas y familias propias; una respuesta que delata al intermediario habla de socios sin nombres, de capacidad sin cifras y de plazos sin proceso. Ninguna de estas preguntas exige revelar secreto industrial: son datos que un fabricante serio comparte con un comprador de proyecto, y sirven para decidir a quién se dedica después la visita a planta. En proyectos entregados en Dubái (EAU) y en Varsovia (Polonia), la primera visita a fábrica sirvió precisamente para confirmar por escrito lo que se había prometido en el puesto, y no al contrario.</p>
+        <p>Conviene distinguir entre capacidad y disponibilidad, porque son cosas distintas. La capacidad es cuánto puede producir una planta; la disponibilidad es cuánto hueco libre tiene en la ventana del proyecto. Un expositor puede tener capacidad suficiente y no tener disponibilidad en la fecha que el comprador necesita, y ese dato, mal anotado, se convierte después en un retraso. Preguntar por ambas, y pedir que la respuesta quede por escrito en la ficha, es la forma más rápida de evitar que una visita a fábrica se convierta en una excursión sin resultado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué preguntar sobre certificados, MOQ y plazo antes de la visita a fábrica?</h2>
+        <p>Antes de programar la visita conviene cerrar tres bloques que ahorran tiempo: certificados, cantidad mínima y plazo. El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda sujeto a lo que establezca el contrato, así que la respuesta debe venir con el proceso completo y no con una fecha suelta. En certificados, la pregunta útil no es cuántos tiene una fábrica, sino cuáles exige el país de destino y quién los emite. Nuestras ocho certificaciones internacionales incluyen ISO 9001, ISO 14001, BIFMA, GREENGUARD, SGS, CE, CARB P2 y FSC, y su vigencia se comprueba por número y fecha de emisión. <a href="/recursos/proceso-compras-ffe-hoteles-7-etapas/">El proceso de compras FF&amp;E para hoteles en siete etapas</a> sitúa la verificación de documentos antes de comprometer cantidades.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Bloque a cerrar</th><th>Pregunta concreta en el puesto</th><th>Dato o documento que la respalda</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Bloque a cerrar">Certificados de producto</td><td data-label="Pregunta concreta en el puesto">¿Cuáles exige mi país y quién los emite?</td><td data-label="Dato o documento que la respalda">Certificado con número y fecha de emisión</td></tr>
+              <tr><td data-label="Bloque a cerrar">Cantidad mínima (MOQ)</td><td data-label="Pregunta concreta en el puesto">¿El mínimo es por familia o por acabado?</td><td data-label="Dato o documento que la respalda">Escalón de pedido por familia</td></tr>
+              <tr><td data-label="Bloque a cerrar">Plazo</td><td data-label="Pregunta concreta en el puesto">¿Cómo se cuenta y desde cuándo?</td><td data-label="Dato o documento que la respalda">Plazo de 30-45 días desde la muestra aprobada</td></tr>
+              <tr><td data-label="Bloque a cerrar">Muestra</td><td data-label="Pregunta concreta en el puesto">¿Quién la fabrica y en qué plazo?</td><td data-label="Dato o documento que la respalda">Proceso de aprobación por escrito</td></tr>
+              <tr><td data-label="Bloque a cerrar">Inspección</td><td data-label="Pregunta concreta en el puesto">¿Hay inspección previa al embarque?</td><td data-label="Dato o documento que la respalda">Parte de inspección por lote o por bulto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El bloque de la cantidad mínima merece una pregunta concreta: si el mínimo se aplica por familia o por acabado, y qué escalón cambia el precio. Un fabricante que responde por escalones de pedido ayuda a planificar; uno que solo ofrece un número global obliga a comprar de más o a perder el precio por volumen. En cuanto a los certificados, conviene confirmar en el puesto si se exige inspección previa al embarque y en qué idioma se emiten los documentos, porque ambos puntos aparecen más tarde y retrasan la carga si no se anticipan. Estas tres preguntas, bien anotadas, permiten comparar proveedores sobre criterios comunes.</p>
+        <p>También conviene preguntar por el proceso de muestra, que es la mejor prueba de la organización de una fábrica. Un fabricante explica cuánto tarda una muestra física, quién la aprueba y qué ocurre si el acabado no cuadra con la carta de colores; un revendedor promete una muestra sin decir de dónde sale. En la segunda fase, donde el mobiliario se exhibe junto a materiales y acabados, esa conversación se puede mantener mirando el propio producto, lo que reduce las respuestas evasivas y permite al comprador contrastar de inmediato lo que se le dice.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>QC, packing y muestra: las preguntas que separan al fabricante del intermediario</h2>
+        <p>QC, packing y muestra son los tres campos donde una fábrica se distingue de un intermediario, porque todos dependen de un proceso real y no de un catálogo. En control de calidad, la pregunta útil es qué se inspecciona en cada hito: al corte, tras el acabado y antes de embarcar, con un parte por lote. En packing de exportación, conviene preguntar qué se envía montado y qué plano, cómo se protegen los cantos y cómo se etiqueta cada bulto por referencia y ambiente de destino. En muestra, la pregunta es quién fabrica la muestra y en qué plazo, porque una muestra subcontratada no garantiza que la producción posterior siga el mismo estándar.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD7-a214-s1.jpg" alt="Operario mecanizando paneles de madera en la planta de producción del grupo." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Puesto de mecanizado y taladrado de paneles en la planta del grupo en Guangdong: la capacidad real de un proveedor se comprueba en el taller, no en el catálogo.</figcaption>
+        </figure>
+        <p>La inspección previa al embarque merece una pregunta propia: ¿la realiza personal interno o un tercero, y se archiva el parte por bulto? En un proyecto en Lagos (Nigeria) la diferencia de calidad de packing entre dos ofertas se explicó al verificar este punto, porque una fábrica emitía un parte por contenedor y la otra, uno por pieza. Del mismo modo, conviene pedir el cubicaje estimado en metros cúbicos y no en número de cajas, ya que dos ofertas con las mismas cajas pueden mover volúmenes distintos y, con ellos, costes de flete diferentes. <a href="/recursos/ffande-sourcing-china-verificar-fabricante/">La guía para verificar un fabricante en China</a> explica cómo contrastar estos procesos con la planta antes de firmar.</p>
+        <p>El control de calidad se juzga por dónde se coloca el punto de inspección, no por cuántas veces se repite la palabra calidad. Un fabricante que inspecciona al corte detecta un problema antes de que se multiplique por todo el lote; uno que solo revisa al final descubre el error cuando ya está embalado. Preguntar por la secuencia de inspección y por quién firma cada parte permite saber si la fábrica controla el proceso o solo la salida. Esa diferencia se nota en obra, cuando llegan las piezas de un ambiente completo y alguna no encaja.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo organizar la visita a fábrica de Guangzhou a Heshan (Jiangmen)</h2>
+        <p>La visita a fábrica se organiza desde Guangzhou y, en nuestro caso, se plantea hacia Heshan (Jiangmen, Guangdong), a una distancia que permite ir y volver el mismo día si se reserva la mañana. Conviene fijarla para un día de cambio de expositores o para un día fuera de las fechas de negociación, de modo que no se pierdan horas de feria: los periodos de cambio son del 20 al 22 y del 28 al 30 de octubre (web oficial de la Feria de Importación y Exportación de China, 2026). Antes de viajar hay que acordar tres cosas: quién recibe, qué se va a ver y qué se va a discutir. Una visita sin guion se convierte en un recorrido de cortesía; con guion, sirve para verificar producción, acabados y control de calidad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona de la visita</th><th>Qué se verifica</th><th>Pregunta de cierre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona de la visita">Almacén de materiales</td><td data-label="Qué se verifica">Identificación y trazabilidad de chapas y tejidos</td><td data-label="Pregunta de cierre">¿Cómo se separa el material de mi pedido?</td></tr>
+              <tr><td data-label="Zona de la visita">Línea de corte y mecanizado</td><td data-label="Qué se verifica">Orden de producción y control en el corte</td><td data-label="Pregunta de cierre">¿Qué se inspecciona al cortar?</td></tr>
+              <tr><td data-label="Zona de la visita">Cabina de acabado</td><td data-label="Qué se verifica">Control de color frente a la muestra aprobada</td><td data-label="Pregunta de cierre">¿Quién aprueba el acabado final?</td></tr>
+              <tr><td data-label="Zona de la visita">Zona de embalaje</td><td data-label="Qué se verifica">Configuración de packing y protección de cantos</td><td data-label="Pregunta de cierre">¿Cómo se etiqueta cada bulto por ambiente?</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD7-a214-s2.jpg" alt="Tablero de muestras de acabados de chapa de madera en distintos tonos de roble." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Tablero de muestras de chapa de madera del fabricante: el acabado se confirma sobre muestra física antes de producir.</figcaption>
+        </figure>
+        <p>El guion de la visita debería cubrir cuatro zonas: almacén de materiales, línea de corte y mecanizado, cabina de acabado y zona de embalaje. En cada una conviene fijarse en cómo se identifican los materiales, qué orden sigue la producción y cómo se separa el pedido de otros trabajos en curso. En un proyecto entregado en Riad (Arabia Saudita) la visita se aprovechó para revisar el acabado y la protección frente al calor del trayecto, y en otro en Ciudad de México (México) para confirmar que el escalón de pedido acordado en el puesto coincidía con lo que la planta podía programar en su calendario.</p>
+        <p>Al cierre de la visita conviene dejar por escrito tres puntos: qué se vio, qué queda pendiente y para cuándo. Ese breve acta evita que una impresión favorable se pierda al volver a la feria y permite comparar plantas con criterios comunes. Si el viaje no es posible, la alternativa es pedir una videollamada de planta en la que se recorra la misma secuencia de zonas, aunque no sustituye a la verificación presencial. En cualquiera de los dos casos, el objetivo es el mismo: que la decisión de compra se apoye en lo que se ha comprobado y no en lo que se ha escuchado.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>De la criba al pedido: casos internacionales y siguientes pasos</h2>
+        <p>Los proyectos que entregamos repiten el mismo patrón de verificación adaptado a cada destino. Para un hotel Hilton en Tashkent (Uzbekistán) la criba en el puesto se cerró con la visita a planta, en la que se confirmaron capacidad, acabado y calendario por hitos. En un proyecto hotelero en Riad (Arabia Saudita) el punto crítico fue la protección del mobiliario frente al calor del trayecto. En otro proyecto en Lagos (Nigeria) la verificación se centró en el packing y en el número de contenedores, y en un proyecto en Varsovia (Polonia) en la documentación de materiales y de origen.</p>
+        <p>Al comparar Dubái (EAU), Ciudad de México (México) y los destinos anteriores aparece la misma lección: lo que se verifica en el puesto decide más que lo que se discute al final. En mercados con reglas documentales exigentes conviene confirmar certificados antes de la visita; en mercados de flete largo, el cubicaje y la protección del packing pesan más; en proyectos con fecha de apertura fija, el calendario por hitos se convierte en la prioridad. Hongye Furniture Group expone en la 140.ª Feria de Cantón y produce en Heshan (Jiangmen, Guangdong) con un plazo de 30-45 días desde la muestra aprobada.</p>
+        <p>El paso siguiente es siempre el mismo: comparar las fichas de criba, cerrar la muestra, programar la visita y verificar los documentos. Si está preparando la selección de proveedores para un proyecto, <a href="/recursos/checklist-comprador-feria-canton-2026/">la lista de comprobación del comprador de la Feria de Cantón</a> reúne los puntos que conviene resolver antes de firmar, y nuestro equipo puede revisar con usted la criba, las preguntas de verificación y la visita a fábrica antes de que el proyecto avance a la fase de pedido.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E con criba de proveedores y visita a fábrica"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Vale la pena dejar sus datos antes de viajar: recibirá el número de stand y la carta de invitación, podrá reservar un horario de atención exclusivo con nuestro equipo y coordinaremos, si lo desea, una visita a la fábrica en Heshan (Jiangmen, Guangdong). Para preparar una cotización necesitamos tres datos: la lista de familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto, y el puerto de destino. El MOQ es flexible y se confirma por proyecto, el plazo de producción se sitúa en 30-45 días desde la muestra aprobada y sujeto a contrato, y el alcance puede incluir el análisis de packing y cubicaje del proyecto. Fabricamos sobre más de 300.000 m², con más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
