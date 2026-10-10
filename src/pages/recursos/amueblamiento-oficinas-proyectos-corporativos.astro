@@ -1,0 +1,455 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Amueblamiento de oficinas para empresas: guía de proyectos corporativos";
+const pageDescription = "Amueblamiento de oficinas para empresas: puestos de trabajo, salas y almacenaje en un proyecto con normas EN y BIFMA, MOQ flexible y entrega en 30-45 días.";
+const keywords = [
+  "amueblamiento de oficinas para empresas",
+  "mobiliario de oficina proyectos",
+  "amueblamiento oficinas corporativas",
+  "puestos de trabajo oficina",
+  "mobiliario oficina BIFMA",
+  "proyecto de oficinas llave en mano"
+];
+const canonicalPath = "/recursos/amueblamiento-oficinas-proyectos-corporativos/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD8-a216-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-09";
+const dateModified = "2026-10-09";
+const publicationDateLabel = "Publicada el 9 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué incluye el amueblamiento de oficinas para empresas?", answer: "Es la provisión integral de los puestos de trabajo, salas de reunión, zonas de colaboración y almacenaje de una sede corporativa por parte de un solo proveedor, desde la especificación hasta la instalación en obra. Incluye puestos tipo bench, escritorios elevables, sillas ergonómicas, mesas de reunión, almacenaje y cabinas acústicas, especificados bajo las normas EN 527, EN 1335 y BIFMA. El alcance puede cubrir también el embalaje de exportación y el soporte de instalación en destino. Se planifica por ambientes y por fechas, no pieza a pieza." },
+    { question: "¿Cuántos metros cuadrados necesita cada puesto de trabajo?", answer: "Un puesto en planta abierta ocupa entre 6 y 9 m², un puesto en modelo híbrido entre 8 y 12 m² y un despacho individual entre 12 y 20 m². La cifra sube cuando la oficina añade salas, cabinas acústicas y circulación general, porque esos usos consumen superficie que no se asigna a nadie. La densidad depende de la proporción entre puestos asignados y compartidos, así que se fija primero el ratio de ocupación y después se dimensiona cada ambiente. No conviene cerrar la lista de puestos sin haber calculado la superficie real de la planta." },
+    { question: "¿Qué normas debe cumplir el mobiliario de oficina?", answer: "Los escritorios y mesas siguen EN 527-1, EN 527-2 y EN 527-3; las sillas, EN 1335-1, EN 1335-2 y EN 1335-3, además de BIFMA X5.1; los escritorios se ensayan bajo BIFMA X5.5; y los tapizados de salas deben cumplir BS 5852 o EN 1021-1 y EN 1021-2. La madera debe contar con certificación FSC y los acabados con GREENGUARD Gold para la calidad del aire interior. La fabricación se apoya en ISO 9001 e ISO 14001. Pedir la norma por escrito permite comparar ofertas sobre la misma base técnica." },
+    { question: "¿Cuál es el MOQ y el plazo de producción de un proyecto de oficinas?", answer: "El MOQ es flexible y se confirma por proyecto según las familias y los acabados, así que no hay un mínimo rígido que obligue a ajustar la lista de la sede. El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda siempre sujeto a lo que establezca el contrato. El calendario completo incluye además el transporte marítimo, que varía según el destino, y la instalación en obra. El alcance puede incluir soporte de instalación en destino o supervisión de instalación, según lo acordado." },
+    { question: "¿Cómo se controla la calidad antes de embarcar el mobiliario de oficina?", answer: "Con tres puntos de inspección: a la recepción de los materiales, durante la fabricación del semielaborado y antes de embarcar, con un parte firmado por lote. Se comprueba el acabado frente a la muestra aprobada, la integridad de los herrajes y accesorios, la protección de cantos y esquinas, y la estabilidad del paletizado. Solo cuando el lote supera la revisión se carga y se sella el contenedor. Inspeccionar en fábrica es más económico que reclamar en obra, porque un defecto detectado antes del embarque se corrige en horas y no obliga a reponer ni a reprogramar la instalación." },
+    { question: "¿Cómo se planifica el calendario de un proyecto de oficinas?", answer: "El calendario se planifica hacia atrás desde la fecha de apertura de la sede y se divide en fases con un entregable cada una. La especificación y la aprobación de muestras ocupan entre dos y cuatro semanas, la fabricación entre 30-45 días desde la muestra aprobada, el transporte marítimo entre tres y seis semanas según el destino, y la instalación en una o dos semanas para una sede mediana. Cada día ganado en la aprobación de muestras evita retrasos en obra. La fase final se cierra con una lista de pendientes antes de la recepción." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD8-a216-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d8a2-a216-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d8a2-a216-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Oficinas · FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Amueblamiento de oficinas para empresas: cómo planificar, especificar y entregar una sede corporativa</h1>
+          <p>El amueblamiento de oficinas para empresas es la provisión integral de los puestos de trabajo, salas de reunión, zonas de colaboración y almacenaje de una sede corporativa por parte de un solo proveedor, desde la especificación y la fabricación hasta el embalaje de exportación y la instalación en obra. Se planifica por ambientes y por fechas, no pieza a pieza.</p>
+          <p>Comprar el mobiliario suelto, puesto por puesto y proveedor por proveedor, parece más simple al principio, pero reparte el riesgo y multiplica los puntos de fallo: varias muestras, varios plazos, varios embalajes y varias cuadrillas de instalación que no se coordinan entre sí. El proyecto integral concentra la responsabilidad en un solo proveedor y suele reducir el coste total de propiedad al bajar los reprocesos, el flete fraccionado y las reposiciones urgentes. Esta guía reúne, con criterio de compra y no de catálogo, qué incluye un proyecto de amueblamiento de oficinas, cómo se calcula la densidad por puesto, qué normas EN y BIFMA rigen cada componente, cómo se gestionan MOQ, control de calidad y embalaje de exportación, y cómo se planifica el calendario de una sede corporativa. Como referencia de escala del sector, la 139.ª Feria de Cantón reunió a 314.000 compradores de 220 países y regiones (web oficial de la Feria de Importación y Exportación de China, 2026), y parte de esas compras es mobiliario de oficina que después viaja embalado por mar.</p>
+          <p>Detrás de este procedimiento está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, que suma más de 1.000 proyectos comerciales entregados en más de 50 países —Latinoamérica, Oriente Medio y Europa entre ellos— y sirve a más de 47 marcas hoteleras internacionales, con certificaciones internacionales como BIFMA, GREENGUARD Gold, FSC y CE. Produce en Heshan, Jiangmen, Guangdong, con un plazo de producción de 30-45 días desde la muestra aprobada y trabaja bajo ISO 9001 e ISO 14001. Cada sede se configura por ambientes, no por listados sueltos de piezas.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD8-a216-hero.jpg" alt="Oficina corporativa con puestos de trabajo en banco, sillas ergonómicas y armarios de almacenaje" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Por qué conviene contratar el amueblamiento de oficinas como un proyecto integral?</h2>
+        <p>Contratar el amueblamiento de oficinas como un proyecto integral cuesta menos a lo largo del ciclo de vida que comprarlo por partes, porque concentra especificación, fabricación, control de calidad, embalaje e instalación en un solo responsable. Cuando el comprador reparte el pedido entre varias fábricas, cada una responde solo de su lote: si una silla no cumple la norma, si un tablero llega rayado o si falta un herraje, la coordinación recae en el cliente y la obra se detiene hasta resolverlo. En un proyecto integral, la secuencia se planifica de antemano y el proveedor asume la trazabilidad de cada pieza. El coste total no es el precio unitario, sino la suma del mobiliario, el flete, los reprocesos, las reposiciones urgentes y las jornadas de instalación perdidas. Por eso el ahorro no sale de comprar más barato, sino de comprar completo y bien especificado, con normas y tolerancias definidas desde la primera reunión.</p>
+        <p>Los proyectos corporativos que entregamos confirman ese efecto. Para una sede tecnológica de una empresa del Fortune 500 en el sudeste asiático, Hongye Furniture Group entregó 1.200 puestos de trabajo, 80 despachos de dirección y 40 zonas de colaboración en 78 días, con un 99,2 % de aprobación en la primera instalación y un 42 % menos de coste que los proveedores europeos comparados (registro de proyectos de la empresa, 2025). Ese resultado no proviene de un precio bajo por pieza, sino de un proyecto cerrado de principio a fin: una sola especificación, un solo calendario y un solo responsable de obra. Para ordenar una compra así conviene partir de <a href="/recursos/mobiliario-oficina-ergonomico/">una guía de mobiliario de oficina ergonómico</a>, que ayuda a fijar criterios antes de pedir cotizaciones a varias fábricas.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué incluye un proyecto de amueblamiento de oficinas?</h2>
+        <p>Un proyecto de amueblamiento de oficinas para empresas incluye seis familias de producto que deben especificarse juntas porque comparten medidas, acabados y normas: puestos de trabajo tipo bench, escritorios elevables, sillas ergonómicas, mesas de reunión, almacenaje y cabinas acústicas. El puesto bench se mide por módulos de trabajo y se define con norma EN 527; el escritorio elevable añade la función de cambio de altura y su propia ficha técnica; la silla responde a EN 1335 y a BIFMA X5.1; la mesa de reunión se dimensiona por número de usuarios y por integración audiovisual; el almacenaje se especifica por tipo, altura y cerradura; y la cabina acústica se define por aislamiento y ventilación. Ninguna de las seis se compra bien por separado, porque todas comparten la misma paleta de acabados y el mismo calendario de obra. La tabla siguiente resume qué exige cada zona en unidades y bajo qué norma se verifica.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona</th><th>Unidad de medida</th><th>Norma aplicable</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona">Puesto de trabajo bench</td><td data-label="Unidad de medida">Módulo por persona</td><td data-label="Norma aplicable">EN 527-1, EN 527-2 y EN 527-3</td></tr>
+              <tr><td data-label="Zona">Escritorio elevable</td><td data-label="Unidad de medida">Unidad por puesto</td><td data-label="Norma aplicable">EN 527-1 y ficha técnica del motor</td></tr>
+              <tr><td data-label="Zona">Silla ergonómica</td><td data-label="Unidad de medida">Unidad por persona</td><td data-label="Norma aplicable">EN 1335-1, EN 1335-2, EN 1335-3 y BIFMA X5.1</td></tr>
+              <tr><td data-label="Zona">Mesa de reunión</td><td data-label="Unidad de medida">Unidad por sala</td><td data-label="Norma aplicable">EN 527 y dimensiones para integración AV</td></tr>
+              <tr><td data-label="Zona">Almacenaje y taquillas</td><td data-label="Unidad de medida">Unidad por módulo</td><td data-label="Norma aplicable">ISO 9001 en fabricación y ensayo de carga</td></tr>
+              <tr><td data-label="Zona">Cabina acústica</td><td data-label="Unidad de medida">Unidad por cabina</td><td data-label="Norma aplicable">Aislamiento acústico declarado por el fabricante</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Especificar por zona evita además el error más común de los proyectos de oficina: mezclar familias que no comparten acabado ni tolerancia y acabar con un conjunto que parece montado a retales. Cuando cada ambiente se define por separado, la mesa de reunión puede no coincidir en altura de trabajo con el puesto bench, o el almacenaje puede romper la paleta de acabados del resto de la planta. Unificar el criterio de acabado, de altura de trabajo y de radio de borde permite que las seis familias se lean como un mismo proyecto. En un proyecto en Riad (Arabia Saudita), Hongye Furniture Group equipó 320 puestos de trabajo con acabados resistentes a los rayos UV y conformes a la normativa de construcción local (registro de proyectos de la empresa). Antes de cerrar la lista, conviene revisar <a href="/recursos/metros-cuadrados-puesto-trabajo/">cuántos metros cuadrados exige cada puesto de trabajo</a>, porque la densidad de la planta decide cuántas unidades caben y qué configuración de mesa se adapta mejor.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuántos metros cuadrados necesita cada puesto de trabajo?</h2>
+        <p>La referencia práctica es que un puesto de trabajo en planta abierta ocupa entre 6 y 9 m², un puesto en un modelo de trabajo híbrido entre 8 y 12 m², y un despacho individual entre 12 y 20 m². La horquilla se amplía cuando la oficina incorpora salas de reunión, zonas de concentración, cabinas acústicas y circulación general, porque todos esos usos consumen superficie que no se asigna a nadie. La densidad no se decide solo por la superficie bruta por persona, sino por la proporción entre puestos asignados y puestos compartidos: cuanto mayor es la rotación, más superficie común hace falta. Por eso conviene fijar primero el ratio de ocupación y después dimensionar cada ambiente, no al contrario. La tabla siguiente resume las densidades más habituales y a qué tipo de plantilla se ajusta cada una.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Modelo de trabajo</th><th>Densidad orientativa</th><th>Plantilla adecuada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Modelo de trabajo">Planta abierta</td><td data-label="Densidad orientativa">6-9 m² por puesto</td><td data-label="Plantilla adecuada">Equipos que trabajan presencialmente la mayor parte de la semana</td></tr>
+              <tr><td data-label="Modelo de trabajo">Trabajo híbrido</td><td data-label="Densidad orientativa">8-12 m² por puesto</td><td data-label="Plantilla adecuada">Plantillas con rotación parcial y más salas de reunión</td></tr>
+              <tr><td data-label="Modelo de trabajo">Despacho individual</td><td data-label="Densidad orientativa">12-20 m² por despacho</td><td data-label="Plantilla adecuada">Dirección y funciones que requieren concentración</td></tr>
+              <tr><td data-label="Modelo de trabajo">Zonas de colaboración</td><td data-label="Densidad orientativa">Superficie no asignada</td><td data-label="Plantilla adecuada">Salas, cabinas acústicas y áreas informales</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD8-a216-s1.jpg" alt="Espacio de oficina abierto con puestos de trabajo en banco, sillas de oficina y biombos acústicos azules." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Puestos de trabajo en banco con biombos acústicos y almacenaje bajo: la oficina corporativa se resuelve con medidas repetibles y una sola familia de acabados.</figcaption>
+        </figure>
+        <p>El cálculo se hace ambiente por ambiente, no con una media, porque dos plantas de la misma superficie pueden admitir números de puestos muy distintos según su geometría. Una planta estrecha pierde mucha superficie en circulación y obtiene menos puestos que una planta cuadrada de la misma área, y ese detalle cambia la configuración de mesa que se puede montar. En un proyecto de oficinas en Ciudad de México (México), Hongye Furniture Group ajustó la configuración de los módulos al ancho real de la planta para no perder ni un puesto (registro de proyectos de la empresa). Para llevar ese ajuste al detalle de cada silla y su capacidad de carga, resulta útil <a href="/recursos/sillas-oficina-capacidad-peso-bifma/">la guía de sillas de oficina y carga BIFMA</a>, que explica cómo se verifica el peso admitido antes de definir el modelo por zona.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Normas y certificaciones que debe cumplir el mobiliario de oficina</h2>
+        <p>El mobiliario de oficina comercial se especifica con normas europeas y estadounidenses que fijan dimensiones, seguridad y durabilidad. Los escritorios y mesas se rigen por EN 527-1 para las dimensiones, EN 527-2 para los requisitos de seguridad y EN 527-3 para los métodos de ensayo de estabilidad y resistencia. Las sillas de oficina siguen EN 1335-1 en dimensiones, EN 1335-2 en seguridad y EN 1335-3 en ensayos, y además responden a BIFMA X5.1, la norma estadounidense que prueba la silla por ciclos de carga. Los escritorios se ensayan bajo BIFMA X5.5. Los elementos tapizados de zonas comunes y salas deben cumplir BS 5852 o EN 1021-1 y EN 1021-2 en comportamiento frente al fuego. A ello se suman la madera con certificación FSC y los acabados con GREENGUARD Gold para la calidad del aire interior, y un sistema de gestión bajo ISO 9001 e ISO 14001.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Componente</th><th>Norma aplicable</th><th>Cómo se verifica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Componente">Escritorios y mesas</td><td data-label="Norma aplicable">EN 527-1, EN 527-2 y EN 527-3</td><td data-label="Cómo se verifica">Ficha de dimensiones, seguridad y ensayos de estabilidad</td></tr>
+              <tr><td data-label="Componente">Sillas de oficina</td><td data-label="Norma aplicable">EN 1335-1, EN 1335-2, EN 1335-3 y BIFMA X5.1</td><td data-label="Cómo se verifica">Ensayo por ciclos de carga y revisión de etiqueta</td></tr>
+              <tr><td data-label="Componente">Escritorios elevables</td><td data-label="Norma aplicable">BIFMA X5.5 y EN 527-1</td><td data-label="Cómo se verifica">Ciclos del motor y resistencia del tablero</td></tr>
+              <tr><td data-label="Componente">Tapizados de salas</td><td data-label="Norma aplicable">BS 5852 y EN 1021-1 / EN 1021-2</td><td data-label="Cómo se verifica">Ensayo de ignición sobre muestra de tejido</td></tr>
+              <tr><td data-label="Componente">Madera y acabados</td><td data-label="Norma aplicable">FSC y GREENGUARD Gold</td><td data-label="Cómo se verifica">Cadena de custodia y emisiones declaradas</td></tr>
+              <tr><td data-label="Componente">Fabricación</td><td data-label="Norma aplicable">ISO 9001 e ISO 14001</td><td data-label="Cómo se verifica">Auditoría de sistema de calidad y gestión ambiental</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Pedir la norma correcta por escrito es lo que separa una compra verificable de una promesa comercial. Un proveedor que no puede indicar bajo qué norma se ensaya una silla o un tablero deja al comprador sin forma de comparar ofertas sobre la misma base técnica. Cuando dos cotizaciones parecen iguales, la diferencia suele estar en el número de ciclos de ensayo, en el gramaje del acabado o en la certificación de la madera, y todos esos datos se piden con la norma delante. En proyectos para clientes internacionales, Hongye Furniture Group trabaja con las normas EN, BIFMA, FSC y GREENGUARD Gold citadas en la tabla y entrega la documentación de ensayo junto con la cotización (registro de proyectos de la empresa). Cuando la especificación incluye cambio de altura motorizado, conviene apoyarse en <a href="/recursos/escritorios-elevables-especificaciones-compra/">los criterios de compra de escritorios elevables</a>, que detallan los ciclos, el recorrido y la estabilidad que debe declarar el fabricante.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>MOQ, control de calidad, embalaje de exportación e instalación</h2>
+        <p>La gestión de compra de un proyecto de oficinas se apoya en cuatro controles concretos: MOQ, plazo, verificaciones de calidad y embalaje de exportación. El MOQ es flexible y se confirma por proyecto según familias y acabados, de modo que una sede no necesita ajustar su lista a un mínimo rígido. El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda sujeto a lo que fije el contrato. El control de calidad se organiza en tres puntos de inspección: a la recepción de materiales, durante la fabricación del semielaborado y antes de embarcar, con un parte firmado por lote. El embalaje de exportación combina plegado plano, esquineros de cartón, cartón honeycomb y paletizado para resistir el transporte marítimo y la espera en obra. La instalación se apoya con planos de montaje, supervisión en destino y una lista de pendientes que se cierra antes de la entrega.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD8-a216-s2.jpg" alt="Tablero de muestras de chapa de roble en cuatro tonos para acabados de mobiliario de oficina." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Tablero de muestras de chapa de roble: los acabados de la oficina se confirman sobre muestra física antes de producir.</figcaption>
+        </figure>
+        <p>En cada destino, el alcance se adapta al clima, a la normativa local y al calendario de obra. Para un proyecto de oficinas en Riad (Arabia Saudita), Hongye Furniture Group entregó mobiliario con acabados resistentes a los rayos UV y revisó la conformidad con los requisitos de construcción locales (registro de proyectos de la empresa). En proyectos de oficinas en Ciudad de México (México) y en Dubái (Emiratos Árabes Unidos), la prioridad fue el cubicaje y la secuencia de instalación, porque el número de contenedores y el orden de descarga condicionan el coste total del flete. Ese patrón se repite en cada sede: especificación por zona, control de calidad por lote y embalaje pensado para el trayecto, no solo para el almacén.</p>
+        <p>El cierre de un proyecto de oficinas no termina con la entrega, sino con la instalación verificada. El alcance puede incluir soporte de instalación en destino o supervisión de instalación según lo acordado, y cada planta se cierra con una lista de pendientes que el equipo de obra resuelve antes de firmar la recepción. Para contrastar proveedores sobre la misma base, <a href="/recursos/top-10-proveedores-mobiliario-oficina-ergonomico-2026/">la comparativa de proveedores de mobiliario de oficina ergonómico</a> ayuda a revisar qué documenta cada fábrica y con qué respalda sus cifras. Cuando esté definida la lista por ambientes, puede <a href="/contacto/">solicitar una cotización de proyecto de oficinas</a> indicando las cantidades por zona, el número de plantas y el puerto de destino.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se planifica el calendario de un proyecto de oficinas?</h2>
+        <p>El calendario de un proyecto de amueblamiento de oficinas se planifica hacia atrás desde la fecha de apertura de la sede y se divide en fases con un entregable por fase. La experiencia en proyectos corporativos internacionales indica que la especificación y la aprobación de muestras suelen ocupar entre dos y cuatro semanas, la fabricación entre 30-45 días desde la muestra aprobada, y el transporte marítimo entre tres y seis semanas según el destino. A esas fases se suman la recepción y el control en obra, y la instalación, que en una sede mediana se resuelve en una o dos semanas. El error habitual es comprimir la fase de muestras y dejar todo el margen al transporte, cuando es justo al contrario: cada día ganado en la aprobación evita una semana de retraso en obra. La tabla siguiente resume las fases, su duración orientativa y el entregable que cierra cada una.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Fase</th><th>Duración orientativa</th><th>Entregable</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Fase">Especificación y medidas</td><td data-label="Duración orientativa">1-2 semanas</td><td data-label="Entregable">Listado de ambientes y cantidades por zona</td></tr>
+              <tr><td data-label="Fase">Aprobación de muestras</td><td data-label="Duración orientativa">1-2 semanas</td><td data-label="Entregable">Muestra física firmada y acabado confirmado</td></tr>
+              <tr><td data-label="Fase">Fabricación</td><td data-label="Duración orientativa">30-45 días desde la muestra</td><td data-label="Entregable">Lote producido y verificado por control de calidad</td></tr>
+              <tr><td data-label="Fase">Transporte marítimo</td><td data-label="Duración orientativa">3-6 semanas según destino</td><td data-label="Entregable">Contenedor embarcado con documentación de exportación</td></tr>
+              <tr><td data-label="Fase">Recepción y control en obra</td><td data-label="Duración orientativa">2-5 días</td><td data-label="Entregable">Parte de inspección de recepción</td></tr>
+              <tr><td data-label="Fase">Instalación y lista de pendientes</td><td data-label="Duración orientativa">1-2 semanas</td><td data-label="Entregable">Sede montada y pendientes cerrados</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Ordenar un proyecto de oficinas en pocas ideas ayuda a decidir con criterio. El amueblamiento integral concentra la responsabilidad y reduce el coste total frente a la compra fragmentada, porque evita reprocesos y reposiciones urgentes. La densidad por puesto se fija por modelo de trabajo y no por una media única. Cada componente debe declararse bajo su norma: EN 527 para escritorios y mesas, EN 1335 y BIFMA X5.1 para sillas, BIFMA X5.5 para escritorios, y BS 5852 o EN 1021 para tapizados, con FSC y GREENGUARD Gold en madera y acabados. El MOQ se confirma por proyecto, el plazo se sitúa en 30-45 días desde la muestra aprobada y el control de calidad se cierra antes de embarcar. Con esas piezas definidas, la instalación se planifica sin sorpresas y la sede abre en la fecha prevista.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización de amueblamiento de oficinas por ambientes"
+      text="Para cotizar un proyecto de oficinas necesitamos tres datos: la lista de ambientes y cantidades por zona, el número de plantas o puestos y el puerto de destino. Escríbanos por /contacto/ con esa información y le devolveremos una cotización por partida junto con la especificación por zona y las normas aplicables. El MOQ es flexible y se confirma por proyecto, el plazo de producción se sitúa en 30-45 días desde la muestra aprobada y sujeto a contrato, y el alcance puede incluir soporte de instalación en destino o supervisión de instalación. Fabricamos sobre más de 300.000 m² de planta, con más de 1.000 proyectos comerciales entregados en más de 50 países, más de 47 marcas hoteleras internacionales y certificaciones como BIFMA, GREENGUARD Gold, FSC y CE. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
