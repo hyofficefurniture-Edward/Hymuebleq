@@ -1,0 +1,474 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Cuánto dura la Feria de Cantón: días y plan de viaje para compradores FF&E";
+const pageDescription = "Cuánto dura la Feria de Cantón y cómo repartir los días de un equipo de compras FF&E: fases, llegada, alojamiento, visita a fábrica y controles de compra.";
+const keywords = [
+  "cuánto dura la Feria de Cantón",
+  "días Feria de Cantón",
+  "planificar viaje Feria de Cantón",
+  "fases Feria de Cantón 2026",
+  "equipo de compras FF&E",
+  "visita a fábrica Heshan",
+  "alojamiento Feria de Cantón"
+];
+const canonicalPath = "/recursos/cuanto-dura-feria-canton-2026-compradores-ffe/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD9-a218-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-11";
+const dateModified = "2026-10-11";
+const publicationDateLabel = "Publicada el 11 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto dura la Feria de Cantón y cuántas fases tiene?", answer: "La Feria de Cantón se celebra en tres fases repartidas en tres semanas, y cada fase dura cinco días. En la 140.ª edición de 2026, la primera fase va del 15 al 19 de octubre, la segunda del 23 al 27 de octubre y la tercera del 31 de octubre al 4 de noviembre, con dos periodos de cambio de expositores del 20 al 22 y del 28 al 30 de octubre en los que no hay negociación al público. La feria completa ocupa del 15 de octubre al 4 de noviembre, pero cada comprador asiste solo a la fase que corresponde a su producto." },
+    { question: "¿Cuántos días necesita un comprador en la Feria de Cantón?", answer: "Un equipo de compras FF&E necesita entre tres y cinco días de feria más un día para la visita a fábrica, es decir, entre cuatro y seis jornadas en Guangzhou. Con menos de tres días solo se consiguen primeros contactos y catálogos, mientras que con cinco se llega a comparar muestras, cerrar cantidades por ambiente y programar la producción. La duración exacta depende del tamaño del proyecto y de si incluye varios ambientes o producto médico, que se exhibe en la tercera fase." },
+    { question: "¿En qué fase se exhibe el mobiliario?", answer: "El mobiliario se exhibe en la segunda fase de la Feria de Cantón, del 23 al 27 de octubre de 2026. La primera fase, del 15 al 19 de octubre, se centra en manufactura avanzada, con herrajes, iluminación y material eléctrico, y la tercera fase, del 31 de octubre al 4 de noviembre, reúne el mobiliario médico y los equipos sanitarios. Un comprador de mobiliario de proyecto concentra por tanto su presencia en la segunda fase y reserva los periodos de cambio para visitar fábricas." },
+    { question: "¿Cómo llegar a la Feria de Cantón desde el aeropuerto de Guangzhou?", answer: "Desde el aeropuerto internacional de Baiyun se llega al recinto en metro o en taxi en unos 45-60 minutos. El recinto está en el número 382 de Yuejiang Zhong Lu, distrito de Haizhu, con negociación al público de 9:30 a 18:00. Muchos equipos eligen el metro por coste y regularidad, y el taxi o el coche con conductor cuando viajan con muestras o material de trabajo. Conviene reservar alojamiento cerca de la red de metro que sirve el recinto para no perder horas de feria cada mañana." },
+    { question: "¿Cuándo se visita la fábrica durante el viaje a la Feria de Cantón?", answer: "La visita a fábrica se programa en un periodo de cambio de expositores, del 20 al 22 o del 28 al 30 de octubre, cuando no hay negociación al público. Nuestra planta está en Heshan (Jiangmen, Guangdong) y se puede visitar y volver el mismo día desde Guangzhou si se reserva la mañana. El recorrido cubre almacén de materiales, línea de corte, cabina de acabado y zona de embalaje, y conviene cerrarlo con un acta de tres puntos: qué se vio, qué queda pendiente y para cuándo." },
+    { question: "¿Qué se cierra con el proveedor durante la Feria de Cantón?", answer: "Durante la feria conviene cerrar la especificación por componente bajo su norma, el MOQ, el plazo, el control de calidad y el packing de exportación. Las mesas y escritorios se declaran bajo EN 527, las sillas bajo EN 1335 y BIFMA X5.1, y los tapizados de zonas comunes bajo BS 5852 o EN 1021, con FSC en la madera y GREENGUARD Gold en los acabados. El MOQ es flexible y se confirma por proyecto, y el plazo de producción se sitúa en 30-45 días desde la muestra aprobada, sujeto a contrato. Conviene pedir también el cubicaje estimado en metros cúbicos." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD9-a218-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d9a2-a218-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d9a2-a218-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Compras FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Cuánto dura la Feria de Cantón y cómo planificar los días de un equipo de compras FF&amp;E</h1>
+          <p>Cuánto dura la Feria de Cantón es la primera pregunta que se hace un equipo de compras FF&amp;E cuando empieza a planificar el desplazamiento, porque de esa respuesta dependen los días que hay que reservar, las personas que se desplazan y lo que se puede cerrar en una sola estancia en Guangzhou. La respuesta útil para comprar no es la duración total del certamen, sino la duración de la fase que corresponde al producto: la feria se reparte en tres periodos a lo largo de tres semanas, y cada comprador asiste solo al que le corresponde.</p>
+          <p>Esta guía convierte esa pregunta en un plan de viaje para un proyecto FF&amp;E: cuántos días necesita un comprador de mobiliario de proyecto, cómo repartir las fases, cómo llegar desde el aeropuerto, dónde alojarse y cómo integrar la visita a fábrica en el mismo desplazamiento. Como referencia de escala, la 139.ª edición recibió a 314.000 compradores internacionales de 220 países y regiones (web oficial de la Feria de Importación y Exportación de China, 2026), y una parte de esas compras es mobiliario de proyecto que después viaja embalado por mar.</p>
+          <p>Detrás de este criterio está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, más de 1.000 trabajadores y más de 1.000 proyectos entregados en más de 50 países, que sirve a más de 47 marcas hoteleras internacionales y suma ocho certificaciones internacionales entre las que figuran ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong) con un plazo de producción de 30-45 días desde la muestra aprobada y expone en la 140.ª Feria de Cantón.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD9-a218-hero.jpg" alt="Equipo de compras consultando un catálogo y muestras con un proveedor durante la Feria de Cantón" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuánto dura la Feria de Cantón y cuántas fases tiene?</h2>
+        <p>Cuánto dura la Feria de Cantón es, en cifras, tres fases repartidas en tres semanas: cada fase dura cinco días y, entre una y otra, hay un periodo de cambio de expositores en el que no se negocia al público. La 140.ª edición de 2026 se celebra en tres periodos consecutivos: la primera fase, de manufactura avanzada, del 15 al 19 de octubre; la segunda fase, de hogar de calidad, del 23 al 27 de octubre; y la tercera fase, de vida saludable, del 31 de octubre al 4 de noviembre. En total la feria ocupa del 15 de octubre al 4 de noviembre de 2026, pero ningún comprador asiste a las tres fases completas: cada uno reserva los días de la fase que le corresponde por producto, y ahí está la clave del plan de viaje.</p>
+        <p>La fase dedicada al hogar de calidad, donde se exhibe el mobiliario, se celebra del 23 al 27 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). El mobiliario médico y de residencias sociosanitarias se concentra en la tercera fase, mientras que el herraje, la iluminación, las herramientas y el material eléctrico se muestran en la primera fase. Los dos periodos intermedios de cambio de expositores, del 20 al 22 y del 28 al 30 de octubre, no tienen negociación al público (web oficial de la Feria de Importación y Exportación de China, 2026), un dato que decide cuándo programar la visita a fábrica en el mismo viaje.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Fase</th><th>Fechas de 2026</th><th>Perfil de producto</th><th>Relevancia para un comprador FF&amp;E</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Fase">Primera · manufactura avanzada</td><td data-label="Fechas de 2026">15-19 de octubre</td><td data-label="Perfil de producto">Herrajes, herramientas, iluminación y material eléctrico</td><td data-label="Relevancia para un comprador FF&amp;E">Compra previa de herrajes, iluminación y accesorios de instalación</td></tr>
+              <tr><td data-label="Fase">Segunda · hogar de calidad</td><td data-label="Fechas de 2026">23-27 de octubre</td><td data-label="Perfil de producto">Mobiliario, materiales de construcción, baño y decoración</td><td data-label="Relevancia para un comprador FF&amp;E">Fase principal: mobiliario de hotel, oficina, educación y contract</td></tr>
+              <tr><td data-label="Fase">Tercera · vida saludable</td><td data-label="Fechas de 2026">31 de octubre-4 de noviembre</td><td data-label="Perfil de producto">Productos médicos, equipos sanitarios y papelería</td><td data-label="Relevancia para un comprador FF&amp;E">Mobiliario médico, geriátrico y clínico</td></tr>
+              <tr><td data-label="Fase">Periodos de cambio</td><td data-label="Fechas de 2026">20-22 y 28-30 de octubre</td><td data-label="Perfil de producto">Sin exposición ni negociación al público</td><td data-label="Relevancia para un comprador FF&amp;E">Ventana para la visita a fábrica y los traslados internos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para un comprador FF&amp;E la duración relevante no es la del certamen completo, sino la de la fase que le toca. Un equipo de mobiliario de proyecto concentra su presencia en la segunda fase, de cinco días hábiles, y aprovecha los periodos de cambio para visitar fábricas, revisar muestras con calma o descansar antes del tramo decisivo. Calcular los días con esta lógica evita reservar una semana entera para una feria que, en su producto, se resuelve en cinco jornadas, y deja presupuesto para el día de fábrica, que es donde se confirman capacidad y acabado.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuántos días necesita un equipo de compras FF&amp;E en la Feria de Cantón?</h2>
+        <p>Un equipo de compras FF&amp;E necesita entre tres y cinco días de feria más un día para la visita a fábrica, es decir, entre cuatro y seis jornadas en Guangzhou. Con menos de tres días solo se consiguen primeros contactos y catálogos; con cinco se llega a comparar muestras, cerrar cantidades por ambiente y programar la producción. La feria concentra esa escala de oferta: la 140.ª edición ocupa unos 1,55 millones de m² de superficie de exposición y reúne a cerca de 32.000 expositores (web oficial de la Feria de Importación y Exportación de China, 2026), de modo que administrar los días es tan importante como elegir la fase.</p>
+        <p>La duración óptima depende del tamaño del proyecto y de si el equipo viaja por primera vez. En un desplazamiento típico, el primer día se dedica a fijar la ruta por pabellones y a descartar expositores; el segundo y el tercero, a comparar muestras, materiales y acabados de las familias que interesan; el cuarto, a cerrar el pedido previsto y a acordar MOQ y plazo; y el quinto, si el proyecto lo exige, a la visita a fábrica. La tabla siguiente orienta cuántos días reservar según el perfil del equipo que viaja.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Perfil del equipo</th><th>Días recomendados</th><th>Objetivo del viaje</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Perfil del equipo">Comprador único, proyecto pequeño</td><td data-label="Días recomendados">2-3 días</td><td data-label="Objetivo del viaje">Primer contacto y preselección de dos o tres proveedores</td></tr>
+              <tr><td data-label="Perfil del equipo">Equipo de dos personas, proyecto hotelero</td><td data-label="Días recomendados">4-5 días</td><td data-label="Objetivo del viaje">Comparativa de muestras, cantidades y visita a fábrica</td></tr>
+              <tr><td data-label="Perfil del equipo">Equipo completo con varios ambientes</td><td data-label="Días recomendados">5-7 días</td><td data-label="Objetivo del viaje">Cierre de listas por ambiente, MOQ y calendario de producción</td></tr>
+              <tr><td data-label="Perfil del equipo">Proyecto con mobiliario médico</td><td data-label="Días recomendados">Fase 2 y fase 3 separadas</td><td data-label="Objetivo del viaje">Cubrir la tercera fase, que se celebra veinte días después</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Antes de reservar los vuelos conviene fijar por escrito qué se quiere cerrar en cada jornada, porque sin guion los días se consumen en pasillos. <a href="/recursos/checklist-comprador-feria-canton-2026/">La lista de comprobación del comprador de la Feria de Cantón</a> reúne los campos que hay que dejar preparados antes de viajar: familias y cantidades por ambiente, normas exigidas por el país de destino y el puerto de descarga. Un equipo que llega con esa ficha resuelta dedica el tiempo a comparar en lugar de a averiguar.</p>
+        <p>Los programas que hemos coordinado siguen ese patrón. Para un hotel internacional en Tashkent (Uzbekistán) y para una sede corporativa en Riad (Arabia Saudita), el equipo concentró dos jornadas en comparar acabados y una tercera en cerrar cantidades y calendario antes de visitar la planta. En un centro sociosanitario en Singapur el viaje se dividió en dos tramos, uno para el mobiliario general y otro para el mobiliario clínico, precisamente para no mezclar fases. La lección se repite: cuantos más ambientes tiene el proyecto, más conviene repartir el equipo entre jornadas en lugar de sumar personas al mismo recorrido.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿En qué fase se exhibe el mobiliario y cómo se reparten las visitas?</h2>
+        <p>El mobiliario se exhibe en la segunda fase de la Feria de Cantón, del 23 al 27 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). El mobiliario médico, geriátrico y de residencias sociosanitarias se concentra en la tercera fase, del 31 de octubre al 4 de noviembre, y el herraje, la iluminación y el material eléctrico, que condicionan muchas instalaciones, se muestran en la primera fase. Saber esto evita dos errores frecuentes: buscar mobiliario en la fase equivocada y dar por perdido un proveedor de accesorios por no haber previsto el desplazamiento.</p>
+        <p>La forma de repartir las visitas depende de la mezcla de producto del proyecto. Si todo el pedido es mobiliario de hotel, oficina o educación, basta con la segunda fase y un día de fábrica. Si el proyecto incluye mobiliario clínico o de residencias, conviene separar el viaje en dos tramos o desplazar a una parte del equipo a la tercera fase, porque entre la segunda y la tercera median cuatro días sin negociación. Cuando el pedido incluye herrajes o iluminación específica, una jornada en la primera fase permite cerrar esos componentes antes de decidir el mobiliario.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD9-a218-s1.jpg" alt="Sala de reuniones con mesa blanca, sillas de oficina y biombos acústicos azules en un showroom de mobiliario de proyecto." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sala de reuniones con mesa blanca y biombos acústicos en el recorrido de un showroom de mobiliario de proyecto: el espacio donde el equipo compara acabados antes de cerrar la lista por ambiente.</figcaption>
+        </figure>
+        <p>Una vez fijada la fase, el siguiente paso es organizar la ruta dentro del recinto. <a href="/recursos/como-visitar-feria-canton-2026-compradores-ffe/">La guía para visitar la feria como comprador FF&amp;E</a> ordena el recorrido por fases y por familias de producto, de modo que el equipo no repita pasillos ni deje expositores importantes para el último día. Con una ruta cerrada, cinco jornadas bastan para recorrer la oferta de mobiliario de proyecto con criterio de compra y no de turismo.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo llegar a la Feria de Cantón desde el aeropuerto de Guangzhou?</h2>
+        <p>Desde el aeropuerto internacional de Baiyun se llega al recinto en metro o en taxi en unos 45-60 minutos. El recinto está en el número 382 de Yuejiang Zhong Lu, distrito de Haizhu, Guangzhou, con negociación al público todos los días de feria de 9:30 a 18:00 (web oficial de la Feria de Importación y Exportación de China, 2026). La elección del medio no es un detalle menor para un equipo de compras: condiciona la hora de llegada, la capacidad de llevar muestras y el coste diario del desplazamiento.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Opción</th><th>Ruta</th><th>Tiempo orientativo</th><th>Cuándo conviene</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Opción">Metro</td><td data-label="Ruta">Desde Baiyun hasta la red que sirve el recinto, con transbordo</td><td data-label="Tiempo orientativo">45-60 minutos</td><td data-label="Cuándo conviene">Equipos de dos o más personas en hora punta</td></tr>
+              <tr><td data-label="Opción">Taxi o coche con conductor</td><td data-label="Ruta">Autopista desde Baiyun al distrito de Haizhu</td><td data-label="Tiempo orientativo">45-60 minutos según tráfico</td><td data-label="Cuándo conviene">Llegada con muestras o material de trabajo</td></tr>
+              <tr><td data-label="Opción">Traslado concertado</td><td data-label="Ruta">Recogida en el aeropuerto y regreso diario</td><td data-label="Tiempo orientativo">Según el hotel</td><td data-label="Cuándo conviene">Equipos que se alojan lejos del recinto</td></tr>
+              <tr><td data-label="Opción">Alojamiento junto al recinto</td><td data-label="Ruta">Hoteles en Haizhu y junto a la línea de metro</td><td data-label="Tiempo orientativo">A pie o una parada</td><td data-label="Cuándo conviene">Cuando el objetivo es aprovechar las cinco jornadas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El alojamiento conviene reservarlo con antelación y cerca de la red de metro que sirve el recinto, porque la negociación empieza a las 9:30 y un desplazamiento largo desde el hotel resta horas de feria cada día. Reservar con semanas de margen también reduce el precio y permite alojar juntos a los miembros del equipo, lo que simplifica coordinar la jornada y compartir las notas de cada visita. <a href="/recursos/feria-canton-2026-mobiliario-fase-compra-ffe/">El calendario de compras FF&amp;E y las fases de la feria</a> ayuda a encajar la llegada y la salida con las fechas de la segunda fase.</p>
+        <p>Los equipos que viajan desde mercados lejanos planifican la llegada con más margen. Un comprador de una cadena hotelera en Dubái (EAU) suele llegar un día antes del inicio de la fase para adaptarse al huso horario, y un equipo de Ciudad de México (México) añade medio día de colchón por la duración de los vuelos. Un proyecto entregado en Varsovia (Polonia) se planificó con la llegada fijada la víspera, de modo que la primera jornada de feria empezara a las 9:30 con el equipo ya descansado y acreditado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo integrar la visita a fábrica y repartir el equipo en el mismo viaje</h2>
+        <p>La visita a fábrica se integra en el mismo viaje y conviene fijarla en un periodo de cambio, del 20 al 22 o del 28 al 30 de octubre, cuando no hay negociación al público (web oficial de la Feria de Importación y Exportación de China, 2026). Nuestra planta está en Heshan (Jiangmen, Guangdong) y se puede visitar y volver el mismo día desde Guangzhou si se reserva la mañana. Ver la producción, el acabado y la línea de embalaje es lo que separa un catálogo de una capacidad real, y ese día suele cambiar el orden de la lista de proveedores.</p>
+        <p>La segunda decisión es cómo repartir el equipo, porque no todas las personas del proyecto rinden igual en la misma tarea. Un reparto habitual asigna a cada rol una responsabilidad en feria y otra en planta, de modo que quien negocia en el puesto no sea el mismo que verifica la producción, y que el jefe de proyecto cierre por escrito los pendientes antes de volver. La tabla siguiente resume ese reparto para un proyecto de tamaño medio.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Rol</th><th>Responsabilidad en feria</th><th>Responsabilidad en fábrica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Rol">Responsable de compras</td><td data-label="Responsabilidad en feria">Selección de proveedores y negociación de MOQ y plazo</td><td data-label="Responsabilidad en fábrica">Verificación de capacidad y disponibilidad real</td></tr>
+              <tr><td data-label="Rol">Técnico o diseñador</td><td data-label="Responsabilidad en feria">Revisión de medidas, acabados y muestras</td><td data-label="Responsabilidad en fábrica">Comprobación de proceso, materiales y acabado final</td></tr>
+              <tr><td data-label="Rol">Responsable de logística</td><td data-label="Responsabilidad en feria">Cubicaje, packing y puerto de destino</td><td data-label="Responsabilidad en fábrica">Revisión de la línea de embalaje y del etiquetado</td></tr>
+              <tr><td data-label="Rol">Jefe de proyecto</td><td data-label="Responsabilidad en feria">Cierre de listas por ambiente y del calendario</td><td data-label="Responsabilidad en fábrica">Acta de visita con lo visto, lo pendiente y las fechas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD9-a218-s2.jpg" alt="Vista de la sede de producción de Hongye Furniture Group en Guangdong con la puerta principal y el edificio de planta." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sede de producción de Hongye Furniture Group en Guangdong, destino de la visita a fábrica que se programa en los periodos de cambio entre fases.</figcaption>
+        </figure>
+        <p>El control del coste empieza por el tamaño del equipo. Cada persona añadida al viaje suma vuelo, alojamiento y dietas, y no todas aportan en todas las jornadas, así que conviene llevar a la feria al equipo mínimo capaz de cubrir compras, técnica y logística, y completar con vídeo cuando el desplazamiento no aporta. Nuestra fábrica en Heshan (Jiangmen, Guangdong) recibe visitas programadas con guion que recorren almacén de materiales, corte, acabado y embalaje. <a href="/recursos/seleccionar-proveedores-mobiliario-feria-canton/">Cómo seleccionar proveedores de mobiliario en la Feria de Cantón</a> detalla qué comprobar en ese recorrido antes de decidir.</p>
+        <p>En proyectos entregados en Lagos (Nigeria) y en Varsovia (Polonia), la visita a fábrica se programó en el periodo de cambio y el equipo de dos personas cubrió compras y técnica a la vez, lo que redujo costes sin perder rigor en la verificación. En un hotel de Tashkent (Uzbekistán) el jefe de proyecto cerró el acta de visita el mismo día para no dejar decisiones abiertas hasta la vuelta. Ese hábito, escribir lo visto y lo pendiente antes de salir de la planta, es el que evita que una impresión favorable se disuelva al reanudar la feria.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>MOQ, plazo, QC, packing y certificados: lo que se cierra durante el viaje</h2>
+        <p>El viaje se aprovecha para cerrar los controles de compra que dejan el pedido listo para producir: especificación, MOQ, plazo, control de calidad y packing de exportación. Cada componente se declara bajo su norma, de modo que dos ofertas se puedan comparar sobre la misma base técnica: mesas y escritorios bajo EN 527, sillas bajo EN 1335 y BIFMA X5.1, escritorios elevables bajo BIFMA X5.5, y tapizados de zonas comunes bajo BS 5852 o EN 1021-1 y EN 1021-2. La madera se respalda con FSC, los acabados con GREENGUARD Gold para la calidad del aire interior, y la fabricación se apoya en ISO 9001 e ISO 14001.</p>
+        <p>Con las normas sobre la mesa, la conversación pasa a los tres datos que fijan el coste y el calendario. El MOQ es flexible y se confirma por proyecto según familias y acabados, así que el proyecto no necesita ajustar su lista a un mínimo rígido. El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda sujeto a lo que establezca el contrato. El control de calidad se organiza en tres puntos de inspección, a la recepción de materiales, durante la fabricación y antes de embarcar, con un parte firmado por lote. La tabla siguiente resume qué se verifica en cada control.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Control</th><th>Dato o norma</th><th>Cómo se verifica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Control">Especificación</td><td data-label="Dato o norma">EN 527, EN 1335, BIFMA X5.1 y BIFMA X5.5</td><td data-label="Cómo se verifica">Ficha de norma y ensayo por componente</td></tr>
+              <tr><td data-label="Control">Tapizados</td><td data-label="Dato o norma">BS 5852 o EN 1021-1 / EN 1021-2</td><td data-label="Cómo se verifica">Ensayo de ignición sobre muestra de tejido</td></tr>
+              <tr><td data-label="Control">Madera y acabados</td><td data-label="Dato o norma">FSC y GREENGUARD Gold</td><td data-label="Cómo se verifica">Cadena de custodia y emisiones declaradas</td></tr>
+              <tr><td data-label="Control">MOQ</td><td data-label="Dato o norma">Flexible, confirmado por proyecto</td><td data-label="Cómo se verifica">Escalón de pedido por familia y acabado</td></tr>
+              <tr><td data-label="Control">Plazo</td><td data-label="Dato o norma">30-45 días desde la muestra aprobada, sujeto a contrato</td><td data-label="Cómo se verifica">Proceso completo, no una fecha suelta</td></tr>
+              <tr><td data-label="Control">QC y packing</td><td data-label="Dato o norma">Inspección por hitos y embalaje de exportación</td><td data-label="Cómo se verifica">Parte por lote y cubicaje estimado en m³</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El packing merece una pregunta propia, porque dos ofertas con el mismo número de cajas pueden mover volúmenes distintos y cambiar el coste del flete. Conviene preguntar qué se envía montado y qué plano, cómo se protegen los cantos y cómo se etiqueta cada bulto por referencia y ambiente de destino, y pedir el cubicaje en metros cúbicos. <a href="/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/">Los puntos de negociación de MOQ, plazo y packing con proveedores de la feria</a> reúnen las preguntas que conviene llevar escritas al puesto para cerrar estos puntos sin dejarlos para el correo.</p>
+        <p>Los proyectos que hemos entregado confirman que estos controles se cierran mejor durante el viaje. Para un hotel internacional en Tashkent (Uzbekistán) se fijó la especificación bajo normas EN y BIFMA y se acordó el control de calidad por hitos antes de la visita a planta. En un proyecto hotelero en Riad (Arabia Saudita) la prioridad fue el packing y la protección frente al calor del trayecto. En un proyecto en Lagos (Nigeria) la comparación se hizo sobre el número de contenedores y no sobre el número de cajas. En todos ellos, el MOQ se confirmó por proyecto y la instalación se apoyó con planos de montaje y una lista de pendientes que se cierra antes de la recepción.</p>
+        <p>El cierre del viaje consiste en volver con la lista de ambientes cerrada, la muestra acordada y los controles documentados. Si está preparando un proyecto FF&amp;E, puede <a href="/contacto/">solicitar una cotización de proyecto FF&amp;E</a> indicando las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino; con esos tres datos el equipo devuelve una propuesta por partida junto con las normas aplicables y el calendario.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Planifique su viaje y solicite una cotización FF&E"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Vale la pena dejar sus datos antes de reservar el viaje: recibirá el número de stand y la carta de invitación, podrá reservar un horario de atención exclusivo con nuestro equipo y coordinaremos, si lo desea, una visita a la fábrica en Heshan (Jiangmen, Guangdong). Para preparar una cotización necesitamos tres datos: la lista de familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino. El MOQ es flexible y se confirma por proyecto, el plazo de producción se sitúa en 30-45 días desde la muestra aprobada y sujeto a contrato, y el alcance puede incluir el análisis de packing y cubicaje. Fabricamos sobre más de 300.000 m², con más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
