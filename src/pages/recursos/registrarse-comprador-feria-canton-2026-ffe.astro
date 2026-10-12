@@ -1,0 +1,473 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Cómo registrarse como comprador en la Feria de Cantón 2026: registro previo, badge y visita a fábrica";
+const pageDescription = "Registro previo de comprador en la 140.ª Feria de Cantón: pasos, credencial, documentación, carta de invitación y cómo reservar la visita a fábrica.";
+const keywords = [
+  "cómo registrarse como comprador en la Feria de Cantón",
+  "registro previo Feria de Cantón 2026",
+  "badge de comprador Feria de Cantón",
+  "carta de invitación Feria de Cantón",
+  "visita a fábrica Heshan Jiangmen",
+  "documentación registro comprador importador"
+];
+const canonicalPath = "/recursos/registrarse-comprador-feria-canton-2026-ffe/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD10-a220-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-12";
+const dateModified = "2026-10-12";
+const publicationDateLabel = "Publicada el 12 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cómo registrarse como comprador en la Feria de Cantón?", answer: "El registro se hace antes de viajar con el formulario de comprador de la web oficial de la feria, donde se crean el perfil de la empresa y el del asistente y se cargan el pasaporte y la fotografía. Después se recibe una confirmación con el código de acreditación, que se presenta junto al pasaporte para recoger el badge en el recinto; también existe el registro en el propio recinto, aunque consume horas de la jornada de compra. La 140.ª edición se celebra en tres fases, del 15 al 19 de octubre, del 23 al 27 de octubre y del 31 de octubre al 4 de noviembre de 2026, y conviene registrarse para la fase en la que se exhibe el producto que se busca (web oficial de la Feria de Importación y Exportación de China, 2026)." },
+    { question: "¿Qué documentación hay que preparar para el registro?", answer: "Conviene preparar el pasaporte vigente, una fotografía reciente, una acreditación profesional y los datos mercantiles de la empresa: razón social, sector, sede y página web. La documentación se organiza en dos bloques, uno que acredita la identidad del asistente y otro que acredita la actividad de compra o importación de la empresa. Si va a solicitar visado, se suman el formulario y la cita ante el consulado competente; la decisión sobre el visado corresponde a las autoridades consulares chinas y los requisitos se consultan siempre en la información oficial más reciente del consulado donde presente la solicitud." },
+    { question: "¿Cuándo se puede recoger la credencial de comprador?", answer: "La credencial se recoge en el recinto durante los días de feria, presentando el pasaporte y la confirmación del registro previo. El recinto está en el número 382 de Yuejiang Zhong Lu, distrito de Haizhu, Cantón, y la negociación al público se desarrolla de 9:30 a 18:00 todos los días de feria (web oficial de la Feria de Importación y Exportación de China, 2026). Conviene recogerla antes de la primera cita y no el mismo día de la reunión, porque la acreditación es personal y cada miembro del equipo debe registrar su propio perfil. Los intervalos del 20 al 22 y del 28 al 30 de octubre no tienen negociación al público." },
+    { question: "¿En qué fase se exhibe el mobiliario y cuándo se celebra?", answer: "El mobiliario se exhibe en la segunda fase, del 23 al 27 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). La primera fase, del 15 al 19 de octubre, se centra en manufactura avanzada, con herrajes, iluminación y material eléctrico, y la tercera, del 31 de octubre al 4 de noviembre, reúne el mobiliario médico y los equipos sanitarios. Por eso un comprador de mobiliario de proyecto concentra su registro y su presencia en la segunda fase, y reserva los intervalos del 20 al 22 y del 28 al 30 de octubre para visitar fábricas." },
+    { question: "¿Se puede reservar la visita a la fábrica antes de viajar?", answer: "Sí, la visita a fábrica se reserva antes de viajar y conviene fijarla en el mismo momento del registro, porque las fechas de planta se cierran con antelación. Nuestra planta está en Heshan (Jiangmen, Guangdong) y se puede visitar desde Cantón en una jornada, con salida por la mañana y regreso por la tarde. Los momentos naturales son los intervalos del 20 al 22 y del 28 al 30 de octubre, cuando el recinto no atiende negociaciones, y los días previos al inicio de la segunda fase si el equipo llega con margen. El recorrido cubre almacén de materiales, línea de corte, cabina de acabado y zona de embalaje." },
+    { question: "¿Qué se cierra con el proveedor durante la visita a la Feria de Cantón?", answer: "Durante la visita conviene cerrar la especificación por componente bajo su norma, el MOQ, el plazo, el control de calidad y el packing de exportación. Las mesas y escritorios se declaran bajo EN 527, las sillas bajo EN 1335 y BIFMA X5.1, los escritorios elevables bajo BIFMA X5.5 y los tapizados bajo BS 5852 o EN 1021-1 y EN 1021-2, con FSC en la madera y GREENGUARD Gold en los acabados. El MOQ es flexible y se confirma por proyecto, y el plazo de producción se sitúa en 30-45 días desde la muestra aprobada, sujeto a contrato. Conviene pedir también el cubicaje estimado en metros cúbicos." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD10-a220-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d10a2-a220-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d10a2-a220-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Compras FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Cómo registrarse como comprador en la Feria de Cantón 2026: del registro previo a la visita a fábrica</h1>
+          <p>El registro previo de comprador de la Feria de Cantón es el trámite por el que una empresa acredita su condición comercial ante la organización para obtener su credencial de acceso al recinto. Se completa antes de viajar con los datos de la empresa y del asistente, y habilita la visita durante la fase que corresponde a su producto.</p>
+          <p>Esta guía explica ese registro paso a paso para un equipo que compra mobiliario de proyecto: qué documentación preparar, qué datos de empresa se piden, cómo se recoge el badge de comprador y cómo el mismo expediente sirve para reservar la visita a fábrica antes de viajar. La 140.ª edición de la feria se celebra en tres fases —del 15 al 19 de octubre, del 23 al 27 de octubre y del 31 de octubre al 4 de noviembre de 2026— con intervalos del 20 al 22 y del 28 al 30 de octubre en los que el recinto no atiende negociaciones, y el mobiliario, el material de construcción y la decoración se concentran en la segunda fase (web oficial de la Feria de Importación y Exportación de China, 2026).</p>
+          <p>Como referencia de escala, la 139.ª edición reunió a compradores internacionales de 220 países y regiones, 314.000 personas, y la 140.ª ocupa cerca de 1,55 millones de m² con unos 32.000 expositores (web oficial de la Feria de Importación y Exportación de China, 2026). Detrás de este criterio está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales entre las que figuran ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong) con un plazo de producción de 30-45 días desde la muestra aprobada y expone en la 140.ª Feria de Cantón.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD10-a220-hero.jpg" alt="Equipo de compras registrándose y preparando su visita a la Feria de Cantón con documentación y catálogos sobre la mesa" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo registrarse como comprador en la Feria de Cantón?</h2>
+        <p>El registro se resuelve por tres vías, y conviene elegir la vía antes de reservar el vuelo. La primera es el registro previo en la web oficial de la feria, que permite llegar al recinto con la acreditación resuelta y no gastar en colas la primera jornada de compra. La segunda es el registro en el propio recinto, útil para quien decide viajar con poco margen, aunque consume horas que pertenecen a la negociación. La tercera es el apoyo de la fábrica que le atiende: no sustituye al registro ni lo tramita, pero acelera el expediente cuando la empresa necesita la carta de invitación para el visado. Elegir la vía correcta es una decisión de agenda, no un trámite administrativo: un equipo de compras que llega con el registro confirmado dedica el primer día a comparar proveedores, y un equipo que llega sin él dedica el primer día a hacer cola.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Paso del registro</th><th>Qué se hace</th><th>Dato que conviene tener a mano</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Paso del registro">Elegir la fase</td><td data-label="Qué se hace">Confirmar qué producto se busca y en qué fase se exhibe</td><td data-label="Dato que conviene tener a mano">Familias de producto y fase que les corresponde</td></tr>
+              <tr><td data-label="Paso del registro">Crear el perfil de comprador</td><td data-label="Qué se hace">Registrar la empresa y la persona que asiste en el formulario oficial</td><td data-label="Dato que conviene tener a mano">Razón social, sector, país y datos de contacto</td></tr>
+              <tr><td data-label="Paso del registro">Adjuntar la documentación</td><td data-label="Qué se hace">Cargar el pasaporte, la acreditación profesional y la fotografía</td><td data-label="Dato que conviene tener a mano">Documentos en formato digital y legibles</td></tr>
+              <tr><td data-label="Paso del registro">Confirmar el registro</td><td data-label="Qué se hace">Recibir la confirmación y el código de acreditación</td><td data-label="Dato que conviene tener a mano">Un correo electrónico de uso habitual y revisado</td></tr>
+              <tr><td data-label="Paso del registro">Recoger la credencial</td><td data-label="Qué se hace">Presentar el pasaporte y la confirmación en el recinto</td><td data-label="Dato que conviene tener a mano">Vuelo y alojamiento ya reservados</td></tr>
+              <tr><td data-label="Paso del registro">Preparar la agenda</td><td data-label="Qué se hace">Ordenar reuniones y visita a fábrica por jornadas</td><td data-label="Dato que conviene tener a mano">Lista de familias por ambiente y cantidades previstas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos detalles del calendario ordenan todo el proceso. El primero es que la credencial habilita la visita durante la fase que corresponde al producto, y el mobiliario de proyecto se exhibe del 23 al 27 de octubre, en la segunda fase (web oficial de la Feria de Importación y Exportación de China, 2026). El segundo es que la acreditación es personal: cada miembro del equipo de compras registra su propio perfil, con su documento y sus datos, porque la credencial se emite a nombre de una persona y no de una empresa. Si el proyecto incluye mobiliario clínico o de residencias sociosanitarias, parte del equipo necesitará además la tercera fase, del 31 de octubre al 4 de noviembre, y eso se decide al reservar los vuelos y no al llegar a Cantón.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué documentación hay que preparar para el registro como comprador?</h2>
+        <p>La documentación se prepara en dos bloques: lo que acredita la identidad del asistente y lo que acredita la actividad de la empresa. En el primero entran el pasaporte vigente, una fotografía reciente y el formulario del registro; en el segundo, los datos mercantiles que demuestran que la empresa compra o importa, como la razón social, el sector, la sede y, si la tiene, la página web corporativa. Para un proyecto FF&amp;E conviene añadir el nombre del proyecto, el tipo de inmueble y las familias que se van a buscar —mobiliario de hotel, de oficina, educativo o clínico—, porque esa información orienta la atención en el recinto y se reutiliza al solicitar la carta de invitación. Preparar el expediente con criterio de compra y no solo con criterio administrativo ahorra una jornada entera de feria, y <a href="/recursos/checklist-comprador-feria-canton-2026/">la lista de comprobación del comprador de la Feria de Cantón</a> reúne los campos que conviene tener resueltos antes de viajar.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento o dato</th><th>Para qué se pide</th><th>Nota práctica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento o dato">Pasaporte vigente</td><td data-label="Para qué se pide">Identifica al asistente en el registro y en la acreditación</td><td data-label="Nota práctica">Compruebe la vigencia mínima exigida antes de iniciar cualquier trámite</td></tr>
+              <tr><td data-label="Documento o dato">Datos de la empresa</td><td data-label="Para qué se pide">Acreditan la actividad de compra o de importación</td><td data-label="Nota práctica">Razón social, sector, sede y página web corporativa</td></tr>
+              <tr><td data-label="Documento o dato">Acreditación profesional</td><td data-label="Para qué se pide">Confirma el cargo y la función del asistente</td><td data-label="Nota práctica">Suele bastar la tarjeta de visita o una copia digital</td></tr>
+              <tr><td data-label="Documento o dato">Fotografía reciente</td><td data-label="Para qué se pide">Se usa para emitir la credencial de comprador</td><td data-label="Nota práctica">Fondo claro y formato cuadrado</td></tr>
+              <tr><td data-label="Documento o dato">Carta de invitación</td><td data-label="Para qué se pide">Respalda el motivo profesional del viaje</td><td data-label="Nota práctica">Se envía tras la consulta del comprador por /contacto/</td></tr>
+              <tr><td data-label="Documento o dato">Formulario y cita de visado</td><td data-label="Para qué se pide">Solicitud del visado ante el consulado competente</td><td data-label="Nota práctica">La decisión corresponde a las autoridades consulares chinas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Sobre la carta de invitación conviene ser preciso. La enviamos cuando el comprador nos escribe y nos indica su sector, su país de origen y el número de personas que viajan, y su función es respaldar el motivo profesional de la estancia. No sustituye a ningún trámite y no garantiza el visado, porque la decisión corresponde a las autoridades consulares chinas y los requisitos cambian con el tiempo y con el país de residencia. La referencia válida es siempre la información oficial más reciente del consulado donde presente la solicitud, y esa es la razón de preparar el expediente con margen y con los documentos revisados antes de la cita. Un expediente bien ordenado también facilita el registro en el recinto: los datos de empresa que se cargan en la solicitud de visado son los mismos que pide la credencial de comprador.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>El badge de comprador: dónde se recoge y cómo se aprovecha el primer día</h2>
+        <p>El badge de comprador se recoge en el recinto presentando el pasaporte y la confirmación del registro previo, y es el documento que da acceso a las negociaciones. La feria atiende de 9:30 a 18:00 todos los días de feria, y el recinto está en el número 382 de Yuejiang Zhong Lu, distrito de Haizhu, Cantón (web oficial de la Feria de Importación y Exportación de China, 2026). La primera jornada de un equipo se consume con facilidad en colas, traslados y orientación, así que conviene llegar con el registro confirmado y recoger la credencial antes de la primera cita, no el mismo día de la reunión. Para quien viaja por primera vez, reservar alojamiento junto a la red de metro que sirve el recinto es una decisión de rendimiento: la negociación empieza a las 9:30 y cada hora de desplazamiento se resta de la jornada de compra.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD10-a220-s1.jpg" alt="Sala de reuniones con mesa blanca, sillas de oficina y biombos acústicos azules en un showroom de mobiliario de proyecto." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sala de reuniones con mesas de trabajo y biombos acústicos en un showroom de mobiliario de proyecto: el espacio donde el equipo compara acabados y cierra la especificación por componente.</figcaption>
+        </figure>
+        <p>Con la credencial en la mano, el primer día rinde si la agenda está cerrada. Conviene llevar la lista de familias por ambiente y la especificación provisional, y tratar cada reunión como una comparación y no como una visita: qué acabado se ofrece, con qué norma se declara cada componente, qué MOQ aplica a esa familia y qué plazo compromete el proveedor. En una jornada de feria caben entre cuatro y seis reuniones de calidad, siempre que el recorrido por el recinto esté ordenado por familias de producto y no por proximidad de puestos. <a href="/recursos/como-visitar-feria-canton-2026-compradores-ffe/">La guía para visitar la feria como comprador FF&amp;E</a> propone un orden de visita que evita repetir pasillos y deja los expositores importantes para los días con menos afluencia.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo reservar la visita a fábrica antes de viajar</h2>
+        <p>La visita a fábrica se reserva antes de viajar, no durante la feria, porque los días útiles son pocos y la agenda se llena rápido. Nuestra planta está en Heshan (Jiangmen, Guangdong) y se puede visitar desde Cantón en una jornada, con salida por la mañana y regreso por la tarde. Los momentos naturales son los intervalos del 20 al 22 y del 28 al 30 de octubre, cuando el recinto no atiende negociaciones (web oficial de la Feria de Importación y Exportación de China, 2026), y también los días previos al inicio de la segunda fase si el equipo llega con margen. Reservar la fecha junto con el registro evita la situación más común de un viaje de compras: descubrir en el recinto que el día libre coincide con una planta cerrada por inventario.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD10-a220-s2.jpg" alt="Comprador recorriendo una nave de producción de mobiliario con un guía de fábrica durante la visita programada." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Recorrido de un comprador por una nave de producción de mobiliario: ver la línea y el control de acabado es la razón por la que la visita a fábrica se reserva antes de viajar.</figcaption>
+        </figure>
+        <p>Reservar con antelación sirve además para repartir el trabajo dentro de la planta. En un recorrido de tres horas se visitan el almacén de materiales, la línea de corte, la cabina de acabado y la zona de embalaje, y cada parada responde a una pregunta de compra: qué se fabrica en casa y qué se subcontrata, cómo se controla el acabado pieza a pieza, cómo se protege un canto o una junta durante el transporte y qué se envía montado y qué plano. <a href="/recursos/seleccionar-proveedores-mobiliario-feria-canton/">Cómo seleccionar proveedores de mobiliario en la Feria de Cantón</a> detalla qué comprobar en ese recorrido y qué preguntas conviene dejar respondidas antes de decidir.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Momento</th><th>Qué se reserva</th><th>Por qué conviene</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Momento">Antes de viajar</td><td data-label="Qué se reserva">Cita de fábrica en Heshan (Jiangmen, Guangdong)</td><td data-label="Por qué conviene">Las fechas de planta se cierran con semanas de antelación</td></tr>
+              <tr><td data-label="Momento">Intervalo del 20 al 22 de octubre</td><td data-label="Qué se reserva">Primera visita a planta o revisión de muestras</td><td data-label="Por qué conviene">El recinto no atiende negociaciones esos días</td></tr>
+              <tr><td data-label="Momento">Fase 2, del 23 al 27 de octubre</td><td data-label="Qué se reserva">Reuniones en el recinto con el equipo técnico</td><td data-label="Por qué conviene">Es la fase en la que se exhibe el mobiliario</td></tr>
+              <tr><td data-label="Momento">Intervalo del 28 al 30 de octubre</td><td data-label="Qué se reserva">Segunda visita o ajuste de detalles pendientes</td><td data-label="Por qué conviene">Permite cerrar lo que quedó abierto en feria</td></tr>
+              <tr><td data-label="Momento">Después de la feria</td><td data-label="Qué se reserva">Envío de la cotización y cierre de la especificación</td><td data-label="Por qué conviene">El proyecto entra en producción con la muestra aprobada</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El registro y la cita de fábrica se piden a la vez porque comparten información. Cuando un comprador escribe indicando su sector, el país desde el que viaja y las familias que busca, devolvemos la carta de invitación, una propuesta de fechas para la planta y una agenda orientativa para la fase 2. Ese intercambio previo ahorra las dos cosas que más cuestan en un viaje de compras: horas de recinto y decisiones tomadas sin haber visto la producción. <a href="/recursos/feria-canton-2026-mobiliario-fase-compra-ffe/">El calendario de compras FF&amp;E y las fases de la feria</a> ayuda a encajar la llegada, la visita a planta y la salida con las fechas de la segunda fase.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se cierra en la reunión: especificación, MOQ, plazo y certificados?</h2>
+        <p>La reunión con el proveedor se aprovecha cuando cada componente se declara bajo su norma, de modo que dos ofertas se puedan comparar sobre la misma base técnica. En mobiliario de proyecto, las mesas y escritorios se declaran bajo EN 527, las sillas bajo EN 1335 y BIFMA X5.1, los escritorios elevables bajo BIFMA X5.5, y los tapizados de zonas comunes bajo BS 5852 o EN 1021-1 y EN 1021-2. La madera se respalda con FSC, los acabados con GREENGUARD Gold para la calidad del aire interior, y la fabricación se apoya en ISO 9001 e ISO 14001, con declaraciones CE y CARB P2 según el destino del proyecto. Pedir la ficha de norma y ensayo por componente, y no un catálogo de certificados de empresa, es lo que permite comparar sin ambigüedad.</p>
+        <p>Con las normas sobre la mesa, la conversación pasa a los tres datos que fijan coste y calendario. El MOQ es flexible y se confirma por proyecto según familias y acabados, así que la lista del proyecto no tiene que ajustarse a un mínimo rígido ni partirse en pedidos artificiales. El plazo de producción se sitúa en 30-45 días desde la muestra aprobada y queda sujeto a lo que establezca el contrato. El control de calidad se organiza en tres puntos de inspección, a la recepción de materiales, durante la fabricación y antes del embarque, con un parte firmado por lote. <a href="/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/">Los puntos de negociación de MOQ, plazo y packing con proveedores de la feria</a> reúnen las preguntas que conviene llevar escritas y no improvisar en el puesto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Punto que se cierra</th><th>Dato o norma</th><th>Cómo se verifica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Punto que se cierra">Mesas y escritorios</td><td data-label="Dato o norma">EN 527</td><td data-label="Cómo se verifica">Ficha de norma y ensayo por componente</td></tr>
+              <tr><td data-label="Punto que se cierra">Sillas y asientos de trabajo</td><td data-label="Dato o norma">EN 1335 y BIFMA X5.1</td><td data-label="Cómo se verifica">Informe de ensayo del modelo ofertado</td></tr>
+              <tr><td data-label="Punto que se cierra">Escritorios elevables</td><td data-label="Dato o norma">BIFMA X5.5</td><td data-label="Cómo se verifica">Ensayo de ciclo y estabilidad sobre muestra</td></tr>
+              <tr><td data-label="Punto que se cierra">Tapizados de zonas comunes</td><td data-label="Dato o norma">BS 5852 o EN 1021-1 y EN 1021-2</td><td data-label="Cómo se verifica">Ensayo de ignición sobre muestra de tejido</td></tr>
+              <tr><td data-label="Punto que se cierra">Madera y acabados</td><td data-label="Dato o norma">FSC y GREENGUARD Gold</td><td data-label="Cómo se verifica">Cadena de custodia y emisiones declaradas</td></tr>
+              <tr><td data-label="Punto que se cierra">MOQ y plazo</td><td data-label="Dato o norma">MOQ flexible por proyecto y 30-45 días desde la muestra aprobada</td><td data-label="Cómo se verifica">Escalón de pedido por familia y calendario sujeto a contrato</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Vale la pena cerrar también el packing, porque dos ofertas con el mismo número de cajas pueden mover volúmenes distintos y cambiar el coste del flete. Conviene preguntar qué se envía montado y qué plano, cómo se protegen los cantos y las superficies, cómo se etiqueta cada bulto por referencia y ambiente de destino, y pedir el cubicaje estimado en metros cúbicos. Ese detalle, junto con la norma de cada componente y las condiciones de garantía, es lo que permite comparar propuestas de países distintos sin dejar cabos sueltos antes de la firma.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Del registro al pedido: cómo cerrar una cotización FF&amp;E</h2>
+        <p>El registro es el principio de un proceso que termina en una cotización concreta y comparable. Entre la credencial y el pedido hay cuatro entregables que conviene dejar por escrito: la lista de ambientes con cantidades, la especificación por componente con su norma, el calendario de producción con hitos fechados y el análisis de packing con el puerto de destino. Un equipo que cierra esos cuatro puntos durante el viaje vuelve con el proyecto listo para decidir; un equipo que los deja abiertos vuelve con catálogos y correos pendientes. La diferencia no está en el número de reuniones, sino en lo que se escribe al terminar cada una.</p>
+        <p>Los proyectos internacionales que hemos entregado siguen ese orden. Para un hotel internacional en Tashkent (Uzbekistán) se entregaron 295 habitaciones con más de 1.770 piezas en 52 días y cero defectos en la recepción; en Riad (Arabia Saudita) se amuebló una sede corporativa de 320 puestos de trabajo; y se han completado entregas en Dubái (EAU), Lagos (Nigeria), un centro de cuidados en Singapur, Varsovia (Polonia) y Ciudad de México (México). En todos ellos la secuencia fue la misma: especificación por escrito, muestra aprobada y control por hitos antes de embarcar.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Entregable</th><th>Qué contiene</th><th>Cuándo se recibe</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Entregable">Lista de ambientes</td><td data-label="Qué contiene">Familias, cantidades y superficies por zona del proyecto</td><td data-label="Cuándo se recibe">En las primeras 48 horas tras la visita</td></tr>
+              <tr><td data-label="Entregable">Especificación técnica</td><td data-label="Qué contiene">Norma, material y acabado declarados por componente</td><td data-label="Cuándo se recibe">Junto con la propuesta por partida</td></tr>
+              <tr><td data-label="Entregable">Calendario de producción</td><td data-label="Qué contiene">Hitos fechados desde la muestra aprobada</td><td data-label="Cuándo se recibe">Antes de firmar el contrato</td></tr>
+              <tr><td data-label="Entregable">Análisis de packing</td><td data-label="Qué contiene">Cubicaje, bultos por referencia y puerto de destino</td><td data-label="Cuándo se recibe">Con la cotización final</td></tr>
+              <tr><td data-label="Entregable">Plan de instalación</td><td data-label="Qué contiene">Planos de montaje y lista de pendientes previa a la recepción</td><td data-label="Cuándo se recibe">Al confirmar el pedido</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Si está preparando un proyecto FF&amp;E, puede <a href="/contacto/">solicitar una cotización de proyecto FF&amp;E</a> indicando las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino; con esos tres datos devolvemos una propuesta por partida, las normas aplicables y el calendario de producción. Hongye Furniture Group es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales, y produce en Heshan (Jiangmen, Guangdong) con un plazo de 30-45 días desde la muestra aprobada, sujeto a contrato. El registro es apenas el primer paso del viaje; el resultado se mide en lo que llega al proyecto y en cómo se instala.</p>
+        <p>Antes de reservar el vuelo conviene revisar dos cosas más: que la credencial esté confirmada y que la agenda de feria y la cita de planta no se solapen. Con el registro resuelto, la acreditación recogida y las fechas de la segunda fase fijadas, un equipo de dos o tres personas puede salir de Cantón con la especificación cerrada, la muestra acordada y una cotización sobre la mesa. Esa es la diferencia entre visitar la Feria de Cantón y comprar en la Feria de Cantón.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Registre su visita y reserve la reunión con el equipo FF&E"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar sus datos antes de reservar el vuelo tiene cuatro ventajas concretas: recibirá el número de stand, la carta de invitación para su visita, un horario de atención reservado para usted en la segunda fase y la coordinación de una visita a la fábrica de Heshan (Jiangmen, Guangdong) si desea ver la producción. Para preparar la cotización necesitamos tres datos: las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino. El MOQ es flexible y se confirma por proyecto, y el plazo de producción se sitúa en 30-45 días desde la muestra aprobada, sujeto a contrato. Tenga en cuenta que la carta de invitación no garantiza el visado: la decisión corresponde a las autoridades consulares chinas, por lo que conviene consultar los requisitos oficiales vigentes. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

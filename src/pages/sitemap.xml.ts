@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/registrarse-comprador-feria-canton-2026-ffe/",
   "/recursos/cuanto-dura-feria-canton-2026-compradores-ffe/",
   "/recursos/amueblamiento-oficinas-proyectos-corporativos/",
   "/recursos/seleccionar-proveedores-mobiliario-feria-canton/",
