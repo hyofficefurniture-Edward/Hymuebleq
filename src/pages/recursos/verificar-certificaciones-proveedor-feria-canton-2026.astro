@@ -1,0 +1,480 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Verificar las certificaciones de un proveedor de mobiliario en la Feria de Cantón 2026";
+const pageDescription = "Qué documentos de certificación pedir a un proveedor de mobiliario en la Feria de Cantón 2026 y cómo verificar su autenticidad, vigencia y modelo de ensayo.";
+const keywords = [
+  "verificar certificaciones de un proveedor de mobiliario",
+  "certificados proveedor mobiliario Feria de Cantón",
+  "FSC código CoC",
+  "GREENGUARD Gold",
+  "declaración CE de prestaciones",
+  "informe BIFMA",
+  "ISO 9001 e ISO 14001",
+  "CARB P2",
+  "informe SGS",
+  "EN 527",
+  "EN 1335",
+  "anexos de certificación en el RFQ"
+];
+const canonicalPath = "/recursos/verificar-certificaciones-proveedor-feria-canton-2026/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD11-a222-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-13";
+const dateModified = "2026-10-13";
+const publicationDateLabel = "Publicada el 13 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿En qué fase de la Feria de Cantón se exhibe el mobiliario?", answer: "El mobiliario se exhibe en la segunda fase, del 23 al 27 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). La primera fase, del 15 al 19 de octubre, se centra en manufactura avanzada, con herrajes, iluminación y material eléctrico, y la tercera, del 31 de octubre al 4 de noviembre, reúne el mobiliario médico y los equipos sanitarios. Por eso un comprador de mobiliario de proyecto concentra su verificación documental y su presencia en la segunda fase, y reserva los intervalos del 20 al 22 y del 28 al 30 de octubre, sin negociación al público, para visitar fábricas y comprobar en planta lo que se prometió en el puesto." },
+    { question: "¿Qué productos se exhiben en cada fase de la Feria de Cantón?", answer: "La feria distribuye los productos en tres fases: la primera, del 15 al 19 de octubre, reúne manufactura avanzada y componentes como herrajes, iluminación y material eléctrico; la segunda, del 23 al 27 de octubre, concentra el mobiliario, el material de construcción y la decoración; y la tercera, del 31 de octubre al 4 de noviembre, agrupa el mobiliario médico, los equipos sanitarios y los artículos de oficina (web oficial de la Feria de Importación y Exportación de China, 2026). Para un comprador FF&E el interés principal está en la segunda fase, aunque un proyecto con zonas clínicas o educativas obliga a planificar también la tercera, porque el registro y la agenda se preparan por fase." },
+    { question: "¿Qué documentos de certificación debe pedir a un proveedor de mobiliario?", answer: "Debe pedir dos niveles de documentación: los certificados de empresa y los documentos de producto. En el primer nivel están ISO 9001 e ISO 14001, que acreditan el sistema de gestión de calidad y de medio ambiente de la planta. En el segundo nivel, que es el que protege el pedido, conviene reclamar el informe BIFMA del modelo ofertado, los informes EN 527 para mesas y escritorios y EN 1335 para sillas, la declaración CE de prestaciones con su norma armonizada, el certificado FSC con el código de cadena de custodia, el certificado GREENGUARD Gold de la familia de acabado, el certificado CARB P2 del tablero y los informes SGS con referencia de muestra. La clave es que el documento de producto nombre el modelo exacto que se va a fabricar." },
+    { question: "¿Cómo se comprueba que un certificado es auténtico y está vigente?", answer: "Se comprueba en la base del emisor y con el número delante, no con el sello del catálogo. Cada certificado serio tiene un número único: el código de cadena de custodia de FSC se consulta en la base de FSC para ver el titular y los productos cubiertos, los certificados GREENGUARD se rastrean en la base del laboratorio que los emite y los certificados ISO se verifican en la base del organismo certificador. Además hay que leer la fecha de emisión y de caducidad y cotejar el número de modelo del informe con el de la oferta, porque un documento auténtico puede estar mal aplicado si cubre otro modelo, otra planta o un año anterior. Conviene anotar la fecha de la consulta como prueba." },
+    { question: "¿Cómo se trasladan los certificados al RFQ y al contrato?", answer: "Los certificados se trasladan al RFQ como una especificación por componente y a los anexos del contrato como una cláusula de conformidad. En el RFQ cada familia de la lista se asocia a su norma y a su informe, con el número, el modelo y la fecha; en el anexo se añade el compromiso de entregar el modelo cubierto por ese informe concreto. Ese detalle es lo que convierte la verificación en una obligación exigible y no en una promesa verbal, y conviene cerrarlo junto con el MOQ flexible por proyecto, el plazo de producción de 30-45 días desde la muestra aprobada y el packing de exportación con su cubicaje, siempre sujeto a contrato." },
+    { question: "¿Qué riesgo tiene una certificación ausente o caducada?", answer: "Una certificación ausente o caducada se convierte en coste dentro del TCO del proyecto. Si falta el informe del modelo, el comprador no puede demostrar conformidad ante el cliente final ni ante la inspección del inmueble; si el certificado caducó, la mercancía puede quedar retenida en aduana y exigir un flete urgente; y si el documento corresponde a otro modelo, el coste es el de sustituir piezas ya instaladas. A eso se suman la instalación repetida y el desgaste de la relación con el cliente. El precio unitario bajo deja de ser una ventaja cuando la verificación se hace después de la entrega, y por eso conviene cerrar la vigencia y el alcance de cada documento antes de firmar." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD11-a222-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d11a2-a222-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d11a2-a222-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Compras FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Verificar las certificaciones de un proveedor de mobiliario en la Feria de Cantón 2026: qué documentos pedir y cómo comprobarlos</h1>
+          <p>La verificación de certificaciones de un proveedor de mobiliario es el proceso por el que un comprador comprueba, antes de firmar, que los certificados e informes presentados son auténticos, están vigentes y corresponden al modelo que se le cotiza. No es acumular documentos: es cotejar cada número, fecha y referencia con su emisor.</p>
+          <p>Esta guía ordena ese trabajo para un equipo que compra mobiliario de proyecto en la Feria de Cantón: qué documentos conviene reclamar en el puesto (de la cadena de custodia FSC a los informes de ensayo BIFMA y a las declaraciones CE), cómo se verifica cada referencia contra su emisor, qué preguntas se llevan escritas y cómo se trasladan los certificados al RFQ y a los anexos del contrato para que la verificación no dependa de la memoria de nadie. La 140.ª edición de la feria se celebra en tres fases, del 15 al 19 de octubre, del 23 al 27 de octubre y del 31 de octubre al 4 de noviembre de 2026, con intervalos del 20 al 22 y del 28 al 30 de octubre en los que el recinto no atiende negociaciones. El mobiliario de proyecto se concentra en la segunda fase, del 23 al 27 de octubre (web oficial de la Feria de Importación y Exportación de China, 2026).</p>
+          <p>Como referencia de escala, la 139.ª edición reunió a compradores internacionales de 220 países y regiones, 314.000 personas, y la 140.ª ocupa cerca de 1,55 millones de m² con unos 32.000 expositores (web oficial de la Feria de Importación y Exportación de China, 2026). Detrás de este criterio está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales: ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong), con un plazo de producción de 30-45 días desde la muestra aprobada y una ventaja de coste del 30-50 %, y expone en la 140.ª Feria de Cantón.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD11-a222-hero.jpg" alt="Equipo de compras revisando certificados y muestras de material en la sala de reuniones durante la Feria de Cantón" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué es la verificación de certificaciones de un proveedor de mobiliario?</h2>
+        <p>Pedir certificados no es lo mismo que verificarlos, y en un puesto de feria esa diferencia se paga en el pedido que se firma después. Un proveedor puede mostrar una carpeta con logotipos, sellos y números de registro, pero el comprador solo reduce su riesgo cuando comprueba que cada documento está vigente, que lo emite una entidad reconocida y que la referencia del certificado coincide con el modelo que aparece en la oferta. La comprobación se hace en dos tiempos: lo que se reclama y se lee en el puesto, y lo que se confirma después, contra la base del emisor. <a href="/recursos/seleccionar-proveedores-mobiliario-feria-canton/">Cómo seleccionar proveedores de mobiliario en la Feria de Cantón</a> describe el orden de la conversación que precede a la entrega de la documentación. La pregunta que ordena todo el trabajo es sencilla: ¿este papel acredita el producto concreto que me van a fabricar o acredita solo que la empresa tiene un sistema de gestión? La respuesta cambia la forma de pedir los documentos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Qué acredita</th><th>Qué pedir en el puesto</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">FSC (cadena de custodia y código CoC)</td><td data-label="Qué acredita">Origen y trazabilidad de la madera utilizada en el modelo</td><td data-label="Qué pedir en el puesto">Certificado FSC con número de cadena de custodia y titular identificado</td></tr>
+              <tr><td data-label="Documento">GREENGUARD Gold</td><td data-label="Qué acredita">Emisiones de compuestos orgánicos volátiles para la calidad del aire interior</td><td data-label="Qué pedir en el puesto">Certificado vigente con el modelo o la familia de acabado cubiertos</td></tr>
+              <tr><td data-label="Documento">CE (declaración de prestaciones, DoP)</td><td data-label="Qué acredita">Conformidad con la norma armonizada europea aplicable al producto</td><td data-label="Qué pedir en el puesto">Declaración firmada con la norma citada y el organismo notificado si procede</td></tr>
+              <tr><td data-label="Documento">BIFMA</td><td data-label="Qué acredita">Resistencia, estabilidad y durabilidad del mobiliario de oficina</td><td data-label="Qué pedir en el puesto">Informe de ensayo del modelo ofertado, no de una línea genérica</td></tr>
+              <tr><td data-label="Documento">ISO 9001 e ISO 14001</td><td data-label="Qué acredita">Sistema de gestión de calidad y de gestión ambiental de la planta</td><td data-label="Qué pedir en el puesto">Certificado con el alcance y la planta que fabricará el pedido</td></tr>
+              <tr><td data-label="Documento">CARB P2</td><td data-label="Qué acredita">Emisiones de formaldehído exigidas en el mercado estadounidense</td><td data-label="Qué pedir en el puesto">Certificado del tablero y del proveedor de tablero, con vigencia</td></tr>
+              <tr><td data-label="Documento">Informes SGS</td><td data-label="Qué acredita">Inspección y ensayo por laboratorio independiente</td><td data-label="Qué pedir en el puesto">Informe con referencia de muestra y fecha de inspección</td></tr>
+              <tr><td data-label="Documento">EN 527 y EN 1335</td><td data-label="Qué acredita">Mesas y escritorios de oficina, y sillas de oficina</td><td data-label="Qué pedir en el puesto">Informe de ensayo por componente y por modelo ofertado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Conviene distinguir dos niveles de documentación, porque confundirlos es la causa más frecuente de una compra mal protegida. El primer nivel es de empresa: ISO 9001 e ISO 14001 acreditan que existe un sistema de gestión de calidad y de medio ambiente, es decir, que la planta trabaja con procedimientos. El segundo nivel es de producto, y es el que protege al proyecto: el informe BIFMA o la norma EN del modelo concreto, la declaración CE de prestaciones de la norma aplicable, el certificado FSC de la madera usada y el certificado GREENGUARD Gold del acabado. Una empresa puede tener un sistema impecable y, aun así, no haber ensayado nunca el modelo que le van a cotizar. La regla práctica es pedir el documento de producto para cada familia de la lista y reservar los certificados de empresa para la debida diligencia del proveedor.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo comprobar la autenticidad y la vigencia de cada documento</h2>
+        <p>La autenticidad se comprueba en la base del emisor, no en la fotocopia. Cada certificado serio tiene un número único y un emisor identificable, y casi todos esos emisores publican un buscador en línea donde el comprador introduce el número para ver el titular, el alcance y la validez del documento. FSC permite consultar el código de cadena de custodia y comprobar quién es el titular y qué productos cubre; los certificados GREENGUARD se rastrean en la base del laboratorio que los emite; y los certificados de sistema ISO se verifican en la base del organismo certificador, no en el sello que aparece en el catálogo comercial. La comprobación válida es la que se hace fuera del puesto, con el número delante y la fecha de consulta anotada, porque lo que se acepta de viva voz en el pasillo no sirve después como prueba ante el cliente final.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Cómo se verifica</th><th>Señal de alarma</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">FSC y código CoC</td><td data-label="Cómo se verifica">Buscar el código en la base de FSC y cotejar titular y productos</td><td data-label="Señal de alarma">Código que no aparece o titular distinto del fabricante</td></tr>
+              <tr><td data-label="Documento">GREENGUARD Gold</td><td data-label="Cómo se verifica">Cotejar titular y familia de producto en la base del laboratorio</td><td data-label="Señal de alarma">Certificado sin modelo ni familia identificados</td></tr>
+              <tr><td data-label="Documento">CE (declaración de prestaciones)</td><td data-label="Cómo se verifica">Comprobar que cita la norma armonizada y el organismo notificado si procede</td><td data-label="Señal de alarma">Declaración sin norma ni fecha, o que cubre una norma no aplicable</td></tr>
+              <tr><td data-label="Documento">BIFMA</td><td data-label="Cómo se verifica">Revisar que el informe nombra el modelo ofertado y la fecha del ensayo</td><td data-label="Señal de alarma">Informe de otro modelo o de la línea genérica</td></tr>
+              <tr><td data-label="Documento">ISO 9001 e ISO 14001</td><td data-label="Cómo se verifica">Consultar el certificado en la base del organismo y leer el alcance</td><td data-label="Señal de alarma">Alcance que no incluye la planta que fabrica</td></tr>
+              <tr><td data-label="Documento">CARB P2</td><td data-label="Cómo se verifica">Cotejar el certificado del tablero y la fecha de vigencia</td><td data-label="Señal de alarma">Certificado caducado o referido a otro tablero</td></tr>
+              <tr><td data-label="Documento">Informe SGS</td><td data-label="Cómo se verifica">Verificar referencia de muestra y fecha del informe</td><td data-label="Señal de alarma">Informe sin referencia de muestra ni fecha</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos comprobaciones resuelven la mayor parte del riesgo. La primera es la correspondencia entre el número de modelo del informe y el número de modelo de la oferta: si el informe cubre la línea A y la cotización ofrece la línea B, el ensayo no protege ese pedido, aunque el proveedor tenga razón al decir que ambos se fabrican con la misma receta. La segunda es la fecha de vigencia, porque los certificados caducan, las versiones de norma se actualizan y los informes antiguos pueden referirse a una norma ya retirada. En nuestra experiencia, el problema rara vez está en un certificado falso y casi siempre está en un documento real mal aplicado: del modelo equivocado, de otra planta o de un año anterior. Esa es la razón de pedir siempre el informe completo y no la primera página con el sello.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿En qué fase de la Feria de Cantón se exhibe el mobiliario?</h2>
+        <p>El mobiliario de proyecto se exhibe en la segunda fase de la Feria de Cantón, del 23 al 27 de octubre de 2026, y eso fija cuándo conviene hacer la verificación documental (web oficial de la Feria de Importación y Exportación de China, 2026). El calendario importa en una compra de mobiliario: la primera fase, del 15 al 19 de octubre, se centra en manufactura avanzada, con herrajes, iluminación y material eléctrico; la segunda, del 23 al 27 de octubre, reúne el mobiliario, el material de construcción y la decoración; y la tercera, del 31 de octubre al 4 de noviembre, agrupa el mobiliario médico y los equipos sanitarios. Los intervalos del 20 al 22 y del 28 al 30 de octubre no tienen negociación al público y son la ventana natural para verificar en fábrica lo que se prometió en el puesto. Si su proyecto mezcla mobiliario de hotel, oficina y clínica, la verificación se reparte entre dos fases y conviene planificarla antes de reservar los vuelos, no al llegar a Cantón.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD11-a222-s1.jpg" alt="Sala de reuniones de showroom con mesa blanca, sillas de oficina y biombos acústicos azules para comparar muestras." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sala de meetings de showroom con mesa de trabajo y biombos acústicos: el espacio donde el equipo de compras compara la muestra con la especificación y anota qué ensayo respalda cada acabado.</figcaption>
+        </figure>
+        <p>En el puesto, el comprador no puede abrir bases de datos, pero sí puede ordenar la verificación para cerrarla después. La práctica que funciona es anotar, para cada familia de la lista, el número del informe, el modelo exacto, la norma y la fecha, y pedir que el proveedor envíe el documento completo por correo tras la reunión; esa nota convierte una conversación de feria en un expediente comprobable. También conviene separar el trabajo en dos bloques: lo que se resuelve en el puesto (qué modelo, qué norma, qué MOQ y qué plazo) y lo que se resuelve en la oficina (comprobar el número en la base del emisor y cotejar el modelo con la oferta). <a href="/recursos/registrarse-comprador-feria-canton-2026-ffe/">El registro de comprador en la Feria de Cantón 2026</a> explica cómo preparar la acreditación y la agenda para dedicar los días de feria a comprar y no a resolver trámites.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>La lista de preguntas para el puesto y para la visita a fábrica</h2>
+        <p>Un cuestionario corto, llevado por escrito, evita que la reunión derive en una presentación comercial. Las preguntas que cambian una decisión son las que obligan a una respuesta concreta y verificable: qué informe cubre este modelo y con qué número, qué norma declara cada componente y en qué versión, hasta qué fecha está vigente el documento, qué planta lo emite y si esa planta es la que fabricará el pedido. Conviene preguntar además por el alcance, porque un mismo certificado puede cubrir toda la fábrica o solo una parte del catálogo: si el certificado FSC cubre la madera utilizada en el modelo o solo una línea de producto, y si el GREENGUARD Gold corresponde a la familia de acabado ofertada o a otra distinta. Una pregunta bien hecha obliga al proveedor a leer su propio documento en voz alta, y eso ya es una primera prueba de que existe.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Pregunta</th><th>Respuesta válida</th><th>Dónde se comprueba</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Pregunta">¿Qué informe cubre este modelo?</td><td data-label="Respuesta válida">Número de informe, modelo y fecha del ensayo</td><td data-label="Dónde se comprueba">Base del laboratorio que emite el ensayo</td></tr>
+              <tr><td data-label="Pregunta">¿Qué norma declara cada componente?</td><td data-label="Respuesta válida">Norma y versión citadas en la ficha técnica</td><td data-label="Dónde se comprueba">Texto del informe de ensayo, no el catálogo</td></tr>
+              <tr><td data-label="Pregunta">¿Hasta cuándo está vigente el certificado?</td><td data-label="Respuesta válida">Fecha de emisión y fecha de caducidad</td><td data-label="Dónde se comprueba">Base del organismo certificador</td></tr>
+              <tr><td data-label="Pregunta">¿Qué planta fabrica este pedido?</td><td data-label="Respuesta válida">Nombre y ubicación de la planta que produce</td><td data-label="Dónde se comprueba">Alcance del certificado ISO de esa planta</td></tr>
+              <tr><td data-label="Pregunta">¿El FSC cubre toda la madera del modelo?</td><td data-label="Respuesta válida">Alcance del código de cadena de custodia</td><td data-label="Dónde se comprueba">Base de FSC: titular y productos cubiertos</td></tr>
+              <tr><td data-label="Pregunta">¿Qué MOQ y qué plazo aplican?</td><td data-label="Respuesta válida">MOQ flexible por proyecto y 30-45 días desde la muestra aprobada</td><td data-label="Dónde se comprueba">Confirmación por escrito antes del contrato</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La visita a fábrica cierra las preguntas que el puesto deja abiertas, y por eso conviene reservarla antes de viajar. Nuestra planta está en Heshan (Jiangmen, Guangdong) y se visita desde Cantón en una jornada. En el recorrido se comprueba lo que ningún documento muestra por sí solo: cómo se almacena el tablero certificado, cómo se controla el acabado que declara GREENGUARD Gold, cómo se separa el material con cadena de custodia FSC y cómo se etiqueta cada bulto con su referencia antes del packing de exportación. La verificación documental y la verificación en planta se refuerzan, porque el papel dice qué se promete y la línea de producción dice si se puede cumplir. Un recorrido de tres horas responde a más preguntas que tres reuniones de feria.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se trasladan los certificados al RFQ y a los anexos del contrato?</h2>
+        <p>Los certificados entran en el contrato por la vía del RFQ y de sus anexos, no como una carpeta adjunta al final del proceso. La forma de proteger el pedido es convertir cada documento en una cláusula con tres datos: el número del informe o del certificado, el modelo al que aplica y la consecuencia de que no se cumpla. Cuando el proveedor firma que entregará el modelo cubierto por ese informe concreto, la verificación deja de depender de la memoria del comprador y pasa a ser una obligación contractual que se puede exigir. <a href="/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/">Los puntos de negociación de MOQ, plazo y packing con proveedores de la feria</a> recogen las condiciones que conviene dejar cerradas junto con los anexos de certificación, para que ninguna quede fuera del contrato.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento del RFQ o anexo</th><th>Qué debe contener</th><th>Cómo se verifica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento del RFQ o anexo">Especificación por componente</td><td data-label="Qué debe contener">Norma y versión aplicables a cada familia</td><td data-label="Cómo se verifica">Cotejo con el informe de ensayo del modelo</td></tr>
+              <tr><td data-label="Elemento del RFQ o anexo">Anexo de certificados</td><td data-label="Qué debe contener">Número, modelo y vigencia de cada documento</td><td data-label="Cómo se verifica">Comprobación en la base del emisor</td></tr>
+              <tr><td data-label="Elemento del RFQ o anexo">Cláusula de conformidad</td><td data-label="Qué debe contener">Compromiso de entregar el modelo cubierto por el informe</td><td data-label="Cómo se verifica">Revisión de la cláusula antes de la firma</td></tr>
+              <tr><td data-label="Elemento del RFQ o anexo">Muestrario aprobado</td><td data-label="Qué debe contener">Muestra firmada con material y acabado declarados</td><td data-label="Cómo se verifica">Cotejo con el modelo certificado</td></tr>
+              <tr><td data-label="Elemento del RFQ o anexo">Packing de exportación</td><td data-label="Qué debe contener">Protección de cantos, etiquetado por referencia y cubicaje</td><td data-label="Cómo se verifica">Inspección previa al embarque</td></tr>
+              <tr><td data-label="Elemento del RFQ o anexo">Control de calidad (QC)</td><td data-label="Qué debe contener">Tres puntos de inspección y parte firmado por lote</td><td data-label="Cómo se verifica">Informes por lote antes de embarcar</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los proyectos que hemos entregado siguen ese orden documental. Para un hotel internacional en Tashkent (Uzbekistán) se entregaron 295 habitaciones en 52 días con cero defectos en la recepción; en un campus corporativo de 1.200 puestos de trabajo en el sudeste asiático se completaron 78 días con un 99,2 % de piezas conformes a la primera inspección; en Riad (Arabia Saudí) se amuebló una sede corporativa de 320 puestos conforme a la normativa de construcción aplicable; y en Lagos (Nigeria) se equiparon 18 laboratorios STEM en 55 días con el 100 % de las piezas ajustadas a la especificación. En todos los casos la secuencia fue la misma: certificado por modelo antes de la orden, muestra aprobada y control por hitos antes de embarcar. Esa secuencia es la que evita que una certificación real acabe aplicada al producto equivocado, que es el error más caro y el más difícil de detectar a tiempo.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD11-a222-s2.jpg" alt="Técnico de control de calidad inspeccionando un panel de madera en el taller de la fábrica." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Control de calidad en la fábrica: el técnico revisa un panel de madera frente a los rótulos de trazabilidad antes de que el lote salga hacia el proyecto.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué riesgo tienen las certificaciones ausentes o caducadas en el TCO?</h2>
+        <p>Un certificado ausente o caducado no es un problema de papeleo, es un coste que aparece más tarde. Si falta el informe del modelo, el comprador no puede demostrar conformidad ante el cliente final ni ante la autoridad que inspecciona el inmueble; si el certificado caducó, la mercancía puede quedar retenida en aduana a la espera de una documentación que no llega a tiempo; y si el documento corresponde a otro modelo, el coste no es el del papel, sino el de rehacer o sustituir las piezas ya instaladas. En un proyecto FF&amp;E esos costes se acumulan en el TCO: sustitución fuera de plazo, flete urgente, instalación repetida y desgaste de la relación con el cliente. El precio unitario bajo deja de ser una ventaja cuando la verificación documental se hace después de la entrega y no antes de la firma.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Riesgo</th><th>Efecto en el proyecto</th><th>Cómo se cubre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Riesgo">Informe ausente del modelo</td><td data-label="Efecto en el proyecto">No se puede demostrar conformidad ante el cliente final</td><td data-label="Cómo se cubre">Exigir el informe del modelo en el anexo del RFQ</td></tr>
+              <tr><td data-label="Riesgo">Certificado caducado</td><td data-label="Efecto en el proyecto">Retención en aduana y coste de flete urgente</td><td data-label="Cómo se cubre">Fijar una vigencia mínima en el contrato</td></tr>
+              <tr><td data-label="Riesgo">Documento de otro modelo</td><td data-label="Efecto en el proyecto">Sustitución de piezas ya instaladas en obra</td><td data-label="Cómo se cubre">Cotejar el número de modelo antes de la firma</td></tr>
+              <tr><td data-label="Riesgo">Alcance de planta distinto</td><td data-label="Efecto en el proyecto">El certificado no cubre la fábrica que produce</td><td data-label="Cómo se cubre">Comprobar el alcance del certificado ISO</td></tr>
+              <tr><td data-label="Riesgo">Falta de ensayo por componente</td><td data-label="Efecto en el proyecto">Rechazo en la recepción del inmueble</td><td data-label="Cómo se cubre">Exigir informe por componente y familia</td></tr>
+              <tr><td data-label="Riesgo">Packing sin control</td><td data-label="Efecto en el proyecto">Daño en tránsito y reposición de piezas</td><td data-label="Cómo se cubre">Inspección previa al embarque y etiquetado por referencia</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Si está preparando un proyecto FF&amp;E, puede <a href="/contacto/">solicitar una cotización de proyecto FF&amp;E</a> indicando las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino; con esos datos devolvemos una propuesta por partida, las normas aplicables y los anexos de certificación por modelo. Hongye Furniture Group es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales: ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong) con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. Verificar bien un certificado en la feria cuesta una hora; descubrir en la recepción que el informe no cubría el modelo cuesta el calendario entero del proyecto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite el expediente de certificaciones y una cotización FF&E"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar sus datos antes de viajar tiene cuatro ventajas concretas: recibirá el número de stand, la carta de invitación para su visita, un horario de atención reservado para usted en la segunda fase y la coordinación de una visita a la fábrica de Heshan (Jiangmen, Guangdong) si desea ver la producción. Para preparar la cotización necesitamos tres datos: las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino. Envíenos su RFQ o sus planos y sus requisitos de certificación, y devolvemos la propuesta con las normas aplicables y los anexos de certificación por modelo. Tenga en cuenta que la carta de invitación no garantiza el visado: la decisión corresponde a las autoridades consulares chinas. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
