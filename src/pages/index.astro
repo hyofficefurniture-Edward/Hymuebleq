@@ -1,4 +1,5 @@
 ---
+import ProjectLibrary from '../components/ProjectLibrary.astro';
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHead from "../components/SectionHead.astro";
 import CategoryGrid from "../components/CategoryGrid.astro";
@@ -186,20 +187,7 @@ const featuredProjects = projects.filter((project) => project.featuredHome);
     </div>
   </section>
 
-  <section class="section alt">
-    <div class="container">
-      <SectionHead
-        eyebrow="Referencias de proyecto"
-        title="Casos y referencias de mobiliario B2B"
-        text="Hoteles, oficinas y espacios comerciales en Latinoamérica y el mundo. Usa estas referencias para comparar alcances y preparar tu cotización."
-      />
-      <ScrollRail label="Proyectos destacados">
-        <div class="card-grid home-project-rail" data-scroll-track>
-          {featuredProjects.map((project) => <ProjectCard project={project} imageField="homeImage" />)}
-        </div>
-      </ScrollRail>
-    </div>
-  </section>
+  <ProjectLibrary lang="es" base="/" featured />
 
   <section class="section">
     <div class="container">

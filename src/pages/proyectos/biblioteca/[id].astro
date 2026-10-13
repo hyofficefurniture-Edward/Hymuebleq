@@ -1,0 +1,8 @@
+---
+import Layout from '../../../layouts/BaseLayout.astro';
+import Library from '../../../components/ProjectLibrary.astro';
+import projects from '../../../data/project-library.json';
+export function getStaticPaths(){return projects.map(c=>({params:{id:c.id},props:{c}}));}
+const {c}=Astro.props;
+---
+<Layout title={c.name+' — mobiliario de proyecto'} description={c.name+' en '+c.country+': referencia de mobiliario, imágenes y preparación de una consulta por proyecto.'} image={c.image} type="article"><Library lang="es" base="/" id={c.id}/></Layout>
