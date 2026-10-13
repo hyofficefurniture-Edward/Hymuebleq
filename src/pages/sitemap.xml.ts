@@ -4,6 +4,7 @@ import { catalogCategoryDetails } from "../data/catalogReferences";
 import { categories, hotelCatalog, projects } from "../data/site";
 
 const staticPaths = [
+  "/grupo-y-marcas/",
   "/",
   "/catalogo/",
   "/catalogo/hoteles/",
