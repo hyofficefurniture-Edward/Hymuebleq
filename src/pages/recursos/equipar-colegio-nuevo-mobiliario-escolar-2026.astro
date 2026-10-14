@@ -1,0 +1,478 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario escolar para un colegio nuevo: guía de equipamiento por zonas";
+const pageDescription = "Cómo equipar un colegio nuevo por zonas: normas EN 1729, MOQ flexible, plazo de 30-45 días, control de calidad, packing e instalación. Solicite su cotización.";
+const keywords = [
+  "mobiliario escolar para un colegio nuevo",
+  "equipamiento integral de un colegio",
+  "mobiliario escolar EN 1729",
+  "amueblar un colegio por zonas funcionales",
+  "mobiliario de aula biblioteca y laboratorio STEM",
+  "proveedor de mobiliario escolar",
+  "MOQ de mobiliario escolar",
+  "plazo de producción de mobiliario escolar",
+  "packing de exportación de mobiliario escolar",
+  "instalación y aceptación de mobiliario escolar"
+];
+const canonicalPath = "/recursos/equipar-colegio-nuevo-mobiliario-escolar-2026/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD12-a224-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-14";
+const dateModified = "2026-10-14";
+const publicationDateLabel = "Publicada el 14 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué mobiliario necesita un colegio nuevo por zonas funcionales?", answer: "Un colegio nuevo necesita mobiliario distinto en cada zona: mesas y sillas de aula que cumplan EN 1729-1 y EN 1729-2, mesas de lectura y estanterías en la biblioteca, mesas de trabajo y taburetes de altura regulable en el laboratorio STEM, mesas y sillas de uso intensivo en el comedor, escritorios y sillas de trabajo conforme a EN 527 y EN 1335 en administración, y muebles de altura reducida con bordes redondeados en preescolar. La razón de planificar por zonas es que cada ambiente tiene funciones, ratios de ocupación y normas distintas, y una lista única de muebles produce errores de cantidad difíciles de corregir cuando el pedido ya está en producción. En la práctica se empieza por el número de aulas y de puestos previstos, se aplica un ratio de puestos por metro cuadrado y se contrasta la suma con el aforo del centro antes de pedir precios." },
+    { question: "¿Qué normas debe cumplir el mobiliario escolar de un colegio nuevo?", answer: "El mobiliario escolar de un colegio nuevo debe cumplir la norma EN 1729-1 en dimensiones de mesas y sillas por marcas de talla y la EN 1729-2 en resistencia y estabilidad, que son las dos referencias del mobiliario de aula. A esa base se añaden EN 16139 o EN 15373 para sillas y mesas de uso colectivo, EN 527 para mesas de trabajo y EN 1335 para sillas de oficina en administración, y BIFMA como referencia del mercado estadounidense. La capa de materiales y emisiones se cubre con GREENGUARD Gold para la calidad del aire interior, FSC para la madera de origen controlado, CARB P2 para el tablero y los informes de laboratorio independiente como SGS, mientras que ISO 9001 e ISO 14001 acreditan los sistemas de calidad y de gestión ambiental de la planta y el marcado CE se exige cuando aplica una norma armonizada europea. Cada norma debe corresponder al informe del modelo exacto que se va a fabricar." },
+    { question: "¿Cuál es el MOQ y el plazo de producción de un proyecto escolar completo?", answer: "El MOQ de un proyecto escolar completo es flexible y se negocia por familia, color y fase del proyecto, no como una cifra única, porque el volumen total de un colegio nuevo permite repartir referencias y colores sin forzar mínimos altos por línea. El plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y empieza a contar cuando el acta de muestra está firmada, no cuando llega la consulta, de modo que la aprobación de herrajes, acabado y medidas es la que fija la fecha real de entrega. Para que ese plazo se cumpla conviene cerrar la documentación antes de la orden, repartir el pedido en bloques por zona y confirmar el Incoterm y el puerto de destino, ya sea FOB, CIF, CFR, EXW o DDP. Cuando el proyecto va dividido en fases, cada bloque tiene su propio calendario." },
+    { question: "¿Qué experiencia tiene Hongye Furniture Group en proyectos escolares internacionales?", answer: "Hongye Furniture Group ha entregado proyectos escolares internacionales con plazos y conformidad verificables. En un colegio internacional en Lagos (Nigeria) se equiparon 18 laboratorios STEM, 12 espacios de fabricación y 24 aulas colaborativas, con más de 1.400 piezas entregadas en 55 días y el 100 % de conformidad de especificación (Hongye Furniture Group, 2025). En un colegio internacional en Dubái (Emiratos Árabes Unidos) se instalaron 350 mesas colaborativas, 280 taburetes y 120 escritorios de altura regulable, con un 28 % de mejora en la participación del alumnado y un 19 % menos de interrupciones en clase (Hongye Furniture Group, 2025). La fábrica está en Heshan (Jiangmen, Guangdong) y acumula más de 1.000 proyectos entregados en más de 50 países desde 1996, lo que permite aplicar el mismo método de especificación, control de calidad y packing a centros educativos de distintos continentes." },
+    { question: "¿Cómo se controla la calidad y el packing de exportación de un pedido escolar?", answer: "El control de calidad de un pedido escolar se organiza en tres hitos: inspección de materiales antes de producir, control en línea de medidas, holguras, ensamblaje y acabado, e inspección previa al embarque con muestreo por lote y prueba de estabilidad del conjunto. En cada hito se cierra un documento, desde el certificado CARB P2 del tablero y la cadena de custodia FSC hasta el informe de ensayo del modelo y el informe de laboratorio independiente como SGS cuando el pliego lo exige. El packing de exportación se decide junto con el mobiliario: cantos y esquinas protegidos con cartón reforzado o espuma, piezas separadas por referencia, barreras de humedad para tránsitos largos y etiquetado de cada bulto con su código de zona y de aula. Ese etiquetado es lo que permite descargar por bloques en obra y no abrir cajas al azar en el patio del centro." },
+    { question: "¿Cómo se estima el presupuesto del equipamiento de un colegio nuevo?", answer: "El presupuesto del equipamiento de un colegio nuevo se estima por zonas y por partidas, no con un precio global por aula, porque cada zona tiene conjuntos distintos y un ratio de piezas por alumno distinto. El punto de partida es el listado de aulas y superficies, del que salen las cantidades; después se asigna a cada familia su norma y su acabado, y solo entonces se pide precio por referencia, con el MOQ y el plazo de 30-45 días desde la muestra aprobada, sujeto a contrato. Conviene comparar el coste total de propiedad y no el precio unitario, porque una compra directa de fábrica puede situar su ventaja de coste en el 30-50 % frente a intermediarios, pero esa ventaja se pierde si el packing llega dañado o si hay que reponer piezas ya instaladas. Para cerrar la estimación se envían el listado de zonas, la superficie o el aforo previsto y el puerto de destino." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD12-a224-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d12a2-a224-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d12a2-a224-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Educación · Equipamiento integral &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario escolar para un colegio nuevo: cómo equipar el centro por zonas funcionales</h1>
+          <p>El equipamiento integral de un colegio nuevo es el conjunto de mobiliario y almacenamiento que se especifica por zonas funcionales, aula, biblioteca, laboratorio, comedor y administración, con cantidades, normas y plazos cerrados antes de la orden de compra. No es una lista de muebles: es un pliego que ata cada ambiente a una norma y a una fecha.</p>
+          <p>Esta guía describe cómo se construye ese pliego cuando el proyecto arranca desde cero o desde una reforma completa del centro. El orden que funciona es el mismo en todos los casos: primero se levanta el listado de zonas y de aulas, después se asignan las categorías de mobiliario a cada zona, más tarde se fijan las normas y las medidas, y solo entonces se piden cantidades, MOQ y plazos. Cambiar ese orden encarece la compra, porque obliga a corregir especificaciones cuando el pedido ya está cerrado y la producción ha empezado. En un colegio de nueva planta el mobiliario se decide antes de que exista el edificio, y eso obliga a trabajar con planos de planta, superficies por aula y número de alumnos previstos, no con un catálogo de productos.</p>
+          <p>Detrás de este criterio está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países y ocho certificaciones internacionales: ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. La razón social completa es Guangdong Hongye Furniture Group Co., Ltd. Produce en Heshan (Jiangmen, Guangdong), con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y una ventaja de coste del 30-50 %. Este artículo reúne el método que aplicamos a proyectos escolares en Latinoamérica, Oriente Medio y Europa.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD12-a224-hero.jpg" alt="Atrio y zona de aprendizaje de un colegio nuevo equipado con mobiliario escolar de roble claro, biblioteca y laboratorio" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Por qué se planifica el mobiliario escolar por zonas funcionales?</h2>
+        <p>Un colegio nuevo se equipa por zonas porque cada zona tiene funciones, medidas y normas distintas, y fundir todo en una sola lista es la causa más habitual de errores de cantidad y de devoluciones. El aula es el primer bloque: mesas y sillas escolares que deben cumplir la norma EN 1729-1 en dimensiones y la EN 1729-2 en resistencia y estabilidad, más el almacenamiento por alumno. La biblioteca combina mesas de lectura, estanterías y puestos individuales; el laboratorio STEM exige mesas de trabajo con encimera resistente y puntos de servicio; el comedor pide mesas y sillas dimensionadas para servicio por turnos y limpieza diaria; la administración y las salas de profesores necesitan escritorios y sillas de trabajo, que se especifican con EN 527 para mesas, EN 1335 para sillas y BIFMA como referencia del mercado estadounidense; y el área de preescolar exige muebles de altura reducida y bordes redondeados, con medidas propias para niños de tres a seis años. Para el detalle de las medidas por talla puede consultar la guía de <a href="/recursos/mobiliario-aula-estandares-altura-asiento/">estándares de altura de asiento en el aula escolar</a>.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona funcional</th><th>Categorías de mobiliario</th><th>Nota de planificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona funcional">Aula y aulas colaborativas</td><td data-label="Categorías de mobiliario">Mesas de alumno, sillas, mesa docente, casilleros</td><td data-label="Nota de planificación">Cumplir EN 1729-1 por talla; prever dos o tres tallas por aula</td></tr>
+              <tr><td data-label="Zona funcional">Biblioteca y sala de estudio</td><td data-label="Categorías de mobiliario">Mesas de lectura, puestos individuales, estanterías, sillones</td><td data-label="Nota de planificación">Cálculo por número de puestos y por metros lineales de estantería</td></tr>
+              <tr><td data-label="Zona funcional">Laboratorio STEM y taller</td><td data-label="Categorías de mobiliario">Mesas de trabajo, taburetes de altura regulable, armarios de seguridad</td><td data-label="Nota de planificación">Encimera resistente a reactivos y puntos de agua, gas o extracción</td></tr>
+              <tr><td data-label="Zona funcional">Comedor escolar</td><td data-label="Categorías de mobiliario">Mesas y sillas de uso intensivo, carros y almacenamiento</td><td data-label="Nota de planificación">Servicio por turnos, apilabilidad y limpieza diaria intensiva</td></tr>
+              <tr><td data-label="Zona funcional">Administración y salas de profesores</td><td data-label="Categorías de mobiliario">Escritorios, sillas de trabajo, archivadores, taquillas</td><td data-label="Nota de planificación">EN 527 para mesas, EN 1335 para sillas y BIFMA como referencia</td></tr>
+              <tr><td data-label="Zona funcional">Preescolar y kindergarten</td><td data-label="Categorías de mobiliario">Mesas de juego, sillas bajas, almacenamiento accesible</td><td data-label="Nota de planificación">Bordes redondeados y medidas propias para tres a seis años</td></tr>
+              <tr><td data-label="Zona funcional">Zonas comunes y pasillos</td><td data-label="Categorías de mobiliario">Bancos, taquillas, paneles, papeleras, señalización</td><td data-label="Nota de planificación">Resistencia al uso público, limpieza y circulación segura</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El segundo trabajo es convertir la lista de zonas en cantidades verificables. La regla que aplicamos es simple: por cada zona se fija un ratio de puestos por metro cuadrado y un número de piezas por aula, y la suma se contrasta con el aforo previsto del centro antes de pedir cualquier precio. En preescolar conviene trabajar con ratios más bajos de alumnos por mesa y con almacenamiento a la altura del niño, algo que se detalla en la guía de <a href="/recursos/mobiliario-preescolar-kindergarten-medidas/">mobiliario preescolar y sus medidas</a>. En secundaria, el mismo aula puede requerir mesas regulables para acomodar el crecimiento del alumno a lo largo del curso. Y el almacenamiento nunca debe quedar fuera del pliego: <a href="/recursos/almacenamiento-aula-escolar-casilleros-2026/">casilleros y almacenamiento de aula</a> condiciona la circulación de los pasillos y la seguridad del centro, porque un colegio con taquillas mal dimensionadas acaba llenando los accesos con mochilas y material.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué normas y especificaciones debe exigir en el pliego escolar?</h2>
+        <p>El pliego de un colegio nuevo debe citar la norma por familia y no una etiqueta genérica de calidad, porque cada zona se rige por estándares distintos y cada estándar exige un tipo de informe distinto. En el mobiliario de aula la referencia obligada es la norma europea EN 1729-1, que fija las dimensiones de mesas y sillas por marcas de talla, junto con la EN 1729-2, que regula la resistencia y la estabilidad frente al uso escolar intensivo. El Comité Europeo de Normalización publicó la versión vigente de esas dos partes del estándar (CEN, 2015). Las sillas y mesas de uso colectivo en zonas comunes se especifican con EN 16139 o EN 15373, que cubren la resistencia del mobiliario de uso no doméstico y contract. En despachos y salas de profesores se aplican EN 527 para mesas de trabajo y EN 1335 para sillas de oficina, con BIFMA como referencia adicional. A esa capa de producto se añade la de emisiones y materiales: GREENGUARD Gold para la calidad del aire interior, FSC para la madera de origen controlado, CARB P2 para el tablero y ensayos de laboratorio independiente con informe SGS. Los sistemas de gestión de la planta se acreditan con ISO 9001 e ISO 14001, vigentes en su versión de 2015 (Organización Internacional de Normalización, 2015), y el marcado CE se exige cuando el producto entra en el ámbito de una norma armonizada europea.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Familia o zona</th><th>Norma o certificación</th><th>Qué cubre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Familia o zona">Mesas y sillas de aula</td><td data-label="Norma o certificación">EN 1729-1 y EN 1729-2</td><td data-label="Qué cubre">Dimensiones por marca de talla, resistencia y estabilidad</td></tr>
+              <tr><td data-label="Familia o zona">Sillas y mesas de uso colectivo</td><td data-label="Norma o certificación">EN 16139 y EN 15373</td><td data-label="Qué cubre">Resistencia del mobiliario de uso no doméstico y contract</td></tr>
+              <tr><td data-label="Familia o zona">Administración y salas de profesores</td><td data-label="Norma o certificación">EN 527 para mesas y EN 1335 para sillas</td><td data-label="Qué cubre">Dimensiones, seguridad y durabilidad del puesto de trabajo</td></tr>
+              <tr><td data-label="Familia o zona">Mobiliario de oficina para el mercado estadounidense</td><td data-label="Norma o certificación">BIFMA</td><td data-label="Qué cubre">Resistencia, estabilidad y durabilidad de conjuntos y sillas</td></tr>
+              <tr><td data-label="Familia o zona">Calidad del aire interior</td><td data-label="Norma o certificación">GREENGUARD Gold</td><td data-label="Qué cubre">Emisiones de compuestos orgánicos volátiles del mobiliario y del acabado</td></tr>
+              <tr><td data-label="Familia o zona">Madera y tablero</td><td data-label="Norma o certificación">FSC y CARB P2</td><td data-label="Qué cubre">Trazabilidad forestal y emisiones de formaldehído del tablero</td></tr>
+              <tr><td data-label="Familia o zona">Gestión de fábrica</td><td data-label="Norma o certificación">ISO 9001 e ISO 14001</td><td data-label="Qué cubre">Sistema de calidad y sistema de gestión ambiental de la planta</td></tr>
+              <tr><td data-label="Familia o zona">Conformidad europea y verificación externa</td><td data-label="Norma o certificación">CE e informes SGS</td><td data-label="Qué cubre">Declaración de prestaciones e inspección por laboratorio independiente</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La comprobación que evita sorpresas es cotejar la norma citada con el informe del modelo exacto que se va a fabricar, no con la portada de un catálogo. Muchos proyectos escolares fallan en este punto porque el informe de ensayo cubre una familia y la oferta propone otra parecida, o porque la versión citada del estándar ya está actualizada y el informe se refiere a la anterior. En un laboratorio STEM el requisito se vuelve más técnico, con encimera resistente a reactivos, taburetes de altura regulable y almacenamiento ventilado, algo que se desarrolla en la guía de <a href="/recursos/mobiliario-laboratorio-stem/">mobiliario para laboratorio STEM</a>. La norma no es un trámite de compra: es el documento que después permite demostrar conformidad ante la autoridad educativa, ante el seguro del centro y ante el propio equipo de mantenimiento, cuando reclama una pieza de reposición igual a la instalada.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se fijan el MOQ y el plazo de producción de un proyecto escolar completo?</h2>
+        <p>El MOQ de un proyecto escolar se negocia por familia y por color, no por una cifra única, y en un colegio nuevo casi siempre puede mantenerse flexible porque el volumen total del centro lo justifica. La pregunta correcta no es cuál es el mínimo que la fábrica acepta, sino cuántas piezas de cada referencia entran en el primer pedido y cuántas quedan para una segunda fase, porque de esa división dependen el precio por unidad, el aprovechamiento del contenedor y el calendario de apertura del centro. En nuestra planta el plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y ese plazo empieza a contar el día en que el acta de muestra está firmada, no el día en que llega la consulta. Adelantar la producción antes de aprobar herrajes, acabado y medidas suele terminar en piezas que no encajan en el aula ni en la altura prevista del alumno. Por eso conviene cerrar primero la muestra y después el calendario, y no al revés, sobre todo cuando la obra civil todavía tiene fechas abiertas.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tema</th><th>Cómo se fija</th><th>Qué se pide por escrito</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tema">MOQ</td><td data-label="Cómo se fija">Flexible por familia, color y fase del proyecto</td><td data-label="Qué se pide por escrito">Mínimo por referencia y por color, con precio escalonado por volumen</td></tr>
+              <tr><td data-label="Tema">Muestra aprobada</td><td data-label="Cómo se fija">Muestra física con material, acabado y medidas declarados</td><td data-label="Qué se pide por escrito">Acta de muestra firmada y fechada antes de producir</td></tr>
+              <tr><td data-label="Tema">Plazo de producción</td><td data-label="Cómo se fija">30-45 días desde la muestra aprobada, sujeto a contrato</td><td data-label="Qué se pide por escrito">Calendario con hitos de aprobación y de inspección</td></tr>
+              <tr><td data-label="Tema">Entrega por fases</td><td data-label="Cómo se fija">Bloques por zona y por edificio: aulas, biblioteca, STEM, comedor</td><td data-label="Qué se pide por escrito">Plan de entregas por planta con fecha y responsable de recepción</td></tr>
+              <tr><td data-label="Tema">Incoterm y logística</td><td data-label="Cómo se fija">FOB, CIF, CFR, EXW o DDP según el proyecto y el destino</td><td data-label="Qué se pide por escrito">Incoterm, puerto de destino y consolidación de contenedores</td></tr>
+              <tr><td data-label="Tema">Documentación</td><td data-label="Cómo se fija">Fichas técnicas, normas y certificados por modelo</td><td data-label="Qué se pide por escrito">Anexo documental cerrado antes de la firma de la orden</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La entrega por fases es lo que hace viable un colegio nuevo, porque el edificio rara vez está terminado entero el mismo mes y la dirección suele abrir primero las aulas. Lo que funciona es dividir el pedido en bloques por zona y por fase de obra, y asociar a cada bloque una fecha de entrega, un responsable de recepción y un criterio de aceptación propio, de modo que el mobiliario de aula pueda instalarse mientras la biblioteca sigue en obra. En proyectos escolares entregados con ese esquema, un colegio internacional en Lagos (Nigeria) recibió 18 laboratorios STEM, 12 espacios de fabricación y 24 aulas colaborativas, más de 1.400 piezas, en 55 días y con el 100 % de conformidad de especificación (Hongye Furniture Group, 2025). Ese tipo de dato solo se sostiene cuando la muestra se aprueba antes de producir y el pedido se reparte por zonas con fechas distintas.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD12-a224-s1.jpg" alt="Aula de secundaria con mesas blancas regulables, sillas de malla y almacenamiento de roble claro." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Aula de secundaria equipada con mesas de laminado blanco regulables, sillas de malla y almacenamiento de roble claro: la zona de docencia se define antes de calcular cantidades por ambiente.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Control de calidad, ensayos y packing de exportación</h2>
+        <p>El control de calidad de un pedido escolar se organiza en tres momentos y en ninguno de ellos se acepta un parte verbal ni una foto de móvil como prueba. El primero es la inspección de materiales antes de producción: se verifica que el tablero, la madera, los herrajes y el acabado corresponden a la muestra aprobada y a las certificaciones declaradas, con el certificado CARB P2 del tablero y la cadena de custodia FSC a la vista del inspector. El segundo es el control en línea, donde se revisan medidas, holguras, ensamblaje y acabado contra la ficha técnica del modelo, y donde se aparta cualquier pieza que no cumpla antes de que avance a la fase siguiente. El tercero es la inspección previa al embarque, con un muestreo por lote, una prueba de estabilidad del conjunto montado y una verificación del etiquetado por referencia. Cuando el pliego lo exige, se incorpora al expediente el informe de un laboratorio independiente como SGS, con referencia de muestra y fecha de inspección. Los informes se guardan por lote, de modo que cualquier reclamación posterior pueda rastrearse hasta el material y hasta la fecha de fabricación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Hito de control</th><th>Qué se inspecciona</th><th>Documento de cierre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Hito de control">Materiales</td><td data-label="Qué se inspecciona">Tablero, madera, herrajes y acabado frente a la muestra aprobada</td><td data-label="Documento de cierre">Certificado CARB P2, cadena de custodia FSC y acta de muestra</td></tr>
+              <tr><td data-label="Hito de control">Control en línea</td><td data-label="Qué se inspecciona">Medidas, holguras, ensamblaje y acabado por lote de producción</td><td data-label="Documento de cierre">Parte de control por lote firmado y fechado</td></tr>
+              <tr><td data-label="Hito de control">Ensayos de producto</td><td data-label="Qué se inspecciona">Resistencia y estabilidad según EN 1729-2 o BIFMA</td><td data-label="Documento de cierre">Informe de ensayo del modelo exacto que se fabrica</td></tr>
+              <tr><td data-label="Hito de control">Emisiones y aire interior</td><td data-label="Qué se inspecciona">Emisiones de compuestos orgánicos volátiles del acabado</td><td data-label="Documento de cierre">Certificado GREENGUARD Gold vigente de la familia de acabado</td></tr>
+              <tr><td data-label="Hito de control">Inspección previa al embarque</td><td data-label="Qué se inspecciona">Muestreo por lote, estabilidad del conjunto y etiquetado por referencia</td><td data-label="Documento de cierre">Informe de inspección independiente, por ejemplo SGS</td></tr>
+              <tr><td data-label="Hito de control">Packing de exportación</td><td data-label="Qué se inspecciona">Protección de cantos y esquinas, humedad y cubicaje del contenedor</td><td data-label="Documento de cierre">Ficha de packing con pesos, medidas y número de bultos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El packing de exportación se decide al mismo tiempo que el mobiliario y no al final del proyecto, porque un colegio nuevo suele recibir contenedores completos y cada bulto tiene que llegar identificado por zona y por aula. La práctica que aplicamos es proteger cantos y esquinas con cartón reforzado o espuma, separar piezas por referencia, etiquetar cada bulto con su código de zona y de aula, y añadir barreras de humedad para tránsitos largos por mar, que en destinos tropicales es lo que marca la diferencia entre un mueble seco y un mueble hinchado. El montaje parcial en fábrica reduce el trabajo en obra y el embalaje plano aprovecha mejor el contenedor, mientras que el etiquetado por referencia permite que la descarga se haga por bloques y no abriendo cajas al azar en el patio del centro. Un packing mal planificado se convierte en reposición urgente justo en la semana en que el colegio abre.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se organizan la instalación, la entrega por fases y la aceptación?</h2>
+        <p>La instalación y la recepción se planifican antes de embarcar, porque un colegio que abre en septiembre no puede aceptar mobiliario sin un plan de descarga, de montaje y de limpieza posterior. Nuestro soporte de instalación empieza con un plano de implantación por aula y por zona, que indica dónde va cada pieza, en qué orden se monta y qué piezas se fijan a pared o a suelo por seguridad; continúa con el apoyo del montador en obra o con una supervisión remota según el tamaño y la distancia del proyecto, y termina con la verificación pieza a pieza contra el plano acordado. La aceptación se cierra con una lista de puntos abiertos, o punch list, que clasifica cada incidencia por zona, gravedad y plazo de corrección, y que firma la dirección del centro junto con el instalador. Sin esa lista firmada, una entrega no se considera cerrada y las piezas pendientes se quedan sin responsable ni fecha, lo que suele terminar en discusiones semanas después de la apertura.</p>
+        <p>La formación de uso es la parte que más se olvida y la que más alarga la vida del mobiliario en un centro educativo. Un colegio con mesas regulables, taburetes de laboratorio y almacenamiento móvil necesita saber cómo se ajusta la altura, cómo se limpia cada acabado y qué piezas se pueden sustituir sin llamar a un técnico, porque de eso depende que las mesas regulables sigan funcionando al cabo de dos cursos. Entregamos un manual por zona y, cuando el proyecto lo pide, una sesión de uso para el personal de mantenimiento y para el profesorado que comparte el aula. En un colegio internacional en Dubái (Emiratos Árabes Unidos) se instalaron 350 mesas colaborativas, 280 taburetes y 120 escritorios de altura regulable, con un 28 % de mejora en la participación del alumnado y un 19 % menos de interrupciones en clase (Hongye Furniture Group, 2025).</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD12-a224-s2.jpg" alt="Equipo de instalación montando mesas y sillas escolares en un aula vacía de un colegio nuevo." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Equipo de montaje instalando mobiliario escolar por zonas en un aula vacía: la instalación se ejecuta aula por aula y se registra en el parte de recepción.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Presupuesto, coste total y errores frecuentes en el equipamiento escolar</h2>
+        <p>El presupuesto de un colegio nuevo se juzga por el coste total de propiedad y no por el precio unitario de la silla más económica, porque el coste de sustituir una pieza mal especificada en obra supera casi siempre el ahorro que se consiguió al comprarla. Una compra directa de fábrica puede situar su ventaja de coste en el 30-50 % frente a la compra a través de intermediarios, pero esa cifra solo se sostiene si el pedido está bien especificado desde el principio y si el volumen se reparte de forma que aproveche la producción. Los errores que más encarecen un proyecto escolar son siempre los mismos y casi nunca son de precio: pedir la norma equivocada y descubrirlo en la inspección, calcular mal el número de tallas por aula, dejar el almacenamiento fuera del pliego, comprar por fases sin un plan de entrega y aceptar un packing genérico que llega dañado. Cada uno de esos fallos tiene un coste de corrección en obra muy superior al de haberlo previsto cuando el pliego todavía estaba abierto, así que la tabla de errores conviene revisarla antes de comparar ofertas y no después de adjudicar el pedido.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Error frecuente</th><th>Consecuencia en obra</th><th>Cómo se evita</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Error frecuente">Norma equivocada o no verificada</td><td data-label="Consecuencia en obra">Rechazo en la inspección y reposición de piezas</td><td data-label="Cómo se evita">Exigir informe de ensayo del modelo exacto que se fabrica</td></tr>
+              <tr><td data-label="Error frecuente">Cálculo de tallas incorrecto</td><td data-label="Consecuencia en obra">Mesas y sillas que no encajan en la altura del alumno</td><td data-label="Cómo se evita">Cotejar las marcas de talla con la población escolar prevista</td></tr>
+              <tr><td data-label="Error frecuente">Almacenamiento fuera del pliego</td><td data-label="Consecuencia en obra">Pasillos ocupados y aulas sin taquillas suficientes</td><td data-label="Cómo se evita">Incluir casilleros y almacenamiento en la fase de diseño</td></tr>
+              <tr><td data-label="Error frecuente">Compra por fases sin plan de entrega</td><td data-label="Consecuencia en obra">Mobiliario parado en obra y apertura retrasada</td><td data-label="Cómo se evita">Fijar bloques por zona con fecha y responsable de recepción</td></tr>
+              <tr><td data-label="Error frecuente">Packing genérico</td><td data-label="Consecuencia en obra">Daños en tránsito y reposición urgente antes de abrir</td><td data-label="Cómo se evita">Exigir ficha de packing, etiquetado por aula y barreras de humedad</td></tr>
+              <tr><td data-label="Error frecuente">Ausencia de lista de aceptación</td><td data-label="Consecuencia en obra">Piezas pendientes sin responsable ni plazo</td><td data-label="Cómo se evita">Cerrar una punch list firmada por zona y gravedad</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Si está planificando el mobiliario escolar para un colegio nuevo, puede revisar el catálogo de <a href="/productos-escolares/">mobiliario escolar y productos para proyectos educativos</a> y, cuando tenga el listado de zonas, <a href="/contacto/">solicitar una cotización de proyecto escolar</a> con las aulas y superficies previstas y el puerto de destino. Con esos datos devolvemos una propuesta por partida, las normas aplicables a cada familia y el anexo de certificados por modelo. Hongye Furniture Group produce en Heshan (Jiangmen, Guangdong) con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y con ocho certificaciones internacionales que se pueden verificar documento a documento. Equipar un colegio nuevo con criterio cuesta unas semanas de planificación; corregir un pliego mal cerrado cuesta el calendario entero de apertura del centro.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite una cotización para equipar su colegio nuevo"
+      text="Envíe su plano de planta y su listado de zonas por /contacto/ y le devolvemos una propuesta por partida, con las normas aplicables a cada familia, el MOQ flexible por color y el plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. Para preparar la cotización necesitamos tres datos: el número de aulas y de zonas que va a equipar, la superficie o el aforo previsto del centro y el puerto de destino. Si el proyecto todavía no está cerrado, indíquelo: podemos trabajar con un anteproyecto y ajustar las cantidades cuando el pliego esté definido. También puede solicitar muestras de acabado, fichas técnicas y el anexo de certificados por modelo antes de decidir. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
