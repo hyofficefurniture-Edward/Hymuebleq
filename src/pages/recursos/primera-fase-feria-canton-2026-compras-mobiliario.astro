@@ -1,0 +1,470 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Primera fase de la Feria de Cantón 2026: qué compra un fabricante de mobiliario";
+const pageDescription = "Qué compra un fabricante de mobiliario en la primera fase de la Feria de Cantón 2026: herrajes, iluminación y material eléctrico, verificación y fábrica.";
+const keywords = [
+  "primera fase de la Feria de Cantón 2026",
+  "qué se exhibe en la primera fase de la Feria de Cantón",
+  "compra previa de herrajes",
+  "iluminación y material eléctrico",
+  "comprador de mobiliario FF&E en la feria",
+  "homologar componentes antes del pedido de mobiliario",
+  "calendario de compras FF&E y fases de la feria",
+  "visita a fábrica en Heshan Jiangmen",
+  "documentación de componentes para la segunda fase",
+  "MOQ plazo y packing de mobiliario de proyecto"
+];
+const canonicalPath = "/recursos/primera-fase-feria-canton-2026-compras-mobiliario/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD13-a226-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-15";
+const dateModified = "2026-10-15";
+const publicationDateLabel = "Publicada el 15 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cuándo es la primera fase de la Feria de Cantón 2026?", answer: "La primera fase de la Feria de Cantón 2026 se celebra del 15 al 19 de octubre de 2026 y está dedicada a la manufactura avanzada, con herrajes, herramientas, iluminación y material eléctrico y electrónico (web oficial de la Feria de Importación y Exportación de China, 2026). La segunda fase, del 23 al 27 de octubre, es la del mobiliario, y la tercera, del 31 de octubre al 4 de noviembre, agrupa el mobiliario médico y los equipos sanitarios. Los intervalos del 20 al 22 y del 28 al 30 de octubre no tienen negociación al público, y son la ventana natural para visitar fábricas antes de cerrar el pedido." },
+    { question: "¿Por qué un comprador de mobiliario debería visitar la primera fase?", answer: "Porque los componentes que determinan la vida útil y el mantenimiento del mueble se compran en la primera fase y no en la segunda. Homologar allí la bisagra, la guía, el perfil de iluminación y el mecanismo permite fijar la especificación, el MOQ y el plazo antes de cerrar el pedido de mobiliario, y además obliga al fabricante a cotizar sobre una referencia concreta en lugar de sobre una descripción genérica. Ver el componente en origen evita también la discusión más frecuente en la recepción de un proyecto: un mueble correcto de forma y acabado con un herraje que no es el que el comprador creía haber contratado." },
+    { question: "¿Qué se expone en cada fase de la Feria de Cantón?", answer: "La primera fase, del 15 al 19 de octubre, reúne la manufactura avanzada: herrajes, herramientas, iluminación y material eléctrico y electrónico. La segunda, del 23 al 27 de octubre, concentra el mobiliario, el material de construcción y la decoración, que es donde se cierra el pedido del proyecto. La tercera, del 31 de octubre al 4 de noviembre, agrupa el mobiliario médico, los equipos sanitarios y los artículos de oficina (web oficial de la Feria de Importación y Exportación de China, 2026). Para un comprador de mobiliario con zonas clínicas o educativas, la planificación se reparte entre la primera, la segunda y la tercera fase." },
+    { question: "¿Cómo se integra la compra de componentes en el calendario del proyecto?", answer: "La compra de componentes se integra fijando la primera fase como hito de homologación y la segunda como hito de pedido. Con las fechas de la 140.ª edición, del 15 al 19 de octubre se comparan herrajes, iluminación y material eléctrico; del 20 al 22 de octubre, intervalo sin negociación al público, se verifica en la fábrica de Heshan (Jiangmen, Guangdong); y del 23 al 27 de octubre se cierra el pedido de mobiliario con la especificación ya homologada. El plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, se cuenta a partir de esa aprobación y no del día en que llega la consulta." },
+    { question: "¿Qué documentación conviene llevar a la segunda fase?", answer: "Conviene llevar el expediente de componentes cerrado: la ficha técnica del herraje con su referencia y su carga declarada, el informe de ensayo del componente cuando exista, la ficha de iluminación con temperatura de color y consumo, el plano de mecanismos y tomas, el certificado del tablero con la cadena de custodia FSC y la muestra de acabado firmada. Con esa base, dos o tres cotizaciones de mobiliario se comparan sobre el mismo punto de partida y solo cambian el precio y el plazo. Sin ella, la negociación se queda en el precio por unidad y en la impresión general del catálogo, que es lo que después encarece las correcciones en obra." },
+    { question: "¿Qué errores de compra evita la primera fase?", answer: "Evita los errores que aparecen tarde: cerrar el pedido de mobiliario sin homologar el herraje, elegir la iluminación sin fijar la temperatura de color, dejar los mecanismos y las tomas fuera del plano de fabricación y llegar a la segunda fase sin fichas técnicas. Ninguno de esos fallos se ve el día de la compra; todos se manifiestan en la recepción o en el primer año de uso, cuando la pieza ya está instalada y corregirla cuesta más que el propio componente. Recorrer la primera fase con una lista de componentes y verificar en fábrica antes de la segunda fase convierte esos riesgos en decisiones cerradas antes de firmar." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD13-a226-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d13a2-a226-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d13a2-a226-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Compras FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Primera fase de la Feria de Cantón 2026: qué compra un fabricante de mobiliario y cómo encajarlo en el proyecto</h1>
+          <p>La primera fase de la Feria de Cantón 2026 es el tramo dedicado a la manufactura avanzada, del 15 al 19 de octubre de 2026, en el que se exponen herrajes, herramientas, iluminación y material eléctrico y electrónico (web oficial de la Feria de Importación y Exportación de China, 2026). Para un comprador de mobiliario de proyecto no es un tramo secundario: los componentes que se ven esos días son los que determinan la vida útil, el mantenimiento y el acabado del mueble que se instalará meses después.</p>
+          <p>Esta guía explica por qué un comprador de FF&amp;E con criterio debería reservar días para la primera fase aunque su pedido de mobiliario se cierre en la segunda, del 23 al 27 de octubre. El orden que funciona es el siguiente: primero se homologan los componentes críticos en la primera fase, después se verifica en fábrica durante el intervalo del 20 al 22 de octubre, y solo entonces se cierra el pedido de mobiliario en la segunda fase con la especificación y el plazo ya fijados. Los intervalos del 20 al 22 y del 28 al 30 de octubre no tienen negociación al público y son la ventana natural para visitar la planta de Heshan (Jiangmen, Guangdong) y comprobar sobre la línea de producción lo que se prometió en el puesto.</p>
+          <p>Como referencia de escala, la 140.ª edición ocupa cerca de 1.550.000 m² con unos 32.000 expositores, y la 139.ª recibió 314.000 compradores extranjeros de 220 países y regiones (web oficial de la Feria de Importación y Exportación de China, 2026). Detrás de este criterio está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales: ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong), con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y una ventaja de coste del 30-50 %, y expone en la 140.ª Feria de Cantón.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD13-a226-hero.jpg" alt="Comprador FF&amp;E revisando herrajes, perfiles de iluminación y material eléctrico en la primera fase de la Feria de Cantón" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se compra en la primera fase de la Feria de Cantón 2026?</h2>
+        <p>La primera fase de la Feria de Cantón 2026 es la dedicada a la manufactura avanzada: herrajes, herramientas, iluminación y material eléctrico y electrónico, y se celebra del 15 al 19 de octubre de 2026 (web oficial de la Feria de Importación y Exportación de China, 2026). Para un comprador de mobiliario de proyecto no es una fase ajena, porque casi todo lo que hace que un mueble siga funcionando al cabo de diez años se decide aquí: la bisagra que aguanta cientos de miles de aperturas, la guía que desliza sin ruido, el tirador que se fija al canto del tablero, la fuente de alimentación que da luz al plano de trabajo. Entender qué se expone en estos cinco días permite llegar a la segunda fase, del 23 al 27 de octubre, con los componentes críticos identificados, sus fichas técnicas en la mano y los proveedores ya preseleccionados, en lugar de improvisar sobre el catálogo de mobiliario el mismo día de la reunión.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Familia de la primera fase</th><th>Qué incluye</th><th>Por qué importa al comprador de mobiliario</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Familia de la primera fase">Herrajes y ferretería</td><td data-label="Qué incluye">Bisagras, guías, tiradores, sistemas de elevación y cerraduras</td><td data-label="Por qué importa al comprador de mobiliario">Fijan la vida útil del mueble y el coste de reposición de piezas durante el ciclo de vida</td></tr>
+              <tr><td data-label="Familia de la primera fase">Herramientas y utillaje</td><td data-label="Qué incluye">Herramientas manuales, utillaje de montaje y accesorios de taller</td><td data-label="Por qué importa al comprador de mobiliario">Condicionan la calidad de los ajustes en fábrica y el montaje en obra</td></tr>
+              <tr><td data-label="Familia de la primera fase">Iluminación</td><td data-label="Qué incluye">Perfiles LED, fuentes de alimentación, reguladores y temperatura de color</td><td data-label="Por qué importa al comprador de mobiliario">Definen la escena del proyecto y la luz del plano de trabajo</td></tr>
+              <tr><td data-label="Familia de la primera fase">Material eléctrico y electrónico</td><td data-label="Qué incluye">Cableado, mecanismos, tomas, conectores y control</td><td data-label="Por qué importa al comprador de mobiliario">Determinan los puntos de servicio de las mesas y del mobiliario técnico</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Conviene separar dos niveles de compra para no confundir el trabajo de cada fase. El primer nivel es el del componente, y se resuelve en la primera fase: qué bisagra, qué guía, qué temperatura de color, qué mecanismo y con qué acabado, cada uno con su referencia y su ficha técnica. El segundo nivel es el del mueble completo, y se resuelve en la segunda fase, del 23 al 27 de octubre, donde el mobiliario de hotel, oficina, educación y vivienda se exhibe junto al material de construcción y la decoración (web oficial de la Feria de Importación y Exportación de China, 2026). Un comprador que deja los herrajes para la segunda fase acaba eligiendo la pieza con quien fabrica el mueble y no con quien fabrica el componente, y esa diferencia se nota en la garantía y en la disponibilidad de reposición. La superficie expositiva de la 140.ª edición ronda los 1.550.000 m² y reúne alrededor de 32.000 expositores, de modo que la primera fase no se recorre entera: se recorre con una lista de componentes cerrada antes de viajar.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Por qué un comprador de mobiliario debería visitar la primera fase?</h2>
+        <p>Un comprador de mobiliario debería visitar la primera fase porque los componentes que definen la vida útil, el mantenimiento y el acabado del mueble se compran ahí, y porque verlos en origen permite fijar especificación, MOQ y plazo antes de cerrar el pedido completo. Cuando el componente se homologa primero, el fabricante de mobiliario cotiza sobre una referencia concreta y no sobre una descripción genérica, y el comprador puede comparar dos ofertas sabiendo si el mueble que recibe lleva la misma bisagra en ambos casos o bisagras distintas. Esa claridad evita la discusión más frecuente en la recepción de un proyecto FF&amp;E: el mueble llega correcto de forma y de acabado, pero el herraje no corresponde a lo que se creía haber contratado. <a href="/recursos/seleccionar-proveedores-mobiliario-feria-canton/">Cómo seleccionar proveedores de mobiliario en la Feria de Cantón</a> describe el orden de la conversación que conviene tener con cada candidato antes de pedir una cotización.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Componente de la primera fase</th><th>Efecto en el mobiliario entregado</th><th>Decisión que permite tomar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Componente de la primera fase">Bisagras y guías</td><td data-label="Efecto en el mobiliario entregado">Apertura y cierre diarios, ruido y holguras a lo largo del uso</td><td data-label="Decisión que permite tomar">Homologar modelo y carga por familia antes de cerrar el pedido</td></tr>
+              <tr><td data-label="Componente de la primera fase">Iluminación integrada</td><td data-label="Efecto en el mobiliario entregado">Ambiente del espacio, temperatura de color y consumo eléctrico</td><td data-label="Decisión que permite tomar">Fijar temperatura de color y regulación junto al diseñador del proyecto</td></tr>
+              <tr><td data-label="Componente de la primera fase">Mecanismos y tomas</td><td data-label="Efecto en el mobiliario entregado">Puntos de servicio de las mesas de trabajo y del mobiliario técnico</td><td data-label="Decisión que permite tomar">Definir la posición de las tomas antes del plano de fabricación</td></tr>
+              <tr><td data-label="Componente de la primera fase">Cerraduras y accesorios de seguridad</td><td data-label="Efecto en el mobiliario entregado">Control de acceso en mobiliario de hotel, oficina y sanidad</td><td data-label="Decisión que permite tomar">Verificar el sistema de cierre junto al responsable de seguridad</td></tr>
+              <tr><td data-label="Componente de la primera fase">Remates y perfiles metálicos</td><td data-label="Efecto en el mobiliario entregado">Resistencia al uso intensivo y coherencia con la muestra aprobada</td><td data-label="Decisión que permite tomar">Cotejar el acabado del perfil con la muestra del proyecto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El interés de esta visita es económico antes que estético. En un proyecto de 200 habitaciones de hotel, un cajón por mesilla son 200 guías, y una guía que falla al segundo año obliga a reponer pieza a pieza con el hotel en funcionamiento, lo que cuesta mucho más que el propio componente. Lo mismo sucede con la iluminación integrada: si la temperatura de color se decide tarde, la corrección llega cuando la obra ya está pintada y el mobiliario fabricado. La primera fase permite cerrar esas decisiones con el proveedor del componente delante y con las muestras físicas sobre la mesa, en un solo viaje y antes de que el pedido de mobiliario esté firmado. Esa es la razón práctica de reservar dos o tres días del viaje a la primera fase en lugar de aterrizar directamente en la segunda, cuando ya no hay margen para cambiar la especificación sin coste.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se encaja la compra previa de componentes en el calendario del proyecto FF&amp;E?</h2>
+        <p>La compra previa se encaja fijando la primera fase como el hito de homologación de componentes y la segunda como el hito de pedido de mobiliario, con los días intermedios dedicados a la verificación en fábrica. Con las fechas reales de la 140.ª edición ese calendario es muy concreto: del 15 al 19 de octubre se comparan herrajes, iluminación y material eléctrico; del 20 al 22 de octubre se visita la planta de Heshan (Jiangmen, Guangdong) para comprobar cómo se integran esos componentes; y del 23 al 27 de octubre se cierra el pedido de mobiliario con la especificación ya homologada. <a href="/recursos/feria-canton-2026-mobiliario-fase-compra-ffe/">El calendario de compras FF&amp;E y las fases de la feria</a> desarrolla ese orden por semanas y sirve de plantilla para asignar responsables y fechas antes de reservar los vuelos. Cada hito tiene un responsable y un entregable: la lista de componentes homologados, el informe de la visita a planta y el cuadro de ofertas comparadas por partida. Cuando el proyecto es grande y el equipo reparte el trabajo entre compras, diseño y obra, ese reparto por hitos evita que dos personas negocien el mismo componente con criterios distintos y que el pedido llegue a fábrica con la especificación a medias.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Hito del proyecto</th><th>Fechas</th><th>Tarea de compra</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Hito del proyecto">Homologación de componentes</td><td data-label="Fechas">del 15 al 19 de octubre</td><td data-label="Tarea de compra">Comparar bisagras, guías, iluminación y material eléctrico con ficha técnica</td></tr>
+              <tr><td data-label="Hito del proyecto">Verificación en fábrica</td><td data-label="Fechas">del 20 al 22 de octubre</td><td data-label="Tarea de compra">Visitar Heshan y comprobar la integración de los componentes aprobados</td></tr>
+              <tr><td data-label="Hito del proyecto">Pedido de mobiliario</td><td data-label="Fechas">del 23 al 27 de octubre</td><td data-label="Tarea de compra">Cerrar el pedido en la segunda fase con la especificación homologada</td></tr>
+              <tr><td data-label="Hito del proyecto">Cierre documental</td><td data-label="Fechas">del 28 al 30 de octubre</td><td data-label="Tarea de compra">Confirmar muestra, packing de exportación y anexos de certificación</td></tr>
+              <tr><td data-label="Hito del proyecto">Producción y entrega</td><td data-label="Fechas">30-45 días desde la muestra aprobada</td><td data-label="Tarea de compra">Planificar el embarque y la recepción por zonas en obra</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El error de calendario más habitual es invertir el orden y comprar el mueble antes de homologar el componente. Cuando el pedido se cierra el primer día de la segunda fase y el herraje se deja pendiente, el fabricante tiene que decidir por el comprador, y suele decidir por el componente disponible más que por el más adecuado. La consecuencia aparece meses después, en la reposición y en la garantía. Planificar al revés cuesta poco: basta con reservar los dos o tres primeros días de viaje a la primera fase, cerrar el intervalo del 20 al 22 de octubre para la fábrica y guardar toda la segunda fase para negociar el pedido con las cartas boca arriba. <a href="/recursos/como-visitar-feria-canton-2026-compradores-ffe/">La guía para visitar la feria como comprador FF&amp;E</a> ayuda a repartir esos días y a preparar la agenda por fase, de modo que el tiempo de feria se dedique a comprar y no a resolver logística.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Verificación en el puesto y visita a fábrica en Heshan</h2>
+        <p>La verificación de un componente empieza en el puesto y solo se cierra en la fábrica, y por eso la visita a planta se reserva antes de viajar y no se improvisa al llegar a Cantón. En el puesto se comprueba lo que se puede ver y tocar: el ciclo de apertura de la bisagra, el deslizamiento de la guía, la temperatura de color encendida, el tipo de mecanismo y el acabado del tirador, siempre con la referencia y el modelo anotados por escrito. En fábrica se comprueba lo que el puesto no muestra: cómo se almacena el componente, cómo se monta sobre el tablero certificado, cómo se controla la holgura antes del acabado y cómo se etiqueta cada bulto antes del packing de exportación. Nuestra planta está en Heshan (Jiangmen, Guangdong) y se visita desde Cantón en una jornada, lo que permite repartir el viaje entre el recinto de la feria y la línea de producción sin perder días de negociación.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD13-a226-s1.jpg" alt="Almacén de tableros de la fábrica con carretillas elevadoras y materia prima de madera apilada en estanterías." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Almacén de tableros de la fábrica de Heshan, con carretillas elevadoras y materia prima apilada: la visita a fábrica permite comprobar in situ la capacidad real de producción y de almacenaje antes de cerrar el pedido de componentes.</figcaption>
+        </figure>
+        <p>La visita a fábrica cierra las preguntas que el puesto deja abiertas y sirve además para verificar la integración del componente en el mueble. En el recorrido se comprueba cómo se almacena el herraje antes del montaje, si el tablero lleva el certificado CARB P2 y la cadena de custodia FSC declarados, cómo se mide la holgura de un cajón antes del acabado y cómo se controla la temperatura de color de un perfil de iluminación ya montado. Un recorrido de tres horas responde a más preguntas que tres reuniones de feria, porque el papel dice qué se promete y la línea de producción dice si se puede cumplir. <a href="/recursos/registrarse-comprador-feria-canton-2026-ffe/">El registro de comprador en la Feria de Cantón 2026</a> explica cómo preparar la acreditación y la agenda para que los días de feria se dediquen a comprar y no a resolver trámites.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué documentación conviene llevar a la segunda fase del mobiliario?</h2>
+        <p>A la segunda fase conviene llegar con el expediente de componentes cerrado, no con una idea aproximada, porque es el momento de comparar ofertas de mobiliario y cada comparación se sostiene sobre una ficha técnica. El expediente mínimo incluye, para cada familia, la referencia y el modelo del herraje con su carga declarada, la ficha del perfil de iluminación con temperatura de color y consumo, la posición de los mecanismos y las tomas, el informe de ensayo del componente cuando exista y el certificado del tablero con su cadena de custodia. Con esos documentos sobre la mesa, el comprador puede pedir tres cotizaciones del mismo mueble sabiendo que la base es idéntica y que solo cambian el precio y el plazo. <a href="/recursos/checklist-comprador-feria-canton-2026/">La lista de comprobación del comprador de la Feria de Cantón</a> recoge ese expediente en formato de lista, para no depender de la memoria durante las reuniones del recinto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Para qué sirve</th><th>Quién lo aporta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">Ficha técnica del herraje con referencia y carga</td><td data-label="Para qué sirve">Cerrar la especificación del mueble sin ambigüedad</td><td data-label="Quién lo aporta">Fabricante del componente o fábrica de mobiliario</td></tr>
+              <tr><td data-label="Documento">Informe de ensayo del componente</td><td data-label="Para qué sirve">Demostrar ciclos de apertura y carga declarada</td><td data-label="Quién lo aporta">Laboratorio independiente o fabricante del componente</td></tr>
+              <tr><td data-label="Documento">Ficha de iluminación con temperatura de color y consumo</td><td data-label="Para qué sirve">Fijar la escena del proyecto y el consumo previsto</td><td data-label="Quién lo aporta">Fabricante de iluminación</td></tr>
+              <tr><td data-label="Documento">Plano de mecanismos y tomas</td><td data-label="Para qué sirve">Situar los puntos de servicio antes de fabricar</td><td data-label="Quién lo aporta">Estudio del proyecto y fábrica de mobiliario</td></tr>
+              <tr><td data-label="Documento">Certificado del tablero y cadena de custodia FSC</td><td data-label="Para qué sirve">Trazabilidad de la madera y control de emisiones</td><td data-label="Quién lo aporta">Organismo certificador y proveedor de tablero</td></tr>
+              <tr><td data-label="Documento">Muestra de acabado firmada</td><td data-label="Para qué sirve">Cotejar el acabado del perfil y del tirador con el mobiliario</td><td data-label="Quién lo aporta">Fábrica de mobiliario</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La documentación no es un trámite previo, es la base de la negociación. Un comprador que llega a la segunda fase con la ficha del herraje y el plano de tomas puede negociar MOQ, plazo y packing con datos concretos, y puede exigir por escrito que el mueble incorpore la referencia homologada. <a href="/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/">Los puntos de negociación de MOQ, plazo y packing con proveedores de la feria</a> recogen esas condiciones para cerrarlas junto con el anexo de componentes. Sin ese expediente, la conversación se queda en el precio por unidad y en la impresión general del catálogo, y eso es exactamente lo que hace que dos proyectos parecidos acaben con resultados muy distintos. En proyectos entregados desde 1996 en más de 50 países, la diferencia entre un pedido cómodo y un pedido problemático casi nunca ha sido el precio, sino el nivel de detalle con el que se cerró la especificación antes de firmar.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué errores de compra evita la primera fase en un proyecto FF&amp;E?</h2>
+        <p>La primera fase evita los errores que se descubren tarde, cuando el mobiliario ya está instalado y la corrección es más cara que el propio componente. Los más frecuentes son cerrar el pedido de mobiliario sin homologar el herraje, elegir la iluminación sin fijar la temperatura de color, dejar los mecanismos y las tomas fuera del plano de fabricación y llegar a la segunda fase con fichas técnicas incompletas. Ninguno de esos errores se detecta en el momento de la compra; todos aparecen en la recepción o en el primer año de uso, cuando la pieza ya está en el edificio y el calendario del proyecto no admite esperas. Recorrer la primera fase con una lista de componentes y dedicar el intervalo del 20 al 22 de octubre a la fábrica es lo que convierte esos riesgos en decisiones cerradas antes de firmar el pedido. Ese orden también protege al proveedor, porque deja por escrito qué componente se espera antes de discutir el precio por unidad.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Error frecuente</th><th>Consecuencia en obra</th><th>Cómo se evita</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Error frecuente">Cerrar el pedido sin homologar el herraje</td><td data-label="Consecuencia en obra">Sustitución de bisagras y guías al poco de entregar</td><td data-label="Cómo se evita">Homologar referencia y carga del componente en la primera fase</td></tr>
+              <tr><td data-label="Error frecuente">Elegir la iluminación sin fijar la temperatura de color</td><td data-label="Consecuencia en obra">Ambientes con luces distintas dentro del mismo proyecto</td><td data-label="Cómo se evita">Definir temperatura de color y regulación junto al diseñador</td></tr>
+              <tr><td data-label="Error frecuente">Dejar los mecanismos fuera del plano de fabricación</td><td data-label="Consecuencia en obra">Tomas mal situadas en mesas y mobiliario técnico</td><td data-label="Cómo se evita">Integrar el material eléctrico en el plano antes de producir</td></tr>
+              <tr><td data-label="Error frecuente">Comprar componente y mobiliario el mismo día</td><td data-label="Consecuencia en obra">Sin margen para verificar en fábrica ni para corregir</td><td data-label="Cómo se evita">Separar la homologación del pedido con el intervalo del 20 al 22 de octubre</td></tr>
+              <tr><td data-label="Error frecuente">Llegar a la segunda fase sin fichas técnicas</td><td data-label="Consecuencia en obra">Comparación de ofertas sin una base común</td><td data-label="Cómo se evita">Llevar el expediente de componentes cerrado desde la primera fase</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Si está preparando un proyecto FF&amp;E, puede <a href="/contacto/">solicitar una cotización de proyecto FF&amp;E</a> indicando las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino; con esos datos devolvemos una propuesta por partida, las normas aplicables y el anexo de componentes por modelo. Homologar en la primera fase no alarga el proyecto, lo ordena: el comprador que reserva dos días del viaje a los herrajes, la iluminación y el material eléctrico llega a la segunda fase con menos preguntas y más margen para negociar. Hongye Furniture Group es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países y ocho certificaciones internacionales, y produce en Heshan (Jiangmen, Guangdong) con un plazo de 30-45 días desde la muestra aprobada, sujeto a contrato. Comprar el componente correcto antes de comprar el mueble es la vía que mejor protege el presupuesto de un proyecto.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD13-a226-s2.jpg" alt="Técnico revisando bisagras y guías homologadas junto a muestras de acabado antes del packing de exportación" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Revisión de herrajes homologados y muestras de acabado antes del packing de exportación.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite la documentación de componentes y una cotización FF&E"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar sus datos antes de viajar tiene cuatro ventajas concretas: recibirá el número de stand, la carta de invitación para su visita, un horario de atención reservado para usted durante la primera fase y la coordinación de una visita a la fábrica de Heshan (Jiangmen, Guangdong) si desea ver el montaje de los componentes. Para preparar la cotización necesitamos tres datos: las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino. Envíenos su RFQ o sus planos y su lista de componentes, y devolvemos la propuesta con las normas aplicables y el anexo de componentes por modelo. Tenga en cuenta que la carta de invitación no garantiza el visado: la decisión corresponde a las autoridades consulares chinas. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
