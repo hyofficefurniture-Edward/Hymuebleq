@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/visitar-fabricas-mobiliario-china-feria-canton-2026/",
   "/recursos/primera-fase-feria-canton-2026-compras-mobiliario/",
   "/recursos/equipar-colegio-nuevo-mobiliario-escolar-2026/",
   "/recursos/verificar-certificaciones-proveedor-feria-canton-2026/",

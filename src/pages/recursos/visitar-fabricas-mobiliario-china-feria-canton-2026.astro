@@ -1,0 +1,479 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Visitar fábricas de mobiliario en China en la Feria de Cantón 2026";
+const pageDescription = "Cómo organizar la visita a fábricas de mobiliario en China en la Feria de Cantón 2026: cuándo ir, ruta a Heshan, ocho controles y matriz de proveedores.";
+const keywords = [
+  "visitar fábricas de mobiliario en China",
+  "auditoría de fábrica durante la Feria de Cantón 2026",
+  "visita a fábrica en Heshan Jiangmen",
+  "ocho dimensiones de la auditoría de planta",
+  "matriz de proveedores y anexo de contrato",
+  "packing de exportación y ensayo de caída",
+  "verificar certificaciones CARB P2 y FSC",
+  "calendario de la feria primera fase y segunda fase",
+  "cotización FF&E para proyecto hotelero",
+  "plazo de producción 30-45 días desde la muestra aprobada"
+];
+const canonicalPath = "/recursos/visitar-fabricas-mobiliario-china-feria-canton-2026/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD14-a228-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-16";
+const dateModified = "2026-10-16";
+const publicationDateLabel = "Publicada el 16 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cuándo es la Feria de Cantón 2026 y cuál es la ventana para visitar fábricas?", answer: "La 140.ª Feria de Cantón 2026 se celebra en tres fases: del 15 al 19 de octubre la primera, del 23 al 27 de octubre la segunda y del 31 de octubre al 4 de noviembre la tercera (China Foreign Trade Centre, 2026). El mobiliario se exhibe en la segunda fase, dedicada al hogar de calidad, y los intervalos del 20 al 22 y del 28 al 30 de octubre no tienen negociación al público (Canton Fair, 2026). La ventana más eficiente para visitar fábricas es el final de la primera fase junto con el intervalo del 20 al 22 de octubre, porque el comprador ya está en Cantón y la planta puede dedicar el día completo a la auditoría, dejando la segunda fase para negociar el pedido." },
+    { question: "¿Cuánto se tarda en visitar una fábrica de mobiliario en China desde Cantón?", answer: "Una auditoría se resuelve en una jornada completa. Desde el recinto de Cantón, en el distrito de Haizhu de Guangzhou, la planta de Heshan (Jiangmen, Guangdong) se alcanza en unas dos horas por carretera, de modo que es posible salir por la mañana, recorrer la línea de producción, el almacén y la sala de muestras, y regresar el mismo día. El recorrido útil suele ocupar entre tres y cuatro horas, más una reunión de cierre con el responsable de calidad. Si se auditan dos plantas seguidas, conviene dormir una noche en la zona en lugar de hacer dos desplazamientos desde Cantón." },
+    { question: "¿Qué se evalúa en una auditoría de fábrica de mobiliario?", answer: "La auditoría cubre ocho dimensiones: capacidad y equipos, con las líneas de tablero, madera maciza, tapizado y lacado; origen del tablero y cadena CARB P2 y FSC; control de calidad y aprobación de la primera pieza; integración de herrajes e iluminación; packing de exportación con cajas de madera o contrachapado, esquineros, espuma de polietileno y paletizado, más ensayo de caída y transporte; almacén y logística de salida; sala de muestras y capacidad de prototipado; y cumplimiento ambiental y de seguridad. Cada dimensión se anota con la evidencia observada, de modo que el informe permita puntuar y comparar proveedores con el mismo criterio." },
+    { question: "¿Cómo se convierte la visita a fábrica en una decisión de compra?", answer: "La visita se convierte en decisión a través de dos documentos. El primero es la matriz de proveedores, donde cada una de las ocho dimensiones se puntúa de 1 a 5 y se pondera según el riesgo del proyecto para ordenar a los candidatos. El segundo es el anexo de contrato, que recoge la especificación de materiales, los criterios de aceptación, la norma de packing, los repuestos, la garantía y el plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. Con la muestra de acabado sellada y el informe de auditoría adjunto, la adjudicación se justifica con evidencia y no con impresiones de feria." },
+    { question: "¿Por qué conviene verificar en fábrica antes de negociar el precio?", answer: "Porque el precio solo es comparable cuando la especificación es la misma para todos los candidatos. Si el comprador negocia primero, cada proveedor cotiza una pieza distinta y la oferta más barata puede esconder un herraje inferior, un tablero sin certificado o un packing que no resiste el transporte marítimo. Al verificar antes, el comprador llega a la segunda fase con la referencia del componente homologada, la muestra de acabado sellada y la norma de packing acordada, de modo que la negociación se centra en el alcance real, el plazo y la garantía en lugar de en el precio por unidad." },
+    { question: "¿Se puede visitar la planta de Heshan durante la Feria de Cantón?", answer: "Sí. Hongye Furniture Group expone en la 140.ª Feria de Cantón y su planta de Heshan (Jiangmen, Guangdong) puede visitarse con cita previa durante el periodo de feria, incluido el intervalo del 20 al 22 de octubre. La visita se organiza a partir de la consulta del comprador por /contacto/; con los datos de contacto, Hongye Furniture Group facilita el número de stand y una carta de invitación para la visita. Conviene recordar que la carta de invitación no garantiza el visado: la concesión queda a criterio de las autoridades consulares chinas, que son quienes determinan el resultado." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD14-a228-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d14a2-a228-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d14a2-a228-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Visita a fábrica &middot; {publicationDateLabel}</p>
+          <h1>Visitar fábricas de mobiliario en China durante la Feria de Cantón 2026: auditoría, ruta a Heshan y matriz de proveedores</h1>
+          <p>Visitar fábricas de mobiliario en China es la auditoría de planta que un comprador realiza antes de cerrar un pedido de mobiliario de proyecto, y la Feria de Cantón 2026 concentra la mejor ventana del año para hacerla. La 140.ª Feria de Cantón se celebra en tres fases: del 15 al 19 de octubre de 2026 la primera, del 23 al 27 de octubre la segunda y del 31 de octubre al 4 de noviembre la tercera (China Foreign Trade Centre, 2026). Para un equipo FF&amp;E, la visita a fábrica no es una excursión: es el paso que confirma sobre la línea de producción lo que el proveedor promete en la ficha técnica y en el puesto de feria.</p>
+          <p>El orden que mejor protege el presupuesto es verificar antes de negociar. La primera fase, del 15 al 19 de octubre, permite homologar los herrajes, la iluminación y el material eléctrico que después integrará el mueble; el intervalo del 20 al 22 de octubre, sin negociación al público, es la ventana natural para recorrer la planta de Heshan (Jiangmen, Guangdong); y la segunda fase, del 23 al 27 de octubre, queda reservada a cerrar el pedido con la especificación ya verificada. Los intervalos del 20 al 22 y del 28 al 30 de octubre no tienen negociación al público (Canton Fair, 2026), de modo que el comprador que aterriza en Cantón solo para la segunda fase llega tarde a la mitad del trabajo previo.</p>
+          <p>Como referencia de escala, la superficie expositiva de la 140.ª Feria de Cantón ronda los 1.550.000 m² y reúne alrededor de 32.000 expositores (Canton Fair, 2026), y la 139.ª edición recibió 314.000 compradores extranjeros procedentes de 220 países y regiones (Canton Fair, 2026). Detrás de esta guía está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales: ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong), con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y una ventaja de coste del 30-50 %, y expone en la 140.ª Feria de Cantón.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD14-a228-hero.jpg" alt="Comprador revisando líneas de producción de mobiliario y cajas de madera en una fábrica de Heshan antes de la feria" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué significa visitar fábricas de mobiliario en China durante la Feria de Cantón 2026?</h2>
+        <p>Visitar fábricas de mobiliario en China significa auditar la planta antes de firmar: se recorre la línea de producción, se comprueban los materiales y el control de calidad y se confirma sobre el terreno lo que el proveedor promete por escrito. En el calendario de la 140.ª Feria de Cantón esa auditoría tiene tres ventanas claras: la primera fase, del 15 al 19 de octubre de 2026, que reúne los herrajes, la iluminación y el material eléctrico; el intervalo del 20 al 22 de octubre, sin negociación al público; y la segunda fase, del 23 al 27 de octubre, dedicada al hogar de calidad, que es la fase del mobiliario (China Foreign Trade Centre, 2026). Elegir mal la ventana cuesta días de viaje y, con frecuencia, obliga a una segunda visita que ya no cabe en el calendario del proyecto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Ventana de la 140.ª edición</th><th>Fechas</th><th>Para qué sirve al comprador</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Ventana de la 140.ª edición">Primera fase · manufactura avanzada</td><td data-label="Fechas">del 15 al 19 de octubre</td><td data-label="Para qué sirve al comprador">Homologar los herrajes, la iluminación y el material eléctrico que integrará el mueble</td></tr>
+              <tr><td data-label="Ventana de la 140.ª edición">Intervalo sin negociación al público</td><td data-label="Fechas">del 20 al 22 de octubre</td><td data-label="Para qué sirve al comprador">Auditar la planta de Heshan (Jiangmen, Guangdong) con el equipo completo y sin prisa de feria</td></tr>
+              <tr><td data-label="Ventana de la 140.ª edición">Segunda fase · hogar de calidad</td><td data-label="Fechas">del 23 al 27 de octubre</td><td data-label="Para qué sirve al comprador">Cerrar el pedido de mobiliario con la especificación ya verificada en fábrica</td></tr>
+              <tr><td data-label="Ventana de la 140.ª edición">Intervalo sin negociación al público</td><td data-label="Fechas">del 28 al 30 de octubre</td><td data-label="Para qué sirve al comprador">Confirmar muestras selladas, packing de exportación y anexos documentales</td></tr>
+              <tr><td data-label="Ventana de la 140.ª edición">Tercera fase · salud y vida</td><td data-label="Fechas">del 31 de octubre al 4 de noviembre</td><td data-label="Para qué sirve al comprador">Revisar mobiliario médico y equipamiento sanitario cuando el proyecto lo exige</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La razón de auditar en la primera fase y en el intervalo no es la comodidad, sino el orden de las decisiones. En la primera fase el comprador ya está en Cantón y puede cerrar en el puesto la referencia exacta del herraje, del perfil de iluminación y del mecanismo; en el intervalo recorre la planta y ve si esas referencias se montan de verdad sobre el tablero certificado; y solo después negocia el pedido completo con datos en la mano. Un comprador que hace el camino inverso negocia el precio sobre una descripción genérica y descubre en la recepción que el mueble lleva un herraje distinto del que creía haber contratado. <a href="/recursos/seleccionar-proveedores-mobiliario-feria-canton/">Las claves para seleccionar proveedores de mobiliario en la Feria de Cantón</a> ordenan esa conversación previa con cada candidato, y esta guía se centra en la parte que no se puede resolver por catálogo: la visita a la planta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuándo conviene reservar la visita a fábrica: primera fase o intervalo del 20 al 22 de octubre?</h2>
+        <p>La visita a fábrica conviene reservarla entre el final de la primera fase y el intervalo del 20 al 22 de octubre, y dejar los días de la segunda fase, del 23 al 27 de octubre, para negociar el pedido. El razonamiento es de tiempo, no de preferencia. La primera fase, del 15 al 19 de octubre, ya sitúa al comprador en Cantón y permite cerrar en el puesto las referencias de herrajes, iluminación y material eléctrico; desde el recinto de Cantón, en el distrito de Haizhu de Guangzhou, la planta de Heshan (Jiangmen, Guangdong) se alcanza en unas dos horas por carretera, así que cabe dedicar una jornada completa a la auditoría sin sacrificar días de feria. El intervalo del 20 al 22 de octubre es además el momento en que el equipo de fábrica no atiende visitas comerciales en el recinto y puede acompañar el recorrido completo.</p>
+        <p>Antes de viajar hay que decidir cuántas plantas se auditan en el mismo viaje. Dos auditorías en dos días consecutivos es un ritmo razonable; tres en tres días obliga a recortar el recorrido y el informe sale incompleto. Dos o tres familias de producto por planta bastan para juzgar la capacidad real, y conviene pedir la cita con dos semanas de antelación: un proveedor avisado prepara la línea, la sala de muestras y el responsable de calidad, mientras que uno avisado el mismo día enseña lo que tiene a mano. <a href="/recursos/como-visitar-feria-canton-2026-compradores-ffe/">La guía para visitar la feria como comprador FF&amp;E</a> ayuda a repartir los días entre fases y visitas, y <a href="/recursos/checklist-comprador-feria-canton-2026/">la lista de comprobación del comprador de la Feria de Cantón</a> reúne los documentos que conviene tener impresos antes de salir del hotel.</p>
+        <p>El traslado merece una decisión previa porque condiciona el resto del día. Lo habitual es dormir en Guangzhou durante la primera fase y desplazarse a la zona de Jiangmen para la auditoría, con regreso el mismo día o con una noche en la zona si se auditan dos plantas seguidas. En la práctica, una jornada de auditoría se reparte así: llegada a primera hora, reunión de apertura de treinta minutos, recorrido de producción y almacén, revisión de la sala de muestras y cierre con el responsable de calidad para firmar el acta de lo observado. Ese orden deja tiempo para volver a Cantón y seguir con la agenda de la feria al día siguiente.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se prepara la visita a fábrica antes de viajar?</h2>
+        <p>La visita se prepara con un expediente concreto, no con una lista de deseos: qué productos se van a comparar, con qué especificación y contra qué certificados se van a contrastar. Antes de reservar el vuelo conviene cerrar la lista de proveedores candidatos con contacto directo, la familia de producto que se quiere evaluar en cada planta y los planos o fichas de referencia del proyecto. Sin ese expediente la auditoría se convierte en una visita comercial más, y el informe no permite comparar dos plantas con el mismo criterio porque cada recorrido habrá mirado cosas distintas.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento o dato</th><th>Para qué sirve en la visita</th><th>Quién lo prepara</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento o dato">Lista de proveedores candidatos con contacto directo</td><td data-label="Para qué sirve en la visita">Confirmar la cita y tratar con la planta sin intermediarios</td><td data-label="Quién lo prepara">Equipo de compras</td></tr>
+              <tr><td data-label="Documento o dato">Planos y especificaciones del proyecto</td><td data-label="Para qué sirve en la visita">Contrastar medidas, acabados y herrajes sobre la línea de producción</td><td data-label="Quién lo prepara">Estudio del proyecto y compras</td></tr>
+              <tr><td data-label="Documento o dato">Lista de certificados a verificar en origen</td><td data-label="Para qué sirve en la visita">Comprobar CARB P2, FSC, ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, CE y SGS</td><td data-label="Quién lo prepara">Compras y responsable de calidad</td></tr>
+              <tr><td data-label="Documento o dato">Familias de producto a evaluar por planta</td><td data-label="Para qué sirve en la visita">Concentrar el recorrido y no dispersarse entre catálogos</td><td data-label="Quién lo prepara">Compras y diseño</td></tr>
+              <tr><td data-label="Documento o dato">Muestras de acabado que se quieren ver y sellar</td><td data-label="Para qué sirve en la visita">Fijar el acabado aprobado antes de cerrar el pedido</td><td data-label="Quién lo prepara">Diseño del proyecto</td></tr>
+              <tr><td data-label="Documento o dato">Criterios de packing previstos</td><td data-label="Para qué sirve en la visita">Contrastar cajas de madera o contrachapado, esquineros, espuma de polietileno y paletizado</td><td data-label="Quién lo prepara">Compras y logística</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El expediente incluye también las preguntas que no se pueden dejar para el final: qué línea fabrica cada familia, quién aprueba la primera pieza, cómo se guarda el tablero antes del montaje y con qué norma se embala el mueble para el transporte marítimo. <a href="/recursos/registrarse-comprador-feria-canton-2026-ffe/">El registro de comprador en la Feria de Cantón 2026</a> explica cómo preparar la acreditación y la agenda, y <a href="/recursos/verificar-certificaciones-proveedor-feria-canton-2026/">la verificación de certificaciones del proveedor en la Feria de Cantón 2026</a> detalla qué se pide a cada documento para que la visita no acabe con fotos de carpetas sin número de certificado ni fecha de vigencia.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se evalúa en la fábrica? Las ocho dimensiones de la auditoría</h2>
+        <p>En fábrica se evalúan ocho dimensiones, y ninguna se resuelve mirando el catálogo: capacidad y equipos, origen del tablero y su cadena de certificación, control de calidad y aprobación de la primera pieza, integración de herrajes e iluminación, packing de exportación, almacén y logística de salida, sala de muestras y capacidad de prototipado, y cumplimiento ambiental y de seguridad. Cada dimensión se anota con lo observado, la evidencia y la acción pendiente, para que el informe permita después puntuar y comparar. Una planta que no deja ver una de estas áreas está diciendo algo tan relevante como la que la muestra en mal estado.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Dimensión de la auditoría</th><th>Qué se comprueba en planta</th><th>Señal de alerta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Dimensión de la auditoría">Capacidad y equipos</td><td data-label="Qué se comprueba en planta">Líneas de tablero, madera maciza, tapizado y lacado, y su carga real de trabajo</td><td data-label="Señal de alerta">Una sola línea para todos los acabados del proyecto</td></tr>
+              <tr><td data-label="Dimensión de la auditoría">Origen del tablero y cadena CARB P2 / FSC</td><td data-label="Qué se comprueba en planta">Proveedor del tablero, certificado vigente y trazabilidad FSC de la madera</td><td data-label="Señal de alerta">Certificado sin número ni fecha de vigencia</td></tr>
+              <tr><td data-label="Dimensión de la auditoría">Control de calidad y primera pieza</td><td data-label="Qué se comprueba en planta">Puntos de inspección y aprobación de la primera pieza antes de producir en serie</td><td data-label="Señal de alerta">Inspección solo al final del proceso</td></tr>
+              <tr><td data-label="Dimensión de la auditoría">Integración de herrajes e iluminación</td><td data-label="Qué se comprueba en planta">Montaje real de bisagras, guías, tiradores, perfiles LED y fuentes de alimentación</td><td data-label="Señal de alerta">Componente montado distinto al homologado</td></tr>
+              <tr><td data-label="Dimensión de la auditoría">Packing de exportación y ensayos</td><td data-label="Qué se comprueba en planta">Cajas de madera o contrachapado, esquineros, espuma de polietileno, paletizado y ensayo de caída y transporte</td><td data-label="Señal de alerta">Embalaje flexible sin protección de esquinas</td></tr>
+              <tr><td data-label="Dimensión de la auditoría">Almacén y logística de salida</td><td data-label="Qué se comprueba en planta">Organización del almacén, marcado de bultos y coordinación del contenedor</td><td data-label="Señal de alerta">Piezas mezcladas sin etiqueta de proyecto</td></tr>
+              <tr><td data-label="Dimensión de la auditoría">Sala de muestras y prototipado</td><td data-label="Qué se comprueba en planta">Muestras de acabado, capacidad de prototipo y plazo de muestra</td><td data-label="Señal de alerta">Sin sala de muestras ni registro de acabados</td></tr>
+              <tr><td data-label="Dimensión de la auditoría">Cumplimiento ambiental y de seguridad</td><td data-label="Qué se comprueba en planta">Gestión de residuos, control de emisiones y seguridad en planta</td><td data-label="Señal de alerta">Sin política ambiental ni registros</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El punto que más se descuida es la aprobación de la primera pieza, y es justo el que decide si la producción en serie sale bien. En la fábrica se comprueba que existe un protocolo de primera pieza, que se firma con medidas y acabado antes de arrancar la serie y que la pieza aprobada se conserva como referencia. El segundo punto crítico es el packing: se revisa si la caja es de madera o contrachapado, si lleva esquineros, si el mueble va envuelto en espuma de polietileno y si el conjunto se paletiza para el contenedor, además de si existe un ensayo de caída y de transporte documentado. Sobre esa base se decide qué proveedor entra en la negociación de la segunda fase.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD14-a228-s1.jpg" alt="Manos con guantes montando una bisagra de latón y una guía sobre un panel de madera junto a un perfil de iluminación LED y un armario de primera pieza." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Comprobación en banco del montaje de herrajes e iluminación sobre un panel de madera: bisagras, guías y perfil LED con el armario de primera pieza al lado, uno de los ocho puntos que se verifican en planta.</figcaption>
+        </figure>
+        <p>La experiencia de proyectos entregados ayuda a leer lo que se ve. En el proyecto de Hilton Tashkent City, en Taskent (Uzbekistán), se entregaron 1.770 piezas de mobiliario para 295 habitaciones en 52 días, y la aprobación previa de la primera pieza fue lo que permitió llegar a esa fecha sin incidencias de montaje. En un proyecto hotelero en Riad (Arabia Saudí) y en un centro sanitario de Abu Dabi (Emiratos Árabes Unidos) la revisión del packing antes de embarcar evitó los daños de transporte que el comprador había sufrido con proveedores anteriores. La conclusión es siempre la misma: lo que se comprueba en planta antes de firmar es lo que no se discute en la obra después.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se documenta la visita y cómo se convierte en una matriz de proveedores?</h2>
+        <p>La visita se documenta con fotos, muestras selladas y un informe que se pueda adjuntar al contrato, y se convierte en una matriz de proveedores con puntuación por dimensión. Las fotos tienen límites claros: se fotografían la propia pieza, el detalle de un canto, un herraje, el packing y la etiqueta del bulto; no se fotografían zonas con logotipos de terceros, productos de otras marcas ni paneles con pedidos ajenos. Esa disciplina protege al comprador y al proveedor, porque permite documentar sin exponer información de terceros y facilita que la planta autorice el registro completo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento del registro</th><th>Qué debe contener</th><th>Uso posterior</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento del registro">Informe de auditoría</td><td data-label="Qué debe contener">Datos de planta, fecha, participantes, las ocho dimensiones evaluadas y las fotos autorizadas</td><td data-label="Uso posterior">Base de la matriz de proveedores</td></tr>
+              <tr><td data-label="Elemento del registro">Muestra de acabado sellada</td><td data-label="Qué debe contener">Color, textura y referencia firmados por ambas partes con fecha</td><td data-label="Uso posterior">Anexo del contrato y control de recepción</td></tr>
+              <tr><td data-label="Elemento del registro">Muestra de herraje y perfil de iluminación</td><td data-label="Qué debe contener">Referencia, modelo y carga declarada del componente</td><td data-label="Uso posterior">Especificación del mueble</td></tr>
+              <tr><td data-label="Elemento del registro">Criterios de aceptación</td><td data-label="Qué debe contener">Tolerancias, acabado, montaje y funcionamiento del mueble</td><td data-label="Uso posterior">Anexo técnico del contrato</td></tr>
+              <tr><td data-label="Elemento del registro">Especificación de packing</td><td data-label="Qué debe contener">Caja de madera o contrachapado, esquineros, espuma de polietileno y paletizado</td><td data-label="Uso posterior">Condición de embarque y reclamación de daños</td></tr>
+              <tr><td data-label="Elemento del registro">Matriz de proveedores</td><td data-label="Qué debe contener">Puntuación ponderada por dimensión y comentario del auditor</td><td data-label="Uso posterior">Decisión de adjudicación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La matriz de proveedores es el puente entre la visita y el contrato. Se puntúa cada dimensión de 1 a 5, se pondera según el riesgo del proyecto y se ordena a los candidatos; el proveedor mejor puntuado entra en la negociación de la segunda fase con una ventaja documental difícil de discutir. El anexo de contrato recoge la especificación de materiales, los criterios de aceptación, la norma de packing, los repuestos, la garantía y el plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. <a href="/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/">Los puntos de negociación de MOQ, plazo y packing con proveedores de la feria</a> desarrollan esas cláusulas, y <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">el packing de exportación del mobiliario hotelero</a> detalla la caja de madera o contrachapado, los esquineros, la espuma de polietileno y el paletizado que se exigen en el anexo.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD14-a228-s2.jpg" alt="Armario envuelto en espuma de polietileno con esquineros blancos junto a cajas de madera contrachapada paletizadas en el almacén." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Packing de exportación: mueble envuelto en espuma de polietileno con esquineros, listo para la caja de madera contrachapada; al fondo, bultos paletizados y filmados.</figcaption>
+        </figure>
+        <p>Un informe bien hecho permite tres cosas al mismo tiempo: comparar proveedores con el mismo rasero, justificar la adjudicación ante el cliente del proyecto y fijar el anexo técnico sin volver a discutir lo que ya se vio en planta. En los proyectos entregados desde 1996 en más de 50 países, la diferencia entre un pedido cómodo y un pedido problemático casi nunca ha sido el precio por unidad, sino el nivel de detalle con el que quedó cerrada la especificación y la norma de packing antes de firmar.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Por qué verificar en fábrica antes de negociar el precio en la segunda fase?</h2>
+        <p>Verificar en fábrica antes de negociar evita discutir el precio sobre una especificación que nadie ha comprobado, y esa diferencia se paga después en la obra. El orden que funciona es el siguiente: la primera fase, del 15 al 19 de octubre, y el intervalo del 20 al 22 de octubre para homologar componentes y auditar la planta; y la segunda fase, del 23 al 27 de octubre, para negociar el pedido con el informe de auditoría y la matriz de proveedores sobre la mesa. Cuando el proveedor sabe que el comprador ha visto la línea, la conversación de precio se centra en el alcance real y no en la impresión del catálogo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Punto de decisión</th><th>Efecto si se verifica antes</th><th>Efecto si se pospone</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Punto de decisión">Especificación de herrajes e iluminación</td><td data-label="Efecto si se verifica antes">El mueble se cotiza sobre una referencia concreta y comparable</td><td data-label="Efecto si se pospone">Cada proveedor cotiza una pieza distinta</td></tr>
+              <tr><td data-label="Punto de decisión">Criterios de aceptación y acabado</td><td data-label="Efecto si se verifica antes">La recepción en obra se resuelve con la muestra sellada</td><td data-label="Efecto si se pospone">Discusión en la entrega y repuestos urgentes</td></tr>
+              <tr><td data-label="Punto de decisión">Norma de packing</td><td data-label="Efecto si se verifica antes">El daño de transporte se reclama con el anexo en la mano</td><td data-label="Efecto si se pospone">Bultos abiertos y piezas repuestas sin coste claro</td></tr>
+              <tr><td data-label="Punto de decisión">Plazo de 30-45 días desde la muestra aprobada</td><td data-label="Efecto si se verifica antes">El embarque se planifica con una fecha firme</td><td data-label="Efecto si se pospone">El plazo se cuenta desde una muestra tardía</td></tr>
+              <tr><td data-label="Punto de decisión">Matriz de proveedores</td><td data-label="Efecto si se verifica antes">La adjudicación se decide con puntuación y evidencia</td><td data-label="Efecto si se pospone">La adjudicación se decide por impresión en feria</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La experiencia acumulada apunta en la misma dirección en proyectos muy distintos. En un campus escolar de Lagos (Nigeria) se fabricaron más de 1.400 piezas para 18 laboratorios STEM y 24 aulas colaborativas, y el calendario solo se sostuvo porque la especificación quedó cerrada antes de producir. En una oficina corporativa de Riad (Arabia Saudí) con 320 puestos de trabajo, la verificación del acabado estable a la radiación ultravioleta antes del pedido evitó reponer paneles meses después. En un centro de cuidados de Singapur, la revisión previa de los criterios de seguridad del mueble se tradujo en una recepción sin incidencias. Auditar primero y negociar después no alarga el proyecto: lo ordena.</p>
+        <p>Si está preparando un proyecto FF&amp;E y quiere cerrar la especificación antes de negociar, <a href="/contacto/">solicite una cotización de proyecto FF&amp;E</a> indicando las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino; con esos datos devolvemos la matriz de proveedores con las ocho dimensiones puntuadas y el anexo de contrato con especificación, packing, repuestos, garantía y plazo. Hongye Furniture Group es una fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales y ocho certificaciones internacionales, y produce en Heshan (Jiangmen, Guangdong) con un plazo de 30-45 días desde la muestra aprobada, sujeto a contrato. Auditar la planta correcta antes de firmar es la vía que mejor protege el presupuesto de un proyecto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite el informe de auditoría y una cotización FF&E"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar sus datos antes de viajar tiene cuatro ventajas concretas: recibirá el número de stand, la carta de invitación para su visita, un horario de atención reservado para usted durante la feria y la coordinación de una visita a la fábrica de Heshan (Jiangmen, Guangdong) para ver las líneas de tablero, tapizado, lacado y packing. Para preparar la propuesta necesitamos tres datos: las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino. Envíenos su RFQ o sus planos y su lista de proveedores, y devolvemos la matriz de proveedores con las ocho dimensiones puntuadas y el anexo de contrato con especificación, packing, repuestos, garantía y plazo. Tenga en cuenta que la carta de invitación no garantiza el visado: la concesión queda a criterio de las autoridades consulares chinas. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
