@@ -12,7 +12,7 @@ import CTA from "../components/CTA.astro";
 import ScrollRail from "../components/ScrollRail.astro";
 import { brand, metrics, projects, qualityCheckpoints, qualityProofs, showrooms } from "../data/site";
 
-const featuredProjects = projects.filter((project) => project.featuredHome);
+const featuredProjects = projects.filter((project) => project.featuredHome).slice(0, 6);
 ---
 <BaseLayout
   title="Fabricante de muebles comerciales para proyectos | Hymueble"
