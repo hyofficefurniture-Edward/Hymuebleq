@@ -1,0 +1,454 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario hospitalario para clínicas y residencias: guía de compra por zonas";
+const pageDescription = "Mobiliario hospitalario por zonas: habitaciones, consultas, pasamanos y enfermería, con normas EN, MOQ por color, 30-45 días, QC y cajas de madera. Cotice aquí.";
+const keywords = [
+  "mobiliario hospitalario",
+  "equipamiento de clínica por zonas",
+  "mobiliario para residencia de mayores",
+  "pasamanos y protectores de pared sanitarios",
+  "mobiliario de estación de enfermería",
+  "mobiliario sanitario de fácil desinfección",
+  "MOQ de mobiliario hospitalario",
+  "embalaje de exportación en cajas de madera",
+  "proveedor de mobiliario hospitalario",
+  "instalación de mobiliario sanitario"
+];
+const canonicalPath = "/recursos/mobiliario-hospitalario-clinicas-residencias-proyecto/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD16-a232-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-18";
+const dateModified = "2026-10-18";
+const publicationDateLabel = "Publicada el 18 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué mobiliario hospitalario necesita un centro por zonas?", answer: "Un centro sanitario necesita mobiliario distinto en cada zona: mobiliario de apoyo de cama, silla de acompañante y mesita desinfectable en la habitación de paciente; mesas de exploración, sillas de trabajo y almacenamiento cerrado en consultas y terapia; pasamanos continuos y protectores de pared antichoque en pasillos; escritorios y sillas de uso intensivo en la estación de enfermería; y asientos de uso público con tapizado lavable en las zonas de espera. La planificación por zonas existe porque cada ambiente impone su propio material, su frecuencia de desinfección y su criterio de aceptación. En la práctica se levanta primero el listado de zonas y plantas, se asigna una familia de mobiliario a cada una y solo entonces se piden cantidades, MOQ y plazos." },
+    { question: "¿Qué materiales e higienabilidad debe exigir el mobiliario sanitario?", answer: "El mobiliario sanitario debe exigir superficies lisas sin poros, cantos curvos cerrados sin juntas abiertas, tapizados que resistan los desinfectantes de uso clínico y herrajes protegidos frente a la humedad, porque el mobiliario se limpia a diario con productos agresivos. La mejor forma de verificarlo es someter la muestra física a los mismos productos de limpieza que usa el centro antes de aprobarla, no fiarse de la ficha comercial. A ese requisito de material se añade el de norma, citada por familia y cotejada con el informe de ensayo del modelo exacto que se fabrica, de modo que la conformidad pueda demostrarse ante la dirección del centro y el equipo de mantenimiento." },
+    { question: "¿Qué normas debe cumplir el mobiliario hospitalario?", answer: "Los asientos y mesas de uso colectivo deben cumplir EN 16139 o EN 15373, que regulan la resistencia y la seguridad del mobiliario de uso no doméstico; los escritorios de la estación de enfermería y de administración se especifican con EN 527; y BIFMA sirve de referencia complementaria para el mercado estadounidense. La capa de materiales y emisiones se cubre con GREENGUARD Gold en calidad del aire interior, FSC en trazabilidad de madera y CARB P2 en el tablero, con marcado CE cuando aplica una norma armonizada europea e ISO 9001 e ISO 14001 para los sistemas de gestión de la fábrica. Cada norma debe corresponder al informe del modelo exacto que se va a fabricar, no a la portada del catálogo." },
+    { question: "¿Cuál es el MOQ y el plazo de producción de un pedido de mobiliario hospitalario?", answer: "El MOQ es flexible y se negocia por familia, color y fase del proyecto, no como una cifra única, porque el volumen total del centro permite repartir referencias sin forzar mínimos altos por línea. Cuando el centro fija un código de color por planta o por servicio, la producción se planifica por lotes de color separados y el cuadro de colores se anexa al contrato. El plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y empieza a contar cuando el acta de muestra está firmada, por lo que cerrar herrajes, acabados y medidas antes de la orden es lo que fija la fecha real de entrega." },
+    { question: "¿Cómo se controla la calidad y se embala el mobiliario hospitalario para exportación?", answer: "El control de calidad se cierra en tres hitos documentados: inspección de materiales contra la muestra aprobada, control en línea de medidas, holguras, cantos y acabado por lote, e inspección previa al embarque con muestreo, prueba de estabilidad y verificación de etiquetado por referencia y color. El embalaje recomendado para tránsitos marítimos largos es la caja de madera de exportación, con barreras de humedad y protección de cantos y superficies. Cada bulto se etiqueta con su código de zona, planta y color, de modo que la descarga en obra se haga por bloques y ninguna pieza quede perdida entre bultos abiertos al azar." },
+    { question: "¿Cómo se organizan la instalación y la aceptación de un proyecto sanitario?", answer: "La instalación se planifica antes de embarcar con un plano de implantación por zona, la pauta de anclaje de pasamanos y protectores acordada con el contratista, y apoyo de montaje en obra o supervisión remota según el proyecto. La entrega se reparte en fases por planta o por bloque, con un responsable de recepción y una punch list por fase que clasifica cada incidencia por zona, gravedad y plazo de corrección. La aceptación se firma con esa lista cerrada y se acompaña de una sesión de uso para el personal de mantenimiento, que es lo que garantiza que el mobiliario siga en condiciones después del primer año de limpieza diaria." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD16-a232-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d16a2-a232-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d16a2-a232-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Sanitario · Equipamiento de proyecto &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario hospitalario para clínicas y residencias de mayores: guía de equipamiento por zonas</h1>
+          <p>El mobiliario hospitalario es el conjunto de mobiliario de habitación de paciente y silla de acompañante, equipamiento de consultas y salas de terapia, pasamanos y protectores de pared de circulaciones, y mobiliario de la estación de enfermería que se especifica por zonas del centro sanitario, con superficies de fácil desinfección, normas de resistencia verificables y plazos atados a la fecha de apertura de la obra.</p>
+          <p>Un proyecto sanitario se compra por zonas y no por una lista suelta de piezas porque cada ambiente impone requisitos distintos y porque el receptor del pedido casi nunca es una sola persona: intervienen la dirección del centro, el contratista general, el estudio de arquitectura sanitaria y el equipo de mantenimiento. En Guadalajara (México), un contratista de equipamiento médico que coordinaba la apertura de una clínica privada decidió concentrar todo el mobiliario en un solo fabricante después de comparar dos caminos: comprar por familias a varios distribuidores locales, con varias muestras y varios plazos, o encargar el conjunto completo desde la fábrica con una especificación única. Eligió lo segundo porque el criterio de decisión no era el precio de la pieza sino el calendario: una sola muestra aprobada, un solo embarque etiquetado por planta y un solo responsable de resolver las incidencias de la recepción. Esa lógica, zonas primero, cantidades después, normas por escrito al final, es la misma que proponemos en esta guía y la que evita que el mobiliario llegue cuando la obra ya cambió de fase.</p>
+          <p>Detrás de este método está Hongye Furniture Group, fábrica fundada en 1996 con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países y ocho certificaciones internacionales, entre ellas BIFMA, GREENGUARD Gold, FSC y CE. Produce en Heshan (Jiangmen, Guangdong), con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y una ventaja de coste del 30-50 % frente a la compra a través de intermediarios. Este artículo reúne el criterio de compra que aplicamos a proyectos sanitarios y de atención a mayores en Latinoamérica, Oriente Medio y el Caribe.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD16-a232-hero.jpg" alt="Pasillo de la zona de mobiliario con expositores a ambos lados y un comprador de espaldas durante la Feria de Cantón" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Por qué se planifica el mobiliario hospitalario por zonas del centro?</h2>
+        <p>Un centro sanitario se equipa por zonas porque la función de cada ambiente impone el material, la resistencia y la frecuencia de desinfección, y fundir todas las piezas en una sola lista produce los errores de cantidad y de acabado más caros de corregir en obra. La habitación de paciente lleva cama y mobiliario de apoyo, silla o butaca de acompañante para un familiar, mesita con superficie desinfectable y armario de uso individual. Las consultas y salas de terapia piden mesas de exploración de altura cómoda para el personal, sillas de trabajo y almacenamiento cerrado de material. Las circulaciones exigen pasamanos continuos de apoyo y protectores de pared antichoque a la altura de camilla y de silla de ruedas, elementos que en un hospital no son decorativos sino parte del equipamiento, porque protegen la inversión de la obra civil. La estación de enfermería concentra puestos de trabajo con escritorios y sillas de uso intensivo, y las zonas comunes y de espera combinan asientos de uso público con mesas auxiliares fáciles de limpiar por turnos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona del centro sanitario</th><th>Mobiliario y equipamiento</th><th>Criterio de especificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona del centro sanitario">Habitación de paciente</td><td data-label="Mobiliario y equipamiento">Mobiliario de apoyo de cama, silla de acompañante, mesita, armario</td><td data-label="Criterio de especificación">Superficies lisas desinfectables y bordes redondeados</td></tr>
+              <tr><td data-label="Zona del centro sanitario">Consultas y salas de terapia</td><td data-label="Mobiliario y equipamiento">Mesas de exploración, sillas de trabajo, almacenamiento cerrado</td><td data-label="Criterio de especificación">Altura cómoda para el personal y cajonera con cierre</td></tr>
+              <tr><td data-label="Zona del centro sanitario">Pasillos y circulaciones</td><td data-label="Mobiliario y equipamiento">Pasamanos continuos, protectores de pared antichoque</td><td data-label="Criterio de especificación">Fijación a pared calculada y material resistente al impacto</td></tr>
+              <tr><td data-label="Zona del centro sanitario">Estación de enfermería</td><td data-label="Mobiliario y equipamiento">Escritorios, sillas de trabajo, mostrador de atención</td><td data-label="Criterio de especificación">Uso intensivo por turnos y EN 527 en mesas de trabajo</td></tr>
+              <tr><td data-label="Zona del centro sanitario">Zonas de espera y comunes</td><td data-label="Mobiliario y equipamiento">Asientos de uso público, mesas auxiliares, papeleras</td><td data-label="Criterio de especificación">Tapizados lavables y apilabilidad para limpieza por turnos</td></tr>
+              <tr><td data-label="Zona del centro sanitario">Comedor y áreas de personal</td><td data-label="Mobiliario y equipamiento">Mesas y sillas de uso intensivo, almacenamiento</td><td data-label="Criterio de especificación">Servicio por turnos y acabados que resisten limpieza diaria</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En Puerto España (Trinidad y Tobago), la dirección de una residencia de mayores ordenó su pliego empezando por las circulaciones y no por las habitaciones, invirtiendo el orden habitual. El criterio fue de gestión: en una residencia de mayores, el pasillo es la vía de tránsito de camillas y sillas de ruedas durante todo el día, así que los pasamanos y los protectores de pared se deciden primero, porque condicionan el ancho libre de circulación y el punto de fijación a pared. Solo después se cerraron las habitaciones, donde la prioridad era la silla de acompañante, pensada para que un familiar pase la noche junto al residente, con tapizado resistente a la desinfección y estructura estable al incorporarse. La lección de ese proyecto aplica a cualquier centro: el orden de la lista de mobiliario debe seguir el riesgo de uso del edificio, no el orden del catálogo del proveedor, y cada zona debe cerrarse con su propio criterio de aceptación antes de pasar a la siguiente.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué materiales e higienabilidad debe exigir el pliego sanitario?</h2>
+        <p>El pliego sanitario debe exigir higienabilidad verificable y no una promesa genérica de calidad, porque el mobiliario de un centro sanitario se desinfecta a diario con productos agresivos que degradan un acabado doméstico en meses. En la práctica eso significa cuatro requisitos concretos: superficies lisas sin poros que no acumulen suciedad, cantos curvos y cerrados sin juntas abiertas donde se filtre el líquido de limpieza, tapizados de uso clínico que resistan desinfectantes de superficie, y herrajes protegidos frente a la humedad y a la corrosión. A esa capa de material se añade la de norma: los asientos y las mesas de uso colectivo se especifican con EN 16139 o con EN 15373, que regulan la resistencia y la seguridad del mobiliario de uso no doméstico; los escritorios de la estación de enfermería y de administración se citan con EN 527; y para el mercado de referencia estadounidense la familia BIFMA sirve de norma complementaria. La capa de emisiones y de planta se cubre con GREENGUARD Gold en calidad del aire interior, FSC en trazabilidad de madera, CARB P2 en el tablero, marcado CE cuando aplica una norma armonizada europea, e ISO 9001 e ISO 14001 en los sistemas de calidad y de gestión ambiental de la fábrica.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Familia o requisito</th><th>Norma o certificación</th><th>Qué cubre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Familia o requisito">Asientos y mesas de uso colectivo</td><td data-label="Norma o certificación">EN 16139 y EN 15373</td><td data-label="Qué cubre">Resistencia y seguridad del mobiliario de uso no doméstico</td></tr>
+              <tr><td data-label="Familia o requisito">Escritorios y mesas de trabajo</td><td data-label="Norma o certificación">EN 527</td><td data-label="Qué cubre">Dimensiones, seguridad y estabilidad del puesto de trabajo</td></tr>
+              <tr><td data-label="Familia o requisito">Referencia del mercado estadounidense</td><td data-label="Norma o certificación">BIFMA</td><td data-label="Qué cubre">Ensayos de resistencia, estabilidad y durabilidad</td></tr>
+              <tr><td data-label="Familia o requisito">Calidad del aire interior</td><td data-label="Norma o certificación">GREENGUARD Gold</td><td data-label="Qué cubre">Emisiones de compuestos orgánicos volátiles de acabados</td></tr>
+              <tr><td data-label="Familia o requisito">Madera y tablero</td><td data-label="Norma o certificación">FSC y CARB P2</td><td data-label="Qué cubre">Trazabilidad forestal y emisiones de formaldehído</td></tr>
+              <tr><td data-label="Familia o requisito">Conformidad europea</td><td data-label="Norma o certificación">CE</td><td data-label="Qué cubre">Declaración de conformidad cuando aplica norma armonizada</td></tr>
+              <tr><td data-label="Familia o requisito">Gestión de la fábrica</td><td data-label="Norma o certificación">ISO 9001 e ISO 14001</td><td data-label="Qué cubre">Sistema de calidad y sistema de gestión ambiental</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En Riad (Arabia Saudita), el equipo de compras de un grupo de clínicas privadas convirtió estos requisitos en una lista de verificación antes de adjudicar. Su método consistió en pedir a cada proveedor el informe de ensayo del modelo exacto que se fabricaría, cotejado con la norma citada en el pliego de la licitación, y en someter las muestras de tapizado y de encimera a los mismos desinfectantes que usaba el personal de limpieza de sus centros, comprobando el acabado después de varios ciclos. Las ofertas que no podían documentar la norma por modelo quedaron fuera antes de comparar precio, no después, porque en un centro sanitario un rechazo de la inspección obliga a reponer piezas ya instaladas y desmontarlas en un edificio en servicio. Ese es el criterio que recomendamos: la norma y el ensayo se verifican sobre el documento, no sobre la portada del catálogo, y la muestra se aprueba con los productos de limpieza reales del centro.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se fijan el MOQ, la producción por color y el plazo de producción?</h2>
+        <p>El MOQ de un proyecto sanitario se negocia por familia y por color, no como una cifra única, y en un hospital o una residencia de tamaño medio casi siempre puede mantenerse flexible porque el volumen total del centro lo justifica. El dato que gobierna el pedido es el código de color: muchos centros fijan un color distinto por planta, por servicio o por tipo de sala, y esa decisión obliga a producir por color separado, con su propio mínimo, su propia planificación y su propio control de acabado. En nuestra planta el plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y empieza a contar el día en que el acta de muestra está firmada, no el día de la consulta. Adelantar la fabricación antes de aprobar material, acabado y medidas termina casi siempre en piezas que no encajan en la habitación o que el personal de mantenimiento rechaza en la recepción. Por eso conviene cerrar primero la muestra y después el calendario, sobre todo cuando la obra civil del centro todavía tiene fechas abiertas y el mobiliario puede quedar parado en almacén si llega antes de tiempo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tema</th><th>Cómo se fija</th><th>Qué se pide por escrito</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tema">MOQ</td><td data-label="Cómo se fija">Flexible por familia, color y fase del proyecto</td><td data-label="Qué se pide por escrito">Mínimo por referencia y por color, con precio escalonado</td></tr>
+              <tr><td data-label="Tema">Producción por color</td><td data-label="Cómo se fija">Lotes separados por código de color del centro</td><td data-label="Qué se pide por escrito">Cuadro de colores por planta o servicio en el anexo</td></tr>
+              <tr><td data-label="Tema">Muestra aprobada</td><td data-label="Cómo se fija">Muestra física con material, acabado y medidas declarados</td><td data-label="Qué se pide por escrito">Acta de muestra firmada y fechada antes de producir</td></tr>
+              <tr><td data-label="Tema">Plazo de producción</td><td data-label="Cómo se fija">30-45 días desde la muestra aprobada, sujeto a contrato</td><td data-label="Qué se pide por escrito">Calendario con hitos de aprobación y de inspección</td></tr>
+              <tr><td data-label="Tema">Entrega por fases</td><td data-label="Cómo se fija">Bloques por zona y por planta del centro</td><td data-label="Qué se pide por escrito">Plan de entregas con fecha y responsable de recepción</td></tr>
+              <tr><td data-label="Tema">Incoterm y logística</td><td data-label="Cómo se fija">FOB, CIF, CFR, EXW o DDP según el proyecto</td><td data-label="Qué se pide por escrito">Incoterm, puerto de destino y consolidación de contenedores</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En Dubái (Emiratos Árabes Unidos), la ampliación de un hospital privado mostró por qué el MOQ por color y el calendario deben negociarse juntos. El estudio de arquitectura sanitaria había definido un código de color por planta, y la dirección del hospital temía que los mínimos por color encarecieran el pedido o obligaran a unificar el color en contra del proyecto. El acuerdo que destrabó la compra fue separar las familias: las referencias de gran volumen absorbieron el mínimo por color sin fricción, mientras que las referencias de baja cantidad se agruparon en lotes mixtos con acabado común, y el conjunto se repartió en fases de entrega coordinadas con el avance de la obra civil, planta por planta. Para aprobar las muestras de acabado antes de producir, el equipo siguió el proceso de <a href="/recursos/lista-aprobacion-muestras-preproduccion/">aprobación de muestras de preproducción</a>, con material, acabado y medidas declarados en el acta firmada. Ese esquema, familias separadas por volumen y colores fijados por planta, es reproducible en cualquier centro donde el diseño manda sobre la lista de compra.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD16-a232-s1.jpg" alt="Muestras de chapas de madera y de tejido junto a documentos de la lista corta y una carpeta de itinerario sobre la mesa de preparación." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Preparación de la segunda fase: muestras de chapa y de tejido comparadas lado a lado junto a los documentos de la lista corta y el itinerario de visitas a fábrica.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Control de calidad y embalaje de exportación en cajas de madera</h2>
+        <p>El control de calidad de un pedido sanitario se organiza en tres hitos y ninguno admite un parte verbal ni una foto como prueba de cierre. El primero es la inspección de materiales antes de producir: se verifica que el tablero, la madera, los herrajes y el tapizado corresponden a la muestra aprobada y a las certificaciones declaradas, con el certificado CARB P2 del tablero y la cadena de custodia FSC a la vista del inspector. El segundo es el control en línea, donde se revisan medidas, holguras, ensamblaje y acabado contra la ficha técnica del modelo, con atención especial a los cantos cerrados y a la estanqueidad de las juntas, que son los puntos que fallan primero en un centro de limpieza diaria intensiva. El tercero es la inspección previa al embarque, con muestreo por lote, prueba de estabilidad de conjuntos montados y verificación del etiquetado por referencia y por color. Cada hito se cierra con un documento fechado, y los informes se guardan por lote para que cualquier reclamación posterior pueda rastrearse hasta el material y la fecha de fabricación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Hito de control</th><th>Qué se inspecciona</th><th>Documento de cierre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Hito de control">Materiales</td><td data-label="Qué se inspecciona">Tablero, madera, herrajes y tapizado frente a la muestra</td><td data-label="Documento de cierre">Certificado CARB P2, cadena FSC y acta de muestra</td></tr>
+              <tr><td data-label="Hito de control">Control en línea</td><td data-label="Qué se inspecciona">Medidas, holguras, cantos cerrados y acabado por lote</td><td data-label="Documento de cierre">Parte de control por lote firmado y fechado</td></tr>
+              <tr><td data-label="Hito de control">Ensayos de producto</td><td data-label="Qué se inspecciona">Resistencia y estabilidad según EN 16139, EN 15373 o BIFMA</td><td data-label="Documento de cierre">Informe de ensayo del modelo exacto que se fabrica</td></tr>
+              <tr><td data-label="Hito de control">Emisiones</td><td data-label="Qué se inspecciona">Emisiones de compuestos orgánicos volátiles del acabado</td><td data-label="Documento de cierre">Certificado GREENGUARD Gold vigente de la familia</td></tr>
+              <tr><td data-label="Hito de control">Inspección previa al embarque</td><td data-label="Qué se inspecciona">Muestreo por lote, estabilidad y etiquetado por color</td><td data-label="Documento de cierre">Informe de inspección fechado y archivado por lote</td></tr>
+              <tr><td data-label="Hito de control">Embalaje de exportación</td><td data-label="Qué se inspecciona">Cajas de madera, barreras de humedad y cubicaje</td><td data-label="Documento de cierre">Ficha de packing con pesos, medidas y número de bultos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El embalaje de exportación en cajas de madera es el estándar que recomendamos para pedidos sanitarios, y no es una preferencia estética sino un criterio logístico. El mobiliario hospitalario combina piezas voluminosas, tableros grandes y elementos de precisión como pasamanos y soportes de fijación, y en un tránsito marítimo largo la combinación de humedad, manipulación portuaria y espera en obra castiga a cualquier embalaje de cartón simple. La caja de madera protege cantos y superficies, se apila de forma estable en el contenedor y aguanta una descarga en obra con montacargas cuando el edificio todavía no tiene montaje interior terminado. En Dubái (Emiratos Árabes Unidos) el mismo proyecto de ampliación hospitalaria resolvió la recepción con ese esquema: cada bulto etiquetado con su código de zona, planta y color, barreras de humedad para el tránsito por mar y una ficha de packing que permitió descargar por bloques y localizar cada pieza sin abrir bultos al azar. Si desea comparar criterios de embalaje entre tipos de proyecto, la guía de <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación de mobiliario hotelero</a> describe el mismo principio aplicado a renovaciones de hotel, donde la ventana de descarga es aún más estrecha.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD16-a232-s2.jpg" alt="Armario envuelto en espuma de polietileno con esquineros blancos junto a cajas de madera contrachapada paletizadas en el almacén." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cierre de la segunda fase: mueble protegido con espuma de polietileno y esquineros, listo para la caja de madera contrachapada; al fondo, bultos paletizados y filmados.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Instalación, entrega por fases y aceptación del proyecto sanitario</h2>
+        <p>La instalación de un centro sanitario se planifica antes de embarcar, porque el edificio suele estar en fase final de obra cuando llega el contenedor y no hay margen para improvisar la descarga. Nuestro soporte arranca con un plano de implantación por zona, que indica dónde va cada pieza, en qué orden se monta y qué elementos, como pasamanos y protectores de pared, se fijan a pared con la pauta de anclaje acordada con el contratista; continúa con apoyo de montaje en obra o supervisión remota según el tamaño y la distancia del proyecto, y termina con la verificación pieza a pieza contra el plano. La aceptación se cierra con una punch list que clasifica cada incidencia por zona, gravedad y plazo de corrección, firmada por la dirección del centro junto con el instalador. Sin esa lista firmada, la entrega no se considera cerrada, y en un hospital una pieza pendiente sin responsable no es un detalle: es una habitación que no puede recibir pacientes.</p>
+        <p>Los proyectos internacionales confirman que la entrega por fases es lo que hace viable un centro sanitario. En Guadalajara (México), el contratista de la clínica privada mencionada al inicio repartió la recepción en bloques por planta, de modo que el mobiliario de consultas de la primera planta se instaló mientras el resto seguía en almacenaje, y la punch list de cada bloque se cerró antes de liberar el siguiente. En Riad (Arabia Saudita), el grupo de clínicas exigió que la documentación de conformidad llegara junto con cada fase, no al final, para poder presentarla ante la supervisión técnica del proyecto sin bloquear la apertura de las plantas ya instaladas. En Puerto España (Trinidad y Tobago), la residencia de mayores dedicó la sesión final de aceptación al personal de mantenimiento: cómo se desinfecta cada acabado, qué piezas de la silla de acompañante se sustituyen sin herramienta y cómo se revisa la fijación de los pasamanos pasado el primer año de uso. Puede ver más referencias de proyectos internacionales por sector en <a href="/proyectos/">la biblioteca de proyectos entregados</a>, y para contrastar fabricantes sobre la misma base técnica conviene revisar la guía de <a href="/recursos/ffande-sourcing-china-verificar-fabricante/">cómo verificar a un fabricante en China</a> antes de cerrar la adjudicación.</p>
+        <p>Si está preparando el pliego de un hospital, una clínica o una residencia de mayores, el punto de partida son tres datos: el listado de zonas y de plantas, el código de color previsto y el puerto de destino. Con eso se devuelve una propuesta por partida, con las normas aplicables a cada familia, el MOQ flexible por color y el calendario de 30-45 días desde la muestra aprobada, sujeto a contrato, además del anexo de certificados por modelo y del plan de embalaje en cajas de madera. Equipar un centro sanitario con criterio cuesta unas semanas de especificación; corregir un pliego mal cerrado cuesta la fecha de apertura del centro.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite una cotización de mobiliario hospitalario por zonas"
+      text="Envíe su listado de zonas y plantas por /contacto/ y le devolvemos una propuesta por partida, con las normas aplicables a cada familia, el MOQ flexible por color y el plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. Para preparar la cotización necesitamos tres datos: el listado de zonas y de plantas del centro, el código de color previsto y el puerto de destino. También puede solicitar muestras de tapizado y de acabado, el anexo de certificados por modelo y el plan de embalaje en cajas de madera antes de decidir. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

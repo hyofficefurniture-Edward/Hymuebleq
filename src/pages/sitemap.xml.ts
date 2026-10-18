@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/mobiliario-hospitalario-clinicas-residencias-proyecto/",
   "/recursos/fase-mobiliario-feria-canton-2026-guia-ffe/",
   "/recursos/visitar-fabricas-mobiliario-china-feria-canton-2026/",
   "/recursos/primera-fase-feria-canton-2026-compras-mobiliario/",
