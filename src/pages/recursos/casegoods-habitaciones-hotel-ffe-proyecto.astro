@@ -1,0 +1,463 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Casegoods para hoteles: especificación por tipo de habitación y paquete FF&E";
+const pageDescription = "Casegoods para hoteles: cómo especificar por tipo de habitación, aprobar muestras, integrar FF&E y PIP, con MOQ por color, 30-45 días y QC.";
+const keywords = [
+  "casegoods para hoteles",
+  "casegoods de habitación de hotel",
+  "mobiliario fijo de habitación",
+  "especificación de casegoods por tipo de habitación",
+  "paquete FF&E hotelero",
+  "reforma PIP de habitaciones",
+  "MOQ de casegoods",
+  "embalaje de exportación en cajas de madera",
+  "fabricante de casegoods para hoteles",
+  "instalación de mobiliario de hotel"
+];
+const canonicalPath = "/recursos/casegoods-habitaciones-hotel-ffe-proyecto/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD17-a234-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-19";
+const dateModified = "2026-10-19";
+const publicationDateLabel = "Publicada el 19 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué son las casegoods para hoteles?", answer: "Las casegoods para hoteles son el mobiliario fijo y la carpintería de la habitación, formados por cabecero y mesitas de noche, banco de equipaje, escritorio, armario, mueble de minibar y panel de televisión, que se fabrican por tipo de habitación y se especifican dentro del paquete FF&E. La definición se apoya en la unidad de habitación y no en la pieza suelta, porque el paquete se repite en todo el inventario del hotel y cualquier error de medida se multiplica. En la práctica se cierra primero la unidad tipo, después se cuentan las unidades y al final se negocia el conjunto con el fabricante." },
+    { question: "¿Cómo se especifican las casegoods por tipo de habitación?", answer: "Se especifican con una matriz de tipologías que indica, para cada tipo de habitación, qué piezas se mantienen, qué piezas se sustituyen y qué medida cambia, y esa matriz se aprueba en una habitación piloto antes de multiplicar. La base suele compartir cabecero, armario y mueble de minibar, mientras la tipología twin cambia mesitas y banco, la suite añade salón y almacenaje y la habitación accesible exige paso libre, altura de encimera y espacio de transferencia. El criterio es de proyecto y se documenta por escrito, porque es el mismo documento que permite comparar ofertas con el mismo alcance." },
+    { question: "¿Qué normas y certificaciones debe cumplir el mobiliario de habitación?", answer: "El mobiliario de habitación debe citar la norma por familia: EN 13501-1 para la reacción al fuego de paneles y revestimientos, EN 1021-1 y EN 1021-2 para la ignición de los elementos tapizados, EN 15373 para mesas de trabajo, EN 16139 para asientos no domésticos y BIFMA X5.5 y BIFMA X5.9 para escritorios y almacenaje. La capa de material y de planta se cubre con CARB P2 en el tablero, GREENGUARD Gold en emisiones, FSC en trazabilidad, CE cuando aplica una norma armonizada e ISO 9001 e ISO 14001 en la fábrica. Cada documento debe corresponder al modelo exacto que se fabrica, incluido el acabado custom, porque un cambio de barniz puede alterar el resultado del ensayo." },
+    { question: "¿Cuál es el MOQ y el plazo de producción de las casegoods?", answer: "El MOQ se negocia por familia, por color y por fase del proyecto, y no como una cifra única, porque el volumen total del hotel permite repartir referencias sin forzar mínimos altos en cada línea. Cuando la propiedad fija un color por planta, la producción se planifica en lotes de color separados y el cuadro de colores se anexa al contrato. El plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y cuenta desde la firma del acta y no desde la consulta inicial. Cerrar herrajes, medidas y acabado antes de la orden es lo que fija la fecha real de entrega en obra." },
+    { question: "¿Cómo se embalan las casegoods para exportación?", answer: "Las casegoods se embalan en cajas de madera o cajas de contrachapado de exportación, con protectores de esquina, láminas de espuma de polietileno EPE y palés, porque las piezas largas con canto visto no resisten la manipulación portuaria ni la espera en obra con un envoltorio flexible. Cada bulto se etiqueta con tipología de habitación, planta, color y número de pieza, y la ficha de packing declara pesos, medidas y número de bultos. Ese etiquetado permite descargar por bloques y montar por plantas, de modo que la cuadrilla no abre cajas al azar y la recepción se firma contra un listado, no contra una estimación." },
+    { question: "¿Cómo se controla la calidad y se cierra la instalación de un pedido de casegoods?", answer: "El control de calidad se cierra en tres hitos documentados: inspección de materiales contra la muestra firmada, control en línea de medidas, holguras, herraje y acabado por lote, e inspección previa al embarque con muestreo, montaje de prueba de una unidad y verificación del etiquetado. La instalación se planifica antes de embarcar con un plano de implantación por habitación y el orden de montaje, y la aceptación se firma con una punch list que clasifica cada incidencia por habitación, gravedad y plazo. Sin esa lista cerrada la entrega no se considera terminada, porque en un hotel en apertura una pieza pendiente equivale a una habitación que no se puede vender." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD17-a234-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d17a2-a234-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d17a2-a234-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Hotelería · Casegoods y FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Casegoods para hoteles: especificación por tipo de habitación, muestra y paquete FF&amp;E</h1>
+          <p>Las casegoods para hoteles son el conjunto de mobiliario fijo y carpintería de la habitación, es decir, cabecero y mesitas de noche, banco de equipaje, escritorio, armario, mueble de minibar y panel de televisión, que se fabrican por tipo de habitación y se especifican dentro del paquete FF&amp;E del proyecto.</p>
+          <p>Esta guía está escrita para quien tiene que cerrar ese paquete: la propiedad y el asset manager que aprueban el presupuesto, el comprador de FF&amp;E que persigue la fecha de apertura, el estudio de interiorismo que dibuja la habitación y el contratista general que recibe en obra. No trata del mobiliario suelto de zonas comunes ni del equipamiento operativo del hotel, sino de la carpintería y el mobiliario fijo que define la habitación y se repite en todo el inventario. El recorrido va de la definición de la unidad al tipo de habitación, de la muestra al paquete FF&amp;E y de la orden de producción al embalaje, la inspección y la punch list.</p>
+          <p>Detrás de este método está Hongye Furniture Group, fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales atendidas y ocho certificaciones, entre ellas ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Produce en Heshan (Jiangmen, Guangdong), con un plazo de 30-45 días desde la muestra aprobada, sujeto a contrato, y una ventaja de coste del 30-50 % frente a la compra a través de intermediarios.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD17-a234-hero.jpg" alt="Habitación de hotel con cabecero tapizado, mesitas de noche, banco de equipaje y escritorio que forman la unidad base de casegoods" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué son las casegoods de habitación de hotel y cómo se descomponen por unidad?</h2>
+        <p>Las casegoods de habitación se descomponen por unidad de habitación y no por familia de catálogo, porque el paquete de una habitación estándar se repite cientos de veces y cualquier error de medida se multiplica por todo el inventario del hotel. En un proyecto típico la unidad incluye cabecero con mesitas de noche, banco de equipaje, escritorio con paso de cables, armario con barra y cajonera, mueble de minibar o de cafetera y panel de televisión, y cada pieza cumple una función distinta en la secuencia de uso del huésped: dejar la maleta, colgar la ropa, trabajar, cargar el teléfono, servir una bebida. Esa secuencia ordena el despiece y decide qué elemento va anclado a pared y qué elemento es móvil pero pertenece al mismo conjunto. El criterio de compra se parece al de cualquier carpintería de edificio: primero se define la unidad repetible, después se cuentan las unidades y al final se negocia el conjunto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Pieza de casegood</th><th>Función en la habitación</th><th>Criterio de especificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Pieza de casegood">Cabecero y mesitas de noche</td><td data-label="Función en la habitación">Ordena el descanso y concentra luz, enchufes y mando</td><td data-label="Criterio de especificación">Anclaje a pared, altura de mesita y paso de instalaciones</td></tr>
+              <tr><td data-label="Pieza de casegood">Banco de equipaje</td><td data-label="Función en la habitación">Recibe la maleta sin ocupar la cama ni el suelo</td><td data-label="Criterio de especificación">Altura de asiento, tapizado y resistencia al uso</td></tr>
+              <tr><td data-label="Pieza de casegood">Escritorio</td><td data-label="Función en la habitación">Trabajo, carga de dispositivos y almacenaje de papeles</td><td data-label="Criterio de especificación">Longitud útil, paso de cables y resistencia según norma</td></tr>
+              <tr><td data-label="Pieza de casegood">Armario</td><td data-label="Función en la habitación">Ropa, maleta vacía y caja fuerte</td><td data-label="Criterio de especificación">Fondo, altura de barra, puertas y holgura de apertura</td></tr>
+              <tr><td data-label="Pieza de casegood">Mueble de minibar</td><td data-label="Función en la habitación">Bebida, cafetera y residuos</td><td data-label="Criterio de especificación">Ventilación, bandeja extraíble y acabado lavable</td></tr>
+              <tr><td data-label="Pieza de casegood">Panel de televisión</td><td data-label="Función en la habitación">Integra la pantalla y oculta el cableado</td><td data-label="Criterio de especificación">Medida de pantalla, desmontaje y registro de acceso</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El Hilton Tashkent City, en Tashkent (Uzbekistán), entregó en 2024 un paquete de 295 habitaciones con más de 1.770 piezas de mobiliario y un plazo de 52 días, con cero defectos en la recepción. Ese resultado se apoya en la descomposición previa: una unidad de habitación cerrada con seis familias de casegoods, cada una con su ficha de medidas, su herraje y su acabado, repetida en todo el inventario sin decisiones nuevas en obra. Con más de 1.770 piezas para 295 habitaciones, la media ronda las seis piezas por unidad, y esa cifra es la que permite presupuestar, embalar y contar sin volver a discutir el despiece en cada fase. Cuando el despiece se resuelve pieza a pieza, cada ajuste se paga tantas veces como habitaciones tenga el hotel. En <a href="/proyectos/">la biblioteca de proyectos entregados</a> puede revisar cómo se documenta esa unidad tipo en otros proyectos.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se especifican las casegoods por tipo de habitación?</h2>
+        <p>Las casegoods se especifican por tipo de habitación porque el mismo edificio repite una unidad base y la modifica por tipología, y el pliego debe decir qué pieza se mantiene, qué pieza se sustituye y qué medida cambia. Una habitación estándar con cama king y otra con dos camas comparten cabecero, armario y mueble de minibar, pero cambian el banco de equipaje, la mesita y la circulación lateral, y esa diferencia se resuelve en el despiece, no en obra. La suite añade salón, escritorio de mayor longitud y almacenaje, mientras la habitación accesible exige paso libre, altura de encimera y espacio de transferencia junto a la cama, con un escritorio que permita el acceso frontal. En la práctica conviene fijar una matriz de tres o cuatro tipologías con sus medidas y aprobar una habitación piloto antes de multiplicar, porque la piloto es el único lugar donde corregir un error todavía resulta barato.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tipo de habitación</th><th>Paquete de casegoods</th><th>Criterio clave de especificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tipo de habitación">Estándar king</td><td data-label="Paquete de casegoods">Cabecero, dos mesitas, banco, escritorio, armario, minibar, panel de televisión</td><td data-label="Criterio clave de especificación">Circulación lateral libre y escritorio con paso de cables</td></tr>
+              <tr><td data-label="Tipo de habitación">Estándar twin</td><td data-label="Paquete de casegoods">Cabecero doble, mesita central, banco, escritorio, armario, minibar</td><td data-label="Criterio clave de especificación">Ancho de mesita central y acceso a ambos lados de la cama</td></tr>
+              <tr><td data-label="Tipo de habitación">Suite</td><td data-label="Paquete de casegoods">Unidad base más salón, escritorio largo y almacenaje adicional</td><td data-label="Criterio clave de especificación">División funcional entre dormitorio y salón sin duplicar acabados</td></tr>
+              <tr><td data-label="Tipo de habitación">Habitación accesible</td><td data-label="Paquete de casegoods">Unidad base con mesita y escritorio adaptados y armario con apertura amplia</td><td data-label="Criterio clave de especificación">Paso libre, altura de encimera y espacio de transferencia junto a la cama</td></tr>
+              <tr><td data-label="Tipo de habitación">Habitación comunicada</td><td data-label="Paquete de casegoods">Dos unidades base con puerta de conexión y armario reducido</td><td data-label="Criterio clave de especificación">Sentido de apertura de puertas y ruido entre habitaciones</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En el Hilton Tashkent City, la media de seis piezas por unidad se sostuvo porque la matriz de tipologías se cerró antes de producir: la unidad base fijó cabecero, armario, escritorio y mueble de minibar, y las tipologías superiores añadieron piezas de salón y almacenaje sin alterar las medidas de la base. Esa jerarquía reduce el número de referencias distintas, simplifica el MOQ por color y hace que el embalaje se etiquete por tipología, de modo que la cuadrilla de montaje recibe en el pasillo la caja que corresponde a cada habitación. Un proyecto de 295 habitaciones y más de 1.770 piezas no se controla con una lista abierta: se controla con una matriz cerrada, una habitación piloto aprobada y un calendario de entregas por planta. La matriz es también el documento que permite comparar ofertas, porque obliga a cada proveedor a cotizar exactamente el mismo alcance.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD17-a234-s1.jpg" alt="Habitación de hotel con cabecero tapizado, mesitas de noche, escritorio y mueble de minibar especificados en la unidad base" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Habitación estándar de hotel con cabecero tapizado de panel completo, mesitas de noche a ambos lados, escritorio con silla y estantería de equipaje junto al ventanal: la unidad base que se repite por tipología.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se aprueba en la muestra: materiales, acabados y reacción al fuego?</h2>
+        <p>La muestra de casegoods se aprueba sobre un prototipo físico y no sobre un render, porque lo que se juzga no es el color sino el conjunto de decisiones que el huésped va a tocar: el tablero y su canto, la chapa o el laminado, el barniz y su grado de brillo, el herraje y su recorrido, la holgura de la puerta del armario y el remate del cabecero contra la pared. El acta debe declarar material, acabado, medidas y herraje, y firmarse antes de producir, tal como se detalla en la guía de <a href="/recursos/lista-aprobacion-muestras-preproduccion/">aprobación de muestras de preproducción</a>. En paralelo se cierra la capa normativa: EN 13501-1 para la reacción al fuego de paneles y revestimientos, EN 1021-1 y EN 1021-2 para la ignición de los elementos tapizados, CARB P2 para el formaldehído del tablero, EN 15373 para la resistencia de las mesas de trabajo, EN 16139 para los asientos no domésticos y BIFMA X5.5 y BIFMA X5.9 para escritorios y elementos de almacenaje.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Requisito</th><th>Norma o certificación</th><th>Qué se pide en el pliego</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Requisito">Reacción al fuego de paneles y revestimientos</td><td data-label="Norma o certificación">EN 13501-1</td><td data-label="Qué se pide en el pliego">Clasificación declarada por el fabricante del panel</td></tr>
+              <tr><td data-label="Requisito">Ignición de elementos tapizados</td><td data-label="Norma o certificación">EN 1021-1 y EN 1021-2</td><td data-label="Qué se pide en el pliego">Informe del modelo exacto con el tapizado aprobado</td></tr>
+              <tr><td data-label="Requisito">Formaldehído del tablero</td><td data-label="Norma o certificación">CARB P2</td><td data-label="Qué se pide en el pliego">Certificado del lote de tablero utilizado</td></tr>
+              <tr><td data-label="Requisito">Resistencia de escritorios y mesas</td><td data-label="Norma o certificación">EN 15373 y BIFMA X5.5</td><td data-label="Qué se pide en el pliego">Ensayo de resistencia y estabilidad del modelo</td></tr>
+              <tr><td data-label="Requisito">Almacenaje, armarios y cajoneras</td><td data-label="Norma o certificación">BIFMA X5.9</td><td data-label="Qué se pide en el pliego">Ensayo de puertas, cajones y carga distribuida</td></tr>
+              <tr><td data-label="Requisito">Asientos y banquetas</td><td data-label="Norma o certificación">EN 16139</td><td data-label="Qué se pide en el pliego">Resistencia y seguridad de uso no doméstico</td></tr>
+              <tr><td data-label="Requisito">Emisiones y trazabilidad</td><td data-label="Norma o certificación">GREENGUARD Gold y FSC</td><td data-label="Qué se pide en el pliego">Certificado vigente y cadena de custodia</td></tr>
+              <tr><td data-label="Requisito">Sistema de la fábrica</td><td data-label="Norma o certificación">ISO 9001 e ISO 14001</td><td data-label="Qué se pide en el pliego">Alcance de la certificación y fecha de auditoría</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En Yanbu (Arabia Saudita), un resort de cinco estrellas exigió que el cabecero y el banco de equipaje cumplieran EN 1021-1 y EN 1021-2 con informe por modelo, y que el acabado dorado se produjera como color custom con panel de control aprobado junto al resto de la muestra. La combinación de ambas exigencias es la que suele atascar un proyecto: un acabado especial cambia el soporte y el barniz, y con ellos el comportamiento frente al fuego, de modo que el informe del modelo de catálogo no sirve para la versión personalizada. La solución fue aprobar el panel dorado con su propio ensayo y conservar una muestra de referencia en fábrica para comparar cada lote. Sin ese control, la habitación 1 y la habitación 200 pueden llegar con dos dorados distintos, y el defecto se ve justo en el pasillo, donde las puertas se alinean. Por eso el acta de muestra debe incluir la tolerancia de color aceptada y el método de comparación por lote, no solo el código.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>MOQ, producción por color, plazo de 30-45 días y embalaje de exportación</h2>
+        <p>El MOQ de un paquete de casegoods se negocia por familia y por color, y el dato que gobierna la producción no es el número total de piezas sino el código de color de cada planta o de cada tipología. Un hotel que fija un tono por planta obliga a producir por lotes de color separados, con su propio mínimo, su propia planificación y su propio control de acabado, y esa decisión debe estar en el anexo del contrato antes de la orden. El plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y empieza a contar el día en que el acta está firmada, no el día de la consulta. Adelantar la fabricación antes de cerrar herrajes, medidas y acabado es la causa más frecuente de piezas que no encajan en la habitación o que la propiedad rechaza en la recepción. La regla práctica es cerrar primero la muestra y después el calendario, incluso cuando la obra civil presiona con una fecha de apertura.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Tema</th><th>Cómo se fija</th><th>Documento de cierre</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Tema">MOQ</td><td data-label="Cómo se fija">Por familia, por color y por fase del proyecto</td><td data-label="Documento de cierre">Mínimo por referencia con precio escalonado</td></tr>
+              <tr><td data-label="Tema">Producción por color</td><td data-label="Cómo se fija">Lotes separados por código de planta o tipología</td><td data-label="Documento de cierre">Cuadro de colores anexo al contrato</td></tr>
+              <tr><td data-label="Tema">Muestra aprobada</td><td data-label="Cómo se fija">Prototipo con material, acabado y medidas declarados</td><td data-label="Documento de cierre">Acta firmada y fechada, con tolerancia de color</td></tr>
+              <tr><td data-label="Tema">Plazo de producción</td><td data-label="Cómo se fija">30-45 días desde la muestra aprobada, sujeto a contrato</td><td data-label="Documento de cierre">Calendario con hitos de aprobación e inspección</td></tr>
+              <tr><td data-label="Tema">Entrega por fases</td><td data-label="Cómo se fija">Bloques por planta y por tipología de habitación</td><td data-label="Documento de cierre">Plan de entregas con responsable de recepción</td></tr>
+              <tr><td data-label="Tema">Embalaje</td><td data-label="Cómo se fija">Cajas de madera o contrachapado, esquineros, EPE y palés</td><td data-label="Documento de cierre">Ficha de packing con pesos, medidas y bultos</td></tr>
+              <tr><td data-label="Tema">Incoterm</td><td data-label="Cómo se fija">FOB, CIF, CFR, EXW o DDP según el proyecto</td><td data-label="Documento de cierre">Incoterm, puerto de destino y consolidación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El embalaje de exportación de las casegoods se resuelve con cajas de madera o cajas de contrachapado de exportación, protectores de esquina, láminas de espuma de polietileno EPE y palés, y no con envoltorios flexibles, porque una pieza de dos metros con canto visto no admite la manipulación de puerto ni la espera en obra. Cada bulto se etiqueta con tipología de habitación, planta, color y número de pieza, de modo que la descarga se haga por bloques y el montaje no dependa de abrir cajas al azar. En el Hilton Tashkent City, el calendario de 52 días solo fue posible porque la producción de 30-45 días arrancó con la muestra firmada y el embarque salió etiquetado por planta. La guía de <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación del mobiliario hotelero</a> desarrolla el detalle de protecciones, cubicaje y descarga para una reforma en hotel en servicio.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD17-a234-s2.jpg" alt="Cajas de madera contrachapada de exportación con esquineros y flejado sobre palé junto a un contenedor" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Embalaje de exportación: armario envuelto en espuma de polietileno con esquineros, cajas de madera contrachapada flejadas sobre palé y filmadas, listas para el contenedor.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Control de calidad en tres hitos, instalación en obra y punch list</h2>
+        <p>El control de calidad de un pedido de casegoods se cierra en tres hitos documentados y ninguno admite un parte verbal. El primero es la inspección de materiales antes de producir: tablero, chapa, laminado, herrajes y barniz contra la muestra firmada, con el certificado CARB P2 del tablero y la cadena de custodia FSC a la vista del inspector. El segundo es el control en línea, donde se revisan medidas, escuadra, holguras de puertas y cajones, ajuste del herraje y acabado contra la ficha técnica, con atención a los cantos y a las juntas, que son los puntos que fallan primero en un hotel con limpieza diaria. El tercero es la inspección previa al embarque, con muestreo por lote, montaje de prueba de una unidad completa y verificación del etiquetado por tipología y color. Cada hito se cierra con un documento fechado y se archiva por lote, de modo que cualquier reclamación posterior pueda rastrearse hasta el material y la fecha de fabricación.</p>
+        <p>En el Hilton Tashkent City, el resultado de cero defectos en la recepción se explica por ese cierre documental: 295 habitaciones y más de 1.770 piezas revisadas por lote antes de embarcar, con montaje de prueba de la unidad tipo y etiquetado por planta. La instalación se planifica antes de embarcar, con un plano de implantación por habitación que indica dónde va cada pieza, en qué orden se monta y qué elementos se anclan a pared. La aceptación se firma con una punch list que clasifica cada incidencia por habitación, gravedad y plazo de corrección, y sin esa lista cerrada la entrega no se considera terminada. Para un hotel en apertura, una pieza pendiente no es un detalle estético: es una habitación que no se puede vender. Por eso la punch list se revisa con la propiedad y con la dirección de obra antes de desmontar el andamio y de retirar el embalaje de la última planta.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Casegoods en el paquete FF&amp;E y en una reforma PIP: cómo se coordina el proyecto</h2>
+        <p>Las casegoods ocupan un lugar preciso dentro del paquete FF&amp;E y conviene distinguirlo del equipamiento operativo, porque el primero se compra con el presupuesto de capital del proyecto y el segundo con el de explotación. En una reforma PIP, el paquete se define contra los estándares de la marca y contra el estado real de la habitación: qué muro se conserva, qué instalación se reutiliza, qué medida cambia y qué pieza debe cumplir el prototipo aprobado por la marca. La coordinación se hace con un plano de la habitación existente, una lista de demolición y una matriz de reemplazo pieza a pieza, y se prueba en una habitación piloto antes de tocar el resto del inventario. Ese orden permite reformar por plantas sin cerrar el hotel y evita que la carpintería nueva llegue cuando el muro previsto ya no existe.</p>
+        <p>En Lagos (Nigeria), la reforma del lobby de un hotel en servicio se resolvió con el mismo criterio aplicado a las zonas comunes: antes de fabricar se revisó el comportamiento del acabado frente a la humedad del clima costero y se ajustó el sellado de cantos y el tipo de barniz, porque un acabado pensado para un interior seco se abre en pocos meses. La lección sirve para las habitaciones del mismo edificio: el clima del destino forma parte de la especificación y debe aparecer en el pliego junto a la norma y al color. Cuando el proyecto se ejecuta por fases, el etiquetado por zona y la entrega en bloques permiten instalar mientras el resto del edificio sigue operando, y la punch list se cierra planta por planta, sin mezclar incidencias de habitaciones que todavía no se han tocado.</p>
+        <p>Si está preparando el paquete de casegoods de una apertura o de una reforma PIP, el punto de partida son cuatro datos: la matriz de tipologías con medidas, el código de color por planta, la norma exigida por la marca y el puerto de destino. Con eso se devuelve una propuesta por familia, el MOQ por color, el calendario de 30-45 días desde la muestra aprobada y el plan de embalaje. Puede enviar esos datos a <a href="/contacto/">nuestro equipo de proyecto</a> y recibir la propuesta por familia; antes de adjudicar conviene contrastar la fábrica con la guía de <a href="/recursos/ffande-sourcing-china-verificar-fabricante/">cómo verificar a un fabricante en China</a>, que ordena las preguntas que separan a un fabricante real de un intermediario.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite una cotización FF&E de casegoods para su hotel"
+      text="Envíe la matriz de tipologías, el código de color por planta, la norma exigida por la marca y el puerto de destino a /contacto/ y le devolvemos una propuesta por familia, con el MOQ por color, el calendario de 30-45 días desde la muestra aprobada, sujeto a contrato, el anexo de certificados por modelo y el plan de embalaje en cajas de madera. También puede subir los planos de la habitación tipo y el listado de piezas del paquete FF&E para que la cotización salga sobre el alcance real del proyecto. Hongye Furniture Group, fábrica fundada en 1996, con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países y ocho certificaciones internacionales."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
