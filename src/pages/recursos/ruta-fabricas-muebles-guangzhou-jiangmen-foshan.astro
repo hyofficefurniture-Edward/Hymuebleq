@@ -1,0 +1,463 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Ruta de fábricas de muebles en Guangdong: tres días entre fases de la Feria de Cantón";
+const pageDescription = "Ruta de fábricas de muebles en Guangdong en tres días: Guangzhou, Heshan y Foshan, qué inspeccionar en planta y cómo cerrar muestra y prototipo.";
+const keywords = [
+  "ruta de fábricas de muebles en Guangdong",
+  "fábricas de muebles Guangzhou Jiangmen Foshan",
+  "semana de transición Feria de Cantón",
+  "visitar fábricas entre fases de la Feria de Cantón",
+  "fábricas de mobiliario en Heshan Jiangmen",
+  "mercado de materiales de Longjiang y Lecong",
+  "qué inspeccionar en una planta de muebles",
+  "acta de muestra y orden de prototipo",
+  "MOQ por familia y por color",
+  "embalaje en cajas de madera contrachapada",
+  "ruta de compras FF&E en Guangdong"
+];
+const canonicalPath = "/recursos/ruta-fabricas-muebles-guangzhou-jiangmen-foshan/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD18-a236-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-20";
+const dateModified = "2026-10-20";
+const publicationDateLabel = "Publicada el 20 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué es la semana de transición de la Feria de Cantón?", answer: "La semana de transición es el intervalo de tres días entre dos fases en el que el recinto no abre al público y los pabellones se reconfiguran: en la 140.ª edición va del 20 al 22 de octubre de 2026, con otro intervalo del 28 al 30 de octubre. Durante esos días no hay negociación al público en el recinto, pero las fábricas siguen produciendo y reciben visitas con cita previa. Para un comprador de mobiliario es la ventana más útil del calendario, porque permite recorrer la planta y firmar la muestra antes de que abra la segunda fase." },
+    { question: "¿Cuándo es la Feria de Cantón 2026 y en qué fase está el mobiliario?", answer: "La 140.ª Feria de Cantón se celebra en tres fases: del 15 al 19 de octubre de 2026 la primera, del 23 al 27 de octubre la segunda y del 31 de octubre al 4 de noviembre la tercera. El mobiliario se exhibe en la segunda fase, dedicada al hogar de calidad, y los intervalos del 20 al 22 y del 28 al 30 de octubre no tienen negociación al público. La primera fase reúne los herrajes, la iluminación y el material eléctrico que después se montan en el mueble, y la tercera cubre el equipamiento médico y sanitario." },
+    { question: "¿Cómo se reparte la ruta de fábricas entre Guangzhou, Jiangmen y Foshan en tres días?", answer: "La ruta se reparte en tres tramos de menos de dos horas cada uno: el primer día de Pazhou a Heshan (Jiangmen), unos 90-100 km y entre 1 h 30 y 1 h 50 de coche; el segundo de Heshan a Longjiang y Shunde (Foshan), unos 40-50 km y entre 50 y 70 minutos; y el tercero de Longjiang a Guangzhou, unos 45-55 km y entre 1 h y 1 h 20. Las distancias son aproximadas y varían con el tráfico y la hora de salida. Lo razonable es visitar dos fábricas completas por día y reservar una tercera visita solo de sala de muestras." },
+    { question: "¿Qué se inspecciona en una visita de tres horas a una planta de muebles?", answer: "En tres horas se inspeccionan siete zonas: almacén de tableros y chapa, corte y canteado, mecanizado CNC y taladrado, sección de tapizado, línea de acabado y lacado, montaje y herrajes, y línea de embalaje. En cada zona se mira un punto verificable, como el canto con refuerzo en los bordes vistos, el test de rayado y adherencia del barniz, el espesor de la espuma o el control de humedad de la madera entre el 8 y el 12 %. La visita se organiza con treinta minutos de apertura, noventa de recorrido, treinta de sala de muestras y treinta de cierre para firmar el acta." },
+    { question: "¿Qué documentos hay que firmar antes de salir de China?", answer: "Antes de salir conviene firmar cinco documentos: el acta de muestra, la ficha técnica de materiales, el plano de taller, la orden de prototipo y la lista de embalaje y precintos. El acta fija medidas, acabado, tolerancia de color y herraje aprobado; la ficha técnica declara el tablero con CARB P2, el tejido, la espuma y el barniz; el plano de taller fija el despiece y los taladros; la orden de prototipo fija cantidad, color y plazo; y la lista de embalaje fija bultos, pesos, precintos y etiquetas por ambiente. Sin esos documentos, la producción arranca sobre recuerdos." },
+    { question: "¿Cuál es el MOQ y el plazo de producción tras firmar el acta de muestra?", answer: "El MOQ se negocia por familia y por color, no como una cifra global, porque un proyecto que fija un tono por planta obliga a lotes de color separados con su propio mínimo. El plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y cuenta desde la firma del acta y no desde la consulta inicial. El control de calidad se cierra en tres hitos: materiales antes de producir, control en línea por lote e inspección previa al embarque, y el embarque sale en cajas de madera contrachapada con esquineros y precinto." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD18-a236-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d18a2-a236-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d18a2-a236-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Ruta de fábricas &middot; {publicationDateLabel}</p>
+          <h1>Ruta de fábricas de muebles en Guangdong: tres días entre fases de la Feria de Cantón</h1>
+          <p>La semana de transición de la Feria de Cantón es el intervalo de tres días entre dos fases del certamen, del 20 al 22 de octubre de 2026, en el que el recinto de Pazhou no abre al público y los pabellones se reconfiguran. Para un comprador de mobiliario ese hueco no es tiempo muerto: es la ventana más útil del calendario para recorrer la planta, ver la línea en marcha y firmar la muestra sin competir con la agenda de la feria. La 140.ª Feria de Cantón se celebra en tres fases: del 15 al 19 de octubre de 2026 la primera, del 23 al 27 de octubre la segunda y del 31 de octubre al 4 de noviembre la tercera, con intervalos sin negociación al público del 20 al 22 y del 28 al 30 de octubre (China Foreign Trade Centre, 2026).</p>
+          <p>Esta guía está escrita para quien compra mobiliario de proyecto y tiene tres días para convertir una lista de proveedores en una decisión: la propiedad hotelera y su asset manager, el comprador de FF&amp;E, el contratista general, el estudio de interiorismo que firma la especificación y el responsable de compras de un grupo educativo, sanitario o de oficinas. No es un itinerario turístico: es una secuencia de visitas con hora de llegada, tiempo de estancia y documento que debe salir firmado de cada planta. El objetivo es entrar en la segunda fase, del 23 al 27 de octubre, con la muestra aprobada, el prototipo pedido y el embalaje acordado.</p>
+          <p>Detrás de este método está Hongye Furniture Group, fábrica fundada en 1996, con más de 300.000 m² de planta en Heshan (Jiangmen, Guangdong), más de 1.000 proyectos entregados en más de 50 países, más de 47 marcas hoteleras internacionales atendidas y ocho certificaciones internacionales, entre ellas ISO 9001, ISO 14001, BIFMA, GREENGUARD Gold, SGS, CE, CARB P2 y FSC. Trabaja con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y con un MOQ que se negocia por familia y por color. Su planta está a hora y media del recinto ferial, y esa cercanía permite ejecutar la ruta de tres días sin perder jornadas de feria.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD18-a236-hero.jpg" alt="Nave de producción de una fábrica de muebles con estanterías de tableros, línea de mecanizado y zona de embalaje" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se puede hacer en la semana de transición de la Feria de Cantón?</h2>
+        <p>Sí: en la semana de transición se puede visitar fábricas, ver muestras y firmar documentos, porque el recinto no admite negociación al público del 20 al 22 de octubre de 2026 (China Foreign Trade Centre, 2026) mientras la planta sigue trabajando a pleno rendimiento. Los pabellones dedicados al mobiliario abren en la segunda fase, del 23 al 27 de octubre de 2026, así que esos tres días son la última oportunidad de llegar a la fase del mueble con algo verificado. Quien aterriza en Guangzhou la noche del 22 y entra directo al certamen el 23 negocia sin haber visto una sola línea de producción.</p>
+        <p>El hueco cae en el mejor momento del calendario. La primera fase, del 15 al 19 de octubre, reúne la manufactura avanzada: herrajes, herramientas, iluminación y material eléctrico, los componentes que después se montan dentro del mueble. La segunda, del 23 al 27 de octubre, es la del hogar de calidad, y allí se exhibe el mobiliario; la tercera, del 31 de octubre al 4 de noviembre, cubre salud y vida, con el equipamiento médico y sanitario. Quien homologa componentes en la primera fase y los ve montados en la transición llega a la segunda con la especificación cerrada. El recinto está en el número 382 de Yuejiang Zhonglu, distrito de Haizhu, Guangzhou, con negociación de 09:30 a 18:00.</p>
+        <p>La escala del certamen explica la urgencia: la 140.ª edición ocupa unos 1.550.000 m² y reúne alrededor de 32.000 expositores (Canton Fair, 2026), y la 139.ª recibió 314.000 compradores extranjeros de 220 países y regiones (Canton Fair, 2026). Con ese volumen, tres días de fábrica valen más que tres días de pasillo. En el Hilton Tashkent City, en Tashkent (Uzbekistán), el paquete de 295 habitaciones y más de 1.770 piezas se cerró en 52 días porque la muestra se aprobó en planta. <a href="/recursos/visitar-fabricas-mobiliario-china-feria-canton-2026/">la guía para visitar fábricas de mobiliario en China</a> prepara la visita; esta guía reparte los tres días.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se reparte la ruta Guangzhou–Jiangmen–Foshan en tres días?</h2>
+        <p>La ruta se reparte por sentido de la producción y no por proximidad: Heshan (Jiangmen) el primer día, Longjiang y Shunde (Foshan) el segundo y regreso a Guangzhou el tercero. Heshan concentra el grupo de fábricas de mobiliario al oeste de Guangzhou y se alcanza desde Pazhou en menos de dos horas. Foshan aporta lo que la fábrica no produce: tablero, chapa, tejido, herrajes y el mercado de materiales de Longjiang y Lecong, que se recorre mejor con las ideas de la primera visita ya en la cabeza. El tercer día vuelve a Guangzhou para confirmar muestras y cerrar documentos. El orden inverso llena la cabeza de opciones antes de saber qué capacidad real tiene el proveedor.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Día</th><th>Tramo</th><th>Distancia aproximada</th><th>Tiempo de coche</th><th>Objetivo de la jornada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Día">Día 1</td><td data-label="Tramo">Pazhou (Guangzhou) → Heshan (Jiangmen)</td><td data-label="Distancia aproximada">aprox. 90-100 km</td><td data-label="Tiempo de coche">aprox. 1 h 30 - 1 h 50</td><td data-label="Objetivo de la jornada">Dos fábricas de Heshan: línea de tablero, tapizado y acabado, y primera acta de muestra</td></tr>
+              <tr><td data-label="Día">Día 2</td><td data-label="Tramo">Heshan → Longjiang y Shunde (Foshan)</td><td data-label="Distancia aproximada">aprox. 40-50 km</td><td data-label="Tiempo de coche">aprox. 50-70 min</td><td data-label="Objetivo de la jornada">Materiales, herrajes y acabados en Longjiang y Lecong, más una fábrica de Foshan</td></tr>
+              <tr><td data-label="Día">Día 3</td><td data-label="Tramo">Longjiang → Guangzhou (Pazhou)</td><td data-label="Distancia aproximada">aprox. 45-55 km</td><td data-label="Tiempo de coche">aprox. 1 h - 1 h 20</td><td data-label="Objetivo de la jornada">Confirmación de muestras, firma de documentos y salida con la carpeta completa</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las distancias son aproximadas: el tráfico de acceso a Guangzhou puede añadir entre veinte y cuarenta minutos en hora punta, sobre todo de vuelta a Pazhou. La regla que sostiene el plan es simple: dos fábricas por día como máximo y una tercera visita solo de sala de muestras, de una hora y sin recorrido de producción. Tres plantas completas en un día se pueden visitar, pero el acta que sale de ellas no sirve para decidir, porque nadie ha comparado el canto con la muestra aprobada. En un proyecto de 295 habitaciones, como el de Tashkent, esa comparación evita repetir el mismo error 295 veces.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se inspecciona en una visita de tres horas a la planta?</h2>
+        <p>Una visita de tres horas se divide en cuatro tramos y ninguno sobra: treinta minutos de apertura con el responsable de calidad, noventa de recorrido por la línea, treinta en la sala de muestras y treinta de cierre para firmar el acta. En el recorrido no se pregunta por la filosofía de la empresa, se mira la pieza: el canto, la junta, el taladro, la costura, el barniz y la caja. La lista que sigue resume qué se inspecciona en cada zona y qué señal obliga a detener la conversación comercial antes de hablar de precio.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona de la planta</th><th>Qué se mira</th><th>Señal de alerta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona de la planta">Almacén de tableros y chapa</td><td data-label="Qué se mira">Identificación por lote, certificado CARB P2 y cadena de custodia FSC del tablero, y control de humedad de la madera entre el 8 y el 12 %</td><td data-label="Señal de alerta">Tableros sin etiqueta de lote o apilados a la intemperie</td></tr>
+              <tr><td data-label="Zona de la planta">Corte y canteado</td><td data-label="Qué se mira">Escuadra del corte, canto con refuerzo en los bordes vistos, espesor del canto y adherencia tras el fresado</td><td data-label="Señal de alerta">Canto pegado sin refuerzo en puertas y encimeras</td></tr>
+              <tr><td data-label="Zona de la planta">Mecanizado CNC y taladrado</td><td data-label="Qué se mira">Tolerancia de taladrado, plantilla por referencia y primera pieza aprobada antes de arrancar la serie</td><td data-label="Señal de alerta">Taladrado a mano sin plantilla ni pieza de referencia</td></tr>
+              <tr><td data-label="Zona de la planta">Sección de tapizado</td><td data-label="Qué se mira">Espesor y densidad de la espuma, costura reforzada, tensión del tejido y esquineros del asiento</td><td data-label="Señal de alerta">Espuma sin ficha técnica y costuras sin refuerzo</td></tr>
+              <tr><td data-label="Zona de la planta">Línea de acabado y lacado</td><td data-label="Qué se mira">Cabina con control de temperatura y humedad, test de rayado y de adherencia, comparación con la muestra patrón</td><td data-label="Señal de alerta">Aplicación sin cabina y sin muestra patrón conservada</td></tr>
+              <tr><td data-label="Zona de la planta">Montaje y herrajes</td><td data-label="Qué se mira">Bisagras, guías y tiradores homologados, holgura de puertas y cajones, ensayo de apertura y cierre</td><td data-label="Señal de alerta">Herraje distinto del homologado en la muestra</td></tr>
+              <tr><td data-label="Zona de la planta">Línea de embalaje</td><td data-label="Qué se mira">Cajas de madera contrachapada con esquineros, protección de cantos, espuma de polietileno, precinto y etiqueta por ambiente</td><td data-label="Señal de alerta">Envoltorio flexible sin esquineros ni precinto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Las señales se leen en conjunto y no una por una. Un canto sin refuerzo en una puerta es un problema de especificación; un almacén sin etiqueta de lote es un problema de trazabilidad, y ese es el que después impide reclamar. El control de humedad entre el 8 y el 12 % explica por qué un mueble que sale perfecto de fábrica se abre en un hotel de clima seco o costero: si el tablero se almacena sin control, el acabado falla meses después, cuando el proveedor ya cobró. El test de rayado y el de adherencia del barniz se piden en la línea y se comparan contra la muestra patrón que la fábrica debe conservar.</p>
+        <p>En Yanbu (Arabia Saudí), un resort de cinco estrellas exigió que el cabecero y el banco de equipaje cumplieran EN 1021-1 y EN 1021-2 con informe por modelo, y que el acabado dorado se produjera como color custom con panel de control aprobado. Verificar ese panel en la línea de lacado, y no en una foto, fijó la tolerancia de color antes de producir; sin esa comprobación, dos lotes del mismo dorado llegan distintos y el defecto se ve donde las puertas se alinean. En Lagos (Nigeria), la revisión en planta del sellado de cantos y del barniz de un lobby en servicio evitó el deterioro que el clima costero provoca en un acabado de interior seco.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD18-a236-s1.jpg" alt="Línea de mecanizado con tableros sobre rodillos y zona de embalaje con cajas de madera en una planta de muebles" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Línea de mecanizado de una planta de muebles: tableros sobre rodillos, bancos de calibrado y lixado, y cajas y tableros apilados junto al banco de embalaje.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se cierra la muestra y la orden de prototipo antes de salir de China?</h2>
+        <p>La muestra se cierra en la mesa de taller, con las probetas delante y el acta abierta, y no en una conversación de pasillo. Antes de salir de China conviene tener cinco documentos firmados, porque cada uno cubre un riesgo distinto: el acta fija lo que se aprueba, la ficha técnica fija con qué se fabrica, el plano de taller fija cómo se construye, la orden de prototipo fija qué se produce primero y la lista de embalaje fija cómo viaja. Un proyecto que sale del país solo con fotos en el teléfono vuelve a discutir en la recepción lo que ya estaba decidido en la mesa.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Qué debe constar</th><th>Quién lo firma</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">Acta de muestra</td><td data-label="Qué debe constar">Medidas, material, acabado, tolerancia de color aceptada y herraje aprobado, con la probeta sellada como referencia</td><td data-label="Quién lo firma">Responsable de calidad de la fábrica y comprador del proyecto</td></tr>
+              <tr><td data-label="Documento">Ficha técnica de materiales</td><td data-label="Qué debe constar">Tablero con CARB P2, chapa o laminado, tejido, espuma, barniz y clase de reacción al fuego declarada</td><td data-label="Quién lo firma">Fábrica, con el visto bueno del estudio de interiorismo</td></tr>
+              <tr><td data-label="Documento">Plano de taller</td><td data-label="Qué debe constar">Despiece, cotas, posición de taladros, sentido de la veta y referencia de cada herraje</td><td data-label="Quién lo firma">Jefe de taller y estudio de interiorismo</td></tr>
+              <tr><td data-label="Documento">Orden de prototipo</td><td data-label="Qué debe constar">Referencia, cantidad, color, plazo de entrega y precio del prototipo aprobado</td><td data-label="Quién lo firma">Comprador del proyecto y responsable comercial de la fábrica</td></tr>
+              <tr><td data-label="Documento">Lista de embalaje y precintos</td><td data-label="Qué debe constar">Bultos, pesos, medidas, tipo de caja, número de precinto y etiqueta por ambiente de destino</td><td data-label="Quién lo firma">Logística de la fábrica y comprador del proyecto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El MOQ se negocia por familia y por color, no como una cifra global, porque un tono por planta obliga a lotes de color separados, cada uno con su mínimo. El plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y cuenta desde la firma y no desde la consulta. El control de calidad se cierra en tres hitos documentados: materiales antes de producir, control en línea por lote e inspección previa al embarque con montaje de prueba. El embalaje se resuelve en cajas de madera contrachapada con esquineros, protección de cantos, espuma de polietileno y palé; no se acepta embalaje enrollado en plástico ni sofá comprimido en caja, porque una pieza de dos metros no sobrevive a la manipulación del puerto.</p>
+        <p>En el Hilton Tashkent City los 52 días de calendario solo se sostuvieron porque la producción de 30-45 días arrancó con el acta firmada y el embarque salió etiquetado por planta y por tipología. La lección de Lagos fue anterior: cantos y barniz se corrigieron en la mesa de muestras, antes de la orden. <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">el embalaje de exportación del mobiliario hotelero</a> detalla las protecciones, el cubicaje y el etiquetado que conviene dejar escritos en esa lista antes de subir al avión.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD18-a236-s2.jpg" alt="Probetas de chapa, muestras de tejido, acta de muestra y plano acotado sobre una mesa de taller" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mesa de taller con probetas de chapa, muestras de tejido, un acta de muestra impresa y un plano acotado: el kit que se firma antes de salir de China.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Errores de agenda que arruinan la ruta y cómo evitarlos</h2>
+        <p>El primer error es reservar un solo día para tres fábricas. Dos plantas completas ocupan la jornada entera y dejan el acta a medio escribir; la tercera visita se convierte en una foto de la sala de muestras y en la promesa de enviar información por correo. El resultado es una lista de tres proveedores que no se puede comparar, porque de uno se vio la línea y de los otros solo el catálogo. La corrección es de calendario: dos visitas completas y una tercera de una hora.</p>
+        <p>El segundo es dejar el mercado de materiales para el último día. Longjiang y Lecong se recorren con provecho cuando ya se sabe qué tablero, qué chapa y qué herraje pide la muestra; al final del viaje se elige con prisa y sin referencia, y se acaba aceptando un material que no coincide con lo aprobado. El mercado debe alimentar la decisión, no cerrarla.</p>
+        <p>El tercero es no pedir cita con siete o diez días de antelación. Un proveedor avisado prepara la línea, la sala de muestras, el responsable de calidad y la primera pieza; uno avisado el mismo día enseña lo que tiene a mano y deja el recorrido a medias. La cita previa también confirma que la planta no está en inventario ni en parada de mantenimiento.</p>
+        <p>El cuarto es ignorar el domingo por la tarde y los días de recuento. Muchas fábricas trabajan de lunes a sábado y cierran la tarde del domingo, y el inventario mensual para la producción uno o dos días; llegar en ese hueco significa decidir sobre una planta que no está trabajando. Conviene preguntar por el calendario de inventario al cerrar la cita.</p>
+        <p>El quinto es salir de China con un contacto de mensajería y sin documentos firmados. Un chat no fija medidas, ni tolerancias de color, ni el espesor de la espuma, y cuando el proyecto entra en producción nadie recuerda qué se acordó en la mesa. Lo que no está firmado antes de embarcar no existe, y la distancia convierte esa omisión en semanas de discusión.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se aprende de tres proyectos entregados en Asia, África y Oriente Medio?</h2>
+        <p>Los tres proyectos que siguen se cerraron con el mismo orden, primero la planta, después la muestra y al final el calendario, aunque cada destino impuso su condición. En el Hilton Tashkent City (Tashkent, Uzbekistán) el paquete fue de 295 habitaciones y más de 1.770 piezas, entregado en 2024 en 52 días y con cero defectos en la recepción. En Yanbu (Arabia Saudí), un resort de cinco estrellas, la condición fue la reacción al fuego con informe por modelo y un acabado dorado producido como color custom. En Lagos (Nigeria), la reforma del lobby de un hotel en servicio obligó a adaptar el acabado al clima costero antes de fabricar.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Proyecto</th><th>Condición que se resolvió en planta</th><th>Documento que se firmó</th><th>Efecto en el calendario</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Proyecto">Hilton Tashkent City, Tashkent (Uzbekistán)</td><td data-label="Condición que se resolvió en planta">295 habitaciones y más de 1.770 piezas con la unidad tipo cerrada en seis familias</td><td data-label="Documento que se firmó">Acta de muestra y etiquetado por planta</td><td data-label="Efecto en el calendario">52 días de entrega y cero defectos en la recepción</td></tr>
+              <tr><td data-label="Proyecto">Resort de cinco estrellas, Yanbu (Arabia Saudí)</td><td data-label="Condición que se resolvió en planta">Reacción al fuego EN 1021-1 y EN 1021-2 por modelo y acabado dorado como color custom</td><td data-label="Documento que se firmó">Panel de control de color y probeta sellada</td><td data-label="Efecto en el calendario">Lote de color aprobado antes de producir</td></tr>
+              <tr><td data-label="Proyecto">Hotel en servicio, Lagos (Nigeria)</td><td data-label="Condición que se resolvió en planta">Sellado de cantos y barniz adaptados a la humedad del clima costero</td><td data-label="Documento que se firmó">Ficha técnica de materiales y orden de prototipo</td><td data-label="Efecto en el calendario">Reforma del lobby sin reponer piezas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La lectura de los tres casos es la misma: lo que se resuelve en la mesa de muestras no se discute en obra. En Tashkent el calendario se sostuvo porque la unidad tipo quedó cerrada en seis familias y cada pieza se etiquetó por planta; en Yanbu, porque el panel dorado se aprobó con su propio ensayo y se conservó una muestra de referencia para comparar cada lote; en Lagos, porque el sellado de cantos entró en la especificación antes de la orden. Ninguno de esos cierres exige un equipo enorme: exige una hora de mesa y cinco documentos.</p>
+        <p>También dejan una lección de ruta. Los tres proyectos se decidieron en una visita de planta de tres horas y no en cinco días de feria, y en los tres el comprador llegó con la especificación escrita y se fue con el acta firmada. La diferencia entre un viaje que produce una decisión y uno que produce una carpeta de catálogos está en el orden: Guangzhou para homologar componentes, Heshan para ver la línea, Foshan para cerrar materiales y Guangzhou otra vez para firmar. <a href="/proyectos/">la biblioteca de proyectos entregados</a> recoge cómo se documentó cada cierre.</p>
+        <p>Si va a estar en Guangdong entre el 20 y el 22 de octubre de 2026, esa ruta se puede organizar con antelación. Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar los datos antes de viajar tiene cuatro ventajas: recibe el número de stand, la carta de invitación, un horario de atención reservado durante la feria y la coordinación de la visita a la fábrica de Heshan (Jiangmen, Guangdong). La carta de invitación no garantiza el visado: la concesión queda a criterio de las autoridades consulares chinas. <a href="/contacto/">nuestro equipo de proyecto</a> confirma con usted la fecha de planta y el orden de las visitas.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Organice la ruta de fábricas y la visita a nuestro stand"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar sus datos antes de viajar tiene cuatro ventajas concretas: recibe el número de stand, la carta de invitación, un horario de atención reservado durante la feria y la coordinación de la visita a la fábrica de Heshan (Jiangmen, Guangdong), donde se ven las líneas de tablero, tapizado, lacado y la zona de embalaje. Para preparar la propuesta necesitamos tres datos: las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino. Con eso devolvemos el MOQ por familia y por color, el calendario de 30-45 días desde la muestra aprobada, sujeto a contrato, el anexo de certificados y el plan de embalaje en cajas de madera contrachapada con esquineros. La carta de invitación no garantiza el visado: la concesión queda a criterio de las autoridades consulares chinas. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

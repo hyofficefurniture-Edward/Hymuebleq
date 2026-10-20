@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/ruta-fabricas-muebles-guangzhou-jiangmen-foshan/",
   "/recursos/casegoods-habitaciones-hotel-ffe-proyecto/",
   "/recursos/mobiliario-hospitalario-clinicas-residencias-proyecto/",
   "/recursos/fase-mobiliario-feria-canton-2026-guia-ffe/",
