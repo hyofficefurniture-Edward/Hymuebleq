@@ -1,0 +1,463 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Control de calidad en fábrica de muebles: la inspección de proceso entre fases de la Feria de Cantón";
+const pageDescription = "Control de calidad en fábrica de muebles: puntos de control por proceso, primera pieza aprobada, muestreo AQL y documentos de liberación del lote.";
+const keywords = [
+  "control de calidad en fábrica de muebles",
+  "inspección de proceso en fábrica de mobiliario",
+  "puntos de control por proceso de producción",
+  "aprobación de primera pieza en mobiliario",
+  "muestreo AQL ISO 2859-1 muebles",
+  "no conformidades y retrabajo en fábrica",
+  "documentos de liberación de lote de muebles",
+  "inspección previa al embarque de mobiliario",
+  "semana de transición Feria de Cantón 2026",
+  "compra FF&E con control de calidad",
+  "tolerancias de canteado y taladrado",
+  "control de color en lacado"
+];
+const canonicalPath = "/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD19-a238-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-21";
+const dateModified = "2026-10-21";
+const publicationDateLabel = "Publicada el 21 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué distingue el control de proceso de la inspección final?", answer: "El control de proceso actúa dentro de cada estación y la inspección final actúa sobre el mueble terminado, cuando el coste del error ya está incorporado. Se verifica pidiendo el plan de control por escrito, con el punto de control, el instrumento calibrado y el registro de cada lote; una fábrica que solo puede mostrar el informe del embarque está fotografiando el resultado, no controlando la producción." },
+    { question: "¿Qué es la aprobación de la primera pieza y por qué importa en un pedido de proyecto?", answer: "La primera pieza se produce con la plantilla, el herraje y el acabado definitivos y se inspecciona contra el plano de taller antes de arrancar la serie. Su acta fija la referencia física contra la que se compara cada lote y reparte la responsabilidad: lo que estaba en la pieza aprobada es defecto de especificación y lo que no estaba es defecto de proceso." },
+    { question: "¿Cómo funciona el muestreo AQL en la inspección de mobiliario?", answer: "Se aplica la norma ISO 2859-1: se extrae una muestra del lote y se clasifican los defectos en críticos, mayores y menores, con criterios de aceptación y rechazo por clase. Con una muestra de 50 unidades, un AQL del 2,5 % acepta hasta 3 defectos mayores y rechaza el lote con 4; el plan se acuerda por escrito antes de producir, no en el muelle." },
+    { question: "¿Qué se hace cuando un lote no supera la inspección AQL?", answer: "El lote se rechaza y arranca el bucle de no conformidades: se identifica la pieza y la estación de origen, se clasifica el defecto, se retrabaja o se sustituye y se reinspecciona el cien por cien de las unidades afectadas. El cierre queda registrado con fecha y responsable en el informe que acompaña al certificado de liberación." },
+    { question: "¿Qué documentos debe entregar la fábrica antes del embarque?", answer: "Cinco: el acta de primera pieza, el informe de inspección en línea por lote, el registro de no conformes con su cierre, el informe AQL de pre-embarque y el certificado de liberación con la lista de embalaje y precintos. El certificado solo tiene valor si se puede contrastar con los informes que lo respaldan, y es el documento que el banco revisa en un crédito documentario." },
+    { question: "¿Cuándo conviene visitar la planta durante la Feria de Cantón 2026?", answer: "En la semana de transición, del 20 al 22 de octubre de 2026, cuando el recinto no admite negociación al público y las fábricas trabajan a rendimiento normal; la segunda fase, del 23 al 27 de octubre, reúne el mobiliario. Una visita con cita permite recorrer los puntos de control con la producción en marcha y pedir los registros en el mismo momento en que se generan." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD19-a238-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d19a2-a238-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d19a2-a238-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Control de calidad en proceso &middot; {publicationDateLabel}</p>
+          <h1>Control de calidad en fábrica de muebles: la inspección de proceso entre fases de la Feria de Cantón</h1>
+          <p>Entre la primera fase de la 140.ª Feria de Cantón, del 15 al 19 de octubre de 2026, y la segunda, del 23 al 27 de octubre, la agenda de un comprador de mobiliario de proyecto gana una ventana poco aprovechada: del 20 al 22 de octubre el recinto de Pazhou no abre al público, pero las plantas de Guangdong siguen produciendo y reciben visitas con cita previa (China Foreign Trade Centre, 2026). Es el mejor momento del calendario para examinar, con la línea encendida, cómo se ejecuta la inspección dentro de la fábrica antes de comprometer un pedido. El control de calidad en fábrica de muebles es el conjunto de inspecciones que se ejecutan dentro de cada proceso de producción, con criterios, instrumentos y registros definidos, para detectar y corregir el defecto en la estación donde se origina y no al final de la línea.</p>
+          <p>Sí: un pedido de proyecto se decide en el proceso y no en la inspección final, porque un defecto corregido en su estación cuesta minutos y el mismo defecto descubierto en la recepción del hotel cuesta un vuelo, una cuadrilla y semanas de calendario. Esta guía ordena los seis elementos que un comprador debe verificar en planta durante la semana de transición: los puntos de control de cada proceso, la aprobación de la primera pieza, el muestreo AQL, el cierre de las no conformidades, los documentos de liberación y la evidencia de proyectos ya entregados. Está escrita para el comprador de FF&amp;E hotelero, de oficina, sanitario y educativo, para el contratista general que integra el paquete de mobiliario y para el director de proyecto del estudio de interiorismo que firma la especificación.</p>
+          <p>Detrás de este método está Hongye Furniture Group, fábrica fundada en 1996, con más de 300.000 m² de planta en Heshan (Jiangmen, Guangdong), más de 1.000 proyectos entregados en más de 50 países y certificaciones internacionales entre las que figuran ISO 9001, BIFMA, GREENGUARD Gold, CE y FSC. Trabaja con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y con un MOQ que se negocia por familia de producto y por color. Su planta, a hora y media del recinto ferial de Guangzhou, permite convertir uno de los tres días de transición en una revisión de proceso documentada, usando la producción del día como material de inspección.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD19-a238-hero.jpg" alt="Nave de producción de una fábrica de muebles con máquinas de corte y canteado, rodillos transportadores y mesas de trabajo" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué es el control de calidad en fábrica de muebles y dónde se decide un pedido?</h2>
+        <p>La diferencia entre una fábrica que inspecciona y una que controla el proceso está en el momento de la detección. La inspección final mira el mueble terminado, cuando el coste del error ya está incorporado: tablero cortado, espuma laminada, horas de mano de obra pagadas. El control de proceso interviene antes, estación por estación, con un plan escrito que define qué se mide, con qué instrumento, con qué frecuencia y qué documento lo registra. Ese plan de control es justamente lo que la norma ISO 9001 obliga a documentar y lo primero que un comprador debería pedir ver en planta, no como certificado enmarcado sino como registro con fechas y firmas recientes.</p>
+        <p>Para un proyecto de FF&amp;E, el sistema se comprueba con seis preguntas concretas: si existe un punto de control definido en cada proceso; si la primera pieza de cada referencia se aprueba contra el plano de taller; si el muestreo del lote sigue una norma reconocida, como ISO 2859-1; si las no conformidades quedan registradas con su clasificación; si los retrabajos se reinspeccionan antes de volver a la línea de embalaje; y si el embarque sale con un certificado de liberación respaldado por informes. Una fábrica que responde las seis con documentos a la vista convierte la inspección final en una confirmación rutinaria; una que responde con discursos está pidiendo que el comprador financie su aprendizaje.</p>
+        <p>Esta mirada es distinta de la que se practica en el recinto ferial, donde se valora la muestra terminada, y distinta también de la auditoría general de proveedor, que evalúa organización, capacidad y gestión. El control de proceso entra en el detalle de la operación: la escuadra de un corte, la plantilla de un taladro, la densidad de una espuma, la variación de color entre dos jornadas de lacado. La escala del certamen lo justifica: la 140.ª edición ocupa unos 1.550.000 m² y reúne alrededor de 32.000 expositores, y la 139.ª recibió 314.000 compradores extranjeros de 220 países y regiones (Canton Fair, 2026). Con ese volumen de opciones, lo que diferencia a un proveedor es su línea, no su escaparate. <a href="/recursos/casegoods-habitaciones-hotel-ffe-proyecto/">mobiliario para hoteles</a> explica qué familias concentran el riesgo en un proyecto hotelero; aquí el foco es la línea que las produce.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se aprueba la primera pieza antes de arrancar la serie?</h2>
+        <p>La primera pieza es la unidad que se produce con la plantilla, el herraje y el acabado definitivos antes de lanzar la serie completa. Se inspecciona contra el plano de taller, cota por cota, y se firma un acta en la que constan las medidas verificadas, el herraje montado, el acabado comparado con la muestra patrón y la tolerancia de color aceptada por ambas partes. Solo después de esa firma arranca la producción en serie. Si el acta no existe, la fábrica está produciendo sobre suposiciones y el comprador está pagando por ellas; el día ahorrado en el arranque se paga después en unidades repuestas y en flete aéreo.</p>
+        <p>El acta tiene tres efectos prácticos. Primero, fija la referencia física: la primera pieza sellada se conserva en planta y cada lote posterior se compara contra ella, no contra una fotografía. Segundo, reparte la responsabilidad: un defecto presente en la pieza aprobada es un defecto de especificación y lo corrige quien la especificó; uno ausente en ella es un defecto de proceso y lo corrige la fábrica. Tercero, protege el calendario: en un proyecto con plazo de 30-45 días desde la muestra aprobada, sujeto a contrato, una mañana dedicada a la primera pieza evita semanas de retrabajo y de reprogramación del embarque.</p>
+        <p>Durante la visita, el comprador puede comprobarlo sin pedir nada extraordinario: solicite el archivo de actas de primera pieza y la unidad sellada de una referencia que esté en producción ese mismo día, y compare la pieza que sale de la línea con el acta abierta. Si la coincidencia es inmediata, el sistema funciona; si el archivo no aparece o la pieza sellada no se encuentra, esa es la señal más económica que llevarse del viaje. La aprobación de la primera pieza es, además, el documento que permite discutir un defecto sin entrar en descripciones: basta remitirse al acta y a su fecha.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Puntos de control en los siete procesos de la línea</h2>
+        <p>La producción de muebles de proyecto pasa por siete operaciones consecutivas: despiece y corte de tablero, canteado, mecanizado y taladrado, tapizado y costura, lacado y acabado, montaje con herrajes y embalaje de exportación. En cada una hay un punto de control con tolerancia numérica, un método de medición y un registro asociado. La tabla siguiente resume qué se mide en cada proceso y con qué instrumento, y sirve como guion para el recorrido: en lugar de caminar y observar, el comprador contrasta cada estación con su punto de control y pide el registro del lote que se está fabricando ese día.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Proceso</th><th>Punto de control</th><th>Método e instrumento</th><th>Registro</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Proceso">Corte y canteado</td><td data-label="Punto de control">Escuadra del corte ±0,5 mm, espesor y adherencia del canto</td><td data-label="Método e instrumento">Escuadra digital y test de arrancado de canto</td><td data-label="Registro">Ficha por lote de tablero</td></tr>
+              <tr><td data-label="Proceso">Mecanizado y taladrado</td><td data-label="Punto de control">Posición de taladros ±0,3 mm con plantilla por referencia</td><td data-label="Método e instrumento">Plantilla, galga y primera pieza contra plano</td><td data-label="Registro">Acta de primera pieza</td></tr>
+              <tr><td data-label="Proceso">Tapizado y costura</td><td data-label="Punto de control">Densidad y espesor de espuma, costura reforzada en esquineros</td><td data-label="Método e instrumento">Ficha técnica de espuma y medidor de espesor</td><td data-label="Registro">Ficha por modelo de asiento</td></tr>
+              <tr><td data-label="Proceso">Lacado y acabado</td><td data-label="Punto de control">Espesor de película, adherencia y color con Delta E máximo 1</td><td data-label="Método e instrumento">Medidor de espesor, test de rejilla y espectrofotómetro</td><td data-label="Registro">Informe por lote de color</td></tr>
+              <tr><td data-label="Proceso">Montaje y herrajes</td><td data-label="Punto de control">Herraje homologado, holgura de puertas y cajones, ciclos de apertura</td><td data-label="Método e instrumento">Galga de holgura y ensayo de apertura y cierre</td><td data-label="Registro">Lista de verificación de montaje</td></tr>
+              <tr><td data-label="Proceso">Embalaje de exportación</td><td data-label="Punto de control">Caja contrachapada, esquineros, precinto y etiqueta por ambiente</td><td data-label="Método e instrumento">Lista de bultos, pesos y control de precintado</td><td data-label="Registro">Packing list con número de precinto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dos de esos registros concentran el valor para el comprador. La ficha por lote de tablero vincula cada pieza con su origen y su certificado, de modo que un problema detectado meses después se puede rastrear hasta el lote que lo produjo; sin esa trazabilidad, un reclamo se queda en opinión enfrentada a opinión. Y el acta de primera pieza del mecanizado evita el error más caro de la línea: descubrir un taladro desplazado cuando la serie ya lleva cientos de unidades mecanizadas con la misma plantilla equivocada. Un sistema que no produzca estos dos papeles no es un sistema, es una rutina de ojo experimentado.</p>
+        <p>Las tolerancias de la tabla no son arbitrarias. El margen de ±0,5 mm del corte es lo que un canto de 1 mm necesita para quedar continuo sin escalón visible; el ±0,3 mm del taladrado es lo que un herraje de conexión admite antes de forzar el montaje; y el Delta E máximo de 1 en lacado es el umbral a partir del cual dos paneles del mismo tono se ven distintos cuando se alinean en una pared. Pida ver el instrumento que mide cada tolerancia y compruebe que esté calibrado: un medidor de espesor sin certificado de calibración mide poco más que una impresión.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD19-a238-s1.jpg" alt="Inspectora con calibre digital midiendo un panel canteado, pila de tableros y tablero de verificación en el taller" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Control de calidad en fábrica de muebles: una inspectora mide un panel canteado con calibre digital junto a una pila de tableros y un tablero de verificación con fichas de lote.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Muestreo AQL: cuántas piezas se inspeccionan y cuándo se acepta un lote</h2>
+        <p>Inspeccionar el cien por cien de un pedido de proyecto no es realista ni necesario: lo estándar en la industria es el muestreo de aceptación según ISO 2859-1, el mismo criterio que aplican las inspecciones previas al embarque contratadas con terceros. El plan se acuerda por escrito antes de producir y fija tres cosas: cuántas unidades se extraen del lote, qué se considera defecto crítico, mayor y menor, y cuántos defectos de cada clase acepta o rechaza el lote. Lo que no se acordó antes de arrancar la serie difícilmente se podrá exigir en el muelle de carga, cuando el contenedor ya está en la cola.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Clase de defecto</th><th>Ejemplo en mobiliario de proyecto</th><th>AQL aplicado</th><th>Muestra de 50 unidades</th><th>Resultado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Clase de defecto">Crítico</td><td data-label="Ejemplo en mobiliario de proyecto">Fallo estructural, arista cortante, vidrio sin tratado</td><td data-label="AQL aplicado">0</td><td data-label="Muestra de 50 unidades">Cero defectos permitidos</td><td data-label="Resultado">Un solo caso rechaza el lote</td></tr>
+              <tr><td data-label="Clase de defecto">Mayor</td><td data-label="Ejemplo en mobiliario de proyecto">Cota fuera de tolerancia, herraje no homologado, daño visible</td><td data-label="AQL aplicado">2,5 %</td><td data-label="Muestra de 50 unidades">Aceptar hasta 3, rechazar con 4</td><td data-label="Resultado">Retrabajo y nuevo muestreo</td></tr>
+              <tr><td data-label="Clase de defecto">Menor</td><td data-label="Ejemplo en mobiliario de proyecto">Marca leve de manipulación, variación de tono dentro de lo pactado</td><td data-label="AQL aplicado">4,0 %</td><td data-label="Muestra de 50 unidades">Aceptar hasta 5, rechazar con 6</td><td data-label="Resultado">Corrección sin parar la serie</td></tr>
+              <tr><td data-label="Clase de defecto">Lote rechazado</td><td data-label="Ejemplo en mobiliario de proyecto">Cualquier clase que supere su criterio de aceptación</td><td data-label="AQL aplicado">No aplica</td><td data-label="Muestra de 50 unidades">Reinspección del cien por cien</td><td data-label="Resultado">Nuevo muestreo tras corregir</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los números de la tabla corresponden a un lote del que se extraen 50 unidades, tamaño habitual en pedidos de proyecto de varios cientos de piezas; para lotes mayores, la norma asigna muestras mayores con la misma lógica de aceptación. Lo que el comprador negocia no es la norma, sino la asignación de clases: qué defectos se castigan como mayores. En mobiliario hotelero conviene clasificar como mayor cualquier defecto visible a un metro de distancia en el ambiente terminado, y reservar la clase menor para lo que solo se aprecia en talla corta. Esa definición, escrita en el plan de inspección, evita la discusión posterior sobre si una marca de barniz cuenta o no cuenta.</p>
+        <p>El muestreo cierra el bucle con las no conformidades, y ese bucle revela mejor que nada la madurez de una fábrica. Cuando un lote no supera el criterio, el proceso debe ser siempre el mismo: identificar la pieza y la estación de origen, clasificar el defecto, retrabajarlo o sustituirlo, reinspeccionar el cien por cien de las unidades afectadas y registrar el cierre con fecha y responsable. Un lote que se retrabaja dos veces por la misma causa apunta a un problema de plantilla o de formación en una estación concreta, y ese hallazgo, bien usado, mejora todas las referencias que pasan después por ella.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Documentos de control y liberación del lote: qué se firma antes del embarque</h2>
+        <p>El control de calidad en fábrica de muebles termina en papel, y el comprador debe poder recorrer ese papel de principio a fin. Cinco documentos acompañan a un lote de proyecto desde la línea hasta el puerto, los cinco se pueden pedir durante la visita de planta y ninguno admite sustituto verbal: si algún eslabón falta, el sistema se improvisa a la hora del embarque, que es precisamente el momento en que ya no queda margen para corregir nada en la línea.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Qué certifica</th><th>Quién lo firma</th><th>Cuándo se emite</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">Acta de primera pieza</td><td data-label="Qué certifica">Cotas, herraje y acabado verificados contra el plano de taller</td><td data-label="Quién lo firma">Jefe de calidad y comprador del proyecto</td><td data-label="Cuándo se emite">Antes de arrancar la serie</td></tr>
+              <tr><td data-label="Documento">Informe de inspección en línea</td><td data-label="Qué certifica">Resultados por lote en cada punto de control</td><td data-label="Quién lo firma">Control de calidad de la planta</td><td data-label="Cuándo se emite">Durante la producción</td></tr>
+              <tr><td data-label="Documento">Registro de no conformes</td><td data-label="Qué certifica">Defecto, clasificación, retrabajo y reinspección con cierre</td><td data-label="Quién lo firma">Responsable de calidad</td><td data-label="Cuándo se emite">Cada vez que aparece un defecto</td></tr>
+              <tr><td data-label="Documento">Informe AQL de pre-embarque</td><td data-label="Qué certifica">Muestra extraída, clases de defecto y veredicto del lote</td><td data-label="Quién lo firma">Inspector interno o tercero acordado</td><td data-label="Cuándo se emite">Antes de precintar los bultos</td></tr>
+              <tr><td data-label="Documento">Certificado de liberación</td><td data-label="Qué certifica">El lote cumple la especificación y puede embarcar</td><td data-label="Quién lo firma">Dirección de planta</td><td data-label="Cuándo se emite">Con la lista de embalaje y precintos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El certificado de liberación es el documento que autoriza el embarque, y solo tiene valor si se puede contrastar con los cuatro anteriores: un visto bueno sin informes que lo respalden es una firma suelta. Ese paquete documental es también el que el banco pide en un crédito documentario y el que el equipo de obra consulta cuando una pieza llega dudosa a destino. <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación</a> detalla la parte física del cierre, cajas contrachapadas, esquineros y precintos, que queda recogida en la lista anexa y que conviene revisar bulto por bulto antes del precintado final.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD19-a238-s2.jpg" alt="Informe de inspección, acta de primera pieza, muestras de color y herrajes sobre la mesa de control" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mesa de control con informe de inspección abierto, acta de primera pieza firmada, muestras de color y herrajes de referencia alineados.</figcaption>
+        </figure>
+        <p>En la visita, la prueba del papel es rápida: pida los tres últimos informes de inspección en línea y compare sus fechas con el calendario de producción real. Un registro diario y firmado indica una planta que controla; un informe único al final del pedido indica una planta que fotografía el resultado. El mismo criterio vale para el registro de no conformes: la ausencia de defectos registrados no es una virtud, es una sospecha, porque toda línea de volumen produce incidencias y la diferencia está en si quedan escritas, clasificadas y cerradas.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Lo que el control de proceso salvó en proyectos entregados en tres continentes</h2>
+        <p>Los proyectos entregados cuentan mejor que cualquier procedimiento dónde se decide un pedido. En un hotel de Riad (Arabia Saudí), el acta de primera pieza detectó que el taladro de los cabeceros no coincidía con el herraje de las lámparas de lectura; la plantilla se corrigió el mismo día y la serie, que incluía dormitorio completo, escritorio y banco de equipaje para más de doscientas habitaciones, arrancó limpia y no requirió una sola pieza repuesta en destino. El defecto existió; el sistema impidió que viajara.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Proyecto (ciudad, país)</th><th>Condición del proyecto</th><th>Dónde intervino el control de proceso</th><th>Efecto en la entrega</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Proyecto (ciudad, país)">Hotel, Riad (Arabia Saudí)</td><td data-label="Condición del proyecto">Taladro de cabeceros frente a herraje de lámpara de lectura</td><td data-label="Dónde intervino el control de proceso">Aprobación de primera pieza contra plano</td><td data-label="Efecto en la entrega">Plantilla corregida antes de arrancar la serie</td></tr>
+              <tr><td data-label="Proyecto (ciudad, país)">Residencia de estudiantes, Nairobi (Kenia)</td><td data-label="Condición del proyecto">Densidad de espuma de sillas por debajo de especificación</td><td data-label="Dónde intervino el control de proceso">Muestreo AQL del lote y registro de no conformes</td><td data-label="Efecto en la entrega">Lote sustituido antes del precintado</td></tr>
+              <tr><td data-label="Proyecto (ciudad, país)">Clínica, Ciudad de Panamá (Panamá)</td><td data-label="Condición del proyecto">Variación de tono entre dos jornadas de lacado</td><td data-label="Dónde intervino el control de proceso">Control de color por lote con espectrofotómetro</td><td data-label="Efecto en la entrega">Lote intermedio retrabajado, tono uniforme</td></tr>
+              <tr><td data-label="Proyecto (ciudad, país)">Hotel, Taskent (Uzbekistán)</td><td data-label="Condición del proyecto">Holgura de cajón fuera de galga en mesas de escritorio</td><td data-label="Dónde intervino el control de proceso">Reinspección del cien por cien del lote afectado</td><td data-label="Efecto en la entrega">Corrección en planta en dos jornadas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En la residencia de estudiantes de Nairobi (Kenia), el muestreo del lote de sillas de estudio devolvió unidades con densidad de espuma por debajo de la especificada; el registro de no conformes documentó la sustitución completa antes del precintado y el calendario no se movió un día. En una clínica de Ciudad de Panamá (Panamá), el control de color por lote midió una variación superior a la tolerancia entre dos jornadas de lacado; el lote intermedio se retrabajó y los módulos de recepción llegaron con el mismo tono medible. En un hotel de Taskent (Uzbekistán), la reinspección del cien por cien de un lote de mesas con holgura de cajón fuera de galga evitó que el defecto viajara: se corrigió en planta en dos jornadas.</p>
+        <p>En los cuatro casos el sistema no impidió que apareciera el defecto; impidió que el defecto viajara. Esa es la métrica que un comprador debe llevarse de la visita: no la ausencia de problemas, sino la velocidad con que cada problema se detecta, se registra y se cierra. <a href="/proyectos/">proyectos entregados</a> recoge más casos documentados por ciudad y por tipología. Hongye Furniture Group expone en la 140.ª Feria de Cantón, con recinto en el número 382 de Yuejiang Zhonglu, distrito de Haizhu, Guangzhou, y horario de negociación de 09:30 a 18:00; para acordar una visita de planta durante la semana de transición, escriba por /contacto/ indicando su sector y el país desde el que viaja.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Reserve su visita de planta durante la semana de transición"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar los datos antes de viajar permite coordinar una visita a la fábrica de Heshan (Jiangmen, Guangdong) durante la semana de transición, con recorrido por los puntos de control de la línea, el archivo de actas de primera pieza y los informes de lote a la vista. Para preparar la propuesta necesitamos tres datos: las familias y cantidades por ambiente, el número de habitaciones o la superficie del proyecto y el puerto de destino. Con eso devolvemos el MOQ por familia y por color, el calendario de 30-45 días desde la muestra aprobada, sujeto a contrato, el anexo de certificaciones BIFMA, GREENGUARD Gold, CE y FSC, y el plan de embalaje en cajas de madera contrachapada con esquineros. La carta de invitación no garantiza el visado: la concesión queda a criterio de las autoridades consulares chinas. Hongye Furniture Group."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
