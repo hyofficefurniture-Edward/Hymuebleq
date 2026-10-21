@@ -17,6 +17,7 @@ export function getStaticPaths() {
 }
 
 const { item, notes } = Astro.props;
+const mergedCaseId = ({"Walmart Costa Rica":"off-015","Ahmadi Services Group, Kuwait Oil Company":"off-001","American University in Baghdad":"edu-001"} as Record<string,string>)[item.name];
 const evidenceLabel = getProjectEvidenceLabel(item);
 const summaryEyebrow = evidenceLabel === "Escenario de solución" ? "Resumen del escenario" : "Resumen de la referencia";
 const projectKeywordHeadings = {
@@ -34,6 +35,7 @@ const projectNarrative =
   `${item.name} es una referencia de ${item.sector.toLowerCase()} en ${item.region}. El alcance visible incluye ${notes?.rooms ?? item.scope}. Esta página resume qué espacios se pueden comparar, qué evidencia se revisó y cómo usar la referencia antes de solicitar una cotización por proyecto.`;
 ---
 <BaseLayout
+  canonicalPath={mergedCaseId ? `/proyectos/biblioteca/${mergedCaseId}/` : undefined}
   title={projectPageTitle}
   description={item.seoDescription ?? `${projectKeywordHeading}. ${item.name} como referencia documentada para revisar alcance antes de cotizar.`}
   keywords={item.seoKeywords}

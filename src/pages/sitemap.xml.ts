@@ -2,7 +2,9 @@ import type { APIRoute } from "astro";
 import { catalogCategoryDetails } from "../data/catalogReferences";
 import { categories, hotelCatalog, projects } from "../data/site";
 
+import libraryProjects from "../data/project-library.json";
 const staticPaths = [
+  "/grupo-y-marcas/",
   "/",
   "/catalogo/",
   "/catalogo/hoteles/",
@@ -178,6 +180,7 @@ export const GET: APIRoute = ({ site }) => {
   const siteUrl = site ?? new URL("https://hymueble.com");
   const paths = [
     ...staticPaths,
+    ...libraryProjects.map(p=>`/proyectos/biblioteca/${p.id}/`),
     ...categories.flatMap((category) => [category.href, category.catalog, category.projects]),
     ...hotelCatalog.map((item) => item.href),
     ...catalogCategoryDetails.map((item) => `/catalogo/${item.sector}/${item.slug}/`),
