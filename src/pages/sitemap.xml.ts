@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/salas-de-juntas-mobiliario-oficina-proyecto/",
   "/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/",
   "/recursos/ruta-fabricas-muebles-guangzhou-jiangmen-foshan/",
   "/recursos/casegoods-habitaciones-hotel-ffe-proyecto/",

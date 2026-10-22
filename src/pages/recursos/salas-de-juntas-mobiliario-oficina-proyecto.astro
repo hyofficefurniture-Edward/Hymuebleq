@@ -1,0 +1,470 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para salas de juntas: proyecto de 6 a 16 puestos";
+const pageDescription = "Guía de mobiliario para salas de juntas: escala de mesa de 6 a 16 puestos, videoconferencia y cableado, conversión a aula, BIFMA y entrega del proyecto.";
+const keywords = [
+  "mobiliario para salas de juntas",
+  "mesa de reuniones de proyecto",
+  "sala de consejo 16 puestos",
+  "dimensiones mesa de juntas por persona",
+  "videoconferencia sala de juntas cableado",
+  "módulos de energía y datos en mesa de reuniones",
+  "acústica sala de juntas paneles",
+  "sala de juntas convertible en aula de formación",
+  "BIFMA estabilidad mesa de reuniones",
+  "embalaje e instalación mobiliario de oficina",
+  "MOQ mobiliario de oficina",
+  "salas de juntas para sede corporativa"
+];
+const canonicalPath = "/recursos/salas-de-juntas-mobiliario-oficina-proyecto/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD20-a240-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-22";
+const dateModified = "2026-10-22";
+const publicationDateLabel = "Publicada el 22 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cuántos puestos caben en una sala de juntas de 4 × 6 metros?", answer: "Caben 12 puestos en configuración ajustada y 10 con holgura. Con 24 m² y una mesa de 420-480 cm, el fondo libre tras la silla queda en 110 cm, que permite levantarse y circular por detrás de los ocupados; para 16 puestos la sala necesita 30-36 m² y una mesa de 560-640 cm." },
+    { question: "¿A qué altura se colocan la cámara y la pantalla en una sala de videoconferencia?", answer: "La cámara va a la altura de los ojos, entre 100 y 120 cm del suelo, y la pantalla con el borde inferior entre 90 y 110 cm. La distancia de visionado se calcula entre 1,2 y 1,5 veces la diagonal, de modo que una pantalla de 86 pulgadas se ve entre 2,6 y 3,3 m; por debajo de esa distancia, la sala obliga a girar la cabeza para seguir la imagen." },
+    { question: "¿Cómo se calcula el número de tomas por puesto en una mesa de reuniones?", answer: "Se calculan dos tomas de corriente, una de datos y un puerto de vídeo por puesto, más tres tomas de servicio para pantalla, sonido y reserva. El cálculo se hace por circuito y no por mesa: doce puestos con cargadores de portátil consumen más que cuatro puestos individuales, y conviene un circuito independiente para la sala cuando se usa a diario." },
+    { question: "¿Se puede convertir una sala de juntas en aula sin cambiar el mobiliario?", answer: "Sí, si la mesa es modular y las sillas tienen brazos abatibles y se apilan. Con cuatro módulos de 2,4 m, sillas apilables de cuatro a seis unidades y cajas de suelo cada 120-150 cm, una sala de 12 puestos pasa a 24 plazas en 40-60 minutos; con mesa fija y sillas de dirección, la conversión no es viable." },
+    { question: "¿Qué ensayos y certificados se piden para una mesa de reuniones?", answer: "Se piden los ensayos de resistencia y estabilidad según ANSI/BIFMA X5.5 y las normas EN 527-2 y EN 527-3, y para las sillas el ensayo EN 16139 con 200.000 ciclos. En materiales, GREENGUARD Gold limita los compuestos orgánicos volátiles totales a 0,22 mg/m³ y el formaldehído a 7,3 ppb, y la cadena de custodia FSC se audita contra la norma FSC-STD-40-004." },
+    { question: "¿Cuál es el MOQ y el plazo de entrega de una sala de juntas de proyecto?", answer: "El MOQ se negocia por familia y por acabado, y el plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato. A ese plazo se suman el tránsito marítimo y el montaje en obra; para una sala de consejo con mesa en tramos conviene reservar una jornada de instalación y tener el acta de primera pieza firmada antes de arrancar la serie." },
+    { question: "¿Hay referencias de salas de reuniones entregadas fuera de China?", answer: "Sí, hay referencias documentadas en Europa, América y Asia Central. En el Hilton Tashkent City (Taskent, Uzbekistán) el paquete incluyó 295 habitaciones, 1.770 piezas y las salas de reuniones del edificio, con producción y montaje en 52 días; en una sede corporativa de Ciudad de México (México) la mesa de 24 puestos se entregó en cuatro tramos con un solo punto de red." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD20-a240-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d20a2-a240-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d20a2-a240-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Oficina · Mobiliario para salas de juntas &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para salas de juntas: cómo se equipa una sala de 6 a 16 puestos</h1>
+          <p>El mobiliario para salas de juntas es el sistema de mesa, sillas, pantalla, módulos de energía y datos y paneles acústicos que se especifica para una sala de reuniones o un consejo de administración, dimensionado por número de puestos y por la geometría de la videoconferencia, y entregado con planos de planta, esquema de cableado y acta de instalación. La diferencia con una mesa grande rodeada de sillas está en que cada componente se calcula: el borde por persona, el fondo libre tras la silla, la altura de la cámara y la capacidad eléctrica de la sala.</p>
+          <p>La sala de juntas es el espacio con mayor coste por metro cuadrado de una oficina corporativa. Por eso el pedido se trata como proyecto y no como compra de catálogo: intervienen el director de proyecto del estudio que firma la planta, el jefe de compras que negocia el MOQ y el coordinador de obra que recibe los bultos en la planta 14. Cuando los tres leen el mismo plano, la sala se instala en una jornada; cuando no, la mesa llega en dos tramos que no se pueden unir y el tablero espera tres semanas dentro de su caja.</p>
+          <p>Detrás de este método está Hongye Furniture Group Commercial, fábrica fundada en 1996, con más de 300.000 m² de planta en Heshan (Jiangmen, Guangdong), más de 1.000 proyectos entregados en más de 50 países y certificaciones ISO 9001, BIFMA, GREENGUARD Gold, CE y FSC. Trabaja con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y con un MOQ que se negocia por familia y por acabado. Las salas de juntas se fabrican en la misma planta que los paquetes de habitación y los puestos de trabajo, lo que permite unificar acabados y herrajes en un solo pedido.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD20-a240-hero.jpg" alt="Sala de juntas panorámica con mesa larga de doce puestos, sillas presidenciales de cuero y colgante lineal junto a ventanales" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué distingue el mobiliario para salas de juntas del mobiliario de oficina general?</h2>
+        <p>Lo que distingue al mobiliario para salas de juntas es la densidad de integración por metro cuadrado: en un puesto de trabajo hay una silla, un tablero y una toma, mientras que en una mesa de doce puestos hay doce sillas, doce posiciones de energía, una canaleta central, dos pantallas y un punto de red que alimenta la sala. Esa concentración obliga a resolver la mesa como un mueble técnico, con recorridos internos de cableado, tapas registrables y ventilación. Un tablero de 480 cm con doce usuarios y doce cargadores consume más circuitos que cuatro puestos individuales, y ese cálculo se hace en la fase de plano.</p>
+        <p>El segundo rasgo es la jerarquía de uso. Una sala de consejo puede usarse ocho veces al año y recibe a la dirección; una sala de reuniones se reserva cuatro veces al día y recibe a equipos de proyecto. La primera admite un tablero de 16 puestos, sillas de dirección con brazos y acabados en madera; la segunda pide mesas de 6 a 8 puestos, sillas operativas y superficies fáciles de limpiar. Confundir las dos lleva a comprar sillones de consejo para una sala que se usa a diario, con el desgaste que eso supone en tapizado y mecanismo.</p>
+        <p>El tercer rasgo es que la sala se entrega como conjunto verificable: mesa, sillas, pantalla y paneles llegan con el mismo tono de acabado, la misma tornillería y una lista de piezas por ambiente. Esa uniformidad se nota en la tercera reunión, cuando la mesa nueva no coincide con el aparador que ya estaba. La sala de juntas suele ser la última partida de un <a href="/recursos/amueblamiento-oficinas-proyectos-corporativos/">amueblamiento de oficinas para empresas</a>, y por eso arrastra las decisiones de acabado de todo el piso.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>La escala de la mesa: 6, 8, 12 y 16 puestos</h2>
+        <p>La mesa se dimensiona por el borde disponible para cada persona, no por el número de sillas que caben. La práctica de ergonomía de oficina sitúa el borde útil entre 60 y 80 cm por persona: por debajo de 60 cm los codos se tocan y el portátil invade el sitio del vecino, y por encima de 90 cm la conversación se dispersa en una mesa demasiado larga. Con ese criterio, la escala de 6, 8, 12 y 16 puestos queda como sigue, con el fondo libre medido desde el borde del tablero hasta la pared o el mueble más próximo.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Puestos</th><th>Largo × ancho (cm)</th><th>Borde por persona</th><th>Fondo libre tras la silla</th><th>Superficie mínima de sala</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Puestos">6</td><td data-label="Largo × ancho (cm)">240 × 110-120</td><td data-label="Borde por persona">80 cm</td><td data-label="Fondo libre tras la silla">90 cm</td><td data-label="Superficie mínima de sala">8-9 m²</td></tr>
+              <tr><td data-label="Puestos">8</td><td data-label="Largo × ancho (cm)">280-300 × 120-140</td><td data-label="Borde por persona">70-75 cm</td><td data-label="Fondo libre tras la silla">100 cm</td><td data-label="Superficie mínima de sala">12-14 m²</td></tr>
+              <tr><td data-label="Puestos">12</td><td data-label="Largo × ancho (cm)">420-480 × 140-150</td><td data-label="Borde por persona">70-80 cm</td><td data-label="Fondo libre tras la silla">110 cm</td><td data-label="Superficie mínima de sala">20-24 m²</td></tr>
+              <tr><td data-label="Puestos">16</td><td data-label="Largo × ancho (cm)">560-640 × 150-160</td><td data-label="Borde por persona">70-80 cm</td><td data-label="Fondo libre tras la silla">120 cm</td><td data-label="Superficie mínima de sala">30-36 m²</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El ancho del tablero tiene su propia lógica: 110-120 cm permiten colocar un portátil, un cuaderno y una botella sin que nada caiga al suelo; 140-150 cm añaden espacio para documentos compartidos y para dos pantallas pequeñas en el centro; 160 cm es el ancho de una mesa de consejo donde se sirve un aperitivo de trabajo. En mesas de más de 8 puestos conviene además una línea central de servicios, de 20 a 30 cm, que aloja las tomas y deja libre el borde de trabajo.</p>
+        <p>El fondo libre tras la silla es la medida que más se olvida en planta. Con 90 cm una persona se levanta sin empujar la silla contra la pared; con 120 cm hay circulación detrás de los ocupados, que es lo que necesita una sala donde entra y sale gente durante la reunión. Si la puerta está en el lado largo, el pasillo debe llegar a la cabecera sin pasar por detrás de nadie. Estas cotas fijan además la posición de las cajas de suelo en obra.</p>
+        <p>En 16 puestos, la mesa rara vez es una sola pieza: se fabrica en dos o tres tramos con unión oculta, se transporta en cajas de 240 cm y se ensambla en la sala. La unión debe quedar a la altura de una pata o de un módulo central, nunca en el punto donde se apoya el codo de quien preside, porque es donde aparece la flecha con los años. Un tablero de 640 cm con canto recto y una viga de acero interior sostiene la luz sin apoyos intermedios; con dos patas centrales mal calculadas, la mesa se convierte en un trampolín en cuanto alguien se apoya en el extremo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se integra la videoconferencia sin que el cableado invada la mesa?</h2>
+        <p>Se integra en el plano de la mesa y no después de la instalación: la posición de la cámara, la altura de la pantalla y el recorrido del cableado se fijan antes de fabricar el tablero. Cuando la sala se resuelve al final, el resultado es una mesa con una regleta atornillada en el canto y un cable cruzando por encima cada vez que alguien entra en la sala; cuando se resuelve en plano, las tomas quedan enrasadas y el cable viaja por dentro del mueble hasta el registro central.</p>
+        <p>La geometría de la cámara manda sobre la decoración. La cámara se sitúa a la altura de los ojos de quien está sentado, entre 100 y 120 cm del suelo, y a una distancia de 2,5 a 4 m del primer puesto. La pantalla se cuelga con el borde inferior entre 90 y 110 cm, y la distancia de visionado se calcula entre 1,2 y 1,5 veces la diagonal: para una pantalla de 86 pulgadas, entre 2,6 y 3,3 m. Si hay una ventana en la pared de enfrente, ninguna cámara compensa el contraluz, y el remedio es una cortina de tejido denso o un cambio de orientación de la mesa.</p>
+        <p>El cableado se resuelve dentro del mueble o no se resuelve. La práctica que funciona es una canaleta perimetral bajo el tablero, con paso cada 60-80 cm, un registro central de 30 × 15 cm y módulos de energía y datos con tapa abatible en cada posición. Cada puesto necesita dos tomas de corriente, una de red y un puerto de vídeo; la mesa necesita además una toma para la pantalla, otra para la barra de sonido y una línea de reserva. Corriente y datos se separan al menos 20 cm en los recorridos paralelos para evitar interferencias, y todo el conjunto se etiqueta en el plano de la sala.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Criterio de proyecto</th><th>Valor de referencia</th><th>Dónde se resuelve</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Cámara</td><td data-label="Criterio de proyecto">Altura y distancia al primer puesto</td><td data-label="Valor de referencia">100-120 cm; 2,5-4 m</td><td data-label="Dónde se resuelve">Pared frontal o sobre la pantalla</td></tr>
+              <tr><td data-label="Elemento">Pantalla</td><td data-label="Criterio de proyecto">Borde inferior y distancia de visionado</td><td data-label="Valor de referencia">90-110 cm; 1,2-1,5 × diagonal</td><td data-label="Dónde se resuelve">Soporte fijo, elevador o carro</td></tr>
+              <tr><td data-label="Elemento">Módulo de energía</td><td data-label="Criterio de proyecto">Tomas por puesto</td><td data-label="Valor de referencia">2 corriente, 1 dato y 1 vídeo</td><td data-label="Dónde se resuelve">Tapa abatible en el tablero</td></tr>
+              <tr><td data-label="Elemento">Canaleta</td><td data-label="Criterio de proyecto">Paso y registro central</td><td data-label="Valor de referencia">Cada 60-80 cm; registro 30 × 15 cm</td><td data-label="Dónde se resuelve">Bajo tablero y pata central</td></tr>
+              <tr><td data-label="Elemento">Iluminación</td><td data-label="Criterio de proyecto">Nivel sobre la mesa y deslumbramiento</td><td data-label="Valor de referencia">300-500 lux, sin fuente en el eje de cámara</td><td data-label="Dónde se resuelve">Luminarias lineales sobre el eje</td></tr>
+              <tr><td data-label="Elemento">Acústica</td><td data-label="Criterio de proyecto">Absorción en paredes laterales</td><td data-label="Valor de referencia">αw de 0,60 o superior</td><td data-label="Dónde se resuelve">Paneles textiles o de madera perforada</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La acústica cierra el sistema y es la partida que más se recorta sin necesidad. Una sala de 30 m² con techo de 2,7 m, mesa de 12 puestos y paredes desnudas devuelve una reverberación que obliga a subir el altavoz y multiplica el eco en la otra punta de la llamada; dos paneles de 120 × 60 cm en los laterales, a la altura de la cabeza, cambian la percepción. El coeficiente de absorción se declara según ISO 11654, y un panel con αw de 0,60 o superior se clasifica como absorbente (ISO). El textil con certificación GREENGUARD Gold evita además que la sala cerrada concentre emisiones: el programa limita los compuestos orgánicos volátiles totales a 0,22 mg/m³ y el formaldehído a 7,3 ppb (UL Environment).</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD20-a240-s1.jpg" alt="Mesa de juntas de doce puestos con módulos de energía enrasados y colgante lineal en una sala de dirección" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Sala de juntas de doce puestos con mesa de tablero continuo de chapa de nogal, módulos de energía enrasados en la superficie y colgante lineal sobre el eje de la mesa</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Se puede convertir la sala de juntas en aula de formación?</h2>
+        <p>Sí, la conversión funciona cuando la mesa y las sillas se eligen con el cambio previsto; lo que no funciona es improvisarla con el mobiliario de una sala fija. Una sala de 12 puestos de consejo se convierte en aula para 24 personas si la mesa se divide en cuatro módulos de 2,4 m, las sillas se apilan y queda un pasillo central de 120 cm. El cambio lo hacen dos personas en 40-60 minutos, y esa cifra decide si la sala se usa de verdad o se queda reservada para el comité trimestral.</p>
+        <p>El mobiliario que sirve a los dos usos tiene tres rasgos. Las mesas llevan unión enrasada y patas plegables o ruedas con freno, de modo que un módulo de 2,4 m se maneja solo y no obliga a levantar peso muerto. Las sillas tienen brazos abatibles y se apilan de cuatro a seis unidades, con el asiento y el respaldo en el mismo plano para no marcar el tapizado. Y la sala cuenta con un armario o un aparador con hueco de 40 cm donde guardar los módulos que no se usan, porque una mesa plegada en el pasillo es un problema de seguridad y no una solución.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Sala de juntas</th><th>Aula de formación</th><th>Solución que cubre ambas</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio">Mesa</td><td data-label="Sala de juntas">Una pieza de 12 puestos</td><td data-label="Aula de formación">Módulos de 2-3 puestos</td><td data-label="Solución que cubre ambas">Tableros con unión enrasada y pata plegable</td></tr>
+              <tr><td data-label="Criterio">Silla</td><td data-label="Sala de juntas">Dirección con brazos fijos</td><td data-label="Aula de formación">Apilable con pala</td><td data-label="Solución que cubre ambas">Brazos abatibles, apilable de 4 a 6</td></tr>
+              <tr><td data-label="Criterio">Cableado</td><td data-label="Sala de juntas">Registro central y módulos fijos</td><td data-label="Aula de formación">Regletas en el perímetro</td><td data-label="Solución que cubre ambas">Suelo técnico con cajas registrables</td></tr>
+              <tr><td data-label="Criterio">Pantalla</td><td data-label="Sala de juntas">Fija en la pared frontal</td><td data-label="Aula de formación">Móvil o en carro</td><td data-label="Solución que cubre ambas">Soporte móvil con bloqueo y anclaje</td></tr>
+              <tr><td data-label="Criterio">Almacenaje</td><td data-label="Sala de juntas">Aparador bajo</td><td data-label="Aula de formación">Carro de mesas</td><td data-label="Solución que cubre ambas">Aparador con hueco de 40 cm</td></tr>
+              <tr><td data-label="Criterio">Acústica</td><td data-label="Sala de juntas">Paneles laterales</td><td data-label="Aula de formación">Panel y cortina</td><td data-label="Solución que cubre ambas">Panel textil modular</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El punto crítico de la conversión es la energía. En configuración de aula, la mitad de los asistentes se sienta donde antes había un pasillo y no tiene toma cerca; si la sala no tiene cajas de suelo registrables cada 120-150 cm, el día de la formación aparece una cadena de regletas cruzando el suelo. Esa caja se decide en obra, antes del solado, y cuesta una fracción de lo que cuesta abrir el suelo después. La misma lógica se aplica al vídeo: un soporte móvil con bloqueo permite llevar la pantalla a la cabecera del aula sin desmontar el cableado fijo de la mesa.</p>
+        <p>En un centro de negocios de Lima (Perú), la sala se reservaba como consejo dos días al mes y como aula el resto; el proyecto se resolvió con cuatro módulos de 2,4 m, sillas de brazos abatibles y tres cajas de suelo, y el cambio quedó en 45 minutos con dos personas de la propia recepción. La sala pasó de 12 a 24 plazas sin obra nueva y el mobiliario de formación dejó de comprarse por separado.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuatro salas y un problema de proyecto en cada una</h2>
+        <p>Las salas que se entregan bien comparten un rasgo: el problema se detectó en plano o en fábrica, no en la planta del cliente. Los cuatro casos siguientes corresponden a proyectos de oficina corporativa y a un paquete hotelero con salas de reuniones, y en cada uno la solución cambió el mobiliario y el orden de montaje, no el discurso comercial.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Proyecto (ciudad, país)</th><th>Condición de la sala</th><th>Intervención en el proyecto</th><th>Efecto en la entrega</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Proyecto (ciudad, país)">Sede corporativa, Ciudad de México (México)</td><td data-label="Condición de la sala">24 puestos en U, tres pantallas y doble circuito</td><td data-label="Intervención en el proyecto">Mesa en cuatro tramos con registro central y canaleta perimetral</td><td data-label="Efecto en la entrega">Cero tomas a la vista y un punto de red por mesa</td></tr>
+              <tr><td data-label="Proyecto (ciudad, país)">Centro de negocios, Lima (Perú)</td><td data-label="Condición de la sala">Sala convertible de 12 a 24 plazas</td><td data-label="Intervención en el proyecto">Módulos de 2,4 m con unión enrasada y cajas de suelo</td><td data-label="Efecto en la entrega">Cambio de configuración en 45 minutos</td></tr>
+              <tr><td data-label="Proyecto (ciudad, país)">Sede financiera, Riad (Arabia Saudí)</td><td data-label="Condición de la sala">16 puestos con carga puntual en el borde</td><td data-label="Intervención en el proyecto">Viga interior y patas centrales de base ancha</td><td data-label="Efecto en la entrega">Estabilidad verificada antes del embarque</td></tr>
+              <tr><td data-label="Proyecto (ciudad, país)">Oficina corporativa, Milán (Italia)</td><td data-label="Condición de la sala">12 puestos con techo de yeso y paredes desnudas</td><td data-label="Intervención en el proyecto">Paneles absorbentes en los dos laterales</td><td data-label="Efecto en la entrega">Reverberación corregida sin obra</td></tr>
+              <tr><td data-label="Proyecto (ciudad, país)">Hilton Tashkent City, Taskent (Uzbekistán)</td><td data-label="Condición de la sala">Salas de reuniones dentro de un paquete de 295 habitaciones</td><td data-label="Intervención en el proyecto">1.770 piezas coordinadas con el mobiliario de habitación</td><td data-label="Efecto en la entrega">52 días de producción y montaje</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En la sede de Ciudad de México (México), la mesa de 24 puestos en U se diseñó en cuatro tramos porque el montacargas del edificio admitía cajas de 240 cm y el acceso a la planta 22 tenía una puerta de 90 cm. El registro central se situó en el tramo de la cabecera y la canaleta recorrió el perímetro por dentro del cajón de las patas; el resultado fue una mesa sin una sola toma a la vista y un único punto de red por mesa, en lugar de veinticuatro cables bajando al suelo.</p>
+        <p>En la sede financiera de Riad (Arabia Saudí), el requisito era que la mesa de 16 puestos no se moviera al apoyarse en el extremo durante una presentación. Se fabricó con viga de acero interior y dos patas centrales de base ancha, y el conjunto se ensayó con carga en el borde antes de embarcar; la norma EN 527-3 recoge el ensayo de estabilidad de mesas de trabajo con la carga aplicada en la posición de uso (CEN). En Milán (Italia), la sala de 12 puestos tenía techo de yeso y paredes desnudas, y dos paneles absorbentes por lateral resolvieron la reverberación sin tocar la obra.</p>
+        <p>En el Hilton Tashkent City (Taskent, Uzbekistán), el paquete de 295 habitaciones incluyó 1.770 piezas y las salas de reuniones del edificio, con el mismo acabado de madera que los <a href="/recursos/casegoods-habitaciones-hotel-ffe-proyecto/">casegoods de habitación</a>; la producción y el montaje se cerraron en 52 días. Es el tipo de proyecto en el que la sala de juntas no se compra aparte: se coordina con el resto del paquete para que el tono, el herraje y el embalaje sean los mismos.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué debe incluir una solicitud de cotización de mobiliario para salas de juntas?</h2>
+        <p>Una solicitud de cotización de mobiliario para salas de juntas debe incluir cinco datos: el número de puestos y la configuración, la planta con las cotas de la sala, el esquema de vídeo con la posición de cámara y pantalla, el número de tomas por puesto y la fecha en que la sala debe estar operativa. Con esos cinco, la cotización se cierra sin idas y vueltas. Sin ellos, el proveedor presupuesta una mesa genérica y las diferencias aparecen en la instalación.</p>
+        <p>La parte técnica se pide por escrito. En mesas, los ensayos de resistencia y estabilidad se refieren a ANSI/BIFMA X5.5 y a las normas EN 527-2 y EN 527-3; en sillas de uso contract, la referencia es EN 16139, que somete el asiento y el respaldo a 200.000 ciclos de carga y descarga en el nivel de uso severo (CEN). Los certificados de materiales se piden por familia: BIFMA para el comportamiento del mueble, GREENGUARD Gold para emisiones, FSC para la madera y CE para los componentes eléctricos integrados, que se rigen por la directiva de baja tensión y no por el tablero.</p>
+        <p>El embalaje y la instalación se acuerdan en la misma conversación que el MOQ. Una mesa de 480 cm viaja en dos o tres cajas con esquineros y separadores, y la lista de bultos debe indicar el orden de montaje por sala, no por contenedor. El MOQ se negocia por familia y por acabado, y el plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato. Conviene pedir además el plano de taladros y el acta de primera pieza. El detalle de cajas y precintos está en <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación</a>. Escriba a /contacto/ con la planta de la sala y el número de puestos, y la propuesta vuelve con el despiece, el esquema de cableado y el calendario.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD20-a240-s2.jpg" alt="Bultos de exportación con esquineros y lista de montaje para tableros de sala de juntas" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Bultos de exportación con esquineros y separadores para tableros de reunión, con la lista de bultos y el orden de montaje por sala.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite cotización para su sala de juntas"
+      text="Envíe la planta de la sala y el número de puestos por /contacto/ y reciba una propuesta con despiece, esquema de cableado y calendario de entrega. Para cotizar necesitamos cinco datos: los puestos y la configuración, la planta con las cotas, la posición de cámara y pantalla, las tomas por puesto y la fecha en que la sala debe estar operativa. Con eso devolvemos el MOQ por familia y por acabado, el plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, el anexo de certificaciones BIFMA, GREENGUARD Gold, CE y FSC y el plan de embalaje en cajas de madera contrachapada con esquineros y separadores. Hongye Furniture Group Commercial fabrica en Heshan (Jiangmen, Guangdong), desde 1996, con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países y soporte de instalación por sala. Las salas de consejo con mesa en tramos se planifican con acta de primera pieza y lista de bultos ordenada por ambiente."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
