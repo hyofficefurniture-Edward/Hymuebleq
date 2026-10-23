@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/materiales-acabados-mobiliario-fase-2-feria-canton/",
   "/recursos/salas-de-juntas-mobiliario-oficina-proyecto/",
   "/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/",
   "/recursos/ruta-fabricas-muebles-guangzhou-jiangmen-foshan/",

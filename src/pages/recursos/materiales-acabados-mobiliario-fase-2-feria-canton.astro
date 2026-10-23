@@ -1,0 +1,467 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Materiales y acabados de mobiliario: comparar en la Fase 2";
+const pageDescription = "Materiales y acabados de mobiliario: seis indicadores para comparar tablero, canto, herraje y espuma en la Fase 2 de la Feria de Cantón.";
+const keywords = [
+  "materiales y acabados de mobiliario",
+  "comparar materiales en la Feria de Cantón",
+  "segunda fase Feria de Cantón 2026 mobiliario",
+  "sustrato y grado del tablero",
+  "clase de abrasión del revestimiento",
+  "espesor y sellado del canto",
+  "ciclos del herraje",
+  "densidad de espuma contract",
+  "acabado de piezas metálicas",
+  "matriz de comparación de proveedores",
+  "especificación y BOQ de mobiliario",
+  "MOQ y plazo de producción"
+];
+const canonicalPath = "/recursos/materiales-acabados-mobiliario-fase-2-feria-canton/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD21-a242-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-23";
+const dateModified = "2026-10-23";
+const publicationDateLabel = "Publicada el 23 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué se compara primero al elegir materiales y acabados de mobiliario?", answer: "Se compara primero el sustrato, porque define la rigidez, el peso y la resistencia a la humedad del mueble. Sobre él se ordenan el revestimiento y su clase de abrasión, el canto, el herraje, la espuma y el acabado metálico, que son los cinco indicadores restantes de la misma ficha de comparación." },
+    { question: "¿Cómo se distinguen dos tableros que se llaman igual en la Feria de Cantón?", answer: "Se distinguen por la ficha técnica y no por el nombre: tipo de tablero, densidad en kg/m³, clase de emisión, espesor real y tolerancia. La norma EN 13986 recoge las propiedades y la clasificación de los tableros derivados de la madera, y una diferencia de 100 kg/m³ o de 0,6 mm de espesor cambia el comportamiento del canto y el ajuste de los herrajes." },
+    { question: "¿Qué espesor de canto conviene pedir para un mueble de hotel?", answer: "Conviene un canto ABS de 2 mm con encolado PUR para cualquier borde que reciba golpes o humedad. El canto de 0,4 mm abarata la pieza y se despega en la primera esquina golpeada, mientras que el encolado PUR resiste mejor la limpieza húmeda que el EVA; la diferencia de coste se recupera con una sola reposición evitada." },
+    { question: "¿Qué documentos se piden en el stand para validar un herraje?", answer: "Se piden la referencia del herraje, los ciclos declarados, la carga admitida y el informe de ensayo con el laboratorio y la fecha. Las normas EN 15570 y EN 15338 fijan los ensayos de bisagras y de guías de extensión; sin ese documento, la promesa de cierre suave no se puede comparar entre dos proveedores." },
+    { question: "¿Cómo se evita el error de color al comparar acabados en la feria?", answer: "Se evita sacando la muestra fuera del stand, comparándola a la misma hora, con fondo neutro y a 45 grados, y confirmándola con una probeta de 20 x 20 cm del lote. La luz del stand sube la temperatura de color y satura los tonos cálidos, de modo que un gris parece beige; la probeta se aprueba después en la luz del proyecto." },
+    { question: "¿Cuánto tarda un pedido con la especificación cerrada y qué MOQ se maneja?", answer: "El plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato, y el MOQ se negocia por familia y por acabado. A ese plazo se suman el tránsito y la instalación; si la especificación llega cerrada desde la feria, con probeta del lote y ensayos adjuntos, el pedido arranca sin la ronda de aclaraciones que suele costar dos o tres semanas." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD21-a242-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d21a2-a242-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d21a2-a242-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Materiales y acabados &middot; {publicationDateLabel}</p>
+          <h1>Materiales y acabados de mobiliario: cómo compararlos en la Fase 2 de la Feria de Cantón</h1>
+          <p>Los materiales y acabados de mobiliario son el conjunto de decisiones que determinan de qué está hecho un mueble y cómo se comporta su superficie: el tablero y su grado, el revestimiento y su clase de abrasión, el canto y su sellado, el herraje y sus ciclos, la estructura del tapizado con la densidad de la espuma y el tratamiento de las piezas metálicas. Dos ofertas pueden describir la misma mesa con las mismas palabras y esconder especificaciones distintas en esos seis puntos, y la diferencia se paga en mantenimiento durante toda la vida útil de la pieza.</p>
+          <p>La segunda fase de la 140.ª Feria de Cantón se celebra del 23 al 27 de octubre de 2026 y concentra los sectores de mobiliario y decoración del hogar (China Foreign Trade Centre, 2026). El recinto ocupa unos 1,55 millones de m² y reúne a cerca de 32.000 expositores en la misma edición (China Foreign Trade Centre, 2026); en la 139.ª, los compradores extranjeros procedían de 220 países y regiones, con 314.000 asistentes (China Foreign Trade Centre, 2026). Ese volumen es a la vez una ventaja y un riesgo: permite ver seis proveedores de la misma familia antes de comer y también confundir seis acabados distintos bajo una luz que no es la del proyecto.</p>
+          <p>Detrás de este método está Hongye Furniture Group Commercial, fábrica fundada en 1996, con más de 300.000 m² de planta en Heshan (Jiangmen, Guangdong), más de 1.000 proyectos entregados en más de 50 países y certificaciones ISO 9001, BIFMA, GREENGUARD, CE y FSC. Trabaja con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y con un MOQ que se negocia por familia y por acabado. Este artículo no explica cómo se audita una fábrica ni cómo se negocia el precio, sino cómo se comparan, en el mismo recinto y con el mismo criterio, los materiales y los acabados de varios proveedores que ofrecen lo mismo.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD21-a242-hero.jpg" alt="Mesa de comparación con muestras de tablero, chapas y cantos en un pabellón ferial durante la Fase 2" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se compara cuando se habla de materiales y acabados de mobiliario?</h2>
+        <p>Se comparan seis indicadores técnicos y nada más: el sustrato y su grado, el revestimiento y la clase de abrasión, el canto y su sellado, el herraje y sus ciclos, la estructura del tapizado con la densidad de la espuma, y el acabado de los elementos metálicos. Todo lo demás, del color del catálogo a la forma de la pata, se decide después. El problema es que el nombre comercial no dice nada: dos tableros llamados igual pueden ser un aglomerado de 620 kg/m³ con canto de 0,4 mm o un MDF de 750 kg/m³ con canto de 2 mm y encolado PUR, y la diferencia aparece en el primer invierno húmedo.</p>
+        <p>En el recinto, la comparación se complica por tres razones concretas. La primera es la luz: la iluminación de un stand sube la temperatura de color y satura los tonos cálidos, de modo que un roble claro parece miel y un gris parece beige. La segunda es la escala de la muestra: un tablero de 10 x 10 cm no enseña la veta ni el empalme de la chapa. La tercera es el guion comercial, que responde a lo que se pregunta y no a lo que conviene saber. Un comprador que llega con una ficha de seis líneas y la misma pregunta para todos obtiene datos comparables; el que llega a escuchar la presentación, obtiene seis presentaciones.</p>
+        <p>En un proyecto hotelero en Riad (Arabia Saudí), la comparación se resolvió con tres muestras de canto sobre la mesa y un vaso de agua para ver el hinchamiento del aglomerado en el borde. En una sede corporativa de Milán (Italia), la decisión se tomó con el tablero apoyado junto a la ventana del stand, a mediodía, porque el acabado iba a recibir luz natural en las oficinas. En ambos casos el criterio fue el mismo: el material se juzga en la condición en que va a vivir, no en la condición en que se expone.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Los seis indicadores que separan dos presupuestos iguales</h2>
+        <p>Los seis indicadores se ordenan de mayor a menor impacto en el coste de propiedad. El sustrato define la rigidez y la resistencia a la humedad; el revestimiento define la resistencia al roce y a la mancha; el canto define por dónde empieza el deterioro; el herraje define cuántas veces se abre y se cierra sin holgura; la espuma define cuánto aguanta el asiento y la espalda; y el acabado metálico define qué pasa con la corrosión en un ambiente salino o húmedo. La tabla siguiente recoge la pregunta que se hace en el stand y el dato que se anota para cada uno. En un proyecto de hotel en Lisboa (Portugal), el pliego se cerró con esos seis campos y la discusión sobre el precio dejó de ser una discusión sobre el acabado.</p>
+        <p>El peso de cada indicador cambia con el uso. En un hotel, el canto y el herraje deciden la vida del mueble, porque el huésped cierra cajones con el pie y arrastra la maleta contra el zócalo; en una oficina, el revestimiento y el acabado metálico pesan más, por el roce de las sillas y la limpieza diaria; en un centro educativo, el canto y la espuma ceden antes, porque el uso es intensivo y poco cuidadoso. Un tablero de 18 mm sirve para una mesilla de hotel y no para una mesa de aula, y esa diferencia no aparece en el precio unitario. En una sede de oficinas en Doha (Catar), el acabado metálico de las patas fue el criterio que decidió el pedido, porque el edificio está a menos de un kilómetro del mar.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Indicador</th><th>Qué se pregunta en el stand</th><th>Dato que se anota</th><th>Referencia que se cita</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Indicador">Sustrato y grado</td><td data-label="Qué se pregunta en el stand">Tipo de tablero, densidad y clase de emisión</td><td data-label="Dato que se anota">Aglomerado o MDF, kg/m³, clase de emisión, espesor y tolerancia</td><td data-label="Referencia que se cita">EN 13986</td></tr>
+              <tr><td data-label="Indicador">Revestimiento</td><td data-label="Qué se pregunta en el stand">Chapa, melamina o laminado compacto, y clase de abrasión</td><td data-label="Dato que se anota">Familia, espesor en mm y clase de uso declarada</td><td data-label="Referencia que se cita">EN 438</td></tr>
+              <tr><td data-label="Indicador">Canto</td><td data-label="Qué se pregunta en el stand">Material, espesor y adhesivo</td><td data-label="Dato que se anota">ABS o PVC, 0,4 / 1 / 2 mm, encolado PUR o EVA</td><td data-label="Referencia que se cita">Ficha del proveedor</td></tr>
+              <tr><td data-label="Indicador">Herraje</td><td data-label="Qué se pregunta en el stand">Ciclos declarados, carga y tipo de apertura</td><td data-label="Dato que se anota">Ciclos, carga en kg, cierre suave y extracción total</td><td data-label="Referencia que se cita">EN 15570 y EN 15338</td></tr>
+              <tr><td data-label="Indicador">Tapizado</td><td data-label="Qué se pregunta en el stand">Densidad de espuma, capas y número de cinchas</td><td data-label="Dato que se anota">kg/m³ en asiento y respaldo, capas, cinchas</td><td data-label="Referencia que se cita">EN 16139</td></tr>
+              <tr><td data-label="Indicador">Metal</td><td data-label="Qué se pregunta en el stand">Tipo de acabado y espesor de película</td><td data-label="Dato que se anota">Lacado en polvo en µm o galvanizado, horas de niebla salina</td><td data-label="Referencia que se cita">EN ISO 9227</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se monta una matriz de comparación en el recinto?</h2>
+        <p>Se monta con una hoja por proveedor y el mismo orden de preguntas para todos, y se limita la comparación a tres proveedores por familia y por día. La tentación es recorrer diez stands de la misma categoría y quedarse con la impresión del último; el resultado es una lista ordenada por simpatía y no por especificación. Con tres por familia, cada hoja se completa en 25-30 minutos, queda tiempo para volver al que genera dudas y la decisión se toma con hojas llenas en lugar de con catálogos. En la segunda fase, donde el mobiliario ocupa varios sectores del recinto, esa disciplina es la diferencia entre volver con una lista corta y volver con una bolsa de folletos.</p>
+        <p>La luz se controla antes de mirar el color. Se pide al comercial que saque la muestra al pasillo o a la entrada, se compara a la misma hora y con el mismo fondo neutro, y se mira la pieza a 45 grados para ver el brillo y los hilos saltados. La fotografía se toma sin flash, a la misma distancia, con una tarjeta gris en el encuadre y el nombre del archivo escrito en la hoja: familia, proveedor, fecha y hora. Esa disciplina parece excesiva hasta la reunión de comité, cuando dos acabados que parecían idénticos en la foto resultan ser uno beige y otro gris.</p>
+        <p>De cada proveedor se piden tres cosas: una probeta de 20 x 20 cm del lote y del color exactos, la ficha técnica del tablero y del revestimiento, y el documento de ensayos del herraje con el número de ciclos. La probeta viaja al proyecto y se apoya en la pared donde irá el mueble, con la luz de la sala; la ficha se archiva con la hoja de comparación; y el informe de ensayos se adjunta al pliego. Ese archivo es también el patrón de referencia del <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">control de calidad en fábrica</a> cuando el pedido entra en producción, porque lo aprobado en la feria es contra lo que se compara la primera pieza. Si el proveedor no puede entregar la probeta del lote, la respuesta ya es un dato.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Paso</th><th>Acción en el recinto</th><th>Evidencia que se archiva</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Paso">Agrupar por familia y uso</td><td data-label="Acción en el recinto">Tres proveedores por familia, misma categoría y mismo segmento</td><td data-label="Evidencia que se archiva">Hoja de comparación numerada por familia</td></tr>
+              <tr><td data-label="Paso">Fijar la luz</td><td data-label="Acción en el recinto">Muestra al pasillo, misma hora, fondo neutro y 45 grados</td><td data-label="Evidencia que se archiva">Foto sin flash con tarjeta gris y hora</td></tr>
+              <tr><td data-label="Paso">Preguntar en el mismo orden</td><td data-label="Acción en el recinto">Seis indicadores, del sustrato al metal, sin saltos</td><td data-label="Evidencia que se archiva">Respuesta escrita en la hoja, no dictada</td></tr>
+              <tr><td data-label="Paso">Pedir probeta y ficha</td><td data-label="Acción en el recinto">20 x 20 cm del lote exacto y ficha técnica</td><td data-label="Evidencia que se archiva">Probeta etiquetada y PDF de la ficha</td></tr>
+              <tr><td data-label="Paso">Pedir ensayos</td><td data-label="Acción en el recinto">Ciclos de herraje, carga, densidad y clase de abrasión</td><td data-label="Evidencia que se archiva">Informe con laboratorio, fecha y lote</td></tr>
+              <tr><td data-label="Paso">Puntuar el mismo día</td><td data-label="Acción en el recinto">Valor por indicador y observación de riesgo</td><td data-label="Evidencia que se archiva">Cuadro resumen firmado por el comprador</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se pide en el stand para juzgar el tablero, el acabado y el canto?</h2>
+        <p>Se pide la ficha del tablero, no el adjetivo. El sustrato se compara por tipo, densidad y clase de emisión: un aglomerado de 650 kg/m³ y un MDF de 750 kg/m³ no se comportan igual en un canto mecanizado ni en un ambiente húmedo, y la norma EN 13986 define las propiedades y la clasificación de los tableros derivados de la madera para uso en construcción (CEN, 2015). Se pregunta además el espesor real y su tolerancia, porque un tablero de 18 mm que llega con 17,4 mm obliga a reajustar bisagras y guías. En un proyecto de oficinas en Varsovia (Polonia), la tolerancia de espesor fue la causa de que dos puertas de armario no cerraran a ras.</p>
+        <p>El revestimiento se compara por espesor y por clase de abrasión, y ahí se separan tres familias que el catálogo suele mezclar: la chapa natural de 0,6 mm, que enseña la veta y envejece con el sol; la melamina, que es una hoja impregnada de 0,2-0,3 mm sobre el tablero; y el laminado compacto HPL de 0,7-0,8 mm, que resiste mejor el roce y la humedad y se rige por la norma EN 438 (CEN). Un mismo color puede estar disponible en las tres, con precios distintos y con un comportamiento distinto en el canto y en la esquina. Para el mostrador de recepción de un hotel en Casablanca (Marruecos) la elección fue laminado compacto por la limpieza diaria; para un despacho de dirección en Bogotá (Colombia), chapa natural por la veta.</p>
+        <p>El canto es el punto donde se decide la vida del mueble. Se pregunta el material, ABS o PVC, el espesor, 0,4, 1 o 2 mm, y el adhesivo: el encolado PUR resiste la humedad mejor que el EVA, y un canto de 0,4 mm se despega en la primera esquina que recibe un golpe. La pieza se mira de perfil y se pasa la uña por la junta: si se nota el escalón, la mecanización no está a ras y el defecto aparecerá en todas las unidades del lote. En la imagen se ve lo que hay que mirar: el corte del tablero y el canto en el mismo encuadre.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD21-a242-s1.jpg" alt="Tres probetas de tablero en corte con chapa natural, melamina y HPL, y el canto visto de cerca" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Tres probetas de tablero en corte, con chapa natural, melamina y laminado compacto, y el canto visto de cerca sobre una mesa de comparación.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se comparan herrajes y estructura de tapizado sin abrir el mueble?</h2>
+        <p>Se comparan con tres datos que el proveedor tiene por escrito: la referencia del herraje, los ciclos declarados y la carga admitida. Una bisagra con freno y una guía de extracción total se juzgan por el número de ciclos y por los kilos que soportan, no por cómo suenan al abrirlas en el stand. Las normas EN 15570 y EN 15338 fijan los ensayos de resistencia y durabilidad de bisagras y de guías de extensión, y el informe debe indicar el nivel de uso y el laboratorio que lo emitió. Sin ese documento, el cierre suave es una impresión y no una especificación. En un proyecto de oficinas en Ciudad de México (México), el informe de ciclos de la guía fue el dato que separó dos ofertas con el mismo precio.</p>
+        <p>El tapizado se compara por capas y por densidad. Un asiento de uso contract se construye con espuma de alta resiliencia de 35-40 kg/m³, una capa de fibra y una base de cinchas o de muelles; el respaldo baja a 25-28 kg/m³ y el apoyabrazos admite una espuma más blanda. En sillas y butacas de uso severo, el ensayo de EN 16139 somete el asiento y el respaldo a 200.000 ciclos de carga y descarga (CEN, 2013). Si el proveedor no puede dar la densidad ni el número de cinchas, la pieza se compara por el tacto, y el tacto no distingue 28 de 38 kg/m³ en los primeros cinco minutos. En la zona de lounge de un hotel en Taskent (Uzbekistán), el cambio de espuma se decidió con la pieza abierta en fábrica y no con la sensación del asiento en el stand.</p>
+        <p>El metal se compara por el acabado y por el ensayo. El lacado en polvo se declara en micras de película, con 60-80 µm como rango habitual en estructura de mueble contract; el galvanizado se declara en gramos por metro cuadrado y el cromado, en micras de níquel y de cromo. El ensayo de niebla salina de EN ISO 9227 (ISO, 2022) da las horas de resistencia, y esa cifra es la que se pide para un proyecto junto al mar o en un clima húmedo. Se mira además la soldadura y el borde: la corrosión empieza donde el recubrimiento es más fino.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD21-a242-s2.jpg" alt="Bisagra, guía de cajón y bloque de espuma seccionado sobre una mesa de taller con luz neutra" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Bisagra con freno, guía de cajón y bloque de espuma seccionado, alineados sobre una mesa de taller con luz neutra.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Del comparativo al pliego: cómo se escribe la especificación y qué error se evita</h2>
+        <p>El comparativo se convierte en pliego cuando cada indicador se escribe con tres campos: el valor exigido, el método de ensayo y el criterio de aceptación. Así, la línea del canto no dice canto de calidad, dice canto ABS de 2 mm encolado con PUR, sin junta visible al tacto y con probeta aprobada del lote. Esa forma de escribir tiene una consecuencia práctica: dos proveedores que cotizan el mismo mueble quedan obligados a la misma especificación, y la comparación de precios deja de ser una comparación de relatos. En un proyecto hospitalario en Curitiba (Brasil), el pliego con método de ensayo evitó que la segunda partida llegara con un canto distinto del aprobado.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Campo del pliego</th><th>Cómo se escribe</th><th>Ejemplo de cláusula</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Campo del pliego">Sustrato</td><td data-label="Cómo se escribe">Tipo, densidad, clase de emisión y tolerancia</td><td data-label="Ejemplo de cláusula">Tablero de partículas de 650 kg/m³, 18 ± 0,2 mm, clase de emisión declarada</td></tr>
+              <tr><td data-label="Campo del pliego">Revestimiento</td><td data-label="Cómo se escribe">Familia, espesor y clase de abrasión</td><td data-label="Ejemplo de cláusula">Laminado compacto de 0,8 mm con clase de uso declarada</td></tr>
+              <tr><td data-label="Campo del pliego">Canto</td><td data-label="Cómo se escribe">Material, espesor y adhesivo</td><td data-label="Ejemplo de cláusula">ABS de 2 mm, encolado PUR, sin junta al tacto</td></tr>
+              <tr><td data-label="Campo del pliego">Herraje</td><td data-label="Cómo se escribe">Tipo, ciclos y carga</td><td data-label="Ejemplo de cláusula">Guía de extracción total, 40 kg, ciclos declarados según EN 15338</td></tr>
+              <tr><td data-label="Campo del pliego">Tapizado</td><td data-label="Cómo se escribe">Densidad por zona y número de cinchas</td><td data-label="Ejemplo de cláusula">Espuma HR de 38 kg/m³ en asiento y 26 kg/m³ en respaldo</td></tr>
+              <tr><td data-label="Campo del pliego">Metal</td><td data-label="Cómo se escribe">Acabado, espesor de película y horas de niebla salina</td><td data-label="Ejemplo de cláusula">Lacado en polvo de 70 µm y 240 horas de ensayo sin corrosión roja</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El error más caro de la feria es comparar precios unitarios. El coste de propiedad de un mueble contract suma la reposición del canto y del herraje, la limpieza de la superficie, la reparación de la esquina golpeada y el estado en que llega el embalaje. Un mueble un 15 % más barato que pierde el canto en dos años cuesta más que el que lo conserva seis, y esa cuenta se hace con la vida del proyecto delante. En la misma cuenta entra el <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación</a>: un tablero que viaja sin esquineros ni separadores llega con la esquina abierta y el canto roto, y la reposición se come el ahorro de la compra.</p>
+        <p>El segundo error es comparar la muestra con el lote de producción. Una probeta de feria puede venir de un banco de muestras y no del lote que se va a fabricar, y el tono de una chapa varía entre partidas. La forma de cerrarlo es escribir en el pliego la tolerancia de tono y pedir la probeta del lote con la orden de compra: en un proyecto hotelero en Dubái (Emiratos Árabes Unidos) esa cláusula evitó que dos partidas de chapa llegaran con dos tonos distintos, y en un proyecto educativo en Lima (Perú) la densidad de la espuma cambió entre la primera y la segunda entrega. Los <a href="/proyectos/">proyectos ejecutados</a> se leen mejor cuando se mira la ficha de materiales y no la foto del ambiente.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Error de apreciación</th><th>Por qué ocurre</th><th>Cómo se corrige</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Error de apreciación">Juzgar el color con la luz del stand</td><td data-label="Por qué ocurre">La iluminación sube la temperatura de color y satura los tonos cálidos</td><td data-label="Cómo se corrige">Muestra al pasillo, misma hora, fondo neutro y tarjeta gris</td></tr>
+              <tr><td data-label="Error de apreciación">Comparar solo el precio unitario</td><td data-label="Por qué ocurre">El presupuesto no incluye reposición, embalaje ni montaje</td><td data-label="Cómo se corrige">Coste de propiedad con canto, herraje y reposición incluidos</td></tr>
+              <tr><td data-label="Error de apreciación">Aprobar el acabado con la muestra de feria</td><td data-label="Por qué ocurre">La probeta puede no ser del lote de producción</td><td data-label="Cómo se corrige">Probeta del lote, tolerancia de tono escrita y primera pieza</td></tr>
+              <tr><td data-label="Error de apreciación">Fiar el canto al espesor del tablero</td><td data-label="Por qué ocurre">El deterioro empieza en la junta y no en el centro</td><td data-label="Cómo se corrige">Canto de 2 mm, encolado PUR y prueba de uña en la esquina</td></tr>
+              <tr><td data-label="Error de apreciación">Medir la espuma con la mano</td><td data-label="Por qué ocurre">El tacto no distingue 28 de 38 kg/m³</td><td data-label="Cómo se corrige">Densidad por escrito y ensayo de EN 16139</td></tr>
+              <tr><td data-label="Error de apreciación">Dejar el embalaje para el final</td><td data-label="Por qué ocurre">El daño de transporte se descubre en obra</td><td data-label="Cómo se corrige">Plan de cajas, esquineros y recepción con acta</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite la comparativa de materiales para su proyecto"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Para preparar la comparativa necesitamos cuatro datos: la familia de producto y los acabados que está evaluando, el volumen estimado por partida, el país de destino del proyecto y la fecha en que necesita la entrega. Dejar los datos antes de viajar añade dos ventajas concretas: reservamos una franja de atención reservada durante la feria y coordinamos la visita a la fábrica de Heshan (Jiangmen, Guangdong) para ver el corte del tablero, el encolado del canto y las probetas de espuma. La comparativa vuelve con los seis indicadores valorados, la referencia de ensayo de cada uno y el plazo de 30-45 días desde la muestra aprobada, sujeto a contrato."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
