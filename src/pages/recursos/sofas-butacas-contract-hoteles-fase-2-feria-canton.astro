@@ -1,0 +1,458 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Sofás para hoteles: tapicería contract en la Fase 2";
+const pageDescription = "Sofás para hoteles: cómo se evalúan estructura, espuma y tejido contract en la Fase 2 de la Feria de Cantón, del 23 al 27 de octubre de 2026.";
+const keywords = [
+  "sofás para hoteles",
+  "butacas contract",
+  "tapicería contract",
+  "segunda fase Feria de Cantón 2026 mobiliario",
+  "bastidor de sofá contract",
+  "densidad de espuma de asiento",
+  "ciclos Martindale tejido contract",
+  "comportamiento al fuego BS 5852 y EN 1021",
+  "MOQ y plazo de producción",
+  "embalaje de exportación de sofás",
+  "control de calidad AQL",
+  "ficha técnica y BOQ de mobiliario"
+];
+const canonicalPath = "/recursos/sofas-butacas-contract-hoteles-fase-2-feria-canton/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD22-a244-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-24";
+const dateModified = "2026-10-24";
+const publicationDateLabel = "Publicada el 24 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué diferencia un sofá contract de un sofá doméstico?", answer: "Un sofá contract está diseñado para miles de ciclos de uso diario y se especifica por ficha técnica, mientras que el doméstico se elige por diseño. La diferencia está en el bastidor con esquineros y ensambles reforzados, en una espuma de asiento de 35-55 kg/m³ frente a densidades menores, en un tejido de 30.000-40.000 ciclos Martindale y en un comportamiento al fuego exigido por norma, con garantía estructural escrita por años y por turnos de uso." },
+    { question: "¿Qué densidad de espuma se pide para un sofá de hotel?", answer: "Para un sofá de habitación de hotel se pide una espuma de asiento de 35-40 kg/m³ y para vestíbulo o lounge de oficina de 40-55 kg/m³, siempre de alta resiliencia. La base del criterio es la relación entre densidad y vida útil: a mayor densidad, menor set de compresión, y una espuma de alta resiliencia de calidad se mantiene por debajo del 5 % en el ensayo normalizado, de modo que el asiento conserva su forma tras años de turnos." },
+    { question: "¿Cuántos ciclos Martindale necesita el tejido de un sofá contract?", answer: "Necesita entre 30.000 y 40.000 ciclos Martindale como mínimo, y el vestíbulo de un hotel o una sala de espera admite mejor el extremo alto del rango. El número se exige con informe de laboratorio que indique lote y fecha, porque la abrasión se mide según ISO 12947 y un tejido de 15.000 ciclos, suficiente en una vivienda, no aguanta la limpieza diaria de un espacio público." },
+    { question: "¿Qué norma de fuego se exige al tapizado de un sofá de hotel?", answer: "Se exige la norma de fuego del país del proyecto: EN 1021-1 y -2 para cigarrillo y fósforo en la Unión Europea, y BS 5852, con la variante crib 5, en Reino Unido y en los países que la adoptan. El certificado se pide con lote declarado, porque un informe sin referencia de lote no acredita la partida que se fabrica y no sirve como documento de aceptación en el pliego." },
+    { question: "¿Qué MOQ y plazo tiene un pedido de sofás para hoteles?", answer: "El MOQ se pacta por modelo y por tejido, y el plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato. A ese plazo se suma el tránsito marítimo y, en proyectos FF&E, el pedido se programa por partidas según la BOQ, de modo que el vestíbulo, los pisos y los espacios comunes no llegan todos en el mismo contenedor y la instalación puede organizarse por fases." },
+    { question: "¿Cómo llega embalado un sofá contract y qué se revisa al recibirlo?", answer: "Llega en caja de madera contrachapada no fumigada, con esquineros, protección de espuma EPE en aristas y tapizados, flejado y paletizado o estiba directa en el contenedor. En la recepción se revisa el embalaje con acta, se comprueba el kit de montaje y se levanta un punch list de acabados antes de firmar la entrega; el daño de transporte se reclama por el embalaje, y por eso el acta se llena antes de desembalar." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD22-a244-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d22a2-a244-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d22a2-a244-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Tapicería contract &middot; {publicationDateLabel}</p>
+          <h1>Sofás para hoteles: cómo se evalúa un asiento contract en la Fase 2 de la Feria de Cantón</h1>
+          <p>Un sofá para hoteles es un asiento tapizado de uso contract: está diseñado para miles de ciclos de uso diario, con bastidor reforzado, espuma de alta densidad y tejido resistente a la abrasión y al fuego, y se especifica por ficha técnica en proyectos de hospitalidad, oficinas y espacios públicos.</p>
+          <p>La segunda fase de la 140.ª Feria de Cantón reúne el mobiliario del 23 al 27 de octubre de 2026 en Guangzhou (China Foreign Trade Centre, 2026). El recinto ocupa unos 1,55 millones de m² y aloja a cerca de 32.000 expositores, y en la 139.ª edición los compradores extranjeros llegaron de 220 países y regiones, con 314.000 asistentes (China Foreign Trade Centre, 2026). Para quien compra asientos tapizados para proyectos, esa concentración permite comparar en una sola mañana varios proveedores de la misma familia de sofás y butacas con especificaciones distintas y discursos parecidos.</p>
+          <p>Detrás de este método está Hongye Furniture Group Commercial, fábrica fundada en 1996, con más de 300.000 m² de planta en Heshan (Jiangmen, Guangdong), más de 1.000 proyectos entregados en más de 50 países y colaboraciones con más de 47 marcas hoteleras internacionales. Trabaja con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, con certificaciones BIFMA, GREENGUARD, FSC y CE, y con una ventaja de coste del 30-50 % frente a la fabricación occidental comparable. Este artículo explica cómo se evalúa, en el propio recinto, un sofá o una butaca de uso contract: la estructura, la espuma, el tejido y lo que se negocia después de elegir el modelo.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD22-a244-hero.jpg" alt="Sofá modular y probeta de bastidor en un pabellón ferial durante la Fase 2, con cartas de tejido y un metro plegable sobre la mesa" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Qué distingue un sofá contract de un sofá doméstico</h2>
+        <p>Se separan por tres palabras que el catálogo doméstico no usa: ciclos, norma y garantía estructural. Un sofá de vivienda vive dos o tres horas al día; un sofá de habitación de hotel soporta estancias cortas y rotación continua, y un sofá de vestíbulo, de sala de espera de clínica o de lounge de oficina trabaja en horario completo, con maletas, carritos y limpieza diaria. Esa intensidad obliga a un bastidor con esquineros y ensambles reforzados, a una espuma de mayor densidad, a un tejido con clase de abrasión declarada y a un comportamiento al fuego exigido por norma, y convierte la garantía estructural en una cláusula escrita por años y por turnos de uso.</p>
+        <p>La diferencia se paga en reposiciones, y por eso el proyecto se separa por niveles de uso antes de entrar al recinto. En un hotel en Marrakech (Marruecos), el vestíbulo recibió tapicería de 40.000 ciclos Martindale y espuma de asiento de 45 kg/m³, mientras las suites de la misma planta se especificaron con 30.000 ciclos y 35 kg/m³: la pieza de vestíbulo se limpia todos los días y la de habitación se limpia entre estancias, y cotizar las dos iguales abarata el presupuesto y encarece el mantenimiento. El mismo reparto se aplica a una sala de juntas de oficina frente a una zona de espera: el nivel de uso decide la especificación, no la foto del ambiente.</p>
+        <p>El tercer separador es el mantenimiento que cada espacio admite. Un sofá de vestíbulo se limpia con productos de uso profesional varias veces por semana; un sofá de habitación se somete a limpieza entre estancias con plazos de vuelta inmediatos; y un sofá de lounge de oficina comparte turno con el equipo de limpieza del edificio. En un proyecto en Ámsterdam (Países Bajos), esa matriz de limpieza fue la que definió el tejido: el vestíbulo pidió un tapizado de trama cerrada y las suites conservaron un tejido más sensible pero más táctil. Escribir la matriz antes de la feria evita comprar un solo modelo para todo el hotel.</p>
+        <p>La tabla siguiente ordena los tres niveles que conviene tener escritos antes de la feria, porque el mismo modelo puede cotizarse en los tres y solo cambia la especificación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nivel de uso</th><th>Intensidad diaria</th><th>Abrasión del tejido</th><th>Reacción al fuego</th><th>Garantía estructural</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Nivel de uso">Doméstico</td><td data-label="Intensidad diaria">2-4 horas</td><td data-label="Abrasión del tejido">15.000-25.000 ciclos Martindale</td><td data-label="Reacción al fuego">EN 1021-1 y -2 (cigarrillo y fósforo)</td><td data-label="Garantía estructural">2 años</td></tr>
+              <tr><td data-label="Nivel de uso">Habitación de hotel</td><td data-label="Intensidad diaria">6-10 horas, rotación de estancias</td><td data-label="Abrasión del tejido">30.000-40.000 ciclos Martindale</td><td data-label="Reacción al fuego">EN 1021-1 y -2, BS 5852 según país</td><td data-label="Garantía estructural">5 años</td></tr>
+              <tr><td data-label="Nivel de uso">Vestíbulo, lounge y oficina</td><td data-label="Intensidad diaria">12-18 horas, uso continuo</td><td data-label="Abrasión del tejido">40.000 ciclos Martindale o más</td><td data-label="Reacción al fuego">BS 5852 crib 5 o equivalente contract</td><td data-label="Garantía estructural">8-10 años</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se pide en el stand para juzgar la estructura de un sofá?</h2>
+        <p>Se pide una probeta de bastidor en corte y cuatro datos por escrito: especie y formato del bastidor, tipo de esquineros, sistema de ensamble y peso admisible por plaza. Un bastidor contract se construye con madera maciza seca o con plywood contrachapado de calibre adecuado, con esquineros en las cuatro esquinas, ensambles encolados y apernados y patas fijadas a la estructura con escuadras metálicas, nunca al tablero del fondo. La norma BIFMA X5.4 cubre asientos de uso público y de ocio y fija los ensayos de durabilidad y estabilidad que el informe debe citar con laboratorio y fecha (BIFMA). Cuando el proyecto lo exige, el bastidor de madera se documenta con cadena de custodia FSC y los materiales tapizados con emisiones certificadas por GREENGUARD Gold. Si el stand no tiene la probeta, se pide levantar la pieza: el peso de un sofá contract delata el calibre del bastidor mejor que cualquier folleto.</p>
+        <p>Las patas y la base se revisan con la pieza inclinada o levantada. Una pata de madera torneada se fija con escuadra metálica al bastidor, no con tornillos al tablero inferior, y las bases metálicas de lounge se juzgan por el espesor del perfil y por la soldadura. En una butaca de lobby en Mascate (Omán), la base metálica se especificó con perfil reforzado y lacado en polvo declarado en micras, porque el ambiente costero castiga los acabados. Son detalles que el tapizado esconde y que la probeta de bastidor y la ficha muestran en dos minutos.</p>
+        <p>El peso admisible y los ensambles se confirman con una pregunta concreta: cuántos kilos por plaza y con qué ensayo. En el proyecto de Hilton Tashkent City (Taskent, Uzbekistán), la ficha de los sofás de suite se cerró con bastidor mixto de madera maciza y plywood, esquineros metálicos y ensayo de fatiga citado por número de ciclos, y esa ficha es la que evitó discusiones cuando llegó la primera partida. En una sala de espera de clínica en Sofía (Bulgaria), el mismo criterio separó dos ofertas con el mismo precio: la que no declaraba peso admisible ni ensayo quedó fuera de la comparación, y la decisión se explicó al comité con la ficha delante.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD22-a244-s1.jpg" alt="Probeta de bastidor de sofá en corte con madera maciza, muelles de zigzag y capas de espuma de alta densidad" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Probeta de bastidor de sofá en corte, con madera maciza, muelles de zigzag y capas de espuma de alta densidad, sobre una mesa de taller.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Espuma, muelle y asiento: los tres números que sí se pueden comparar</h2>
+        <p>Los tres números son la densidad de la espuma, la resiliencia y el set de compresión. La espuma de asiento de uso contract se mueve entre 35 y 55 kg/m³ según el nivel de uso; la resiliencia, medida en rebote de bola, indica cuánta recuperación devuelve la espuma tras cada carga; y el set de compresión anticipa la deformación permanente: una espuma de alta resiliencia de calidad se mantiene por debajo del 5 % en el ensayo normalizado. El respaldo admite 25-30 kg/m³ y el apoyabrazos una espuma más blanda con núcleo de soporte. El soporte se combina con muelles de zigzag o con muelles ensacados, y una capa de fibra o plumón da el acabado visual sin cambiar la carga que sostiene el asiento.</p>
+        <p>En el stand se pide la ficha de la espuma por capas, no el adjetivo de confort, y la prueba se hace sentándose después de una jornada completa de feria, cuando la diferencia entre 28 y 40 kg/m³ ya se nota. En un lounge de torre corporativa en Ciudad de Panamá (Panamá), la comparación entre dos proveedores se resolvió con los tres números y esa prueba de quince minutos al final del día. En un hotel en Medellín (Colombia), el apoyabrazos fue el punto crítico: la espuma blanda sin núcleo se deformaba en el primer semestre, y la solución fue un núcleo firme con capa de confort encima, un detalle que no se ve con el sofá terminado y que la probeta en corte muestra de inmediato.</p>
+        <p>Las banquetas tapizadas y los puffs de pasillo y recepción siguen las mismas reglas con un matiz: la carga es variable y lateral, se sientan de lado, se apoyan maletas y se usan de mesa. Por eso el bastidor lleva travesaños intermedios y la espuma se sube un tramo, con 40-45 kg/m³ como punto de partida en zona de tránsito alto. En un vestíbulo en Estambul (Turquía), las banquetas de la zona de check-in se cerraron con espuma de 45 kg/m³ y tejido de 40.000 ciclos, mientras la butaca de descanso del mismo espacio admitía espuma de 38. La pieza pequeña no es la pieza sencilla.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nivel contract</th><th>Espuma de asiento</th><th>Resiliencia</th><th>Set de compresión</th><th>Soporte interior</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Nivel contract">Contract estándar (habitación)</td><td data-label="Espuma de asiento">35-40 kg/m³</td><td data-label="Resiliencia">Alta resiliencia</td><td data-label="Set de compresión">≤ 5 %</td><td data-label="Soporte interior">Muelles de zigzag y capa de fibra</td></tr>
+              <tr><td data-label="Nivel contract">Contract superior (lounge y oficina)</td><td data-label="Espuma de asiento">40-45 kg/m³</td><td data-label="Resiliencia">Alta resiliencia</td><td data-label="Set de compresión">≤ 5 %</td><td data-label="Soporte interior">Zigzag reforzado y capa de confort</td></tr>
+              <tr><td data-label="Nivel contract">Contract severo (vestíbulo de uso continuo)</td><td data-label="Espuma de asiento">45-55 kg/m³</td><td data-label="Resiliencia">Alta resiliencia reforzada</td><td data-label="Set de compresión">≤ 4 %</td><td data-label="Soporte interior">Muelles ensacados y núcleo doble</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se evalúa el tejido y su comportamiento al fuego sin quemar la muestra?</h2>
+        <p>Se evalúa con documentos de laboratorio, no con cerillas: el informe de abrasión, el certificado de comportamiento al fuego y la solidez del color. Para uso contract se pide un mínimo de 30.000-40.000 ciclos Martindale, solidez de color a la luz según ISO 105-B02 y una reacción al fuego declarada: EN 1021-1 y -2 para cigarrillo y fósforo en la Unión Europea, y BS 5852, con la variante crib 5 para asientos de alto tránsito, en Reino Unido y en los países que la adoptan. El informe debe indicar laboratorio, fecha y lote del tejido: un certificado sin lote no cubre la partida que se fabrica, y esa es la primera verificación que se hace con el papel en la mano.</p>
+        <p>El resto se juzga con la muestra en la mano y dos gestos: se pliega el tejido para ver si el revestimiento se abre en el pliegue y se frota en seco y en húmedo con un paño blanco para comprobar la solidez al frote. Los sofás de vestíbulo y las banquetas de pasillo con limpieza intensiva piden además tejido lavable o funda desmontable, y esa condición se escribe en el pliego por tipo de plaza. En un resort en Punta Cana (República Dominicana), la solidez a la luz descartó un tejido que en el stand parecía perfecto, porque el sol del trópico es el ensayo real del proyecto. En una sede de oficina en Monterrey (México), la funda desmontable se negoció para las butacas de la sala de juntas porque el mantenimiento es interno del cliente.</p>
+        <p>La evaluación del tejido se cruza con la de la espuma antes de salir del stand: un tapizado de 40.000 ciclos sobre una espuma de 30 kg/m³ no forma una pieza contract, y el pliego debe escribir los dos valores en la misma línea de la BOQ. En una sala VIP de aeropuerto en Quito (Ecuador), la combinación se cerró con 40.000 ciclos y 45 kg/m³ para los sofás de espera y 30.000 ciclos con funda desmontable para las butacas individuales. La coherencia entre los dos valores es lo que separa una especificación de una lista de deseos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Parámetro del tejido</th><th>Qué se pregunta en el stand</th><th>Referencia</th><th>Cómo se escribe en el contrato</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Parámetro del tejido">Abrasión</td><td data-label="Qué se pregunta en el stand">Ciclos Martindale del tejido tapizado</td><td data-label="Referencia">ISO 12947</td><td data-label="Cómo se escribe en el contrato">40.000 ciclos Martindale, informe de lote adjunto</td></tr>
+              <tr><td data-label="Parámetro del tejido">Reacción al fuego</td><td data-label="Qué se pregunta en el stand">Norma exigida según el país del proyecto</td><td data-label="Referencia">EN 1021-1/-2 y BS 5852 crib 5</td><td data-label="Cómo se escribe en el contrato">Tejido con certificado BS 5852 crib 5 y lote declarado</td></tr>
+              <tr><td data-label="Parámetro del tejido">Solidez del color</td><td data-label="Qué se pregunta en el stand">Solidez a la luz y al frote</td><td data-label="Referencia">ISO 105-B02</td><td data-label="Cómo se escribe en el contrato">Solidez a la luz conforme a ISO 105-B02, informe por lote</td></tr>
+              <tr><td data-label="Parámetro del tejido">Mantenimiento</td><td data-label="Qué se pregunta en el stand">Lavabilidad y funda desmontable por tipo de plaza</td><td data-label="Referencia">Ficha del tejido</td><td data-label="Cómo se escribe en el contrato">Funda desmontable en plazas de sala de juntas y espera</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>MOQ, plazo y embalaje: lo que se negocia después de elegir el modelo</h2>
+        <p>Después del modelo vienen cuatro negociaciones: MOQ, plazo, control de calidad y embalaje. El MOQ se pacta por modelo y por tejido, porque un sofá con funda desmontable en tejido especial no mueve los mismos mínimos que una butaca en tejido de stock; el plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, se ancla a la fecha de aprobación de la muestra y no a la fecha del pedido; y el control de calidad se define por muestreo AQL, con el nivel de defectos aceptable y la inspección final antes del embarque escritos en el contrato. El protocolo de <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">control de calidad en fábrica</a> es la referencia para esa inspección: es el momento de descubrir una costura abierta o una pata floja, no el de recepción del hotel.</p>
+        <p>El embalaje de exportación de un sofá contract no es un plástico: es una caja de madera contrachapada no fumigada, con esquineros, protección de espuma EPE en aristas y tapizados, flejado y paletizado o estiba directa en el contenedor según la pieza. El embalaje plano desmonta patas y respaldos para ganar volumen de carga, y el kit de montaje y el manual viajan con cada unidad; en proyectos con instalación en destino, el montaje in situ cierra con un punch list de acabados que ordena la recepción. En un hotel en Montevideo (Uruguay), el punch list fue el documento que permitió corregir acabados menores antes de la apertura, y el detalle del <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación</a> fue el que decidió que las piezas llegaran sin aristas dañadas.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD22-a244-s2.jpg" alt="Cajas de madera contrachapada sobre palé con protección de espuma EPE junto a un contenedor abierto" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cajas de madera contrachapada apiladas sobre palé con protección de espuma EPE, junto a un contenedor abierto listo para la carga</figcaption>
+        </figure>
+        <p>La tabla siguiente recoge las tres estructuras de pedido que se cierran en la feria y qué se negocia en cada una.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Partida</th><th>MOQ</th><th>Plazo</th><th>Embalaje</th><th>Entrega</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Partida">Muestra de aprobación</td><td data-label="MOQ">1 pieza por modelo</td><td data-label="Plazo">Antes del pedido</td><td data-label="Embalaje">Caja de cartón reforzado con esquineros</td><td data-label="Entrega">Envío por aire o por mar</td></tr>
+              <tr><td data-label="Partida">Pedido por familia</td><td data-label="MOQ">MOQ por modelo y por tejido</td><td data-label="Plazo">30-45 días desde la muestra aprobada, sujeto a contrato</td><td data-label="Embalaje">Caja de madera contrachapada, esquineros, espuma EPE y paletizado</td><td data-label="Entrega">Contenedor completo o consolidado</td></tr>
+              <tr><td data-label="Partida">Proyecto FF&amp;E</td><td data-label="MOQ">Por partidas según la BOQ</td><td data-label="Plazo">30-45 días por partida, programado</td><td data-label="Embalaje">Embalaje plano y estiba por partida</td><td data-label="Entrega">Instalación in situ y cierre con punch list</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>De la feria a la ficha técnica y a la BOQ</h2>
+        <p>La conclusión de cada stand se convierte en ficha técnica el mismo día, con los cuatro bloques de este artículo: estructura, espuma, tejido y condiciones comerciales. La ficha entra en el pliego, el pliego se traduce en líneas de la BOQ del proyecto y cada línea lleva una referencia, una especificación y una partida; así, la comparación de precios posterior a la feria compara productos idénticos y no relatos. Los <a href="/proyectos/">proyectos ejecutados</a> se leen con la misma lógica: la ficha de materiales delante de la foto del ambiente, y no al revés.</p>
+        <p>Una línea de BOQ de asientos tapizados se escribe con cinco campos: posición, familia, referencia del proveedor, especificación resumida y cantidad. La posición dice sofá de vestíbulo, tres plazas; la familia, sofá contract; la referencia, el modelo aprobado en la feria; y la especificación resume la ficha: bastidor de madera maciza y plywood, espuma de asiento de 45 kg/m³, tejido de 40.000 ciclos con certificado de fuego y lote, embalaje en caja de madera contrachapada. En un proyecto en Krakovia (Polonia), esa estructura permitió comparar tres ofertas por línea y cerrar la adjudicación en una semana tras la feria.</p>
+        <p>La segunda fase cierra el 27 de octubre y la tercera abre del 31 de octubre al 4 de noviembre de 2026 con los sectores de salud y vida activa (China Foreign Trade Centre, 2026). Quien compra para un proyecto que mezcla hospitalidad y salud, un hotel con spa o una residencia con área médica, reserva los días de cambio de fase para cerrar las dos familias con el mismo método. Y si el viaje todavía no está confirmado, la vía corta es dejar los datos antes de salir: el número de stand, la carta de invitación y la franja de atención se confirman por escrito con el equipo de proyectos.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite la ficha contract de sus sofás para hoteles"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar los datos antes de viajar añade tres ventajas concretas: recibe el número de stand y la carta de invitación, reserva una franja de atención exclusiva durante la segunda fase y, si el proyecto lo justifica, coordina la visita a la fábrica de Heshan (Jiangmen, Guangdong) para ver el bastidor, el corte de la espuma y la línea de tapizado. Para preparar la cita necesitamos cuatro datos: la familia de asientos y su nivel de uso, el volumen estimado por partida, el país del proyecto y la norma de fuego aplicable. La respuesta vuelve con la ficha contract, las condiciones de MOQ, plazo y embalaje, y un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. La emisión del visado corresponde a la embajada o al consulado de China competente."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
