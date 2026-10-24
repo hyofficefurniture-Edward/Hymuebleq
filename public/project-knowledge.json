@@ -680,6 +680,29 @@
       ],
       "evidenceGrade": "A",
       "updated": "2026-10-21"
+    },
+    {
+      "id": "hos-008",
+      "title": "Holiday Inn Fairview Heights",
+      "country": "United States",
+      "region": "other",
+      "sector": "hospitality",
+      "language": "es",
+      "source": "https://hymueble.com/proyectos/biblioteca/hos-008/",
+      "evidenceSource": "https://www.hyhotelfurniture.com/holiday-inn-fairview-heights-hospitality-project-solution-by-hongye-furniture.html",
+      "summary": "La habitación documentada de Holiday Inn Fairview Heights permite estudiar la cama, el almacenaje junto al cabecero y una zona compacta de asiento. La imagen ayuda a revisar distribución y encuentros; las medidas, acabados y el alcance de un nuevo pedido se confirman por separado.",
+      "spaces": [
+        "Composición de cama y cabecero",
+        "Almacenaje junto a la cama",
+        "Zona compacta de asiento"
+      ],
+      "discussion": [
+        "Facilita planos acotados y cantidades por tipo de habitación.",
+        "Marca enchufes, luminarias y acceso de montaje.",
+        "Confirma muestras de acabado y encuentros antes de aprobar la lista de mobiliario."
+      ],
+      "evidenceGrade": "A",
+      "updated": "2026-10-24"
     }
   ]
 }

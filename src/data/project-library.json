@@ -1004,5 +1004,130 @@
     },
     "imageWidth": 2956,
     "imageHeight": 2217
+  },
+  {
+    "id": "hos-008",
+    "name": "Holiday Inn Fairview Heights",
+    "country": "United States",
+    "region": "other",
+    "geographicRegion": "North America",
+    "industry": "hospitality",
+    "image": "/images/project-library/hos-008-guestroom.webp",
+    "sourceUrl": "https://www.hyhotelfurniture.com/holiday-inn-fairview-heights-hospitality-project-solution-by-hongye-furniture.html",
+    "sourceKind": "published-project-page",
+    "publicLevel": "L3",
+    "reviewed": "2026-10-24",
+    "localized": {
+      "en": {
+        "title": "Guestroom furniture reference in the United States",
+        "intro": "The documented guestroom at Holiday Inn Fairview Heights provides a reference for coordinating the bed, bedside storage and a compact seating area. Use the photograph to discuss layout and interfaces; dimensions, finishes and the scope of a new order require separate confirmation.",
+        "spaces": [
+          "Bed and headboard composition",
+          "Bedside storage",
+          "Compact seating area"
+        ],
+        "questions": [
+          "Provide a dimensioned room plan and the number of each room type.",
+          "Mark sockets, lighting positions and access for assembly.",
+          "Confirm finish samples and interfaces before approving the furniture schedule."
+        ]
+      },
+      "fr": {
+        "title": "Référence de mobilier de chambre aux États-Unis",
+        "intro": "La chambre documentée du Holiday Inn Fairview Heights permet d’étudier ensemble le lit, les rangements de chevet et un coin assise compact. La photo sert à discuter implantation et interfaces ; les dimensions, finitions et prestations d’une nouvelle commande restent à confirmer séparément.",
+        "spaces": [
+          "Composition du lit et de la tête de lit",
+          "Rangements de chevet",
+          "Coin assise compact"
+        ],
+        "questions": [
+          "Transmettez le plan coté et le nombre de chambres par type.",
+          "Repérez les prises, luminaires et accès de montage.",
+          "Confirmez les échantillons de finition et les interfaces avant de valider la nomenclature."
+        ]
+      },
+      "es": {
+        "title": "Referencia de mobiliario de habitación en Estados Unidos",
+        "intro": "La habitación documentada de Holiday Inn Fairview Heights permite estudiar la cama, el almacenaje junto al cabecero y una zona compacta de asiento. La imagen ayuda a revisar distribución y encuentros; las medidas, acabados y el alcance de un nuevo pedido se confirman por separado.",
+        "spaces": [
+          "Composición de cama y cabecero",
+          "Almacenaje junto a la cama",
+          "Zona compacta de asiento"
+        ],
+        "questions": [
+          "Facilita planos acotados y cantidades por tipo de habitación.",
+          "Marca enchufes, luminarias y acceso de montaje.",
+          "Confirma muestras de acabado y encuentros antes de aprobar la lista de mobiliario."
+        ]
+      },
+      "ru": {
+        "title": "Пример мебели для гостиничного номера в США",
+        "intro": "Документированный номер Holiday Inn Fairview Heights показывает сочетание кровати, прикроватного хранения и компактной зоны отдыха. Фотография помогает обсудить планировку и сопряжения. Размеры, отделка и состав нового заказа согласовываются отдельно.",
+        "spaces": [
+          "Кровать и изголовье",
+          "Прикроватное хранение",
+          "Компактная зона отдыха"
+        ],
+        "questions": [
+          "Передайте план с размерами и количество номеров каждого типа.",
+          "Отметьте розетки, светильники и доступ для сборки.",
+          "Согласуйте образцы отделки и сопряжения до утверждения ведомости мебели."
+        ]
+      },
+      "kk": {
+        "title": "АҚШ-тағы қонақүй бөлмесінің жиһаз үлгісі",
+        "intro": "Holiday Inn Fairview Heights жобасының құжатталған бөлмесі төсек, төсек жанындағы сақтау және шағын демалыс орнын бірге қарастыруға мүмкіндік береді. Фото жоспарлау мен түйісулерді талқылауға арналған. Жаңа тапсырыстың өлшемдері, әрлеуі және құрамы бөлек келісіледі.",
+        "spaces": [
+          "Төсек пен бас тақта",
+          "Төсек жанындағы сақтау",
+          "Шағын демалыс орны"
+        ],
+        "questions": [
+          "Өлшемдері бар жоспарды және әр бөлме түрінің санын беріңіз.",
+          "Розеткаларды, шамдарды және құрастыруға қолжетімділікті белгілеңіз.",
+          "Жиһаз тізімін бекітпес бұрын әрлеу үлгілері мен түйісулерді келісіңіз."
+        ]
+      },
+      "uz": {
+        "title": "AQShdagi mehmonxona xonasi mebeli namunasi",
+        "intro": "Holiday Inn Fairview Heights loyihasining hujjatlashtirilgan xonasi karavot, karavot yonidagi saqlash va ixcham dam olish joyini birgalikda ko‘rib chiqishga yordam beradi. Surat reja va qismlar tutashuvini muhokama qilish uchun xizmat qiladi. Yangi buyurtmaning o‘lchamlari, qoplamalari va tarkibi alohida tasdiqlanadi.",
+        "spaces": [
+          "Karavot va bosh qismi",
+          "Karavot yonidagi saqlash",
+          "Ixcham dam olish joyi"
+        ],
+        "questions": [
+          "O‘lchamli reja va har bir xona turining sonini yuboring.",
+          "Rozetkalar, chiroqlar va yig‘ish uchun kirish yo‘llarini belgilang.",
+          "Mebel ro‘yxatini tasdiqlashdan oldin qoplama namunalari va tutashuvlarni kelishing."
+        ]
+      },
+      "mn": {
+        "title": "АНУ дахь зочид буудлын өрөөний тавилгын жишээ",
+        "intro": "Holiday Inn Fairview Heights төслийн баримтжуулсан өрөөнд ор, орны дэргэдэх хадгалалт болон авсаархан амрах хэсгийг хамтад нь харж болно. Гэрэл зураг нь зохион байгуулалт, эд ангийн залгаасыг хэлэлцэхэд зориулагдсан. Шинэ захиалгын хэмжээ, өнгөлгөө болон хамрах хүрээг тусад нь баталгаажуулна.",
+        "spaces": [
+          "Ор ба орны толгой",
+          "Орны дэргэдэх хадгалалт",
+          "Авсаархан амрах хэсэг"
+        ],
+        "questions": [
+          "Хэмжээтэй төлөвлөгөө болон өрөөний төрөл бүрийн тоог өгнө үү.",
+          "Залгуур, гэрэлтүүлэг болон угсрах нэвтрэх замыг тэмдэглэнэ үү.",
+          "Тавилгын жагсаалтыг батлахаас өмнө өнгөлгөөний дээж, эд ангийн залгаасыг тохиролцоно уу."
+        ]
+      }
+    },
+    "gallery": [
+      {
+        "image": "/images/project-library/hos-008-guestroom.webp",
+        "label": "project-documentation"
+      }
+    ],
+    "imageWidth": 1366,
+    "imageHeight": 911,
+    "tags": [
+      "hospitality"
+    ],
+    "evidenceGrade": "A"
   }
 ]
