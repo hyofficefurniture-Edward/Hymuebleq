@@ -1,0 +1,457 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Butacas para hoteles: selección por zonas en la Fase 2";
+const pageDescription = "Butacas para hoteles: cómo se eligen por zonas en la Fase 2 de la Feria de Cantón, del 23 al 27 de octubre de 2026, del lobby a la BOQ.";
+const keywords = [
+  "butacas para hoteles",
+  "butaca lounge contract",
+  "mobiliario de vestíbulo de hotel",
+  "sillón para zona de espera",
+  "altura de asiento de butaca",
+  "profundidad de asiento lounge",
+  "peso admisible de asiento contract",
+  "tejido lavable contract",
+  "cambio de tapizado en hotel",
+  "ficha técnica FF&E",
+  "BOQ de mobiliario",
+  "MOQ y plazo de producción",
+  "embalaje de exportación en caja de madera"
+];
+const canonicalPath = "/recursos/butacas-lounge-hotel-fase-2-feria-canton/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD23-a246-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-25";
+const dateModified = "2026-10-25";
+const publicationDateLabel = "Publicada el 25 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué butaca se elige para el vestíbulo de un hotel?", answer: "Se elige una butaca lounge de brazo alto, estructura reforzada y peso admisible declarado con ensayo citado, con altura de asiento de 46-48 cm y profundidad de 55-58 cm. La base del criterio es la intensidad de uso: el vestíbulo trabaja 12-18 horas al día con maletas y carritos, y por eso la prioridad de especificación es la carga y la estabilidad, con BIFMA X5.4 como referencia de ensayo para asientos de uso público." },
+    { question: "¿Qué altura y profundidad de asiento conviene en una butaca lounge de hotel?", answer: "Conviene una altura de asiento de 42-48 cm según la zona y una profundidad de 55-65 cm: el extremo alto corresponde al vestíbulo y al rincón de escritorio, donde el usuario se levanta con frecuencia, y el extremo de profundidad al lounge, donde el asiento es de descanso social. La medida se verifica en el stand con cinta métrica y sentándose con el abrigo puesto, porque la ficha del catálogo no recoge cómo se hunde el asiento con el uso real." },
+    { question: "¿Por qué importa la proyección frontal de una butaca en zona de circulación?", answer: "Porque cada centímetro entre el borde del asiento y el frente de la pata delantera roba paso al tránsito de carritos y personal de servicio, y en circulación conviene que no supere los 5 cm. La proyección se mide en el stand con la pieza montada, y la misma comprobación se aplica a la banca tapizada del check-in, donde la antesala grande obliga a separar las mesas y rompe el paso del servicio." },
+    { question: "¿Cómo se planifica el cambio de tapizado de las butacas de un hotel?", answer: "Se planifica escribiendo en la ficha del primer pedido tres condiciones: que el tapizado se reemplace sin desmontar la estructura, que el proveedor guarda el molde y la ficha del modelo, y qué mínimo acepta para una partida de solo tapizados. Con eso, el recambio se ejecuta por zonas y sin cerrar el hotel, y el coste real a los cinco años queda controlado desde la feria y no negociado con urgencia después." },
+    { question: "¿Qué MOQ y plazo tiene un pedido de butacas para hoteles?", answer: "El MOQ se pacta por modelo y por tejido, porque una butaca en tejido de stock y la misma pieza con tapizado especial por zona mueven mínimos distintos, y el plazo de producción es de 30-45 días desde la muestra aprobada, sujeto a contrato. A ese plazo se suma el tránsito marítimo, y en proyectos FF&E el pedido se programa por partidas según la BOQ para que la instalación siga el orden de apertura del hotel." },
+    { question: "¿Cómo llega embalada una butaca lounge de exportación?", answer: "Llega en caja de madera contrachapada no fumigada, con esquineros, protección de espuma EPE en brazos y patas, flejado y paletizado, con las patas desmontables embolsadas en el kit interior. En la recepción se revisa el embalaje con acta antes de desembalar, se comprueba el kit de montaje y el montaje in situ cierra con punch list de acabados, porque el daño de transporte se reclama por el embalaje documentado." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD23-a246-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d23a2-a246-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d23a2-a246-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Tapicería contract &middot; {publicationDateLabel}</p>
+          <h1>Butacas para hoteles: cómo se elige una butaca lounge por zonas en la Fase 2 de la Feria de Cantón</h1>
+          <p>Una butaca para hoteles es un asiento tapizado de uso individual que se especifica por zona: no es la misma pieza el sillón de vestíbulo que soporta turnos completos con maletas y carritos, la butaca de lounge junto al bar, el asiento del rincón de escritorio de la habitación que se usa una hora al día o la silla tapizada de la espera del restaurante. Elegir por zonas significa asignar a cada espacio una altura de asiento, una profundidad, un peso admisible y una respuesta de limpieza distintas, y escribir esa decisión en la ficha técnica antes de comparar precios.</p>
+          <p>La segunda fase de la 140.ª Feria de Cantón, dedicada a la calidad del hogar, se celebra del 23 al 27 de octubre de 2026 en Guangzhou, y es donde se exhibe el mobiliario (China Foreign Trade Centre, 2026). El recinto suma unos 1,55 millones de m² y alrededor de 32.000 expositores, y en la 139.ª edición los compradores extranjeros acudieron de 220 países y regiones, con 314.000 asistentes (China Foreign Trade Centre, 2026). Para quien compra asientos tapizados por zonas, esa concentración permite medir en una misma mañana, con la cinta métrica en la mano, cómo cambia una misma familia de butacas entre nivel de vestíbulo y nivel de habitación.</p>
+          <p>Detrás de este método está Hongye Furniture Group Commercial, fábrica fundada en 1996, con más de 300.000 m² de planta en Heshan (Jiangmen, Guangdong), más de 1.000 proyectos entregados en más de 50 países y colaboraciones con más de 47 marcas hoteleras internacionales. Trabaja con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, con certificaciones BIFMA, GREENGUARD, FSC y CE, y con una ventaja de coste del 30-50 % frente a la fabricación occidental comparable. Este artículo recorre la selección por zonas: las medidas que se miden en el stand, la limpieza y el cambio de tapizado, las condiciones de pedido y el paso de la selección a la ficha FF&amp;E.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD23-a246-hero.jpg" alt="Butaca lounge de cuero oscuro y tejido junto a un sofá de dos plazas y una mesa de piedra en el vestíbulo de un hotel, frente a ventanales de altura completa" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se clasifican las zonas de asiento de un hotel antes de entrar a la feria?</h2>
+        <p>La clasificación se hace antes de salir del despacho, porque el recinto no permite comparar con orden si cada stand se visita sin una matriz de zonas escrita. Usted parte de un plano del proyecto y marca cuatro familias: vestíbulo y zona de check-in, lounge y bar, rincón de escritorio de habitación, y espera de restaurante. Cada familia lleva dos datos al lado: cuántas horas al día está ocupada la zona y qué objetos circulan por ella. El vestíbulo trabaja en horario completo, con maletas apoyadas en los brazos y equipos de limpieza pasando varias veces al día; el lounge del bar recibe picos intensos por la tarde con vasos y bandejas en las mesas contiguas; el rincón de escritorio vive en la habitación, con un solo usuario y limpieza entre estancias.</p>
+        <p>Esa matriz cambia la pregunta que usted hace en cada stand. En el vestíbulo, la pregunta es de estructura y carga: cuántos kilos admite el asiento y con qué ensayo, porque se sentará gente con abrigo, con bolsas y de manera brusca. En el lounge, la pregunta es de medidas sociales: una butaca muy profunda o con brazos muy altos impide conversar de frente con la mesa baja del grupo. En el rincón de escritorio, la pregunta es de postura: el usuario trabaja media hora con el portátil y necesita una butaca de asiento más alto y respaldo con soporte lumbar, no un asiento de descanso hundido. En la espera del restaurante, la pregunta es de rotación: piezas apilables o de mantenimiento rápido que soporten dos vueltas de servicio en una hora.</p>
+        <p>Con la matriz escrita, el mismo modelo base se puede cotizar en variantes por zona, y esa es la negociación que conviene abrir en la feria: muchos proveedores mantienen una familia de butacas con tapizado, respaldo y patas configurables. La tabla siguiente recoge las cuatro familias con su intensidad y su prioridad de especificación, para que la comparación entre stands se haga zona a zona y no por foto de ambiente.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona del hotel</th><th>Intensidad de uso</th><th>Pieza típica</th><th>Prioridad de especificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona del hotel">Vestíbulo y check-in</td><td data-label="Intensidad de uso">12-18 horas, uso continuo</td><td data-label="Pieza típica">Butaca lounge de brazo alto y banca tapizada</td><td data-label="Prioridad de especificación">Peso admisible declarado y estructura reforzada</td></tr>
+              <tr><td data-label="Zona del hotel">Lounge y bar</td><td data-label="Intensidad de uso">Picos de 6-10 horas, grupos</td><td data-label="Pieza típica">Butaca de media espalda y sofá de dos plazas</td><td data-label="Prioridad de especificación">Medidas sociales: profundidad y altura de brazos</td></tr>
+              <tr><td data-label="Zona del hotel">Rincón de escritorio de habitación</td><td data-label="Intensidad de uso">Uso individual, entre estancias</td><td data-label="Pieza típica">Butaca de asiento alto con cojín lumbar</td><td data-label="Prioridad de especificación">Postura de trabajo y limpieza entre estancias</td></tr>
+              <tr><td data-label="Zona del hotel">Sala de espera del restaurante</td><td data-label="Intensidad de uso">Rotación intensa en picos</td><td data-label="Pieza típica">Sillón compacto de mantenimiento rápido</td><td data-label="Prioridad de especificación">Rotación de limpieza y tejido de trama cerrada</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué butacas conviene elegir para el lobby de un hotel en la Fase 2?</h2>
+        <p>Para el lobby conviene una butaca lounge de brazo alto, estructura reforzada y medidas verificadas en el propio stand. Las tres medidas que se comprueban con cinta métrica son la altura del asiento, la profundidad y la altura del brazo. En uso contract de vestíbulo, la altura de asiento se mueve entre 44 y 48 cm, más alta que la de una butaca doméstica, porque el usuario se levanta con maleta en la mano y necesita apoyo en las piernas; la profundidad se queda en 55-60 cm para que el asiento no trague a personas de talla baja; y el brazo, entre 20 y 25 cm sobre el asiento, debe aguantar el apoyo de un bolso o de una maleta pequeña sin deformar la tapicería lateral.</p>
+        <p>El cuarto dato es el peso admisible, y se pide por escrito con el ensayo citado: laboratorio, norma y fecha. La referencia de durabilidad y estabilidad para asientos de uso público es BIFMA X5.4, y un informe que cita el ensayo con su número permite comparar dos ofertas sobre el mismo papel (BIFMA). Cuando el pliego lo exige, la madera del bastidor se documenta con cadena de custodia FSC y los materiales tapizados con emisiones certificadas por GREENGUARD Gold; el marcado CE entra cuando el proyecto exige conformidad europea declarada. Si el stand no trae la probeta ni el informe, se levanta la pieza: el peso de una butaca contract delata el calibre del bastidor mejor que el catálogo, y esa comprobación toma menos de un minuto.</p>
+        <p>La verificación final es de uso, no de papel: usted se sienta con el abrigo puesto, se levanta tres veces y mira dónde quedan sus manos. En el vestíbulo de un hotel en Mascate (Omán), la butaca se especificó con brazo alto y base lacada declarada en micras porque el ambiente costero castiga los acabados; en un proyecto en Taskent (Uzbekistán), la ficha del asiento cerró con el ensayo de fatiga citado por ciclos, y ese fue el documento que evitó discusiones cuando llegó la primera partida. El bloque de espuma y estructura del asiento se evalúa con el método completo de la <a href="/recursos/sofas-butacas-contract-hoteles-fase-2-feria-canton/">evaluación de sofás y butacas contract</a>, que este artículo no repite.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD23-a246-s1.jpg" alt="Proyección lateral de una butaca con regla plegable, carta de tejidos y tarjetas de dimensiones anotadas sobre la mesa de negociación de la feria" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mesa de negociación de la feria con la proyección lateral de una butaca sobre un cuaderno de mediciones, una regla plegable de metal y una carta de muestras de tejido, con tarjetas de dimensiones anotadas a mano junto al dibujo.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Brazos, proyección y respaldo: las medidas que deciden la convivencia de la butaca</h2>
+        <p>Después de las medidas del asiento vienen las tres que deciden si la butaca convive con el resto del mobiliario. La primera es la proyección frontal: la distancia entre el borde del asiento y el frente de la pata delantera, que en zona de circulación no debería superar los 5 cm, porque cada centímetro de antesala roba paso al carrito del servicio. La segunda es la altura del respaldo: en el vestíbulo, un respaldo alto crea refugio visual, pero tapa la vista de recepción si se coloca en línea; en el lounge junto al bar, la media espalda mantiene la vista sobre la mesa. La tercera es el cojín: en el rincón de escritorio, un cojín lumbar fijo marca la postura de trabajo; en la butaca de descanso, el cojín de respaldo suelto se sustituye más fácilmente cuando el tapizado se cansa.</p>
+        <p>Estas medidas se negocian como configuración, no como modelo aparte, y por eso conviene preguntar en cada stand qué campos de la ficha admiten variación sin cambiar la referencia: altura de pata, tipo de brazo, respaldo fijo o cojín suelto, y tejido. Un proveedor que responde con la ficha abierta es un proveedor con capacidad real de proyecto; uno que responde que el modelo es único obliga a multiplicar referencias en la BOQ y encarece el mantenimiento posterior. La tabla siguiente cruza los cuatro parámetros con las zonas de la matriz, como hoja de comprobación para llevar en la carpeta del recinto.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Parámetro</th><th>Vestíbulo</th><th>Lounge y bar</th><th>Escritorio de habitación</th><th>Espera de restaurante</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Parámetro">Altura de asiento</td><td data-label="Vestíbulo">46-48 cm</td><td data-label="Lounge y bar">42-45 cm</td><td data-label="Escritorio de habitación">46-48 cm</td><td data-label="Espera de restaurante">44-46 cm</td></tr>
+              <tr><td data-label="Parámetro">Profundidad de asiento</td><td data-label="Vestíbulo">55-58 cm</td><td data-label="Lounge y bar">60-65 cm</td><td data-label="Escritorio de habitación">50-55 cm</td><td data-label="Espera de restaurante">52-56 cm</td></tr>
+              <tr><td data-label="Parámetro">Brazos</td><td data-label="Vestíbulo">Alto, de 20-25 cm sobre el asiento</td><td data-label="Lounge y bar">Bajos o parcial, para conversación</td><td data-label="Escritorio de habitación">Compactos, para apoyar codos</td><td data-label="Espera de restaurante">Compactos y resistentes al roce</td></tr>
+              <tr><td data-label="Parámetro">Respaldo</td><td data-label="Vestíbulo">Alto, con cojín suelto</td><td data-label="Lounge y bar">Media espalda fija</td><td data-label="Escritorio de habitación">Medio con cojín lumbar fijo</td><td data-label="Espera de restaurante">Medio, tapizado lavable</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Limpieza y cambio de tapizado: la rotación que decide el tejido de cada zona</h2>
+        <p>La limpiabilidad se escribe por zona, no por modelo. En el vestíbulo, el tejido se limpia con productos profesionales varias veces por semana, y por eso se pide trama cerrada, color sólido y tapizado sin costuras en las zonas de apoyo donde el jabón se acumula; en el rincón de escritorio, la limpieza ocurre entre estancias, con ventanas de una o dos horas, y el tejido debe resistir un secado rápido; en la espera del restaurante, la mancha es el escenario habitual, y el sillón se especifica con tapizado de poro o con funda de respaldo sustituible. La abrasión y el fuego del tejido se leen con el método que ya quedó escrito en la guía anterior de tapicería contract, y aquí basta recordar que esos valores se exigen con informe de lote.</p>
+        <p>El cambio de tapizado es la segunda mitad de la decisión, la que casi nadie pregunta en la feria y la que marca el coste real a los cinco años. En el stand se hacen tres preguntas: si el tapizado se reemplaza sin desmontar la estructura, si el proveedor guarda el molde y la ficha del modelo para volver a fabricar tapizados a los dos o tres años, y qué mínimo acepta para una partida de solo tapizados. En un vestíbulo en Estambul (Turquía), la partida de recambio se cerró con las mismas referencias del pedido inicial, y la operación se hizo por zonas sin cerrar el hotel; ese resultado fue posible porque la condición quedó escrita en la ficha desde el primer pedido. La tabla siguiente resume el criterio de limpieza y recambio por zona.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Criterio</th><th>Vestíbulo</th><th>Escritorio de habitación</th><th>Espera de restaurante</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Criterio">Frecuencia de limpieza</td><td data-label="Vestíbulo">Varias veces por semana, producto profesional</td><td data-label="Escritorio de habitación">Entre estancias, secado rápido</td><td data-label="Espera de restaurante">Diaria, con manchas frecuentes</td></tr>
+              <tr><td data-label="Criterio">Tipo de tejido</td><td data-label="Vestíbulo">Trama cerrada, color sólido</td><td data-label="Escritorio de habitación">Tacto agradable y secado rápido</td><td data-label="Espera de restaurante">Poro o funda sustituible</td></tr>
+              <tr><td data-label="Criterio">Recambio de tapizado</td><td data-label="Vestíbulo">Programado por zonas, sin cerrar el área</td><td data-label="Escritorio de habitación">Al final de la vida del conjunto</td><td data-label="Espera de restaurante">Por piezas individuales, rotación corta</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>MOQ, plazo y embalaje: cómo viaja una butaca de lounge desde la fábrica al hotel</h2>
+        <p>Las condiciones se negocian con cuatro campos escritos. El MOQ se pacta por modelo y por tejido: una butaca de vestíbulo en tejido de stock mueve mínimos distintos de la misma pieza con tapizado especial por zona, y conviene saberlo antes de mezclar referencias. El plazo de producción de 30-45 días se ancla a la aprobación de la muestra, no a la firma del pedido, y ese anclaje se escribe en el contrato. El control de calidad se cierra con inspección final antes del embarque por muestreo AQL, y el embalaje se declara por tipo de pieza, porque una butaca de brazo alto y una banca tapizada no viajan igual.</p>
+        <p>El embalaje correcto de una butaca lounge de exportación es una caja de madera contrachapada no fumigada, con esquineros, protección de espuma EPE en brazos y patas, flejado y paletizado; las patas desmontables viajan embolsadas y atornilladas al bastidor o en el kit interior, y el contenedor se estiba por partidas según la planificación de instalación del hotel. En una entrega a un hotel en Montevideo (Uruguay), las piezas llegaron sin aristas dañadas porque el embalaje en crate y el acta de recepción estaban definidos en el contrato, y el montaje in situ cerró con punch list de acabados. Si el proveedor propone envolver la butaca en plástico enrollado y prescindir del crate, esa oferta se separa de la comparación: la compensación de volumen sale cara en reposiciones.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD23-a246-s2.jpg" alt="Cajas de madera contrachapada con esquineros y espuma EPE protegiendo brazos y patas de butacas, junto a un contenedor abierto en el patio de carga" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Patio de carga de la fábrica con cajas de madera contrachapada sobre pallets, esquineros y láminas de espuma EPE protegiendo los brazos y las patas de butacas tapizadas, junto a un contenedor con las puertas abiertas.</figcaption>
+        </figure>
+        <p>La tabla siguiente recoge las tres estructuras de pedido de butacas por zonas y qué se negocia en cada una, para cerrar el stand con los cuatro campos completos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Partida</th><th>MOQ</th><th>Plazo</th><th>Embalaje</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Partida">Aprobación de muestra, una por zona</td><td data-label="MOQ">Una pieza por modelo</td><td data-label="Plazo">Antes del pedido</td><td data-label="Embalaje">Caja de cartón reforzado con esquineros</td></tr>
+              <tr><td data-label="Partida">Pedido por zonas</td><td data-label="MOQ">MOQ por modelo y por tejido</td><td data-label="Plazo">30-45 días desde la muestra aprobada, sujeto a contrato</td><td data-label="Embalaje">Caja de madera contrachapada, esquineros y espuma EPE</td></tr>
+              <tr><td data-label="Partida">Partida de recambio de tapizado</td><td data-label="MOQ">Mínimo negociado por tejido</td><td data-label="Plazo">Programado con la partida principal</td><td data-label="Embalaje">Paquetes planos identificados por referencia de zona</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Del stand a la ficha FF&amp;E y a la BOQ</h2>
+        <p>La selección por zonas termina siendo una ficha FF&amp;E por posición, no un catálogo elegido a gusto del ambiente. Cada posición del plano lleva cinco campos: zona, pieza, referencia del proveedor, especificación resumida y cantidad. La especificación resume lo medido: altura de asiento de 46-48 cm y brazo de 20-25 cm para el vestíbulo, cojín lumbar fijo para el escritorio de habitación, tapizado de trama cerrada con partida de recambio prevista para el lounge. Con las fichas escritas, la comparación posterior de precios compara productos idénticos zona a zona, y la adjudicación se defiende con el plano delante. Los <a href="/proyectos/">proyectos ejecutados</a> se leen con esa misma lógica: la ficha de materiales al lado de la foto del ambiente, zona por zona.</p>
+        <p>La segunda fase cierra el 27 de octubre y la tercera, de salud y vida activa, abre del 31 de octubre al 4 de noviembre de 2026 (China Foreign Trade Centre, 2026). Si el proyecto mezcla hospitalidad con áreas médicas o de bienestar, los días de cambio de fase sirven para cerrar la familia de asientos con el mismo método y abrir la de equipamiento. Y si el viaje aún no está confirmado, la vía corta es dejar los datos por <a href="/contacto/">contacto</a>: con la zona, el volumen estimado y el país del proyecto, el equipo de proyectos prepara la comparación de butacas antes de que usted pise el recinto.</p>
+        <p>La ventaja de preparar las zonas antes de la feria es medible: menos stands visitados, fichas completas y una BOQ que compara lo comparable. La matriz de zonas, la hoja de medidas y la tabla de limpieza de este artículo caben en una sola carpeta de visita, y cada stand se cierra en quince minutos con los cuatro campos de condiciones completos. Lo que no se midió en el recinto se convierte, después, en una discusión de recepción con la partida ya fabricada; lo que se midió, se convierte en una línea de la BOQ que todas las ofertas leen igual.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite la ficha por zonas de sus butacas para hoteles"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar los datos antes de viajar añade tres ventajas concretas: recibe el número de stand y la carta de invitación, reserva una franja de atención exclusiva durante la segunda fase y, si el proyecto lo justifica, coordina la visita a la fábrica de Heshan (Jiangmen, Guangdong) para ver el bastidor, el corte de la espuma y la línea de tapizado. Para preparar la cita necesitamos cuatro datos: las zonas de asiento del proyecto y su intensidad de uso, el volumen estimado por partida, el país del proyecto y la norma de comportamiento al fuego aplicable. La respuesta vuelve con la ficha por zonas, las condiciones de MOQ, plazo y embalaje, y un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. La emisión del visado corresponde a la embajada o al consulado de China competente."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
