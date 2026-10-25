@@ -490,10 +490,24 @@
       "sector": "hospitality",
       "language": "es",
       "source": "https://hymueble.com/proyectos/biblioteca/hos-003/",
-      "summary": "Selección de mobiliario para un proyecto del grupo; el país y el sector corresponden a la referencia original.",
+      "summary": "Elaf Hotel, en Jeddah, Arabia Saudita, es una referencia hotelera del grupo. La presentación pública identifica mobiliario para vestíbulos, suites, restaurante, espacios de masaje y reunión. Estos ambientes permiten estudiar un suministro por zonas; no establecen cantidades ni especificaciones para un hotel distinto.",
       "discussion": "Confirma planos, cantidades, dimensiones, acabados y responsabilidades de entrega. Esta referencia no establece precios, plazos ni especificaciones técnicas para otro pedido.",
       "evidenceGrade": "A",
-      "updated": "2026-10-13"
+      "updated": "2026-10-26",
+      "documentedSpaces": [
+        "Vestíbulos y recepción",
+        "Suites",
+        "Restaurante",
+        "Espacios de masaje y reunión"
+      ],
+      "evidenceSource": "https://www.hyhotelfurniture.com/testimonials.html",
+      "procurementAdvice": [
+        "La referencia reúne áreas privadas y compartidas. Para preparar un hotel nuevo, separa el listado de habitaciones del mobiliario de recepción, restauración y reunión. Indica por zona las piezas fijas, los muebles sueltos y los accesorios que necesitas; una imagen de conjunto no demuestra que cada elemento forme parte del pedido.",
+        "Empieza por los tipos de habitación y sus planos acotados. Relaciona cama, cabecero, armario y asientos con puertas, ventanas y pasos. Si buscas una composición parecida, identifica las piezas de interés y pide dimensiones, materiales y acabados propios de esa selección; no deduzcas medidas ocultas de la fotografía.",
+        "Marca encuentros con paredes, puntos eléctricos y accesos al edificio. Distingue la responsabilidad del mobiliario de la obra, iluminación y equipos. Para el nuevo pedido, confirma muestras, accesorios y forma de embalaje; transporte e instalación requieren alcance acordado. Esta lista es orientación de compra, no una descripción del procedimiento del hotel original.",
+        "Comparte ciudad y país de destino, categoría de espacio, cantidades por tipo de habitación y plano vigente. Señala qué imágenes orientan el estilo y qué requisitos documentales exige el proyecto. El equipo podrá contrastar el alcance solicitado con la colección hotelera; disponibilidad, ensayos y plazos se confirman para cada propuesta."
+      ],
+      "factAdviceSeparation": true
     },
     {
       "id": "hos-012",
@@ -644,7 +658,7 @@
       "language": "es",
       "source": "https://hymueble.com/proyectos/biblioteca/off-001/",
       "evidenceSource": "https://www.hyofficefurniture.com/Ahmadi-Services-Group-Kuwait-Oil-Company-Office-Project-By-Hongye-Furniture-id40818596.html",
-      "summary": "La referencia de Kuwait reúne despachos privados, puestos de trabajo y espacios de reunión. Revisa la relación entre la distribución, el almacenaje y la atención a visitantes.",
+      "summary": "El proyecto Ahmadi Services Group en Kuwait distingue despachos de dirección, biblioteca o zonas de lectura, puestos de trabajo, salas de reunión y formación. La fuente del grupo documenta varios usos de oficina; esta referencia ayuda a preparar un programa de mobiliario por funciones, sin trasladar prestaciones o cantidades a otro edificio.",
       "spaces": [
         "Despachos privados",
         "Puestos compartidos",
@@ -656,7 +670,20 @@
         "Confirma la distribución de las salas antes de seleccionar el mobiliario."
       ],
       "evidenceGrade": "A",
-      "updated": "2026-10-21"
+      "updated": "2026-10-26",
+      "documentedSpaces": [
+        "Despachos de dirección",
+        "Biblioteca y lectura",
+        "Puestos de trabajo",
+        "Reunión y formación"
+      ],
+      "procurementAdvice": [
+        "Un programa corporativo no se reduce a contar escritorios. Separa despachos, puestos compartidos, biblioteca, reuniones y formación. Para cada estancia, indica usuarios previstos, asientos de visita y necesidades de almacenaje. Así se puede comparar una propuesta de mobiliario con el uso de cada sala, en lugar de repetir una solución para todo el edificio.",
+        "En el plano del nuevo proyecto, marca enchufes, datos, recorrido de personas y espacio detrás de los asientos ocupados. Comprueba la apertura de puertas y armarios, el acceso a las conexiones y la relación entre la mesa y los equipos de reunión. Son verificaciones de compra para el nuevo espacio, no medidas atribuidas al caso original.",
+        "La documentación permite reconocer categorías de espacios y composiciones de oficina. No sustituye fichas técnicas, muestras o ensayos del producto elegido. Si el proyecto exige prestaciones ergonómicas, acústicas o de carga, solicita la documentación aplicable y define los criterios de aceptación antes de confirmar cada referencia.",
+        "Envía país y ciudad, planos acotados, cantidades por zona y criterios de acabado. Identifica los escritorios, asientos o almacenajes que te interesa comparar y separa mobiliario de equipos o trabajos de obra. El suministro, embalaje, transporte e instalación se acuerdan expresamente; la presencia de un caso regional no demuestra almacén o servicio local permanente."
+      ],
+      "factAdviceSeparation": true
     },
     {
       "id": "edu-001",

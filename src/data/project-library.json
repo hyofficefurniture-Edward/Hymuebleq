@@ -553,7 +553,57 @@
     ],
     "sourceKind": "project-pdf",
     "publicLevel": "L3",
-    "evidenceGrade": "A"
+    "evidenceGrade": "A",
+    "localized": {
+      "es": {
+        "intro": "Elaf Hotel, en Jeddah, Arabia Saudita, es una referencia hotelera del grupo. La presentación pública identifica mobiliario para vestíbulos, suites, restaurante, espacios de masaje y reunión. Estos ambientes permiten estudiar un suministro por zonas; no establecen cantidades ni especificaciones para un hotel distinto.",
+        "spaces": [
+          "Vestíbulos y recepción",
+          "Suites",
+          "Restaurante",
+          "Espacios de masaje y reunión"
+        ],
+        "questions": [
+          "Envía planos, cantidades por espacio y destino del pedido.",
+          "Distingue los requisitos técnicos de las referencias visuales."
+        ],
+        "evidenceSections": [
+          {
+            "heading": "Un expediente de mobiliario para usos diferentes",
+            "text": "La referencia reúne áreas privadas y compartidas. Para preparar un hotel nuevo, separa el listado de habitaciones del mobiliario de recepción, restauración y reunión. Indica por zona las piezas fijas, los muebles sueltos y los accesorios que necesitas; una imagen de conjunto no demuestra que cada elemento forme parte del pedido."
+          },
+          {
+            "heading": "De la suite a la lista de piezas",
+            "text": "Empieza por los tipos de habitación y sus planos acotados. Relaciona cama, cabecero, armario y asientos con puertas, ventanas y pasos. Si buscas una composición parecida, identifica las piezas de interés y pide dimensiones, materiales y acabados propios de esa selección; no deduzcas medidas ocultas de la fotografía."
+          },
+          {
+            "heading": "Interfaces que conviene resolver antes de fabricar",
+            "text": "Marca encuentros con paredes, puntos eléctricos y accesos al edificio. Distingue la responsabilidad del mobiliario de la obra, iluminación y equipos. Para el nuevo pedido, confirma muestras, accesorios y forma de embalaje; transporte e instalación requieren alcance acordado. Esta lista es orientación de compra, no una descripción del procedimiento del hotel original."
+          },
+          {
+            "heading": "Qué enviar para recibir una propuesta comparable",
+            "text": "Comparte ciudad y país de destino, categoría de espacio, cantidades por tipo de habitación y plano vigente. Señala qué imágenes orientan el estilo y qué requisitos documentales exige el proyecto. El equipo podrá contrastar el alcance solicitado con la colección hotelera; disponibilidad, ensayos y plazos se confirman para cada propuesta."
+          }
+        ],
+        "imageCaption": "Imagen de la documentación del proyecto Elaf Hotel en Jeddah; sirve como referencia visual, no como ficha técnica de cada pieza.",
+        "relatedLinks": [
+          {
+            "href": "/catalogo/hoteles/",
+            "label": "Catálogo hotelero"
+          },
+          {
+            "href": "/recursos/casegoods-habitaciones-hotel-ffe-proyecto/",
+            "label": "Guía de FF&E para habitaciones"
+          },
+          {
+            "href": "/recursos/casegoods-muebles-sueltos-hotel/",
+            "label": "Mobiliario fijo y suelto"
+          }
+        ]
+      }
+    },
+    "sourceUrl": "https://www.hyhotelfurniture.com/testimonials.html",
+    "reviewed": "2026-10-26"
   },
   {
     "id": "hos-012",
@@ -803,7 +853,8 @@
       },
       {
         "image": "/images/project-library/ahmadi-kuwait-training-room.webp",
-        "label": "project-documentation"
+        "label": "project-documentation",
+        "caption": "Sala de formación de la documentación Ahmadi; confirma distribución y cantidades para un nuevo proyecto."
       }
     ],
     "tags": [
@@ -813,7 +864,7 @@
     "publicLevel": "L3",
     "evidenceGrade": "A",
     "sourceUrl": "https://www.hyofficefurniture.com/Ahmadi-Services-Group-Kuwait-Oil-Company-Office-Project-By-Hongye-Furniture-id40818596.html",
-    "reviewed": "2026-10-21",
+    "reviewed": "2026-10-26",
     "localized": {
       "en": {
         "intro": "The Kuwaiti project reference brings private offices, shared work areas and meeting spaces into one furniture brief. Review the relationship between desk layouts, storage and visitor access.",
@@ -881,16 +932,49 @@
         ]
       },
       "es": {
-        "intro": "La referencia de Kuwait reúne despachos privados, puestos de trabajo y espacios de reunión. Revisa la relación entre la distribución, el almacenaje y la atención a visitantes.",
+        "intro": "El proyecto Ahmadi Services Group en Kuwait distingue despachos de dirección, biblioteca o zonas de lectura, puestos de trabajo, salas de reunión y formación. La fuente del grupo documenta varios usos de oficina; esta referencia ayuda a preparar un programa de mobiliario por funciones, sin trasladar prestaciones o cantidades a otro edificio.",
         "spaces": [
-          "Despachos privados",
-          "Puestos compartidos",
-          "Salas de reunión y formación"
+          "Despachos de dirección",
+          "Biblioteca y lectura",
+          "Puestos de trabajo",
+          "Reunión y formación"
         ],
         "questions": [
-          "Distingue los despachos y las áreas de trabajo en equipo.",
-          "Indica el almacenaje y los asientos de visita por estancia.",
-          "Confirma la distribución de las salas antes de seleccionar el mobiliario."
+          "Envía planos, cantidades por espacio y destino del pedido.",
+          "Distingue los requisitos técnicos de las referencias visuales."
+        ],
+        "evidenceSections": [
+          {
+            "heading": "Organizar el pedido por funciones",
+            "text": "Un programa corporativo no se reduce a contar escritorios. Separa despachos, puestos compartidos, biblioteca, reuniones y formación. Para cada estancia, indica usuarios previstos, asientos de visita y necesidades de almacenaje. Así se puede comparar una propuesta de mobiliario con el uso de cada sala, en lugar de repetir una solución para todo el edificio."
+          },
+          {
+            "heading": "Coordinar circulación, cables y almacenamiento",
+            "text": "En el plano del nuevo proyecto, marca enchufes, datos, recorrido de personas y espacio detrás de los asientos ocupados. Comprueba la apertura de puertas y armarios, el acceso a las conexiones y la relación entre la mesa y los equipos de reunión. Son verificaciones de compra para el nuevo espacio, no medidas atribuidas al caso original."
+          },
+          {
+            "heading": "Del aspecto visible a una especificación verificable",
+            "text": "La documentación permite reconocer categorías de espacios y composiciones de oficina. No sustituye fichas técnicas, muestras o ensayos del producto elegido. Si el proyecto exige prestaciones ergonómicas, acústicas o de carga, solicita la documentación aplicable y define los criterios de aceptación antes de confirmar cada referencia."
+          },
+          {
+            "heading": "Preparar una consulta para oficinas en la región",
+            "text": "Envía país y ciudad, planos acotados, cantidades por zona y criterios de acabado. Identifica los escritorios, asientos o almacenajes que te interesa comparar y separa mobiliario de equipos o trabajos de obra. El suministro, embalaje, transporte e instalación se acuerdan expresamente; la presencia de un caso regional no demuestra almacén o servicio local permanente."
+          }
+        ],
+        "imageCaption": "Despacho documentado en la referencia Ahmadi de Kuwait; la imagen no permite verificar dimensiones ocultas ni prestaciones del mobiliario.",
+        "relatedLinks": [
+          {
+            "href": "/catalogo/oficinas/",
+            "label": "Catálogo de oficinas"
+          },
+          {
+            "href": "/recursos/amueblamiento-oficinas-proyectos-corporativos/",
+            "label": "Guía de proyectos corporativos"
+          },
+          {
+            "href": "/recursos/salas-de-juntas-mobiliario-oficina-proyecto/",
+            "label": "Planificación de salas de juntas"
+          }
         ]
       }
     },
