@@ -1,5 +1,6 @@
 ---
 import { formConfig } from "../data/site";
+import projectLibrary from "../data/project-library.json";
 
 interface Props {
   compact?: boolean;
@@ -114,3 +115,17 @@ const statusMessage = isDemoForm
     <button class="btn primary" type="submit">{submitLabel}</button>
   </div>
 </form>
+
+<script define:vars={{ caseIds: projectLibrary.map(project => project.id) }}>
+  const query = new URLSearchParams(window.location.search);
+  const candidate = (query.get('case_id') || query.get('reference') || '').toLowerCase();
+  if (caseIds.includes(candidate)) {
+    document.querySelectorAll('form.project-form').forEach(form => {
+      for (const name of ['case_id', 'reference_id']) {
+        let input = form.querySelector('input[name="' + name + '"]');
+        if (!input) { input = document.createElement('input'); input.type = 'hidden'; input.name = name; form.appendChild(input); }
+        input.value = candidate;
+      }
+    });
+  }
+</script>
