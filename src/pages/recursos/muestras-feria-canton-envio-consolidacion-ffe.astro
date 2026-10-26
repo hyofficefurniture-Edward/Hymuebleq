@@ -1,0 +1,462 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Envío de muestras desde la Feria de Cantón: guía FF&E";
+const pageDescription = "Envío de muestras desde la Feria de Cantón: qué pedir en el stand, cómo etiquetarlo y qué modo de transporte elegir tras la Fase 2 de octubre de 2026.";
+const keywords = [
+  "envío de muestras desde la Feria de Cantón",
+  "muestras de acabado contract",
+  "prototipo de tapizado",
+  "unidad completa de muestra",
+  "muestra testigo sellada",
+  "mensajería exprés internacional",
+  "flete aéreo consolidado",
+  "marítimo consolidado LCL",
+  "proforma invoice",
+  "packing list",
+  "partida arancelaria HS",
+  "ISPM 15 embalaje de madera",
+  "certificado de origen",
+  "Fase 2 Feria de Cantón 2026",
+  "aprobación de muestras FF&E"
+];
+const canonicalPath = "/recursos/muestras-feria-canton-envio-consolidacion-ffe/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD24-a248-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-26";
+const dateModified = "2026-10-26";
+const publicationDateLabel = "Publicada el 26 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué muestras conviene pedir en la Feria de Cantón para un proyecto FF&E?", answer: "Conviene pedir tres niveles: bloques de acabado de stock para decidir color y material, prototipos de tapizado o herraje para decidir costura y mecanismo, y una unidad completa cuando el proyecto exige verificar medidas, montaje y embalaje real. El bloque se entrega en el stand y lo asume el proveedor; el prototipo se fabrica en una o dos semanas y su importe se suele descontar del primer pedido; la unidad completa viaja como mercancía pagada y su flete corre por cuenta del comprador salvo pacto." },
+    { question: "¿Quién paga el envío de las muestras desde la feria?", answer: "El reparto se negocia por niveles: los bloques de acabado los entrega el proveedor sin coste, el prototipo se cobra por pieza y se descuenta del primer pedido si el proyecto avanza, y el flete de la unidad completa lo paga el comprador salvo que el pedido en serie ya esté comprometido. Lo que decide el gasto real no es el precio de la pieza sino el modo de transporte: mensajería exprés por peso, flete aéreo consolidado por kilo y marítimo consolidado LCL por volumen ocupado." },
+    { question: "¿Qué documentos necesita un envío de muestras desde Guangzhou?", answer: "El expediente básico lleva proforma invoice, commercial invoice, packing list, partida arancelaria del HS, declaración del embalaje de madera con sello ISPM 15 o acreditación de contrachapado exento, y certificado de origen cuando el arancel depende del origen. Los umbrales de valor, el tratamiento de las muestras sin valor comercial y los documentos exigidos los fija la aduana del país de destino, y se confirman con el agente de aduanas antes de despachar: en cada caso manda la normativa oficial de la aduana de destino." },
+    { question: "¿Cuánto tarda un envío de muestras desde la Feria de Cantón?", answer: "Depende del modo: la mensajería exprés entrega bloques y fichas en días, el flete aéreo consolidado mueve prototipos y cajas pequeñas en una o dos semanas según destino, y el marítimo consolidado LCL cuenta el trayecto en semanas para unidades completas embaladas en caja de madera. Al plazo de tránsito hay que sumar el despacho de salida y el de entrada, y por eso los prototipos que alimentan una junta de aprobación se despachan durante el cambio de fase, entre el 28 y el 30 de octubre de 2026." },
+    { question: "¿Cómo se controla la diferencia de color entre la muestra y el pedido en serie?", answer: "Con muestra testigo sellada: la pieza aprobada se firma como referencia, una copia queda con el comprador y otra en la fábrica, y la producción se compara contra esa pieza sellada y no contra una fotografía. El tejido cambia ligeramente entre partidas de tinte, así que la tolerancia de diferencia se declara por escrito en la ficha del material, junto a la referencia exacta, el número de color y el lote que se exige para la partida." },
+    { question: "¿Cuándo conviene incluir las muestras en el primer pedido?", answer: "Cuando el comité ya aprobó el acabado con el bloque de stock y la muestra adicional solo sirve como referencia de recepción: entonces la unidad viaja como bulto del contenedor del pedido, sin flete propio, y llega a la obra junto con la partida. Si la muestra todavía debe circular entre la dirección del proyecto y el estudio de diseño, conviene despacharla sola por aéreo o exprés; y nunca se arranca producción sin la aprobación escrita, porque el plazo de 30-45 días desde la muestra aprobada, sujeto a contrato, es el que sostiene el calendario de apertura." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD24-a248-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d24a2-a248-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d24a2-a248-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Feria de Cantón · Logística de muestras &middot; {publicationDateLabel}</p>
+          <h1>Envío de muestras desde la Feria de Cantón: del stand de la Fase 2 a la aprobación del proyecto FF&amp;E</h1>
+          <p>El envío de muestras desde la Feria de Cantón es el proceso con el que un comprador FF&amp;E convierte lo acordado en el stand en piezas físicas verificables en el país del proyecto: bloques de acabado, prototipos de tapizado y unidades completas que salen de Guangzhou por mensajería exprés, aéreo consolidado o marítimo y llegan a la sala de muestras, al taller del contratista o a la obra de referencia antes de aprobar el pedido en serie. Su valor no está en la pieza en sí, sino en lo que desbloquea: sin muestra aprobada no hay color, tacto ni coste de embalaje que se pueda escribir en el contrato, y cada semana que la muestra tarda en llegar retrasa el arranque de producción.</p>
+          <p>La segunda fase de la 140.ª Feria de Cantón, dedicada a la calidad del hogar, reúne el mobiliario del 23 al 27 de octubre de 2026 en Guangzhou, con jornadas de negocio de 09:30 a 18:00 (China Foreign Trade Centre, 2026). El recinto suma unos 1,55 millones de m² y alrededor de 32.000 expositores, y en la 139.ª edición los compradores extranjeros acudieron de 220 países y regiones, con 314.000 asistentes (China Foreign Trade Centre, 2026). Para quien compra para proyectos de hotel, oficina, educación o salud, la ventana práctica de las muestras se abre justo después: del 28 al 30 de octubre no hay jornadas de negocio en el recinto, y esos días son los que se usan para consolidar, documentar y despachar lo recogido en el stand.</p>
+          <p>Detrás de este método está Hongye Furniture Group Commercial, fábrica fundada en 1996, con más de 300.000 m² de planta en Heshan (Jiangmen, Guangdong), más de 1.000 proyectos entregados en más de 50 países y ocho certificaciones internacionales, entre ellas BIFMA, GREENGUARD, FSC y CE. Trabaja con un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato, y deja los bloques de acabado de stock listos para entregar en el propio recinto. Este artículo recorre el plan de muestras completo: los tres niveles que se piden, la identificación y el archivo, los modos de transporte, el expediente documental, la recepción en destino y el momento de consolidar todo en el primer pedido.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD24-a248-hero.jpg" alt="Sala de muestras con paneles de acabados en la pared y una mesa larga con muestras de madera y cartas de tejido, un cuaderno de proyecto y una cinta métrica" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué muestras conviene pedir en el stand y quién las paga?</h2>
+        <p>En el stand se piden tres niveles de muestra, y conviene saber de antemano qué decide cada uno. El bloque de acabado es un recorte de tejido, un tapacanto o un panel laminado que el proveedor entrega de su stock: decide color y material, se entrega en el acto y en la mayoría de los stands no tiene coste. El prototipo es una pieza pequeña fabricada para usted, como un cojín completo con el tapizado elegido o un cajón con el herraje real: decide acabado, costura y mecanismo, y se pide con fechas concretas. La unidad completa es una butaca, una mesa o un módulo entero que viaja al país del proyecto: decide medidas, montaje, sensación de uso y embalaje real, y es la muestra más cara de mover.</p>
+        <p>Quién paga se negocia por niveles y por volumen. El bloque de acabado lo asume normalmente el proveedor; el prototipo se cobra por pieza y ese importe se descuenta del primer pedido si el proyecto avanza; la unidad completa se paga como mercancía y su flete corre por cuenta del comprador, salvo que el pedido en serie ya esté comprometido y el proveedor la incluya dentro de la gestión del proyecto. Escribir ese reparto en el mismo cuaderno donde se anota la referencia de cada pieza evita la discusión posterior y deja claro desde la feria qué presupuesto de muestras maneja el proyecto.</p>
+        <p>La tabla siguiente recoge los tres niveles con lo que decide cada uno y el tratamiento de coste habitual, para cerrar el stand con las peticiones de muestra por escrito y sin ambigüedades.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Nivel de muestra</th><th>Qué decide</th><th>Entrega habitual</th><th>Tratamiento de coste</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Nivel de muestra">Bloque de acabado de stock</td><td data-label="Qué decide">Color, material y textura</td><td data-label="Entrega habitual">En el propio stand</td><td data-label="Tratamiento de coste">Lo asume el proveedor</td></tr>
+              <tr><td data-label="Nivel de muestra">Prototipo de tapizado o herraje</td><td data-label="Qué decide">Costura, mecanismo y acabado real</td><td data-label="Entrega habitual">Una o dos semanas tras la feria</td><td data-label="Tratamiento de coste">Se cobra por pieza y se descuenta del primer pedido</td></tr>
+              <tr><td data-label="Nivel de muestra">Unidad completa</td><td data-label="Qué decide">Medidas, montaje y embalaje real</td><td data-label="Entrega habitual">Por exprés, aéreo o marítimo</td><td data-label="Tratamiento de coste">Mercancía pagada; flete del comprador salvo pacto</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se identifican las muestras en el propio stand para que sirvan después?</h2>
+        <p>La identificación se hace en el stand, no después, porque una muestra sin etiqueta pierde su valor en cuanto sale del pabellón. En la carpeta del proyecto se usa una regla simple de numeración: código del proyecto, abreviatura del proveedor y número correlativo, escritos siempre con el mismo formato en la etiqueta y en la ficha de la pieza. Cada muestra lleva esa marca y la misma numeración pasa a la tabla de seguimiento que viaja al despacho, de modo que en la semana siguiente nadie tenga que adivinar de qué stand salió cada bloque.</p>
+        <p>Junto al número van las fotos y los datos de material. Se fotografía la muestra junto a su etiqueta y junto a la ficha técnica del proveedor, se anota la referencia exacta del tejido o del acabado con su número de color y se registra el lote cuando el proveedor lo declara; la comparación con la guía de <a href="/recursos/materiales-acabados-mobiliario-fase-2-feria-canton/">materiales y acabados de la segunda fase</a> se hace con esa referencia, no con la memoria. En tejidos se anota también la composición y el gramaje cuando constan en la ficha, porque esos dos datos son los que después permiten exigir la misma partida al fabricante. Y si el stand entrega varios bloques del mismo tejido, uno se queda en el archivo del comprador y otro se devuelve al proveedor como contramuestra sellada.</p>
+        <p>La mesa de trabajo del stand se ordena igual que la sala de recepción que llegará una semana después: etiquetas escritas, cámara del teléfono, carpeta de fichas y una caja rígida para que los bloques no viajen sueltos en el bolsillo. Quince minutos de orden en el stand ahorran días de identificación cruzada cuando las cajas llegan a destino y el comité ya quiere comparar.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD24-a248-s1.jpg" alt="Muestras de madera y tejido con etiquetas numeradas junto a la hoja de registro del proyecto sobre la mesa de trabajo" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Mesa de trabajo del stand con muestras de madera y tejido sujetas con etiquetas numeradas de papel, la hoja de registro del proyecto y un bolígrafo sobre la carpeta</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué modo de transporte conviene para cada tipo de muestra?</h2>
+        <p>El modo se elige con dos variables: cuánto pesa la muestra y para qué fecha la necesita el comité del proyecto. La mensajería exprés internacional mueve documentos, fichas y bloques de acabado en cuestión de días: es el modo natural para los sobres de tejido y las cartas de material recogidos en el stand, y como su coste crece por peso, conviene agrupar los bloques de varios stands en un mismo envío en lugar de despacharlos uno a uno.</p>
+        <p>El flete aéreo consolidado es el término medio: agrupa piezas de varios expedidores en un mismo vuelo y reduce el coste por kilo respecto del exprés, con plazos de una a dos semanas según destino. Es el modo para prototipos y piezas pequeñas urgentes que deben llegar antes de una junta de aprobación. El marítimo en consolidado LCL es el modo de la unidad completa: una butaca o un módulo viajan embalados en caja de madera y comparten contenedor con otras cargas; el plazo se cuenta en semanas y el coste se mide por volumen ocupado, no por kilo. El criterio del <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación de muebles</a> es el mismo que se aplica al pedido en serie: madera contrachapada, esquineros y protección en aristas, de modo que la muestra que llega a destino sirva también para juzgar cómo viajará la partida.</p>
+        <p>La tabla siguiente cruza los tres modos con plazo, volumen y estructura de coste, como hoja de decisión para cerrar en el stand el envío de cada pieza.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Modo de transporte</th><th>Plazo de referencia</th><th>Volumen ideal</th><th>Estructura de coste</th><th>Escenario típico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Modo de transporte">Mensajería exprés internacional</td><td data-label="Plazo de referencia">Días</td><td data-label="Volumen ideal">Documentos y bloques de hasta pocos kilos</td><td data-label="Estructura de coste">Por peso y zona de destino</td><td data-label="Escenario típico">Tejidos, cartas de material y fichas del stand</td></tr>
+              <tr><td data-label="Modo de transporte">Flete aéreo consolidado</td><td data-label="Plazo de referencia">1-2 semanas según destino</td><td data-label="Volumen ideal">Cajas pequeñas y prototipos</td><td data-label="Estructura de coste">Por kilo, por debajo del exprés</td><td data-label="Escenario típico">Prototipos urgentes antes de la junta de aprobación</td></tr>
+              <tr><td data-label="Modo de transporte">Marítimo consolidado LCL</td><td data-label="Plazo de referencia">Semanas, según ruta</td><td data-label="Volumen ideal">Unidades completas embaladas en caja de madera</td><td data-label="Estructura de coste">Por volumen ocupado, no por kilo</td><td data-label="Escenario típico">Butaca o módulo para la sala de muestras del proyecto</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué documentos necesita el envío de muestras desde Guangzhou?</h2>
+        <p>El expediente de un envío de muestras se arma con seis documentos y se prepara antes de que la pieza salga del almacén del transitario. La proforma invoice abre el proceso y permite que el receptor prepare el despacho; la commercial invoice y el packing list describen lo que viaja, pieza por pieza, con pesos y medidas; la partida arancelaria del HS da a la aduana la clasificación del producto; la declaración del embalaje acredita si la caja es de madera contrachapada exenta de tratamiento o de madera que cuenta con el sello ISPM 15; y el certificado de origen acompaña la carga cuando el arancel del país de destino depende del origen.</p>
+        <p>Los requisitos exactos los fija la aduana del país de destino y se confirman con el agente de aduanas antes de despachar, porque los umbrales de valor, el tratamiento de las muestras sin valor comercial y la documentación exigida cambian por país: esta guía recoge la práctica general y en cada caso manda la normativa oficial de la aduana de destino. En muestras sin valor comercial, muchas aduanas exigen igualmente una factura declarada a efectos estadísticos, y conviene que la descripción diga sample for approval junto con la referencia del proyecto para que el despacho sea rápido y trazable.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Para qué sirve</th><th>Quién lo emite</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">Proforma invoice</td><td data-label="Para qué sirve">Confirmar condiciones y preparar el despacho</td><td data-label="Quién lo emite">El exportador en Guangzhou</td></tr>
+              <tr><td data-label="Documento">Commercial invoice</td><td data-label="Para qué sirve">Declarar el valor ante la aduana de destino</td><td data-label="Quién lo emite">El exportador</td></tr>
+              <tr><td data-label="Documento">Packing list</td><td data-label="Para qué sirve">Detallar bultos, pesos y medidas</td><td data-label="Quién lo emite">El exportador o el transitario</td></tr>
+              <tr><td data-label="Documento">Partida arancelaria (HS)</td><td data-label="Para qué sirve">Clasificar el producto ante la aduana</td><td data-label="Quién lo emite">Se determina con el transitario o el agente de aduanas</td></tr>
+              <tr><td data-label="Documento">Declaración de embalaje (ISPM 15 o contrachapado exento)</td><td data-label="Para qué sirve">Acreditar el tratamiento de la madera de la caja</td><td data-label="Quién lo emite">El envasador o el transitario</td></tr>
+              <tr><td data-label="Documento">Certificado de origen</td><td data-label="Para qué sirve">Aplicar el arancel del acuerdo comercial que corresponda</td><td data-label="Quién lo emite">Cámara de comercio o entidad autorizada</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se recepcionan las muestras y se alinean con el pedido en serie?</h2>
+        <p>La recepción se hace con la luz del proyecto, no con la luz del despacho. Los bloques de acabado se colocan en la sala de muestras junto al material de suelo y de pared ya elegidos, y los prototipos se prueban en el ambiente real: un cojín junto a la cortina del modelo y una unidad completa en la habitación de prueba si el edificio existe. La comparación se documenta con las mismas fotos numeradas del stand, y el acta de aprobación de muestra queda firmada por quien autoriza el presupuesto, no por quien recibe el paquete.</p>
+        <p>El segundo control es de color y de lote. Un tejido cambia ligeramente entre partidas de tinte, y por eso la muestra aprobada se sella como muestra testigo: una copia queda en el archivo del comprador y otra en la fábrica, y la producción en serie se compara contra esa pieza sellada, no contra la foto. En la verificación de acabados es donde ese control se escribe como cláusula, con la tolerancia de diferencia declarada por escrito en la ficha del material. Si el proyecto lo exige, la recepción incluye la apertura de la caja y la prueba de montaje de la unidad completa: los herrajes, las instrucciones y el estado de las aristas se comprueban antes de firmar el acta, porque ese es el momento de reclamar, no después de la partida.</p>
+        <p>El mismo expediente que viaja con la muestra es el que se usa para leer los <a href="/proyectos/">proyectos ejecutados</a> y fijar el nivel de acabado del propio proyecto: la ficha de materiales al lado de la foto del ambiente, y no al revés. Con el acta firmada, la muestra deja de ser una pieza suelta y se convierte en el documento de referencia del pedido.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD24-a248-s2.jpg" alt="Caja de madera contrachapada abierta con esquineros y espuma EPE protegiendo la pieza de mobiliario en la zona de recepción" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Caja de madera contrachapada abierta en la zona de recepción con esquineros de espuma y láminas de EPE protegiendo la pieza, el acta de recepción sobre la tapa y una cinta métrica en el suelo</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuándo conviene consolidar las muestras en el primer pedido?</h2>
+        <p>La consolidación de las muestras en el primer pedido se decide por fecha límite y por riesgo. Si el comité del proyecto aprueba el acabado con el bloque de stock recogido en el stand, la muestra física adicional puede entrar como bulto del contenedor del pedido: viaja sin flete propio, se amortiza en el mismo embarque y llega con la partida a la obra, donde sirve de referencia de recepción. Si en cambio la muestra debe circular antes del pedido entre la dirección del proyecto y el estudio de diseño, conviene despacharla sola por aéreo o exprés, porque esperar al contenedor retrasa la cadena entera de aprobaciones.</p>
+        <p>El riesgo es doble y se gestiona por escrito. Un pedido arrancado antes de la aprobación escrita de la muestra transfiere al comprador el riesgo de rechazo; el plazo de producción de 30-45 días, sujeto a contrato, arranca desde la muestra aprobada y no desde la firma del pedido, y esa fecha de arranque es la que protege el calendario de apertura del hotel o del edificio. Por eso la secuencia habitual cierra así: bloques de stock en el stand, prototipo por aéreo durante el cambio de fase, aprobación firmada en destino y, con el acta delante, la solicitud de cotización FF&amp;E (RFQ) que fija el MOQ por modelo y tejido, la inspección final antes del embarque como control de calidad y la consolidación de las unidades de muestra en el primer contenedor.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Momento</th><th>Qué se decide</th><th>Ventaja</th><th>Riesgo a gestionar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Momento">Durante la Fase 2 (23-27 oct.)</td><td data-label="Qué se decide">Niveles de muestra y modo de transporte</td><td data-label="Ventaja">La muestra sale antes y el expediente se arma en origen</td><td data-label="Riesgo a gestionar">Recoger bloques sin etiqueta ni referencia escrita</td></tr>
+              <tr><td data-label="Momento">Cambio de fase (28-30 oct.)</td><td data-label="Qué se decide">Despacho exprés o aéreo de prototipos</td><td data-label="Ventaja">Sin jornadas de negocio, la logística tiene margen</td><td data-label="Riesgo a gestionar">Almacenes saturados: reservar el despacho con antelación</td></tr>
+              <tr><td data-label="Momento">Llegada a destino</td><td data-label="Qué se decide">Aprobación con luz de proyecto y acta firmada</td><td data-label="Ventaja">La muestra testigo queda sellada por las dos partes</td><td data-label="Riesgo a gestionar">Comparar con la foto y no con la pieza</td></tr>
+              <tr><td data-label="Momento">Antes del pedido en serie</td><td data-label="Qué se decide">Consolidar muestras en el primer embarque y fijar el MOQ</td><td data-label="Ventaja">Sin flete de muestra adicional</td><td data-label="Riesgo a gestionar">Arrancar producción sin aprobación escrita</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Si el viaje a la segunda fase aún no está confirmado, el mismo plan se puede ejecutar a distancia: el equipo de proyectos envía bloques de acabado de stock por mensajería, arma la comparación de prototipos y prepara la cotización con el país del proyecto, el volumen estimado y la fecha de apertura como datos de partida. La muestra es solo el primer documento físico de un proyecto que se administra por escrito.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su plan de muestras y el número de stand para la Fase 2"
+      text="Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita. Dejar los datos antes de viajar añade ventajas concretas: recibe el número de stand y la carta de invitación, reserva una franja de atención exclusiva durante la segunda fase y, si el proyecto lo justifica, coordina la visita a la fábrica de Heshan (Jiangmen, Guangdong) para ver la línea de corte, el tapizado y el archivo de muestras testigo. Para preparar su plan de muestras necesitamos cuatro datos: el tipo de proyecto y su país, el volumen estimado del primer pedido, la fecha límite de aprobación de muestras y el modo de transporte que prevé para las unidades completas. La respuesta vuelve con el plan de muestras por niveles, el modo de transporte recomendado y un plazo de producción de 30-45 días desde la muestra aprobada, sujeto a contrato. La emisión del visado corresponde a la embajada o al consulado de China competente."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

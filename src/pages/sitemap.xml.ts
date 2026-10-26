@@ -1,5 +1,4 @@
 import type { APIRoute } from "astro";
-import projectLibrary from "../data/project-library.json";
 import { catalogCategoryDetails } from "../data/catalogReferences";
 import { categories, hotelCatalog, projects } from "../data/site";
 
@@ -15,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/muestras-feria-canton-envio-consolidacion-ffe/",
   "/recursos/butacas-lounge-hotel-fase-2-feria-canton/",
   "/recursos/sofas-butacas-contract-hoteles-fase-2-feria-canton/",
   "/recursos/materiales-acabados-mobiliario-fase-2-feria-canton/",
@@ -184,7 +184,6 @@ export const GET: APIRoute = ({ site }) => {
   const siteUrl = site ?? new URL("https://hymueble.com");
   const paths = [
     ...staticPaths,
-    ...projectLibrary.map((project) => `/proyectos/biblioteca/${project.id}/`),
     ...categories.flatMap((category) => [category.href, category.catalog, category.projects]),
     ...hotelCatalog.map((item) => item.href),
     ...catalogCategoryDetails.map((item) => `/catalogo/${item.sector}/${item.slug}/`),
