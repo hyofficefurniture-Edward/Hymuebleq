@@ -1,7 +1,7 @@
 [
   {
     "id": "off-010",
-    "name": "One-Stop Office Furniture Solution in Trinidad and Tobago",
+    "name": "Proyecto de oficinas en Trinidad y Tobago",
     "country": "Trinidad and Tobago",
     "region": "caribbean",
     "industry": "office",
@@ -12,7 +12,86 @@
     "tags": [
       "office"
     ],
-    "gallery": []
+    "gallery": [
+      {
+        "image": "/images/project-library/off-010.webp",
+        "caption": "Imagen de diseño publicada por el grupo."
+      },
+      {
+        "image": "/images/project-library/trinidad-office-conference-design.webp",
+        "width": 1400,
+        "height": 1236,
+        "caption": "Representación de la sala de juntas publicada en la presentación del proyecto; confirma por separado medidas, capacidad y equipos del nuevo pedido."
+      }
+    ],
+    "sourceUrl": "https://www.hyofficefurniture.com/one-stop-office-furniture-solution-in-trinidad-and-tobago-hongye-furniture-group.html",
+    "reviewed": "2026-10-28",
+    "localized": {
+      "es": {
+        "intro": "La referencia del grupo en Trinidad y Tobago reúne recepción, puestos abiertos, despachos de dirección, sala de juntas y áreas de descanso. Es un proyecto de oficina del Caribe. Las imágenes publicadas incluyen representaciones de diseño; sirven para conversar sobre espacios, sin sustituir la documentación de una nueva compra.",
+        "spaces": [
+          "Recepción",
+          "Puestos de trabajo abiertos",
+          "Despachos de dirección",
+          "Sala de juntas",
+          "Áreas de descanso"
+        ],
+        "questions": [
+          "Un programa de oficina organizado por funciones",
+          "Del plano a los puestos y despachos",
+          "Una sala de juntas se compra como un conjunto coordinado",
+          "Qué enviar para una propuesta destinada al Caribe"
+        ],
+        "evidenceSections": [
+          {
+            "heading": "Un programa de oficina organizado por funciones",
+            "text": "Separa la atención al visitante del trabajo individual y las reuniones. Para tu proyecto, prepara una lista por zona con puestos, mesas, sillas y almacenamiento, y distingue piezas fijas de elementos móviles. La coherencia visual no elimina la necesidad de cantidades y responsabilidades claras."
+          },
+          {
+            "heading": "Del plano a los puestos y despachos",
+            "text": "Marca la posición de cada puesto, los accesos al almacenamiento y el espacio de movimiento de las sillas. Revisa cableado, privacidad y encuentros con paredes junto al equipo del proyecto. No deduzcas medidas, comportamiento acústico o certificaciones de una representación visual."
+          },
+          {
+            "heading": "Una sala de juntas se compra como un conjunto coordinado",
+            "text": "Relaciona la mesa con el número de usuarios previsto, las sillas y las rutas de acceso. Define por separado pantallas, conexiones, accesorios y montaje. La imagen de la sala no prueba que estos equipos se incluyan ni fija la capacidad de otra sala."
+          },
+          {
+            "heading": "Qué enviar para una propuesta destinada al Caribe",
+            "text": "Comparte el país y ciudad de entrega, los planos vigentes, cantidades por zona y acabados buscados. Pide muestras y documentos de los artículos elegidos; acuerda embalaje, transporte, acceso al edificio y montaje para ese pedido. La experiencia en Trinidad y Tobago no implica almacén o equipo local en todos los destinos."
+          }
+        ],
+        "imageCaption": "Imagen de diseño de la documentación del proyecto en Trinidad y Tobago; no se presenta como prueba fotográfica de cada pieza instalada.",
+        "relatedLinks": [
+          {
+            "href": "/catalogo/oficinas/",
+            "label": "Mobiliario para oficinas"
+          },
+          {
+            "href": "/recursos/amueblamiento-oficinas-proyectos-corporativos/",
+            "label": "Preparar un proyecto corporativo"
+          },
+          {
+            "href": "/recursos/salas-de-juntas-mobiliario-oficina-proyecto/",
+            "label": "Planificar la sala de juntas"
+          },
+          {
+            "href": "/project-knowledge.json",
+            "label": "Datos públicos del proyecto"
+          }
+        ],
+        "faq": [
+          {
+            "q": "¿Qué tipo de proyecto representa esta referencia?",
+            "a": "Es una referencia de mobiliario de oficina en Trinidad y Tobago, con espacios de recepción, trabajo y reunión. No se presenta como una entrega residencial."
+          },
+          {
+            "q": "¿Las imágenes definen los materiales y equipos de mi pedido?",
+            "a": "No. Confirma materiales, medidas, cantidades y equipos incluidos mediante la documentación de los artículos y el alcance acordado para tu proyecto."
+          }
+        ]
+      }
+    },
+    "sourceName": "One-Stop Office Furniture Solution in Trinidad and Tobago"
   },
   {
     "id": "off-012",
