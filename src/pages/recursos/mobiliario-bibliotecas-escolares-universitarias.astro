@@ -1,0 +1,468 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para bibliotecas escolares y universitarias";
+const pageDescription = "Guía B2B de mobiliario para bibliotecas: estanterías, mesas de lectura, zonas de grupo y carga digital, con normas, MOQ, plazos y embalaje de exportación.";
+const keywords = [
+  "mobiliario para bibliotecas",
+  "estanterías de biblioteca",
+  "mesas de lectura",
+  "mobiliario biblioteca universitaria",
+  "mobiliario contract educativo"
+];
+const canonicalPath = "/recursos/mobiliario-bibliotecas-escolares-universitarias/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD25-a250-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-27";
+const dateModified = "2026-10-27";
+const publicationDateLabel = "Publicada el 27 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué MOQ aplica al mobiliario para bibliotecas?", answer: "El MOQ se define por familia de producto y por acabado, no por pedido global. Una biblioteca suele combinar estantería, mesa, silla y módulo de carga, y cada familia tiene su mínimo independiente, de ahí que convenga agrupar acabados en la fase de diseño." },
+    { question: "¿Cuál es el plazo de entrega de un suministro de biblioteca?", answer: "El plazo B2B de referencia es de 30 a 45 días desde la confirmación de muestra, según contrato. El reloj arranca con la aprobación escrita de la muestra, por lo que retrasar esa aprobación retrasa la producción en la misma proporción." },
+    { question: "¿Qué normas deben exigirse en el pliego de una biblioteca?", answer: "EN 1729 para el mobiliario escolar de mesa y asiento por estatura, EN 16139 para sillas contract y BIFMA X5.9 para unidades de almacenamiento son las referencias de ensayo habituales. A ellas se suman GREENGUARD Gold en emisiones y EN 12464-1 como referencia de iluminación de lectura." },
+    { question: "¿Cómo se protege el mobiliario durante el transporte internacional?", answer: "Con caja de madera o de contrachapado, esquineras, amortiguación de EPE y paletizado o estiba para contenedor. Este embalaje de exportación se define en el contrato y el comprador puede verificarlo con apertura de cajas al azar durante la inspección en fábrica." },
+    { question: "¿Se ofrece soporte de instalación en destino?", answer: "Sí, el suministro incluye manual de montaje, lista de repuestos y soporte técnico coordinado con el montador local. La recepción en obra se apoya en un checklist dimensional que permite detectar desviaciones antes de firmar el acta." },
+    { question: "¿Cómo se comparan ofertas de estanterías entre proveedores?", answer: "Compare sobre el mismo pliego: profundidad, carga por metro lineal de balda, ensayo de referencia e informe vigente. Las ofertas sin ensayo del módulo completo no son comparables con las que lo incluyen, aunque su precio sea inferior." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD25-a250-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d25a2-a250-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d25a2-a250-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario contract · Bibliotecas &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para bibliotecas: cómo comprar por zonas en colegios y universidades</h1>
+          <p>Mobiliario para bibliotecas es el conjunto integrado de estanterías, mesas de lectura, sillas, cabinas de trabajo en grupo y módulos de carga digital que permite que una biblioteca escolar o universitaria funcione como un equipamiento de estudio intensivo y no como un simple depósito de libros. En un proyecto contract, esa definición tiene consecuencias directas sobre la compra: cada zona del recinto demanda cargas, dimensiones, normas y niveles de uso distintos, de modo que el pliego de condiciones se redacta por zonas y no por catálogo.</p>
+          <p>Para un departamento de compras, la diferencia entre un suministro correcto y uno problemático casi nunca está en el precio unitario, sino en la verificación técnica previa: flecha admisible de balda en el depósito, altura de tablero y de asiento en lectura, comportamiento acústico en trabajo en grupo y número de tomas por plaza en la zona digital. Hongye Furniture Group, fundada en 1996, fabrica en más de 300.000 m² y acumula más de 1.000 proyectos en más de 50 países (Hongye, 2026), una escala que permite atender las cuatro zonas de una biblioteca con un solo responsable de fábrica y un único plan de control de calidad.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD25-a250-hero.jpg" alt="Zona de lectura silenciosa de una biblioteca universitaria con mesas largas de roble, luminarias de tarea y estanterías de altura completa" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se divide una biblioteca en zonas antes de comprar mobiliario?</h2>
+        <p>Antes de emitir cualquier orden de compra, conviene dividir el recinto en cuatro zonas operativas: depósito y recuperación del fondo, lectura silenciosa, trabajo en grupo y zona digital de carga. Cada zona tiene un mobiliario crítico distinto y un criterio de aceptación distinto, y esa separación es la que permite comparar ofertas de proveedores con una base técnica común.</p>
+        <p>En la práctica de licitación, esta división se traduce en un cuadro de zonas que acompaña a los planos: superficie por zona, aforo previsto, número de plazas de lectura y número de módulos de depósito. Un comprador que entrega ese cuadro al proveedor recibe cotizaciones comparables entre sí; uno que solo adjunta imágenes recibe precios incomparables y reclamaciones posteriores. En un equipamiento de campus, esta misma lógica por zonas se repite en otras dependencias, y puede resultar útil revisar cómo se estructura el <a href="/recursos/equipar-colegio-nuevo-mobiliario-escolar-2026/">mobiliario escolar para un colegio nuevo</a> cuando el proyecto incluye aulas y biblioteca en el mismo contrato.</p>
+        <p>En un proyecto en Lima (Perú), el equipo de obra recibió ofertas donde la zona de depósito y la de lectura compartían la misma familia de estantería; el problema se detectó al revisar la flecha admisible de la balda y el paso libre entre módulos. La solución consistió en separar el pliego en dos familias de producto con ensayos y cargas distintas, y en exigir muestras físicas de cada familia antes de firmar el contrato.</p>
+        <p>El cuadro de zonas disciplina además el calendario de montaje: el depósito se instala antes que la lectura porque define recorridos y pasos de obra, y la zona digital se deja para el final, cuando la canalización eléctrica del edificio ya está probada. Un orden de montaje escrito evita que el mobiliario termine protegiendo obras húmedas o bloqueando el paso de instaladores ajenos al contrato.</p>
+        <p>Para ver cómo se documenta un suministro de este tipo, la sección de <a href="/proyectos/">proyectos de equipamiento contract</a> reúne referencias por tipo de espacio y por país.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona</th><th>Función principal</th><th>Mobiliario crítico</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona">Depósito y recuperación</td><td data-label="Función principal">Albergar y consultar el fondo bibliográfico</td><td data-label="Mobiliario crítico">Estanterías de doble cara y mostrador de préstamo</td></tr>
+              <tr><td data-label="Zona">Lectura silenciosa</td><td data-label="Función principal">Estudio individual prolongado</td><td data-label="Mobiliario crítico">Mesas de lectura con canalización y sillas de tarea</td></tr>
+              <tr><td data-label="Zona">Trabajo en grupo</td><td data-label="Función principal">Debate y proyectos en equipo</td><td data-label="Mobiliario crítico">Mesas modulares, pantallas acústicas y sillas con ruedas</td></tr>
+              <tr><td data-label="Zona">Digital y carga</td><td data-label="Función principal">Consulta en dispositivo y recarga</td><td data-label="Mobiliario crítico">Puestos con tomas integradas y módulos de carga</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Estanterías de biblioteca: carga, flecha y ensayos de almacenamiento</h2>
+        <p>La estantería es el componente de mayor riesgo técnico de todo el suministro, porque soporta carga permanente durante años y cualquier deformación es visible desde la entrada del recinto. La referencia de ensayo habitual es la norma BIFMA X5.9 para unidades de almacenamiento (BIFMA, 2026), complementada en Europa por la familia EN 14073 para mobiliario de oficina de almacenamiento (CEN); el pliego debe exigir el ensayo del módulo completo, con baldas cargadas, y no solo del panel suelto.</p>
+        <p>Las dimensiones de partida son, por convención del sector, profundidades de 30 o 35 cm para estantería mural y de doble cara, y capacidades de 40 a 60 kg por metro lineal de balda según refuerzo y luz entre soportes. Por encima de 90 cm de luz libre, la balda debe llevar refuerzo central; ese es el tipo de detalle que separa un suministro durable de uno que reclama en el segundo curso.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Parámetro</th><th>Referencia habitual del sector</th><th>Criterio de aceptación en pliego</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Parámetro">Profundidad de módulo</td><td data-label="Referencia habitual del sector">30 cm mural y 35 cm de doble cara</td><td data-label="Criterio de aceptación en pliego">Fijar valor por familia y verificar en muestra</td></tr>
+              <tr><td data-label="Parámetro">Carga por balda</td><td data-label="Referencia habitual del sector">40 a 60 kg por metro lineal</td><td data-label="Criterio de aceptación en pliego">Ensayo del módulo completo cargado</td></tr>
+              <tr><td data-label="Parámetro">Luz libre de balda</td><td data-label="Referencia habitual del sector">Hasta 90 cm sin refuerzo</td><td data-label="Criterio de aceptación en pliego">Refuerzo central por encima de ese valor</td></tr>
+              <tr><td data-label="Parámetro">Ensayo de almacenamiento</td><td data-label="Referencia habitual del sector">BIFMA X5.9 (BIFMA) y EN 14073 (CEN)</td><td data-label="Criterio de aceptación en pliego">Informe de ensayo vigente por familia</td></tr>
+              <tr><td data-label="Parámetro">Flecha admisible</td><td data-label="Referencia habitual del sector">Sin flecha visible a distancia de lectura</td><td data-label="Criterio de aceptación en pliego">Inspección en recepción con carga real</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En un contrato en Santiago (Chile), la universidad recibió baldas de 100 cm sin refuerzo que mostraban flecha perceptible solo con enciclopedias de papel, un material más ligero de lo que la carga nominal sugería. La recepción provisional se condicionó a la sustitución de las baldas afectadas por versiones reforzadas y a la reducción de la luz libre a 90 cm; el coste de esa corrección se negoció fuera del presupuesto original, precisamente porque el pliego no había fijado la luz máxima.</p>
+        <p>La lección de compra es transversal: en depósito, la geometría vale más que el catálogo. Luz de balda, profundidad de módulo y paso libre entre caras se deciden sobre plano, con el fondo bibliográfico real medido en metros lineales; el proveedor que dimensiona a partir de ese dato entrega un depósito que envejece bien, y el que dimensiona a ojo entrega uno que se satura en dos cursos.</p>
+        <p>En el capítulo de acabados, el criterio de compra se centra en cantos, aristas y resistencia al rayado, con especial atención a las zonas de paso del público; la selección de <a href="/recursos/materiales-acabados-mobiliario-fase-2-feria-canton/">materiales y acabados</a> determina el comportamiento del mueble tras años de uso intensivo y conviene fijarla antes de la aprobación de muestras.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué dimensiones deben tener las mesas y sillas de lectura?</h2>
+        <p>Las mesas de lectura se especifican entre 74 y 76 cm de altura y las sillas de adulto con asiento entre 45 y 46 cm, por convención del sector, de modo que el antebrazo apoye en el tablero sin elevar el hombro. Para escolar, el mobiliario de mesa y asiento se clasifica por tallas según la norma EN 1729, que cruza la altura del asiento y del tablero con la estatura del alumno (CEN, 2026), y las sillas de uso contract se ensayan conforme a EN 16139 (CEN).</p>
+        <p>La figura siguiente resume el control dimensional que conviene verificar en muestra antes de autorizar la producción en serie.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD25-a250-s1.jpg" alt="Mesa de lectura de biblioteca con sillas y módulo de energía y datos bajo el tablero, con una cinta métrica en la pata" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Vista lateral de una mesa de lectura de biblioteca con sillas de madera y estructura de acero, el módulo abatible de energía y datos bajo el tablero, dos cables saliendo por debajo y una cinta métrica apoyada en la pata</figcaption>
+        </figure>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Dimensión de referencia</th><th>Nota de compra</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Mesa de lectura adulto</td><td data-label="Dimensión de referencia">74 a 76 cm de altura</td><td data-label="Nota de compra">Verificar junto con la silla del mismo suministro</td></tr>
+              <tr><td data-label="Elemento">Silla de tarea adulto</td><td data-label="Dimensión de referencia">Asiento de 45 a 46 cm</td><td data-label="Nota de compra">Ensayo de resistencia conforme a EN 16139</td></tr>
+              <tr><td data-label="Elemento">Plaza de lectura</td><td data-label="Dimensión de referencia">Ancho de 60 a 70 cm por plaza</td><td data-label="Nota de compra">Por convención del sector; ajustar al aforo</td></tr>
+              <tr><td data-label="Elemento">Mesas y sillas escolares</td><td data-label="Dimensión de referencia">Tallas según EN 1729 (CEN)</td><td data-label="Nota de compra">Cruce de estatura del alumno y alturas</td></tr>
+              <tr><td data-label="Elemento">Canalización de tomas</td><td data-label="Dimensión de referencia">Central y con tapa practicable</td><td data-label="Nota de compra">Verificar desmontando una unidad en fábrica</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En una biblioteca universitaria de Bogotá (Colombia), el punto crítico no fue la altura sino el cableado: las primeras muestras llevaban regletas superficiales bajo el tablero, inaceptables para mantenimiento y limpieza. El pliego se corrigió para exigir canalización central con tapa practicable, tomas por cada dos plazas y paso de cable hasta el falso techo; la verificación se hizo desmontando una mesa completa en fábrica antes del embarque.</p>
+        <p>Como regla de recepción en obra, el comprador debe verificar altura de tablero, altura de asiento, estabilidad sin anclaje y acceso a tomas con el mobiliario ya colocado; una mesa correcta en fábrica puede quedar inservible si la canalización de obra no coincide con la posición prevista de las mesas.</p>
+        <p>Otro detalle que se pacta en fábrica es el anclaje y la separación entre mesas: las configuraciones en línea con travesaño compartido resisten mejor el uso intensivo que las mesas sueltas, y reducen el número de patas por plaza, algo que el mantenimiento agradece en la limpieza diaria del recinto.</p>
+        <p>Cuando el proyecto combina biblioteca con aulas y salas de profesores en el mismo contrato, conviene unificar el criterio dimensional y el proveedor para que el mantenimiento sea coherente; ese es el enfoque habitual en los equipamientos integrales de campus.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Zonas de trabajo en grupo: cabinas, pantallas y comportamiento acústico</h2>
+        <p>La zona de trabajo en grupo se equipa con mesas modulares, sillas con ruedas o deslizamiento suave y pantallas que limiten la propagación del sonido, con un objetivo de nivel sonoro de hasta 45 dB en la zona contigua de lectura silenciosa, por convención del sector. La flexibilidad manda: el mismo recinto alberga hoy un seminario y mañana una defensa de trabajo final, de ahí que las mesas con ruedas y anidables se hayan convertido en la configuración por defecto en universidad.</p>
+        <p>En una biblioteca pública universitaria de Ciudad de México (México), el conflicto surgió entre la zona de debate y la sala contigua de lectura: los usuarios del área silenciosa reclamaban por conversaciones a pocos metros. La corrección combinó tres decisiones de compra: pantallas acústicas de suelo a altura de pie en las mesas de grupo, sillas sin contacto metálico desnudo que evitara golpes al desplazarlas y una banda de estanterías de doble cara como muro técnico entre ambas zonas.</p>
+        <p>En pliego, esta zona se especifica por número de grupos simultáneos, por capacidad de reconfiguración sin herramientas y por nivel sonoro objetivo medible en obra; las promesas de ambiente acústico sin parámetro de aceptación no deben entrar en la comparación de ofertas.</p>
+        <p>El mantenimiento también se compra: ruedas con freno, topes de nivelación y patas de recambio deben quedar incluidos en el capítulo de repuestos del contrato, porque en zonas de alta rotación son la primera pieza que se sustituye.</p>
+        <p>En licitación, la zona de grupo se compra por número de reconfiguraciones previstas al año y no por número de mesas; ese dato, que sale del reglamento de uso de la biblioteca, permite dimensionar ruedas con freno, altura de pantalla y refuerzo de cantos con criterio y justificar el sobrecoste frente a una mesa fija cuando exista.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué exige la zona digital y de carga de una biblioteca universitaria?</h2>
+        <p>La zona digital exige un puesto pensado por dispositivo: tomas suficientes por plaza, canalización ordenada, iluminación de lectura y emisiones controladas. Como referencia de iluminación, la norma EN 12464-1 sitúa en torno a 500 lux el nivel de trabajo para tareas de lectura y escritura en interiores (CEN), valor que el proyecto de iluminación debe garantizar sobre el tablero, no sobre el suelo.</p>
+        <p>En calidad del aire interior, GREENGUARD Gold certifica emisiones químicas reducidas, con límites de referencia de 0,22 mg/m³ de TVOC y 7,3 ppb de formaldehído (UL Environment, 2026); en recintos cerrados de alta ocupación como una biblioteca, ese capítulo pesa tanto como la resistencia física del mueble, y conviene exigir el certificado por familia de producto, no por muestra aislada.</p>
+        <p>En un equipamiento reciente, el comprador integró la zona digital con la de lectura para no duplicar canalizaciones: las mesas de lectura llevaron tomas desde el primer pedido y los módulos de carga se ubicaron junto a los fondos de consulta, reduciendo intervenciones sobre suelo y techo. La lección de proyecto es directa: la electricidad es más barata en fábrica que en obra, y cada toma que se añade después multiplica el coste de la intervención.</p>
+        <p>Los módulos de carga individual, con temporización y compartimento cerrado, resuelven el problema de los dispositivos olvidados; su especificación debe incluir anclaje antivuelco y cerradura de mantenimiento, detalles que la dirección de obra verifica antes de la recepción.</p>
+        <p>El criterio de recepción de esta zona es eléctrico antes que dimensional: continuidad por grupo de mesas, tensión correcta en cada toma y etiquetado de circuitos. Un acta de recepción que solo mide alturas deja fuera el defecto más caro de corregir después.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se planifican el MOQ, el plazo y el embalaje de exportación?</h2>
+        <p>El MOQ se define por familia de producto y por acabado, y el plazo B2B de referencia es de 30 a 45 días desde la confirmación de muestra, según contrato; ambos parámetros deben quedar escritos en la orden de compra junto con el plan de inspección y el embalaje de exportación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Fase</th><th>Entregable</th><th>Control del comprador</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Fase">Muestra</td><td data-label="Entregable">Unidad física por familia y acabado</td><td data-label="Control del comprador">Aprobación escrita antes de producción</td></tr>
+              <tr><td data-label="Fase">Producción</td><td data-label="Entregable">Plan de fabricación y fechas</td><td data-label="Control del comprador">Seguimiento por hitos conforme a contrato</td></tr>
+              <tr><td data-label="Fase">Inspección en fábrica</td><td data-label="Entregable">Informe dimensional y de acabado</td><td data-label="Control del comprador">Muestreo y fotos antes del embarque</td></tr>
+              <tr><td data-label="Fase">Embalaje de exportación</td><td data-label="Entregable">Caja de madera o contrachapado, EPE y esquineras</td><td data-label="Control del comprador">Verificación de flejado y paletizado</td></tr>
+              <tr><td data-label="Fase">Entrega e instalación</td><td data-label="Entregable">Descarga, montaje y recepción</td><td data-label="Control del comprador">Lista de repuestos y manual de montaje</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El embalaje de exportación combina caja de madera o de contrachapado exento de tratamiento fitosanitario, esquineras de protección, perlas de EPE como amortiguación y paletizado o estiba para contenedor; cada elemento tiene una función: la caja soporta apilado y humedad, la esquinera absorbe impactos de manipulación, el EPE protege cantos y lacados, y el paletizado ordena la descarga en obra. La figura siguiente muestra la secuencia completa.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD25-a250-s2.jpg" alt="Estantería de biblioteca envuelta en espuma y esquineros dentro de una caja de madera contrachapada sujeta sobre un pallet" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Caja de exportación de madera contrachapada sem abierta con una estantería envuelta en espuma de perlas y esquineros dentro, sujeta con correas sobre un pallet en la zona de carga</figcaption>
+        </figure>
+        <p>En un suministro a Panamá (Panamá), el distribuidor condicionó el pago final a una inspección en fábrica antes del embarque: verificación dimensional por muestreo, apertura de cajas al azar y registro fotográfico por contenedor. Esa inspección, documentada como parte del <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">control de calidad en fábrica</a>, evitó una reclamación en destino y se convirtió en cláusula estándar para el resto del contrato.</p>
+        <p>El detalle de materiales, cepas y flejado que conviene exigir caja por caja se describe en el <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación del mobiliario contract</a>; llevar ese nivel de definición al pliego de biblioteca evita discusiones en la descarga.</p>
+        <p>Para el comprador internacional, el criterio práctico es pedir el plan de embalaje por referencia antes de la confirmación del pedido: número de piezas por caja, peso por bulto y número de bultos por contenedor. Con ese plan, la obra calcula descarga y almacenamiento provisional; sin él, la recepción se improvisa y el mobiliario acaba esperando a la intemperie.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización RFQ de mobiliario para bibliotecas"
+      text="Envíe su solicitud a través de /contacto/ con el plan acotado del recinto, el número de usuarios, el reparto por zonas y los acabados previstos, e indique la norma de destino si el pliego la exige. Recibirá una propuesta con MOQ por familia y acabado, plazo de 30 a 45 días desde la confirmación de muestra, plan de control de calidad con inspección en fábrica, embalaje de exportación caja por caja y soporte de instalación con manual y lista de repuestos."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/mobiliario-bibliotecas-escolares-universitarias/",
   "/recursos/muestras-feria-canton-envio-consolidacion-ffe/",
   "/recursos/butacas-lounge-hotel-fase-2-feria-canton/",
   "/recursos/sofas-butacas-contract-hoteles-fase-2-feria-canton/",
