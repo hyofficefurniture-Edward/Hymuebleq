@@ -1,10 +1,8 @@
-import projectLibrary from "../data/project-library.json";
 import type { APIRoute } from "astro";
 import { catalogCategoryDetails } from "../data/catalogReferences";
 import { categories, hotelCatalog, projects } from "../data/site";
 
 const staticPaths = [
-  "/grupo-y-marcas/",
   "/",
   "/catalogo/",
   "/catalogo/hoteles/",
@@ -16,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/mobiliario-lobby-hotel-zonas-comunes/",
   "/recursos/mobiliario-bibliotecas-escolares-universitarias/",
   "/recursos/muestras-feria-canton-envio-consolidacion-ffe/",
   "/recursos/butacas-lounge-hotel-fase-2-feria-canton/",
@@ -191,7 +190,6 @@ export const GET: APIRoute = ({ site }) => {
     ...hotelCatalog.map((item) => item.href),
     ...catalogCategoryDetails.map((item) => `/catalogo/${item.sector}/${item.slug}/`),
     ...projects.map((project) => project.href),
-    ...projectLibrary.map((project) => `/proyectos/biblioteca/${project.id}/`),
   ];
   const urls = [...new Set(paths)].sort();
   const items = urls

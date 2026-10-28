@@ -1,0 +1,447 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para lobby de hotel: guía FF&E para proyectos";
+const pageDescription = "Guía B2B de mobiliario para lobby de hotel: especificación por zonas, normas EN 16139 y Martindale, MOQ, plazo y embalaje de exportación con Hongye.";
+const keywords = [
+  "mobiliario para lobby de hotel",
+  "FF&E hotelero",
+  "mobiliario contract",
+  "mobiliario de zonas comunes de hotel",
+  "proveedor de muebles para hoteles"
+];
+const canonicalPath = "/recursos/mobiliario-lobby-hotel-zonas-comunes/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD26-a252-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-28";
+const dateModified = "2026-10-28";
+const publicationDateLabel = "Publicada el 28 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué nivel de Martindale necesita la tapicería de un lobby de hotel?", answer: "La tapicería de asientos de zonas comunes debe partir de 40.000 ciclos Martindale, con rangos superiores en lounges de alta rotación. Ese umbral responde a la norma de uso no doméstico y al programa de limpieza intensiva de un hotel, y conviene complementarlo con solidez del color a la luz y al frote según el clima del destino." },
+    { question: "¿Cuál es el MOQ y el plazo de producción para el mobiliario de un lobby?", answer: "El MOQ se negocia por proyecto con cantidades mixtas entre familias de producto, y el plazo de producción de 30-45 días cuenta desde la aprobación de materiales y planos de taller. A ese plazo hay que sumar el tránsito marítimo y el desaduaneo, por lo que la recomendación es bloquear muestras con al menos cuatro meses de antelación a la apertura." },
+    { question: "¿Cómo se equipó el lobby del Hilton Tashkent?", answer: "El proyecto del Hilton Tashkent, en Uzbekistán, se fabricó en una sola orden con mostrador de recepción, butacas de lounge y bancos de corredor. Cada pieza pasó por inspección en proceso y control final en fábrica, y la entrega se coordinó con el calendario de apertura, de modo que la recepción en obra fue un trámite de verificación y no una fase de correcciones." },
+    { question: "¿Qué pasó en un proyecto de lobby con MOQ bajo y surtido mixto?", answer: "En un hotel de Riad, Arabia Saudí, el surtido combinaba estructuras metálicas reforzadas, tapizados desmontables y mostrador a medida con volúmenes bajos por referencia. Al negociar el MOQ global por proyecto en lugar de mínimos por artículo, el cliente mantuvo el calendario de una sola ventana logística y redujo el coste unitario del conjunto sin renunciar a la especificación severa de uso." },
+    { question: "¿Qué incluye el embalaje de exportación del mobiliario hotelero?", answer: "El embalaje estándar incluye caja de madera para piezas estructuradas y mostradores, esquineras, láminas de EPE para superficies y cantos, y estiba para el transporte y la carga en contenedor. Cada bulto va marcado por pieza y zona de destino, lo que permite descargar y montar por fases sin abrir toda la carga a la vez." },
+    { question: "¿Se ofrece apoyo de instalación en obra para el FF&E del lobby?", answer: "Sí, la instalación se contrata como servicio y se ejecuta por zonas, con verificación de montaje de mostradores y paneles, ajuste de herrajes y acta firmada del estado de cada pieza. El equipo deja el FF&E pendiente de habitaciones claramente separado para que el hotel pueda abrir el lobby antes de completar el resto del proyecto." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD26-a252-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d26a2-a252-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d26a2-a252-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario contract · Lobby de hotel &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para lobby y zonas comunes de hotel: guía de compra FF&amp;E para proyectos contract</h1>
+          <p>Mobiliario para lobby de hotel es el conjunto de piezas FF&amp;E que equipa las áreas públicas de un establecimiento: recepción, zona de estar o lounge, consigna, lobby bar y corredores. Se fabrica bajo estándares contract, con niveles de resistencia, ignifugación y acabados dimensionados para uso intensivo durante toda la vida útil del proyecto.</p>
+          <p>Para el responsable de compras de un hotel, de una cadena o de un estudio de interiorismo, el lobby es la partida más visible del presupuesto FF&amp;E y la que más impresiones genera por euro invertido. Esta guía explica cómo desglosar la especificación por zonas, qué normas aplicar, cómo graduar la durabilidad y cómo planificar MOQ, plazo de producción, embalaje de exportación e instalación con un fabricante directo como Hongye Furniture Group Commercial.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD26-a252-hero.jpg" alt="Vista general de un lobby de hotel con mostrador de recepción de listones de madera, lounge con sofás y lámparas colgantes" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué zonas del hotel se equipan en el proyecto de FF&amp;E del lobby?</h2>
+        <p>La primera decisión de un proyecto FF&amp;E bien gestionado es territorial: antes de elegir una sola pieza, el equipo de compras desglosa las áreas públicas en zonas funcionales, porque cada una impone exigencias distintas al mueble. La recepción concentra el contacto físico del check-in y del check-out, de modo que el mostrador debe resolverse con medidas a medida, pasacables integrados y gestión de alturas de trabajo, además de superficies de contacto continuo, superficies de alto contacto y una estantería trasera coordinada. La zona de estar o lounge es donde el huésped permanece: los sofás y butacas trabajan durante horas, soportan maletas, abrigos y usos no previstos. La consigna y las consolas cercanas al acceso reciben carga estática continua. El lobby bar añade taburetes y mesas altas con requisitos de estabilidad y limpieza, y los corredores piden bancos y piezas que resistan el paso diario de carritos del servicio. En la tabla siguiente se resume cómo se especifica cada zona.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Zona</th><th>Piezas principales</th><th>Prioridad de especificación</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Zona">Recepción / front desk</td><td data-label="Piezas principales">Mostrador, estantería trasera, asientos de espera</td><td data-label="Prioridad de especificación">Medidas a medida, pasacables, superficies de alto contacto</td></tr>
+              <tr><td data-label="Zona">Zona de estar / lounge</td><td data-label="Piezas principales">Sofás, butacas, mesas de centro</td><td data-label="Prioridad de especificación">Estructura reforzada y tapicería de alta abrasión</td></tr>
+              <tr><td data-label="Zona">Consigna / equipajes</td><td data-label="Piezas principales">Bancos, consolas, taquillas</td><td data-label="Prioridad de especificación">Carga estática alta y cantos protegidos</td></tr>
+              <tr><td data-label="Zona">Lobby bar</td><td data-label="Piezas principales">Taburetes, mesas altas, panelado</td><td data-label="Prioridad de especificación">Estabilidad, apilado y limpieza intensiva</td></tr>
+              <tr><td data-label="Zona">Corredores</td><td data-label="Piezas principales">Bancos, consolas, marcos de espejo</td><td data-label="Prioridad de especificación">Durabilidad y reposición modular</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Este desglose no es solo técnico: es también la base comercial de la compra. Al agrupar las piezas por zona, el comprador puede pedir cantidades mixtas entre familias de producto, algo esencial cuando el volumen de cada referencia es reducido pero el total del proyecto es alto. Un lobby mediano puede combinar veinte butacas, diez módulos de sofá, cuatro consolas y un mostrador a medida, y ese surtido exige un fabricante con líneas propias de carpintería, tapizado, metal y obra de piedra o vidrio bajo el mismo control de proyecto. Hongye Furniture Group, fundado en 1996, opera una planta de 300.000 m² y ha ejecutado más de 1.000 proyectos en 50 países, lo que permite absorber surtidos mixtos de este tipo sin depender de subcontratas (Hongye Furniture Group, datos de empresa). Para el comprador, esa capacidad se traduce en una sola ventana logística y en un interlocutor único para todo el FF&amp;E del lobby.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo se gradúa la durabilidad del mobiliario de zonas comunes</h2>
+        <p>El error más caro en un lobby es tratar el mobiliario como si fuera doméstico. Un sillón de lounge de un hotel de trescientas llaves se usa todos los días, a todas horas, por usuarios distintos y con un mantenimiento agresivo: desinfección, manchas de bebida, rozaduras de equipaje. Por eso la especificación contract parte de clases de uso: la estructura de asientos y taburetes se calcula para el nivel severo de la norma EN 16139, con ensayos de carga y fatiga muy superiores a los del uso residencial. En las piezas de madera y de metal se piden refuerzos internos, tornillería de servicio y la posibilidad de sustituir tapizado y cojines sin desmontar la estructura. En un proyecto hotelero en Riad, Arabia Saudí, por ejemplo, se especificaron estructuras metálicas reforzadas y tapizados desmontables precisamente por el elevado índice de ocupación y la rotación prevista del lounge.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD26-a252-s1.jpg" alt="Butaca tapizada de lounge de hotel junto a barra de madera con taburetes altos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Rincón de lounge de un lobby de hotel con butaca tapizada sobre estructura de madera y pies de metal, barra de lobby de madera con taburetes altos y mesa auxiliar redonda</figcaption>
+        </figure>
+        <p>La graduación de la durabilidad también tiene una lectura económica. Piezas más resistentes cuestan más por unidad, pero el coste real se mide en el ciclo de vida: cada reposición fuera de temporada implica cerrar una zona del lobby, mover al huésped y coordinar instalación con el departamento de mantenimiento. Un comprador profesional compara siempre el precio por año de servicio y no solo el precio de lista. Además, conviene exigir al fabricante un plan de repuestos de tapicería y herrajes para poder intervenir zona por zona sin parar la operación. Esta misma lógica de ciclo de vida es la que aplicamos en los <a href="/recursos/sofas-butacas-contract-hoteles-fase-2-feria-canton/">sofás y butacas contract para hoteles</a>, donde la estructura, el tapizado y los repuestos se definen como un único sistema desde el primer presupuesto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué normas de seguridad e ignifugación debe cumplir el mobiliario de un lobby?</h2>
+        <p>Las zonas públicas de un hotel están reguladas con más rigor que cualquier espacio residencial, y el comprador debe poder demostrarlo documentalmente ante la dirección técnica, el seguro y, en muchos países, la autoridad de bomberos. Tres familias de normas cubren el grueso de la especificación. Primero, la resistencia estructural de asientos no domésticos, que en Europa se acredita con EN 16139. Segundo, la ignifugación de tapicerías y rellenos, que se acredita con EN 1021-1 para el ensayo de cigarrillo y con EN 1021-2 para el ensayo de cerilla; en el mercado británico y en varias cadenas internacionales se añade BS 5852 Crib 5 como fuente de ignición media. Tercero, la calidad del aire interior, donde la certificación GREENGUARD acredita bajas emisiones de compuestos orgánicos volátiles en entornos cerrados con alta ocupación. A estas familias se suman, según el mercado, referencias como BIFMA para ensayos estructurales en proyectos de Norteamérica.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Norma</th><th>Qué evalúa</th><th>Aplicación en el lobby</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Norma">EN 16139</td><td data-label="Qué evalúa">Resistencia, durabilidad y seguridad de asientos no domésticos</td><td data-label="Aplicación en el lobby">Sillones, bancos y taburetes de zonas comunes, nivel de uso severo</td></tr>
+              <tr><td data-label="Norma">EN 1021-1 / EN 1021-2</td><td data-label="Qué evalúa">Ignición por cigarrillo y por cerilla</td><td data-label="Aplicación en el lobby">Sofás, butacas y paneles tapizados de lounge y recepción</td></tr>
+              <tr><td data-label="Norma">BS 5852 Crib 5</td><td data-label="Qué evalúa">Fuente de ignición media exigida en el mercado británico</td><td data-label="Aplicación en el lobby">Proyectos de Reino Unido y cadenas con especificación propia</td></tr>
+              <tr><td data-label="Norma">GREENGUARD</td><td data-label="Qué evalúa">Emisiones de compuestos orgánicos volátiles</td><td data-label="Aplicación en el lobby">Calidad del aire en espacios cerrados de alto tránsito</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El papel del fabricante es convertir estas normas en un dossier verificable: informes de ensayo de laboratorio por referencia de tapizado y por familia de asiento, declaraciones de conformidad y trazabilidad de rellenos. Antes de cerrar un pedido, el comprador debe pedir exactamente eso y comprobar que los informes corresponden a las combinaciones de tejido y espuma que va a recibir, no a muestras genéricas. En Hongye, cada lote pasa además por inspección en proceso y control final en fábrica, un flujo que describimos en la guía de <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">control de calidad en fábrica e inspección en proceso</a>. Cuando el proyecto se entrega con documentación completa desde la primera muestra, la recepción en obra deja de ser un riesgo y se convierte en un trámite de verificación. La recomendación práctica es fijar en el contrato qué informes se entregan, en qué idioma y con qué fecha, porque un ensayo sin trazabilidad no vale como prueba ante una auditoría de cadena.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Tapicerías y Martindale: qué nivel de abrasión exige un lobby de hotel</h2>
+        <p>La abrasión se mide en ciclos Martindale y es el dato que más discusiones evita en la mesa de especificación. Como referencia de trabajo en proyecto hotelero, la tapicería de asientos de zonas comunes parte de 40.000 ciclos, y en lounges de alta rotación se especifican rangos superiores según el tejido y el acabado. Pero el Martindale no lo es todo: el comprador debe revisar también la resistencia al pillado, la solidez del color a la luz y al frote, y el comportamiento frente a la limpieza profesional, porque en un lobby bar un sofá se desinfecta varias veces al día. Para la consigna y los bancos de acceso, donde el contacto es con maletas y calzado, se priorizan cantos reforzados y materiales de superficie de alta resistencia antes que la suavidad al tacto. Y conviene documentar cada elección en la memoria de acabados, para que el departamento de mantenimiento del hotel sepa con qué producto limpiar cada superficie sin dañarla.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Elemento</th><th>Ensayo de referencia</th><th>Nivel orientativo de trabajo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Elemento">Butacas y sillones de lounge</td><td data-label="Ensayo de referencia">Martindale</td><td data-label="Nivel orientativo de trabajo">A partir de 40.000 ciclos</td></tr>
+              <tr><td data-label="Elemento">Sofás de zona de estar</td><td data-label="Ensayo de referencia">Martindale</td><td data-label="Nivel orientativo de trabajo">40.000 ciclos o más según rotación prevista</td></tr>
+              <tr><td data-label="Elemento">Tapicería de taburetes de lobby bar</td><td data-label="Ensayo de referencia">Martindale y solidez al frote</td><td data-label="Nivel orientativo de trabajo">40.000 ciclos con limpieza intensiva diaria</td></tr>
+              <tr><td data-label="Elemento">Bancos de consigna y corredores</td><td data-label="Ensayo de referencia">Resistencia de superficie y cantos</td><td data-label="Nivel orientativo de trabajo">Especificación reforzada por contacto con equipaje</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La selección de tapizados se hace siempre sobre muestras físicas y sobre las condiciones climáticas del destino: no es lo mismo un lobby junto al mar, con sal y humedad, que uno de montaña con calefacción seca. Hongye trabaja esta decisión con el equipo de diseño del cliente, enviando cartas de color y muestras de composición antes de bloquear materiales. La experiencia acumulada con más de 47 marcas hoteleras internacionales permite orientar al comprador sobre qué combinaciones de tejido, relleno y acabado funcionan a largo plazo en cada tipo de operación (registro de proyectos de Hongye Furniture Group). El objetivo no es elegir el tejido más caro, sino el que sostiene el programa de limpieza real del hotel con el menor coste total. Por eso cada propuesta incluye alternativas de tapizado con el mismo nivel de uso y distinto precio, de modo que la dirección pueda ajustar el presupuesto del lobby sin bajar el nivel de durabilidad ni la uniformidad visual del conjunto.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>MOQ, plazo de producción y embalaje de exportación: cómo se planifica la compra</h2>
+        <p>La parte comercial del FF&amp;E de lobby se decide con tres variables: mínimo de pedido, plazo y logística. El MOQ en mobiliario contract no es una cifra universal, sino un acuerdo por familia de producto y acabado; en un proyecto hotelero lo habitual es negociar un MOQ global por proyecto con cantidades mixtas entre zonas, siempre que el surtido comparta materiales y procesos. El plazo de referencia de la planta para una orden consolidada es un plazo de producción de 30-45 días desde la aprobación de materiales y planos de taller (datos de operación de fábrica de Hongye), y a ese plazo hay que sumar el tránsito marítimo y el desaduaneo del país de destino. Sobre el coste, la fabricación directa en planta ofrece una ventaja de coste del 30-50 % frente a la compra a través de intermediarios en proyectos contract comparables (análisis interno de Hongye Furniture Group).</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Concepto</th><th>Referencia de trabajo</th><th>Notas para el comprador</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Concepto">MOQ</td><td data-label="Referencia de trabajo">Acordado por familia de producto y acabado</td><td data-label="Notas para el comprador">Se negocia por proyecto con cantidades mixtas entre zonas</td></tr>
+              <tr><td data-label="Concepto">Plazo</td><td data-label="Referencia de trabajo">Plazo de producción de 30-45 días</td><td data-label="Notas para el comprador">Cuenta desde la aprobación de materiales y planos de taller</td></tr>
+              <tr><td data-label="Concepto">Embalaje</td><td data-label="Referencia de trabajo">Caja de madera, esquineras, EPE y estiba</td><td data-label="Notas para el comprador">Carga en contenedor con marcado por zona y pieza</td></tr>
+              <tr><td data-label="Concepto">Ventaja de coste</td><td data-label="Referencia de trabajo">Ventaja de coste del 30-50 %</td><td data-label="Notas para el comprador">Fabricación directa en planta de 300.000 m²</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El embalaje de exportación merece tanta atención como el propio mueble, porque la mayoría de las reclamaciones en proyectos internacionales nacen del tránsito, no de la fabricación. El estándar de la planta combina caja de madera para piezas estructuradas y mostradores, esquineras de protección, láminas de EPE para superficies pulidas y cantos, y estiba para el transporte interior y la carga en contenedor, con marcado individual por pieza y zona de destino. Este sistema facilita la descarga escalonada en obra y reduce los daños por manipulación. Para el comprador que quiera profundizar en materiales, secado de madera y distribución de peso dentro del contenedor, dedicamos una guía completa al <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación del mobiliario hotelero</a>. Un embalaje bien diseñado no se nota hasta que el contenedor llega perfecto al puerto de destino. Al planificar la carga, el equipo también reparte el peso entre contenedores y deja las piezas de instalación temprana, como mostradores y bancos de recepción, en las posiciones de descarga más accesibles, de forma que el montaje pueda empezar el mismo día de la descarga.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo es el proceso con Hongye, de la especificación a la instalación en obra?</h2>
+        <p>El proceso típico tiene seis etapas: recepción del planograma y del libro de estilo, propuesta de especificación por zonas, muestras de materiales, planos de taller de cada pieza, producción con inspección en proceso y, por último, carga y puesta en obra. En cada hito el comprador recibe un entregable verificable: propuesta técnica con niveles de uso, dossier de ensayos, fotografía de control de calidad por lote y packing list por contenedor. La referencia de Hilton Tashkent, en Uzbekistán, ilustra el recorrido completo: mostrador de recepción, butacas de lounge y bancos de corredor se fabricaron en una sola orden, se inspeccionaron en fábrica pieza a pieza y se entregaron coordinados con el calendario de apertura del hotel. Todos los proyectos públicos del grupo, con referencias por ciudad y país, se pueden consultar en la <a href="/proyectos/">página de proyectos</a> antes de lanzar una solicitud de presupuesto.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD26-a252-s2.jpg" alt="Piezas de mobiliario de hotel embaladas con esquineras y protección de madera para exportación." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Piezas de recepción y lounge de hotel protegidas con esquineras y embalaje de madera listas para exportación.</figcaption>
+        </figure>
+        <p>La última etapa es la instalación, y conviene contratarla como servicio, no como improvisación. El equipo de proyecto entrega por zonas, verifica el montaje de mostradores y paneles, ajusta herrajes y deja constancia firmada del estado de cada pieza, de modo que el hotel abre con el lobby completo y el FF&amp;E pendiente de habitaciones claramente separado. Si el proyecto incluye también el programa de habitaciones, la misma planta puede fabricar las <a href="/recursos/butacas-lounge-hotel-fase-2-feria-canton/">butacas de lounge de hotel</a> junto con el resto del surtido, y coordinar la entrega con las <a href="/recursos/casegoods-habitaciones-hotel-ffe-proyecto/">camas y mobiliario de habitaciones FF&amp;E</a> en ventanas logísticas consecutivas. Para iniciar el proceso, basta con enviar el planograma, las cantidades por zona y la fecha objetivo de apertura; el equipo de proyectos responde con especificación, MOQ y plazo indicativo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su propuesta FF&E para el lobby de su hotel"
+      text="Envíe su planograma, las cantidades por zona y la fecha objetivo de apertura a través de /contacto/ y el equipo de proyectos de Hongye le responderá con una propuesta de especificación por zonas, MOQ, plazo de producción y embalaje de exportación."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
