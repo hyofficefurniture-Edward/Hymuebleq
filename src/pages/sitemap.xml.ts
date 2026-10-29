@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/clausulas-contrato-ffe-feria-canton/",
   "/recursos/mobiliario-lobby-hotel-zonas-comunes/",
   "/recursos/mobiliario-bibliotecas-escolares-universitarias/",
   "/recursos/muestras-feria-canton-envio-consolidacion-ffe/",

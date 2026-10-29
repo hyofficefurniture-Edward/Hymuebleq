@@ -1,0 +1,454 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Contrato de FF&E: cláusulas clave tras la Feria de Cantón";
+const pageDescription = "Cláusulas clave de un contrato de FF&E tras la Feria de Cantón: pagos por hitos, BOQ y muestras selladas, plazos, AQL, Incoterms y garantía.";
+const keywords = [
+  "contrato de FF&E",
+  "cláusulas de compra FF&E",
+  "hitos de pago FF&E",
+  "muestras selladas",
+  "Incoterms mobiliario hotelero"
+];
+const canonicalPath = "/recursos/clausulas-contrato-ffe-feria-canton/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD27-a254-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-29";
+const dateModified = "2026-10-29";
+const publicationDateLabel = "Publicada el 29 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Qué debe quedar por escrito después de la Feria de Cantón?", answer: "Todo lo acordado en el estand: alcance y familias de producto, BOQ, acabados con muestras selladas, plazo de producción de 30-45 días, hitos de pago, Incoterm y garantía. La base es que la feria genera acuerdos verbales en conversaciones breves y el contrato es el único instrumento que los vuelve exigibles; por eso conviene redactarlo durante el propio cambio de exposición, antes de que el proveedor acumule nuevos encargos de la tercera fase." },
+    { question: "¿Qué porcentaje de pago anticipado es razonable en un contrato de FF&E?", answer: "Un anticipo moderado para reserva de línea y materiales, con el grueso del importe ligado a hitos verificables: planos de taller aprobados, fin de producción con inspección AQL superada y saldo contra la aceptación en obra. La justificación es de riesgo simétrico: el fabricante no financia todo el proyecto y el comprador nunca entrega un pago íntegro antes de tener producción conforme y documentada; el documento que habilita cada hito debe nombrarse en el contrato." },
+    { question: "¿Sirven las muestras recogidas en la feria como referencia contractual?", answer: "Solo si se convierten en muestras selladas: chapa, tapicería y herrajes identificados con código y firmados por ambas partes. En el proyecto hotelero de Riad (Arabia Saudí), el segundo desembolso quedó ligado a la aprobación conjunta de esas muestras y de los planos de taller, de modo que el acabado se congeló sobre el papel antes de fabricar. La muestra suelta del folleto es orientativa; la muestra sellada anexada al contrato es el estándar exigible." },
+    { question: "¿Cómo protege el contrato al comprador ante retrasos del fabricante?", answer: "Con un calendario de hitos intermedios, una penalización diaria por retraso imputable, un tope de esa penalización y causas de exoneración cerradas. El caso del Hilton Tashkent (Uzbekistán) ilustra el patrón que funciona: 295 habitaciones de FF&E producidas en 52 días con tres hitos intermedios avisados por escrito e inspección en proceso pactada. Los retrasos se detectan en el calendario intermedio, no en el puerto; sin hitos, la penalización llega demasiado tarde para reaccionar." },
+    { question: "¿Qué certificados debe exigir el comprador de un hotel?", answer: "EN 1021-1 y EN 1021-2 para el comportamiento ante la ignición del tapizado, BS 5852 cuando la cadena o el código local lo exigen, GREENGUARD para emisiones de COV, BIFMA en mobiliario de oficina, FSC para la procedencia de la madera y CE cuando el destino lo requiera. El criterio contractual es tratarlos como entregables enumerados, con fecha de entrega dentro del calendario, y no como promesa de dossier; el acta de aceptación solo se firma con el dossier completo." },
+    { question: "¿Qué Incoterm conviene para el mobiliario de un proyecto FF&E?", answer: "Depende de la estructura logística del comprador: FOB si dispone de consolidador y volumen de flete propio, CIF si prefiere que la fábrica contrate transporte y seguro hasta puerto de destino, y DDP cuando busca una sola ventana logística con presupuesto cerrado. En el equipamiento integral de oficinas de Trinidad and Tobago, un esquema de ventana única con embalaje de exportación especificado por partida simplificó despacho e instalación; el Incoterm, la moneda y la partida de embalaje deben figurar en la misma cláusula." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD27-a254-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d27a2-a254-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d27a2-a254-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario contract · Contrato FF&amp;E &middot; {publicationDateLabel}</p>
+          <h1>Contrato de FF&amp;E: cómo convertir lo hablado en la Feria de Cantón en cláusulas exigibles</h1>
+          <p>El contrato de FF&amp;E es el documento que convierte lo conversado en un estand de la Feria de Cantón en obligaciones exigibles: qué se fabrica, según qué documentos, cuándo se entrega, cuánto se paga en cada hito y qué ocurre si algo falla. La 140.ª edición celebró su segunda fase, dedicada a la calidad del hogar y al mobiliario, del 23 al 27 de octubre, y entre el 28 y el 30 de octubre el recinto de Guangzhou entra en cambio de exposición antes de la tercera fase, del 31 de octubre al 4 de noviembre (Ministerio de Comercio de China, 2026). Para el comprador, esta ventana de regreso a la oficina es el momento exacto de redactar, mientras las condiciones siguen frescas y la fábrica aún tiene margen para reservar línea de producción.</p>
+          <p>Esta guía recorre las cláusulas que un responsable de compras de hotel, oficina, hospital o escuela, un contratista general o un estudio de interiorismo debería fijar por escrito: definición del objeto y de sus anexos, hitos de pago y moneda, documentación técnica que prevalece, plazo de producción y consecuencias del retraso, aceptación de calidad con entrega de certificados, y condiciones de entrega, garantía y resolución de conflictos. Los ejemplos provienen de proyectos reales del grupo y del calendario oficial de la feria.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD27-a254-hero.jpg" alt="Mesa de negociación con contrato de FF&amp;E, BOQ, planos enrollados y muestras selladas frente a un lounge de hotel" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué debe contener un contrato de FF&amp;E?</h2>
+        <p>Un contrato de FF&amp;E es el acuerdo por el que un fabricante se obliga a diseñar, fabricar y entregar el mobiliario y equipamiento de un proyecto conforme a documentos anexos que prevalecen sobre el cuerpo principal, dentro de un plazo y un precio pactados, con pagos por hitos verificables, garantía definida y un mecanismo de resolución de controversias.</p>
+        <p>Sobre esa base, el cuerpo del contrato debe contener al menos seis bloques: identificación de las partes y del proyecto, objeto y alcance con lista de familias de producto, precio total con moneda y tratamiento de aranceles, jerarquía de documentos y anexos, calendario de producción y entrega con criterios de aceptación, y garantía con ley aplicable. La regla práctica que recomendamos a los compradores que recorrieron los estands entre el 23 y el 27 de octubre es sencilla: cada afirmación escuchada en la feria debe tener un lugar en el texto o en un anexo, porque una promesa verbal no es una cláusula. La tabla siguiente resume los bloques esenciales y el riesgo concreto que cubre cada uno.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Cláusula</th><th>Qué fija</th><th>Riesgo si falta</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Cláusula">Partes y objeto</td><td data-label="Qué fija">Quién compra, quién fabrica y qué familias de producto entrega</td><td data-label="Riesgo si falta">Discusiones sobre alcance y piezas fuera de contrato</td></tr>
+              <tr><td data-label="Cláusula">Precio y moneda</td><td data-label="Qué fija">Importe total, moneda pactada y tratamiento de aranceles</td><td data-label="Riesgo si falta">Recargos posteriores por variación de divisa</td></tr>
+              <tr><td data-label="Cláusula">Anexos técnicos</td><td data-label="Qué fija">BOQ, planos de taller y muestras selladas con jerarquía declarada</td><td data-label="Riesgo si falta">Interpretaciones dispares del acabado o la medida</td></tr>
+              <tr><td data-label="Cláusula">Calendario de pagos</td><td data-label="Qué fija">Hitos y porcentajes ligados a avances verificables</td><td data-label="Riesgo si falta">Pagos adelantados sin respaldo de producción</td></tr>
+              <tr><td data-label="Cláusula">Garantía y controversias</td><td data-label="Qué fija">Plazo de cobertura, repuestos, ley aplicable y arbitraje</td><td data-label="Riesgo si falta">Costes de reposición y litigios sin sede definida</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El contexto justifica ese rigor documental. La 140.ª Feria de Cantón ocupa unos 1,55 millones de m² de exposición y reúne a unos 32.000 expositores en su sede de Yuejiang Zhong Road 382, en el distrito de Haizhu (Guangzhou) (China Foreign Trade Centre, 2026). La edición anterior, la 139.ª, recibió 314.000 compradores internacionales de 220 países y regiones (China Foreign Trade Centre, 2026). Ese volumen de conversaciones de tres días por estand produce acuerdos valiosos pero frágiles: precios orientativos, acabados vistos bajo luz de estand y plazos conversados sin calendario. El contrato es la herramienta que estabiliza todo ello, y conviene redactarlo mientras el recinto aún está en cambio de exposición, antes de que la tercera fase concentre de nuevo la agenda de los proveedores.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo estructurar los pagos y la moneda en un contrato de FF&amp;E?</h2>
+        <p>Por hitos ligados a avances verificables, no a fechas de firma: un esquema habitual destina un anticipo a la reserva de capacidad y compra de materiales, un segundo desembolso a la aprobación de planos de taller y anexos, un tercero al fin de producción con inspección superada y un saldo final contra la entrega documentada o la aceptación en obra. Ese reparto protege a las dos partes: el fabricante no financia el proyecto entero y el comprador nunca queda con un pago íntegro adelantado. La clave contractual es definir qué documento habilita cada hito, de modo que el pago no dependa de una conversación telefónica sino de un acta, un plano aprobado o un informe de inspección.</p>
+        <p>La moneda merece cláusula propia. Fije la divisa del contrato, quién asume la variación de cambio entre firma y liquidación y si el precio incluye embalaje de exportación; en compras desde zonas con monedas volátiles, un precio cerrado en dólares estadounidenses con validez escrita de treinta o sesenta días evita renegociaciones a mitad de producción. En la tabla siguiente se muestra un esquema de hitos que funciona bien en proyectos FF&amp;E de tamaño medio y grande.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Hito de pago</th><th>Documento que lo habilita</th><th>Qué protege</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Hito de pago">Anticipo</td><td data-label="Documento que lo habilita">Contrato firmado y confirmación de reserva de línea</td><td data-label="Qué protege">Compra de materiales y bloqueo de capacidad</td></tr>
+              <tr><td data-label="Hito de pago">Contra planos de taller</td><td data-label="Documento que lo habilita">Planos de taller y BOQ aprobados por el comprador</td><td data-label="Qué protege">Que lo fabricado coincida con lo aprobado</td></tr>
+              <tr><td data-label="Hito de pago">Contra fin de producción</td><td data-label="Documento que lo habilita">Informe de inspección con AQL superado</td><td data-label="Qué protege">Calidad conforme antes del embarque</td></tr>
+              <tr><td data-label="Hito de pago">Saldo</td><td data-label="Documento que lo habilita">Entrega documentada o acta de aceptación en obra</td><td data-label="Qué protege">Poder de corrección hasta el final del proyecto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En un proyecto hotelero en Riad (Arabia Saudí), el comprador ligó el segundo desembolso a la aprobación conjunta de planos de taller y de las muestras selladas de acabado, y retuvo el saldo hasta la recepción del dossier documental completo. Con esa estructura, cualquier discrepancia entre lo conversado en la feria y lo dibujado en el taller se resolvió sobre el papel, antes de cortar la primera tabla, y no en obra, cuando el coste de corregir se multiplica. Es el patrón que recomendamos por defecto en climas contract de hotel y en cualquier encargo donde el acabado sea parte de la marca.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Los documentos que mandan: BOQ, planos de taller y muestras selladas</h2>
+        <p>La especificación técnica debe entrar al contrato como anexo numerado y con jerarquía declarada: si el cuerpo principal y un plano se contradicen, el contrato debe decir cuál manda. Este bloque es el corazón del contrato de FF&amp;E, porque el mueble de proyecto no se compra de catálogo sino contra documentos: la lista de cantidades, los planos y las muestras físicas son la única descripción jurídicamente útil del producto. Un anexo bien construido evita la frase más costosa del sector, aquella de que cada parte entendía otra cosa.</p>
+        <p>Tres piezas lo componen. El BOQ desglosa cada referencia con cantidad, medidas, acabado y destino de instalación, y permite presupuestar y comparar proveedores sobre la misma base. Los planos de taller fijan las medidas críticas, secciones y anclajes, y solo se fabrican tras la conformidad escrita del comprador. Las muestras selladas convierten el acabado en objeto físico: tablas de chapa, cortes de tapicería y herrajes identificados con código, firmados por ambas partes y archivadas una en fábrica y otra en el estudio. Todo lo que no esté en el BOQ o en la muestra sellada es opinable; todo lo que esté, es exigible.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD27-a254-s1.jpg" alt="Muestras selladas de chapa, tapicería y herrajes junto al BOQ y planos de taller" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Muestras selladas de acabado codificadas junto al BOQ y los planos de taller aprobados.</figcaption>
+        </figure>
+        <p>Un encargo de oficina en Trinidad and Tobago muestra el valor del anexo consolidado: la compra agrupó asientos operativos, mesas de dirección, mobiliario de reuniones y zonas de colaboración en un único BOQ con destino por planta, de modo que un solo contrato, un solo calendario y una sola muestra sellada por acabado gobernaron todo el suministro. Para un equipamiento integral de ese tipo, el anexo único también simplificó el despacho aduanero y la instalación secuencial. Si acaba de cerrar el ciclo de muestras de la feria, en <a href="/recursos/muestras-feria-canton-envio-consolidacion-ffe/">nuestra guía de muestras y consolidación FF&amp;E</a> se explica cómo pasar del folleto recogido en el estand a la muestra sellada con validez contractual.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué ocurre si el proveedor se retrasa en un contrato de FF&amp;E?</h2>
+        <p>Lo que el contrato diga que ocurre, y solo eso: por eso el plazo de producción de 30-45 días debe acompañarse de un calendario de hitos, una penalización diaria pactada por cada día de retraso imputable al fabricante, un tope máximo de esa penalización y una lista cerrada de causas de exoneración por fuerza mayor. El error habitual es fijar una fecha de entrega sin definir los avances intermedios; con hitos de apertura de producción, fin de fabricación y precinto, el retraso se detecta en semanas y no en el puerto de destino.</p>
+        <p>La cláusula debe distinguir tres supuestos. El retraso imputable al fabricante activa la penalización diaria pactada. El retraso causado por aprobaciones pendientes del comprador —planos sin conformidad, muestras sin elegir— suspende el plazo de forma neutral, con registro escrito de cada aviso. Y la fuerza mayor, documentada, exonera a ambas partes. Complemente el bloque con un derecho de inspección en proceso en fechas acordadas: ver la línea de producción en el momento pactado vale más que cualquier promesa verbal. Estos mecanismos se negocian mejor junto con MOQ, embalaje y plazos, tal como detallamos en <a href="/recursos/negociar-moq-plazo-packing-proveedores-feria-canton/">cómo negociar MOQ, plazo y packing con proveedores de la Feria de Cantón</a>.</p>
+        <p>La referencia de nuestro grupo es el proyecto del Hilton Tashkent (Uzbekistán): el FF&amp;E completo de 295 habitaciones se produjo en 52 días bajo un calendario de tres hitos intermedios con aviso escrito de avance (Hongye Furniture Group, datos de proyecto, 2026). El comprador inspeccionó en proceso en dos momentos pactados y el embarque salió dentro de la ventana contractual. Ningún plazo se cumple por optimismo, sino por calendario intermedio, inspección y cláusula de penalización; si un proveedor rechaza poner por escrito cualquiera de las tres, esa conversación de estand merece una segunda lectura antes de firmar.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se define la aceptación de calidad y qué documentos debe entregar el fabricante?</h2>
+        <p>La aceptación se define antes de fabricar: muestreo AQL acordado sobre el lote, inspección en proceso en momentos pactados y una lista cerrada de documentos que el proveedor entrega junto con la mercancía. Sin esa definición previa, la aceptación se convierte en una discusión de gusto personal en obra; con ella, un tercero puede verificar el lote y emitir un informe objetivo. El contrato debe indicar el nivel de muestreo, quién inspecciona, quién paga la inspección y qué porcentaje de defectos críticos, mayores y menores acepta el comprador.</p>
+        <p>Los documentos de cumplimiento son la otra mitad de la aceptación. En tapicería de uso público, las normas europeas EN 1021-1 y EN 1021-2 acreditan el comportamiento ante la ignición por colilla y pequeña llama, y BS 5852 cubre el cribado ignífugo que muchas cadenas hoteleras y códigos locales exigen. GREENGUARD aporta el dossier de emisiones de COV, BIFMA respalda el ensayo de resistencia y durabilidad del mobiliario de oficina, FSC acredita la procedencia responsable de la madera y el marcado CE acompaña al producto cuando el mercado de destino lo requiere. La regla contractual es tratar los certificados como entregables: se enumeran en el contrato, con fecha y formato, exactamente igual que las sillas. La tabla siguiente ordena ese dossier.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Documento</th><th>Qué acredita</th><th>Cuándo se entrega</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Documento">Informe de inspección AQL</td><td data-label="Qué acredita">Defectos críticos, mayores y menores del lote</td><td data-label="Cuándo se entrega">Antes del embarque</td></tr>
+              <tr><td data-label="Documento">Certificados EN 1021-1 y EN 1021-2</td><td data-label="Qué acredita">Ignición del tapizado por colilla y pequeña llama</td><td data-label="Cuándo se entrega">Con la documentación de embarque</td></tr>
+              <tr><td data-label="Documento">Certificado BS 5852</td><td data-label="Qué acredita">Cribado ignífugo exigido por cadenas y códigos locales</td><td data-label="Cuándo se entrega">Con la documentación de embarque</td></tr>
+              <tr><td data-label="Documento">GREENGUARD, BIFMA, FSC y CE</td><td data-label="Qué acredita">Emisiones, ensayos de uso, procedencia de la madera y marcado</td><td data-label="Cuándo se entrega">Con la factura y el dossier final</td></tr>
+              <tr><td data-label="Documento">Acta de aceptación</td><td data-label="Qué acredita">Conformidad firmada del comprador tras la recepción</td><td data-label="Cuándo se entrega">En obra o destino</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En el equipamiento educativo del proyecto de Charterhouse Lagos (Nigeria), la aceptación se articuló alrededor de ese dossier: mesas y asientos de aula con ensayos de uso intensivo, tapicerías con acreditación ignífuga y documentación de procedencia de la madera entregada junto al acta de recepción, requisitos razonables en un centro escolar de alta exigencia. Para preparar esas visitas y entender qué se mira en cada control, en <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">nuestro artículo sobre control de calidad en fábrica</a> se describe paso a paso la inspección en proceso y el informe AQL que el comprador recibe antes del embarque.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD27-a254-s2.jpg" alt="Informe AQL y certificados junto al mobiliario en la zona de control de calidad" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Informe AQL y certificados de ignifugación junto al mobiliario en la zona de control de calidad.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Incoterms, garantía, repuestos y resolución de controversias: el cierre del contrato</h2>
+        <p>El cierre del contrato de FF&amp;E fija tres decisiones que condicionan el coste real y el riesgo de la operación: el Incoterm de entrega, el régimen de garantía con repuestos y el foro de resolución de conflictos. El Incoterm determina quién contrata transporte principal, seguro y despacho; la garantía determina qué cubre el fabricante durante la vida útil inicial del proyecto; y la cláusula de controversias determina dónde y bajo qué ley se discutirá un desacuerdo. Ninguna de las tres debería quedar para el intercambio de correos posteriores a la firma.</p>
+        <p>En mobiliario de proyecto, FOB, CIF y DDP cubren la mayoría de los casos, y la elección depende del volumen y de la estructura logística del comprador. A ello se suma el embalaje: caja de madera con esquineras y protección EPE debe figurar como partida del contrato, porque un embalaje deficiente borra la frontera entre daño de transporte y defecto de fábrica. En <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">nuestra guía de embalaje de exportación para mobiliario hotelero</a> se detalla qué especificar por familia de producto. La tabla siguiente compara los tres Incoterms habituales.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>Incoterm</th><th>Transporte principal</th><th>Conviene cuando</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Incoterm">FOB</td><td data-label="Transporte principal">Lo contrata y paga el comprador</td><td data-label="Conviene cuando">Dispone de consolidador propio o volumen de flete</td></tr>
+              <tr><td data-label="Incoterm">CIF</td><td data-label="Transporte principal">Lo contrata el vendedor hasta el puerto de destino</td><td data-label="Conviene cuando">Quiere flete y seguro gestionados por la fábrica</td></tr>
+              <tr><td data-label="Incoterm">DDP</td><td data-label="Transporte principal">Lo cubre el vendedor hasta la entrega con aranceles</td><td data-label="Conviene cuando">Prioriza una sola ventana logística y presupuesto cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La garantía debe fijar plazo, cobertura por familias y disponibilidad de repuestos: patas, ruedas, mecanismos de gas y herrajes de desgaste con stock declarado y plazo de envío pactado. Y en la cláusula de controversias, una sede de arbitraje neutra con ley aplicable escrita cuesta dos líneas y evita años de incertidumbre. Para valorar de quién es la capacidad que respalda ese contrato: Hongye Furniture Group, fundada en 1996, opera una planta de 300.000 m² en Heshan (Jiangmen, Guangdong), ha entregado más de 1.000 proyectos en más de 50 países y trabaja con más de 47 marcas hoteleras internacionales, con certificación BIFMA, GREENGUARD, FSC y CE y una ventaja de coste del 30-50 % frente a intermediarios. Puede revisar referencias comparables en <a href="/proyectos/">nuestra galería de proyectos</a>.</p>
+        <p>Y si aún tiene la agenda abierta: la tercera fase de la 140.ª Feria de Cantón, con sanidad y vida saludable, se celebra del 31 de octubre al 4 de noviembre, y Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Convierta lo hablado en la feria en un contrato FF&E sólido"
+      text="Envíenos el BOQ o los planos de su proyecto, el listado de familias y su calendario de apertura: nuestro equipo le devolverá una propuesta de estructura contractual con hitos de pago, certificados de entrega e Incoterm recomendado, sin compromiso. Escríbanos por /contacto/ indicando su sector y el país de destino, y reciba también la carta de invitación para visitar nuestra planta."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
