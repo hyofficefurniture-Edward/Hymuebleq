@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "https://hymueble.com/recursos/mobiliario-residencias-mayores-tercera-fase-feria-canton/",
   "/recursos/clausulas-contrato-ffe-feria-canton/",
   "/recursos/mobiliario-lobby-hotel-zonas-comunes/",
   "/recursos/mobiliario-bibliotecas-escolares-universitarias/",

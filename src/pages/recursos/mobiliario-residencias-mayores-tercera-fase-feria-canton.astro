@@ -1,0 +1,465 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para residencias de mayores: fase 3 de Cantón";
+const pageDescription = "Mobiliario para residencias de mayores: qué evaluar en las cuatro zonas de un centro durante la fase 3 de la Feria de Cantón, con medidas, normas y MOQ.";
+const keywords = [
+  "mobiliario para residencias de mayores",
+  "mobiliario geriátrico contract",
+  "camas articuladas residencia",
+  "sillas para residencias de mayores",
+  "fase 3 Feria de Cantón mobiliario"
+];
+const canonicalPath = "https://hymueble.com/recursos/mobiliario-residencias-mayores-tercera-fase-feria-canton/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD29-a258-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-10-31";
+const dateModified = "2026-10-31";
+const publicationDateLabel = "Publicada el 31 de octubre de 2026";
+
+const faqItems = [
+    { question: "¿Cuándo se celebra la fase 3 de la 140.ª Feria de Cantón?", answer: "La tercera fase de la 140.ª edición se celebra del 31 de octubre al 4 de noviembre de 2026 y está dedicada a la vida saludable. El mobiliario general se exhibió antes, en la segunda fase del 23 al 27 de octubre, y entre ambas hay un cambio de exposición sin actividad de negociación del 28 al 30 de octubre, de modo que quien quiera ver las dos familias de producto debe planificar dos visitas o trabajar una de ellas a distancia." },
+    { question: "¿Qué mobiliario se compra para una residencia de mayores?", answer: "Se compra por zonas: camas articuladas, mesillas y armarios para la habitación; sillones y butacas con apoyabrazos continuos para la sala; mesas y sillas con hueco frontal para silla de ruedas en el comedor; y camas regulables, módulos de lavabo y sillones de traslado en el área de cuidados. La razón es que cada zona impone una medida distinta, y comprar la misma silla para todo el centro es el error que más veces obliga a repetir la compra." },
+    { question: "¿A qué altura debe quedar la cama en una residencia?", answer: "El plano del colchón debe quedar entre 50 y 55 cm del suelo con la cama en posición baja. Ese rango permite que el residente se siente al borde con los pies apoyados y que el personal trabaje sin flexionar la espalda en exceso. La comprobación se hace con cinta métrica sobre la muestra, desde el suelo hasta la cara superior del colchón, y no con la altura del bastidor que figura en la ficha técnica." },
+    { question: "¿Qué MOQ y qué plazo maneja un pedido de mobiliario geriátrico?", answer: "El MOQ se fija por familia de producto y por acabado, no por pieza suelta, y suele agruparse en un lote de color por proyecto. El plazo habitual es de 30-45 días desde la aprobación de planos y muestras, al que se suma el tránsito marítimo. Un centro de 80 plazas que abre en primavera cierra el pedido en invierno y reserva la inspección antes de la carga." },
+    { question: "¿Qué normas deben cumplir las sillas y los tapizados?", answer: "Los asientos de uso intensivo se ensayan según EN 16139, los tapizados según EN 1021-1 y EN 1021-2, y los conjuntos de riesgo alto según BS 5852 con crib 5. Para camas regulables de uso asistido la referencia es EN 1970. Cada punto debe llegar con el informe del laboratorio que identifique modelo, espuma y tejido, porque un certificado genérico de fábrica no cubre la pieza que se está comprando." },
+    { question: "¿Cómo se obtiene el número de stand y la invitación a la feria?", answer: "Se solicita por el formulario de contacto del sitio indicando el sector y el país desde el que se viaja. La razón de ese filtro es que el número de stand no se publica: se envía junto con una carta de invitación para la visita y con una propuesta de especificación por zona, MOQ y calendario de producción. Conviene escribir con antelación si el viaje incluye una parada en la planta de Heshan." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD29-a258-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d29a2-a258-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d29a2-a258-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario contract · Residencias de mayores &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para residencias de mayores: qué revisar en los tres días de la fase 3</h1>
+          <p>El mobiliario para residencias de mayores se decide con una lista de medidas y una ficha de limpieza sobre la mesa, no con un catálogo de estilos. Una habitación individual o compartida, una sala de estar, un comedor de cuatro y seis comensales y un área de cuidados con camas articuladas piden piezas distintas: la altura del asiento, el radio de una esquina y el tipo de superficie cambian de una zona a otra porque la función cambia. La 140.ª Feria de Cantón abre su tercera fase, dedicada a la vida saludable, del 31 de octubre al 4 de noviembre de 2026, y ese es el tramo en el que un comprador de residencia puede comparar camas, sillas, mesas y superficies de cuidado en un mismo recinto.</p>
+          <p>El calendario obliga a separar dos visitas. El mobiliario general, con sillas, mesas, armarios y tapizados, se exhibe en la segunda fase, del 23 al 27 de octubre, mientras que la tercera fase concentra el equipamiento sanitario y de cuidado, del 31 de octubre al 4 de noviembre. Entre ambas hay un cambio de exposición sin actividad de negociación, del 28 al 30 de octubre: quien viaja desde España o Latinoamérica para ver las dos familias de producto reserva el viaje completo o elige una fase y trabaja la otra por videollamada con el fabricante.</p>
+          <p>Este artículo ordena esa evaluación para directores de residencia, responsables de compras de grupos geriátricos, estudios de arquitectura que proyectan centros y contratistas que entregan la obra llave en mano. Hongye Furniture Group fabrica desde 1996 en Heshan (Jiangmen), con más de 300.000 m² de planta, más de 1.000 proyectos entregados en más de 50 países y un plazo de producción de 30-45 días por familia de producto, de modo que la apertura de un centro se puede planificar sobre datos verificables.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD29-a258-hero.jpg" alt="Sala de estar de una residencia de mayores con sillones de brazos, mesillas de esquinas redondeadas y pasamanos continuo en la pared" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué es el mobiliario para residencias de mayores y por qué se evalúa en la fase 3?</h2>
+        <p>El mobiliario para residencias de mayores es el conjunto de camas articuladas, mesillas, armarios, sillones, sillas, mesas de comedor y módulos de apoyo al cuidado que se especifica por zonas de un centro geriátrico, con dimensiones que permiten sentarse, levantarse y desplazarse con seguridad, superficies lavables y resistencia verificable según el uso de cada espacio.</p>
+        <p>La tercera fase es el momento de mirar esta familia por una razón práctica: en el recinto coinciden los expositores de productos médicos y de cuidado con los de mobiliario contract, y eso permite comparar en la misma jornada una cama articulada, una grúa de traslado y la silla que va a acompañarla. En la segunda fase se eligen los tapizados, las mesas y los armarios; en la tercera se resuelve la parte que sostiene el cuidado diario. Quien visita solo la fase de mobiliario general compra piezas correctas y descubre después que la cama de su unidad de cuidados necesita otra altura, otro freno y otro mando.</p>
+        <p>El método que funciona cabe en una carpeta: una hoja por zona con las piezas previstas, la medida crítica de cada una, la norma que debe cumplirse y el punto de aceptación en obra. Esa carpeta se completa en la conversación con el fabricante, no en la oficina al volver del viaje. La diferencia con un proyecto hospitalario está en el peso de cada criterio: en una residencia mandan la autonomía del residente y la ergonomía del personal de apoyo, mientras que en un hospital mandan la limpieza terminal y el uso intensivo. Los criterios por zonas de un centro sanitario están desarrollados en <a href="/recursos/mobiliario-hospitalario-clinicas-residencias-proyecto/">la guía de mobiliario hospitalario</a>, y sirven de contraste para no pedir a una residencia lo que corresponde a un hospital. Un centro de salud conductual de 120 plazas en Abu Dhabi (EAU) separó precisamente dos hojas: habitaciones con cama de 50 cm y mesilla de rueda bloqueable, y salas de terapia con sillas de apoyabrazos alto y mesas de 75 cm.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cuatro zonas, cuatro listas: qué se compra y qué se acepta en cada una</h2>
+        <p>La zonificación evita el error de comprar por catálogo. En la habitación el mobiliario tiene que sostener tres gestos diarios: incorporarse, sentarse al borde de la cama y alcanzar la mesilla sin girar el tronco. En la sala de estar mandan la altura del asiento y la firmeza del apoyabrazos, porque el residente se impulsa con los brazos para levantarse. En el comedor mandan la altura del tablero y el espacio libre bajo la mesa para una silla de ruedas. En el área de cuidados mandan el freno, el rango de regulación de la cama y la posibilidad de limpiar entre barrotes. Cada zona tiene su propio punto de aceptación, y ese punto es el que se firma en el acta de recepción, no la impresión general del conjunto. El orden de trabajo es el inverso al del catálogo: primero se elige el punto de aceptación, después la pieza que lo cumple y solo al final el acabado que combina con el resto del centro.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>L</th><th>a</th><th>s</th><th> </th><th>c</th><th>u</th><th>a</th><th>t</th><th>r</th><th>o</th><th> </th><th>z</th><th>o</th><th>n</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>u</th><th>n</th><th>a</th><th> </th><th>r</th><th>e</th><th>s</th><th>i</th><th>d</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th>,</th><th> </th><th>s</th><th>u</th><th>s</th><th> </th><th>p</th><th>i</th><th>e</th><th>z</th><th>a</th><th>s</th><th> </th><th>c</th><th>r</th><th>í</th><th>t</th><th>i</th><th>c</th><th>a</th><th>s</th><th> </th><th>y</th><th> </th><th>e</th><th>l</th><th> </th><th>p</th><th>u</th><th>n</th><th>t</th><th>o</th><th> </th><th>q</th><th>u</th><th>e</th><th> </th><th>s</th><th>e</th><th> </th><th>f</th><th>i</th><th>r</th><th>m</th><th>a</th><th> </th><th>e</th><th>n</th><th> </th><th>l</th><th>a</th><th> </th><th>r</th><th>e</th><th>c</th><th>e</th><th>p</th><th>c</th><th>i</th><th>ó</th><th>n</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="L">Zona</td><td data-label="a">Piezas clave</td><td data-label="s">Requisito que manda</td><td data-label=" ">Punto de aceptación</td></tr>
+              <tr><td data-label="L">Habitación</td><td data-label="a">Cama articulada, mesilla, armario, silla de visita</td><td data-label="s">Altura del plano de cama y paso lateral para dos personas</td><td data-label=" ">Cama bloqueada y mesilla accesible desde el colchón</td></tr>
+              <tr><td data-label="L">Sala de estar</td><td data-label="a">Sillones, butacas, mesas auxiliares, estanterías</td><td data-label="s">Altura de asiento y apoyabrazos continuo</td><td data-label=" ">Impulso para levantarse sin apoyo del vecino</td></tr>
+              <tr><td data-label="L">Comedor</td><td data-label="a">Mesas de cuatro y seis, sillas, carros de servicio</td><td data-label="s">Altura de tablero y hueco frontal para silla de ruedas</td><td data-label=" ">Giro completo de la silla en el paso entre mesas</td></tr>
+              <tr><td data-label="L">Área de cuidados</td><td data-label="a">Camas regulables, módulos de lavabo, sillón de traslado</td><td data-label="s">Freno, rango de regulación y superficie lavable</td><td data-label=" ">Limpieza entre barrotes y bloqueo verificado</td></tr>
+              <tr><td data-label="L">Circulaciones</td><td data-label="a">Pasamanos, protectores de pared, bancos de descanso</td><td data-label="s">Continuidad del pasamanos y ancho libre de paso</td><td data-label=" ">Recorrido completo sin interrupciones</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD29-a258-s1.jpg" alt="Cama articulada en posición baja y mesilla con ruedas bloqueables en la habitación muestra de una residencia" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Habitación de residencia amueblada para revisión: cama articulada en posición baja con cinta métrica sobre el plano del colchón, mesilla con rueda bloqueable y silla con apoyabrazos continuos junto a la ventana</figcaption>
+        </figure>
+        <p>Un centro de atención a la demencia de 96 habitaciones en Singapur cambió el sillón de su sala principal antes de la recepción: el modelo previsto tenía 40 cm de altura de asiento y obligaba al residente a buscar apoyo en el reposabrazos del vecino. La sustitución por una pieza de 47 cm con apoyabrazos continuos se documentó en el acta, y el episodio dejó una lección de compra clara: la altura del asiento se mide con el cojín comprimido, no con el cojín nuevo. En una residencia de 64 plazas de Texas (EE. UU.) dedicada a memory care, el mismo criterio se aplicó al comedor, con mesas de 75 cm y sillas sin ruedas para que el residente no las desplace al sentarse. En el centro de Singapur la hoja de la sala llevaba tres columnas —medida, norma y prueba— y el cambio se aprobó en una sola reunión con el proveedor, sin volver a discutir el diseño.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué medidas de seguridad debe cumplir el mobiliario de una residencia?</h2>
+        <p>Las medidas de seguridad no son un adorno del pliego: son la diferencia entre un residente que se levanta solo y otro que necesita dos personas. La altura del plano de la cama se mide desde el suelo hasta la cara superior del colchón, con la cama en posición baja, y el rango de trabajo en una residencia se sitúa entre 50 y 55 cm. La altura del asiento se mide en el centro, con el cojín comprimido por un uso normal, y el rango de 45 a 48 cm permite que el pie llegue al suelo y la rodilla quede cerca de los 90 grados. Esas dos cifras se comprueban con cinta métrica sobre la muestra, nunca sobre el catálogo. Si el fabricante no puede medir la pieza delante de usted, la medida de la ficha es una intención y no un dato. En los centros de Abu Dhabi y de Texas la revisión se hizo con la misma cinta metálica y la misma hoja de control, aunque uno tenga 120 plazas y el otro 64.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>M</th><th>e</th><th>d</th><th>i</th><th>d</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>r</th><th>e</th><th>f</th><th>e</th><th>r</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th> </th><th>p</th><th>a</th><th>r</th><th>a</th><th> </th><th>e</th><th>l</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>d</th><th>e</th><th> </th><th>u</th><th>n</th><th>a</th><th> </th><th>r</th><th>e</th><th>s</th><th>i</th><th>d</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th> </th><th>y</th><th> </th><th>c</th><th>ó</th><th>m</th><th>o</th><th> </th><th>s</th><th>e</th><th> </th><th>v</th><th>e</th><th>r</th><th>i</th><th>f</th><th>i</th><th>c</th><th>a</th><th> </th><th>c</th><th>a</th><th>d</th><th>a</th><th> </th><th>u</th><th>n</th><th>a</th><th> </th><th>e</th><th>n</th><th> </th><th>l</th><th>a</th><th> </th><th>m</th><th>u</th><th>e</th><th>s</th><th>t</th><th>r</th><th>a</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="M">Elemento</td><td data-label="e">Medida de referencia</td><td data-label="d">Por qué</td><td data-label="i">Cómo se verifica</td></tr>
+              <tr><td data-label="M">Altura del plano de cama</td><td data-label="e">50-55 cm en posición baja</td><td data-label="d">Permite sentarse y levantarse con los pies apoyados</td><td data-label="i">Cinta métrica del suelo a la cara del colchón</td></tr>
+              <tr><td data-label="M">Altura de asiento</td><td data-label="e">45-48 cm con cojín comprimido</td><td data-label="d">Rodilla cerca de 90 grados y pie en el suelo</td><td data-label="i">Medición con carga y cojín usado</td></tr>
+              <tr><td data-label="M">Apoyabrazos</td><td data-label="e">65-70 cm del suelo, continuo hasta el frontal</td><td data-label="d">Punto de impulso para incorporarse</td><td data-label="i">Prueba de levantamiento con el usuario</td></tr>
+              <tr><td data-label="M">Pasamanos en circulaciones</td><td data-label="e">85-90 cm, sin interrupciones</td><td data-label="d">Apoyo continuo en todo el recorrido</td><td data-label="i">Recorrido con la mano apoyada</td></tr>
+              <tr><td data-label="M">Cantos y esquinas</td><td data-label="e">Radio igual o mayor de 10 mm</td><td data-label="d">Evita cortes y hematomas en cadera y antebrazo</td><td data-label="i">Galga de radios y revisión táctil</td></tr>
+              <tr><td data-label="M">Giro de silla de ruedas</td><td data-label="e">150 cm de diámetro libre</td><td data-label="d">Maniobra completa sin marcha atrás</td><td data-label="i">Prueba con silla en el ambiente real</td></tr>
+              <tr><td data-label="M">Ruedas y frenos</td><td data-label="e">Bloqueo en las cuatro ruedas</td><td data-label="d">Evita desplazamientos al sentarse</td><td data-label="i">Empuje con el freno puesto</td></tr>
+              <tr><td data-label="M">Fijación antivuelco</td><td data-label="e">Anclaje a pared en armarios de más de 120 cm</td><td data-label="d">Evita el vuelco por apoyo o tracción</td><td data-label="i">Revisión del anclaje y prueba de tracción</td></tr>
+              <tr><td data-label="M">Luz de paso e interruptores</td><td data-label="e">Interruptores a 90-110 cm y luz baja a 20-30 cm</td><td data-label="d">Alcance sin bajarse de la cama</td><td data-label="i">Prueba nocturna en la habitación muestra</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>En la residencia de memory care de Texas la lista se aplicó al revés: primero se probó el recorrido con una silla de ruedas de 65 cm de ancho y después se fijaron las mesas. El resultado fue un comedor con 150 cm libres en el paso central y mesas que admiten la silla por el frontal, sin que el residente tenga que abandonarla para comer. El fallo que aparece en obra es siempre el mismo: el ambiente se amuebla con el plano en la mano y se mide cuando ya está todo colocado. Fijar tolerancias por escrito, con dos o tres centímetros de margen sobre la medida nominal, deja al instalador un criterio claro para corregir sin consultar cada pieza. Conviene fotografiar la medición con la cinta visible sobre el plano, porque una foto sin referencia métrica no sirve como prueba en una discusión de garantía.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Superficies lavables, tapizados ignífugos y normas: qué documento pedir</h2>
+        <p>La limpieza descarta muebles más rápido que el diseño. Una residencia hace varias rondas diarias de limpieza y desinfección, y las superficies reciben hipoclorito diluido, amonio cuaternario o alcohol según el protocolo del centro y el brote que tenga que controlar. Un tablero con el canto abierto absorbe líquido en la primera semana y aparece hinchado en la primera. La especificación correcta pide superficie cerrada, canto sellado y junta continua, y pide el informe de ensayo que lo respalde: la palabra del comercial no sirve cuando el servicio de limpieza cambia de producto a mitad de temporada. La junta entre tablero y canto, el encuentro con el zócalo y el sellado de los taladros de herrajes son los tres puntos por donde entra el líquido, y ninguno se ve en una foto de catálogo: los tres se comprueban pasando la uña por la arista. Un acabado anunciado como antibacterial sin informe de ensayo es una etiqueta comercial, no una prestación.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>N</th><th>o</th><th>r</th><th>m</th><th>a</th><th>s</th><th> </th><th>y</th><th> </th><th>d</th><th>o</th><th>c</th><th>u</th><th>m</th><th>e</th><th>n</th><th>t</th><th>o</th><th>s</th><th> </th><th>q</th><th>u</th><th>e</th><th> </th><th>s</th><th>o</th><th>s</th><th>t</th><th>i</th><th>e</th><th>n</th><th>e</th><th>n</th><th> </th><th>l</th><th>a</th><th> </th><th>e</th><th>s</th><th>p</th><th>e</th><th>c</th><th>i</th><th>f</th><th>i</th><th>c</th><th>a</th><th>c</th><th>i</th><th>ó</th><th>n</th><th> </th><th>d</th><th>e</th><th> </th><th>u</th><th>n</th><th> </th><th>p</th><th>e</th><th>d</th><th>i</th><th>d</th><th>o</th><th> </th><th>g</th><th>e</th><th>r</th><th>i</th><th>á</th><th>t</th><th>r</th><th>i</th><th>c</th><th>o</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="N">Requisito</td><td data-label="o">Norma o referencia</td><td data-label="r">Qué cubre</td><td data-label="m">Documento que se solicita</td></tr>
+              <tr><td data-label="N">Resistencia de asientos de uso intensivo</td><td data-label="o">EN 16139</td><td data-label="r">Carga, impacto y fatiga en sillas y butacas contract</td><td data-label="m">Informe de laboratorio por modelo y tipo de uso</td></tr>
+              <tr><td data-label="N">Ignifugación de tapizados</td><td data-label="o">EN 1021-1 y EN 1021-2</td><td data-label="r">Comportamiento frente a cigarrillo y cerilla</td><td data-label="m">Certificado con espuma y tejido identificados</td></tr>
+              <tr><td data-label="N">Tapizados de riesgo alto</td><td data-label="o">BS 5852, crib 5</td><td data-label="r">Combustión del conjunto, no solo del tejido</td><td data-label="m">Ensayo del conjunto completo</td></tr>
+              <tr><td data-label="N">Camas regulables</td><td data-label="o">EN 1970</td><td data-label="r">Seguridad y dimensiones de camas ajustables de uso asistido</td><td data-label="m">Declaración de conformidad y manual</td></tr>
+              <tr><td data-label="N">Emisiones de tableros y acabados</td><td data-label="o">GREENGUARD Gold</td><td data-label="r">Calidad del aire interior en habitaciones cerradas</td><td data-label="m">Certificado vigente de panel y adhesivo</td></tr>
+              <tr><td data-label="N">Madera de origen</td><td data-label="o">FSC</td><td data-label="r">Trazabilidad de la cadena de custodia</td><td data-label="m">Certificado de cadena de custodia</td></tr>
+              <tr><td data-label="N">Formaldehído en tableros</td><td data-label="o">CARB P2</td><td data-label="r">Límite de emisión del tablero compuesto</td><td data-label="m">Informe del fabricante del tablero</td></tr>
+              <tr><td data-label="N">Embalaje de madera</td><td data-label="o">ISPM 15</td><td data-label="r">Tratamiento y marcado de madera sólida de exportación</td><td data-label="m">Marca visible en el cajón y declaración</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El centro de Abu Dhabi fijó la limpieza como criterio de aceptación: cada superficie de la habitación se limpió a diario con hipoclorito diluido durante el periodo de garantía y el fabricante entregó la ficha de resistencia química de cada acabado. En la práctica, eso obligó a descartar un laminado de canto vivo y a sustituirlo por un canto postformado continuo en mesillas y tableros. Los criterios de acabado que se discuten en la feria, con muestra física y ficha técnica en la mano, están recogidos en <a href="/recursos/materiales-acabados-mobiliario-fase-2-feria-canton/">la guía de materiales y acabados de mobiliario</a>, y son los que conviene llevar anotados a la tercera fase.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se fijan el MOQ, el plazo de 30-45 días y el control de calidad?</h2>
+        <p>El MOQ de un pedido geriátrico no se negocia por pieza suelta: se fija por familia de producto y por acabado. Una residencia de 80 plazas suele pedir 80 camas, 80 mesillas y entre 60 y 90 sillas, y esa mezcla permite agrupar la producción en un solo lote de color si el proyecto se cierra antes de la fecha de corte. El plazo habitual de producción es de 30-45 días desde la aprobación de planos y muestras, más el tránsito marítimo, de modo que un centro que abre en primavera cierra el pedido en invierno. La ventaja de coste del 30-50 % frente a la producción europea se sostiene solo si el pedido respeta esa lógica de familia y de lote. Si el proyecto mezcla cuatro familias, negocie el MOQ de cada una por separado y no acepte un mínimo global que obligue a comprar de más en la familia que menos se usa.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD29-a258-s2.jpg" alt="Cajones de exportación con protectores de esquina paletizados junto al contenedor antes de la carga" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Muelle de carga de fábrica: cajones de contrachapado con cantoneras de espuma y láminas de polietileno, flejados sobre palé junto a la boca del contenedor, con la lista de empaque sujeta en el primer cajón</figcaption>
+        </figure>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>L</th><th>o</th><th> </th><th>q</th><th>u</th><th>e</th><th> </th><th>s</th><th>e</th><th> </th><th>a</th><th>c</th><th>u</th><th>e</th><th>r</th><th>d</th><th>a</th><th> </th><th>e</th><th>n</th><th> </th><th>c</th><th>a</th><th>d</th><th>a</th><th> </th><th>e</th><th>t</th><th>a</th><th>p</th><th>a</th><th> </th><th>d</th><th>e</th><th>l</th><th> </th><th>p</th><th>e</th><th>d</th><th>i</th><th>d</th><th>o</th><th> </th><th>y</th><th> </th><th>e</th><th>l</th><th> </th><th>r</th><th>i</th><th>e</th><th>s</th><th>g</th><th>o</th><th> </th><th>d</th><th>e</th><th> </th><th>d</th><th>e</th><th>j</th><th>a</th><th>r</th><th>l</th><th>o</th><th> </th><th>s</th><th>i</th><th>n</th><th> </th><th>d</th><th>o</th><th>c</th><th>u</th><th>m</th><th>e</th><th>n</th><th>t</th><th>a</th><th>r</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="L">Etapa</td><td data-label="o">Qué se acuerda</td><td data-label=" ">Cómo se documenta</td><td data-label="q">Riesgo si falta</td></tr>
+              <tr><td data-label="L">MOQ y combinación de acabados</td><td data-label="o">Mínimo por familia y por color, con mezcla permitida</td><td data-label=" ">Lista de cantidades por zona y referencia</td><td data-label="q">Producción dividida en lotes con salto de tono</td></tr>
+              <tr><td data-label="L">Plazo de producción</td><td data-label="o">30-45 días desde planos y muestras aprobados</td><td data-label=" ">Calendario con hitos de muestra, corte y acabado</td><td data-label="q">Apertura del centro con habitaciones sin amueblar</td></tr>
+              <tr><td data-label="L">Inspección de calidad</td><td data-label="o">Nivel AQL y muestreo por lote</td><td data-label=" ">Informe con fotos, medidas y desviaciones</td><td data-label="q">Lote retenido en destino con reclamo abierto</td></tr>
+              <tr><td data-label="L">Embalaje de exportación</td><td data-label="o">Cajón, protectores, espuma y paletizado</td><td data-label=" ">Ficha de embalaje por referencia</td><td data-label="q">Cantos golpeados y esquinas abiertas en la descarga</td></tr>
+              <tr><td data-label="L">Carga del contenedor</td><td data-label="o">Plan de carga por zona y secuencia de instalación</td><td data-label=" ">Plano de carga y numeración de cajones</td><td data-label="q">Descarga desordenada y piezas que no aparecen</td></tr>
+              <tr><td data-label="L">Instalación y soporte</td><td data-label="o">Montaje, nivelación y fijación en obra</td><td data-label=" ">Manual por tipología y visita de puesta en marcha</td><td data-label="q">Muebles montados sin anclaje antivuelco</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El control se documenta con un informe de inspección por lote: nivel de calidad aceptable, tamaño de muestra, medidas verificadas, acabados fotografiados y desviaciones con su corrección. En mobiliario contract se trabaja habitualmente con un AQL de 2,5 para defectos mayores y 4,0 para menores, con muestreo por familia y no por contenedor. El embalaje suma su propia capa: cajón de contrachapado exento de tratamiento, cantoneras, láminas de espuma y flejes, y marca ISPM 15 solo cuando el cajón incorpora madera sólida. El procedimiento completo de inspección está descrito en <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">la guía de control de calidad en fábrica</a>, y conviene contrastarlo con el informe del lote antes de liberar el pago.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Tres días en la fase 3: qué visitar, qué preguntar y qué cerrar</h2>
+        <p>Tres días dan para mucho si se entra con la carpeta hecha. El primero conviene dedicarlo a las camas y al equipamiento de cuidado: regulación, frenos, mando, altura y limpieza entre barrotes. El segundo, a los asientos y al comedor: altura, apoyabrazos, tapizado, radios y hueco para silla de ruedas. El tercero se reserva para las conversaciones que no se pueden tener de pie en un pasillo: MOQ, plazo, inspección, embalaje y visita a la planta. El recinto abre de 09:30 a 18:00 y el desplazamiento entre pabellones consume más tiempo del que parece. Si el viaje incluye el cambio de exposición del 28 al 30 de octubre, esos dos días se reservan para la visita a fábrica y para revisar muestras en Guangzhou, porque el recinto permanece cerrado a la negociación.</p>
+        <p>Cinco preguntas separan a un proveedor preparado de uno que improvisa. ¿Qué norma respalda el modelo y qué laboratorio emitió el informe? ¿Cuál es la altura exacta del asiento con el cojín comprimido? ¿Qué MOQ aplica a esta familia y qué ocurre si el color cambia a mitad de pedido? ¿Qué plazo compromete por escrito desde la aprobación de muestras? ¿Cómo inspecciona el lote y qué documento entrega con la carga? Las respuestas se anotan con nombre y fecha, porque en la tercera fase se ven muchas piezas y se recuerdan pocas conversaciones.</p>
+        <p>Para cerrar la visita con una decisión y no con una carpeta de folletos, escriba antes de viajar. Hongye Furniture Group expone en la 140.ª Feria de Cantón y no publica el número de stand: envíe su sector y el país desde el que viaja por <a href="/contacto/">nuestro formulario de contacto</a> y recibirá el número de stand con una carta de invitación para la visita, además de una propuesta de especificación por zona, MOQ y calendario de producción, y la opción de reservar una visita a la planta de Heshan. Quien llega con la cita hecha ve las piezas que le importan y deja el resto del recinto para la próxima edición.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Cierre la lista de las cuatro zonas antes de viajar a la fase 3"
+      text="Envíenos la planta de su residencia, el número de plazas y la lista de piezas por zona a través de /contacto/. Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita, además de una propuesta de especificación por zona con medidas, normas y MOQ."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
