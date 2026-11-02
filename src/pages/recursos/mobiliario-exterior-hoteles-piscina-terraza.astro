@@ -1,0 +1,470 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario de exterior para hoteles: especificaciones de compra para piscina y terraza";
+const pageDescription = "Mobiliario de exterior para hoteles: especificaciones de compra para piscina, terraza y azotea, con normas EN 581, materiales, MOQ y plazos de 30-45 días.";
+const keywords = [
+  "mobiliario de exterior para hoteles",
+  "mobiliario exterior contract",
+  "teca para terrazas de hotel",
+  "EN 581 mobiliario exterior",
+  "mobiliario para zona de piscina",
+  "MOQ mobiliario exterior"
+];
+const canonicalPath = "https://hymueble.com/recursos/mobiliario-exterior-hoteles-piscina-terraza/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD31-a260-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-02";
+const dateModified = "2026-11-02";
+const publicationDateLabel = "Publicada el 2 de noviembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué es la norma EN 581 y qué partes se aplican al mobiliario de exterior?", answer: "La norma EN 581 es la familia europea que regula el mobiliario de exterior y se aplica en dos partes principales: la EN 581-1 para seguridad y la EN 581-2 para resistencia y durabilidad de asientos y mesas (CEN). La primera revisa aristas, atrapamientos, estabilidad y cargas de uso; la segunda añade fatiga por ciclos, impacto y carga estática. En una compra hotelera se piden los dos informes por referencia de producto y no un certificado genérico de empresa. Si el proveedor solo presenta uno, la oferta queda incompleta." },
+    { question: "¿Qué mantenimiento necesita la teca en una terraza de hotel?", answer: "La teca se mantiene con aceitado cada seis o doce meses según la exposición y con un lijado ligero antes de cada aplicación. El aceite específico para teca repone la película natural y evita que la madera alterne entre gris y marrón por zonas. No conviene usar barnices filmógenos, porque agrietan con la dilatación y obligan a decapar la pieza. Si el hotel prefiere el tono gris plateado, puede dejarla sin tratar siempre que acepte una limpieza periódica con agua dulce." },
+    { question: "¿Cómo se elige el tejido de un cojín exterior?", answer: "El tejido se elige por exposición, uso y presupuesto: olefina para zonas de piscina y clima húmedo, acrílico teñido en masa para azoteas con radiación intensa. Conviene pedir gramaje declarado, solidez del color a la luz, resultado de envejecimiento según ISO 4892-2 y ciclos Martindale según ISO 12947. Para asientos de uso intensivo se manejan referencias desde 25.000 ciclos. La funda desenfundable con base de malla y un juego de recambio alargan la vida útil más que cualquier tratamiento superficial." },
+    { question: "¿Cuál es el MOQ y cuánto tarda la producción de un pedido de exterior?", answer: "El MOQ depende de la referencia y del acabado: una pieza ya producida admite pedidos a partir de un número menor de unidades, mientras que un tejido o un color nuevo lo eleva. La producción estándar se sitúa en 30-45 días desde la aprobación de muestras y el anticipo. A ese plazo se suman la inspección AQL, el embalaje y el tránsito marítimo hasta el puerto de destino. Por eso el calendario se arma hacia atrás desde la fecha de apertura del hotel." },
+    { question: "¿Cómo se embala el mobiliario de exterior para exportación?", answer: "El mobiliario de exterior se embala en cajón de madera o de plywood para las estructuras y en cartón reforzado para los conjuntos apilables. Se añaden protectores de esquina, lámina de EPE en las superficies lacadas y film estirable para el conjunto. Cada bulto lleva referencia, cantidad y número de pedido, y el plano de carga se aprueba antes de producir. Ese marcado es lo que permite recepcionar en obra sin abrir todas las cajas." },
+    { question: "¿Cómo se inicia una solicitud de cotización de mobiliario exterior?", answer: "La solicitud se inicia con tres documentos: plano o esquema de las zonas exteriores, BOQ con cantidades por referencia y fecha de apertura prevista. Con eso se prepara una cotización con especificación técnica, muestra física y calendario de producción. Conviene indicar país de destino y altura sobre el nivel del mar de la obra, porque condicionan el anclaje, el embalaje y el flete. La solicitud se envía por la página de contacto y se responde con una propuesta de muestras." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD31-a260-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d31a2-a260-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d31a2-a260-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario de exterior · Hoteles y resorts &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario de exterior para hoteles: especificaciones de compra para piscina y terraza</h1>
+          <p>El mobiliario de exterior para hoteles es el conjunto de asientos, mesas, tumbonas y piezas auxiliares que se instalan en piscinas, terrazas, azoteas y jardines de un establecimiento turístico, y que debe conservar función y seguridad bajo exposición continua a sol, cloro, salinidad y uso intensivo. Se especifica con normas de ensayo, con materiales estables a la intemperie y con un plan de mantenimiento que el propio equipo del hotel pueda ejecutar sin ayuda externa. La diferencia con el mobiliario residencial no es de estilo: cambian el ensayo exigido, el herraje, el textil y hasta el embalaje con el que la pieza viaja.</p>
+          <p>Para quien compra FF&amp;E, el resultado práctico es una lista de comprobación que evita tres errores caros: comprar por catálogo sin informe de ensayo, mezclar materiales con mantenimientos incompatibles y cerrar el pedido sin definir el embalaje de exportación. Un proyecto de tamaño medio con terraza y piscina supera con facilidad el centenar de piezas entre tumbonas, sillas, mesas y auxiliares, y una sola referencia sin tratamiento ultravioleta se degrada en la primera temporada, obliga a reponer y arruina la amortización prevista.</p>
+          <p>El recorrido de este artículo sigue ese orden de decisión: qué exige cada zona del hotel, qué normas y ensayos hay que pedir por escrito, qué materiales resisten con menos mantenimiento, cómo se especifica la cojinería exterior, cómo se pasa del MOQ a la entrega con control de calidad y embalaje, y con qué lista se comparan proveedores antes de firmar. En cada apartado se indica la cifra o el documento concreto que conviene reclamar.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD31-a260-hero.jpg" alt="Terraza de piscina de resort con tumbonas de aluminio, mesas auxiliares de teca y sombras de palmera" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué exige una zona de piscina o terraza al mobiliario de hotel?</h2>
+        <p>Una zona de piscina o terraza exige al mobiliario de hotel cuatro condiciones concretas: estabilidad frente a vuelco y viento, drenaje rápido del agua de lluvia y de las duchas, resistencia al cloro y a la salinidad, y superficies que no se calienten ni se astillen al sol. Esas cuatro condiciones se traducen en fichas técnicas distintas según la zona, porque no se sienta igual un huésped mojado al borde del agua que un comensal en una terraza de restaurante. El primer paso de cualquier RFQ es, por tanto, separar el proyecto por zonas de uso y no por familias de producto.</p>
+        <p>En la zona de piscina mandan las tumbonas, los camastros y las mesas auxiliares: el requisito dominante es el drenaje, porque la pieza se moja varias veces al día y el agua debe salir por gravedad sin encharcar la estructura ni el relleno. La terraza de restaurante exige mesas estables con base pesada y sillas apilables que soporten rotación de servicio; antes de fijar alturas y radios conviene revisar <a href="/recursos/mobiliario-restaurante-hotel-fb-2026/">la guía de mobiliario para restaurante de hotel</a>, porque el confort de mesa se decide en centímetros. En ambos casos se pide tratamiento de superficie para cloro y herrajes protegidos contra corrosión.</p>
+        <p>La azotea o el bar de cubierta añade una variable que las otras zonas no tienen: el viento. A partir de cierta altura, una silla ligera sin lastre se convierte en un riesgo real, y la especificación debe incluir anclaje, peso mínimo por pieza o lastre oculto en la base. Los jardines y pasillos de acceso reciben el uso más disperso y el mantenimiento más lento: bancos, papeleras y apoyos que aguantan la lluvia sin tornillería vista. Un mismo hotel puede necesitar cuatro fichas distintas y un solo proveedor capaz de sostener las cuatro.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>M</th><th>a</th><th>t</th><th>r</th><th>i</th><th>z</th><th> </th><th>d</th><th>e</th><th> </th><th>z</th><th>o</th><th>n</th><th>a</th><th>s</th><th> </th><th>e</th><th>x</th><th>t</th><th>e</th><th>r</th><th>i</th><th>o</th><th>r</th><th>e</th><th>s</th><th>:</th><th> </th><th>f</th><th>a</th><th>m</th><th>i</th><th>l</th><th>i</th><th>a</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>y</th><th> </th><th>r</th><th>e</th><th>q</th><th>u</th><th>i</th><th>s</th><th>i</th><th>t</th><th>o</th><th> </th><th>d</th><th>o</th><th>m</th><th>i</th><th>n</th><th>a</th><th>n</th><th>t</th><th>e</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="M">Zona</td><td data-label="a">Familia principal</td><td data-label="t">Requisito dominante</td><td data-label="r">Documento que se pide</td></tr>
+              <tr><td data-label="M">Piscina y solárium</td><td data-label="a">Tumbonas, camastros, mesas auxiliares</td><td data-label="t">Drenaje y resistencia al cloro</td><td data-label="r">Informe EN 581-2 y ficha del tapizado</td></tr>
+              <tr><td data-label="M">Terraza de restaurante</td><td data-label="a">Mesas, sillas apilables, carros de servicio</td><td data-label="t">Estabilidad y rotación de servicio</td><td data-label="r">EN 581-1 y EN 581-2 por referencia</td></tr>
+              <tr><td data-label="M">Azotea o bar de cubierta</td><td data-label="a">Módulos altos, banquetas, parasoles</td><td data-label="t">Vuelco por viento y anclaje</td><td data-label="r">Memoria de anclaje y ensayo de vuelco</td></tr>
+              <tr><td data-label="M">Jardín y pasillos</td><td data-label="a">Bancos, papeleras, bolardos</td><td data-label="t">Corrosión y tornillería oculta</td><td data-label="r">ISO 9227 sobre herrajes y tornillería</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Al cerrar la matriz conviene anotar por zona el número de piezas, la exposición real (sol directo, sombra, salitre) y el mantenimiento disponible. Un hotel con equipo propio de limpieza diaria puede asumir madera aceitada; un resort que subcontrata la limpieza una vez por semana debe priorizar aluminio y cuerda trenzada. La matriz también sirve para negociar el MOQ, porque agrupar familias reduce referencias, simplifica el embalaje y mejora el precio por lote.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué normas y ensayos debe cumplir el mobiliario de exterior contract?</h2>
+        <p>El mobiliario de exterior contract debe acreditar cuatro ensayos como mínimo: seguridad estructural según EN 581-1, resistencia y durabilidad según EN 581-2, envejecimiento acelerado a la radiación según ISO 4892-2 y corrosión en niebla salina según ISO 9227. Cada uno cubre un modo de fallo distinto —vuelco, fatiga, decoloración y óxido— y ninguno sustituye a los otros. Un proveedor que solo entrega uno de los cuatro está describiendo una parte del riesgo, no el riesgo completo.</p>
+        <p>La norma EN 581-1 evalúa la seguridad estructural del mobiliario de exterior (CEN, 2017): revisa aristas y atrapamientos, comprueba la estabilidad frente a vuelco y verifica que la estructura resiste las cargas de uso previstas. La norma EN 581-2 fija los requisitos de resistencia y durabilidad de asientos y mesas de exterior (CEN, 2015) e incorpora ensayos de carga estática, impacto y fatiga por ciclos repetidos. En una licitación hotelera se piden ambos informes por referencia de producto, con el modelo y el acabado identificados, y no una declaración genérica de la empresa.</p>
+        <p>ISO 4892-2 expone las probetas a lámparas de xenón para reproducir el envejecimiento por radiación solar (ISO, 2013), y es la referencia habitual para justificar la estabilidad de color de tejidos y recubrimientos en polvo. ISO 9227 mide la resistencia a la corrosión en cámara de niebla salina (ISO, 2022) y se aplica a herrajes, tornillería y piezas de aluminio destinadas a primera línea de mar. Un hotel situado a menos de quinientos metros de la costa debería exigir el informe de niebla salina con las horas de ensayo declaradas en el documento.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>N</th><th>o</th><th>r</th><th>m</th><th>a</th><th>s</th><th> </th><th>y</th><th> </th><th>e</th><th>n</th><th>s</th><th>a</th><th>y</th><th>o</th><th>s</th><th> </th><th>q</th><th>u</th><th>e</th><th> </th><th>s</th><th>e</th><th> </th><th>p</th><th>i</th><th>d</th><th>e</th><th>n</th><th> </th><th>e</th><th>n</th><th> </th><th>u</th><th>n</th><th>a</th><th> </th><th>c</th><th>o</th><th>m</th><th>p</th><th>r</th><th>a</th><th> </th><th>F</th><th>F</th><th>&amp;</th><th>E</th><th> </th><th>e</th><th>x</th><th>t</th><th>e</th><th>r</th><th>i</th><th>o</th><th>r</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="N">Norma</td><td data-label="o">Qué evalúa</td><td data-label="r">Documento que la respalda</td></tr>
+              <tr><td data-label="N">EN 581-1</td><td data-label="o">Seguridad estructural: aristas, atrapamientos, estabilidad, cargas</td><td data-label="r">Informe de ensayo por referencia</td></tr>
+              <tr><td data-label="N">EN 581-2</td><td data-label="o">Resistencia y durabilidad de asientos y mesas</td><td data-label="r">Informe con ciclos, carga e impacto</td></tr>
+              <tr><td data-label="N">ISO 4892-2</td><td data-label="o">Envejecimiento acelerado con lámpara de xenón</td><td data-label="r">Informe de estabilidad de color y brillo</td></tr>
+              <tr><td data-label="N">ISO 9227</td><td data-label="o">Corrosión en cámara de niebla salina</td><td data-label="r">Informe con horas de exposición</td></tr>
+              <tr><td data-label="N">ISO 2859-1</td><td data-label="o">Muestreo por atributos en la inspección final</td><td data-label="r">Plan de muestreo y registro AQL</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Leer el informe importa tanto como pedirlo: debe identificar laboratorio, fecha, referencia exacta y resultado, y no ser una captura de catálogo con un sello decorativo. Cuando el proveedor presenta una certificación de sistema en lugar del informe de producto, la respuesta es la misma: el sistema de gestión no ensaya la silla. Ese detalle separa una oferta verificable de una promesa comercial.</p>
+        <p>El orden de los ensayos también tiene lógica económica: primero se descarta el fallo estructural, después el de fatiga, luego el de color y al final el de corrosión, porque es el que más tarda en aparecer. Una pieza que falla por vuelco genera un incidente; una que falla por corrosión genera una queja silenciosa que se descubre dos temporadas después, cuando la garantía ya está en discusión y el repuesto tiene que viajar de nuevo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales: teca certificada FSC, aluminio con recubrimiento en polvo y cuerda trenzada</h2>
+        <p>La teca certificada FSC, el aluminio con recubrimiento en polvo y la cuerda trenzada responden a tres lógicas de compra distintas: madera que envejece a la vista, estructura que no se mueve y superficie que se trenza a mano. Elegir entre ellas no es una decisión de estilo, sino de mantenimiento disponible y de vida útil esperada. El HDPE cierra la lista como alternativa de bajo mantenimiento cuando el presupuesto de reposición es rígido y el clima es húmedo todo el año.</p>
+        <p>La teca es la madera de referencia en terrazas de hotel por su densidad y su aceite natural, que la mantienen estable frente a la humedad y le permiten adquirir un tono gris plateado si no se trata. Cuando se especifica teca certificada FSC no se está pidiendo un logotipo, sino una trazabilidad: la cadena de custodia regulada por la norma FSC-STD-40-004 (FSC, cadena de custodia) obliga a documentar el origen de la madera y a poder rastrear el lote desde el aserradero hasta la pieza terminada. Conviene pedir el código de licencia y la factura de compra de la madera. El mantenimiento es aceitado cada seis o doce meses según exposición, con lijado ligero previo y sin barnices filmógenos que agrietan.</p>
+        <p>El aluminio extruido, habitualmente en aleación 6063 T5, se especifica por dos números: el espesor de pared del perfil y el gramaje del recubrimiento. Un polvo de poliéster curado al horno de 60 a 80 micras resiste el rayado y el salitre mejor que una laca aplicada en húmedo, y permite reparaciones locales sin repintar la pieza completa. Las uniones deben ir soldadas y tratadas, o atornilladas con herraje inoxidable A2 o A4; una unión mixta mal aislada genera par galvánico y corrosión en pocos meses de clima marino.</p>
+        <p>La cuerda trenzada de poliéster con estabilizador ultravioleta ofrece el aspecto de la fibra natural sin su mantenimiento: se limpia con agua y jabón neutro, no absorbe humedad y no se deshilacha si el cordón está termofijado. El HDPE imita la madera en listones y se comporta bien en climas húmedos, aunque su tacto lo delata a corta distancia. La elección se cierra con la tabla de comparación y con una pregunta simple: quién va a mantener la pieza y con qué frecuencia.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>C</th><th>o</th><th>m</th><th>p</th><th>a</th><th>r</th><th>a</th><th>c</th><th>i</th><th>ó</th><th>n</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>a</th><th>t</th><th>e</th><th>r</th><th>i</th><th>a</th><th>l</th><th>e</th><th>s</th><th>:</th><th> </th><th>a</th><th>p</th><th>a</th><th>r</th><th>i</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th>,</th><th> </th><th>m</th><th>a</th><th>n</th><th>t</th><th>e</th><th>n</th><th>i</th><th>m</th><th>i</th><th>e</th><th>n</th><th>t</th><th>o</th><th> </th><th>y</th><th> </th><th>r</th><th>e</th><th>s</th><th>i</th><th>s</th><th>t</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th> </th><th>a</th><th> </th><th>l</th><th>a</th><th> </th><th>i</th><th>n</th><th>t</th><th>e</th><th>m</th><th>p</th><th>e</th><th>r</th><th>i</th><th>e</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="C">Material</td><td data-label="o">Apariencia</td><td data-label="m">Mantenimiento</td><td data-label="p">Resistencia a la intemperie</td></tr>
+              <tr><td data-label="C">Teca certificada FSC</td><td data-label="o">Madera cálida, veta visible, envejece a gris si no se trata</td><td data-label="m">Aceitado cada 6-12 meses con lijado ligero</td><td data-label="p">Alta frente a humedad; sensible a manchas de cloro sin aceite</td></tr>
+              <tr><td data-label="C">Aluminio con recubrimiento en polvo</td><td data-label="o">Color uniforme, perfiles finos, acabado mate o texturizado</td><td data-label="m">Limpieza con agua y jabón neutro</td><td data-label="p">Alta; exige herraje aislado para evitar par galvánico</td></tr>
+              <tr><td data-label="C">Cuerda trenzada de poliéster</td><td data-label="o">Textura de fibra, volumen visual, tejido artesanal</td><td data-label="m">Cepillado y lavado con jabón neutro</td><td data-label="p">Media-alta con estabilizador UV; revisar cordón termofijado</td></tr>
+              <tr><td data-label="C">HDPE</td><td data-label="o">Listones rectos que imitan madera</td><td data-label="m">Limpieza con agua a presión moderada</td><td data-label="p">Alta frente a humedad y sal; color se atenúa con los años</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD31-a260-s1.jpg" alt="Cuatro muestras de chapa de teca con vetado recto en tonos miel y gris sobre fondo claro" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cuatro muestras de teca de distinto tono sobre fondo neutro: la referencia que se congela en el anexo del contrato antes de autorizar el lote completo.</figcaption>
+        </figure>
+        <p>Hay una cuarta decisión que se toma al mismo tiempo: la tornillería. Un tornillo de acero al carbono galvanizado en una pieza de aluminio anodizado es la causa más frecuente de manchas de óxido en tumbonas de piscina, y el huésped lo lee como falta de limpieza. Especificar inoxidable A4 en toda la pieza cuesta poco en fábrica y evita una reclamación por temporada.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Textiles y cojinería exterior: drenaje, resistencia UV y tapicería</h2>
+        <p>La cojinería exterior se especifica por cuatro capas: la espuma, el tejido, el hilo de costura y el sistema de cierre. Si una de las cuatro falla, el huésped lo nota antes que el informe de ensayo, porque el fallo se percibe en la espalda y en la ropa. La espuma de secado rápido con celdas abiertas expulsa el agua en minutos y vuelve a su espesor; una espuma de celda cerrada retiene humedad, huele y cría moho en una temporada.</p>
+        <p>En tejidos, la elección se mueve entre olefina y acrílico teñido en masa. La olefina resiste bien el cloro y el moho y mantiene un coste contenido; el acrílico teñido en masa conserva el color más tiempo bajo radiación intensa y es la opción habitual en azoteas sin sombra.Para contract se pide solidez del color a la luz, resultado de envejecimiento según ISO 4892-2 y gramaje declarado: entre 250 y 320 g/m² es el rango frecuente en asientos de terraza de uso intensivo.</p>
+        <p>La resistencia a la abrasión se declara en ciclos Martindale, con un método descrito en la norma ISO 12947 (ISO, 1998); para asientos de uso intensivo se manejan referencias desde 25.000 ciclos, y por debajo de esa cifra conviene justificar la elección por tipo de zona y por rotación prevista. El número solo tiene sentido si se acompaña del tejido, del peso y del acabado, porque un mismo diseño puede declarar valores distintos según el color y la tintura.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD31-a260-s2.jpg" alt="Sección de un cojín de exterior con espuma de secado rápido, base de malla y funda de olefina cosida" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Detalle de cojín exterior: espuma de secado rápido, base de malla de drenaje y funda de olefina con costura reforzada</figcaption>
+        </figure>
+        <p>El hilo de costura de poliéster de alta tenacidad y la cinta de refuerzo en las costuras alargan la vida del cojín más que cualquier tratamiento superficial. La base debe ser una malla o un textil de drenaje, nunca un forro cerrado, y las cremalleras tienen que quedar protegidas y ser sustituibles sin desmontar la pieza. En climas húmedos se recomienda funda desenfundable y un juego de recambio por temporada alta, porque lavar y secar en sitio es lo que realmente prolonga el ciclo de vida.</p>
+        <p>La emisión también se especifica: una espuma con certificación GREENGUARD Gold (UL Environment, criterios de emisión de compuestos orgánicos volátiles) se puede instalar en zonas semicerradas sin esperar un periodo de ventilación largo. En terrazas cubiertas y lounges climatizados, ese detalle aparece en la recepción de obra y no en el catálogo, así que conviene incluirlo en el pliego junto al resto de requisitos.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Del MOQ a la entrega: plazos, embalaje de exportación e instalación</h2>
+        <p>El MOQ de mobiliario de exterior se negocia por referencia y por acabado: un tejido o un color específico suele elevarlo, mientras que una referencia ya producida permite pedidos a partir de un número menor de unidades. Para un proyecto hotelero la cifra útil no es el MOQ del catálogo, sino el MOQ por contenedor, porque el flete se paga igual con el contenedor lleno que a medias y el coste unitario se decide ahí. La conversación correcta con fábrica empieza por el volumen de carga, no por el número de sillas.</p>
+        <p>El plazo estándar de producción se sitúa en 30-45 días desde la aprobación de muestras y la recepción del anticipo, e incluye corte, mecanizado, acabado, tapizado y embalaje. La inspección previa al embarque se hace por muestreo: ISO 2859-1 regula el muestreo por atributos para la inspección por lotes (ISO, 1999), con un nivel de inspección y un AQL acordados en el pedido, habitualmente AQL 2,5 para defectos mayores y AQL 4,0 para menores. Ese plan se escribe antes de producir, no cuando el contenedor ya está en el patio.</p>
+        <p>El embalaje de exportación decide si la pieza llega entera: cajón de madera o de plywood para estructuras, protectores de esquina, lámina de EPE en las superficies lacadas y film estirable para el conjunto. Cada bulto lleva referencia, cantidad y número de pedido; sin ese marcado, la recepción en obra se convierte en un recuento a ciegas delante del cliente final. Aquí conviene repasar <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">la guía de embalaje de exportación</a> antes de aprobar el plano de carga y el reparto por bultos.</p>
+        <p>El plan de carga se calcula antes de producir: un contenedor de 40 pies de alto cubre un volumen distinto según la pieza viaje montada o desmontada, y las tumbonas apilables cambian la ecuación por completo. Hongye Furniture Group, fundada en 1996, opera una base de producción de más de 300.000 m² y más de 1.000 proyectos en más de 50 países, con fábrica en Jiangmen, Guangdong, y más de 1.000 operarios. La entrega no termina en el puerto: el proveedor debe entregar plano de montaje, tornillería de repuesto y una guía de mantenimiento por material.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>H</th><th>i</th><th>t</th><th>o</th><th>s</th><th> </th><th>d</th><th>e</th><th>l</th><th> </th><th>p</th><th>r</th><th>o</th><th>y</th><th>e</th><th>c</th><th>t</th><th>o</th><th>:</th><th> </th><th>d</th><th>e</th><th>l</th><th> </th><th>R</th><th>F</th><th>Q</th><th> </th><th>a</th><th> </th><th>l</th><th>a</th><th> </th><th>l</th><th>l</th><th>e</th><th>g</th><th>a</th><th>d</th><th>a</th><th> </th><th>a</th><th> </th><th>o</th><th>b</th><th>r</th><th>a</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="H">Hito</td><td data-label="i">Plazo orientativo</td><td data-label="t">Entregable</td><td data-label="o">Quién responde</td></tr>
+              <tr><td data-label="H">RFQ y confirmación de MOQ</td><td data-label="i">5-10 días</td><td data-label="t">Cotización con especificación y muestra</td><td data-label="o">Hotel o estudio y proveedor</td></tr>
+              <tr><td data-label="H">Aprobación de muestras</td><td data-label="i">10-15 días</td><td data-label="t">Muestra física y ficha de acabado</td><td data-label="o">Dirección de proyecto</td></tr>
+              <tr><td data-label="H">Producción</td><td data-label="i">30-45 días</td><td data-label="t">Informe de avance y fotos por lote</td><td data-label="o">Fábrica</td></tr>
+              <tr><td data-label="H">Inspección AQL</td><td data-label="i">2-3 días</td><td data-label="t">Informe de muestreo ISO 2859-1</td><td data-label="o">Tercero o cliente</td></tr>
+              <tr><td data-label="H">Embalaje de exportación</td><td data-label="i">3-5 días</td><td data-label="t">Plano de carga y marcado de bultos</td><td data-label="o">Fábrica</td></tr>
+              <tr><td data-label="H">Carga y embarque</td><td data-label="i">1-2 días</td><td data-label="t">Packing list y fotos de carga</td><td data-label="o">Fábrica y transitario</td></tr>
+              <tr><td data-label="H">Llegada y montaje</td><td data-label="i">Según ruta</td><td data-label="t">Plano de montaje y repuestos</td><td data-label="o">Obra y proveedor</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Cómo comparar proveedores: la lista que cierra el proyecto</h2>
+        <p>Comparar proveedores de mobiliario exterior se hace con ocho comprobaciones y no con una galería de fotos. Las cuatro primeras son documentales: informe EN 581-1, informe EN 581-2, informe ISO 9227 sobre herrajes y certificado de cadena de custodia cuando se especifica teca. Las cuatro siguientes son operativas: MOQ por referencia, plazo comprometido en 30-45 días, plano de embalaje y capacidad de reponer una pieza suelta años después de la entrega.</p>
+        <p>La lista se completa con dos preguntas que casi nadie hace en la primera reunión: qué ocurre si una pieza llega dañada y cómo se repone un cojín de un modelo que ya no está en catálogo. Un proveedor que fabrica su propia estructura y su propio tapizado responde de forma distinta a uno que solo integra piezas de terceros. En proyectos por fases, con aperturas parciales, esa diferencia pesa más que el precio unitario y evita bloqueos en la segunda fase.</p>
+        <p>En la práctica, la comparación se resuelve con el mismo documento en la mano. Para un resort en Punta Cana, República Dominicana, el eje fue la niebla salina y el drenaje; para un hotel en Dubái, Emiratos Árabes Unidos, el peso y el anclaje frente al viento; para villas en Tulum, México, la humedad constante y el mantenimiento de la teca. Cada caso partió de la misma matriz de zonas y se apoyó en <a href="/recursos/mobiliario-lobby-hotel-zonas-comunes/">el mobiliario para lobbies y zonas comunes de hotel</a> para enlazar el exterior con el interior. Con la lista completa, la solicitud se envía por <a href="/contacto/">nuestro formulario de contacto</a> junto con planos, BOQ y fecha de apertura.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E para zonas exteriores"
+      text="Envíe el plano de las zonas exteriores, el BOQ con cantidades por referencia y la fecha de apertura prevista a través de /contacto/. Con esos datos preparamos una cotización con especificación técnica, muestra física de material y calendario de producción de 30-45 días. La propuesta incluye el plan de embalaje de exportación y las condiciones de carga para su país de destino. Si su equipo viaja a Guangdong, coordinamos también una visita a la fábrica en Jiangmen para revisar acabados y tapizados en línea de producción."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
