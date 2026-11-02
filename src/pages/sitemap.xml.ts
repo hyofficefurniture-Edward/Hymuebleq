@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "/recursos/importar-muebles-china-aduana-entrega/",
   "https://hymueble.com/recursos/mobiliario-exterior-hoteles-piscina-terraza/",
   "https://hymueble.com/recursos/mobiliario-residencias-mayores-tercera-fase-feria-canton/",
   "/recursos/clausulas-contrato-ffe-feria-canton/",

@@ -1,0 +1,467 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Importar muebles de China: aduana y entrega tras la Feria de Cantón";
+const pageDescription = "Importar muebles de China tras la 140.ª Feria de Cantón: documentación aduanera, código HS, ISPM 15, costo aterrizado y recepción en obra.";
+const keywords = [
+  "importar muebles de China",
+  "despacho aduanero de mobiliario",
+  "código HS muebles",
+  "ISPM 15 embalaje madera",
+  "costo aterrizado contenedor"
+];
+const canonicalPath = "/recursos/importar-muebles-china-aduana-entrega/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD28-a256-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-02";
+const dateModified = "2026-11-02";
+const publicationDateLabel = "Publicada el 2 de noviembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto tarda el despacho aduanero de un contenedor de mobiliario?", answer: "Con el expediente completo, la liberación suele resolverse en pocos días hábiles desde la llegada, y se extiende cuando hay revisión documental o inspección física. El plazo real depende de la aduana de destino y del régimen aplicado, así que la fecha de entrega en obra debe fijarse con holgura sobre el calendario del agente aduanal." },
+    { question: "¿Qué documentos debe entregar el fabricante para la importación?", answer: "Factura comercial, lista de empaque con pesos y medidas por cajón, certificado de origen emitido antes del embarque y los soportes técnicos de cada familia de producto. El conocimiento de embarque lo emite la naviera, y la declaración de importación la presenta el agente aduanal en destino con esos insumos." },
+    { question: "¿El embalaje de madera necesita tratamiento obligatorio?", answer: "La madera sólida debe cumplir ISPM 15 con tratamiento térmico o fumigación autorizada y llevar la marca correspondiente. El contrachapado y los tableros de fibra están exentos, pero si el cajón incorpora piezas de madera sólida, esas piezas necesitan el marcado." },
+    { question: "¿Cómo se determina el arancel que pagará el lote?", answer: "Se parte del código HS de cada familia, se aplica el arancel nacional del país de destino y se verifica si existe acuerdo comercial con el origen declarado. La base imponible es el valor en aduana, habitualmente el valor de la mercancía más el flete y el seguro, y la liquidación final la practica la aduana de destino." },
+    { question: "¿Se puede importar un lote de muestras sin pagar derechos?", answer: "Depende del régimen que autorice la aduana de destino para muestras comerciales o admisión temporal, y de que la documentación declare esa condición. Un lote que contiene mobiliario vendible no debe declararse como muestra: la rectificación posterior cuesta más que el tributo evitado." },
+    { question: "¿Qué hacer si la mercancía llega dañada?", answer: "Anotar la reserva en el documento de entrega antes de firmar, fotografiar el bulto y el daño, y abrir el reclamo dentro del plazo que fije el conocimiento de embarque o la póliza. En paralelo se informa al proveedor para que la garantía cubra el defecto de fabricación si el daño no proviene del transporte." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD28-a256-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d28a2-a256-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d28a2-a256-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Logística internacional · Despacho aduanero &middot; {publicationDateLabel}</p>
+          <h1>Importar muebles de China: del despacho aduanero a la entrega en obra</h1>
+          <p>Importar muebles de China es la operación que convierte un pedido cerrado en fábrica en mercancía disponible en su obra: abarca la clasificación arancelaria de cada referencia, la emisión y el cotejo de los documentos de importación, el cumplimiento del embalaje de madera, el pago de derechos e impuestos en destino y la entrega con acta de recepción. La 140.ª Feria de Cantón cerró su segunda fase, la de mobiliario, el 27 de octubre, y el recinto queda sin actividad de negociación del 28 al 30 de octubre, antes de que la tercera fase abra del 31 de octubre al 4 de noviembre. Ese intervalo es justamente cuando un comprador profesional ordena la parte documental de la operación.</p>
+          <p>Los sobrecostes que rompen un presupuesto FF&amp;E casi nunca nacen en el precio de fábrica. Nacen en la aduana de destino: una partida mal clasificada, un peso bruto que no coincide con la lista de empaque, un certificado de origen emitido después del embarque o un embalaje de madera sin tratamiento. Cada uno de esos puntos se detecta en minutos si el expediente está preparado, y cuesta días de almacenaje si se descubre con el contenedor ya en el puerto.</p>
+          <p>Este artículo ordena esa secuencia para compradores de proyectos hoteleros, corporativos, educativos y sanitarios. Hongye Furniture Group fabrica desde 1996 en Heshan (Jiangmen), con 300.000 m² de planta, 1.000 proyectos entregados en más de 50 países y un plazo de fabricación habitual de 30-45 días, de modo que el calendario de importación se puede planificar con el mismo rigor que el de producción.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD28-a256-hero.jpg" alt="Mesa de negociación con contrato de FF&amp;E, BOQ, planos enrollados y muestras selladas frente a un lounge de hotel" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué documentación exige la aduana para importar mobiliario desde China?</h2>
+        <p>La aduana no evalúa su proyecto, evalúa un expediente. Para un lote de mobiliario, el expediente mínimo se compone de factura comercial, lista de empaque, conocimiento de embarque marítimo o guía aérea, certificado de origen y la declaración de importación que presenta su agente aduanal en destino. A esos cinco documentos se suman los soportes técnicos que su cliente final o su aseguradora pueden exigir: certificados de gestión forestal, certificados de emisiones y los informes de ensayo de resistencia, ignifugación y desgaste según la familia de producto.</p>
+        <p>El fallo más caro no es la falta de un documento, sino la incoherencia entre ellos. El peso bruto de la lista de empaque debe cuadrar con el del conocimiento de embarque, el número de bultos debe coincidir con los palés y cajones cargados, y la descripción debe permitir identificar la mercancía sin ambigüedad. Un expediente que declara cientos de bultos y transporta decenas de cajones abre una revisión que puede costar más que el flete de la mitad del lote. Si el lote nace de muestras recogidas en el recinto ferial, revise antes <a href="/recursos/muestras-feria-canton-envio-consolidacion-ffe/">nuestra guía de muestras y consolidación FF&amp;E</a>: el número de referencia que se asigna a cada muestra es el mismo que debe viajar en la factura y en la lista de empaque.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>D</th><th>o</th><th>c</th><th>u</th><th>m</th><th>e</th><th>n</th><th>t</th><th>o</th><th>s</th><th> </th><th>q</th><th>u</th><th>e</th><th> </th><th>s</th><th>o</th><th>s</th><th>t</th><th>i</th><th>e</th><th>n</th><th>e</th><th>n</th><th> </th><th>u</th><th>n</th><th>a</th><th> </th><th>i</th><th>m</th><th>p</th><th>o</th><th>r</th><th>t</th><th>a</th><th>c</th><th>i</th><th>ó</th><th>n</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>y</th><th> </th><th>e</th><th>l</th><th> </th><th>p</th><th>u</th><th>n</th><th>t</th><th>o</th><th> </th><th>e</th><th>x</th><th>a</th><th>c</th><th>t</th><th>o</th><th> </th><th>d</th><th>o</th><th>n</th><th>d</th><th>e</th><th> </th><th>s</th><th>u</th><th>e</th><th>l</th><th>e</th><th> </th><th>r</th><th>o</th><th>m</th><th>p</th><th>e</th><th>r</th><th>s</th><th>e</th><th> </th><th>l</th><th>a</th><th> </th><th>c</th><th>o</th><th>h</th><th>e</th><th>r</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="D">Documento</td><td data-label="o">Quién lo emite</td><td data-label="c">Qué debe coincidir</td><td data-label="u">Fallo habitual</td></tr>
+              <tr><td data-label="D">Factura comercial</td><td data-label="o">Fabricante o exportador</td><td data-label="c">Descripción, cantidad, valor por línea e Incoterm</td><td data-label="u">Descripción genérica que no identifica la familia de producto</td></tr>
+              <tr><td data-label="D">Lista de empaque</td><td data-label="o">Fabricante o transitario</td><td data-label="c">Bultos, pesos neto y bruto, medidas por cajón</td><td data-label="u">Peso bruto estimado en lugar de pesado</td></tr>
+              <tr><td data-label="D">Conocimiento de embarque o guía aérea</td><td data-label="o">Naviera o aerolínea</td><td data-label="c">Puerto de carga, puerto de destino, consignatario</td><td data-label="u">Consignatario distinto del importador registrado</td></tr>
+              <tr><td data-label="D">Certificado de origen</td><td data-label="o">Cámara de comercio o autoridad emisora</td><td data-label="c">Origen declarado y fecha anterior al embarque</td><td data-label="u">Emitido con posterioridad al zarpe</td></tr>
+              <tr><td data-label="D">Declaración de importación</td><td data-label="o">Agente aduanal en destino</td><td data-label="c">Clasificación, valor en aduana y régimen</td><td data-label="u">Clasificación tomada del catálogo comercial</td></tr>
+              <tr><td data-label="D">Soportes técnicos</td><td data-label="o">Laboratorio o entidad certificadora</td><td data-label="c">Norma aplicada, vigencia y producto cubierto</td><td data-label="u">Certificado de otra familia de producto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La descripción merece un párrafo aparte porque es donde se pierden las horas. Escribir mueble de madera para comedor, desmontado, con herrajes de acero, en cajones de madera contrachapada permite clasificar, valorar y verificar en una sola lectura. Escribir muestras o accesorios decorativos cuando el lote contiene mobiliario comercializable expone al importador a una rectificación de oficio, con recargo y con retraso de la liberación.</p>
+        <p>El certificado de origen no reduce derechos por sí solo: sirve cuando el país de destino aplica un acuerdo comercial concreto y la autoridad emisora está reconocida. Antes de prometer un ahorro a su cliente final, confirme con su agente aduanal si la partida y el origen cumplen la regla específica de ese acuerdo, y deje por escrito que la liquidación final de tributos corresponde a la aduana de destino.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Clasificación arancelaria: cómo ubicar el código HS de un lote de mobiliario</h2>
+        <p>El código HS es la clave de seis dígitos que comparten las aduanas para identificar la mercancía; cada país añade dos o cuatro dígitos nacionales para fijar el tratamiento arancelario. El mobiliario se concentra en el capítulo 94 del sistema armonizado: la partida 9401 agrupa asientos y sus partes, la 9403 el resto del mobiliario y sus partes, y la 9405 los aparatos de alumbrado. Ubicar la partida correcta es el primer paso para saber qué documentos técnicos pedirá la aduana y qué régimen de inspección se aplicará.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>P</th><th>a</th><th>r</th><th>t</th><th>i</th><th>d</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>r</th><th>e</th><th>f</th><th>e</th><th>r</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th> </th><th>p</th><th>a</th><th>r</th><th>a</th><th> </th><th>u</th><th>n</th><th> </th><th>l</th><th>o</th><th>t</th><th>e</th><th> </th><th>m</th><th>i</th><th>x</th><th>t</th><th>o</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>c</th><th>o</th><th>n</th><th>t</th><th>r</th><th>a</th><th>c</th><th>t</th><th> </th><th>y</th><th> </th><th>e</th><th>l</th><th> </th><th>c</th><th>r</th><th>i</th><th>t</th><th>e</th><th>r</th><th>i</th><th>o</th><th> </th><th>q</th><th>u</th><th>e</th><th> </th><th>d</th><th>e</th><th>c</th><th>i</th><th>d</th><th>e</th><th> </th><th>c</th><th>a</th><th>d</th><th>a</th><th> </th><th>u</th><th>n</th><th>a</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="P">Familia de producto</td><td data-label="a">Partida de referencia</td><td data-label="r">Criterio de decisión</td><td data-label="t">Error frecuente</td></tr>
+              <tr><td data-label="P">Sillas, butacas y sillones tapizados</td><td data-label="a">9401</td><td data-label="r">Asiento con estructura y función de sentarse, incluso tapizado</td><td data-label="t">Clasificar por el tapizado en lugar de por la función</td></tr>
+              <tr><td data-label="P">Mesas, aparadores y mobiliario de madera</td><td data-label="a">9403</td><td data-label="r">Mueble con función de soporte o almacenaje, de madera o mixto</td><td data-label="t">Separar mesas y armarios en partidas distintas sin motivo</td></tr>
+              <tr><td data-label="P">Mobiliario metálico de archivo y puestos de trabajo</td><td data-label="a">9403</td><td data-label="r">Predominio del metal en la estructura y función de almacenaje</td><td data-label="t">Tratar herrajes sueltos como mobiliario completo</td></tr>
+              <tr><td data-label="P">Camas, cabeceros y bases</td><td data-label="a">9403</td><td data-label="r">Conjunto para dormir, incluso desmontado</td><td data-label="t">Clasificar el cabecero como parte textil</td></tr>
+              <tr><td data-label="P">Lámparas, apliques y luminarias</td><td data-label="a">9405</td><td data-label="r">Función de alumbrado, con su soporte</td><td data-label="t">Incluir luminarias en la partida del mueble que acompañan</td></tr>
+              <tr><td data-label="P">Partes y componentes sueltos</td><td data-label="a">Según el artículo principal</td><td data-label="r">Pieza identificable como parte de un mueble de 9401 o 9403</td><td data-label="t">Declarar partes como accesorios sin código propio</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El grado de desmontaje no cambia la clasificación. Un armario que viaja en paneles planos con herrajes en bolsa sigue siendo un armario y se clasifica como tal, no como tablero ni como kit de madera. La misma lógica se aplica a los conjuntos: si los elementos se presentan juntos para amueblar un ambiente y la función la da el conjunto, la clasificación sigue al conjunto y no a cada pieza por separado.</p>
+        <p>Cuando una pieza combina materiales, la decisión se apoya en el carácter esencial: qué componente define la función, el peso y el valor. Una mesa con sobre de piedra sinterizada y base metálica se decide por el conjunto, no por el sobre. Documente ese razonamiento en una ficha de clasificación por referencia, con fotografías y composición de materiales, y entréguela a su agente aduanal antes del embarque. Es el documento que evita discusiones cuando la aduana de destino revisa el lote, y también el que permite comparar presupuestos de distintos proveedores sobre la misma base tributaria.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se arma el costo aterrizado de un contenedor de mobiliario?</h2>
+        <p>El costo aterrizado es la suma de todo lo que hay que pagar para que el mueble esté instalado en su obra: valor de la mercancía en el Incoterm pactado, flete internacional, seguro de carga, derechos e impuestos de importación, gastos portuarios en destino, transporte interior, izaje si la pieza no entra por ascensor y montaje. Presupuestar solo el valor de fábrica es el error que deja proyectos sin margen: en lotes voluminosos, los componentes posteriores al embarque pueden pesar tanto como el propio mobiliario.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>C</th><th>o</th><th>m</th><th>p</th><th>o</th><th>n</th><th>e</th><th>n</th><th>t</th><th>e</th><th>s</th><th> </th><th>d</th><th>e</th><th>l</th><th> </th><th>c</th><th>o</th><th>s</th><th>t</th><th>o</th><th> </th><th>a</th><th>t</th><th>e</th><th>r</th><th>r</th><th>i</th><th>z</th><th>a</th><th>d</th><th>o</th><th> </th><th>y</th><th> </th><th>e</th><th>l</th><th> </th><th>p</th><th>u</th><th>n</th><th>t</th><th>o</th><th> </th><th>d</th><th>o</th><th>n</th><th>d</th><th>e</th><th> </th><th>c</th><th>a</th><th>d</th><th>a</th><th> </th><th>u</th><th>n</th><th>o</th><th> </th><th>s</th><th>e</th><th> </th><th>d</th><th>i</th><th>s</th><th>p</th><th>a</th><th>r</th><th>a</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="C">Componente</td><td data-label="o">Base de cálculo</td><td data-label="m">Dónde se dispara</td><td data-label="p">Cómo se controla</td></tr>
+              <tr><td data-label="C">Flete marítimo</td><td data-label="o">Volumen o peso facturable según naviera</td><td data-label="m">Lote voluminoso y poco denso</td><td data-label="p">Diseño desmontado y plan de carga por cajón</td></tr>
+              <tr><td data-label="C">Seguro de carga</td><td data-label="o">Valor asegurado y trayecto</td><td data-label="m">Transbordos y tramos terrestres</td><td data-label="p">Póliza con cobertura puerta a puerta</td></tr>
+              <tr><td data-label="C">Derechos e impuestos</td><td data-label="o">Valor en aduana según clasificación</td><td data-label="m">Partida mal asignada</td><td data-label="p">Ficha de clasificación previa al embarque</td></tr>
+              <tr><td data-label="C">Gastos en puerto de destino</td><td data-label="o">Días de almacenaje y servicios</td><td data-label="m">Documentos incompletos</td><td data-label="p">Expediente cerrado antes del zarpe</td></tr>
+              <tr><td data-label="C">Transporte interior e izaje</td><td data-label="o">Distancia, acceso y volumen</td><td data-label="m">Pieza que no entra por ascensor o escalera</td><td data-label="p">Levantamiento de accesos en la obra</td></tr>
+              <tr><td data-label="C">Montaje y ajuste</td><td data-label="o">Horas de cuadrilla y número de ambientes</td><td data-label="m">Instalación sin secuencia</td><td data-label="p">Plan de instalación por planta y habitación</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El contenedor de 40 pies de alto suele ser la unidad de referencia para mobiliario contract, pero su rendimiento depende del diseño del producto. Un armario que viaja desmontado ocupa una fracción del volumen del mismo armario armado, y esa diferencia se convierte en flete. Los cajones de madera contrachapada añaden volumen y peso, aunque protegen mejor las piezas lacadas y los cantos vistos; el equilibrio se decide por familia de producto y no por ahorro indiscriminado de embalaje.</p>
+        <p>Reserve una partida para demoras. Los días libres de almacenaje en destino se agotan rápido cuando falta una firma, y el costo de extensión se paga por contenedor y por día. Una reserva de tres a cinco por ciento sobre el total del componente logístico cubre en la mayoría de proyectos las incidencias de calendario, y obliga a discutir el plan de liberación antes de que el barco zarpe.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Embalaje de madera y cumplimiento: ISPM 15, cajones de exportación y protección de esquinas</h2>
+        <p>La norma ISPM 15 regula el embalaje de madera sólida en el comercio internacional para evitar el traslado de plagas: la madera debe someterse a tratamiento térmico o a fumigación autorizada y llevar la marca con el código de país, el número del productor y el tratamiento aplicado. El tablero contrachapado y los tableros de fibra quedan exentos porque su proceso de fabricación elimina el riesgo, pero un cajón construido en parte con madera sólida vuelve a exigir el marcado en esas piezas.</p>
+        <p>La estructura recomendada para mobiliario de proyecto es el cajón de exportación en contrachapado, con cantoneras de espuma en las esquinas, láminas de espuma de polietileno en los cantos vistos, película estirable sobre el conjunto y paletizado con flejes. El tapizado viaja armado y protegido, nunca enrollado ni comprimido en bolsa: un sofá o una butaca comprimidos llegan con la estructura deformada y la espuma sin recuperación, y el reclamo se pierde porque el daño se considera propio del sistema de embalaje. Los criterios de cajón, palé y carga que aplicamos en proyectos hoteleros están desarrollados en <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">nuestra guía de embalaje de exportación para mobiliario hotelero</a>.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD28-a256-s1.jpg" alt="Cajones de exportación de contrachapado con protección de esquinas y paletizado listos para cargar en contenedor" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cajones de exportación en contrachapado con cantoneras de espuma y láminas de polietileno, flejados sobre palé junto a la boca del contenedor</figcaption>
+        </figure>
+        <p>Dentro del contenedor, el plan de carga importa tanto como el cajón. Las piezas pesadas van al piso y al centro del eje, las lacadas se separan con separadores y no se apoyan directamente sobre aristas, y el conjunto se asegura con travesaños o cintas de amarre para que no se desplace en el balanceo. Añada desecante según la duración del trayecto y la época de embarque: la humedad relativa alta durante varias semanas es la causa silenciosa de cantos hinchados y herrajes con puntos de óxido.</p>
+        <p>Antes de cerrar el contenedor, exija un registro fotográfico por cajón y una lista de empaque que asocie cada cajón con su planta, su habitación y su número de referencia. Ese cruce es lo que permite descargar en orden y detectar una falta en destino sin abrir los veinte cajones del lote. Si el proyecto se entrega por etapas, numere los cajones según la secuencia de instalación y no según el orden en que salieron del taller.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Inspección en destino, plazos de reclamo y entrega en obra</h2>
+        <p>La inspección en destino se hace antes de firmar el documento de entrega del transportista, no después. Ese documento es la prueba de que la mercancía se recibió en aparente buen estado; si se firma sin reservas y el daño aparece al día siguiente, el reclamo se dirige contra el seguro y no contra el transportista, y el trámite se alarga. Anote en el propio documento el número de bultos dañados, el tipo de daño visible y la hora de descarga, y acompañe el registro con fotografías fechadas.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD28-a256-s2.jpg" alt="Inspección de recepción en obra con lista de empaque, cinta métrica y registro fotográfico del mobiliario" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Recepción de mobiliario en obra: apertura de cajón, conteo contra lista de empaque y ficha de verificación con cinta métrica sobre el acabado</figcaption>
+        </figure>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>P</th><th>u</th><th>n</th><th>t</th><th>o</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>c</th><th>o</th><th>n</th><th>t</th><th>r</th><th>o</th><th>l</th><th> </th><th>e</th><th>n</th><th> </th><th>l</th><th>a</th><th> </th><th>r</th><th>e</th><th>c</th><th>e</th><th>p</th><th>c</th><th>i</th><th>ó</th><th>n</th><th> </th><th>d</th><th>e</th><th> </th><th>u</th><th>n</th><th> </th><th>l</th><th>o</th><th>t</th><th>e</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>c</th><th>o</th><th>n</th><th>t</th><th>r</th><th>a</th><th>c</th><th>t</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="P">Punto de control</td><td data-label="u">Cómo se verifica</td><td data-label="n">Criterio de liberación</td><td data-label="t">Responsable</td></tr>
+              <tr><td data-label="P">Precinto y estado exterior</td><td data-label="u">Lectura del precinto y revisión de cajones</td><td data-label="n">Precinto intacto y cajón sin perforaciones</td><td data-label="t">Transportista e importador</td></tr>
+              <tr><td data-label="P">Conteo de bultos</td><td data-label="u">Cruce con lista de empaque por cajón</td><td data-label="n">Cien por ciento de los bultos identificados</td><td data-label="t">Jefe de recepción</td></tr>
+              <tr><td data-label="P">Estado de acabados y estructura</td><td data-label="u">Apertura por ambiente y revisión con luz rasante</td><td data-label="n">Sin golpes, hinchazón ni cantos abiertos</td><td data-label="t">Instalador y supervisor</td></tr>
+              <tr><td data-label="P">Funcionamiento de herrajes</td><td data-label="u">Apertura y cierre de todas las puertas y cajones</td><td data-label="n">Recorrido completo sin roces ni desalineación</td><td data-label="t">Instalador</td></tr>
+              <tr><td data-label="P">Documentación del lote</td><td data-label="u">Cotejo de certificados y fichas técnicas</td><td data-label="n">Documentos completos y vigentes</td><td data-label="t">Comprador del proyecto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>El reclamo tiene tres destinatarios posibles y conviene no confundirlos. El daño por manipulación portuaria se reclama al transportista o a la naviera dentro del plazo que figure en el conocimiento de embarque; el daño cubierto por póliza se reclama al seguro con el informe de inspección; y el defecto de fabricación se reclama al proveedor según la garantía del contrato. Un mismo bulto puede requerir dos reclamos paralelos, y por eso el expediente fotográfico debe ser único y completo desde la descarga.</p>
+        <p>El acta de recepción cierra la etapa logística y abre la de instalación. Debe listar los ambientes recibidos, las observaciones por pieza, las subsanaciones acordadas con fecha y el responsable de cada una. Cuando el contrato lo prevé, esa acta es también el documento que libera el pago final, de modo que su redacción conviene revisarla con el mismo cuidado que la del contrato que la precede. Los criterios de aceptación, garantía y plazos de subsanación se detallan en <a href="/recursos/clausulas-contrato-ffe-feria-canton/">las cláusulas clave de un contrato FF&amp;E</a>, y el registro de obra que acompaña cada entrega se puede contrastar con <a href="/proyectos/">nuestra galería de proyectos</a>.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se puede cerrar durante el cambio de exposición del 28 al 30 de octubre?</h2>
+        <p>El cambio de exposición no es tiempo perdido: es el intervalo en que el recinto ferial queda sin actividad de negociación y las fábricas recuperan capacidad de atención. Entre el 28 y el 30 de octubre se pueden cerrar cuatro cosas que después cuestan semanas: la reserva de espacio con el transitario, el nombramiento del agente aduanal en destino, la prevalidación del expediente y la fecha de instalación en obra. Las tres primeras dependen de documentos que ya existen; la cuarta depende de su calendario de obra, no del proveedor.</p>
+        <p>Aproveche también para resolver la clasificación antes del embarque. Envíe al agente aduanal la ficha de clasificación por referencia, la composición de materiales y las fotografías de cada familia, y pida una confirmación por escrito del tratamiento que aplicará. Un lote de mobiliario hotelero o corporativo suele mezclar asientos, mesas, armarios y luminarias en el mismo contenedor; cada familia puede seguir un régimen distinto y la confirmación previa evita que el contenedor quede retenido por una sola línea mal descripta.</p>
+        <p>Si el proyecto incluye mobiliario sanitario o de residencia asistida, recuerde que esa familia se exhibe en la tercera fase, del 31 de octubre al 4 de noviembre, y que el mobiliario general se exhibió en la segunda fase, del 23 al 27 de octubre. Planificar ambas visitas en el mismo viaje exige reservar el intervalo completo, porque entre fases el recinto no abre para negociación.</p>
+        <p>Hongye Furniture Group expone en la 140.ª Feria de Cantón y mantiene abierta la visita a su planta de Heshan (Jiangmen) para revisar líneas de producción, embalaje y control de calidad antes de cerrar el pedido. Si su proyecto entra en producción en el último trimestre, el plazo habitual de fabricación es de 30-45 días desde la aprobación de planos y muestras, y el calendario de importación debe construirse sobre esa base y no sobre supuestos.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Ordene el expediente de importación antes de que zarpe el contenedor"
+      text="Envíenos su lista de empaque, la clasificación por referencia y el calendario de obra a través de /contacto/. Hongye Furniture Group expone en la 140.ª Feria de Cantón. No publicamos el número de stand: escríbanos por /contacto/ indicando su sector y el país desde el que viaja, y le enviaremos el número de stand junto con una carta de invitación para su visita, además de una propuesta de plan de carga, embalaje y entrega ajustada a su proyecto."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
