@@ -1,0 +1,452 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para clínicas dentales: guía de compra para proyectos B2B";
+const pageDescription = "Mobiliario para clínicas dentales llave en mano: recepción, gabinetes y esterilización con MOQ, plazos de 30-45 días y embalaje de exportación.";
+const keywords = [
+  "mobiliario para clínicas dentales",
+  "equipamiento clínica dental",
+  "mobiliario contract sanitario",
+  "gabinetes odontológicos",
+  "esterilización dental",
+  "FF&E clínicas"
+];
+const canonicalPath = "https://hymueble.com/recursos/mobiliario-clinicas-dentales-proyecto/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD32-a262-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-03";
+const dateModified = "2026-11-03";
+const publicationDateLabel = "Publicada el 3 de noviembre de 2026";
+
+const faqItems = [
+    { question: "¿Cuánto tarda la fabricación del mobiliario para una clínica dental?", answer: "El plazo de producción de referencia es de 30-45 días desde la aprobación de planos y muestras. El cómputo no arranca con la firma del contrato, sino con la validación del despiece, porque es entonces cuando la fábrica bloquea materiales y herrajes." },
+    { question: "¿Qué MOQ se aplica a los pedidos de clínicas dentales?", answer: "El MOQ se pacta por familia de producto y acabado en cada oferta, y en clínicas de sede única suele alcanzarse combinando piezas del mismo programa. Así el fabricante amortiza utillajes y materiales sin forzar cantidades que el centro no necesita." },
+    { question: "¿Qué norma deben cumplir los asientos de la sala de espera?", answer: "Los asientos de uso contract deben ensayarse según la norma UNE-EN 16139, que evalúa la resistencia y durabilidad del mobiliario de asiento no doméstico. Es la referencia que distingue producto de uso intensivo de producto doméstico en un pliego público o privado." },
+    { question: "¿Qué encimera resiste mejor los desinfectantes de una clínica dental?", answer: "El laminado compacto HPL y el acero inoxidable son las opciones habituales para las zonas de trabajo clínico. Como no existe una norma única de compatibilidad química, la referencia correcta es la tabla de compatibilidad y las instrucciones de limpieza del propio fabricante de la superficie." },
+    { question: "¿Cómo viaja protegido el mobiliario si la clínica está fuera del país de fabricación?", answer: "Cada módulo viaja desmontado en caja de madera contrachapada, con esquineras, espuma EPE y paletizado, según un plan de carga bulto a bulto. Este embalaje de exportación es el que evita daños por humedad y golpes en los traslados multimodales hasta obra." },
+    { question: "¿Se puede equipar varias sedes de una misma cadena con el mismo estándar?", answer: "Sí: el despiece y los acabados aprobados en la primera clínica se convierten en plantilla para las aperturas siguientes. Con más de 1.000 proyectos servidos en más de 50 países, el sistema de control de calidad en fábrica es el mismo para todas las sedes." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD32-a262-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d32a2-a262-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d32a2-a262-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario clínico · Clínicas dentales &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para clínicas dentales: guía de compra para proyectos B2B</h1>
+          <p>El mobiliario para clínicas dentales es el conjunto integrado de equipamiento —recepción y sala de espera, gabinetes odontológicos, área de esterilización y zonas de office— que permite a una consulta odontológica operar con higiene controlada, flujos de paciente ordenados y documentación de calidad exigible en la recepción de la obra. En un proyecto B2B no se trata de comprar piezas sueltas, sino de encargar un paquete FF&amp;E coordinado que llegue a obra completo, protegido y a tiempo.</p>
+          <p>Hongye Furniture Group fabrica mobiliario contract desde 1996 en plantas que suman más de 300.000 m², ha desarrollado más de 1.000 proyectos y exporta a más de 50 países, con ocho certificaciones internacionales que cubren calidad, gestión ambiental y seguridad de producto. Esa escala permite atender tanto la apertura de una clínica dental única como el despliegue escalonado de una cadena multi-sede, con el mismo sistema de control de calidad en fábrica.</p>
+          <p>Esta guía está escrita para inversores y responsables de compra de clínicas dentales, contratistas de reforma y estudios de arquitectura sanitaria: qué mobiliario necesita cada zona, qué dimensiones y materiales conviene fijar en el pliego, qué normas pedir en la aceptación y cómo se planifican el MOQ, los plazos de 30-45 días y el embalaje de exportación.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD32-a262-hero.jpg" alt="Recepción curva de clínica dental con encimera de piedra y fila de butacas de espera sobre suelo de vinilo" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué mobiliario necesita una clínica dental para funcionar?</h2>
+        <p>Una clínica dental se organiza en cuatro zonas funcionales que exigen familias de mobiliario distintas: recepción y sala de espera, gabinetes odontológicos, área de esterilización y office o zona de personal. Definir el listado por zona —no por piezas aisladas— es lo que permite cotizar con precisión, comparar ofertas homogéneas y evitar huecos en obra.</p>
+        <p>Cada zona arrastra además decisiones documentales. El mostrador necesita plano de taller y muestra de acabado; los gabinetes, despiece con alturas de encimera y herrajes; la esterilización, fichas de superficie y detalle de soldaduras; el office, un conteo de piezas ligado a la plantilla real. La tabla 1 resume el mapa de compra que suele pedir un estudio de arquitectura sanitaria antes de lanzar la solicitud de cotización.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>T</th><th>a</th><th>b</th><th>l</th><th>a</th><th> </th><th>1</th><th>.</th><th> </th><th>M</th><th>a</th><th>p</th><th>a</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>p</th><th>o</th><th>r</th><th> </th><th>z</th><th>o</th><th>n</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>l</th><th>a</th><th> </th><th>c</th><th>l</th><th>í</th><th>n</th><th>i</th><th>c</th><th>a</th><th> </th><th>d</th><th>e</th><th>n</th><th>t</th><th>a</th><th>l</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="T">Zona</td><td data-label="a">Familias de mobiliario</td><td data-label="b">Decisión clave de compra</td><td data-label="l">Documento a recibir</td></tr>
+              <tr><td data-label="T">Recepción y sala de espera</td><td data-label="a">Mostrador de atención, asientos contract en fila, mesa auxiliar, estantería de folletos</td><td data-label="b">Altura accesible del mostrador y resistencia de tapizados a desinfectantes</td><td data-label="l">Plano de taller y muestra física de acabado</td></tr>
+              <tr><td data-label="T">Gabinetes odontológicos</td><td data-label="a">Armarios altos y bajos, encimera de trabajo, lavamanos, cajoneras con bandejas</td><td data-label="b">Altura de encimera de 85-90 cm, rodapié de 10 cm y posición del desagüe</td><td data-label="l">Despiece acotado y especificación de herrajes</td></tr>
+              <tr><td data-label="T">Esterilización</td><td data-label="a">Banco receptor con fregadero, banco de empaquetado, armarios cerrados lado limpio</td><td data-label="b">Separación física entre circuito sucio y circuito limpio</td><td data-label="l">Ficha técnica de superficie y detalle de soldaduras</td></tr>
+              <tr><td data-label="T">Office y personal</td><td data-label="a">Taquillas dobles, mesa de reunión, armarios de documentación</td><td data-label="b">Dimensionado según plantilla y turnos reales</td><td data-label="l">Lista de acabados y conteo de piezas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Este mapa también ordena la secuencia de compra: primero se bloquean las piezas ligadas a obra —mostrador, armarios de gabinete, bancos de esterilización— porque condicionan tomas de agua, desagües y electricidad; después los asientos y el equipamiento de office, que admiten ajustes tardíos sin replanteo. Trabajar con un único proveedor de FF&amp;E evita, además, que la responsabilidad de medidas y acabados quede repartida entre tres o cuatro fábricas distintas.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Recepción y sala de espera: accesibilidad y resistencia al uso intensivo</h2>
+        <p>La recepción concentra la primera impresión y el mayor desgaste del centro. Un mostrador con un tramo de atención a 75-80 cm de altura y un hueco inferior libre permite atender a pacientes en silla de ruedas o con andador sin rodeos, criterio alineado con los principios de accesibilidad de los códigos técnicos de edificación europeos; el tramo restante puede subir a 110 cm para el trabajo de pie del personal de admisión.</p>
+        <p>En la sala de espera, los asientos contract se ordenan en filas de 3-4 plazas unidas por viga, con brazos intermedios que ayudan a incorporarse a los pacientes mayores, y un paso libre de al menos 120 cm entre filas facilita la circulación de carros y sillas de ruedas. Unir los asientos por estructura común, en lugar de colocar piezas sueltas, mantiene el orden visual y reduce el trabajo de limpieza por debajo.</p>
+        <p>El tercer criterio es químico: frentes de mostrador, asientos y mesillas se limpian varias veces al día con desinfectantes de amonio cuaternario, por lo que conviene especificar tapizados y laminados con compatibilidad declarada frente a los productos que usa la propia clínica, según las instrucciones del fabricante de cada superficie. Si su centro combina odontología con otros usos sanitarios, gran parte de los criterios de selección coinciden con los de nuestra guía sobre <a href="/recursos/mobiliario-hospitalario-clinicas-residencias-proyecto/">mobiliario hospitalario para clínicas y residencias</a>.</p>
+        <p>Un detalle que decide la experiencia diaria es la zona de niños y acompañantes: dos o tres asientos con brazos reforzados cerca de la puerta, una mesa a altura infantil y un panel liso lavable reservan el resto de la sala para pacientes adultos. En clínicas con cirugía conviene, además, un rincón de espera con separador visual para pacientes en recuperación tras sedación.</p>
+        <p>El mostrador también es logística: un lateral con almacenamiento cerrado para documentación y un módulo alto para monitores y teclado mantienen la superficie de atención libre, mientras que una pasada trasera de servicio permite que dos personas trabajen sin cruzarse. En reformas de local existente, el mostrador suele fabricarse en módulos que suben por escalera, con uniones ocultas y nivelación mediante patas regulables.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Gabinetes odontológicos: las dimensiones que deciden el día a día</h2>
+        <p>El gabinete odontológico se decide por alturas. Una encimera de trabajo a 85-90 cm y un rodapié de 10 cm permiten la limpieza por debajo y una postura ergonómica del auxiliar; el lavamanos se sitúa junto al paso del paciente, fuera del área de giro del sillón, con desagüe bajo encimera para liberar la superficie de trabajo. Estas tres cotas deben quedar acotadas en el despiece antes de fabricar.</p>
+        <p>Alrededor del sillón dental, el plano de obra debe respetar el perímetro de mantenimiento que indica el fabricante del equipo, normalmente no inferior a 50 cm entre el borde del sillón y el frontal del mueble, para que los movimientos del equipo y el paño del asistente no rocen los frentes. Las cajoneras se organizan por familias —manipulación, diagnóstico, desechos— con bandejas extraíbles y cierre amortizado, de modo que cada instrumento tenga una posición fija y verificable.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD32-a262-s1.jpg" alt="Detalle de armarios de gabinete dental con encimera compacta HPL, lavamanos integrado y cantos redondeados, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Encimera compacta HPL con lavamanos integrado y cantos redondeados en un gabinete odontológico.</figcaption>
+        </figure>
+        <p>Para las encimeras, el compacto HPL y el laminado de alta presión conforme a la norma EN 438 son la opción habitual en zona clínica: superficie no porosa, canto redondeado y buena respuesta al contacto repetido con instrumental. Los fregaderos y puntos húmedos pueden resolverse en acero inoxidable con radio interior sanitario, más sencillo de desinfectar a fondo.</p>
+        <p>La iluminación y los enchufes no son mobiliario, pero se resuelven con él: cada gabinete define en el despiece la posición de tomas para el equipo de rayos, la aspiración y los monitores, y una regleta oculta bajo la encimera evita cables a la vista. Fijar estas posiciones antes de la producción es lo que impide modificaciones costosas en obra.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Esterilización y office: separar lo sucio de lo limpio</h2>
+        <p>El área de esterilización funciona si el circuito sucio-limpio está construido en el propio mobiliario: un banco receptor con fregadero en la entrada del instrumental, un banco de empaquetado en la zona de preparado y armarios cerrados para material estéril en el lado limpio. Mezclar ambos lados en un mismo banco es el error de diseño más frecuente y el más difícil de corregir una vez instalada la clínica.</p>
+        <p>Las superficies de esta zona deben soportar lavado frecuente con desinfectantes: acero inoxidable para bancos con fregadero y laminado compacto para frentes y estanterías, ambos con fichas de resistencia química solicitadas al fabricante. Los armarios altos y bajos se ventilan con rejillas o se cierran con puertas ciegas según el protocolo del centro, y las esquinas se resuelven con radios sanitarios para evitar acumulaciones de suciedad.</p>
+        <p>El office y la zona de personal se dimensionan por plantilla: taquillas con hueco separado para ropa de calle y de trabajo, mesas de reunión para 4-6 personas y armarios de documentación clínica. Es la zona con menor exigencia técnica y la que más margen ofrece para ajustar el presupuesto sin tocar el circuito asistencial.</p>
+        <p>En esterilización también se planifica el flujo del instrumental: los carros que llegan del gabinete descargan en el banco receptor, la máquina de lavado ultrasónico y el autoclave se alojan entre módulos con hueco fijo y conexiones por detrás, y el material empaquetado sale por el lateral del lado limpio hacia un armario de paso. Dejar hueco prefabricado para estos equipos, con medidas confirmadas por el fabricante del equipo, evita cortar encimeras ya montadas.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales, normas y aceptación: ¿qué debe exigir su equipo de compras?</h2>
+        <p>Un pliego de compra serio se apoya en normas de ensayo, no en adjetivos. Para los asientos de la sala de espera y del office, la norma UNE-EN 16139, publicada por el Comité Europeo de Normalización (CEN), define los ensayos de resistencia y durabilidad del mobiliario de asiento para uso no doméstico; exigir el informe del modelo o de su familia de producto es la forma más directa de separar producto contract de producto doméstico.</p>
+        <p>En seguridad frente al fuego, la serie UNE-EN 1021 en sus partes 1 y 2, también de CEN, valora la inflamabilidad de los muebles tapizados frente a cigarrillo y fósforo, referencia usual en espacios de atención al público. Para las encimeras, la norma UNE-EN 438 recoge las propiedades de los laminados decorativos de alta presión (HPL), incluidas la resistencia a la abrasión y al impacto. Y para la aceptación del lote completo, la norma ISO 2859-1, del organismo internacional ISO, define el muestreo por atributos que se aplica en la inspección previa al embarque.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>T</th><th>a</th><th>b</th><th>l</th><th>a</th><th> </th><th>2</th><th>.</th><th> </th><th>N</th><th>o</th><th>r</th><th>m</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>r</th><th>e</th><th>f</th><th>e</th><th>r</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th> </th><th>y</th><th> </th><th>d</th><th>o</th><th>c</th><th>u</th><th>m</th><th>e</th><th>n</th><th>t</th><th>a</th><th>c</th><th>i</th><th>ó</th><th>n</th><th> </th><th>q</th><th>u</th><th>e</th><th> </th><th>d</th><th>e</th><th>b</th><th>e</th><th> </th><th>p</th><th>e</th><th>d</th><th>i</th><th>r</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="T">Norma</td><td data-label="a">Qué evalúa</td><td data-label="b">Documento a solicitar</td></tr>
+              <tr><td data-label="T">UNE-EN 16139 (CEN)</td><td data-label="a">Resistencia y durabilidad de asientos de uso contract</td><td data-label="b">Informe de ensayo del modelo o de su familia</td></tr>
+              <tr><td data-label="T">UNE-EN 1021-1 / 1021-2 (CEN)</td><td data-label="a">Inflamabilidad de muebles tapizados frente a cigarrillo y fósforo</td><td data-label="b">Informe de ensayo del tapizado y la estructura</td></tr>
+              <tr><td data-label="T">UNE-EN 438 (CEN)</td><td data-label="a">Propiedades de los laminados decorativos de alta presión (HPL)</td><td data-label="b">Ficha técnica del laminado con clase de uso</td></tr>
+              <tr><td data-label="T">ISO 2859-1 (ISO)</td><td data-label="a">Muestreo para inspección por atributos (AQL)</td><td data-label="b">Plan de inspección con nivel AQL pactado en la oferta</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Sobre desinfectantes no existe una norma única de aplicación universal: lo correcto es pedir al fabricante de cada superficie su tabla de compatibilidad química y las instrucciones de limpieza, y fijar en el pliego los productos que usará el personal de la clínica. Para cerrar el ciclo de calidad, la inspección del lote puede apoyarse en el procedimiento que detallamos en <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">nuestro control de calidad de muebles por proceso</a>, aplicado en fábrica antes del embarque.</p>
+        <p>Conviene aclarar también qué no hace falta exigir: no existe un certificado genérico de mobiliario dental, y cualquier oferta que prometa una homologación vaga sin norma ni organismo identificable debe derivarse en la petición de un informe de ensayo concreto. La combinación razonable para una clínica es asientos según EN 16139, tapizados según EN 1021, encimeras según EN 438 y lote aceptado por muestreo AQL.</p>
+        <p>La aceptación en destino también se escribe antes de fabricar: la punch list de instalación define qué se revisa —alineación de frentes, funcionamiento de herrajes, daños de superficie— y en qué plazo se repone una pieza no conforme. Fijar este protocolo en el contrato es lo que convierte la garantía en un procedimiento verificable y no en una promesa.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>MOQ, plazos de 30-45 días y embalaje de exportación: ¿cómo se planifica el proyecto?</h2>
+        <p>La planificación comercial de un proyecto dental empieza por el MOQ: cada familia tiene un mínimo por modelo y acabado que se pacta en la oferta, y en clínicas de una sola sede suele alcanzarse combinando piezas del mismo programa. El plazo de producción de referencia es de 30-45 días desde la aprobación de planos y muestras, no desde la firma del pedido; esa distinción es la que evita discrepancias de calendario con el contratista de obra.</p>
+        <p>El embalaje de exportación es parte del presupuesto, no un extra: cada módulo viaja desmontado en caja de madera contrachapada, con esquineras de alta densidad, láminas de espuma EPE entre frentes y encimeras, fijación a bastidor y paletizado para manipulación con carretilla. El plan de carga indica bulto a bulto qué entra en cada contenedor y en qué orden se descarga en obra, de forma que el primer montaje no dependa del último bulto.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD32-a262-s2.jpg" alt="Embalaje de exportación con cajas de madera contrachapada, esquineras y espuma EPE sobre palets cargados en contenedor, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cajas contrachapadas con esquineras y espuma EPE, paletizadas y cargadas en contenedor para exportación.</figcaption>
+        </figure>
+        <p>Antes de la carga se ejecuta la inspección AQL según ISO 2859-1, con fotos de proceso y acta de resultado; las piezas que no pasan se reproducen antes del embarque, no en destino. En obra, la instalación se cierra con una punch list conjunta: repaso de herrajes, nivelación, limpieza final y acta de conformidad que libera el último hito del calendario de pagos.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>T</th><th>a</th><th>b</th><th>l</th><th>a</th><th> </th><th>3</th><th>.</th><th> </th><th>H</th><th>i</th><th>t</th><th>o</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>u</th><th>n</th><th> </th><th>p</th><th>r</th><th>o</th><th>y</th><th>e</th><th>c</th><th>t</th><th>o</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>d</th><th>e</th><th>n</th><th>t</th><th>a</th><th>l</th><th> </th><th>c</th><th>o</th><th>n</th><th> </th><th>e</th><th>n</th><th>t</th><th>r</th><th>e</th><th>g</th><th>a</th><th> </th><th>i</th><th>n</th><th>t</th><th>e</th><th>r</th><th>n</th><th>a</th><th>c</th><th>i</th><th>o</th><th>n</th><th>a</th><th>l</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="T">Hito</td><td data-label="a">Plazo orientativo</td><td data-label="b">Entregable</td></tr>
+              <tr><td data-label="T">Validación de despiece y acabados</td><td data-label="a">Semanas 1-2</td><td data-label="b">Planos aprobados y muestras firmadas</td></tr>
+              <tr><td data-label="T">Producción en fábrica</td><td data-label="a">30-45 días</td><td data-label="b">Fotos de proceso e informe AQL</td></tr>
+              <tr><td data-label="T">Embalaje y carga en contenedor</td><td data-label="a">Tras inspección superada</td><td data-label="b">Plan de carga y lista de bultos</td></tr>
+              <tr><td data-label="T">Instalación y punch list</td><td data-label="a">Según calendario de obra</td><td data-label="b">Acta de repaso y conformidad final</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Para cadenas con despliegue multi-sede, el mismo sistema se repite sede a sede: el despiece aprobado en la primera clínica se convierte en plantilla, de modo que las aperturas siguientes compartan módulos, acabados y repuestos con las anteriores. Con más de 1.000 proyectos servidos a más de 50 países desde 1996, el mismo sistema de control de calidad en fábrica acompaña todas las sedes, y la segunda clínica de su grupo ya no empieza de cero.</p>
+        <p>La logística internacional completa el plan: el Incoterm se pacta en la oferta, el volumen estimado por contenedor se calcula en fase de despiece y, si la clínica no cuenta con montacargas en obra, los módulos se dimensionan para pasar por escalera y puerta. Un plan de descarga acordado con el contratista —personal, fechas y equipo de protección— evita que el último tramo del proyecto dependa de decisiones improvisadas.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E para clínicas dentales"
+      text="Envíe el plano de su clínica y el listado por zonas desde nuestro formulario en /contacto/. Recibirá una propuesta de FF&E con MOQ por familia, plazo de producción de 30-45 días y plan de embalaje de exportación adaptado a su país."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
