@@ -1,0 +1,455 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario para comedor escolar: guía de compra FF&E para colegios y proyectos B2B";
+const pageDescription = "Mobiliario para comedor escolar en proyectos B2B: zonas, cotas EN 1729, normas EN 15372, MOQ por familia, plazos de 30-45 días y embalaje de exportación.";
+const keywords = [
+  "mobiliario para comedor escolar",
+  "mobiliario educativo",
+  "comedor escolar FF&E",
+  "mesas de comedor escolar",
+  "EN 1729",
+  "EN 15372",
+  "proyecto colegio"
+];
+const canonicalPath = "https://hymueble.com/recursos/mobiliario-comedor-escolar-proyecto/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD33-a264-hero.jpg";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-04";
+const dateModified = "2026-11-04";
+const publicationDateLabel = "Publicada el 4 de noviembre de 2026";
+
+const faqItems = [
+    { question: "¿Qué mobiliario incluye un comedor escolar completo?", answer: "Incluye mesas, bancos, sillas apilables, mostradores de distribución, bufetes calientes y fríos, carros de bandejas, mesas plegables con ruedas y torres de apilado, además de las superficies de higiene asociadas. La cocina y su equipamiento térmico se contratan con otro proveedor, porque el paquete FF&E del comedor empieza donde termina la cocina." },
+    { question: "¿A qué altura debe ir la mesa de un comedor de secundaria?", answer: "La mesa debe situarse a 74 cm de altura con asientos de 44-46 cm, la combinación que corresponde a ese grupo de edad según las marcas de talla de la norma UNE-EN 1729-1. En primaria la mesa baja a 64-71 cm y el asiento a 34-42 cm, así que conviene fijar ambas cotas en el pliego." },
+    { question: "¿Qué normas debe exigir en el pliego de compra?", answer: "Debe exigir EN 1729-1 y EN 1729-2 para dimensiones, seguridad y ensayos del mobiliario escolar, EN 15372 para la resistencia de mesas de uso no doméstico, EN 16139 para los asientos contract e ISO 2859-1 para el muestreo AQL del lote. Cada una se acredita con un informe de ensayo y un plan de inspección, no con una declaración genérica." },
+    { question: "¿Cuál es el MOQ y el plazo de fabricación de un comedor escolar?", answer: "El MOQ se pacta por familia y acabado en cada oferta, y en centros pequeños se alcanza combinando mesas de 4, 6 y 8 puestos del mismo programa. El plazo de producción es de 30-45 días desde la aprobación de planos y muestras, no desde la firma del contrato." },
+    { question: "¿Cómo se protege el mobiliario en el transporte internacional?", answer: "Cada mesa viaja desmontada en cajas de madera contrachapada con esquineras en las aristas, film y espuma EPE entre tableros, y paletizado con flejado para carretilla. El plan de carga reparte los bultos por contenedor para que el montaje en obra siga el orden de las zonas y no dependa del último palet." },
+    { question: "¿Se pueden equipar varias sedes con el mismo despiece?", answer: "Sí: el despiece, los acabados y las muestras aprobadas en la primera sede se convierten en plantilla para las siguientes. Con más de 1.000 proyectos entregados en más de 50 países, el historial de fabricación permite repetir tableros, herrajes y recambios sin volver a diseñar cada comedor." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: {
+    "@type": "Organization",
+    name: "Hymueble",
+    url: "https://hymueble.com/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp",
+    },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD33-a264-hero.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d33a2-a264-s1.jpg",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/d33a2-a264-s2.jpg"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario educativo · Comedor escolar &middot; {publicationDateLabel}</p>
+          <h1>Mobiliario para comedor escolar: guía de compra FF&amp;E para colegios y proyectos B2B</h1>
+          <p>El mobiliario para comedor escolar es el conjunto de mesas, asientos, mostradores de distribución, carros y soluciones de almacenamiento que permite servir menús a cientos de estudiantes en turnos cortos, con puestos dimensionados por grupo de edad, superficies lavables y recorridos que separan el flujo de comensales del de bandejas sucias. Su función no es decorar la sala, sino sostener una operación diaria de alta rotación con el menor coste de mantenimiento posible.</p>
+          <p>Hongye Furniture Group fabrica mobiliario contract desde 1996 en plantas que suman más de 300.000 m² de planta, acumula más de 1.000 proyectos entregados y exporta a más de 50 países, con ocho certificaciones internacionales de calidad, gestión ambiental y seguridad de producto. Esa escala permite equipar un comedor de 200 puestos y una red de veinte sedes con el mismo sistema de control en fábrica.</p>
+          <p>Esta guía está dirigida a responsables de compras de colegios y universidades, consejos escolares, contratistas generales y estudios de arquitectura educativa: qué familias integran el paquete, cómo se fijan las cotas por edad, qué normas pedir en la aceptación y cómo se planifican el MOQ por familia, el plazo de 30-45 días y el embalaje de exportación.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD33-a264-hero.jpg" alt="Vista general de un comedor escolar con mesas abatibles de seis puestos, bancos y torres de sillas apilables junto a grandes ventanas" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Ilustración conceptual generada con IA para explicar el tema; no documenta producción específica de HYMUEBLE.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué es el mobiliario para comedor escolar y qué incluye el paquete?</h2>
+        <p>El mobiliario para comedor escolar es el equipamiento fijo y móvil de la sala de comedor educativa —mesas, bancos, sillas, mostradores de distribución, carros y almacenamiento— que se contrata como un paquete FF&amp;E completo para servir menús en turnos, dimensionado por grupo de edad y con superficies compatibles con la limpieza diaria de una cocina institucional.</p>
+        <p>El alcance se delimita por zonas. La sala aporta mesas de 4, 6 y 8 puestos, bancos integrados y sillas apilables; la línea de servicio, mostradores de distribución y bufetes calientes y fríos; la logística interna añade mesas plegables con ruedas, carros y torres de apilado; y la higiene se resuelve con bandejas de recogida y superficies continuas. La cocina y su equipamiento térmico quedan fuera de este alcance: el comedor empieza donde termina la cocina.</p>
+        <p>Un colegio internacional en Lima (Perú), con 1.400 estudiantes y dos turnos de servicio, cerró su listado de compra por zonas en lugar de por catálogo. El comité comparó tres ofertas sobre el mismo despiece y descubrió que una de ellas no incluía los carros de traslado ni las torres de apilado, de modo que su precio aparentemente menor encarecía la operación diaria. Al final se contrataron 96 mesas de ocho puestos con bancos integrados y 240 sillas apilables para las salas flexibles.</p>
+        <p>Documentar por zonas también ordena la licitación: cada familia lleva plano de taller, muestra de acabado y criterio de aceptación. Si el comedor se reforma, el levantamiento previo detecta los puntos donde la mesa de 74 cm no pasa por el montacargas o el pasillo de servicio; si el centro es nuevo, el listado se cruza con el proyecto de arquitectura antes de licitar, como se detalla en la guía para <a href="/recursos/equipar-colegio-nuevo-mobiliario-escolar-2026/">equipar un colegio de nueva apertura</a>.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Las cuatro zonas del comedor escolar y cómo se reparte la compra</h2>
+        <p>Un comedor se compra por zonas, no por metros cuadrados. La sala concentra mesas y asientos; la línea de servicio resuelve la entrega de bandejas y el mantenimiento del calor; la zona de traslado absorbe la logística diaria; y la higiene atraviesa las tres anteriores. La tabla 1 resume qué familia corresponde a cada zona y qué documento conviene recibir antes de firmar la orden.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>T</th><th>a</th><th>b</th><th>l</th><th>a</th><th> </th><th>1</th><th>.</th><th> </th><th>Z</th><th>o</th><th>n</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th>l</th><th> </th><th>c</th><th>o</th><th>m</th><th>e</th><th>d</th><th>o</th><th>r</th><th> </th><th>e</th><th>s</th><th>c</th><th>o</th><th>l</th><th>a</th><th>r</th><th>,</th><th> </th><th>f</th><th>a</th><th>m</th><th>i</th><th>l</th><th>i</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>m</th><th>o</th><th>b</th><th>i</th><th>l</th><th>i</th><th>a</th><th>r</th><th>i</th><th>o</th><th> </th><th>y</th><th> </th><th>d</th><th>o</th><th>c</th><th>u</th><th>m</th><th>e</th><th>n</th><th>t</th><th>o</th><th> </th><th>d</th><th>e</th><th> </th><th>c</th><th>o</th><th>m</th><th>p</th><th>r</th><th>a</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="T">Zona</td><td data-label="a">Familias de mobiliario</td><td data-label="b">Decisión clave</td><td data-label="l">Documento a recibir</td></tr>
+              <tr><td data-label="T">Sala de comedor</td><td data-label="a">Mesas de 4, 6 y 8 puestos, bancos integrados, sillas apilables</td><td data-label="b">Altura de mesa y marca de talla por grupo de edad</td><td data-label="l">Plano de distribución con pasos acotados</td></tr>
+              <tr><td data-label="T">Línea de servicio</td><td data-label="a">Mostradores de distribución, bufetes calientes y fríos, vitrinas de protección</td><td data-label="b">Recorrido del estudiante y punto de reposición</td><td data-label="l">Plano de taller con conexiones y desagües</td></tr>
+              <tr><td data-label="T">Traslado y almacenamiento</td><td data-label="a">Mesas plegables con ruedas, carros de bandejas, torres de apilado</td><td data-label="b">Huella plegada y capacidad de apilado</td><td data-label="l">Ficha de maniobra y peso por bulto</td></tr>
+              <tr><td data-label="T">Higiene y limpieza</td><td data-label="a">Superficies HPL, bandejas de recogida, complementos de limpieza</td><td data-label="b">Compatibilidad con desinfectantes de uso alimentario</td><td data-label="l">Tabla de compatibilidad química del fabricante</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Una red de comedores escolares en Bogotá (Colombia) que sirve 6.000 raciones diarias en once sedes estandarizó tres tipologías de mesa y dos de carro. La decisión no fue de diseño, sino de mantenimiento: con familias unificadas, el equipo técnico gestiona un solo stock de recambios y cada sede nueva se equipa copiando el despiece de la primera, sin volver a medir cada sala ni negociar acabados distintos en cada apertura.</p>
+        <p>El comedor de un colegio de Monterrey (México) resolvió la sala con dos alturas de mesa. En primaria funcionan bien las mesas de seis puestos con bancos integrados, porque el grupo se sienta junto y el banco no se desplaza; en secundaria conviene combinar mesas de cuatro puestos con sillas apilables, que permiten reconfigurar el espacio para exámenes o actos. Mezclar ambos modelos en un mismo centro no complica la producción si la combinación se fija en el despiece antes de cortar tablero.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD33-a264-s1.jpg" alt="Sala de comedor escolar con mesas abatibles de seis puestos, bancos y torres de sillas apilables, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Comedor escolar con mesas abatibles de seis puestos, bancos y torres de sillas apilables junto al paso central.</figcaption>
+        </figure>
+        <p>En la red de Bogotá (Colombia), la línea de servicio fue la zona que más se improvisó. En un comedor de 300 puestos, un mostrador de distribución con bandeja deslizante, vitrina protectora y punto de reposición cada 3-4 metros mantiene la fila fluida; los bufetes calientes y fríos se construyen en HPL contrachapado con canto sellado para resistir vapor y lavado. Si el servicio se hace en dos turnos, conviene duplicar el punto de reposición antes que el número de cajas.</p>
+        <p>En el comedor de Lima (Perú), el traslado y el almacenamiento deciden la vida útil del conjunto. Las mesas plegables con ruedas vacían la sala en minutos; los carros de bandejas reducen el transporte manual; y las torres admiten entre 8 y 12 sillas con tope superior y base ancha. Ese dato debe figurar en la oferta, porque define el almacén necesario: doce sillas por torre y 240 sillas son veinte torres, no un rincón libre al fondo del pasillo.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>Dimensiones y distribución: mesa de 74 cm, asiento de 44-46 cm y pasos de 60 cm</h2>
+        <p>Las cotas se eligen por grupo de edad. Para secundaria, la mesa se sitúa a 74 cm de altura con asientos de 44-46 cm, combinación que deja el antebrazo apoyado y el plato a distancia cómoda; en primaria la mesa baja a 64-71 cm según la marca de talla y el asiento a 34-42 cm. En el comedor de Monterrey (México), esta separación por etapas permitió compartir sala entre primaria y secundaria sin duplicar mobiliario: dos alturas de mesa y un solo plano de distribución.</p>
+        <p>La norma UNE-EN 1729-1 fija las marcas de talla del mobiliario escolar y relaciona cada una con una altura de asiento y de mesa, desde los 26 cm del grupo de menor edad hasta los 46 cm del grupo de secundaria (CEN, 2021). La parte 2, UNE-EN 1729-2, recoge los requisitos de seguridad y los métodos de ensayo, incluidos estabilidad y resistencia. La ficha de la silla debe indicar la marca de talla, no solo el color del tapizado.</p>
+        <p>En un colegio de Guadalajara (México), la distribución se midió en pasos. Entre mesas contiguas conviene dejar 60 cm libres para que un estudiante con bandeja circule sin rozar; el pasillo de evacuación no baja de 120 cm en ningún tramo; y cada puesto necesita entre 1,2 y 1,5 m² contando mesa, silla y circulación, de modo que 300 puestos rondan 400 m² útiles. Estos tres números son los que más discuten arquitectura y servicio de comedor, y los que conviene cerrar en plano antes de producir.</p>
+        <p>En un campus universitario en Santiago de Chile (Chile), la sala debía funcionar como comedor al mediodía y como sala de estudio por la tarde. Se combinaron mesas de cuatro puestos con ruedas y sillas apilables, con pasos de 90 cm que permitían reordenar las islas sin desmontar nada; el plano se entregó con dos configuraciones acotadas y el personal de mantenimiento las reproduce en veinte minutos, sin herramientas.</p>
+        <p>El último control es el de accesibilidad: una ruta debe llegar a la mesa con ancho suficiente para el giro de una silla de ruedas, y una parte de los puestos se reserva con tablero compatible. En reformas, estos dos criterios son los que obligan a rehacer el plano, así que se verifican antes de aprobar el despiece. Los criterios de altura por etapa que aplicamos en el aula se detallan en <a href="/recursos/mobiliario-aula-estandares-altura-asiento/">altura de asiento por grupo de edad</a>.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Materiales y normas: qué exigir en el pliego de un comedor escolar</h2>
+        <p>Una escuela internacional en Nairobi (Kenia) recibió tres ofertas con HPL de distinto espesor y solo una incluía el informe de carga de la UNE-EN 15372. El comité eligió la propuesta con tablero de 13 mm, canto ABS inyectado y radio continuo aunque su precio unitario era mayor, porque cubría diez años de servicio con el mismo despiece de recambio. El criterio que decidió la compra fue el expediente técnico, no la fotografía del catálogo.</p>
+        <p>En el comedor de Nairobi (Kenia), la durabilidad se decidió en dos centímetros: superficie y canto. El HPL postforming sobre tablero de partículas de alta densidad, con canto ABS y radio continuo, resiste el golpe de bandeja, el corte accidental y la limpieza con desinfectantes de uso alimentario sin abrir juntas; un canto pegado en plano acaba despegando por el vapor del lavado. En la línea de servicio, el contrachapado con HPL protege mejor los frentes sometidos a vapor permanente.</p>
+        <p>Las normas del pliego son concretas. La UNE-EN 1729-1 y la UNE-EN 1729-2 cubren dimensiones, seguridad y ensayos del mobiliario escolar; la UNE-EN 15372 exige niveles de carga de uso no doméstico para mesas contract, con ensayos de resistencia vertical, horizontal y de caída (CEN, 2022); y la UNE-EN 16139 hace lo propio con los asientos de uso no doméstico (CEN, 2020). Para el lote, la ISO 2859-1 define los planes de muestreo por atributos de la inspección AQL (ISO, 2021).</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>T</th><th>a</th><th>b</th><th>l</th><th>a</th><th> </th><th>2</th><th>.</th><th> </th><th>N</th><th>o</th><th>r</th><th>m</th><th>a</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>r</th><th>e</th><th>f</th><th>e</th><th>r</th><th>e</th><th>n</th><th>c</th><th>i</th><th>a</th><th> </th><th>p</th><th>a</th><th>r</th><th>a</th><th> </th><th>c</th><th>o</th><th>m</th><th>e</th><th>d</th><th>o</th><th>r</th><th> </th><th>e</th><th>s</th><th>c</th><th>o</th><th>l</th><th>a</th><th>r</th><th> </th><th>y</th><th> </th><th>d</th><th>o</th><th>c</th><th>u</th><th>m</th><th>e</th><th>n</th><th>t</th><th>o</th><th> </th><th>a</th><th> </th><th>s</th><th>o</th><th>l</th><th>i</th><th>c</th><th>i</th><th>t</th><th>a</th><th>r</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="T">Norma</td><td data-label="a">Qué evalúa</td><td data-label="b">Documento a solicitar</td></tr>
+              <tr><td data-label="T">UNE-EN 1729-1 (CEN)</td><td data-label="a">Dimensiones funcionales y marcas de talla de mesas y sillas escolares</td><td data-label="b">Cuadro de tallas aplicado al despiece</td></tr>
+              <tr><td data-label="T">UNE-EN 1729-2 (CEN)</td><td data-label="a">Requisitos de seguridad y métodos de ensayo del mobiliario escolar</td><td data-label="b">Informe de ensayo del modelo o de su familia</td></tr>
+              <tr><td data-label="T">UNE-EN 15372 (CEN)</td><td data-label="a">Resistencia de mesas de uso no doméstico</td><td data-label="b">Informe de carga vertical y horizontal</td></tr>
+              <tr><td data-label="T">UNE-EN 16139 (CEN)</td><td data-label="a">Resistencia y durabilidad de asientos contract</td><td data-label="b">Informe de ensayo de la familia de asiento</td></tr>
+              <tr><td data-label="T">ISO 2859-1 (ISO)</td><td data-label="a">Muestreo por atributos para inspección AQL</td><td data-label="b">Plan de inspección con nivel AQL pactado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Con las normas fijadas, el resto se resuelve con muestras: un tablero con canto y color definitivos, un banco con estructura soldada y una silla apilable probada en torre. La aceptación visual se hace contra esas muestras y no contra fotografías, porque el color de un HPL cambia con la luz del comedor. En fábrica, el lote se controla con el procedimiento descrito en <a href="/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">control de calidad de muebles por proceso</a>.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se planifican el MOQ, el plazo de 30-45 días y el embalaje?</h2>
+        <p>La entrega se planifica con tres decisiones encadenadas: el MOQ por familia, el plazo de 30-45 días desde la aprobación de planos y muestras, y el plan de embalaje por contenedor. El MOQ se fija por modelo y acabado, y en centros pequeños se alcanza combinando mesas de 4, 6 y 8 puestos del mismo programa; en proyectos de más de 200 puestos deja de ser una restricción y pasa a ser una palanca de precio. La oferta debe indicar el MOQ de cada familia por separado, como explicamos en la <a href="/recursos/logica-pedido-minimo-moq-muebles/">lógica del pedido mínimo por familia</a>, y no un mínimo global que oculte diferencias.</p>
+        <p>El plazo de producción de referencia es de 30-45 días desde la aprobación de planos y muestras, no desde la firma. Entre firma y arranque hay una fase de despiece que consume unas dos semanas; en calendarios de obra ajustados se coloca antes de la licitación. Un colegio en Casablanca (Marruecos) recibió 340 mesas y 1.100 sillas en cuatro contenedores con descarga por bloques —primero línea de servicio, después sala y al final almacén—, lo que permitió abrir el comedor por turnos.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD33-a264-s2.jpg" alt="Bultos de exportación con cajas de madera contrachapada, esquineras de protección y film sobre palets en muelle de carga, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>Cajas de madera contrachapada con esquineras y film sobre palets, preparadas para la carga en contenedor.</figcaption>
+        </figure>
+        <p>En el mismo envío a Casablanca (Marruecos), el embalaje se diseñó con el mismo rigor que el mueble. Cada mesa viaja desmontada en cajas de madera contrachapada, material libre de tratamiento fitosanitario, con esquineras en las aristas, film y espuma EPE entre tableros, y paletizado con flejado para carretilla. El plan de carga reparte los bultos por contenedor para que el primer montaje no dependa del último palet; el criterio es el mismo que aplicamos en <a href="/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación para mobiliario contract</a>.</p>
+        <div class="methodology-table">
+          <table>
+            <thead>
+              <tr><th>T</th><th>a</th><th>b</th><th>l</th><th>a</th><th> </th><th>3</th><th>.</th><th> </th><th>H</th><th>i</th><th>t</th><th>o</th><th>s</th><th> </th><th>d</th><th>e</th><th> </th><th>u</th><th>n</th><th> </th><th>p</th><th>r</th><th>o</th><th>y</th><th>e</th><th>c</th><th>t</th><th>o</th><th> </th><th>d</th><th>e</th><th> </th><th>c</th><th>o</th><th>m</th><th>e</th><th>d</th><th>o</th><th>r</th><th> </th><th>e</th><th>s</th><th>c</th><th>o</th><th>l</th><th>a</th><th>r</th><th> </th><th>c</th><th>o</th><th>n</th><th> </th><th>e</th><th>n</th><th>t</th><th>r</th><th>e</th><th>g</th><th>a</th><th> </th><th>i</th><th>n</th><th>t</th><th>e</th><th>r</th><th>n</th><th>a</th><th>c</th><th>i</th><th>o</th><th>n</th><th>a</th><th>l</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="T">Hito</td><td data-label="a">Plazo orientativo</td><td data-label="b">Entregable</td></tr>
+              <tr><td data-label="T">Levantamiento y despiece por zonas</td><td data-label="a">Semanas 1-2</td><td data-label="b">Plano de distribución y listado cerrado</td></tr>
+              <tr><td data-label="T">Aprobación de muestras y acabados</td><td data-label="a">Semana 3</td><td data-label="b">Muestras firmadas y cuadro de tallas</td></tr>
+              <tr><td data-label="T">Producción e inspección AQL</td><td data-label="a">30-45 días</td><td data-label="b">Fotos de proceso e informe AQL</td></tr>
+              <tr><td data-label="T">Embalaje, carga y transporte</td><td data-label="a">Tras inspección superada</td><td data-label="b">Plan de carga y lista de bultos</td></tr>
+              <tr><td data-label="T">Montaje y punch list</td><td data-label="a">Según calendario de obra</td><td data-label="b">Acta de conformidad por zona</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Antes de la carga se ejecuta la inspección AQL con acta y fotografías, y las piezas no conformes se reponen en fábrica, no en destino. En obra, el montaje se cierra con una punch list por zonas —sala, línea de servicio, almacén— que revisa nivelación, herrajes y estado de cantos antes de liberar el último hito de pago.</p>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>Del despiece a la segunda sede: montaje, control y continuidad</h2>
+        <p>La experiencia de la red de Bogotá (Colombia) lo confirma: un comedor escolar rara vez se equipa una sola vez. Lo que determina el coste de la segunda apertura no es el precio unitario, sino la reutilización del despiece: mismos tableros, mismos herrajes, mismos recambios. Documentar la primera sede con planos definitivos, y no con bocetos de licitación, es la inversión que reduce el trabajo de la siguiente y la que evita que cada colegio del grupo tenga un acabado distinto.</p>
+        <p>Un grupo educativo con sede en Quito (Ecuador) equipó tres comedores en dos años con el mismo despiece. La segunda sede se cotizó en once días porque el listado por zonas ya existía y las muestras estaban aprobadas; la tercera incorporó mesas plegables con ruedas para un salón de usos múltiples y mantuvo idéntico el resto del paquete. La continuidad del acabado entre sedes fue lo que más valoró el consejo directivo del grupo.</p>
+        <p>Con ese despiece ya aprobado, el montaje de la segunda sede se planificó antes del embarque: quién descarga, con qué equipo, en qué orden y con cuántas personas. En comedores de planta alta sin montacargas, las mesas se dimensionan para subir desmontadas por escalera y los bancos integrados se atornillan en obra con plantilla. Un manual por tipología, con par de apriete y secuencia, evita improvisaciones y hace exigible la garantía frente a un montaje incorrecto.</p>
+        <p>La continuidad también es de repuestos: un stock de tableros, cantos y herrajes del mismo lote permite reponer una mesa dañada sin alterar el color del conjunto. Con más de 1.000 proyectos y presencia en más de 50 países desde 1996, la fábrica conserva el historial de despiece de cada proyecto para que la décima sede se parezca a la primera. En obras por fases, ese historial es la diferencia entre repetir y volver a empezar.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Solicite su cotización FF&E para comedor escolar"
+      text="Envíe el plano de su comedor y el listado por zonas desde nuestro formulario en /contacto/. Recibirá una propuesta con MOQ por familia, plazo de producción de 30-45 días y un plan de embalaje de exportación adaptado a su país."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>

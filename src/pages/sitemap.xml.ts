@@ -14,6 +14,7 @@ const staticPaths = [
   "/privacidad/",
   "/recursos/",
   "/recursos/blog/",
+  "https://hymueble.com/recursos/mobiliario-comedor-escolar-proyecto/",
   "https://hymueble.com/recursos/mobiliario-clinicas-dentales-proyecto/",
   "/recursos/importar-muebles-china-aduana-entrega/",
   "https://hymueble.com/recursos/mobiliario-exterior-hoteles-piscina-terraza/",
