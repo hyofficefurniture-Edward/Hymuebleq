@@ -1,0 +1,448 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Cómo cotizar el mobiliario del lobby de un hotel: lo que cambia el precio";
+const pageDescription = "Qué componentes mueven el precio del mobiliario de lobby de hotel, cómo comparar dos ofertas FF&E sobre la misma base y qué costes aparecen después de la firma.";
+const keywords = ["cotizar mobiliario de lobby", "mobiliario lobby hotel precio", "cotización FF&E hotel", "comparar ofertas de mobiliario", "presupuesto mobiliario hotelero", "mobiliario contract"];
+const canonicalPath = "https://hymueble.com/recursos/cotizar-mobiliario-lobby-precio/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD37-a266-hero.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-08";
+const dateModified = "2026-11-08";
+
+const faqItems = [
+    { question: "¿Cuánto cuesta amueblar el lobby de un hotel de tamaño medio?", answer: "Depende de tres variables: superficie a amueblar, nivel de personalización y alcance del paquete. Un lobby con asientos de catálogo adaptado y mostrador semimedida se mueve en un rango distinto al de un lobby con diseño propio de bandera. Por eso el primer documento no es el presupuesto, sino el listado por familias con nivel de personalización declarado." },
+    { question: "¿Qué diferencia hay entre el precio FOB y el precio entregado en obra?", answer: "El FOB cubre la mercancía puesta en el puerto de salida, sin flete, seguro ni gestión local. El precio entregado en obra añade contenedor, documentación, desembarque y transporte final. Comparar una oferta FOB con una entregada es comparar magnitudes distintas; fije el Incoterm antes de pedir precio." },
+    { question: "¿Cuántas rondas de revisión incluye normalmente una cotización?", answer: "Las fábricas serias suelen incluir un número definido de rondas de ajuste sobre el mismo concepto, normalmente dos o tres, y facturan aparte los cambios de concepto después de la muestra aprobada. Pida que el número de rondas quede escrito en la oferta, no en un correo posterior." },
+    { question: "¿Se aplica cantidad mínima si solo renuevo el lobby?", answer: "El MOQ se fija por referencia y acabado, no por proyecto. En renovaciones pequeñas se lo sortea combinando referencias del mismo programa con otras zonas, o agrupando la compra del lobby con la renovación de otras áreas comunes en un solo lote de producción." },
+    { question: "¿Qué ensayos debería exigir para el mobiliario de lobby?", answer: "Para asientos de uso intensivo, ensayo de estructuras y durabilidad según normas de asientos no domésticos y referencias comerciales tipo BIFMA; para tapicerías, clasificación al fuego citada con informe de ensayo. Cada requisito se acredita con informe y plan de inspección, no con una declaración genérica del catálogo." },
+    { question: "¿Cuánto tarda la producción después de aprobar la cotización?", answer: "El reloj arranca con la aprobación de planos y muestras, no con la firma. Un plazo de producción de 45-60 días es razonable para un paquete de lobby con personalización media; añada a eso el tránsito marítimo y la recepción en obra al planificar la apertura." },
+    { question: "¿Conviene cotizar el lobby junto con el resto de zonas comunes?", answer: "Sí, siempre que el listado separe las familias por zona. Cotizar junto mejora el poder de negociación y homologa acabados, pero la oferta debe desglosarse por zona para que el comité pueda aprobar, posponer o recortar cada espacio sin renegociar el conjunto." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: { "@type": "Organization", name: "Hymueble", url: "https://hymueble.com/" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: { "@type": "ImageObject", url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp" },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD37-a266-hero.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD37-a266-s1.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD37-a266-s4.webp"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario hotelero · Lobby &middot; Publicada el 8 de noviembre de 2026</p>
+          <h1>Cómo cotizar el mobiliario del lobby de un hotel: lo que cambia el precio</h1>
+          <p>El precio de un lobby no se decide en el plano, se decide en el pliego. Dos hoteles con salas de casi la misma superficie pueden recibir ofertas que se alejan una de la otra por decenas de puntos porcentuales, y en la mayoría de los casos la diferencia no está en el margen del fabricante, sino en lo que cada oferta entiende por "mobiliario de lobby": qué piezas entran, con qué nivel de personalización, con qué ensayos y con qué embalaje. Esta guía desglosa los componentes que mueven la cifra final para que el equipo de compras pueda pedir, comparar y negociar sobre una base comparable.</p>
+          <p>*Caption: Ilustración de zonas de espera con asientos curvos; el reparto entre zonas es el primer driver del presupuesto de un lobby.*</p>
+          <p>El equipo que llega bien preparado a una cotización de lobby no pide precio primero: fija alcance, nivel de personalización y documentos de control, y solo entonces pide cifra. El orden importa porque cada respuesta del proveedor hereda las decisiones anteriores; cambiar el alcance después de la primera oferta invalida la comparación y obliga a empezar de nuevo. Este texto recorre las cinco preguntas que estructuran ese orden y que dan título a las secciones siguientes.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD37-a266-hero.webp" alt="Vista general de un lounge de hotel con sofás curvos de espuma alta bajo una cubierta abovedada de listones de madera, sin personas ni textos" width="1536" height="1105" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué componentes integran una cotización de mobiliario de lobby?</h2>
+        <p>Un lobby se compra por familias, no por piezas sueltas. La primera causa de diferencias entre ofertas es que una cotización incluya cuatro familias y otra solo dos, con el resto "a definir en fase posterior". Antes de pedir precio, el listado debe fijar qué cubre el paquete: asientos de espera y lounge, mesas de centro y auxiliares, mostrador de recepción, y complementos como bandejas de equipaje, biombo divisorio, jardineras y percheros. Cada familia lleva su propia lógica de coste y su propio documento de control.</p>
+        <p>La tabla 1 resume las familias que debe nombrar una cotización completa y el documento que las acompaña. Si una oferta no menciona el documento, normalmente tampoco lo ha presupuestado, y ese faltante reaparece después como un cargo adicional.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Componente del paquete</th><th>Qué mueve su precio</th><th>Documento que debe acompañar la oferta</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Componente del paquete">Asientos de espera y lounge</td><td data-label="Qué mueve su precio">Estructura, densidad de espuma, metro de tapicería, clasificación al fuego</td><td data-label="Documento que debe acompañar la oferta">Ficha técnica con ensayo citado y muestra de acabado</td></tr>
+          <tr><td data-label="Componente del paquete">Mesas de centro y auxiliares</td><td data-label="Qué mueve su precio">Tablero, canto, herraje y base metálica</td><td data-label="Documento que debe acompañar la oferta">Despiece con secciones y espesores acotados</td></tr>
+          <tr><td data-label="Componente del paquete">Mostrador de recepción</td><td data-label="Qué mueve su precio">Revestimiento de piedra o sólido, iluminación integrada, canalización eléctrica</td><td data-label="Documento que debe acompañar la oferta">Plano de taller con conexiones y anclajes</td></tr>
+          <tr><td data-label="Componente del paquete">Complementos y accesorios</td><td data-label="Qué mueve su precio">Piezas de serie especial, cantidad mínima por referencia</td><td data-label="Documento que debe acompañar la oferta">Lista de despiece con unidades por referencia</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD37-a266-s1.webp" alt="Zona de espera de un lobby de hotel con sofás tapizados, mesas auxiliares y biombos de pantalla negra junto a ventanales, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Las familias de asientos y mesas auxiliares concentran la mayor parte de las unidades del paquete; uniformar su especificación es lo que hace comparable una oferta.*</p>
+        <p>La forma más segura de construir el listado es recorrer el lobby zona por zona con el plano del proyecto: entrada y recepción, espera principal, bar o salón contiguo, ascensores y pasillos de conexión. En cada zona se anota qué familias se necesitan, en qué cantidad y con qué nivel de uso previsto. Ese recorrido, que toma una tarde de trabajo, elimina la mayoría de los faltantes que después aparecen como cargos extra. También ordena la conversación con el fabricante: cuando el listado llega por zonas, la fábrica puede proponer equivalentes de catálogo zona por zona, en lugar de responder con una lista genérica de piezas que nadie pidió.</p>
+        <p>Una cadena regional en Lima aprendió este punto por la vía lenta. Su listado inicial pedía "mobiliario de lobby" sin despiece, y la oferta más baja no incluía mesas auxiliares ni bandejas de equipaje; al integrarlas fuera de oferta, el precio final superó al de la segunda propuesta, que sí las cotizaba desde el inicio. El listado por familias, como se detalla en la guía de <a href="https://hymueble.com/recursos/mobiliario-lobby-hotel-zonas-comunes/">mobiliario para lobby y zonas comunes</a>, es lo que convierte una comparación de precios en una comparación de alcances.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Por qué dos ofertas para el mismo lobby difieren hasta un 30-50 %?</h2>
+        <p>Cuando dos cotizaciones para una sala equivalente se alejan un 30-50 %, la explicación casi siempre está en cuatro decisiones de especificación, no en el margen comercial. La primera es la profundidad de personalización: una pieza de catálogo adaptada no cuesta lo mismo que un diseño libre desde cero. La segunda es la calidad interna de los asientos: densidad de espuma, tipo de suspensión y estructura, elementos invisibles en la foto de la propuesta pero determinantes en el año dos. La tercera es el acabado superficial: una chapa natural con pareja de vetas no se presupuesta como un laminado de uso intensivo. La cuarta es el embalaje y la logística, que en un proyecto de exportación pueden mover el total varios puntos.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD37-a266-s2.webp" alt="Detalle del canto y revestimiento pétreo de un mostrador de recepción con iluminación integrada y panel de listones de madera, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Ilustración generada con IA del mostrador de recepción: revestimientos, cantos e iluminación integrada concentran buena parte del coste que no se ve en el plano general.*</p>
+        <p>Conviene entender cómo interactúan esos cuatro factores. La personalización y la calidad interna no se suman, se multiplican: un asiento de diseño propio con espuma de alta resiliencia y tapicería clasificada puede costar el doble que su equivalente de catálogo, aun cuando ambos ocupen el mismo espacio en el plano. El acabado superficial actúa de forma menos lineal: pasar de laminado a chapa natural con pareja de vetas encarece la pieza concreta, pero apenas mueve el total si el lobby concentra la chapa en unas pocas piezas protagonistas. La logística, en cambio, es la partida más fácil de subestimar, porque no aparece en ninguna imagen de la propuesta y solo se descubre cuando el contenedor ya está reservado.</p>
+        <p>Al equipo de compras le conviene pedir que cada oferta declare explícitamente su posición en esas cuatro decisiones. Una oferta no comparable no es una oferta barata: es una oferta con información faltante. El punto de partida es exactamente el que aplica la <a href="https://hymueble.com/recursos/cotizar-casegoods-hotel-200-habitaciones/">cotización de casegoods de 200 habitaciones</a>: recorrido con números sobre el mismo despiece, para que las diferencias entre propuestas sean explicables línea a línea.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuánto pesa la personalización: catálogo, adaptado o a medida?</h2>
+        <p>La personalización es el driver más grande del precio y el peor documentado. En la práctica existen tres niveles. El primero es catálogo con ajuste de acabado: la pieza existe, se cambia tapicería o laca, y la fábrica amortiza moldes y utillajes entre proyectos. El segundo es catálogo adaptado: se modifican medidas, se añade toma eléctrica o se refuerza una estructura; el coste sube porque el utillaje se rehace, pero el diseño base sigue compartido. El tercero es diseño a medida: planos propios, prototipo, aprobación de muestra y una curva de aprendizaje que la oferta debe incluir.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Nivel de personalización</th><th>Alcance típico</th><th>Impacto relativo en precio</th><th>Cuándo conviene</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Nivel de personalización">Catálogo con ajuste de acabado</td><td data-label="Alcance típico">Tapicería, laca o tono de madera sobre pieza existente</td><td data-label="Impacto relativo en precio">Base de comparación</td><td data-label="Cuándo conviene">Aperturas con plazo corto y carta de color propia</td></tr>
+          <tr><td data-label="Nivel de personalización">Catálogo adaptado</td><td data-label="Alcance típico">Medidas, tomas eléctricas, refuerzos estructurales</td><td data-label="Impacto relativo en precio">Intermedio</td><td data-label="Cuándo conviene">Proyectos de marca con requisitos técnicos parciales</td></tr>
+          <tr><td data-label="Nivel de personalización">Diseño a medida</td><td data-label="Alcance típico">Planos propios, prototipo y muestra dedicada</td><td data-label="Impacto relativo en precio">Más alto</td><td data-label="Cuándo conviene">Banderas de marca donde el mueble es parte del concepto</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD37-a266-s3.webp" alt="Sillón de diseño con brazos acolchados en tapicería amarilla sobre estructura de madera oscura junto a mesa de apoyo, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Una pieza singular de diseño propio lleva prototipo y muestra dedicada; pedir cotizada como catálogo es una de las causas más comunes de desviación entre oferta y factura.*</p>
+        <p>La interacción entre personalización y cantidades merece una mención aparte. En catálogo con ajuste de acabado, la cantidad mínima se fija por referencia y se cubre con facilidad en un lobby de tamaño medio; en diseño a medida, en cambio, la cantidad mínima pierde importancia y gana peso el coste de puesta en marcha: utillajes, plantillas de tapizado, planos de taller y el prototipo que el comité aprobará. Un mostrador a medida y un sofá a medida no comparten esa lógica: el mostrador es una pieza única donde el diseño es casi todo el coste, mientras que cada asiento repetido diluye la inversión inicial. Por eso los pliegos más eficaces mezclan niveles: a medida en las pocas piezas que definen la identidad de la marca, catálogo adaptado en las unidades repetitivas de espera, y catálogo puro en los complementos.</p>
+        <p>El error típico de pliego es pedir "estilo propio" con presupuesto de catálogo. Cuando el comité aprueba un diseño singular en la tercera ronda, la fábrica rehace prototipo y muestra, y ese trabajo aparece como cargo extra si la oferta lo excluyó. La regla práctica es declarar el nivel de personalización por familia antes de cotizar y exigir que la oferta lo repita explícitamente; si una propuesta no distingue los tres niveles, no se puede saber qué está comparando el comité.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué especificaciones invisibles elevan el precio sin verse en el plano?</h2>
+        <p>Tres capas de especificación no aparecen en la imagen de la propuesta y aun así deciden el precio. La capa estructural: secciones del bastidor, tipo de madera o multilaminado, y refuerzos en puntos de apoyo; un asiento de uso intensivo contract se ensaya bajo normas de asientos no domésticos, y cumplir el ensayo cuesta más que fabricar para uso residencial. La capa de confort: densidad y altura de espuma, tipo de suspensión del asiento y resistencia del relleno; una espuma de alta resiliencia conserva la forma miles de ciclos después, y su materia prima se paga en la oferta. La capa de cumplimiento: clasificación al fuego de tapicerías, ensayos de estructuras según referencias tipo <a href="https://www.bifma.org/">BIFMA</a> para asientos comerciales, y documentación de lotes que permite trazabilidad si aparece una reclamación.</p>
+        <p>Un caso de obra lo resume. Un lobby costero renovó su sala de espera con asientos de oferta económica sin ensayos citados; a los catorce meses, los apoyabrazos de las unidades junto a la ventana mostraban deformación y la cadena reordenó la compra completa, pagando dos veces el mismo paquete. La segunda oferta, con ensayos declarados y espuma de mayor densidad, costó un 18 % más por unidad y no generó ni una reclamación en los dos años siguientes. En mobiliario de lobby, la especificación invisible no es un extra: es lo que separa una compra de una recompra.</p>
+        <p>El orden de verificación también es un filtro de proveedores. Primero se revisa que la ficha técnica cite el ensayo con su identificación completa; después se aprueba la muestra física contra ese documento, no contra una foto; y solo entonces se autoriza la producción en serie, con inspección en proceso como punto de control intermedio. Un fabricante que resiste esa secuencia con documentación completa demuestra algo más importante que un precio: demuestra que su sistema de calidad puede sostener una reclamación con trazabilidad de lote. Las visitas a fábrica antes de emitir la orden sirven exactamente para comprobar ese sistema, no para ver la sala de exposiciones.</p>
+        <p>Para verificar esta capa, el pliego debe exigir ficha técnica con ensayo citado, muestra física aprobada antes de producción y derecho a inspección en fábrica. La guía sobre <a href="https://hymueble.com/recursos/banderas-rojas-presupuesto-muebles-cotizacion/">señales de alerta en presupuestos de muebles a medida</a> recoge precisamente los puntos donde estas capas suelen omitirse.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se comparan dos cotizaciones sobre la misma base?</h2>
+        <p>Comparar ofertas es un trabajo de normalización, no de aritmética. Antes de poner dos números lado a lado, el equipo debe uniformar cinco puntos: alcance de familias, nivel de personalización, especificación de asientos, condiciones de embalaje y punto de entrega. La tabla 3 propone el formato mínimo de comparación; se llena una fila por cada punto abierto y las diferencias dejan de ser opiniones para convertirse en preguntas concretas al proveedor.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Punto de comparación</th><th>Qué uniformar antes de comparar</th><th>Pregunta que cierra la brecha</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Punto de comparación">Alcance de familias</td><td data-label="Qué uniformar antes de comparar">Mismo listado de piezas en ambas ofertas</td><td data-label="Pregunta que cierra la brecha">¿Qué faltantes quedan fuera de la oferta y a qué precio?</td></tr>
+          <tr><td data-label="Punto de comparación">Personalización</td><td data-label="Qué uniformar antes de comparar">Mismo nivel declarado por familia</td><td data-label="Pregunta que cierra la brecha">¿La oferta incluye prototipo y muestra o se facturan aparte?</td></tr>
+          <tr><td data-label="Punto de comparación">Especificación de asientos</td><td data-label="Qué uniformar antes de comparar">Densidad de espuma y ensayo citado equivalentes</td><td data-label="Pregunta que cierra la brecha">¿Qué ficha técnica sustenta el asiento ofertado?</td></tr>
+          <tr><td data-label="Punto de comparación">Embalaje</td><td data-label="Qué uniformar antes de comparar">Mismo estándar de caja y paletizado</td><td data-label="Pregunta que cierra la brecha">¿El embalaje de exportación está incluido en el precio?</td></tr>
+          <tr><td data-label="Punto de comparación">Entrega</td><td data-label="Qué uniformar antes de comparar">Mismo Incoterm y puerto o ciudad</td><td data-label="Pregunta que cierra la brecha">¿Qué servicios locales quedan fuera de la cifra?</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD37-a266-s4.webp" alt="Dos carpetas de oferta con portadas en blanco sobre mesa de reunión junto a muestras de madera, tapicería y herrajes, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Ilustración generada con IA: dos ofertas solo son comparables después de uniformar alcance, especificación y condiciones; antes de eso, la diferencia de precio no significa nada.*</p>
+        <p>Dos hábitos administrativos sostienen esa comparación. El primero es el control de versiones: cada oferta se registra con su fecha y su alcance exacto, de modo que cuando el proveedor revisa una cifra quede claro qué línea cambió y por qué; una comparación entre versiones distintas de la misma oferta produce decisiones equivocadas con la misma facilidad que una comparación entre proveedores. El segundo es la acta de brechas: tras la reunión de comparación, cada diferencia que no se cierre con una respuesta escrita queda anotada como punto abierto con responsable y fecha. El pliego final debe heredar esas respuestas, no las suposiciones del comité.</p>
+        <p>Con la matriz llena, la comparación cambia de naturaleza. Las propuestas que parecían más baratas suelen revelar faltantes en embalaje o ensayos, y las que parecían caras demuestran alcance completo. Es el mismo principio del <a href="https://hymueble.com/recursos/presupuesto-ffe-hotel-tipo-habitacion/">desglose de presupuesto FF&amp;E por tipo de habitación</a>: la comparación útil no pregunta cuánto cuesta cada oferta, sino qué incluye cada cifra.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué costes aparecen después de la firma y cómo se anticipan?</h2>
+        <p>Los sobrecostes de un paquete de lobby casi nunca nacen en la fábrica; nacen en la frontera entre la oferta y la obra. El primero es el embalaje y la logística: una cifra FOB no incluye el contenedor consolidado, el seguro ni la entrega en obra, y esas partidas pueden sumar un bloque importante del total. El segundo es el montaje: un lobby se instala en un hotel en operación o en una apertura con calendario comprimido, y la coordinación con la cuadrilla local, los ascensores de carga y los horarios de trabajo nocturno se presupuesta o se sufre. El tercero son las rondas de revisión: cada cambio de acabado después de la aprobación de muestra reabre producción, y las ofertas suelen incluir un número limitado de rondas.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD37-a266-s5.webp" alt="Caja de exportación de contrachapado con muebles de lobby envueltos en espuma y flejado sobre pallets en almacén de fábrica, sin personas ni textos" width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Ilustración generada con IA del embalaje de exportación: caja de madera, esquineras y flejado; pedirlo fuera de la oferta es la forma más común de inflar el coste final.*</p>
+        <p>Un equipo de compras que planifica bien estas partidas trabaja en tres documentos paralelos: la oferta con alcance cerrado, el plan de embalaje con bultos por contenedor y el cronograma de recepción en obra con lista de verificación por bulto. El orden de descarga sigue el orden de instalación, cada caja llega identificada por zona y la recepción en obra se firma con la lista de pendientes mínima. El estándar de embalaje que hace posible esa recepción se detalla en la guía de <a href="https://hymueble.com/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación para proyectos hoteleros</a>.</p>
+        <p>La elección del Incoterm merece una decisión consciente en lugar de una costumbre. Comprar FOB da control sobre el transitario y suele abaratar el flete en volúmenes altos, pero traslada al equipo del hotel la gestión documental y el riesgo en tránsito; comprar entregado en obra simplifica la administración y traslada ese riesgo al fabricante, con un precio que lo refleja. Ninguna de las dos es mejor en abstracto: la elección correcta depende de si el equipo de compras tiene experiencia en importación y de si el calendario de apertura tolera sorpresas logísticas. Lo que no admite opción es comparar ofertas en términos distintos: el Incoterm se fija antes de pedir precio y se repite en cada línea de la comparación.</p>
+        <p>La recepción en obra cierra el ciclo y también alimenta la siguiente cotización. Firmar la recepción con una lista de verificación por bulto, fotografiar los embalajes antes de abrirlos y registrar cada incidencia con su número de lote convierte la entrega en evidencia para las próximas compras; el historial de qué familia llegó completa, cuál generó pendientes y cómo respondió el fabricante vale más que cualquier referencia comercial al momento de comparar la siguiente oferta.</p>
+        <p>Para un proyecto con calendario apretado, el plazo declarado también es parte del precio. Un plazo de producción de 45-60 días desde la aprobación de planos y muestras es un compromiso verificable; una fecha sin condiciones suele esconder semanas de aprobaciones que nadie presupuestó. Renovar un lobby por fases, como plantea la guía de <a href="https://hymueble.com/recursos/renovacion-hotelera-fases-presupuesto/">renovación hotelera por fases</a>, permite separar la compra en lotes cotizables de forma independiente sin detener la operación.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>El siguiente paso</h2>
+        <p>Una cotización de lobby bien pedida deja de ser una cifra y se convierte en un documento de decisiones: familias, niveles, ensayos, embalaje y plazos declarados. Con esa base, comparar propuestas deja de ser una discusión de descuentos y pasa a ser una revisión técnica de alcances. Si tiene el listado por zonas o los planos del proyecto, el equipo puede revisar el alcance antes de emitir precio y preparar una oferta comparable desde la primera ronda.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Revise el alcance de su lobby antes de cotizar"
+      text="Envíe el listado por zonas o los planos del proyecto desde nuestro formulario en /contacto/. Revisaremos familias, nivel de personalización y documentos de control para preparar una oferta comparable desde la primera ronda."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
