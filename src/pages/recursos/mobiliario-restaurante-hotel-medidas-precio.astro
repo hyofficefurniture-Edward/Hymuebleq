@@ -1,0 +1,434 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario de restaurante de hotel: medidas y precio por comensal";
+const pageDescription = "Qué medidas definen un comedor de hotel que funciona, cómo se distribuye el precio del mobiliario por comensal y qué partida decide el desayuno.";
+const keywords = ["mobiliario restaurante hotel", "medidas mesas restaurante", "precio por comensal", "distribución comedor hotel", "sillas restaurante hotel", "mobiliario contract"];
+const canonicalPath = "https://hymueble.com/recursos/mobiliario-restaurante-hotel-medidas-precio/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD38-a275-hero.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-11";
+const dateModified = "2026-11-11";
+
+const faqItems = [
+    { question: "¿Cuánto espacio por comensal se reserva en un comedor de hotel?", answer: "La referencia operativa son 60 cm de canto de mesa por persona en servicio estándar y 70 cm en montajes de alta cocina. A eso se suman las medidas de circulación: 90 cm de pasillo de servicio y 45 cm entre respaldos de mesas enfrentadas. El número de cubiertos final lo decide la combinación de las dos, no el ancho de mesa aislado." },
+    { question: "¿Cuántos cubiertos entran por metro cuadrado de comedor?", answer: "Depende del formato y del nivel de servicio, pero la secuencia correcta no parte del metro cuadrado: parte del plano con las mesas dibujadas en posición de uso y los pasillos trazados encima. Una banda de rectangulares rinde más cubiertos por metro cuadrado que un campo de redondas, y las banquetas de ventana suman cubiertos sin consumir pasillo." },
+    { question: "¿Qué altura deben tener las mesas y las sillas de comedor?", answer: "La mesa de comedor se mueve entre 74 y 76 cm y el asiento entre 45 y 48 cm, con 25–30 cm libres entre tablero y asiento. Las tablas de salón de 90 cm y las barras de 105 cm exigen familias de asientos propias; si el proyecto mezcla alturas, cada altura se declara en el pliego porque multiplica referencias." },
+    { question: "¿Qué ensayos debe tener una silla de comedor de hotel?", answer: "Ensayo de resistencia y durabilidad bajo normas de asientos no domésticos, con informe citado en la ficha técnica; espuma de alta resiliencia y tapicería con resistencia a la abrasión declarada en ciclos Martindale. Cada requisito se acredita con informe y muestra física, no con declaración de catálogo." },
+    { question: "¿El buffet se cotiza junto con el comedor o aparte?", answer: "Junto, pero desglosado. El buffet comparte proveedor, acabados y logística con el resto del paquete, y cotizarlo en el mismo lote mejora el precio y homologa acabados; el desglose por familia permite aprobar, posponer o recortar la estación sin renegociar el conjunto." },
+    { question: "¿Cómo se compara el precio de dos ofertas de comedor?", answer: "Sobre el mismo recuento de cubiertos y el mismo listado de familias, y en la unidad final de precio por comensal con desglose. Comparar cifras totales sin normalizar alcance es la causa más común de \"ofertas baratas\" que terminan costando más tras los faltantes." },
+    { question: "¿Cuánto tarda la producción de un paquete de comedor?", answer: "Un paquete con personalización media se mueve en un plazo de producción de 45-60 días desde la aprobación de planos y muestra, al que se suma el tránsito marítimo y la recepción en obra. El reloj arranca con la aprobación, no con la firma, y esa distinción conviene escribirla en la oferta." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: { "@type": "Organization", name: "Hymueble", url: "https://hymueble.com/" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: { "@type": "ImageObject", url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp" },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD38-a275-hero.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD38-a275-s1.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD38-a275-s4.webp"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario hotelero · Restaurante &middot; Publicada el 11 de noviembre de 2026</p>
+          <h1>Mobiliario de restaurante de hotel: medidas y precio por comensal</h1>
+          <p>El restaurante de un hotel es la única zona común que factura todas las mañanas. Eso cambia la lógica de su amueblamiento: no se especifica como una sala bonita, se especifica como una máquina de cubiertos, y la métrica que ordena todas las decisiones es el precio por comensal. Dos comedores de superficie casi idéntica pueden rendir 90 cubiertos o 140 cubiertos según el ancho de mesa, el ancho de pasillo y la forma de las mesas, y esa diferencia de capacidad se decide en la fase de distribución, semanas antes de que exista una oferta de mobiliario. Este texto recorre las medidas que definen esa capacidad, cómo se reparte el coste del paquete entre comensales y qué partida del pliego decide si el desayuno fluye o se convierte en cuello de botella.</p>
+          <p>El que llega a la compra de un comedor con el plano en la mano tiene una ventaja concreta: puede pasar de pedir "mobiliario de restaurante" a pedir un número de cubiertos con sus medidas, y toda la conversación de precios cambia de naturaleza. Un comedor se compra por familias —mesas, asientos, banquetas de ventana, buffet, complementos— pero se justifica por cubiertos, y el equipo que une las dos cosas antes de pedir oferta es el que negocia sobre una base comparable.</p>
+          <p>Hongye Furniture Group fabrica mobiliario contract desde 1996 en plantas que suman más de 300.000 m² de producción, con 1.000+ proyectos entregados en más de 50 países, y en los comedores de hotel esa escala deja una lección que conviene tener clara desde el inicio: el coste del comedor no se reparte por metros cuadrados, se reparte por cubiertos, y las decisiones de distribución que elevan el número de cubiertos suelen costar menos que las decisiones decorativas que no mueven esa cifra.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD38-a275-hero.webp" alt="Comedor de hotel con mesas de servicio de desayuno en primer plano y mostrador de buffet al fondo bajo luces lineales, sin personas ni textos" width="1280" height="943" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuánto espacio de mesa necesita cada comensal?</h2>
+        <p>La medida que gobierna el comedor es el ancho de mesa por comensal. La referencia operativa más extendida sitúa 60 cm de canto de mesa por persona en servicio estándar, y 70 cm en montajes de alta cocina con copas y vajilla completa. Con esa medida se deducen los formatos: una mesa rectangular de 120 × 70 cm cubre dos comensales por lado; una redonda de 90 cm cubre cuatro en desayuno; una redonda de 120 cm cubre cinco o seis en servicio de banquete. El ancho cambia poco entre formatos; lo que cambia la capacidad es la profundidad del cuadrado que cada mesa ocupa, y ahí la redonda es la más generosa con la circulación y la rectangular la más eficiente por metro cuadrado.</p>
+        <p>La tabla 1 resume los formatos que aparecen en casi todos los pliegos de comedor de hotel y las medidas que conviene fijar antes de cotizar. Si el pliego declara estos formatos por zona, la fábrica puede responder con equivalentes de catálogo en lugar de precios genéricos que después nadie puede verificar.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Formato de mesa</th><th>Medida típica</th><th>Cubiertos</th><th>Observación de especificación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Formato de mesa">Rectangular 2 personas</td><td data-label="Medida típica">120 × 70 cm</td><td data-label="Cubiertos">2</td><td data-label="Observación de especificación">La más flexible para ventanas y pasillos laterales</td></tr>
+          <tr><td data-label="Formato de mesa">Rectangular 4 personas</td><td data-label="Medida típica">120 × 80 cm</td><td data-label="Cubiertos">4</td><td data-label="Observación de especificación">Junta recta para agrupar en bandas de evento</td></tr>
+          <tr><td data-label="Formato de mesa">Redonda desayuno</td><td data-label="Medida típica">Ø 90 cm</td><td data-label="Cubiertos">4</td><td data-label="Observación de especificación">Base pedestal: evita choque de patas con sillas vecinas</td></tr>
+          <tr><td data-label="Formato de mesa">Redonda banquete</td><td data-label="Medida típica">Ø 120 cm</td><td data-label="Cubiertos">5–6</td><td data-label="Observación de especificación">Servible con mantel; reserva para montajes de evento</td></tr>
+          <tr><td data-label="Formato de mesa">Alta barra (poseur)</td><td data-label="Medida típica">Ø 60 cm, h 105 cm</td><td data-label="Cubiertos">2 de pie</td><td data-label="Observación de especificación">Zonas de bar y espera; no sustituye cubiertos de comedor</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <p>La altura es la segunda medida que se fija por escrito. La mesa de comedor se mueve entre 74 y 76 cm, y el asiento que la acompaña se coloca entre 45 y 48 cm de altura de asiento, dejando entre 25 y 30 cm libres entre tablero y asiento para que la silla entre con abrigo. Si el proyecto mezcla alturas —comedor, salón de desayuno con tablas de 90 cm, barra— cada altura exige su propia familia de asientos, y ese matiz conviene declararlo en el pliego porque duplica referencias y mueve el precio por unidad.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se calcula el precio por comensal del mobiliario de comedor?</h2>
+        <p>Dividir el total de la oferta entre el número de cubiertos convierte una cifra abstracta en una unidad de negocio, y esa unidad permite comparar propuestas y presupuestar. El cálculo correcto no es el total dividido por el número de sillas: el paquete incluye familias que no se sientan en ninguna mesa —buffet, banquetas, complementos, carros de desayuno— y todas ellas sirven a los cubiertos de la sala. La secuencia práctica es fijar primero el número de cubiertos por zona con el plano, después cerrar el listado por familias y solo al final dividir: precio por comensal = total ofertado con alcance cerrado ÷ cubiertos servidos.</p>
+        <p>La tabla 2 muestra cómo se reparte típicamente el paquete de un comedor de 120 cubiertos y qué parte del coste concentra cada familia. Las proporciones exactas varían con el nivel de personalización, pero el orden se mantiene en la mayoría de los proyectos de exportación: los asientos son la partida dominante, seguidos por las mesas y por el conjunto de buffet.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Familia del paquete</th><th>Unidades típicas (120 cubiertos)</th><th>Peso relativo en el total</th><th>Driver principal del coste</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Familia del paquete">Asientos de comedor</td><td data-label="Unidades típicas (120 cubiertos)">110–130</td><td data-label="Peso relativo en el total">La mayor partida</td><td data-label="Driver principal del coste">Estructura, espuma, metro de tapicería, ensayo</td></tr>
+          <tr><td data-label="Familia del paquete">Mesas y bases</td><td data-label="Unidades típicas (120 cubiertos)">30–40</td><td data-label="Peso relativo en el total">Media</td><td data-label="Driver principal del coste">Tablero, canto, tipo de base, fijación</td></tr>
+          <tr><td data-label="Familia del paquete">Banquetas de ventana y lounge</td><td data-label="Unidades típicas (120 cubiertos)">8–15</td><td data-label="Peso relativo en el total">Media-baja</td><td data-label="Driver principal del coste">Longitud, cojines, fixación a pared</td></tr>
+          <tr><td data-label="Familia del paquete">Buffet y estaciones de desayuno</td><td data-label="Unidades típicas (120 cubiertos)">2–4 módulos</td><td data-label="Peso relativo en el total">Media</td><td data-label="Driver principal del coste">Revestimiento, iluminación integrada, logística</td></tr>
+          <tr><td data-label="Familia del paquete">Complementos (carros, percheros, biombo)</td><td data-label="Unidades típicas (120 cubiertos)">Variado</td><td data-label="Peso relativo en el total">Baja</td><td data-label="Driver principal del coste">Piezas especiales, cantidad mínima</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <p>Un ejemplo con números servibles aclara el uso de la unidad. Un hotel urbano en Bogotá renovó un comedor de 120 cubiertos con asientos de catálogo adaptado y mesas rectangulares de formato estándar; el paquete completo, con embalaje de exportación y ensayos citados, se movió alrededor de una cifra que, dividida por cubiertos, quedó por debajo del coste por comensal de la primera propuesta —más baja en total, pero con faltantes de buffet y banquetas que habrían entrado como cargos adicionales. La unidad por comensal hizo visible lo que la cifra total escondía, y es el mismo principio de comparación sobre alcance cerrado que aplica la guía de <a href="https://hymueble.com/recursos/presupuesto-ffe-hotel-tipo-habitacion/">presupuesto FF&amp;E por tipo de habitación</a>.</p>
+        <p>El precio por comensal también sirve para defender el presupuesto ante la dirección. Cuando el comité discute una partida de buffet que parece cara, la pregunta correcta no es cuánto cuesta el buffet, sino cuántos cubiertos de fluidez de desayuno sostiene; una estación de buffet bien especificada descongestiona el pico de las 7:30 y evita la segunda ronda de compras que padecen los comedores que la recortaron. La cifra por comensal convierte esa discusión de gusto en aritmética.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué medidas de circulación y pasillo de servicio sostiene la operación?</h2>
+        <p>El segundo bloque de medidas decide si la sala funciona cuando está llena. El pasillo de servicio necesita 90 cm de ancho libre para que un camarero con bandeja pase tras los comensales sentados, y 120 cm en las rutas principales donde dos personas se cruzan; entre respaldos de sillas de mesas enfrentadas convienen 45 cm para que el huésped se levante sin empujar al vecino. El cálculo se hace mesa a mesa sobre el plano: se dibuja la silla retirada en posición de uso, no la silla metida, y sobre ese contorno se trazan los pasillos. Un comedor que se dibuja con sillas metidas gana cubiertos en el plano y los pierde en la operación, porque el servicio se estrecha en el pico del desayuno.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD38-a275-s1.webp" alt="Pasillo de circulación ancho junto a bandas de mesas de ventana con sillas tapizadas en un comedor de hotel, sin personas ni textos" width="1280" height="958" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Pasillo junto a la banda de ventanas: las rutas de servicio se trazan sobre el plano con la silla en posición de uso, no con la silla metida.*</p>
+        <p>Las zonas de transición son las que más cubiertos cuestan y las que nadie especifica. La entrada del comedor necesita una zona de espera con lista de fin de semana, la conexión con la cocina necesita una puerta de servicio con paso de carros, y la estación de café necesita un perímetro libre que no interrumpa ninguna ruta. En los proyectos que llegan a nuestra fábrica con plano revisado, la distribución que mejor rinde suele combinar tres decisiones: mesas rectangulares en bandas paralelas al pasillo principal, redondas en las zonas de esquina donde la circulación gira, y banquetas de ventana que suman cubiertos sin consumir pasillo. La sala que mezcla formatos con criterio supera en capacidad a la que apuesta todo a un solo formato, y lo hace sin sacrificar el ancho de ruta que exige el servicio.</p>
+        <p>La accesibilidad entra en este mismo bloque y no en el de acabados. Una parte de las mesas debe dejar paso para silla de ruedas con la silla retirada, con altura libre bajo tablero suficiente y una ruta accesible desde la entrada hasta la mesa sin pasar por escalones. Normas de accesibilidad como las que rige cada país de destino definen la proporción mínima de mesas adaptadas; el error típico es descubrirlo en la inspección de apertura, cuando reordenar el plano ya no es gratis.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué sillas y mesas aguantan el ritmo del desayuno?</h2>
+        <p>El desayuno es el pico más duro que soporta el mobiliario de un hotel: en dos horas, cada silla se usa más veces que en una tarde entera de restaurante urbano. El asiento de comedor de hotel se especifica, por eso, bajo normas de asientos no domésticos —las referencias europeas de resistencia y durabilidad tipo <a href="https://www.bifma.org/">EN 16139</a> y sus equivalentes comerciales—, con estructura reforzada en la unión pata-asiento, espuma de alta resiliencia que recupera forma tras miles de ciclos y tapicería con resistencia a la abrasión declarada en ciclos Martindale. La guía de <a href="https://hymueble.com/recursos/sillas-restaurante-como-elegir/">cómo elegir sillas de restaurante</a> detalla los umbrales que conviene exigir por nivel de uso.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD38-a275-s2.webp" alt="Mesa redonda de restaurante de hotel con montaje de servicio completo y sillas con brazos tapizadas, sin personas ni textos" width="1600" height="944" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Mesa y asiento en servicio real: la especificación que no se ve en la foto —unión pata-asiento reforzada, espuma de alta resiliencia y glides de repuesto— es la que decide la recompra.*</p>
+        <p>Las mesas pagan su propia factura de operación. El tablero de comedor de hotel recibe manteles, bandejas calientes y desinfectantes varias veces al día, y el canto es el primer punto de fallo: un canto de ABS bien pegado resiste años de fregado, un canto fino sin preparación abre en el primer invierno de calefacción. La base merece la misma atención: la base pedestal libera las patas de los comensales y facilita agrupar redondas, pero exige fijación al tablero que resista el desequilibrio de carga cuando alguien se apoya en el canto. Para las mesas rectangulares que se agrupan en eventos, la junta recta y el mismo espesor de tablero entre referencias es lo que permite montar bandas sin escalones, un detalle que los salones de evento del hotel agradecen cada semana.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD38-a275-s5.webp" alt="Detalle del canto ABS y base pedestal de una mesa de comedor de hotel con tablero de laminado y fijación reforzada, sin personas ni textos" width="1536" height="942" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Ilustración generada con IA del tablero y su base: el canto de ABS bien pegado y la fijación de la base pedestal son los puntos que abren la recompra si se recortan.*</p>
+        <p>El ruido es la especificación que separa un comedor serio de uno improvisado. Una silla que cruje en la unión del bastidor termina reproducida cien veces en la sala, y el huésped lo escucha aunque no lo nombre; el diagnóstico y las causas de ese crujido se detallan en la guía de <a href="https://hymueble.com/recursos/por-que-crujen-sillas-hotel-bastidor/">por qué crujen las sillas de hotel</a>. Glides de repuesto en la compra inicial, doble golpe de tornillería en las uniones críticas y una muestra aprobada que se ensaya en fábrica antes de la serie son las tres partidas que evitan la recompra.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué cambia en la especificación del buffet y del desayuno?</h2>
+        <p>El buffet concentra la mitad de los problemas operativos del comedor en una línea de metros. La primera medida es el doble frente: la estación necesita espacio de reposición por detrás —aproximadamente 90–120 cm de pasillo de staff— además del frente de servicio al huésped, y ese ancho extra solo aparece en el plano si alguien lo pide. La segunda es la separación por flujos: café, pan, fría y caliente se ordenan para que el huésped no cruce dos veces la misma fila, y la estación de bebidas se separa del buffet caliente porque es el punto de mayor congestión por litro servido.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD38-a275-s3.webp" alt="Estación de buffet de hotel con módulos de exhibición en línea, tableros de piedra y pasillo de reposición detrás, sin personas ni textos" width="1536" height="942" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Ilustración generada con IA de una línea de buffet: el frente que ve el huésped es solo la mitad del módulo; el pasillo de reposición por detrás decide si el desayuno fluye.*</p>
+        <p>El mobiliario del buffet se especifica como casogoods de uso intensivo y no como mobiliario decorativo. El tablero de servicio resiste calor y manchas, la iluminación integrada se protege con difusores lavables, las esquinas se redondean en el flujo del huésped y la logística pesa: un módulo de buffet con piedra y estructura viaja embalado en caja de madera y es la primera pieza que se sube al contenedor. Para el equipo de compras, la consecuencia es simple: el buffet se cotiza con su embalaje y su plan de montaje incluidos, porque fuera de oferta esos puntos reaparecen como cargos. El estándar de embalaje que protege estas piezas se detalla en la guía de <a href="https://hymueble.com/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación para proyectos hoteleros</a>.</p>
+        <p>Los complementos de desayuno completan el paquete: carros de reposición que entren por las puertas de servicio reales del proyecto, consolas laterales para vajilla de repuesto, biombo o estantería baja que ordene la fila sin cerrar la vista. Son piezas de poca factura individual y alto impacto operativo, y son precisamente las que más faltan en las ofertas más bajas: un comedor sin carros suficientes convierte cada reposición en un trasiego por el comedor lleno.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se compara una oferta de comedor sobre la misma base?</h2>
+        <p>Comparar dos ofertas de comedor exige normalizar antes de sumar. La primera normalización es el número de cubiertos: una oferta para 110 cubiertos no se compara con otra para 140, y en los paquetes donde el alcance diverge las cifras totales se separan un 30-50 % sin que exista una diferencia real de calidad; el paso previo a toda comparación es exigir que ambas se formulen sobre el mismo plano y el mismo recuento. La segunda es el nivel de personalización por familia: asientos de catálogo adaptado frente a diseño propio no comparten base de coste. La tercera es la unidad de comparación misma: el precio por comensal, con el desglose de qué familias entran en la cifra, es el denominador común que hace legible la diferencia.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD38-a275-s4.webp" alt="Dos planes de distribución de comedor sobre mesa de proyecto con escalímetro y muestras de acabado, sin personas ni textos" width="1536" height="942" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Ilustración generada con IA de la comparación de distribución: dos ofertas solo son comparables sobre el mismo recuento de cubiertos y el mismo listado de familias.*</p>
+        <p>El desglose línea a línea cierra la comparación. Cada familia se contrasta por separado —asientos contra asientos, buffet contra buffet— y las diferencias que no se explican con especificación se convierten en preguntas escritas al proveedor: qué espuma, qué ensayo, qué embalaje, qué plazo. La secuencia de revisión que sostiene ese diálogo es la misma que aplica el proceso de compras FF&amp;E en sus etapas de oferta técnica y negociación, detallado en la guía de <a href="https://hymueble.com/recursos/proceso-compras-ffe-hoteles-7-etapas/">proceso de compras FF&amp;E en 7 etapas</a>: primero alcance, después especificación y solo al final cifra.</p>
+        <p>Una advertencia final sobre la unidad: el precio por comensal premia a la oferta densa, y la densidad tiene un límite operativo. Un comedor que gana cubiertos sacrificando el pasillo de servicio a 70 cm rinde mejor en el plano y peor en la operación, con mesas que se sirven más despacio y una rotación que cae justo en el pico. La cifra correcta no es la de más cubiertos por metro cuadrado, sino la de más cubiertos servidos sin fricción, y esa solo se verifica con las medidas de circulación de las secciones anteriores firmadas en el plano.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>El siguiente paso</h2>
+        <p>Un comedor bien especificado se describe con tres números que se sostienen entre sí: cubiertos servidos, ancho de mesa por comensal y precio por comensal con alcance cerrado. Cuando esos tres números están firmados en el pliego, la oferta deja de ser una discusión de descuentos y se convierte en una revisión técnica de distribución. Si tiene el plano del comedor y el recuento de cubiertos previsto, el equipo puede revisar la distribución por zonas y preparar una oferta comparable desde la primera ronda.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Revise la distribución de su comedor antes de cotizar"
+      text="Envíe el plano del comedor y el recuento de cubiertos previsto desde nuestro formulario en /contacto/. Revisaremos ancho de mesa por comensal, pasillos de servicio y familias del paquete para preparar una oferta comparable desde la primera ronda."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
