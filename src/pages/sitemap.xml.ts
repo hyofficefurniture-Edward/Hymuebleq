@@ -1,3 +1,4 @@
+import projectLibrary from '../data/project-library.json';
 import type { APIRoute } from "astro";
 import { catalogCategoryDetails } from "../data/catalogReferences";
 import { categories, hotelCatalog, projects } from "../data/site";
@@ -198,8 +199,9 @@ export const GET: APIRoute = ({ site }) => {
     ...hotelCatalog.map((item) => item.href),
     ...catalogCategoryDetails.map((item) => `/catalogo/${item.sector}/${item.slug}/`),
     ...projects.map((project) => project.href),
+    ...projectLibrary.map((project) => `/proyectos/biblioteca/${project.id}/`),
   ];
-  const urls = [...new Set(paths)].sort();
+  const urls = [...new Set(paths.map((route) => new URL(route, siteUrl).toString()))].sort();
   const items = urls
     .map((route) => {
       const loc = new URL(route, siteUrl).toString();
