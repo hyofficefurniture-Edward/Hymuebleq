@@ -6,3 +6,7 @@ export function getStaticPaths(){return projects.map(c=>({params:{id:c.id},props
 const {c}=Astro.props;
 ---
 <Layout title={c.name+' — mobiliario de proyecto'} description={c.name+' en '+c.country+': referencia de mobiliario, imágenes y preparación de una consulta por proyecto.'} image={c.image} type="article"><Library lang="es" base="/" id={c.id}/></Layout>
+
+<style is:global>
+@media (min-width:1081px) and (max-width:1440px){.header .showroom-nav{display:none}.header .nav-shell{gap:12px}.header .nav-link{padding-inline:8px}}
+</style>
