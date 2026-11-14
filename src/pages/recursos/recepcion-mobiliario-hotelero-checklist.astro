@@ -1,0 +1,429 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Recepción de mobiliario hotelero: qué revisar antes de firmar el acta";
+const pageDescription = "Checklist de recepción de mobiliario hotelero: descarga, conteo por habitación, defectos frecuentes y cierre del acta sin bloquear la apertura del hotel.";
+const keywords = ["recepción mobiliario hotelero", "acta de recepción hotel", "checklist mobiliario contract", "inspección muebles hotel", "montaje hotelero", "lista de pendientes"];
+const canonicalPath = "https://hymueble.com/recursos/recepcion-mobiliario-hotelero-checklist/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD39-a281-hero.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-14";
+const dateModified = "2026-11-14";
+
+const faqItems = [
+    { question: "¿Cuánto tiempo debe durar la inspección de recepción de un lote de habitaciones?", answer: "Para un lote de 30-50 habitaciones, entre tres y cinco días de inspección por fases es un rango realista. Un lote más pequeño puede cerrarse en dos días si el mobiliario es sencillo y el acceso a las plantas está libre." },
+    { question: "¿Se puede firmar el acta con pendientes abiertos?", answer: "Sí, y en la mayoría de proyectos es lo recomendable. El acta con reservas permite liberar la apertura y mantener una retención de pago hasta que los pendientes se resuelvan. Lo que no conviene es firmar sin lista de pendientes." },
+    { question: "¿Quién paga la reparación de un golpe detectado en la recepción?", answer: "Depende de la evidencia. Si el embalaje está intacto, se trata como defecto de fabricación y lo asume el proveedor. Si el embalaje está dañado, entra el seguro de transporte. La foto del bulto cerrado antes de abrirlo es la prueba que decide." },
+    { question: "¿Es necesario desembalar todo el mobiliario en la recepción?", answer: "No es necesario abrir el cien por cien, pero sí una caja por tipología y todas las que presenten golpes o humedad en el embalaje. El resto puede quedar cerrado hasta el momento del montaje, siempre que el packing list esté cotejado." },
+    { question: "¿Qué hacer si falta un herraje o un accesorio?", answer: "Se anota como pendiente crítico si bloquea el montaje, se solicita el envío urgente y se documenta la referencia exacta. Si el faltante afecta a una sola habitación, el montaje puede continuar en el resto de la planta." },
+    { question: "¿Cómo se controla el color de la tapicería entre lotes?", answer: "Se compara la pieza instalada con la muestra patrón aprobada, poniendo ambas a la luz del ventanal. Si hay diferencia visible, se revisa el número de baño de tela y se separa el lote para que no se mezcle en la misma zona." },
+    { question: "¿Qué documentación debe entregarse al cerrar la recepción?", answer: "Fichas técnicas, instrucciones de limpieza y mantenimiento, certificados de materiales, listado de repuestos con referencias y el acta con la lista de pendientes cerrada o con plazos comprometidos." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: { "@type": "Organization", name: "Hymueble", url: "https://hymueble.com/" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: { "@type": "ImageObject", url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp" },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD39-a281-hero.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD39-a281-s1.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD39-a281-s4.webp"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario hotelero &middot; Proyectos &middot; Publicada el 14 de noviembre de 2026</p>
+          <h1>Recepción de mobiliario hotelero: qué revisar antes de firmar el acta</h1>
+          <p>La recepción es el momento en que un proyecto de mobiliario deja de ser una promesa de fábrica y se convierte en inventario del hotel. Todo lo que no se detecte en esas horas se convierte después en una discusión sobre responsabilidades, en una habitación fuera de servicio o en una factura adicional de montaje. En 1.000+ proyectos acompañados desde 1996, la diferencia entre una apertura tranquila y una semana de retrasos casi nunca está en la calidad del mueble: está en si alguien revisó con método antes de firmar.</p>
+          <p>Esta guía describe el orden de revisión que usamos en obra cuando llega un contenedor con mobiliario de habitaciones, baños, pasillos y áreas comunes. No es una lista para imprimir y marcar sin pensar; es una secuencia con criterio, pensada para que el acta refleje lo que realmente se recibió y para que la lista de pendientes tenga dueño y fecha.</p>
+          <p>El orden importa porque la recepción se hace con el reloj en contra. El camión cobra estadía, la cuadrilla espera instrucciones y el hotel quiere ver su planta terminada. Con una secuencia acordada, esas presiones se convierten en rutina; sin ella, se convierten en firmas apresuradas.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD39-a281-hero.webp" alt="Descarga de mobiliario hotelero en obra con bultos identificados por tipología" width="1536" height="943" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se revisa primero cuando el contenedor llega a obra?</h2>
+        <p>Antes de abrir una sola caja conviene revisar el contenedor por fuera. El flejado, los precintos y el estado de las puertas cuentan la historia del trayecto: un precinto cortado, una esquina abollada o humedad en el piso del contenedor anuncian un problema que después aparecerá en el inventario. Hacemos fotografía del precinto, del número de contenedor y de cualquier golpe visible, y esa evidencia se adjunta al parte de recepción antes de que el transportista se retire.</p>
+        <p>Después se coteja el packing list contra lo que se ve. No contra lo que debería haber: contra lo que hay. En un lote típico de habitaciones, el packing list viene organizado por tipología y por planta, y esa organización debe coincidir con la del camión. Cuando no coincide, no se discute en el muelle; se anota la diferencia y se decide si se descarga igual o se separa el bulto para inspección posterior. Descargar sin cotejar es la forma más rápida de perder una referencia durante tres días.</p>
+        <p>El embalaje también informa. Un palet flejado con esquineros de cartón protege bien un lote de mesitas, pero no sirve para una cabecera de dos metros; una caja de madera con espuma interior cuesta más y evita el golpe en el canto que después nadie sabe explicar. Antes de la descarga conviene identificar qué bultos son rígidos y cuáles se pueden apilar, porque el orden de descarga determina el orden de almacenaje y, al final, el orden de montaje. Un camión descargado sin criterio obliga a reorganizar el almacén al día siguiente, con el doble de manipulación y el triple de roces.</p>
+        <p>El tercer paso es el espacio. Un palet de cabeceros necesita una zona seca y con acceso para una transpaleta; un lote de mesitas de noche no resiste el sol directo ni el tránsito de una cuadrilla de yeso. Definir el almacén provisional antes de descargar evita el escenario clásico: cajas apiladas en un pasillo que después hay que mover dos veces, con el consiguiente roce en las esquinas. En hoteles en operación, ese almacén debe estar además fuera del recorrido de huéspedes.</p>
+        <p>La aclimatación es parte de la recepción. Un mueble que viajó tres semanas en un contenedor llega con una humedad distinta a la de la obra, y si se instala de inmediato aparece el alabeo de puertas y los huelgos irregulares que el cliente atribuye a la fábrica. Dejar el lote entre veinticuatro y cuarenta y ocho horas en el almacén provisional, con el embalaje abierto por un lateral y sin corrientes directas, estabiliza el tablero. Ese tiempo se planifica, no se improvisa: en un hotel en operación, el almacén debe ventilar sin abrirse al pasillo de huéspedes.</p>
+        <p>La humedad es el enemigo silencioso de la recepción. Los tableros y las chapas naturales absorben agua en trayectos marítimos largos, y el daño no siempre se ve el primer día. Abrimos al menos una caja por tipología para medir humedad con un higrómetro de contacto y comparamos con la lectura de fábrica. Si la diferencia es grande, se extiende la inspección a todo el lote antes de firmar cualquier conformidad.</p>
+        <p>El criterio de inspección tampoco se improvisa en obra. Antes de la descarga acordamos con el cliente un protocolo escrito que toma como referencia los criterios de control de producto recibido de la norma <a href="https://www.iso.org/iso-9001-quality-management.html">ISO 9001</a>, adaptados al mobiliario: muestreo por tipología, criterios de aceptación y registro fotográfico obligatorio. Ese documento evita la discusión más habitual de la recepción, que no es sobre la calidad del mueble sino sobre qué se considera aceptable. Con criterios escritos, un rayón de dos centímetros se acepta o se rechaza antes de abrir la primera caja, y no depende del humor de quien inspecciona esa mañana.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se organiza la recepción por fases y por habitaciones?</h2>
+        <p>La recepción de un hotel no se hace de una vez. Se hace por fases, y cada fase tiene un alcance distinto. En proyectos de 30-50 habitaciones por lote, el orden que mejor funciona es: estructura y herrajes primero, acabados después, tapicería al final. Así los muebles que se golpean durante el montaje no son los que tienen tela o piel.</p>
+        <p>La primera fase verifica lo estructural: que el armario tenga sus bisagras y su kit de fijación, que la cabecera traiga sus anclajes, que el minibar llegue con su rejilla de ventilación y su manual. Faltantes de herrajes son el defecto más común en recepción y el más caro de resolver después, porque obligan a una compra urgente fuera de contrato o a una espera de semanas.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD39-a281-s1.webp" alt="Inspección de herrajes y anclajes sobre mesa de trabajo en obra" width="1536" height="943" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Inspección de herrajes y anclajes sobre mesa de trabajo.*</p>
+        <p>La segunda fase revisa acabados con luz rasante. Un rayón en un canto de chapa se ve con linterna a 30-50 centímetros y no se ve con luz cenital. Este detalle cambia por completo la tasa de defectos aceptados: en la misma habitación, la inspección con luz frontal detecta entre tres y cinco veces más marcas que una revisión a simple vista. Por eso pedimos que la cuadrilla de recepción lleve linterna y una plantilla de cartón con las esquinas críticas.</p>
+        <p>La tercera fase es la tapicería y el montaje final. Aquí se revisa costura, alineación de trama, tensión del relleno y coincidencia de color entre piezas del mismo ambiente. Dos sofás del mismo pedido pueden llegar con lotes de tela distintos si el proveedor no reservó tela del mismo baño; ese es un control que se hace en fábrica, pero se confirma en obra poniendo las piezas juntas a la luz del ventanal.</p>
+        <p>Cada fase se cierra con una firma parcial. No se pasa a la siguiente sin que la anterior esté documentada, porque una vez instalada la tapicería ya no se puede inspeccionar el interior del bastidor ni la fijación a muro.</p>
+        <p>La secuencia importa también por seguridad. Un sofá de lobby instalado antes de terminar la pintura del vestíbulo acumula polvo en la trama y recibe salpicaduras que después no se pueden retirar sin marcar la tela. En la práctica, la recepción de tapicería se programa después de la limpieza gruesa y antes de la limpieza fina, con el mobiliario fijo ya anclado. Esa ventana de dos o tres días es la que permite revisar costuras con luz natural y devolver una pieza sin desmontar media estancia.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué debe incluir la lista de pendientes antes de firmar el acta?</h2>
+        <p>La lista de pendientes es el documento que gobierna las semanas siguientes. Si está mal hecha, el acta se firma igual, pero el problema queda sin dueño. Debe tener cinco columnas como mínimo: ubicación exacta, descripción del defecto, evidencia fotográfica, responsable y fecha comprometida de resolución.</p>
+        <p>La ubicación exacta significa número de habitación y elemento, no "ala norte". "Habitación 412, canto inferior derecho de la puerta del armario, golpe de 3 cm" es una línea útil; "armarios con golpes" no lo es. Cuando el hotel tiene 300.000 metros cuadrados construidos o varias torres, la referencia debe incluir torre y planta, porque el equipo de posventa no está en obra y trabaja con esa lista a distancia.</p>
+        <p>El conteo por habitación se apoya en una hoja de carga que reproduce el despiece de cada tipología. Para un armario empotrado, esa hoja lista bastidor, costados, estantes, puertas, bisagras y kit de fijación; para una <a href="https://hymueble.com/productos/armario-hotelero-empotrado-chapa-madera/">cabecera o un armario hotelero de chapa de madera</a>, el despiece incluye además los anclajes y las tapas de registro. Cuando la hoja coincide con lo descargado, el montaje avanza sin interrupciones; cuando no coincide, el faltante se detecta en el muelle y no en la planta doce.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Fase</th><th>Qué se verifica</th><th>Quién firma</th><th>Evidencia mínima</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Fase">Descarga</td><td data-label="Qué se verifica">Precinto, humedad, conteo por bulto</td><td data-label="Quién firma">Jefe de obra + transportista</td><td data-label="Evidencia mínima">Fotos de precinto y packing list firmado</td></tr>
+          <tr><td data-label="Fase">Estructural</td><td data-label="Qué se verifica">Herrajes, anclajes, escuadras</td><td data-label="Quién firma">Instalador + supervisor</td><td data-label="Evidencia mínima">Checklist por habitación</td></tr>
+          <tr><td data-label="Fase">Acabados</td><td data-label="Qué se verifica">Cantos, chapas, pintura, luz rasante</td><td data-label="Quién firma">Supervisor de calidad</td><td data-label="Evidencia mínima">Fotos con linterna y plantilla</td></tr>
+          <tr><td data-label="Fase">Tapicería</td><td data-label="Qué se verifica">Costura, trama, color, relleno</td><td data-label="Quién firma">Supervisor + decoración</td><td data-label="Evidencia mínima">Muestra patrón vs pieza instalada</td></tr>
+          <tr><td data-label="Fase">Cierre</td><td data-label="Qué se verifica">Limpieza, ajuste de puertas y cajones</td><td data-label="Quién firma">Jefe de obra</td><td data-label="Evidencia mínima">Acta con pendientes y plazos</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD39-a281-s2.webp" alt="Lista de pendientes con ubicación, defecto y responsable sobre plano de planta" width="1536" height="943" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Lista de pendientes con ubicación, defecto y responsable.*</p>
+        <p>La descripción del defecto debe ser verificable. "Mal acabado" no permite decidir si es retoque o sustitución. En cambio, "rayón de 8 cm en el canto frontal, atraviesa la chapa hasta el tablero" permite cotizar la reparación sin volver a la habitación. Este nivel de detalle es también lo que exige una garantía cuando el fabricante discute si el daño es de transporte o de instalación.</p>
+        <p>El responsable tiene que ser una persona, no un departamento. Y la fecha comprometida debe ser realista: si el repuesto viene de fábrica en Asia, no se puede prometer una semana. En la práctica usamos un plazo de 45-60 días para piezas producidas de nuevo, y dejamos claro en la lista cuáles son retoques en obra y cuáles requieren fabricación.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se documentan los daños para el seguro y la garantía?</h2>
+        <p>El seguro de transporte y la garantía de fabricación cubren cosas distintas, y la frontera se decide con evidencia. Un golpe con el embalaje intacto es un defecto de fabricación; un golpe con el embalaje roto y la esquina de la caja hundida es un daño de transporte. Fotografiar el embalaje antes de abrirlo es lo que permite sostener una u otra posición sin discusión.</p>
+        <p>El procedimiento que funciona tiene cuatro pasos. Primero, foto del bulto cerrado con su etiqueta visible. Segundo, foto del embalaje abierto mostrando el interior y la protección. Tercero, foto del defecto con regla o referencia de escala. Cuarto, anotación en el parte con hora y nombre de quien detecta. Sin el segundo paso, la mayoría de los siniestros de transporte se rechazan por falta de evidencia del estado del embalaje.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD39-a281-s3.webp" alt="Documentación fotográfica de un defecto con referencia de escala" width="1536" height="943" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Documentación fotográfica de un defecto con referencia de escala.*</p>
+        <p>Conviene además separar físicamente las piezas dañadas. Si una puerta de armario con golpe se instala porque "así no se nota", el fabricante puede argumentar que el daño se produjo en uso. Una zona de cuarentena con lona y etiqueta roja evita esa ambigüedad y permite que el ajustador del seguro vea la pieza en el estado en que llegó.</p>
+        <p>En proyectos con entregas parciales, el parte debe indicar el número de contenedor y la fecha de llegada de cada lote. Cuando el siniestro se declara un mes después, la trazabilidad por contenedor es la única forma de vincular la pieza dañada con un envío concreto y con su póliza.</p>
+        <p>Los plazos del seguro corren desde la entrega, no desde que alguien nota el daño. Por eso el parte de recepción se cierra el mismo día de la descarga, aunque la inspección detallada continúe durante la semana. Un parte fechado tres semanas después pierde credibilidad ante el ajustador, sobre todo si el embalaje ya se retiró del almacén. La disciplina de documentar el primer día es lo que mantiene viva la reclamación mientras el equipo sigue trabajando.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué errores de recepción encarecen el montaje?</h2>
+        <p>El error más caro es aceptar el lote completo sin verificar el despiece. Un armario que llega sin sus estantes interiores obliga a parar la instalación de toda la planta, porque el montaje se organiza por secuencia: primero estructura, luego interiores, luego puertas. Una pieza que falta en la habitación 305 detiene la cuadrilla que ya está en la 312.</p>
+        <p>El segundo error es no comprobar la coincidencia de taladros con el plano de taller. Los anclajes a muro llegan con una posición definida en fábrica; si el tabique en obra está desplazado unos centímetros, el mueble no entra o queda separado. Detectar esto en recepción permite rehacer la fijación con una pieza nueva; detectarlo con el mueble colgado obliga a reparar el tabique y volver a pintar.</p>
+        <p>El tercer error es recibir sin inventario de accesorios. Tornillería, topes, bandejas, espejos, tiradores y kits de limpieza suelen venir en cajas separadas. Si no se cuentan en la recepción, se pierden en el almacén y aparecen como faltantes tres semanas después, cuando ya nadie sabe si salieron de fábrica.</p>
+        <p>El inventario de accesorios se hace con doble conteo y en presencia de dos personas: una cuenta y la otra registra. En un <a href="https://hymueble.com/productos/minibar-hotel-chapa-nogal-ventilacion/">minibar de hotel con ventilación integrada</a>, el kit incluye rejilla, tornillería de fijación, bandeja interior y manual de instalación; si falta la rejilla, el mueble se instala igual pero el frigorífico trabaja mal desde el primer día. Ese tipo de faltante no se detecta en la inspección visual del mueble, solo en el inventario de accesorios.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD39-a281-s4.webp" alt="Cajas de accesorios y tornillería inventariadas por tipología" width="1536" height="943" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Cajas de accesorios y tornillería inventariadas por tipología.*</p>
+        <p>El cuarto error es firmar el acta el mismo día de la descarga. El acta debe firmarse cuando la inspección por fases ha terminado, no cuando el camión se va. En la práctica, esto significa reservar entre tres y cinco días de inspección para un lote de 30-50 habitaciones, según la complejidad del mobiliario y la disponibilidad de acceso a las plantas.</p>
+        <p>En hoteles que abren por bloques, la recepción se organiza por planta terminada en lugar de por lote completo. Ese criterio permite entregar primero las habitaciones de las plantas bajas y dejar las altas para la semana siguiente, siempre que el almacén provisional no se convierta en cuello de botella. Cuando el proyecto incluye <a href="https://hymueble.com/productos/paneles-pared-chapa-madera-hotel/">paneles de pared de chapa de madera</a>, conviene recibir esos paneles antes que el mobiliario suelto: se instalan con la obra todavía abierta y evitan roces posteriores con camas y mesitas.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo cerrar la recepción sin bloquear la apertura del hotel?</h2>
+        <p>El cierre de recepción es un acto de equilibrio: no se puede retener el acta por un rayón, pero tampoco se puede liberar el pago sin garantías. La salida habitual es un acta con reservas: se acepta la entrega, se listan los pendientes y se retiene un porcentaje del pago hasta su resolución. Ese porcentaje debe estar previsto en el contrato; improvisarlo en obra siempre genera conflicto.</p>
+        <p>Para que la apertura no se bloquee, los pendientes se clasifican por impacto. Un defecto que impide usar la habitación es crítico y se resuelve antes de la apertura. Un defecto estético en una zona visible se resuelve en la primera semana. Un defecto en un elemento no visible puede esperar a la visita de posventa. Esta clasificación permite abrir con habitaciones operativas y cerrar el resto en paralelo.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD39-a281-s5.webp" alt="Recepción final de habitación con mobiliario instalado y checklist en mano" width="1536" height="943" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Caption: Recepción final de habitación con mobiliario instalado.*</p>
+        <p>La última recomendación es dejar por escrito quién custodia el mobiliario desde la firma. Hasta ese momento responde el transportista o el montador; después responde el hotel o el contratista general. Ese cambio de custodia es el punto donde muchas garantías se pierden por defecto, porque nadie documenta el estado del mueble en el instante exacto de la transferencia.</p>
+        <p>Conviene además fijar una visita de seguimiento a los treinta días. No sustituye a la recepción: verifica cómo se comportan puertas, cajones y herrajes con el uso real, y permite separar el defecto de fabricación del ajuste normal. Esa visita se agenda en el acta y no depende de que alguien llame.</p>
+        <p>Un cierre ordenado incluye también la entrega de documentación: fichas técnicas, instrucciones de limpieza, certificados de materiales y el listado de repuestos con sus referencias. En proyectos grandes, este paquete se entrega en formato digital y se archiva por torre y planta, de modo que el equipo de mantenimiento pueda pedir un repuesto años después sin reconstruir el pedido desde cero.</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Prepare la recepción de su proyecto antes de la descarga"
+      text="Envíe el alcance de habitaciones y el calendario de entrega desde nuestro formulario en /contacto/. Prepararemos el protocolo de inspección por fases, la hoja de despiece por tipología y el formato de lista de pendientes para su obra."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
