@@ -419,7 +419,64 @@
     ],
     "sourceKind": "project-pdf",
     "publicLevel": "L3",
-    "evidenceGrade": "A"
+    "evidenceGrade": "A",
+    "localized": {
+      "es": {
+        "intro": "Ginlan Song Hotel está registrado en la documentación del grupo como una referencia de hotel de negocios en China. La lámina publicada identifica el hotel y muestra principalmente su contexto exterior. Esta evidencia no permite establecer un inventario completo de mobiliario ni las cantidades suministradas. La discusión siguiente se dirige a preparar una nueva compra hotelera.",
+        "imageCaption": "Lámina de Ginlan Song Hotel en la documentación del grupo, con fachada y entorno exterior. La vista de contexto no demuestra la composición ni la cantidad de un suministro de muebles.",
+        "spaces": [
+          "Contexto exterior del hotel documentado",
+          "Programa de habitaciones del nuevo proyecto: pendiente de definir"
+        ],
+        "questions": [
+          "¿Qué tipos de habitación incluye la nueva compra?",
+          "¿Qué piezas necesitan muestra y plano aprobado?"
+        ],
+        "evidenceSections": [
+          {
+            "heading": "Ordenar la compra por tipos de habitación",
+            "text": "Para un nuevo hotel de negocios, separe las piezas repetidas de las soluciones que cambian según el tipo de habitación. Prepare un cuadro con cantidades y revisiones de plano. El registro histórico de Ginlan Song no acredita un número de habitaciones ni un paquete estándar aplicable a otro edificio."
+          },
+          {
+            "heading": "Comparar dimensiones con recorridos reales",
+            "text": "Revise posición de cama, apoyo de noche, superficie de trabajo y apertura de almacenamiento en el plano del nuevo proyecto. La fachada de referencia no documenta medidas interiores; no debe utilizarse para deducir tamaños de muebles o anchos de circulación."
+          },
+          {
+            "heading": "Definir una habitación piloto antes del lote",
+            "text": "Si el nuevo encargo utiliza piezas repetidas, acuerde una revisión piloto de dimensiones, acabados y mantenimiento. Registre los cambios aprobados antes de cerrar cantidades. Esta recomendación de compra no afirma que el proyecto histórico siguiera un proceso piloto determinado."
+          },
+          {
+            "heading": "Programar entregas según el alcance contratado",
+            "text": "Determine si la cotización cubre únicamente mobiliario o también embalaje, transporte, descarga y montaje. Si se prevén fases de renovación, identifique cada zona y su fecha de recepción solicitada. El caso en China no garantiza plazos, disponibilidad ni servicios locales para otro destino."
+          }
+        ],
+        "faq": [
+          {
+            "q": "¿Puede calcularse el mobiliario necesario con esta lámina?",
+            "a": "No. La lámina identifica el contexto del hotel, pero las cantidades de una nueva compra requieren planos y una lista de piezas por tipo de habitación."
+          },
+          {
+            "q": "¿La referencia confirma materiales o certificaciones?",
+            "a": "No. La documentación de materiales y las certificaciones deben corresponder a la pieza concreta propuesta para el nuevo pedido."
+          }
+        ],
+        "relatedLinks": [
+          {
+            "href": "/catalogo/hoteles/",
+            "label": "Catálogo hotelero"
+          },
+          {
+            "href": "/hoteles/",
+            "label": "Planificación de mobiliario hotelero"
+          },
+          {
+            "href": "/productos/mesa-conferencias-ejecutiva-nogal-sillas/",
+            "label": "Preparar la selección de una mesa de reuniones"
+          }
+        ]
+      }
+    },
+    "reviewed": "2026-11-15"
   },
   {
     "id": "hlt-002",
@@ -447,7 +504,64 @@
     ],
     "sourceKind": "project-pdf",
     "publicLevel": "L3",
-    "evidenceGrade": "A"
+    "evidenceGrade": "A",
+    "localized": {
+      "es": {
+        "intro": "HongMou Hotel figura en la documentación del grupo como una referencia hotelera en China. La lámina publicada reúne una vista exterior y vistas identificadas del vestíbulo. Estos elementos permiten situar el contexto del proyecto, pero no constituyen una lista verificable de todos los muebles entregados. Las recomendaciones de compra se refieren a un nuevo encargo.",
+        "imageCaption": "Lámina de HongMou Hotel en la documentación del grupo: exterior y vistas del vestíbulo. La presencia de un elemento en la imagen no acredita por sí sola su inclusión en el suministro.",
+        "spaces": [
+          "Exterior del hotel",
+          "Vestíbulo mostrado en la lámina"
+        ],
+        "questions": [
+          "¿Qué zonas públicas forman parte del nuevo alcance?",
+          "¿Qué mobiliario debe separarse de acabados y equipamiento?"
+        ],
+        "evidenceSections": [
+          {
+            "heading": "Dividir las zonas públicas por función",
+            "text": "Para una nueva solicitud, distinga recepción, espera y circulación de los espacios de reunión o restauración que el programa requiera. Las vistas del vestíbulo de HongMou sirven de contexto visual; no prueban un inventario completo ni el suministro de todos los acabados del edificio."
+          },
+          {
+            "heading": "Coordinar mobiliario con accesos y mantenimiento",
+            "text": "Ubique cada pieza propuesta en un plano y revise recorridos de huéspedes, servicio y limpieza con el equipo del proyecto. Confirme las dimensiones de acceso antes de aceptar piezas voluminosas. No deduzca capacidad, resistencia o mantenimiento a partir del aspecto del vestíbulo histórico."
+          },
+          {
+            "heading": "Cotizar muebles y elementos de obra por separado",
+            "text": "Identifique qué mesas, asientos o almacenamientos quiere comparar, y diferéncielos de pavimentos, revestimientos, luminarias e instalaciones. Para una nueva sala de reuniones, la selección de mesa requiere documentación propia; no puede atribuirse a este caso por asociación visual."
+          },
+          {
+            "heading": "Establecer muestras y recepción por zonas",
+            "text": "Solicite muestras y dibujos para cada selección y acuerde criterios de recepción antes de fabricar. Si el nuevo programa reúne varias zonas, prepare un listado de cantidades y responsabilidades por espacio. Esta referencia china no demuestra stock, autorización de marca ni una red de instalación en otros países."
+          }
+        ],
+        "faq": [
+          {
+            "q": "¿La imagen del vestíbulo acredita todos sus elementos como suministro?",
+            "a": "No. La imagen documenta el contexto visual; un alcance de suministro debe apoyarse en una lista de piezas y documentación específica."
+          },
+          {
+            "q": "¿Puede usarse para preparar un nuevo proyecto hotelero?",
+            "a": "Sí, como referencia de contexto. El programa de espacios, los muebles, las muestras y las responsabilidades se confirman para el nuevo proyecto."
+          }
+        ],
+        "relatedLinks": [
+          {
+            "href": "/catalogo/hoteles/",
+            "label": "Catálogo hotelero"
+          },
+          {
+            "href": "/hoteles/",
+            "label": "Planificación de mobiliario hotelero"
+          },
+          {
+            "href": "/productos/mesa-conferencias-ejecutiva-nogal-sillas/",
+            "label": "Preparar la selección de una mesa de reuniones"
+          }
+        ]
+      }
+    },
+    "reviewed": "2026-11-15"
   },
   {
     "id": "edu-007",
