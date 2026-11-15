@@ -257,3 +257,6 @@ h3 {
     font-size: 27px;
   }
 }
+
+/* Keep all primary links and quote action visible at compact desktop widths. */
+@media (min-width:1081px) and (max-width:1440px){.header .showroom-nav{display:none}.header .nav-shell{gap:12px}.header .nav-link{padding-inline:8px}}

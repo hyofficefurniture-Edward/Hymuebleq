@@ -13,6 +13,7 @@ const staticPaths = [
   "/showroom/",
   "/contacto/",
   "/privacidad/",
+  "/grupo-y-marcas/",
   "/recursos/",
   "/recursos/blog/",
   "https://hymueble.com/recursos/recepcion-mobiliario-hotelero-checklist/",

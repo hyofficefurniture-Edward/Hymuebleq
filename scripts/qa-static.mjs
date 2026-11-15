@@ -126,7 +126,12 @@ for (const file of htmlFiles) {
     failures.push(`${displayRoute}: missing privacy link.`);
   }
 
-  if (html.includes("hyhotelfurniture.com") || html.includes("hyofficefurniture.com") || html.includes("hyhealthcarefurniture.com") || html.includes("hyeducationfurniture.com") || html.includes("fenmicasa.com")) {
+  // Approved corporate evidence citation only; sales/navigation cross-links remain forbidden.
+  const trafficHtml = ["/contacto/", "/grupo-y-marcas/"].includes(displayRoute)
+    ? html.replace(/<section\b[^>]*data-group-enrichment=["']20261028["'][^>]*>[\s\S]*?<\/section>/g,
+        block => block.replace(/href=["']https:\/\/www\.hyhotelfurniture\.com\/about-us\.html["']/g, 'href="[approved-corporate-source]"'))
+    : html;
+  if (trafficHtml.includes("hyhotelfurniture.com") || trafficHtml.includes("hyofficefurniture.com") || trafficHtml.includes("hyhealthcarefurniture.com") || trafficHtml.includes("hyeducationfurniture.com") || trafficHtml.includes("fenmicasa.com")) {
     failures.push(`${displayRoute}: contains group-site traffic leakage link.`);
   }
 
