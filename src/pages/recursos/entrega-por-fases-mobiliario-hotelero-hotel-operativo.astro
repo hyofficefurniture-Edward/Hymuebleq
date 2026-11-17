@@ -1,0 +1,494 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Mobiliario hotelero por fases: ventanas de instalación y acopio en hotel operativo";
+const pageDescription = "Planifique la entrega por fases del mobiliario hotelero: ventanas de instalación, acopio en la obra y orden de descarga sin cerrar el hotel al público.";
+const keywords = ["entrega por fases mobiliario hotelero", "ventanas de instalación hotel", "acopio de mobiliario en obra", "instalación FF&E hotel en operación", "plan de entrega mobiliario hotelero"];
+const canonicalPath = "https://hymueble.com/recursos/entrega-por-fases-mobiliario-hotelero-hotel-operativo/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD40-a292-hero.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-17";
+const dateModified = "2026-11-17";
+
+const faqItems = [
+
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: { "@type": "Organization", name: "Hymueble", url: "https://hymueble.com/" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: { "@type": "ImageObject", url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp" },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD40-a292-hero.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD40-a292-s1.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD40-a292-s4.webp"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario hotelero &middot; Instalación &middot; Publicada el 17 de noviembre de 2026</p>
+          <h1>Mobiliario hotelero por fases: ventanas de instalación y acopio en hotel operativo</h1>
+          <p>Una renovación por alas se decide en dos planos distintos. El primero es el del proyecto: qué se cambia, con qué especificación y con qué presupuesto. El segundo es el de la operación: cuántas habitaciones puede dejar fuera de servicio el hotel cada mes sin perder ingresos. La entrega por fases vive en ese segundo plano, y casi todos los problemas de una instalación en hotel operativo nacen de planificarla con la lógica del primero.</p>
+          <p>La conclusión es incómoda pero útil: el plan se diseña desde la ventana de instalación hacia atrás, no desde el contenedor hacia adelante. Quien fija primero las fechas de fábrica y luego busca hueco en el hotel termina pagando almacén, horas extra y retrabajos.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD40-a292-hero.webp" alt="Cuadrilla instalando mobiliario en un ala de hotel con protección de cartón en el pasillo" width="1200" height="736" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-keypoints">
+      <div class="container article-prose--wide">
+        <h2>Ideas clave</h2>
+        <ul class="keypoints-list"></ul>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se organiza una entrega por fases de mobiliario hotelero con el hotel en operación?</h2>
+        <p>La entrega por fases se organiza alrededor de una unidad que no es el contenedor sino la ventana de instalación: un bloque cerrado de días en el que un ala queda fuera de servicio, el montacargas está reservado y la ruta de huéspedes está desviada, de modo que el mobiliario entra, se monta y se libera sin volver a moverlo. Todo lo demás se agenda contra esa ventana. Sin ventana definida no hay secuencia, solo llegadas.</p>
+        <p>El error más frecuente es razonar por contenedor. Un contenedor completo sale de fábrica porque el flete se paga por volumen, pero el hotel no absorbe ese volumen de una vez: acepta una planta, quizá dos, y el resto se queda en el muelle. Esa distancia produce almacenes improvisados en el vestíbulo y cajas que se manipulan tres veces.</p>
+        <p>La brecha se cierra en fábrica. Cuando el proyecto tiene ventanas definidas, el paletizado se hace por ala y por planta, y cada bulto sale etiquetado con la ventana a la que pertenece; el contenedor se abre en el orden en que el hotel lo consumirá. Esa etiqueta sustituye la selección en el muelle: se descarga el palet de la primera ventana y el resto queda cerrado.</p>
+        <p>La ventana termina con un acto formal, no con el último mueble colocado. Se prueban puertas y cajones, se retiran protecciones, se hace limpieza fina y se entrega el ala a la gobernanta con un acta parcial, para que la ventana siguiente no arranque con pendientes abiertos.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Etapa de la ventana</th><th>Qué se ejecuta en planta</th><th>Quién responde</th><th>Señal de cierre</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Etapa de la ventana">Apertura</td><td data-label="Qué se ejecuta en planta">Retirada de protecciones, replanteo y descarga directa</td><td data-label="Quién responde">Jefe de obra del instalador</td><td data-label="Señal de cierre">Ala señalizada y ascensor reservado</td></tr>
+          <tr><td data-label="Etapa de la ventana">Anclaje</td><td data-label="Qué se ejecuta en planta">Cabeceros, armarios, paneles y muebles de baño</td><td data-label="Quién responde">Cuadrilla de anclaje</td><td data-label="Señal de cierre">Taladros y remates cerrados</td></tr>
+          <tr><td data-label="Etapa de la ventana">Mueble suelto</td><td data-label="Qué se ejecuta en planta">Camas, mesitas, escritorio, butacas y colchones</td><td data-label="Quién responde">Cuadrilla de montaje</td><td data-label="Señal de cierre">Habitación amueblada al completo</td></tr>
+          <tr><td data-label="Etapa de la ventana">Remate</td><td data-label="Qué se ejecuta en planta">Ajuste de puertas y cajones, retoques de acabado</td><td data-label="Quién responde">Supervisor de calidad</td><td data-label="Señal de cierre">Lista de defectos cerrada</td></tr>
+          <tr><td data-label="Etapa de la ventana">Liberación</td><td data-label="Qué se ejecuta en planta">Limpieza fina y entrega de llaves a gobernanta</td><td data-label="Quién responde">Hotel y jefe de obra</td><td data-label="Señal de cierre">Acta parcial firmada</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <p>*Montaje por ventanas: el material entra a la planta y se instala sin volver al almacén.*</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuántas alas o plantas conviene abrir en cada ventana de instalación?</h2>
+        <p>Conviene abrir el número de plantas que una cuadrilla puede montar y cerrar dentro de la ventana, no el número que el hotel desea entregar: en nuestros proyectos, una ventana de tres a cuatro semanas con una cuadrilla de ocho a catorce instaladores suele cubrir entre treinta y cincuenta habitaciones, y por encima de ese volumen aparecen los retrabajos. La cifra se calcula, no se negocia.</p>
+        <p>El cálculo se hace al revés. Primero se fija cuántas habitaciones puede vaciar el hotel; después se comprueba si la obra civil estará cerrada; al final se dimensiona la cuadrilla. Si se empieza por la capacidad de fábrica, el material llega antes de que el albañil termine y el acopio se llena de lo que no se puede instalar.</p>
+        <p>El techo real casi nunca es la superficie: es el montacargas. Un ala de cuarenta habitaciones exige subir camas, cabeceros, mesitas, colchones y embalaje por un ascensor que el hotel sigue usando para ropa blanca y room service. Si ese ascensor admite dos ciclos por hora y cada ciclo mueve el volumen de una habitación, la descarga consume del orden de veinte horas de ascensor, repartidas en varios días. Tampoco conviene repartir una misma planta entre dos ventanas: la mitad ocupada impide el paso de materiales.</p>
+        <p>Antes de escalar conviene hacer un cuarto piloto. Se monta una habitación completa y se revisa con el propietario y la dirección del hotel. Ese cuarto revela interferencias que ningún plano muestra: la posición de un interruptor, el sentido de una puerta, la altura de un aplique. Corregirlo en una habitación cuesta una visita; corregirlo en doscientas cuesta una ventana entera.</p>
+        <p>En nuestra experiencia, el límite práctico aparece cuando la cuadrilla trabaja en dos plantas a la vez para cumplir fecha: los desplazamientos se comen las horas y los remates se acumulan. Si el hotel necesita más habitaciones por mes, conviene añadir una segunda cuadrilla con su propio alcance.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Criterio de dimensionamiento</th><th>Regla práctica</th><th>Síntoma de sobrecarga</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Criterio de dimensionamiento">Montacargas de servicio</td><td data-label="Regla práctica">Un ascensor reservado por ala y turno, con horario pactado</td><td data-label="Síntoma de sobrecarga">Cola de palets en el muelle al mediodía</td></tr>
+          <tr><td data-label="Criterio de dimensionamiento">Cuadrilla</td><td data-label="Regla práctica">Un equipo por planta abierta, con su supervisor</td><td data-label="Síntoma de sobrecarga">Operarios cruzando entre plantas sin cerrar remates</td></tr>
+          <tr><td data-label="Criterio de dimensionamiento">Obra civil precedente</td><td data-label="Regla práctica">Planta cerrada, pintada y con suelos secos</td><td data-label="Síntoma de sobrecarga">Instaladores esperando a otro gremio dentro del ala</td></tr>
+          <tr><td data-label="Criterio de dimensionamiento">Gobernanta</td><td data-label="Regla práctica">Habitaciones vacías y ropa blanca retirada</td><td data-label="Síntoma de sobrecarga">Material entrando en habitaciones aún vendidas</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD40-a292-s1.webp" alt="Bultos de mobiliario hotelero paletizados por planta en la zona de acopio" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Paletizado por ala y planta: el contenedor se abre en el orden de instalación.*</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuánto mobiliario se puede acopiar en obra y dónde debe ubicarse?</h2>
+        <p>El volumen que se puede acopiar en obra depende menos del espacio disponible que del tiempo que el mobiliario pasará sin instalar: en nuestros proyectos, un lote de cuarenta habitaciones ocupa del orden de ciento veinte a ciento sesenta metros cúbicos de embalaje, que con cuatro metros de altura útil equivalen a sesenta u ochenta metros cuadrados de suelo. La ubicación importa tanto como la cifra.</p>
+        <p>La cuenta se hace por habitación, no por contenedor. Un juego completo, con cabecero, armario, mesitas, escritorio, colchón y embalaje, ronda entre tres y cuatro metros cúbicos en nuestros embarques. Con dos metros y medio de altura libre en lugar de cuatro, la misma carga necesita casi el doble de suelo.</p>
+        <p>La ubicación importa más que la superficie. El acopio debe estar en planta baja o con acceso directo al montacargas de servicio, sobre suelo duro y lejos del recorrido de huéspedes. Un almacén sobre moqueta se mancha, y un acopio en el pasillo de habitaciones es la primera queja de la gobernanta.</p>
+        <p>La humedad es el factor que más daño causa en espera: el mobiliario viaja semanas en contenedor y llega con una humedad distinta a la de la obra; apilado contra un muro húmedo, el tablero se hincha y la chapa se despega. Dejamos separación del muro, rastreles y ventilación cruzada, y medimos humedad en los lotes que esperarán semanas.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Zona del acopio</th><th>Qué se guarda</th><th>Condición mínima</th><th>Riesgo si falla</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Zona del acopio">Recepción y cuarentena</td><td data-label="Qué se guarda">Bultos con golpe, humedad o faltante</td><td data-label="Condición mínima">Acceso desde el muelle</td><td data-label="Riesgo si falla">Daño instalado y sin responsable</td></tr>
+          <tr><td data-label="Zona del acopio">Acopio por ventana</td><td data-label="Qué se guarda">Palets etiquetados de la ventana en curso</td><td data-label="Condición mínima">Suelo duro y seco</td><td data-label="Riesgo si falla">Mezcla de alas y doble manipulación</td></tr>
+          <tr><td data-label="Zona del acopio">Material anclado</td><td data-label="Qué se guarda">Cabeceros, paneles y herrajes</td><td data-label="Condición mínima">Cerca del montacargas</td><td data-label="Riesgo si falla">Esperas de la cuadrilla de anclaje</td></tr>
+          <tr><td data-label="Zona del acopio">Reserva de temporada</td><td data-label="Qué se guarda">Piezas de plazo largo y repuestos</td><td data-label="Condición mínima">Ventilación y control de humedad</td><td data-label="Riesgo si falla">Sustitución imposible en plazo</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD40-a292-s2.webp" alt="Control de humedad en el acopio provisional de mobiliario hotelero" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*El acopio se ventila y se mide: la humedad daña más que el propio traslado.*</p>
+        <p>Conviene separar tres zonas: recepción y cuarentena, acopio por ventana y material instalado pendiente de remate. La cuarentena permite discutir un golpe con evidencia, porque la pieza dañada se queda apartada. El detalle del embalaje por tipología está en la guía de <a href="https://hymueble.com/recursos/embalaje-exportacion-mobiliario-hotelero/">embalaje de exportación para mobiliario hotelero</a>.</p>
+        <p>Acopiar en las habitaciones ahorra almacén y casi siempre cuesta más. Funciona con la planta vacía y el suelo protegido; falla cuando la obra civil sigue abierta, porque el material estorba y acaba movido por terceros. Si se elige esa vía, el límite razonable son dos o tres días de montaje, no la ventana completa.</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué muebles deben llegar en el primer envío y cuáles pueden esperar?</h2>
+        <p>Deben llegar en el primer envío las tipologías que se anclan a la obra y bloquean otros gremios, como cabeceros, armarios empotrados, paneles de pared y muebles de baño, porque su instalación exige taladrar y rematar antes de la limpieza fina, mientras que el mobiliario suelto y la decoración admiten esperar a la última ventana.</p>
+        <p>El criterio no es el valor del mueble, sino su dependencia. Un cabecero anclado obliga a definir la altura antes de colgar el papel pintado; un armario empotrado necesita techo y suelo terminados; un mueble de baño con ventilación exige que climatización siga en obra. Si esos elementos llegan en el tercer envío, hay que reabrir una ventana ya cerrada.</p>
+        <p>Por eso el primer envío suele ser el más pesado y menos vistoso: paneles, herrajes, estructuras y sanitarios. Hay partidas que conviene adelantar aunque no se instalen: las de plazo largo. Una cabecera curva o un mostrador a medida no se reponen en una semana, y si llegan con un defecto en la última ventana no hay margen. Conviene recibirlos en la primera entrega, con el <a href="https://hymueble.com/recursos/control-calidad-fabrica-muebles-inspeccion-proceso/">control de calidad en fábrica</a> documentado antes del embarque.</p>
+        <p>La prioridad también depende de la temporada. Un hotel que abre en temporada alta no puede permitirse una habitación fuera de servicio por un espejo; en temporada baja puede escalonar más. Esa variable se conversa al principio, no con el camión en la puerta. El <a href="https://hymueble.com/recursos/recepcion-mobiliario-hotelero-checklist/">checklist de recepción de mobiliario hotelero</a> desarrolla la secuencia de conteo y firmas.</p>
+        <p class="bullet-line">— <strong>Primera</strong> — Tipologías incluidas: Cabeceros, armarios empotrados, paneles de pared；Motivo técnico: Anclaje a muro y remate antes de pintura fina；Ventana asignada: Apertura del ala</p>
+        <p class="bullet-line">— <strong>Primera</strong> — Tipologías incluidas: Muebles de baño, minibar, estructuras de mostrador；Motivo técnico: Conexiones y ventilación con gremios en obra；Ventana asignada: Apertura del ala</p>
+        <p class="bullet-line">— <strong>Segunda</strong> — Tipologías incluidas: Camas, mesitas, escritorios, butacas；Motivo técnico: Montaje limpio sobre suelo terminado；Ventana asignada: Primera semana</p>
+        <p class="bullet-line">— <strong>Última</strong> — Tipologías incluidas: Tapicería, espejos, iluminación decorativa；Motivo técnico: Polvo, roces y riesgo de robo；Ventana asignada: Cierre de la ventana</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD40-a292-s3.webp" alt="Línea de producción y canteadorado de paneles en la fábrica antes de la carga" width="1200" height="1471" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*La línea de canteadorado marca el ritmo de producción que sostiene la secuencia de carga.*</p>
+        <p>El orden de descarga dentro del contenedor debe reproducir el orden de instalación. Si el palet de la planta doce está al fondo y el de la planta tres en la puerta, la cuadrilla descarga dos veces. Cuando no se puede secuenciar en fábrica, conviene consolidar por tipología y no por proveedor, para no abrir seis cajas buscando un herraje.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se coordina la cuadrilla con la operación diaria del hotel?</h2>
+        <p>La coordinación se resuelve con una reunión de quince minutos a primera hora, un plano de rutas de servicio y una regla de ruido por franjas: la cuadrilla trabaja en plantas vacías con montacargas de servicio reservado, y todo lo que genere polvo o ruido se concentra entre las nueve y las catorce, cuando la mayoría de huéspedes está fuera.</p>
+        <p>Esa reunión es el órgano que gobierna la obra. Participan el jefe de obra del instalador, el jefe de mantenimiento, la gobernanta y el responsable de seguridad. Se revisan tres asuntos: qué plantas están libres, qué ascensor está disponible y qué incidencias de la noche afectan al plan. Las decisiones se anotan en un parte de una página.</p>
+        <p>Los permisos se gestionan antes de la llegada. La cuadrilla necesita acreditaciones, seguro de responsabilidad civil, formación en extintores y, en muchos hoteles, registro de antecedentes. Un instalador sin acreditación no sube, y descubrirlo el lunes cuesta medio día de ventana.</p>
+        <p>El polvo se controla en el origen. Cortar en la habitación es más rápido y siempre deja rastro: serrín en la moqueta y polvo que se deposita en cortinas y conductos. Cuando se puede, los ajustes se hacen en una zona habilitada y el material sube cortado.</p>
+        <p>La seguridad contra incendios exige protocolo propio: cada detector aislado durante el montaje debe quedar registrado y revertido al final del turno, porque uno olvidado el fin de semana es un riesgo real.</p>
+        <p>El marco de referencia ordena estos controles. La norma <a href="https://www.iso.org/iso-9001-quality-management.html">ISO 9001</a> exige procedimientos documentados y trazabilidad, y los criterios de durabilidad de <a href="https://www.bifma.org/">BIFMA</a> sirven para argumentar por qué un mueble de contract no se sustituye por una pieza doméstica cuando el plazo aprieta. Ninguna resuelve la logística, pero ambas dan lenguaje común con el propietario.</p>
+        <p class="bullet-line">— <strong>Primera hora</strong> — Trabajo autorizado: Reunión, descarga en muelle y subida de material；Restricción vigente: Ascensor de servicio reservado；Responsable: Jefe de obra</p>
+        <p class="bullet-line">— <strong>Mañana</strong> — Trabajo autorizado: Anclaje, taladro y montaje pesado；Restricción vigente: Ruido concentrado y pasillos protegidos；Responsable: Supervisor de cuadrilla</p>
+        <p class="bullet-line">— <strong>Tarde</strong> — Trabajo autorizado: Mueble suelto, ajustes y remates；Restricción vigente: Sin cortes ni taladros en plantas ocupadas；Responsable: Supervisor de calidad</p>
+        <p class="bullet-line">— <strong>Cierre de turno</strong> — Trabajo autorizado: Limpieza, residuos y revisión de detectores；Restricción vigente: Registro de aislamientos revertidos；Responsable: Responsable de seguridad</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD40-a292-s4.webp" alt="Reunión de coordinación diaria entre hotel, instalador y jefe de obra" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Quince minutos a primera hora fijan el plan del día y el uso del montacargas.*</p>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué se hace cuando una ventana de instalación se retrasa?</h2>
+        <p>Cuando una ventana se retrasa, la respuesta correcta es reducir el alcance de esa ventana y abrir una ventana adicional, nunca comprimir la secuencia de montaje: instalar el mismo número de habitaciones en menos días duplica la cuadrilla, multiplica los roces y deja una lista de pendientes que el hotel descubre en la primera semana de operación.</p>
+        <p>Comprimir se paga tres veces: en horas extra, en retrabajos y en reputación, porque las habitaciones que se abren con prisa producen las primeras quejas. Un remate mal ajustado en una puerta de armario se convierte en una visita de mantenimiento por semana.</p>
+        <p>Las causas se repiten. El retraso de producción es la más visible y la menos frecuente en un proyecto bien planificado; las otras son la obra civil sin cerrar, el ascensor averiado, la habitación no liberada y el permiso tardío. Cada una tiene una decisión distinta.</p>
+        <p>El orden de decisión:</p>
+        <p class="bullet-line">— Confirmar la causa con evidencia: parte de obra, fotografía y correo del hotel.</p>
+        <p class="bullet-line">— Medir el impacto en habitaciones y no en semanas; una semana perdida en una ventana de treinta habitaciones no es lo mismo que en una de cincuenta.</p>
+        <p class="bullet-line">— Elegir entre reducir alcance, añadir ventana o adelantar el envío siguiente, y comunicarlo el mismo día al propietario.</p>
+        <p>La comunicación con el propietario tiene su propia regla: se informa el impacto, no la causa. Al director de proyecto le sirve saber que la apertura se mueve siete días y qué habitaciones quedan afectadas; no una explicación sobre un contenedor retenido.</p>
+        <p>Si el retraso afecta a la apertura comercial hay una salida intermedia: abrir el ala con las habitaciones terminadas y dejar las suites para la ventana siguiente. Es preferible una apertura parcial honesta a una completa con habitaciones retiradas del inventario al tercer día. La guía para <a href="https://hymueble.com/recursos/cotizar-casegoods-hotel-200-habitaciones/">cotizar casegoods de un hotel de 200 habitaciones</a> explica qué información necesita el proveedor para cotizar sin inventar plazos.</p>
+        <p class="bullet-line">— <strong>Obra civil sin cerrar</strong> — Efecto en la secuencia: La cuadrilla no puede anclar ni rematar；Decisión recomendada: Retrasar la apertura, no adelantar el montaje；Quién decide: Propietario y jefe de obra</p>
+        <p class="bullet-line">— <strong>Ascensor averiado</strong> — Efecto en la secuencia: Se detiene la subida de material a planta；Decisión recomendada: Reprogramar descargas y priorizar anclajes；Quién decide: Jefe de obra y mantenimiento</p>
+        <p class="bullet-line">— <strong>Habitaciones no liberadas</strong> — Efecto en la secuencia: La ventana pierde días de montaje útil；Decisión recomendada: Reducir alcance y abrir ventana adicional；Quién decide: Dirección del hotel</p>
+        <p class="bullet-line">— <strong>Producción o aduana</strong> — Efecto en la secuencia: Llega material incompleto o fuera de orden；Decisión recomendada: Reordenar prioridades y consolidar envíos；Quién decide: Compras y proveedor</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD40-a292-s5.webp" alt="Habitación de hotel terminada y liberada al cierre de la ventana de instalación" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption></figcaption>
+        </figure>
+        <p>*Cierre de ventana: el ala vuelve a operar con acta parcial firmada.*</p>
+        <p>### Preguntas frecuentes</p>
+        <p><strong>Q: ¿Cuántas habitaciones se pueden instalar en una ventana de tres a cuatro semanas?</strong></p>
+        <p>A: Entre treinta y cincuenta es el rango que manejamos en nuestros proyectos, con una cuadrilla de ocho a catorce instaladores y la obra civil cerrada. Por encima de cincuenta, los remates se acumulan y la lista de pendientes crece. El límite real suele ser el montacargas de servicio, no el número de operarios.</p>
+        <p><strong>Q: ¿Se puede acopiar el mobiliario en las propias habitaciones en renovación?</strong></p>
+        <p>A: Sí, cuando la planta está completamente vacía y el suelo está protegido. Conviene limitar ese acopio al material de dos o tres días de montaje. Si la obra civil sigue abierta, el mobiliario estorba a otros gremios, se mueve sin control y acaba con golpes que nadie registra.</p>
+        <p><strong>Q: ¿Qué muebles deben llegar en el primer envío de un hotel por fases?</strong></p>
+        <p>A: Los que se anclan a la obra y bloquean oficios posteriores: cabeceros, armarios empotrados, paneles de pared, muebles de baño y estructuras de mostrador. También las piezas de fabricación especial, porque no se reponen rápido. La tapicería, los espejos y la decoración se programan para la última ventana.</p>
+        <p><strong>Q: ¿Cómo se protege el mobiliario ya instalado del polvo de la obra?</strong></p>
+        <p>A: Con protección física y secuencia. Las piezas instaladas se cubren con film o cartón hasta el cierre de la ventana, los cortes se hacen fuera de la habitación y la limpieza es diaria, no semanal. En plantas donde todavía se pinta o se lija, el mobiliario definitivo no entra hasta que el gremio anterior ha terminado.</p>
+        <p><strong>Q: ¿Qué ocurre si el hotel necesita adelantar la apertura de un ala?</strong></p>
+        <p>A: Se negocia alcance, no velocidad. La opción realista es abrir con las habitaciones terminadas y posponer suites o esquinas a la ventana siguiente. Comprimir la instalación duplica la cuadrilla y multiplica los defectos, que aparecen justo cuando el hotel ya está vendiendo esas habitaciones.</p>
+        <p><strong>Q: ¿Quién responde por el mobiliario una vez descargado en la planta?</strong></p>
+        <p>A: La custodia cambia con la descarga y debe quedar escrita. Hasta el muelle responde el transportista; desde la descarga, el instalador o el contratista general, según el contrato. El hotel asume la custodia al firmar el acta parcial, con la lista de pendientes cerrada o con plazos comprometidos.</p>
+        <p><strong>Q: ¿Qué documentación se entrega al cerrar cada ventana de instalación?</strong></p>
+        <p>A: Acta parcial firmada, lista de pendientes con responsable y fecha, packing list cotejado, fichas técnicas y certificados de materiales, instrucciones de limpieza y un plano de la planta con las habitaciones liberadas. Ese paquete permite que la ventana siguiente empiece sin reconstruir lo que ya se hizo.</p>
+        <p>### Hongye Furniture Group como socio FF&amp;E</p>
+        <p>Hongye Furniture Group fabrica mobiliario comercial desde 1996 en una planta de 300.000 m², con más de 1.000 trabajadores, y ha entregado más de 1.000 proyectos en más de 50 países para más de 47 marcas hoteleras internacionales. El plazo de producción habitual es de 45 a 60 días, con certificaciones BIFMA, GREENGUARD Gold, FSC y CE, y una ventaja de coste frente a proveedores europeos que suele situarse entre el 30 y el 50 %.</p>
+        <p>Para un proyecto por fases, la fábrica trabaja con el calendario de ventanas del cliente: paletizado por ala y planta, etiquetado de cada bulto y consolidación de contenedores según el orden de descarga. Esa parte no se ve en un catálogo y decide si la instalación avanza o se atasca.</p>
+        <p><strong>Solicitar cotización FF&amp;E</strong></p>
+        <p>*Especificación v3.3 | hymueble.com | Palabras: 3.297 | Tablas: 6 | FAQ: 7*</p>
+      </div>
+    </section>
+
+    <section class="section alt article-section article-faq">
+      <div class="container article-prose">
+        <h2>Preguntas frecuentes</h2>
+        {faqItems.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <CTA
+      title="Planifique la entrega por ventanas antes de cerrar el pedido"
+      text="Envíe el plano por plantas, el número de habitaciones y la fecha de apertura prevista desde /contacto/. Devolvemos una propuesta de ventanas de instalación, paletizado por ala y orden de descarga coherente con la operación del hotel."
+    />
+
+    <section class="section brand-signature">
+      <div class="container" style="text-align:center;">
+        <p><em>HYMUEBLE | Hongye Furniture Group Co., Ltd. (Guangdong)</em><br />
+        <em>Fabricación de mobiliario comercial y residencial para proyectos</em><br />
+        <em>Especificaciones, plazos y garantía se confirman por escrito según cada alcance</em><br />
+        <em>Solicite una revisión inicial: <a href="/contacto/">hymueble.com/contacto</a></em></p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+
+  .comparison-guide {
+    --article-ink: #121a22;
+    --article-muted: #596672;
+    --article-gold: #987848;
+    --article-line: #e7e2d9;
+    --article-warm: #f8f7f4;
+  }
+
+  .comparison-guide img {
+    height: auto;
+  }
+
+  .comparison-guide .article-hero {
+    padding-block: clamp(64px, 6vw, 96px);
+    background: linear-gradient(180deg, #fff 0%, #f8f7f4 100%);
+  }
+
+  .comparison-guide .article-hero .resource-hero-grid {
+    grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
+    gap: clamp(42px, 5vw, 78px);
+  }
+
+  .comparison-guide .article-section {
+    padding-block: clamp(68px, 6vw, 88px);
+  }
+
+  .comparison-guide .article-prose {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-prose--wide {
+    width: min(980px, calc(100% - 48px));
+  }
+
+  .comparison-guide .article-section h2 {
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section h3 {
+    margin: 24px 0 10px;
+  }
+
+  .comparison-guide .article-hero h1,
+  .comparison-guide .article-section h2,
+  .comparison-guide .article-section h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-guide .article-section p,
+  .comparison-guide .article-section li {
+    color: var(--article-muted);
+    line-height: 1.74;
+  }
+
+  .comparison-guide .article-section p {
+    margin: 0 0 18px;
+  }
+
+  .comparison-guide .article-section ol:not(.compact-list),
+  .comparison-guide .article-section ul:not(.compact-list) {
+    padding-left: 22px;
+    margin: 0 0 22px;
+  }
+
+  .comparison-guide .article-section ol li,
+  .comparison-guide .article-section ul li {
+    margin-bottom: 12px;
+  }
+
+  .comparison-guide .article-section strong {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table {
+    margin: 28px 0;
+    overflow-x: auto;
+  }
+
+  .comparison-guide .methodology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .comparison-guide .methodology-table thead th {
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--article-gold);
+    color: var(--article-ink);
+    font-weight: 800;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .comparison-guide .methodology-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--article-line);
+    color: var(--article-muted);
+    vertical-align: top;
+  }
+
+  .comparison-guide .methodology-table tbody td:first-child {
+    color: var(--article-ink);
+    font-weight: 700;
+  }
+
+  .comparison-guide .methodology-table tbody tr:nth-child(even) {
+    background: var(--article-warm);
+  }
+
+  .comparison-guide .faq-item {
+    padding: 24px 0;
+    border-top: 1px solid var(--article-line);
+    border-bottom: 0;
+  }
+
+  .comparison-guide .faq-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .comparison-guide .faq-item p {
+    display: block;
+    margin: 0;
+  }
+
+  .comparison-guide .brand-signature {
+    padding-block: clamp(34px, 4vw, 50px);
+    border-top: 1px solid var(--article-line);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-guide .article-hero .resource-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-guide .article-hero,
+    .comparison-guide .article-section {
+      padding-block: 52px;
+    }
+
+    .comparison-guide .article-hero .resource-hero-grid,
+    .comparison-guide .article-prose,
+    .comparison-guide .article-prose--wide,
+    .comparison-guide .brand-signature .container {
+      width: calc(100% - 32px);
+    }
+
+    .comparison-guide .article-hero p:not(.eyebrow),
+    .comparison-guide .article-section p,
+    .comparison-guide .article-section li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .comparison-guide .methodology-table {
+      overflow: hidden;
+    }
+
+    .comparison-guide .methodology-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table table,
+    .comparison-guide .methodology-table tbody,
+    .comparison-guide .methodology-table tr,
+    .comparison-guide .methodology-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-guide .methodology-table tr {
+      padding: 15px 0;
+      border-top: 1px solid var(--article-line);
+    }
+
+    .comparison-guide .methodology-table tr:first-child {
+      border-top: 0;
+    }
+
+    .comparison-guide .methodology-table td {
+      padding: 3px 16px;
+      border: 0;
+    }
+
+    .comparison-guide .methodology-table td:first-child {
+      margin-bottom: 5px;
+      color: var(--article-ink);
+      font-weight: 800;
+    }
+
+    .comparison-guide .methodology-table td[data-label]::before {
+      display: block;
+      margin: 7px 0 2px;
+      color: var(--article-gold);
+      content: attr(data-label);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+</style>
+<style>
+  .article-keypoints { padding-top: 0; }
+  .keypoints-list { margin: 0; padding-left: 1.1rem; display: grid; gap: .55rem; }
+  .keypoints-list li { line-height: 1.6; }
+  .bullet-line { margin: 0 0 .85rem; }
+</style>
