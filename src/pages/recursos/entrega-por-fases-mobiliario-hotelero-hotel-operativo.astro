@@ -11,8 +11,14 @@ const pageImageUrl = `https://hymueble.com${pageImage}`;
 const datePublished = "2026-11-17";
 const dateModified = "2026-11-17";
 
-const faqItems = [
-
+const faqItems: { question: string; answer: string }[] = [
+  { question: "¿Cuántas habitaciones se pueden instalar en una ventana de tres a cuatro semanas?", answer: "Entre treinta y cincuenta es el rango que manejamos en nuestros proyectos, con una cuadrilla de ocho a catorce instaladores y la obra civil cerrada. Por encima de cincuenta, los remates se acumulan y la lista de pendientes crece. El límite real suele ser el montacargas de servicio, no el número de operarios." },
+  { question: "¿Se puede acopiar el mobiliario en las propias habitaciones en renovación?", answer: "Sí, cuando la planta está completamente vacía y el suelo está protegido. Conviene limitar ese acopio al material de dos o tres días de montaje. Si la obra civil sigue abierta, el mobiliario estorba a otros gremios, se mueve sin control y acaba con golpes que nadie registra." },
+  { question: "¿Qué muebles deben llegar en el primer envío de un hotel por fases?", answer: "Los que se anclan a la obra y bloquean oficios posteriores: cabeceros, armarios empotrados, paneles de pared, muebles de baño y estructuras de mostrador. También las piezas de fabricación especial, porque no se reponen rápido. La tapicería, los espejos y la decoración se programan para la última ventana." },
+  { question: "¿Cómo se protege el mobiliario ya instalado del polvo de la obra?", answer: "Con protección física y secuencia. Las piezas instaladas se cubren con film o cartón hasta el cierre de la ventana, los cortes se hacen fuera de la habitación y la limpieza es diaria, no semanal. En plantas donde todavía se pinta o se lija, el mobiliario definitivo no entra hasta que el gremio anterior ha terminado." },
+  { question: "¿Qué ocurre si el hotel necesita adelantar la apertura de un ala?", answer: "Se negocia alcance, no velocidad. La opción realista es abrir con las habitaciones terminadas y posponer suites o esquinas a la ventana siguiente. Comprimir la instalación duplica la cuadrilla y multiplica los defectos, que aparecen justo cuando el hotel ya está vendiendo esas habitaciones." },
+  { question: "¿Quién responde por el mobiliario una vez descargado en la planta?", answer: "La custodia cambia con la descarga y debe quedar escrita. Hasta el muelle responde el transportista; desde la descarga, el instalador o el contratista general, según el contrato. El hotel asume la custodia al firmar el acta parcial, con la lista de pendientes cerrada o con plazos comprometidos." },
+  { question: "¿Qué documentación se entrega al cerrar cada ventana de instalación?", answer: "Acta parcial firmada, lista de pendientes con responsable y fecha, packing list cotejado, fichas técnicas y certificados de materiales, instrucciones de limpieza y un plano de la planta con las habitaciones liberadas. Ese paquete permite que la ventana siguiente empiece sin reconstruir lo que ya se hizo." },
 ];
 
 const articleJsonLd = {
