@@ -17,6 +17,7 @@ const staticPaths = [
   "/recursos/",
   "/recursos/blog/",
   "https://hymueble.com/recursos/entrega-por-fases-mobiliario-hotelero-hotel-operativo/",
+  "https://hymueble.com/recursos/asientos-fijos-auditorios-salas-formacion-filas-anclaje-pasillos/",
   "https://hymueble.com/recursos/recepcion-mobiliario-hotelero-checklist/",
   "https://hymueble.com/recursos/mobiliario-restaurante-hotel-medidas-precio/",
   "https://hymueble.com/recursos/cotizar-mobiliario-lobby-precio/",

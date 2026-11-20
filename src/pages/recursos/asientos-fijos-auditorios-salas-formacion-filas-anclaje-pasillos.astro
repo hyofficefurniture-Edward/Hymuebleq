@@ -1,0 +1,226 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const pageTitle = "Asientos fijos para auditorios y salas de formación: filas, anclaje y pasillos";
+const pageDescription = "Paso entre filas, anchos de pasillo y tipo de anclaje de las butacas fijas: las cuatro cifras que hay que fijar en el pliego antes de pedir ofertas.";
+const keywords = ["asientos fijos auditorio", "butacas fijas anclaje", "paso entre filas butacas", "ancho pasillo auditorio", "butacas sala de formación"];
+const canonicalPath = "https://hymueble.com/recursos/asientos-fijos-auditorios-salas-formacion-filas-anclaje-pasillos/";
+const pageImage = "/assets/hymueble/recursos/blog/images/hymD41-a303-hero.webp";
+const pageImageUrl = `https://hymueble.com${pageImage}`;
+const datePublished = "2026-11-20";
+const dateModified = "2026-11-20";
+
+const faqItems: { question: string; answer: string }[] = [
+  { question: "¿Cuál es el paso mínimo entre filas de butacas fijas?", answer: "En nuestros proyectos el paso de trabajo empieza en 900 mm de eje a eje, y solo se baja de ahí en salas de conferencia con poco movimiento de público y pasillos laterales amplios. Un paso menor se defiende mal en la recepción y complica la limpieza entre filas. La cifra final la fija el proyectista con el código de evacuación aplicable." },
+  { question: "¿Se pueden instalar butacas fijas sobre un suelo de madera existente?", answer: "Sí, con perfil continuo atornillado a la estructura y butacas fijadas al perfil. Perforar directamente la tarima con anclaje químico rara vez funciona, porque el espesor es insuficiente y la madera se astilla. El perfil reparte la carga y permite desmontar la retícula sin dejar el suelo lleno de agujeros." },
+  { question: "¿Quién calcula el aforo y los anchos de pasillo?", answer: "El proyectista y, cuando el proyecto lo requiere, el técnico de seguridad del edificio. El fabricante aporta el ancho real de la butaca con brazos y confirma cuántas caben por tramo, pero no sustituye el cálculo de evacuación. Pedir ese cálculo al proveedor de mobiliario es un error frecuente en licitaciones pequeñas." },
+  { question: "¿Cuántas alturas de pedestal hay que prever en una sala con pendiente?", answer: "Depende del desnivel total y del paso entre filas; en un graderío de veinte filas es habitual trabajar con tres o cuatro alturas distintas. Lo importante es que el fabricante reciba la cota de cada fila y no una media. Un suplemento improvisado en obra anula la garantía del anclaje." },
+  { question: "¿Se puede cambiar la tapicería de una butaca fija sin desmontarla?", answer: "En la mayoría de modelos sí, retirando el asiento y el respaldo del pedestal, pero conviene comprobar el sistema antes de comprar: algunos modelos llevan la funda grapada al bastidor y exigen desmontar la butaca completa. Para un auditorio en uso, esa diferencia decide si la renovación se hace por fases o en un solo cierre." },
+  { question: "¿Cómo se numera un auditorio con butacas fijas?", answer: "Por fila y por asiento, con correspondencia exacta entre el plano de venta de localidades y la butaca instalada. La numeración se graba o serigrafía en fábrica y se verifica en la recepción fila a fila. Cambiar la numeración después de abrir taquilla obliga a rehacer planos y cartelería." },
+  { question: "¿Qué documentación debe entregar el fabricante al cerrar la instalación?", answer: "Plano de taller por fila con plantilla de anclaje, despiece y lista de piezas, fichas de materiales, certificado de comportamiento al fuego del conjunto tapizado, instrucciones de limpieza y acta de recepción con la lista de pendientes cerrada. Ese paquete es lo que permite reponer una butaca años después sin medir en obra." }
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description: pageDescription,
+  author: { "@type": "Organization", name: "Hymueble", url: "https://hymueble.com/" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hymueble",
+    logo: { "@type": "ImageObject", url: "https://hymueble.com/assets/hymueble/brand/hongye-shengda-logo.webp" },
+  },
+  image: ["https://hymueble.com/assets/hymueble/recursos/blog/images/hymD41-a303-hero.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD41-a303-s2.webp",
+  "https://hymueble.com/assets/hymueble/recursos/blog/images/hymD41-a303-s5.webp"],
+  datePublished,
+  dateModified,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://hymueble.com" + canonicalPath },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={keywords}
+  canonicalPath={canonicalPath}
+  image={pageImage}
+  type="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleJsonLd)}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)}></script>
+
+  <div class="comparison-guide">
+    <section class="section article-hero">
+      <div class="container resource-hero-grid" style="align-items:center;">
+        <div class="resource-hero-copy">
+          <p class="eyebrow">Mobiliario contract &middot; Auditorios &middot; Publicada el 20 de noviembre de 2026</p>
+          <h1>Asientos fijos para auditorios y salas de formación: filas, anclaje y pasillos</h1>
+          <p>Un auditorio se entrega cuando las butacas están ancladas, niveladas y numeradas, pero se decide mucho antes: en el momento en que el proyectista convierte un plano de planta en una retícula de filas. Ahí se fijan cuatro cifras —paso entre filas, ancho de pasillo, número de asientos por tramo y tipo de anclaje— que gobiernan la fabricación, la instalación y el mantenimiento durante veinte años. Si esas cifras no están en el pliego, cada proveedor ofertará su retícula habitual y las ofertas no serán comparables entre sí.</p>
+          <p>La respuesta corta: el asiento es la parte fácil. La butaca fija se elige en una tarde; la interfaz entre la butaca y la obra —el anclaje, la pendiente, el escalón, el pasamanos— es lo que se atasca en obra y lo que nadie presupuesta. Este artículo trata esa interfaz con las cotas que se manejan en fábrica y en montaje, no con las que aparecen en un folleto.</p>
+        </div>
+        <figure class="resource-hero-media">
+          <img src="/assets/hymueble/recursos/blog/images/hymD41-a303-hero.webp" alt="Butacas fijas de auditorio ancladas en filas sobre graderío con pasillo central" width="1200" height="736" loading="eager" decoding="async" fetchpriority="high" />
+          <figcaption>Un auditorio terminado: la retícula de filas y anclajes se decidió meses antes, en el plano.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-keypoints">
+      <div class="container article-prose--wide">
+        <h2>Ideas clave</h2>
+        <ul class="keypoints-list">
+          <li>En un auditorio, lo que se compra no es una butaca: es una <strong>retícula de filas y anclajes</strong> que se dibuja sobre el plano antes de pedir ofertas.</li>
+          <li>El paso entre filas se decide por el uso (teatro, conferencia, docencia), no por el catálogo: en nuestros proyectos suele ir de <strong>900 a 1.100 mm</strong> de eje a eje.</li>
+          <li>El pasillo no se dimensiona por comodidad, sino por evacuación: el ancho útil y el número de asientos por tramo van juntos y los fija el proyectista.</li>
+          <li>El anclaje es la parte que casi nadie especifica y la que provoca más retrabajos: <strong>químico, mecánico o perfil continuo</strong> cambian la plantilla, el plazo y el desmontaje futuro.</li>
+          <li>La pendiente de la sala mueve el anclaje, no el asiento: un escalón de 180 mm obliga a corregir la altura del pedestal, no a cambiar de modelo.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué distingue un asiento fijo de una butaca suelta en un auditorio?</h2>
+        <p>Un asiento fijo se distingue por tres cosas verificables: va anclado al suelo o al escalón, su posición la define una retícula y su desmontaje requiere herramienta. Una butaca suelta se mueve, se agrupa y se retira sin dejar huella; una butaca fija, en cambio, deja cuatro taladros y una decisión tomada. Esa diferencia cambia el pliego, el plazo y el coste de una reforma futura.</p>
+        <p>En la práctica, la distinción se ve en el plano de taller. Una butaca fija lleva pedestal con placa de anclaje, plantilla de taladro por fila y numeración grabada o serigrafiada. La butaca suelta lleva patas o patín y no admite plantilla porque no hay dos iguales en su sitio. Cuando un proyecto mezcla ambas —butacas fijas en el patio de butacas y sillas sueltas en palcos o cabinas de traducción—, el pliego debe separarlas en lotes distintos, porque el instalador que hace la retícula no es el que reparte sillas.</p>
+        <p>También cambia la responsabilidad. En una butaca suelta, el error de posición se corrige moviendo el mueble. En una fija, el error se corrige taladrando de nuevo, y cada taladro sobrante en un escalón de hormigón es una reparación visible que se hace con mortero de reparación y no siempre queda igual. Por eso la retícula se replantea en obra antes de perforar, con la plantilla sujeta y el eje de fila marcado con cuerda.</p>
+        <p>Hay un tercer criterio, el que más discusiones genera con la dirección del centro: la densidad. Un auditorio con butacas fijas no puede cambiar de configuración sin obra; una sala de formación con sillas sueltas sí. Si el uso previsto incluye talleres, exámenes o trabajo por grupos, la decisión de fijar butacas cierra esa puerta durante años. Conviene decidirlo en la fase de anteproyecto, no cuando el fabricante ya tiene los planos de taller aprobados y el pedido de herrajes en marcha.</p>
+        <p>Un cuarto criterio, menos evidente, es el mantenimiento. Una butaca fija se limpia por barrido entre filas y por aspiración del asiento abatido; una silla suelta se retira y se limpia por completo. En salas con uso intensivo y limpieza diaria, la butaca fija ahorra metros de arrastre pero exige una rutina distinta, con cepillo de mango largo y acceso a los muelles. Si esa rutina no está prevista, el polvo se acumula bajo el asiento y aparece en la primera inspección de temporada.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Criterio</th><th>Butaca fija</th><th>Butaca o silla suelta</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Criterio">Sujeción</td><td data-label="Butaca fija">Placa de anclaje al suelo o al escalón</td><td data-label="Butaca o silla suelta">Patas o patín, sin fijación</td></tr><tr><td data-label="Criterio">Posición</td><td data-label="Butaca fija">Retícula definida en plano</td><td data-label="Butaca o silla suelta">Libre, se recoloca</td></tr><tr><td data-label="Criterio">Replanteo</td><td data-label="Butaca fija">Plantilla por fila y cuerda de eje</td><td data-label="Butaca o silla suelta">No requiere replanteo</td></tr><tr><td data-label="Criterio">Cambio de configuración</td><td data-label="Butaca fija">Requiere obra y nueva perforación</td><td data-label="Butaca o silla suelta">Inmediato</td></tr><tr><td data-label="Criterio">Limpieza</td><td data-label="Butaca fija">Barrido entre filas y aspirado del abatible</td><td data-label="Butaca o silla suelta">Retirada y limpieza completa</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD41-a303-s2.webp" alt="Plantilla de anclaje sujeta sobre un escalón de auditorio antes de perforar" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption>Replanteo: la plantilla se fija a la cuerda de eje antes de taladrar el escalón.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cuánto debe medir el paso entre filas de butacas fijas?</h2>
+        <p>El paso entre filas se mide de eje de asiento a eje de asiento y, en nuestros proyectos, se mueve entre 900 y 1.100 mm según el uso: hacia 900 mm en salas de conferencia donde se entra y se sale poco, hacia 1.100 mm en auditorios docentes donde el alumno se levanta con mochila y carpeta. Por debajo de 900 mm, el paso se defiende mal en la recepción de obra; por encima de 1.150 mm, la sala pierde filas y el aforo cae sin que nadie lo haya decidido.</p>
+        <p>La cifra no se elige por gusto. Se calcula desde la comodidad de paso —la distancia libre entre el respaldo de una fila y el borde del asiento siguiente— y desde el número de filas que el proyectista quiere meter en una profundidad dada. Un cambio de 50 mm en el paso, multiplicado por veinte filas, es un metro de sala: suficiente para perder o ganar una fila completa, y con ella diez o doce localidades.</p>
+        <p>Hay una segunda cota que se confunde con el paso y no lo es: la profundidad del asiento abatido. Un asiento que abate hasta 480 mm y un paso de 950 mm dejan algo más de 400 mm de paso libre, que es el margen real por el que pasa una persona con abrigo. Cuando el fabricante entrega solo la profundidad del asiento y no la del conjunto abatido, la comparación entre ofertas se hace con datos incompletos y la diferencia aparece en obra.</p>
+        <p>En salas con mesa —aulas, salas de formación con escritorio abatible— el paso sube. La mesa añade profundidad y el usuario necesita sacar la silla para entrar; en nuestros proyectos, un pupitre abatible de 300 mm de fondo empuja el paso hacia 1.000-1.050 mm como mínimo. Si el proyecto mezcla filas con mesa y filas sin mesa, conviene dibujar la transición y no dejar que la resuelva el instalador con una fila de compromiso.</p>
+        <p>Conviene además distinguir el paso de la fila del paso del pasillo transversal. Una fila puede tener 950 mm de paso y desembocar en un escalón de 300 mm de huella: el usuario baja de lado. Ese detalle, que se ve en el plano de planta pero no en el alzado, es el que aparece en las quejas de la primera semana de uso. En la revisión de planos de taller se comprueba junto con la altura de contrahuella, no por separado.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Tipo de sala</th><th>Paso entre filas (eje a eje)</th><th>Profundidad de asiento habitual</th><th>Observación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Tipo de sala">Teatro y auditorio de conferencia</td><td data-label="Paso entre filas (eje a eje)">900-950 mm</td><td data-label="Profundidad de asiento habitual">460-480 mm</td><td data-label="Observación">Prioriza aforo; paso justo en filas interiores</td></tr><tr><td data-label="Tipo de sala">Auditorio docente y sala de formación</td><td data-label="Paso entre filas (eje a eje)">1.000-1.100 mm</td><td data-label="Profundidad de asiento habitual">470-500 mm</td><td data-label="Observación">Permite entrada con carpeta o mochila</td></tr><tr><td data-label="Tipo de sala">Aula con pupitre abatible</td><td data-label="Paso entre filas (eje a eje)">1.000-1.100 mm</td><td data-label="Profundidad de asiento habitual">480-520 mm</td><td data-label="Observación">El pupitre añade fondo al conjunto</td></tr><tr><td data-label="Tipo de sala">Sala con mesa corrida</td><td data-label="Paso entre filas (eje a eje)">1.100-1.200 mm</td><td data-label="Profundidad de asiento habitual">480-520 mm</td><td data-label="Observación">Se mide hasta el borde de la mesa, no del asiento</td></tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué anchos de pasillo y de fila exigen la evacuación?</h2>
+        <p>Los anchos de pasillo y el número máximo de asientos por tramo los fija el proyectista según el código aplicable, y el fabricante no debe inventarlos: en la práctica internacional se trabaja con referencias como la serie EN 13200 para instalaciones de espectadores, y en cada país con su norma de evacuación. Lo que sí puede hacer el proveedor es exigir que esos dos datos estén escritos antes de fabricar, porque de ellos depende dónde van los brazos y dónde no.</p>
+        <p>El error típico es tratar el pasillo como un resto. Se dibujan las filas, se cuentan butacas y lo que sobra se llama pasillo. El resultado es un pasillo de 800 mm en el que dos personas no se cruzan, o un tramo de veinte asientos sin salida lateral. En la recepción de obra eso se detecta y se corrige con obra civil, no con mobiliario.</p>
+        <p>Para el fabricante, el ancho de pasillo se traduce en tres decisiones de taller: si la butaca del extremo lleva brazo exterior y en qué lado, si el pasillo necesita pasamanos anclado al suelo y cuánto se retrasa la última butaca respecto al eje de fila. Un brazo exterior de más estrecha el paso útil; un pasamanos mal anclado se convierte en el primer elemento que se afloja. Ambas cosas se resuelven en el despiece, no en obra.</p>
+        <p>La relación entre número de asientos y salidas es la que más veces se olvida en el pliego. Un tramo largo obliga a más ancho de paso o a más salidas; un tramo corto permite pasos más ajustados. Cuando el pliego no dice nada, el proveedor ofrece su módulo estándar —habitualmente entre diez y dieciséis asientos por tramo— y el proyectista lo acepta o lo corrige tarde, cuando el plano de taller ya está en fábrica.</p>
+        <p>En salas polivalentes aparece un conflicto adicional: el mismo espacio se usa como auditorio y como sala de exposiciones. Los pasillos calculados para butacas fijas quedan largos y vacíos cuando la sala se abre; y si se proyectan para el uso expositivo, el aforo sentado cae. La solución habitual es fijar butacas en el patio central y dejar perimetralmente una franja libre con anclajes previstos pero sin butaca, de modo que la sala pueda crecer sin perforar de nuevo. Esa previsión se decide en el plano, cuesta poco y evita una obra.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD41-a303-s3.webp" alt="Butacas fijas alineadas en un auditorio con pasillo lateral y pasamanos anclado" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption>El pasillo se dibuja antes que las filas: de su ancho salen los brazos y los pasamanos.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se ancla una butaca fija al suelo: químico, mecánico o perfil continuo?</h2>
+        <p>El anclaje se elige por soporte y por lo que vaya a pasar después: anclaje químico en hormigón existente, anclaje mecánico con taco y tornillo en soleras nuevas, o perfil continuo metálico cuando el suelo no admite perforaciones fiables o se prevé desmontar. Ninguna de las tres es mejor en abstracto; cada una cambia la plantilla, el tiempo de montaje y el coste de una reforma.</p>
+        <p>El anclaje químico con resina en hormigón es el más común en auditorios existentes porque tolera mejor la falta de precisión del taladro y trabaja bien en escalones de poca sección. Su enemigo es la humedad y el polvo del barrido: un taladro sin limpiar deja la resina sin agarre. En obra se ve enseguida, porque la butaca se mueve al sentarse y la placa marca el escalón con una línea de óxido o de polvo.</p>
+        <p>El anclaje mecánico es más rápido y más limpio, y funciona bien en soleras nuevas con espesor suficiente. Su límite está en el borde del escalón: si el taladro cae a menos de dos diámetros del canto, el hormigón se descascarilla y la reparación se ve. Por eso la plantilla se gira y se comprueba la cota al canto antes de perforar la primera fila, que es la que marca el resto de la sala.</p>
+        <p>El perfil continuo es la solución cuando el suelo es de madera, cuando hay que dejar la sala desmontable o cuando el escalón no tiene sección. Se atornilla un perfil de acero galvanizado a la estructura y las butacas se fijan al perfil. Cuesta más por metro y menos por butaca cuando hay muchas filas, y permite cambiar la retícula sin volver a taladrar el suelo: en un espacio polivalente, esa ventaja paga el sobrecoste en la primera remodelación.</p>
+<div class="methodology-table">
+        <table>
+        <thead>
+          <tr><th>Sistema</th><th>Soporte adecuado</th><th>Ventaja</th><th>Riesgo en obra</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Sistema">Químico con resina</td><td data-label="Soporte adecuado">Hormigón existente, escalón de poca sección</td><td data-label="Ventaja">Tolera imprecisión del taladro</td><td data-label="Riesgo en obra">Resina sin agarre si el barrido queda sucio</td></tr><tr><td data-label="Sistema">Mecánico con taco</td><td data-label="Soporte adecuado">Solera nueva de espesor suficiente</td><td data-label="Ventaja">Montaje rápido y limpio</td><td data-label="Riesgo en obra">Descascarillado si el taladro cae al canto</td></tr><tr><td data-label="Sistema">Perfil continuo</td><td data-label="Soporte adecuado">Suelo de madera, sala desmontable o polivalente</td><td data-label="Ventaja">Retícula modificable sin perforar</td><td data-label="Riesgo en obra">Coste por metro y necesidad de estructura</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <p>En fábrica, el anclaje vive en el pedestal. Una placa soldada con cuatro taladros y refuerzo en el arranque aguanta mejor el esfuerzo de vuelco que una placa atornillada al pedestal, y el despiece sale con la plantilla de taladro dibujada. Ese plano es el documento que evita la mayor parte de las discusiones de replanteo: quien lo tiene, perfora una vez.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD41-a303-s4.webp" alt="Detalle de placa de anclaje soldada al pedestal de una butaca fija con plantilla de taladro" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption>El anclaje se decide en fábrica: placa soldada, cuatro taladros y plantilla dibujada en el despiece.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Cómo se resuelve la pendiente de la sala y la visibilidad por filas?</h2>
+        <p>La pendiente se resuelve corrigiendo la altura del pedestal o la cota del escalón, nunca inclinando la butaca: una butaca inclinada hacia atrás se sienta mal y se afloja antes. En un graderío, la diferencia de cota entre filas —habitualmente entre 150 y 250 mm— obliga a que el fabricante entregue pedestales de altura variable o suplementos calculados fila a fila.</p>
+        <p>Esa es la parte del proyecto que más planos de taller consume y la que menos se ve en un catálogo. Un auditorio de veinte filas sobre pendiente puede necesitar tres o cuatro alturas de pedestal distintas, y cada altura tiene su plantilla. Si el fabricante entrega una sola altura y el instalador resuelve con suplementos de madera, la butaca queda sujeta a un taco que nadie ha calculado y la garantía del anclaje deja de cubrir el conjunto.</p>
+        <p>La visibilidad impone además una comprobación que se puede hacer en plano: la línea de visión desde el ojo de una fila hasta el borde del escenario debe pasar por encima de la cabeza de la fila anterior. Cuando la pendiente es escasa, la solución no es subir la butaca, es cambiar el desnivel o reordenar filas. Ese cálculo no es del fabricante, pero sí le afecta: cada cambio de cota llega como un nuevo plano de taller y como un nuevo plazo.</p>
+        <p>En obra, la pendiente se controla con nivel y con la cuerda de eje. Se coloca primero la fila más alta —la que peor acceso tiene— y se comprueba la cota respecto al pasillo; si esa fila cierra, las siguientes se pueden replantear hacia abajo con menos riesgo. Empezar por la primera fila es tentador y suele terminar con una fila alta que no admite el pedestal disponible.</p>
+        <p>Hay un detalle que se olvida en las salas con pendiente y butaca abatible: el asiento, al abrirse, puede golpear el respaldo de la fila anterior si el desnivel es pequeño y el paso justo. En la revisión de muestra conviene abatir una fila completa con el prototipo instalado en la cota real, no sobre suelo plano. Ese ensayo de una hora evita una reclamación de doscientas butacas.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD41-a303-s5.webp" alt="Butacas fijas sobre graderío con pedestales de altura variable en una sala con pendiente" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption>La pendiente se absorbe en el pedestal: cada fila lleva su altura y su plantilla.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h2>¿Qué revisar en la recepción de butacas fijas instaladas en obra?</h2>
+        <p>La recepción se hace fila a fila y con tres comprobaciones: que la butaca no se mueve al sentarse, que el abatimiento vuelve solo y sin ruido, y que la numeración coincide con el plano de venta de localidades. Esas tres pruebas detectan casi todos los defectos de instalación antes de que la sala abra, y ninguna requiere instrumentos de medida.</p>
+        <p>La primera prueba —el movimiento— se hace con peso, no con la mano. Se sienta una persona, se empuja el respaldo y se observa la placa: si hay desplazamiento, el anclaje está mal y no se arregla apretando el tornillo. La segunda se hace abatiendo el asiento veinte veces seguidas en la misma butaca; un muelle que vuelve lento o un tope que golpea aparecen en esa serie y no en la primera pulsación.</p>
+        <p>La tercera es documental y suele dejarse para el final. El plano de numeración, la lista de pendientes por fila y las fichas de tapizado deben quedar en el acta de recepción, porque en la primera reforma nadie recuerda qué modelo había en la fila 12. En nuestros proyectos, el paquete de entrega incluye el despiece por fila y la plantilla de taladro, de modo que una reposición futura no obliga a medir en obra ni a levantar una butaca para copiar el anclaje.</p>
+        <p>Por último, el tapizado. Las butacas de auditorio suelen especificarse con tejido de comportamiento frente al fuego según la norma aplicable en el país del proyecto; el fabricante declara el conjunto —tejido y espuma— y el acta recoge el certificado. Sin ese documento, la butaca puede estar bien instalada y no cumplir el expediente del edificio, y el problema aparece en la inspección, no en la instalación. En el caso de proyectos con exigencia británica, la referencia de ensayo de tapizado ignífugo se detalla en la <a href="https://hymueble.com/recursos/bs-5852-tapiceria-seguridad-incendio-reino-unido/">guía de BS 5852 de nuestro sitio</a>.</p>
+        <figure class="article-inline-figure">
+          <img src="/assets/hymueble/recursos/blog/images/hymD41-a303-s6.webp" alt="Sala de formación con butacas fijas instaladas y pasillo despejado al cierre de obra" width="1200" height="736" loading="lazy" decoding="async" />
+          <figcaption>Sala terminada: la recepción se firma cuando la última fila está nivelada, numerada y el pasillo queda libre.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section alt article-section">
+      <div class="container article-prose--wide">
+        <h3>Preguntas frecuentes</h3>
+        <p><strong>Q: ¿Cuál es el paso mínimo entre filas de butacas fijas?</strong><br />En nuestros proyectos el paso de trabajo empieza en 900 mm de eje a eje, y solo se baja de ahí en salas de conferencia con poco movimiento de público y pasillos laterales amplios. Un paso menor se defiende mal en la recepción y complica la limpieza entre filas. La cifra final la fija el proyectista con el código de evacuación aplicable.</p>
+        <p><strong>Q: ¿Se pueden instalar butacas fijas sobre un suelo de madera existente?</strong><br />Sí, con perfil continuo atornillado a la estructura y butacas fijadas al perfil. Perforar directamente la tarima con anclaje químico rara vez funciona, porque el espesor es insuficiente y la madera se astilla. El perfil reparte la carga y permite desmontar la retícula sin dejar el suelo lleno de agujeros.</p>
+        <p><strong>Q: ¿Quién calcula el aforo y los anchos de pasillo?</strong><br />El proyectista y, cuando el proyecto lo requiere, el técnico de seguridad del edificio. El fabricante aporta el ancho real de la butaca con brazos y confirma cuántas caben por tramo, pero no sustituye el cálculo de evacuación. Pedir ese cálculo al proveedor de mobiliario es un error frecuente en licitaciones pequeñas.</p>
+        <p><strong>Q: ¿Cuántas alturas de pedestal hay que prever en una sala con pendiente?</strong><br />Depende del desnivel total y del paso entre filas; en un graderío de veinte filas es habitual trabajar con tres o cuatro alturas distintas. Lo importante es que el fabricante reciba la cota de cada fila y no una media. Un suplemento improvisado en obra anula la garantía del anclaje.</p>
+        <p><strong>Q: ¿Se puede cambiar la tapicería de una butaca fija sin desmontarla?</strong><br />En la mayoría de modelos sí, retirando el asiento y el respaldo del pedestal, pero conviene comprobar el sistema antes de comprar: algunos modelos llevan la funda grapada al bastidor y exigen desmontar la butaca completa. Para un auditorio en uso, esa diferencia decide si la renovación se hace por fases o en un solo cierre.</p>
+        <p><strong>Q: ¿Cómo se numera un auditorio con butacas fijas?</strong><br />Por fila y por asiento, con correspondencia exacta entre el plano de venta de localidades y la butaca instalada. La numeración se graba o serigrafía en fábrica y se verifica en la recepción fila a fila. Cambiar la numeración después de abrir taquilla obliga a rehacer planos y cartelería.</p>
+        <p><strong>Q: ¿Qué documentación debe entregar el fabricante al cerrar la instalación?</strong><br />Plano de taller por fila con plantilla de anclaje, despiece y lista de piezas, fichas de materiales, certificado de comportamiento al fuego del conjunto tapizado, instrucciones de limpieza y acta de recepción con la lista de pendientes cerrada. Ese paquete es lo que permite reponer una butaca años después sin medir en obra.</p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <h3>Hongye Furniture Group como socio de mobiliario contract</h3>
+        <p>Hongye Furniture Group fabrica mobiliario comercial desde 1996 en una planta de 300.000 m², con 1.000+ trabajadores, y ha entregado más de 1.000 proyectos en más de 50 países para más de 47 marcas hoteleras internacionales. El plazo de producción habitual es de 45-60 días, con certificaciones BIFMA, GREENGUARD Gold, FSC y CE, y una ventaja de coste frente a proveedores europeos que suele situarse en la banda del 30-50 %.</p>
+        <p>Para un auditorio, la fábrica trabaja con la retícula del cliente: entrega el despiece por fila, dibuja la plantilla de anclaje de cada altura de pedestal y etiqueta cada butaca con su fila y su número antes de flejar el palet. Ese trabajo se apoya en el mismo criterio de normalización que aplicamos a la producción de mobiliario escolar y de salas de conferencia, donde la <a href="https://hymueble.com/recursos/mobiliario-aula-estandares-altura-asiento/">cota de asiento y trabajo por edad</a> y la <a href="https://hymueble.com/recursos/mobiliario-sala-conferencias-medidas-av/">distribución de salas con medios audiovisuales</a> se documentan antes de fabricar. Los criterios de normalización de proceso se describen en la página de <a href="https://www.iso.org/standard/62085.html">ISO 9001 de ISO</a>, y las recomendaciones de evacuación y anchos de circulación se contrastan con la norma local y con las guías de <a href="https://www.nfpa.org/codes-and-standards">NFPA</a>.</p>
+        <p><strong>Solicitar cotización de butacas fijas</strong></p>
+      </div>
+    </section>
+    <section class="section article-section">
+      <div class="container article-prose--wide">
+        <CTA />
+      </div>
+    </section>
+  </div>
+</BaseLayout>
